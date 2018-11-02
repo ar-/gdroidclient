@@ -1,11 +1,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+    <!--android:minWidth="150dp"-->
+    <!--android:maxWidth="150dp"-->
 
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_margin="@dimen/card_margin"
@@ -13,6 +16,8 @@
         android:clickable="true"
         android:layout_marginLeft="@dimen/my_cardview_margin"
         android:layout_marginRight="@dimen/my_cardview_margin"
+        android:minWidth="220dp"
+        android:maxWidth="220dp"
         card_view:cardCornerRadius="@dimen/card_album_radius">
 
         <RelativeLayout
@@ -26,11 +31,11 @@
                 android:layout_height="@dimen/album_cover_height"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
-                android:minHeight="100dp"
-                android:maxHeight="100dp"
-                android:minWidth="100dp"
-                android:maxWidth="100dp"
                 />
+            <!--android:minHeight="100dp"-->
+            <!--android:maxHeight="100dp"-->
+            <!--android:minWidth="100dp"-->
+            <!--android:maxWidth="100dp"-->
 
             <TextView
                 android:id="@+id/title"

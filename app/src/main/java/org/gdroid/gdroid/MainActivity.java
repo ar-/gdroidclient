@@ -13,12 +13,16 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.HorizontalScrollView;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,8 +31,13 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private RecyclerView recyclerView;
-    private AlbumsAdapter adapter;
-    private List<Album> albumList;
+    //private RecyclerView innerRecyclerView;
+    //private LinearLayout collectionContent;
+    //private HorizontalScrollView inner_scroll_view;
+//    private AppGridAdapter adapter;
+//    private List<AppDescriptor> appDescriptorList;
+    private List<AppCollectionDescriptor> appCollectionDescriptorList;
+    private CollectionGridAdapter appCollectionAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,79 +65,113 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        //innerRecyclerView = (RecyclerView) findViewById(R.id.inner_recycler_view);
+        //collectionContent = (LinearLayout) findViewById(R.id.collection_content);
+        //inner_scroll_view = (HorizontalScrollView) findViewById(R.id.inner_scroll_view);
 
-        albumList = new ArrayList<>();
-        adapter = new AlbumsAdapter(this, albumList);
+//        appDescriptorList = new ArrayList<>();
+//        adapter = new AppGridAdapter(this, appDescriptorList);
 
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 3);
+        //RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 3);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
         recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
+        //recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
+        recyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(adapter);
+        //recyclerView.setAdapter(adapter);
 
-        prepareAlbums();
+        LinearLayoutManager layoutManager
+                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        //RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
+        //innerRecyclerView.setLayoutManager(layoutManager);
+        //innerRecyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
+        //innerRecyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
+        //innerRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        //innerRecyclerView.setAdapter(adapter);
+        //innerRecyclerView.setAdapter(appCollectionAdapter);
+        appCollectionDescriptorList = new ArrayList<>();
+        appCollectionAdapter = new CollectionGridAdapter(this, appCollectionDescriptorList);
+        recyclerView.setAdapter(appCollectionAdapter);
+
+
+
+//        prepareAlbums();
+
+
+        prepareAppCollections();
+
+
     }
 
+
+    private void prepareAppCollections() {
+        AppCollectionDescriptor a = new AppCollectionDescriptor("collection one");
+        appCollectionDescriptorList.add(a);
+        AppCollectionDescriptor a2 = new AppCollectionDescriptor("collection 2");
+        appCollectionDescriptorList.add(a2);
+        AppCollectionDescriptor a3 = new AppCollectionDescriptor("collection tree");
+        appCollectionDescriptorList.add(a3);
+    }
     /**
      * Adding few albums for testing
      */
-    private void prepareAlbums() {
-        int[] covers = new int[]{
-                R.drawable.ic_menu_camera,
-                R.drawable.a1,
-                R.drawable.a1,
-                R.drawable.album1,
-                R.drawable.a1,
-                R.drawable.album1,
-                R.drawable.a1,
-                R.drawable.a1,
-                R.drawable.album1,
-                R.drawable.album1,
-                R.drawable.album1};
-//        R.drawable.album1,
-//                R.drawable.album2,
-//                R.drawable.album3,
-//                R.drawable.album4,
-//                R.drawable.album5,
-//                R.drawable.album6,
-//                R.drawable.album7,
-//                R.drawable.album8,
-//                R.drawable.album9,
-//                R.drawable.album10,
-//                R.drawable.album11};
-
-        Album a = new Album("True Romance", 13, covers[0]);
-        albumList.add(a);
-
-        a = new Album("Xscpae", 8, covers[1]);
-        albumList.add(a);
-
-        a = new Album("Maroon 5", 11, covers[2]);
-        albumList.add(a);
-
-        a = new Album("Born to Die", 12, covers[3]);
-        albumList.add(a);
-
-        a = new Album("Honeymoon", 14, covers[4]);
-        albumList.add(a);
-
-        a = new Album("I Need a Doctor", 1, covers[5]);
-        albumList.add(a);
-
-        a = new Album("Loud", 11, covers[6]);
-        albumList.add(a);
-
-        a = new Album("Legend", 14, covers[7]);
-        albumList.add(a);
-
-        a = new Album("Hello", 11, covers[8]);
-        albumList.add(a);
-
-        a = new Album("Greatest Hits", 17, covers[9]);
-        albumList.add(a);
-
-        adapter.notifyDataSetChanged();
-    }
+//    private void prepareAlbums() {
+//        int[] covers = new int[]{
+//                R.drawable.ic_menu_camera,
+//                R.drawable.a1,
+//                R.drawable.a1,
+//                R.drawable.album1,
+//                R.drawable.a1,
+//                R.drawable.album1,
+//                R.drawable.a1,
+//                R.drawable.a1,
+//                R.drawable.album1,
+//                R.drawable.album1,
+//                R.drawable.album1};
+////        R.drawable.album1,
+////                R.drawable.album2,
+////                R.drawable.album3,
+////                R.drawable.album4,
+////                R.drawable.album5,
+////                R.drawable.album6,
+////                R.drawable.album7,
+////                R.drawable.album8,
+////                R.drawable.album9,
+////                R.drawable.album10,
+////                R.drawable.album11};
+//
+//        AppDescriptor a = new AppDescriptor("True Romance", 4.5f, covers[0]);
+//        appDescriptorList.add(a);
+//
+//        a = new AppDescriptor("Xscpae", 2, covers[1]);
+//        appDescriptorList.add(a);
+//
+//        a = new AppDescriptor("Maroon 5", 4.5f, covers[2]);
+//        appDescriptorList.add(a);
+//
+//        a = new AppDescriptor("Born to Die", 4.5f, covers[3]);
+//        appDescriptorList.add(a);
+//
+//        a = new AppDescriptor("Honeymoon", 4.5f, covers[4]);
+//        appDescriptorList.add(a);
+//
+//        a = new AppDescriptor("I Need a Doctor", 1, covers[5]);
+//        appDescriptorList.add(a);
+//
+//        a = new AppDescriptor("Loud", 4.5f, covers[6]);
+//        appDescriptorList.add(a);
+//
+//        a = new AppDescriptor("Legend", 4.5f, covers[7]);
+//        appDescriptorList.add(a);
+//
+//        a = new AppDescriptor("Hello", 4, covers[8]);
+//        appDescriptorList.add(a);
+//
+//        a = new AppDescriptor("Greatest Hits", 2, covers[9]);
+//        appDescriptorList.add(a);
+//
+//        adapter.notifyDataSetChanged();
+//    }
 
     @Override
     public void onBackPressed() {

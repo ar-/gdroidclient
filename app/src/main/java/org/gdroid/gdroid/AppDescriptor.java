@@ -1,16 +1,16 @@
 package org.gdroid.gdroid;
 
-public class Album {
+public class AppDescriptor {
     private String name;
-    private int numOfSongs;
+    private float stars;
     private int thumbnail;
 
-    public Album() {
+    public AppDescriptor() {
     }
 
-    public Album(String name, int numOfSongs, int thumbnail) {
+    public AppDescriptor(String name, float stars, int thumbnail) {
         this.name = name;
-        this.numOfSongs = numOfSongs;
+        this.stars = stars;
         this.thumbnail = thumbnail;
     }
 
@@ -22,12 +22,12 @@ public class Album {
         this.name = name;
     }
 
-    public int getNumOfSongs() {
-        return numOfSongs;
+    public float getStars() {
+        return stars;
     }
 
-    public void setNumOfSongs(int numOfSongs) {
-        this.numOfSongs = numOfSongs;
+    public void setStars(float stars) {
+        this.stars = stars;
     }
 
     public int getThumbnail() {

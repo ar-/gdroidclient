@@ -18,10 +18,14 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHolder> {
+public class AppGridAdapter extends RecyclerView.Adapter<AppGridAdapter.MyViewHolder> {
 
     private Context mContext;
-    private List<Album> albumList;
+    private List<AppDescriptor> appDescriptorList;
+
+    public int getCount() {
+        return appDescriptorList.size();
+    }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, count;
@@ -47,9 +51,9 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
         }
     }
 
-    public AlbumsAdapter(Context mContext, List<Album> albumList) {
+    public AppGridAdapter(Context mContext, List<AppDescriptor> appDescriptorList) {
         this.mContext = mContext;
-        this.albumList = albumList;
+        this.appDescriptorList = appDescriptorList;
     }
 
     @Override
@@ -62,12 +66,12 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        Album album = albumList.get(position);
-        holder.title.setText(album.getName());
-        holder.count.setText(album.getNumOfSongs() + " songs");
+        AppDescriptor appDescriptor = appDescriptorList.get(position);
+        holder.title.setText(appDescriptor.getName());
+        holder.count.setText(appDescriptor.getStars() + " ★");
 
-        // loading album cover using Glide library
-        Glide.with(mContext).load(album.getThumbnail()).into(holder.thumbnail);
+        // loading appDescriptor cover using Glide library
+        Glide.with(mContext).load(appDescriptor.getThumbnail()).into(holder.thumbnail);
 //        holder.thumbnail.setImageDrawable();
 
         holder.overflow.setOnClickListener(new View.OnClickListener() {
@@ -115,6 +119,6 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
 
     @Override
     public int getItemCount() {
-        return albumList.size();
+        return appDescriptorList.size();
     }
 }
