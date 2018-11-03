@@ -38,14 +38,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.gdroid.gdroid.MainActivity" />
         </activity>
-        <activity
-            android:name=".TempTabActivity"
-            android:label="@string/title_activity_temp_tab"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.gdroid.gdroid.MainActivity" />
-        </activity>
     </application>
 
 </manifest>

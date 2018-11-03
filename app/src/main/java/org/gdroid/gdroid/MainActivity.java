@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -85,9 +87,9 @@ public class MainActivity extends AppCompatActivity
         appCollectionAdapter = new AppCollectionAdapter(this, appCollectionDescriptorList);
         recyclerView.setAdapter(appCollectionAdapter);
 
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-
-//        prepareAlbums();
 
 
         prepareAppCollections();
@@ -134,66 +136,26 @@ public class MainActivity extends AppCompatActivity
 
         appCollectionAdapter.notifyDataSetChanged();
     }
-    /**
-     * Adding few albums for testing
-     */
-//    private void prepareAlbums() {
-//        int[] covers = new int[]{
-//                R.drawable.ic_menu_camera,
-//                R.drawable.a1,
-//                R.drawable.a1,
-//                R.drawable.album1,
-//                R.drawable.a1,
-//                R.drawable.album1,
-//                R.drawable.a1,
-//                R.drawable.a1,
-//                R.drawable.album1,
-//                R.drawable.album1,
-//                R.drawable.album1};
-////        R.drawable.album1,
-////                R.drawable.album2,
-////                R.drawable.album3,
-////                R.drawable.album4,
-////                R.drawable.album5,
-////                R.drawable.album6,
-////                R.drawable.album7,
-////                R.drawable.album8,
-////                R.drawable.album9,
-////                R.drawable.album10,
-////                R.drawable.album11};
-//
-//        ApplicationBean a = new ApplicationBean("True Romance", 4.5f, covers[0]);
-//        appDescriptorList.add(a);
-//
-//        a = new ApplicationBean("Xscpae", 2, covers[1]);
-//        appDescriptorList.add(a);
-//
-//        a = new ApplicationBean("Maroon 5", 4.5f, covers[2]);
-//        appDescriptorList.add(a);
-//
-//        a = new ApplicationBean("Born to Die", 4.5f, covers[3]);
-//        appDescriptorList.add(a);
-//
-//        a = new ApplicationBean("Honeymoon", 4.5f, covers[4]);
-//        appDescriptorList.add(a);
-//
-//        a = new ApplicationBean("I Need a Doctor", 1, covers[5]);
-//        appDescriptorList.add(a);
-//
-//        a = new ApplicationBean("Loud", 4.5f, covers[6]);
-//        appDescriptorList.add(a);
-//
-//        a = new ApplicationBean("Legend", 4.5f, covers[7]);
-//        appDescriptorList.add(a);
-//
-//        a = new ApplicationBean("Hello", 4, covers[8]);
-//        appDescriptorList.add(a);
-//
-//        a = new ApplicationBean("Greatest Hits", 2, covers[9]);
-//        appDescriptorList.add(a);
-//
-//        adapter.notifyDataSetChanged();
-//    }
+
+        private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+//                case R.id.navigation_home:
+//                    mTextMessage.setText(R.string.title_home);
+//                    return true;
+//                case R.id.navigation_dashboard:
+//                    mTextMessage.setText(R.string.title_dashboard);
+//                    return true;
+//                case R.id.navigation_notifications:
+//                    mTextMessage.setText(R.string.title_notifications);
+//                    return true;
+            }
+            return false;
+        }
+    };
 
     @Override
     public void onBackPressed() {
@@ -238,9 +200,9 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-            Intent myIntent = new Intent(this, TempTabActivity.class);
+            //Intent myIntent = new Intent(this, TempTabActivity.class);
             //myIntent.putExtra("key", value); //Optional parameters
-            this.startActivity(myIntent);
+            //this.startActivity(myIntent);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
