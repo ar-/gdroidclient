@@ -1,6 +1,7 @@
 package org.gdroid.gdroid;
 
 import android.app.Activity;
+import android.arch.persistence.room.util.StringUtil;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.PopupMenu;
@@ -78,8 +79,9 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         //Glide.with(mContext).load(applicationBean.getThumbnail()).into(holder.thumbnail);
         //Glide.with(mContext).load()
 //        holder.thumbnail.setImageDrawable();
-
-        Glide.with(mContext).load("https://f-droid.org/repo/icons-640/community.fairphone.fplauncher3.10.png").into(holder.thumbnail);
+        if (applicationBean.icon != null) {
+            Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+applicationBean.icon).into(holder.thumbnail);
+        }
 //        new DownloadImageTask(holder.thumbnail)
 //                .execute("https://f-droid.org/repo/icons-640/community.fairphone.fplauncher3.10.png");
 

@@ -20,10 +20,11 @@ public class ApplicationBean {
     public String lastupdated;
     public String name;
     public String summary;
+    public String icon;
     public float stars;
 
     @Ignore
-    public int thumbnail;
+//    public int thumbnail;
 
     public ApplicationBean() {
     }
@@ -32,11 +33,11 @@ public class ApplicationBean {
         this.id = id;
     }
 
-    public ApplicationBean(String name, float stars, int thumbnail) {
-        this.name = name;
-        this.stars = stars;
-        this.thumbnail = thumbnail;
-    }
+//    public ApplicationBean(String name, float stars, int thumbnail) {
+//        this.name = name;
+//        this.stars = stars;
+//        this.thumbnail = thumbnail;
+//    }
 
     public String getId() {
         return id;
@@ -62,11 +63,11 @@ public class ApplicationBean {
         this.stars = stars;
     }
 
-    public int getThumbnail() {
-        return thumbnail;
-    }
-
-    public void setThumbnail(int thumbnail) {
-        this.thumbnail = thumbnail;
-    }
+//    public int getThumbnail() {
+//        return thumbnail;
+//    }
+//
+//    public void setThumbnail(int thumbnail) {
+//        this.thumbnail = thumbnail;
+//    }
 }

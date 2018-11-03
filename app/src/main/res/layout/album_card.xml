@@ -21,7 +21,7 @@
         card_view:cardCornerRadius="@dimen/card_album_radius">
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="220dp"
             android:layout_height="match_parent"
             >
 
@@ -45,6 +45,9 @@
                 android:paddingLeft="@dimen/album_title_padding"
                 android:paddingRight="@dimen/album_title_padding"
                 android:paddingTop="@dimen/album_title_padding"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
                 android:textColor="@color/album_title"
                 android:textSize="@dimen/album_title" />
 

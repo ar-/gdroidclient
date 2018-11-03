@@ -71,6 +71,8 @@ public class FDroidRepoXmlParser {
                 ret.summary = readTag(parser,"summary");
             } else if (name.equals("added")) {
                 ret.added = readTag(parser,"added");
+            } else if (name.equals("icon")) {
+                ret.icon = readTag(parser,"icon");
             } else {
                 skip(parser);
             }
