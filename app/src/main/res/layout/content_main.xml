@@ -19,6 +19,7 @@
     android:background="?android:attr/windowBackground"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
+    app:labelVisibilityMode="labeled"
     app:menu="@menu/navigation" />
 
     <android.support.v7.widget.RecyclerView

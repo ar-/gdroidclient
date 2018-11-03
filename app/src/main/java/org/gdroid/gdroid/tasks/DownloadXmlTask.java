@@ -1,10 +1,16 @@
 package org.gdroid.gdroid.tasks;
 
+import android.app.Activity;
+import android.app.Application;
 import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
+import android.view.View;
 
+import org.gdroid.gdroid.MainActivity;
+import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.AppCollectionAdapter;
 import org.gdroid.gdroid.beans.AppDatabase;
@@ -26,11 +32,13 @@ public class DownloadXmlTask extends AsyncTask<String, Void, List<ApplicationBea
 
 
     private final Context mContext;
+    private final MainActivity mMainActivity;
     private final AppCollectionAdapter mAppCollectionAdapter;
 
     // parameter is the adapter that can be notified after processing
-    public DownloadXmlTask(Context applicationContext, AppCollectionAdapter appCollectionAdapter) {
-        mContext = applicationContext;
+    public DownloadXmlTask(MainActivity mainActivity, AppCollectionAdapter appCollectionAdapter) {
+        mMainActivity = mainActivity;
+        mContext = mMainActivity.getApplicationContext();
         mAppCollectionAdapter = appCollectionAdapter;
     }
 
@@ -77,6 +85,8 @@ public class DownloadXmlTask extends AsyncTask<String, Void, List<ApplicationBea
 //        for (ApplicationBean ab: result) {
 //            SimpleApplicationDao.class
 //        }
+        mMainActivity.findViewById(R.id.loadingPanel).setVisibility(View.GONE);
+        mMainActivity.findViewById(R.id.fab).setEnabled(true);
         mAppCollectionAdapter.notifyDataSetChanged();
         Log.e("DownloadXmlTask","download complete");
         }

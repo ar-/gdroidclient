@@ -94,17 +94,21 @@ public class MainActivity extends AppCompatActivity
 
         prepareAppCollections();
 
-        new DownloadXmlTask(getApplicationContext(), appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
+        final MainActivity activity = this;
+        // TODO initial refresh only when DB empty
+        //new DownloadXmlTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fab.setEnabled(false);
+                findViewById(R.id.loadingPanel).setVisibility(View.VISIBLE);
                 Snackbar.make(view, "Downloading update ...", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
 
-                new DownloadXmlTask(getApplicationContext(), appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
+                new DownloadXmlTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
 
             }
         });
@@ -143,15 +147,21 @@ public class MainActivity extends AppCompatActivity
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-//                case R.id.navigation_home:
+                case R.id.navigation_home:
 //                    mTextMessage.setText(R.string.title_home);
-//                    return true;
-//                case R.id.navigation_dashboard:
+                    return true;
+                case R.id.navigation_categories:
 //                    mTextMessage.setText(R.string.title_dashboard);
-//                    return true;
-//                case R.id.navigation_notifications:
+                    return true;
+                case R.id.navigation_starred:
 //                    mTextMessage.setText(R.string.title_notifications);
-//                    return true;
+                    return true;
+                case R.id.navigation_myapps:
+//                    mTextMessage.setText(R.string.title_notifications);
+                    return true;
+                case R.id.navigation_search:
+//                    mTextMessage.setText(R.string.title_notifications);
+                    return true;
             }
             return false;
         }
