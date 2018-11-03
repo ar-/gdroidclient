@@ -145,6 +145,14 @@ public class CollectionGridAdapter extends RecyclerView.Adapter<CollectionGridAd
         this.appCollectionDescriptorList = appCollectionDescriptorList;
     }
 
+    public Context getmContext() {
+        return mContext;
+    }
+
+    public List<AppCollectionDescriptor> getAppCollectionDescriptorList() {
+        return appCollectionDescriptorList;
+    }
+
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())

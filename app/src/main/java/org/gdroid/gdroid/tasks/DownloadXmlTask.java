@@ -1,14 +1,16 @@
 package org.gdroid.gdroid.tasks;
 
-import android.content.SharedPreferences;
+import android.arch.persistence.room.Room;
+import android.content.Context;
 import android.os.AsyncTask;
-import android.preference.PreferenceManager;
 import android.util.Log;
-import android.webkit.WebView;
 
-import org.gdroid.gdroid.R;
-import org.gdroid.gdroid.xml.Entry;
-import org.gdroid.gdroid.xml.StackOverflowXmlParser;
+import org.gdroid.gdroid.AppCollectionDescriptor;
+import org.gdroid.gdroid.CollectionGridAdapter;
+import org.gdroid.gdroid.beans.AppDatabase;
+import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.beans.SimpleApplicationDao;
+import org.gdroid.gdroid.xml.FDroidRepoXmlParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
@@ -17,39 +19,72 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class DownloadXmlTask extends AsyncTask<String, Void, String> {
-    @Override
-    protected String doInBackground(String... urls) {
-            try {
-            return loadXmlFromNetwork(urls[0]);
-            } catch (IOException e) {
-                return "connection_error";
-//            return getResources().getString(R.string.connection_error);
-            } catch (XmlPullParserException e) {
-                return "xml_error";
-//            return getResources().getString(R.string.xml_error);
-            }
-            }
+public class DownloadXmlTask extends AsyncTask<String, Void, List<ApplicationBean>> {
+
+
+    private final Context mContext;
+    private final CollectionGridAdapter mAppCollectionAdapter;
+
+    // parameter is the adapter that can be notified after processing
+    public DownloadXmlTask(Context applicationContext, CollectionGridAdapter appCollectionAdapter) {
+        mContext = applicationContext;
+        mAppCollectionAdapter = appCollectionAdapter;
+    }
 
     @Override
-    protected void onPostExecute(String result) {
+    protected List<ApplicationBean> doInBackground(String... urls) {
+        List<ApplicationBean> ret = new ArrayList<>();
+            try {
+                ret = loadXmlFromNetwork(urls[0]);
+
+                AppDatabase db = Room.databaseBuilder(mContext,
+                        AppDatabase.class, "database-name").build();
+
+                for (ApplicationBean ab: ret) {
+                    db.userDao().insertApplicationBeans(ab);
+                }
+
+
+                return ret;
+            } catch (IOException e) {
+                return ret;
+//            return getResources().getString(R.string.connection_error);
+            } catch (XmlPullParserException e) {
+                return ret;
+//            return getResources().getString(R.string.xml_error);
+            }
+        }
+
+    @Override
+    protected void onPostExecute(List<ApplicationBean> result) {
 //            setContentView(R.layout.main);
 //            // Displays the HTML string in the UI via a WebView
 //            WebView myWebView = (WebView) findViewById(R.id.webview);
 //            myWebView.loadData(result, "text/html", null);
+
+        List<AppCollectionDescriptor> l = mAppCollectionAdapter.getAppCollectionDescriptorList();
+        result.get(0);
+        l.get(0).setName(result.get(0).name);
+        l.get(1).setName(result.get(1).name);
+        l.get(2).setName(result.get(2).name);
+//        for (ApplicationBean ab: result) {
+//            SimpleApplicationDao.class
+//        }
+        mAppCollectionAdapter.notifyDataSetChanged();
         Log.e("DownloadXmlTask","download complete");
         }
 
     // Uploads XML from stackoverflow.com, parses it, and combines it with
     // HTML markup. Returns HTML string.
-    private String loadXmlFromNetwork(String urlString) throws XmlPullParserException, IOException {
+    private List<ApplicationBean> loadXmlFromNetwork(String urlString) throws XmlPullParserException, IOException {
         InputStream stream = null;
         // Instantiate the parser
-        StackOverflowXmlParser stackOverflowXmlParser = new StackOverflowXmlParser();
-        List<Entry> entries = null;
+        FDroidRepoXmlParser dfroidRepoXmlParser = new FDroidRepoXmlParser();
+        List<ApplicationBean> entries = null;
         String title = null;
         String url = null;
         String summary = null;
@@ -67,7 +102,7 @@ public class DownloadXmlTask extends AsyncTask<String, Void, String> {
 
         try {
             stream = downloadUrl(urlString);
-            entries = stackOverflowXmlParser.parse(stream);
+            entries = dfroidRepoXmlParser.parse(stream);
             // Makes sure that the InputStream is closed after the app is
             // finished using it.
         } finally {
@@ -76,22 +111,22 @@ public class DownloadXmlTask extends AsyncTask<String, Void, String> {
             }
         }
 
-        // StackOverflowXmlParser returns a List (called "entries") of Entry objects.
+        // FDroidRepoXmlParser returns a List (called "entries") of Entry objects.
         // Each Entry object represents a single post in the XML feed.
         // This section processes the entries list to combine each entry with HTML markup.
         // Each entry is displayed in the UI as a link that optionally includes
         // a text summary.
-        for (Entry entry : entries) {
-            htmlString.append("<p><a href='");
-            htmlString.append(entry.link);
-            htmlString.append("'>" + entry.title + "</a></p>");
-            // If the user set the preference to include summary text,
-            // adds it to the display.
-//            if (pref) {
-//                htmlString.append(entry.summary);
-//            }
-        }
-        return htmlString.toString();
+//        for (Entry entry : entries) {
+//            htmlString.append("<p><a href='");
+//            htmlString.append(entry.link);
+//            htmlString.append("'>" + entry.title + "</a></p>");
+//            // If the user set the preference to include summary text,
+//            // adds it to the display.
+////            if (pref) {
+////                htmlString.append(entry.summary);
+////            }
+//        }
+        return entries;
     }
 
     // Given a string representation of a URL, sets up a connection and gets

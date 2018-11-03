@@ -4,6 +4,7 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 @Entity(indices = {@Index("name"),
         @Index("lastupdated")})
@@ -11,6 +12,7 @@ import android.arch.persistence.room.PrimaryKey;
 public class ApplicationBean {
 
     @PrimaryKey
+    @NonNull
     public String id;
     public String name;
     public String lastupdated;
@@ -18,6 +20,9 @@ public class ApplicationBean {
 
     @Ignore
     public int thumbnail;
+
+    public ApplicationBean() {
+    }
 
     public ApplicationBean(String id) {
         this.id = id;

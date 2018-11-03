@@ -17,12 +17,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.HorizontalScrollView;
-import android.widget.LinearLayout;
 
 import org.gdroid.gdroid.tasks.DownloadXmlTask;
 
@@ -47,18 +44,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Downloading update ...", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
-                new DownloadXmlTask().execute("http://stackoverflow.com/feeds/tag?tagnames=android&sort=newest");
-
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -106,6 +91,21 @@ public class MainActivity extends AppCompatActivity
         prepareAppCollections();
 
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Downloading update ...", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
+
+                new DownloadXmlTask(getApplicationContext(), appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
+
+            }
+        });
+
+
+
     }
 
 
@@ -128,6 +128,8 @@ public class MainActivity extends AppCompatActivity
         appCollectionDescriptorList.add(a8);
         AppCollectionDescriptor a9 = new AppCollectionDescriptor("well maintained");
         appCollectionDescriptorList.add(a9);
+
+        appCollectionAdapter.notifyDataSetChanged();
     }
     /**
      * Adding few albums for testing
