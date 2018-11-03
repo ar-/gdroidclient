@@ -1,4 +1,4 @@
-package org.gdroid.gdroid;
+package org.gdroid.gdroid.tasks;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -8,10 +8,10 @@ import android.widget.ImageView;
 
 import java.io.InputStream;
 
-public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+public class DownloadTask extends AsyncTask<String, Void, Bitmap> {
     ImageView bmImage;
 
-    public DownloadImageTask(ImageView bmImage) {
+    public DownloadTask(ImageView bmImage) {
         this.bmImage = bmImage;
     }
 

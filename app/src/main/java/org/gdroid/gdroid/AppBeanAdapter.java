@@ -20,7 +20,7 @@ import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.util.List;
 
-public class AppGridAdapter extends RecyclerView.Adapter<AppGridAdapter.MyViewHolder> {
+public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHolder> {
 
     private Context mContext;
     private List<ApplicationBean> applicationBeanList;
@@ -55,7 +55,7 @@ public class AppGridAdapter extends RecyclerView.Adapter<AppGridAdapter.MyViewHo
         }
     }
 
-    public AppGridAdapter(Context mContext, List<ApplicationBean> applicationBeanList) {
+    public AppBeanAdapter(Context mContext, List<ApplicationBean> applicationBeanList) {
         this.mContext = mContext;
         this.applicationBeanList = applicationBeanList;
     }

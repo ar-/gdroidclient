@@ -1,4 +1,4 @@
-package org.gdroid.gdroid;
+package org.gdroid.gdroid.beans;
 
 public class AppCollectionDescriptor {
     private String name;

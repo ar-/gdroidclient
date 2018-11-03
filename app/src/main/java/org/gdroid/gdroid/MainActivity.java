@@ -21,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.tasks.DownloadXmlTask;
 
 import java.util.ArrayList;
@@ -33,10 +34,10 @@ public class MainActivity extends AppCompatActivity
     //private RecyclerView innerRecyclerView;
     //private LinearLayout collectionContent;
     //private HorizontalScrollView inner_scroll_view;
-//    private AppGridAdapter adapter;
+//    private AppBeanAdapter adapter;
 //    private List<ApplicationBean> appDescriptorList;
     private List<AppCollectionDescriptor> appCollectionDescriptorList;
-    private CollectionGridAdapter appCollectionAdapter;
+    private AppCollectionAdapter appCollectionAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity
         //inner_scroll_view = (HorizontalScrollView) findViewById(R.id.inner_scroll_view);
 
 //        appDescriptorList = new ArrayList<>();
-//        adapter = new AppGridAdapter(this, appDescriptorList);
+//        adapter = new AppBeanAdapter(this, appDescriptorList);
 
         //RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 3);
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity
         //innerRecyclerView.setAdapter(adapter);
         //innerRecyclerView.setAdapter(appCollectionAdapter);
         appCollectionDescriptorList = new ArrayList<>();
-        appCollectionAdapter = new CollectionGridAdapter(this, appCollectionDescriptorList);
+        appCollectionAdapter = new AppCollectionAdapter(this, appCollectionDescriptorList);
         recyclerView.setAdapter(appCollectionAdapter);
 
 

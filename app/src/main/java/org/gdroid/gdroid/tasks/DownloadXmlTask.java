@@ -5,11 +5,10 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import org.gdroid.gdroid.AppCollectionDescriptor;
-import org.gdroid.gdroid.CollectionGridAdapter;
+import org.gdroid.gdroid.beans.AppCollectionDescriptor;
+import org.gdroid.gdroid.AppCollectionAdapter;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
-import org.gdroid.gdroid.beans.SimpleApplicationDao;
 import org.gdroid.gdroid.xml.FDroidRepoXmlParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -27,10 +26,10 @@ public class DownloadXmlTask extends AsyncTask<String, Void, List<ApplicationBea
 
 
     private final Context mContext;
-    private final CollectionGridAdapter mAppCollectionAdapter;
+    private final AppCollectionAdapter mAppCollectionAdapter;
 
     // parameter is the adapter that can be notified after processing
-    public DownloadXmlTask(Context applicationContext, CollectionGridAdapter appCollectionAdapter) {
+    public DownloadXmlTask(Context applicationContext, AppCollectionAdapter appCollectionAdapter) {
         mContext = applicationContext;
         mAppCollectionAdapter = appCollectionAdapter;
     }

@@ -16,12 +16,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CollectionGridAdapter extends RecyclerView.Adapter<CollectionGridAdapter.MyViewHolder> {
+public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdapter.MyViewHolder> {
 
     private Context mContext;
     private List<AppCollectionDescriptor> appCollectionDescriptorList;
@@ -30,7 +31,7 @@ public class CollectionGridAdapter extends RecyclerView.Adapter<CollectionGridAd
         public TextView title, count;
         public RecyclerView inner_recycler_view;
 
-        private AppGridAdapter adapter;
+        private AppBeanAdapter adapter;
         private List<ApplicationBean> applicationBeanList;
 
 
@@ -41,7 +42,7 @@ public class CollectionGridAdapter extends RecyclerView.Adapter<CollectionGridAd
             inner_recycler_view = (RecyclerView) view.findViewById(R.id.inner_recycler_view);
 
             applicationBeanList = new ArrayList<>();
-            adapter = new AppGridAdapter(mContext, applicationBeanList);
+            adapter = new AppBeanAdapter(mContext, applicationBeanList);
 
             //inner_recycler_view.setLayoutManager(mLayoutManager);
             //recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
@@ -140,7 +141,7 @@ public class CollectionGridAdapter extends RecyclerView.Adapter<CollectionGridAd
 
     }
 
-    public CollectionGridAdapter(Context mContext, List<AppCollectionDescriptor> appCollectionDescriptorList) {
+    public AppCollectionAdapter(Context mContext, List<AppCollectionDescriptor> appCollectionDescriptorList) {
         this.mContext = mContext;
         this.appCollectionDescriptorList = appCollectionDescriptorList;
     }
