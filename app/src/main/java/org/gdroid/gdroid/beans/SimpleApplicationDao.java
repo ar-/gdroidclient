@@ -13,6 +13,12 @@ public interface SimpleApplicationDao {
     @Query("SELECT * FROM ApplicationBean")
     public ApplicationBean[] loadAllApplicationBeans();
 
+    @Query("SELECT * FROM ApplicationBean ORDER BY lastupdated DESC LIMIT :limit")
+    public ApplicationBean[] getLastUpdated(int limit);
+
+    @Query("SELECT * FROM ApplicationBean ORDER BY added DESC LIMIT :limit")
+    public ApplicationBean[] getLastAdded(int limit);
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     public void insertApplicationBeans(ApplicationBean... ApplicationBeans);
 

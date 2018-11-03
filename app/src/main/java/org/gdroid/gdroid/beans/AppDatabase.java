@@ -5,5 +5,6 @@ import android.arch.persistence.room.RoomDatabase;
 
 @Database(entities = {ApplicationBean.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
-    public abstract SimpleApplicationDao userDao();
+    public static final String db="gdroiddb";
+    public abstract SimpleApplicationDao appDao();
 }

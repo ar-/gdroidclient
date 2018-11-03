@@ -1,5 +1,6 @@
 package org.gdroid.gdroid;
 
+import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.content.res.Resources;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
+import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.util.ArrayList;
@@ -28,7 +30,7 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
     private List<AppCollectionDescriptor> appCollectionDescriptorList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView title, count;
+        public TextView title;
         public RecyclerView inner_recycler_view;
 
         private AppBeanAdapter adapter;
@@ -38,7 +40,7 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
         public MyViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.collection_headline);
-            count = (TextView) view.findViewById(R.id.more_button);
+            TextView moreButton = (TextView) view.findViewById(R.id.more_button);
             inner_recycler_view = (RecyclerView) view.findViewById(R.id.inner_recycler_view);
 
             applicationBeanList = new ArrayList<>();
@@ -139,6 +141,8 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
             adapter.notifyDataSetChanged();
         }
 
+
+
     }
 
     public AppCollectionAdapter(Context mContext, List<AppCollectionDescriptor> appCollectionDescriptorList) {
@@ -164,8 +168,12 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        AppCollectionDescriptor appDescriptor = appCollectionDescriptorList.get(position);
-        holder.title.setText(appDescriptor.getName());
+        AppCollectionDescriptor appCollectionDescriptor = appCollectionDescriptorList.get(position);
+        final String collectionName = appCollectionDescriptor.getName();
+        holder.title.setText(collectionName);
+        holder.applicationBeanList.clear();
+        holder.applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
+        holder.adapter.notifyDataSetChanged();
 
         // loading appDescriptor cover using Glide library
         //Glide.with(mContext).load(appDescriptor.getThumbnail()).into(holder.thumbnail);

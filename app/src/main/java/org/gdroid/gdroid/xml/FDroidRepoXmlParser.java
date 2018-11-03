@@ -62,19 +62,29 @@ public class FDroidRepoXmlParser {
             }
             String name = parser.getName();
             if (name.equals("name")) {
-                ret.name = readName(parser);
+                ret.name = readTag(parser,"name");
             } else if (name.equals("id")) {
-                ret.id = readId(parser);
+                ret.id = readTag(parser,"id");
+            } else if (name.equals("lastupdated")) {
+                ret.lastupdated = readTag(parser,"lastupdated");
             } else if (name.equals("summary")) {
-                summary = readSummary(parser);
-            } else if (name.equals("link")) {
-                link = readLink(parser);
+                ret.summary = readTag(parser,"summary");
+            } else if (name.equals("added")) {
+                ret.added = readTag(parser,"added");
             } else {
                 skip(parser);
             }
         }
 
         return ret;
+    }
+
+    // Processes any plain string element
+    private String readTag(XmlPullParser parser, String tag) throws IOException, XmlPullParserException {
+        parser.require(XmlPullParser.START_TAG, ns, tag);
+        String title = readText(parser);
+        parser.require(XmlPullParser.END_TAG, ns, tag);
+        return title;
     }
 
     // Processes title tags in the feed.

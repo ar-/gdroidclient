@@ -1,5 +1,6 @@
 package org.gdroid.gdroid;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity
 
         prepareAppCollections();
 
+        new DownloadXmlTask(getApplicationContext(), appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -109,25 +111,25 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-
     private void prepareAppCollections() {
-        AppCollectionDescriptor a = new AppCollectionDescriptor("newest apps");
+        final Context context = getApplicationContext();
+        AppCollectionDescriptor a = new AppCollectionDescriptor(context, "newest apps");
         appCollectionDescriptorList.add(a);
-        AppCollectionDescriptor a2 = new AppCollectionDescriptor("recently updated");
+        AppCollectionDescriptor a2 = new AppCollectionDescriptor(context, "recently updated");
         appCollectionDescriptorList.add(a2);
-        AppCollectionDescriptor a3 = new AppCollectionDescriptor("recommended for you");
+        AppCollectionDescriptor a3 = new AppCollectionDescriptor(context, "recommended for you");
         appCollectionDescriptorList.add(a3);
-        AppCollectionDescriptor a4 = new AppCollectionDescriptor("top rates apps");
+        AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "top rates apps");
         appCollectionDescriptorList.add(a4);
-        AppCollectionDescriptor a5 = new AppCollectionDescriptor("you might also like");
+        AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "you might also like");
         appCollectionDescriptorList.add(a5);
-        AppCollectionDescriptor a6 = new AppCollectionDescriptor("highest rated");
+        AppCollectionDescriptor a6 = new AppCollectionDescriptor(context, "highest rated");
         appCollectionDescriptorList.add(a6);
-        AppCollectionDescriptor a7 = new AppCollectionDescriptor("popular apps");
+        AppCollectionDescriptor a7 = new AppCollectionDescriptor(context, "popular apps");
         appCollectionDescriptorList.add(a7);
-        AppCollectionDescriptor a8 = new AppCollectionDescriptor("many forks");
+        AppCollectionDescriptor a8 = new AppCollectionDescriptor(context, "many forks");
         appCollectionDescriptorList.add(a8);
-        AppCollectionDescriptor a9 = new AppCollectionDescriptor("well maintained");
+        AppCollectionDescriptor a9 = new AppCollectionDescriptor(context, "well maintained");
         appCollectionDescriptorList.add(a9);
 
         appCollectionAdapter.notifyDataSetChanged();

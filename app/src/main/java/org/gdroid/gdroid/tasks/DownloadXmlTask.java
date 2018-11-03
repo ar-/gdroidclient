@@ -41,12 +41,16 @@ public class DownloadXmlTask extends AsyncTask<String, Void, List<ApplicationBea
                 ret = loadXmlFromNetwork(urls[0]);
 
                 AppDatabase db = Room.databaseBuilder(mContext,
-                        AppDatabase.class, "database-name").build();
+                        AppDatabase.class, AppDatabase.db).build();
 
                 for (ApplicationBean ab: ret) {
-                    db.userDao().insertApplicationBeans(ab);
+                    db.appDao().insertApplicationBeans(ab);
                 }
 
+                // update the UI after DB has been updated
+                for (AppCollectionDescriptor acd :mAppCollectionAdapter.getAppCollectionDescriptorList()) {
+                    acd.updateAppsInCollection();
+                }
 
                 return ret;
             } catch (IOException e) {
@@ -65,11 +69,11 @@ public class DownloadXmlTask extends AsyncTask<String, Void, List<ApplicationBea
 //            WebView myWebView = (WebView) findViewById(R.id.webview);
 //            myWebView.loadData(result, "text/html", null);
 
-        List<AppCollectionDescriptor> l = mAppCollectionAdapter.getAppCollectionDescriptorList();
-        result.get(0);
-        l.get(0).setName(result.get(0).name);
-        l.get(1).setName(result.get(1).name);
-        l.get(2).setName(result.get(2).name);
+//        List<AppCollectionDescriptor> l = mAppCollectionAdapter.getAppCollectionDescriptorList();
+//        result.get(0);
+//        l.get(0).setName(result.get(0).name);
+//        l.get(1).setName(result.get(1).name);
+//        l.get(2).setName(result.get(2).name);
 //        for (ApplicationBean ab: result) {
 //            SimpleApplicationDao.class
 //        }

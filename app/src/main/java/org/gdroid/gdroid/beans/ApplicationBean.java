@@ -6,16 +6,20 @@ import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-@Entity(indices = {@Index("name"),
-        @Index("lastupdated")})
+@Entity(indices = {@Index("name")
+        ,@Index("lastupdated")
+        ,@Index("added")
+})
 
 public class ApplicationBean {
 
     @PrimaryKey
     @NonNull
     public String id;
-    public String name;
+    public String added;
     public String lastupdated;
+    public String name;
+    public String summary;
     public float stars;
 
     @Ignore
