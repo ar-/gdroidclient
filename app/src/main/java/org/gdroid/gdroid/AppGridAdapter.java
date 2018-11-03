@@ -16,15 +16,17 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import org.gdroid.gdroid.beans.ApplicationBean;
+
 import java.util.List;
 
 public class AppGridAdapter extends RecyclerView.Adapter<AppGridAdapter.MyViewHolder> {
 
     private Context mContext;
-    private List<AppDescriptor> appDescriptorList;
+    private List<ApplicationBean> applicationBeanList;
 
     public int getCount() {
-        return appDescriptorList.size();
+        return applicationBeanList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -48,12 +50,14 @@ public class AppGridAdapter extends RecyclerView.Adapter<AppGridAdapter.MyViewHo
 
                 }
             });
+
+
         }
     }
 
-    public AppGridAdapter(Context mContext, List<AppDescriptor> appDescriptorList) {
+    public AppGridAdapter(Context mContext, List<ApplicationBean> applicationBeanList) {
         this.mContext = mContext;
-        this.appDescriptorList = appDescriptorList;
+        this.applicationBeanList = applicationBeanList;
     }
 
     @Override
@@ -66,13 +70,19 @@ public class AppGridAdapter extends RecyclerView.Adapter<AppGridAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        AppDescriptor appDescriptor = appDescriptorList.get(position);
-        holder.title.setText(appDescriptor.getName());
-        holder.count.setText(appDescriptor.getStars() + " ★");
+        ApplicationBean applicationBean = applicationBeanList.get(position);
+        holder.title.setText(applicationBean.getName());
+        holder.count.setText(applicationBean.getStars() + " ★");
 
-        // loading appDescriptor cover using Glide library
-        Glide.with(mContext).load(appDescriptor.getThumbnail()).into(holder.thumbnail);
+        // loading applicationBean cover using Glide library
+        //Glide.with(mContext).load(applicationBean.getThumbnail()).into(holder.thumbnail);
+        //Glide.with(mContext).load()
 //        holder.thumbnail.setImageDrawable();
+
+        Glide.with(mContext).load("https://f-droid.org/repo/icons-640/community.fairphone.fplauncher3.10.png").into(holder.thumbnail);
+//        new DownloadImageTask(holder.thumbnail)
+//                .execute("https://f-droid.org/repo/icons-640/community.fairphone.fplauncher3.10.png");
+
 
         holder.overflow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,6 +129,6 @@ public class AppGridAdapter extends RecyclerView.Adapter<AppGridAdapter.MyViewHo
 
     @Override
     public int getItemCount() {
-        return appDescriptorList.size();
+        return applicationBeanList.size();
     }
 }

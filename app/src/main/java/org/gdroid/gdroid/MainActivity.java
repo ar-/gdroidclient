@@ -24,6 +24,8 @@ import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
+import org.gdroid.gdroid.tasks.DownloadXmlTask;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity
     //private LinearLayout collectionContent;
     //private HorizontalScrollView inner_scroll_view;
 //    private AppGridAdapter adapter;
-//    private List<AppDescriptor> appDescriptorList;
+//    private List<ApplicationBean> appDescriptorList;
     private List<AppCollectionDescriptor> appCollectionDescriptorList;
     private CollectionGridAdapter appCollectionAdapter;
 
@@ -50,8 +52,11 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Downloading update ...", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
+                new DownloadXmlTask().execute("http://stackoverflow.com/feeds/tag?tagnames=android&sort=newest");
+
             }
         });
 
@@ -105,12 +110,24 @@ public class MainActivity extends AppCompatActivity
 
 
     private void prepareAppCollections() {
-        AppCollectionDescriptor a = new AppCollectionDescriptor("collection one");
+        AppCollectionDescriptor a = new AppCollectionDescriptor("newest apps");
         appCollectionDescriptorList.add(a);
-        AppCollectionDescriptor a2 = new AppCollectionDescriptor("collection 2");
+        AppCollectionDescriptor a2 = new AppCollectionDescriptor("recently updated");
         appCollectionDescriptorList.add(a2);
-        AppCollectionDescriptor a3 = new AppCollectionDescriptor("collection tree");
+        AppCollectionDescriptor a3 = new AppCollectionDescriptor("recommended for you");
         appCollectionDescriptorList.add(a3);
+        AppCollectionDescriptor a4 = new AppCollectionDescriptor("top rates apps");
+        appCollectionDescriptorList.add(a4);
+        AppCollectionDescriptor a5 = new AppCollectionDescriptor("you might also like");
+        appCollectionDescriptorList.add(a5);
+        AppCollectionDescriptor a6 = new AppCollectionDescriptor("highest rated");
+        appCollectionDescriptorList.add(a6);
+        AppCollectionDescriptor a7 = new AppCollectionDescriptor("popular apps");
+        appCollectionDescriptorList.add(a7);
+        AppCollectionDescriptor a8 = new AppCollectionDescriptor("many forks");
+        appCollectionDescriptorList.add(a8);
+        AppCollectionDescriptor a9 = new AppCollectionDescriptor("well maintained");
+        appCollectionDescriptorList.add(a9);
     }
     /**
      * Adding few albums for testing
@@ -140,34 +157,34 @@ public class MainActivity extends AppCompatActivity
 ////                R.drawable.album10,
 ////                R.drawable.album11};
 //
-//        AppDescriptor a = new AppDescriptor("True Romance", 4.5f, covers[0]);
+//        ApplicationBean a = new ApplicationBean("True Romance", 4.5f, covers[0]);
 //        appDescriptorList.add(a);
 //
-//        a = new AppDescriptor("Xscpae", 2, covers[1]);
+//        a = new ApplicationBean("Xscpae", 2, covers[1]);
 //        appDescriptorList.add(a);
 //
-//        a = new AppDescriptor("Maroon 5", 4.5f, covers[2]);
+//        a = new ApplicationBean("Maroon 5", 4.5f, covers[2]);
 //        appDescriptorList.add(a);
 //
-//        a = new AppDescriptor("Born to Die", 4.5f, covers[3]);
+//        a = new ApplicationBean("Born to Die", 4.5f, covers[3]);
 //        appDescriptorList.add(a);
 //
-//        a = new AppDescriptor("Honeymoon", 4.5f, covers[4]);
+//        a = new ApplicationBean("Honeymoon", 4.5f, covers[4]);
 //        appDescriptorList.add(a);
 //
-//        a = new AppDescriptor("I Need a Doctor", 1, covers[5]);
+//        a = new ApplicationBean("I Need a Doctor", 1, covers[5]);
 //        appDescriptorList.add(a);
 //
-//        a = new AppDescriptor("Loud", 4.5f, covers[6]);
+//        a = new ApplicationBean("Loud", 4.5f, covers[6]);
 //        appDescriptorList.add(a);
 //
-//        a = new AppDescriptor("Legend", 4.5f, covers[7]);
+//        a = new ApplicationBean("Legend", 4.5f, covers[7]);
 //        appDescriptorList.add(a);
 //
-//        a = new AppDescriptor("Hello", 4, covers[8]);
+//        a = new ApplicationBean("Hello", 4, covers[8]);
 //        appDescriptorList.add(a);
 //
-//        a = new AppDescriptor("Greatest Hits", 2, covers[9]);
+//        a = new ApplicationBean("Greatest Hits", 2, covers[9]);
 //        appDescriptorList.add(a);
 //
 //        adapter.notifyDataSetChanged();
@@ -216,6 +233,9 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            Intent myIntent = new Intent(this, TempTabActivity.class);
+            //myIntent.putExtra("key", value); //Optional parameters
+            this.startActivity(myIntent);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {

@@ -1,8 +1,6 @@
 package org.gdroid.gdroid;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
@@ -15,12 +13,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
+import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +31,7 @@ public class CollectionGridAdapter extends RecyclerView.Adapter<CollectionGridAd
         public RecyclerView inner_recycler_view;
 
         private AppGridAdapter adapter;
-        private List<AppDescriptor> appDescriptorList;
+        private List<ApplicationBean> applicationBeanList;
 
 
         public MyViewHolder(View view) {
@@ -44,8 +40,8 @@ public class CollectionGridAdapter extends RecyclerView.Adapter<CollectionGridAd
             count = (TextView) view.findViewById(R.id.more_button);
             inner_recycler_view = (RecyclerView) view.findViewById(R.id.inner_recycler_view);
 
-            appDescriptorList = new ArrayList<>();
-            adapter = new AppGridAdapter(mContext, appDescriptorList);
+            applicationBeanList = new ArrayList<>();
+            adapter = new AppGridAdapter(mContext, applicationBeanList);
 
             //inner_recycler_view.setLayoutManager(mLayoutManager);
             //recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
@@ -109,35 +105,35 @@ public class CollectionGridAdapter extends RecyclerView.Adapter<CollectionGridAd
 //                R.drawable.album10,
 //                R.drawable.album11};
 
-            AppDescriptor a = new AppDescriptor("True Romance", 4.5f, covers[0]);
-            appDescriptorList.add(a);
+            ApplicationBean a = new ApplicationBean("True Romance", 4.5f, covers[0]);
+            applicationBeanList.add(a);
 
-            a = new AppDescriptor("Xscpae", 2, covers[1]);
-            appDescriptorList.add(a);
+            a = new ApplicationBean("Xscpae", 2, covers[1]);
+            applicationBeanList.add(a);
 
-            a = new AppDescriptor("Maroon 5", 4.5f, covers[2]);
-            appDescriptorList.add(a);
+            a = new ApplicationBean("Maroon 5", 4.5f, covers[2]);
+            applicationBeanList.add(a);
 
-            a = new AppDescriptor("Born to Die", 4.5f, covers[3]);
-            appDescriptorList.add(a);
+            a = new ApplicationBean("Born to Die", 4.5f, covers[3]);
+            applicationBeanList.add(a);
 
-            a = new AppDescriptor("Honeymoon", 4.5f, covers[4]);
-            appDescriptorList.add(a);
+            a = new ApplicationBean("Honeymoon", 4.5f, covers[4]);
+            applicationBeanList.add(a);
 
-            a = new AppDescriptor("I Need a Doctor", 1, covers[5]);
-            appDescriptorList.add(a);
+            a = new ApplicationBean("I Need a Doctor", 1, covers[5]);
+            applicationBeanList.add(a);
 
-            a = new AppDescriptor("Loud", 4.5f, covers[6]);
-            appDescriptorList.add(a);
+            a = new ApplicationBean("Loud", 4.5f, covers[6]);
+            applicationBeanList.add(a);
 
-            a = new AppDescriptor("Legend", 4.5f, covers[7]);
-            appDescriptorList.add(a);
+            a = new ApplicationBean("Legend", 4.5f, covers[7]);
+            applicationBeanList.add(a);
 
-            a = new AppDescriptor("Hello", 4, covers[8]);
-            appDescriptorList.add(a);
+            a = new ApplicationBean("Hello", 4, covers[8]);
+            applicationBeanList.add(a);
 
-            a = new AppDescriptor("Greatest Hits", 2, covers[9]);
-            appDescriptorList.add(a);
+            a = new ApplicationBean("Greatest Hits", 2, covers[9]);
+            applicationBeanList.add(a);
 
             adapter.notifyDataSetChanged();
         }
