@@ -33,8 +33,7 @@ public class AppCollectionDescriptor {
         String collectionName = name;
         if (collectionName.equals("newest apps"))
         {
-            AppDatabase db = Room.databaseBuilder(mContext,
-                    AppDatabase.class, AppDatabase.db).allowMainThreadQueries().build();
+            AppDatabase db = AppDatabase.get(mContext);
 
             ApplicationBean[] appsInDb = db.appDao().getLastAdded(10);
 
@@ -45,9 +44,7 @@ public class AppCollectionDescriptor {
         }
         else if (collectionName.equals("recently updated"))
         {
-            AppDatabase db = Room.databaseBuilder(mContext,
-                    AppDatabase.class, AppDatabase.db).allowMainThreadQueries().build();
-
+            AppDatabase db = AppDatabase.get(mContext);
             ApplicationBean[] appsInDb = db.appDao().getLastUpdated(10);
 
             applicationBeanList.clear();

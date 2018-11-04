@@ -73,6 +73,32 @@ public class FDroidRepoXmlParser {
                 ret.added = readTag(parser,"added");
             } else if (name.equals("icon")) {
                 ret.icon = readTag(parser,"icon");
+            } else if (name.equals("desc")) {
+                ret.desc = readTag(parser,"desc");
+            } else if (name.equals("license")) {
+                ret.license = readTag(parser,"license");
+            } else if (name.equals("categories")) {
+                ret.categories = readTag(parser,"categories");
+            } else if (name.equals("web")) {
+                ret.web = readTag(parser,"web");
+            } else if (name.equals("source")) {
+                ret.source = readTag(parser,"source");
+            } else if (name.equals("tracker")) {
+                ret.tracker = readTag(parser,"tracker");
+            } else if (name.equals("changelog")) {
+                ret.changelog = readTag(parser,"changelog");
+            } else if (name.equals("author")) {
+                ret.author = readTag(parser,"author");
+            } else if (name.equals("bitcoin")) {
+                ret.bitcoin = readTag(parser,"bitcoin");
+            } else if (name.equals("liberapay")) {
+                ret.liberapay = readTag(parser,"liberapay");
+            } else if (name.equals("marketversion")) {
+                ret.marketversion = readTag(parser,"marketversion");
+            } else if (name.equals("marketvercode")) {
+                ret.marketvercode = readTag(parser,"marketvercode");
+            } else if (name.equals("antifeatures")) {
+                ret.antifeatures = readTag(parser,"antifeatures");
             } else {
                 skip(parser);
             }

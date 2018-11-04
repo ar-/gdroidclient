@@ -81,7 +81,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         //Glide.with(mContext).load()
 //        holder.thumbnail.setImageDrawable();
         if (applicationBean.icon != null) {
-            Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+applicationBean.icon).into(holder.thumbnail);
+            Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+applicationBean.icon).override(192, 192).into(holder.thumbnail);
         }
 //        new DownloadImageTask(holder.thumbnail)
 //                .execute("https://f-droid.org/repo/icons-640/community.fairphone.fplauncher3.10.png");

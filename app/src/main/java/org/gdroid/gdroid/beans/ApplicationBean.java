@@ -22,9 +22,20 @@ public class ApplicationBean {
     public String summary;
     public String icon;
     public float stars;
-
+    public String desc;
+    public String license;
     @Ignore
-//    public int thumbnail;
+    public String categories;
+    public String web;
+    public String source;
+    public String tracker;
+    public String changelog;
+    public String bitcoin;
+    public String liberapay;
+    public String marketversion;
+    public String marketvercode;
+    public String antifeatures;
+    public String author;
 
     public ApplicationBean() {
     }

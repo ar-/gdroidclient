@@ -48,7 +48,8 @@ public class DownloadXmlTask extends AsyncTask<String, Void, List<ApplicationBea
             try {
                 ret = loadXmlFromNetwork(urls[0]);
 
-                AppDatabase db = Room.databaseBuilder(mContext, AppDatabase.class, AppDatabase.db).build();
+                // update the local DB
+                AppDatabase db = AppDatabase.get(mContext);
 
                 for (ApplicationBean ab: ret) {
                     db.appDao().insertApplicationBeans(ab);
