@@ -1,7 +1,6 @@
 package org.gdroid.gdroid;
 
 import android.app.Activity;
-import android.arch.persistence.room.util.StringUtil;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.PopupMenu;
@@ -31,6 +30,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
+        public String appId;
         public TextView title, count;
         public ImageView thumbnail, overflow;
 
@@ -46,7 +46,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
                 @Override
                 public void onClick(View v) {
                     Intent myIntent = new Intent(activity, AppDetailActivity.class);
-                    //myIntent.putExtra("key", value); //Optional parameters
+                    myIntent.putExtra("appId", appId);
                     activity.startActivity(myIntent);
 
                 }
@@ -64,7 +64,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.album_card, parent, false);
+                .inflate(R.layout.app_card, parent, false);
 
         return new MyViewHolder(itemView);
     }
@@ -72,6 +72,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         ApplicationBean applicationBean = applicationBeanList.get(position);
+        holder.appId = applicationBean.id;
         holder.title.setText(applicationBean.getName());
         holder.count.setText(applicationBean.getStars() + " ★");
 

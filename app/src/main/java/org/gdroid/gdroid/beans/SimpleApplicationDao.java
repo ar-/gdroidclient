@@ -19,6 +19,9 @@ public interface SimpleApplicationDao {
     @Query("SELECT * FROM ApplicationBean ORDER BY added DESC LIMIT :limit")
     public ApplicationBean[] getLastAdded(int limit);
 
+    @Query("SELECT * FROM ApplicationBean WHERE id = :id LIMIT 1")
+    public ApplicationBean getApplicationBean(String id);
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     public void insertApplicationBeans(ApplicationBean... ApplicationBeans);
 

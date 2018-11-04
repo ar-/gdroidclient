@@ -16,12 +16,12 @@
         android:clickable="true"
         android:layout_marginLeft="@dimen/my_cardview_margin"
         android:layout_marginRight="@dimen/my_cardview_margin"
-        android:minWidth="220dp"
-        android:maxWidth="220dp"
+        android:minWidth="190dp"
+        android:maxWidth="190dp"
         card_view:cardCornerRadius="@dimen/card_album_radius">
 
         <RelativeLayout
-            android:layout_width="220dp"
+            android:layout_width="190dp"
             android:layout_height="match_parent"
             >
 
