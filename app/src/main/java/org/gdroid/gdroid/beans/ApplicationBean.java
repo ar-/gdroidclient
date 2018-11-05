@@ -41,6 +41,7 @@ public class ApplicationBean {
     public String antifeatures;
     public String author;
     public String email;
+    public String permissions;
 
     public ApplicationBean() {
     }

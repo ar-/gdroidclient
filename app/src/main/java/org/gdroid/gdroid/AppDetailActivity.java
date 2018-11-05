@@ -65,6 +65,11 @@ public class AppDetailActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.lbl_website)).setText(mApp.web);
         ((TextView)findViewById(R.id.lbl_email)).setText(mApp.email);
 
+        if (!TextUtils.isEmpty(mApp.permissions))
+        {
+            ((TextView)findViewById(R.id.lbl_permissions)).setText(mApp.permissions);
+        }
+
         // developer view can be hidden if no data for it
         if (TextUtils.isEmpty(mApp.web) && TextUtils.isEmpty(mApp.email))
         {

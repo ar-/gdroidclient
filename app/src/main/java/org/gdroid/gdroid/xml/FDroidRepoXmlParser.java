@@ -1,5 +1,6 @@
 package org.gdroid.gdroid.xml;
 
+import android.text.TextUtils;
 import android.util.Xml;
 
 import org.gdroid.gdroid.beans.ApplicationBean;
@@ -51,10 +52,6 @@ public class FDroidRepoXmlParser {
 // to their respective "read" methods for processing. Otherwise, skips the tag.
     private ApplicationBean readEntry(XmlPullParser parser) throws XmlPullParserException, IOException {
         parser.require(XmlPullParser.START_TAG, ns, "application");
-        String id = null;
-        String title = null;
-        String summary = null;
-        String link = null;
         ApplicationBean ret = new ApplicationBean();
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
@@ -101,6 +98,11 @@ public class FDroidRepoXmlParser {
                 ret.marketvercode = readTag(parser,"marketvercode");
             } else if (name.equals("antifeatures")) {
                 ret.antifeatures = readTag(parser,"antifeatures");
+            } else if (name.equals("package")) {
+                String p = readPermissions(parser);
+                if (TextUtils.isEmpty(ret.permissions)) {
+                    ret.permissions = p;
+                }
             } else {
                 skip(parser);
             }
@@ -166,6 +168,24 @@ public class FDroidRepoXmlParser {
         }
         return result;
     }
+
+    private String readPermissions(XmlPullParser parser) throws XmlPullParserException, IOException {
+        parser.require(XmlPullParser.START_TAG, ns, "package");
+        String perm = "";
+        while (parser.next() != XmlPullParser.END_TAG) {
+            if (parser.getEventType() != XmlPullParser.START_TAG) {
+                continue;
+            }
+            String name = parser.getName();
+            if (name.equals("permissions")) {
+                perm = readTag(parser,"permissions");
+            } else {
+                skip(parser);
+            }
+        }
+        return perm;
+    }
+
 
     private void skip(XmlPullParser parser) throws XmlPullParserException, IOException {
         if (parser.getEventType() != XmlPullParser.START_TAG) {
