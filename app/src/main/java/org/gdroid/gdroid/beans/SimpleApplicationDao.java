@@ -31,5 +31,18 @@ public interface SimpleApplicationDao {
     @Delete
     public void deleteApplicationBeans(ApplicationBean... ApplicationBeans);
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    public void insertCategories(CategoryBean... CategoryBeans);
 
+    @Query("DELETE FROM CategoryBean WHERE appId = :appId")
+    public void deleteCategoriesForApp(String appId);
+
+    @Query("SELECT * FROM CategoryBean WHERE appId = :appId")
+    public CategoryBean[] getAllCategoriesForApp(String appId);
+
+//    @Query("SELECT * FROM CategoryBean WHERE catName = :catName")
+//    public ApplicationBean[] getAllAppsForCategory(String catName);
+
+    @Query("SELECT DISTINCT catName FROM CategoryBean")
+    public String[] getAllCategoryNames();
 }

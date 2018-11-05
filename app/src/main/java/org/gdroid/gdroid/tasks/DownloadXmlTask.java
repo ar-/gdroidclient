@@ -15,6 +15,7 @@ import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.AppCollectionAdapter;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.beans.CategoryBean;
 import org.gdroid.gdroid.xml.FDroidRepoXmlParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -53,6 +54,14 @@ public class DownloadXmlTask extends AsyncTask<String, Void, List<ApplicationBea
 
                 for (ApplicationBean ab: ret) {
                     db.appDao().insertApplicationBeans(ab);
+                    final List<CategoryBean> categoryList = ab.getCategoryList();
+                    if (categoryList !=null)
+                    {
+                        db.appDao().deleteCategoriesForApp(ab.id);
+                        for (CategoryBean c: categoryList) {
+                            db.appDao().insertCategories(c);
+                        }
+                    }
                 }
 
                 // update the UI after DB has been updated

@@ -73,8 +73,8 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         ApplicationBean applicationBean = applicationBeanList.get(position);
         holder.appId = applicationBean.id;
-        holder.title.setText(applicationBean.getName());
-        holder.count.setText(applicationBean.getStars() + " ★");
+        holder.title.setText(applicationBean.name);
+        holder.count.setText(applicationBean.stars + " ★");
 
         // loading applicationBean cover using Glide library
         //Glide.with(mContext).load(applicationBean.getThumbnail()).into(holder.thumbnail);

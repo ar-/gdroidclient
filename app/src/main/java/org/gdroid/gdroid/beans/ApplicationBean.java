@@ -6,6 +6,10 @@ import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 @Entity(indices = {@Index("name")
         ,@Index("lastupdated")
         ,@Index("added")
@@ -51,29 +55,48 @@ public class ApplicationBean {
 //        this.thumbnail = thumbnail;
 //    }
 
-    public String getId() {
-        return id;
+    /**
+     * Gets a list of catgories, if the bean has jsut been filled by XML parser.
+     * Otherwise this method will not work.
+     * If this bean has been retireved later, eg. from the DB, the categoreis must also be fetched from the separate DAO.
+     * @return
+     */
+    public List<CategoryBean> getCategoryList()
+    {
+        ArrayList<CategoryBean> ret = new ArrayList<>(2);
+        if (categories != null)
+        {
+            for (String cat:categories.split(",")) {
+                CategoryBean cb = new CategoryBean(cat,id);
+                ret.add(cb);
+            }
+        }
+        return ret;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public float getStars() {
-        return stars;
-    }
-
-    public void setStars(float stars) {
-        this.stars = stars;
-    }
+//    public String getId() {
+//        return id;
+//    }
+//
+//    public void setId(String id) {
+//        this.id = id;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public float getStars() {
+//        return stars;
+//    }
+//
+//    public void setStars(float stars) {
+//        this.stars = stars;
+//    }
 
 //    public int getThumbnail() {
 //        return thumbnail;
