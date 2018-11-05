@@ -281,24 +281,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="Also in this category"
+            android:text="Similar apps"
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <HorizontalScrollView
-            android:visibility="visible"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rec_view_same_category"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            android:paddingTop="50dp"
+            />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <include layout="@layout/app_card"/>
-                <include layout="@layout/app_card"/>
-                <include layout="@layout/app_card"/>
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/rec_view_came_category"-->
+            <!--android:visibility="visible"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
 
-            </LinearLayout>
-        </HorizontalScrollView>
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--<include layout="@layout/app_card"/>-->
+                <!--<include layout="@layout/app_card"/>-->
+                <!--<include layout="@layout/app_card"/>-->
+
+            <!--</LinearLayout>-->
+        <!--</android.support.v7.widget.RecyclerView>-->
 
         <View
             android:layout_width="match_parent"

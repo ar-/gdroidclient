@@ -23,6 +23,7 @@ import java.util.List;
 public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHolder> {
 
     private Context mContext;
+    private Activity mActivity;
     private List<ApplicationBean> applicationBeanList;
 
     public int getCount() {
@@ -41,7 +42,8 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
             overflow = (ImageView) view.findViewById(R.id.overflow);
 
-            final Activity activity = (Activity) mContext;
+            //final Activity activity = (Activity) mContext;
+            final Activity activity = getActivity();
             thumbnail.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -133,5 +135,16 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
     @Override
     public int getItemCount() {
         return applicationBeanList.size();
+    }
+
+    public void setActivity(Activity mActivity) {
+        this.mActivity = mActivity;
+    }
+
+    public Activity getActivity() {
+        Activity c = Util.getActivity(mContext);
+        if (c!=null)
+            return c;
+        return mActivity;
     }
 }

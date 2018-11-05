@@ -25,6 +25,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
+import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.tasks.DownloadXmlTask;
 
 import java.util.ArrayList;
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        prepareAppCollections();
+        prepareAppCollections("home");
 
         final MainActivity activity = this;
         // TODO initial refresh only when DB empty
@@ -118,26 +119,40 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private void prepareAppCollections() {
+    private void prepareAppCollections(String screen) {
         final Context context = getApplicationContext();
-        AppCollectionDescriptor a = new AppCollectionDescriptor(context, "newest apps");
-        appCollectionDescriptorList.add(a);
-        AppCollectionDescriptor a2 = new AppCollectionDescriptor(context, "recently updated");
-        appCollectionDescriptorList.add(a2);
-        AppCollectionDescriptor a3 = new AppCollectionDescriptor(context, "recommended for you");
-        appCollectionDescriptorList.add(a3);
-        AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "top rates apps");
-        appCollectionDescriptorList.add(a4);
-        AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "you might also like");
-        appCollectionDescriptorList.add(a5);
-        AppCollectionDescriptor a6 = new AppCollectionDescriptor(context, "highest rated");
-        appCollectionDescriptorList.add(a6);
-        AppCollectionDescriptor a7 = new AppCollectionDescriptor(context, "popular apps");
-        appCollectionDescriptorList.add(a7);
-        AppCollectionDescriptor a8 = new AppCollectionDescriptor(context, "many forks");
-        appCollectionDescriptorList.add(a8);
-        AppCollectionDescriptor a9 = new AppCollectionDescriptor(context, "well maintained");
-        appCollectionDescriptorList.add(a9);
+        if (screen.equals("home"))
+        {
+            appCollectionDescriptorList.clear();
+            AppCollectionDescriptor a = new AppCollectionDescriptor(context, "Newest apps");
+            appCollectionDescriptorList.add(a);
+            AppCollectionDescriptor a2 = new AppCollectionDescriptor(context, "Recently updated");
+            appCollectionDescriptorList.add(a2);
+//            AppCollectionDescriptor a3 = new AppCollectionDescriptor(context, "Recommended for you");
+//            appCollectionDescriptorList.add(a3);
+//            AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "top rates apps");
+//            appCollectionDescriptorList.add(a4);
+//            AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "you might also like");
+//            appCollectionDescriptorList.add(a5);
+//            AppCollectionDescriptor a6 = new AppCollectionDescriptor(context, "highest rated");
+//            appCollectionDescriptorList.add(a6);
+//            AppCollectionDescriptor a7 = new AppCollectionDescriptor(context, "popular apps");
+//            appCollectionDescriptorList.add(a7);
+//            AppCollectionDescriptor a8 = new AppCollectionDescriptor(context, "System");
+//            appCollectionDescriptorList.add(a8);
+//            AppCollectionDescriptor a9 = new AppCollectionDescriptor(context, "well maintained");
+//            appCollectionDescriptorList.add(a9);
+        }
+        else if (screen.equals("categories"))
+        {
+            appCollectionDescriptorList.clear();
+            AppDatabase db = AppDatabase.get(context);
+            final String[] categoryNames = db.appDao().getAllCategoryNames();
+            for (String cn:categoryNames) {
+                AppCollectionDescriptor ad = new AppCollectionDescriptor(context, "cat:"+cn);
+                appCollectionDescriptorList.add(ad);
+            }
+        }
 
         appCollectionAdapter.notifyDataSetChanged();
     }
@@ -149,18 +164,23 @@ public class MainActivity extends AppCompatActivity
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
+                    prepareAppCollections("home");
 //                    mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_categories:
+                    prepareAppCollections("categories");
 //                    mTextMessage.setText(R.string.title_dashboard);
                     return true;
                 case R.id.navigation_starred:
+                    prepareAppCollections("starred");
 //                    mTextMessage.setText(R.string.title_notifications);
                     return true;
                 case R.id.navigation_myapps:
+                    prepareAppCollections("myapps");
 //                    mTextMessage.setText(R.string.title_notifications);
                     return true;
                 case R.id.navigation_search:
+                    prepareAppCollections("search");
 //                    mTextMessage.setText(R.string.title_notifications);
                     return true;
             }

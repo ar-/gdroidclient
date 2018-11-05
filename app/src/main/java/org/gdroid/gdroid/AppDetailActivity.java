@@ -1,14 +1,15 @@
 package org.gdroid.gdroid;
 
-import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.TextUtils;
@@ -19,13 +20,18 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AppDetailActivity extends AppCompatActivity {
 
     Context mContext;
+    ApplicationBean mApp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,25 +54,25 @@ public class AppDetailActivity extends AppCompatActivity {
         String appId = getIntent().getStringExtra("appId");
 
         AppDatabase db = AppDatabase.get(getApplicationContext());
-        ApplicationBean app = db.appDao().getApplicationBean(appId);
-        toolbar.setTitle(app.name);
-        toolbarLayout.setTitle(app.name);
-        ((TextView)findViewById(R.id.lbl_app_name)).setText(app.name);
-        ((TextView)findViewById(R.id.lbl_app_summary)).setText(app.summary);
-        ((TextView)findViewById(R.id.lbl_lastupdated)).setText(app.lastupdated);
-        ((TextView)findViewById(R.id.lbl_app_author)).setText(app.author);
-        ((TextView)findViewById(R.id.lbl_license)).setText(app.license);
-        ((TextView)findViewById(R.id.lbl_website)).setText(app.web);
-        ((TextView)findViewById(R.id.lbl_email)).setText(app.email);
+        mApp = db.appDao().getApplicationBean(appId);
+        toolbar.setTitle(mApp.name);
+        toolbarLayout.setTitle(mApp.name);
+        ((TextView)findViewById(R.id.lbl_app_name)).setText(mApp.name);
+        ((TextView)findViewById(R.id.lbl_app_summary)).setText(mApp.summary);
+        ((TextView)findViewById(R.id.lbl_lastupdated)).setText(mApp.lastupdated);
+        ((TextView)findViewById(R.id.lbl_app_author)).setText(mApp.author);
+        ((TextView)findViewById(R.id.lbl_license)).setText(mApp.license);
+        ((TextView)findViewById(R.id.lbl_website)).setText(mApp.web);
+        ((TextView)findViewById(R.id.lbl_email)).setText(mApp.email);
 
         // developer view can be hidden if no data for it
-        if (TextUtils.isEmpty(app.web) && TextUtils.isEmpty(app.email))
+        if (TextUtils.isEmpty(mApp.web) && TextUtils.isEmpty(mApp.email))
         {
             findViewById(R.id.view_developer).setVisibility(View.GONE);
         }
 
         // fill categories in
-        final CategoryBean[] categories = db.appDao().getAllCategoriesForApp(app.id);
+        final CategoryBean[] categories = db.appDao().getAllCategoriesForApp(mApp.id);
         final LinearLayout categoryView = (LinearLayout) findViewById(R.id.grp_categories);
         categoryView.removeAllViews();
         for (CategoryBean cb:categories) {
@@ -81,6 +87,34 @@ public class AppDetailActivity extends AppCompatActivity {
             tv.setText(cb.catName);
             categoryView.addView(tv);
         }
+
+        // populate similar apps
+        List<ApplicationBean> applicationBeanList;
+        RecyclerView viewSameCat = (RecyclerView) findViewById(R.id.rec_view_same_category);
+        applicationBeanList = new ArrayList<>();
+        AppBeanAdapter adapter = new AppBeanAdapter(mContext, applicationBeanList);
+        adapter.setActivity(this); // make this Activity the calling context
+        viewSameCat.setItemAnimator(new DefaultItemAnimator());
+        viewSameCat.setAdapter(adapter);
+        LinearLayoutManager layoutManager2
+                = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
+        viewSameCat.setLayoutManager(layoutManager2);
+        // use just fist category for now
+        AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(mContext,"cat:" + categories[0].catName);
+        applicationBeanList.clear();
+        applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
+
+        // remove this app itself, becasue it is similar to itself
+        for (ApplicationBean ab:applicationBeanList) {
+            if (ab.id.equals(this.mApp.id))
+            {
+                applicationBeanList.remove(ab);
+                break;
+            }
+        }
+
+        adapter.notifyDataSetChanged();
+
 
         TextView tv = new TextView(mContext);
 //        tv.setla
@@ -97,15 +131,15 @@ public class AppDetailActivity extends AppCompatActivity {
 
         // put HTML description in place
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            ((TextView)findViewById(R.id.lbl_app_desc)).setText(Html.fromHtml(app.desc, Html.FROM_HTML_MODE_COMPACT));
+            ((TextView)findViewById(R.id.lbl_app_desc)).setText(Html.fromHtml(mApp.desc, Html.FROM_HTML_MODE_COMPACT));
         } else {
-            ((TextView)findViewById(R.id.lbl_app_desc)).setText(Html.fromHtml(app.desc));
+            ((TextView)findViewById(R.id.lbl_app_desc)).setText(Html.fromHtml(mApp.desc));
         }
 
 
-        if (app.icon != null) {
-            Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+app.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
-            Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+app.icon).override(192, 192).into((ImageView) findViewById(R.id.img_header_icon));
+        if (mApp.icon != null) {
+            Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
+            Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_header_icon));
         }
 
 

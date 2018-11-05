@@ -170,7 +170,11 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         AppCollectionDescriptor appCollectionDescriptor = appCollectionDescriptorList.get(position);
-        final String collectionName = appCollectionDescriptor.getName();
+        String collectionName = appCollectionDescriptor.getName();
+        if (collectionName.startsWith("cat:"))
+        {
+            collectionName = collectionName.replace("cat:","");
+        }
         holder.title.setText(collectionName);
         holder.applicationBeanList.clear();
         holder.applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());

@@ -40,8 +40,10 @@ public interface SimpleApplicationDao {
     @Query("SELECT * FROM CategoryBean WHERE appId = :appId")
     public CategoryBean[] getAllCategoriesForApp(String appId);
 
-//    @Query("SELECT * FROM CategoryBean WHERE catName = :catName")
-//    public ApplicationBean[] getAllAppsForCategory(String catName);
+    // TODO ask the user what to ORDER BY in the settings
+    @Query("SELECT a.* FROM CategoryBean c LEFT JOIN ApplicationBean a ON (c.appId = a.id) WHERE c.catName = :catName" +
+            " ORDER BY a.lastupdated DESC, a.added ASC LIMIT :limit")
+    public ApplicationBean[] getAllAppsForCategory(String catName, int limit);
 
     @Query("SELECT DISTINCT catName FROM CategoryBean")
     public String[] getAllCategoryNames();
