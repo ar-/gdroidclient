@@ -3,6 +3,8 @@ package org.gdroid.gdroid.beans;
 import android.arch.persistence.room.Room;
 import android.content.Context;
 
+import org.gdroid.gdroid.Util;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,6 +65,11 @@ public class AppCollectionDescriptor {
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+        }
+        else if (collectionName.equals("starred"))
+        {
+            applicationBeanList.clear();
+            applicationBeanList.addAll(Util.getStarredApps(mContext));
         }
         else if (collectionName.startsWith("cat:"))
         {

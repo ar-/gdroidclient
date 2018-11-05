@@ -1,5 +1,6 @@
 package org.gdroid.gdroid;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -156,31 +157,29 @@ public class MainActivity extends AppCompatActivity
         appCollectionAdapter.notifyDataSetChanged();
     }
 
-        private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+        = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     prepareAppCollections("home");
-//                    mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_categories:
                     prepareAppCollections("categories");
-//                    mTextMessage.setText(R.string.title_dashboard);
                     return true;
                 case R.id.navigation_starred:
-                    prepareAppCollections("starred");
-//                    mTextMessage.setText(R.string.title_notifications);
+                    Intent myIntent = new Intent(getApplicationContext(), AppCollectionActivity.class);
+                    myIntent.putExtra("collectionName", "starred");
+                    myIntent.putExtra("headline", "starred");
+                    startActivity(myIntent);
                     return true;
                 case R.id.navigation_myapps:
                     prepareAppCollections("myapps");
-//                    mTextMessage.setText(R.string.title_notifications);
                     return true;
                 case R.id.navigation_search:
                     prepareAppCollections("search");
-//                    mTextMessage.setText(R.string.title_notifications);
                     return true;
             }
             return false;

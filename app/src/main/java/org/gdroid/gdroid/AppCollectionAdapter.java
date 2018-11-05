@@ -71,66 +71,6 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
             return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
         }
 
-//        private void prepareAlbums() {
-//            int[] covers = new int[]{
-//                    R.drawable.a1,
-//                    R.drawable.a1,
-//                    R.drawable.a1,
-//                    R.drawable.a1,
-//                    R.drawable.a1,
-//                    R.drawable.a1,
-//                    R.drawable.a1,
-//                    R.drawable.a1,
-//                    R.drawable.a1,
-//                    R.drawable.a1,
-//                    R.drawable.a1};
-////        R.drawable.album1,
-////                R.drawable.album2,
-////                R.drawable.album3,
-////                R.drawable.album4,
-////                R.drawable.album5,
-////                R.drawable.album6,
-////                R.drawable.album7,
-////                R.drawable.album8,
-////                R.drawable.album9,
-////                R.drawable.album10,
-////                R.drawable.album11};
-//
-//            ApplicationBean a = new ApplicationBean("True Romance", 4.5f, covers[0]);
-//            applicationBeanList.add(a);
-//
-//            a = new ApplicationBean("Xscpae", 2, covers[1]);
-//            applicationBeanList.add(a);
-//
-//            a = new ApplicationBean("Maroon 5", 4.5f, covers[2]);
-//            applicationBeanList.add(a);
-//
-//            a = new ApplicationBean("Born to Die", 4.5f, covers[3]);
-//            applicationBeanList.add(a);
-//
-//            a = new ApplicationBean("Honeymoon", 4.5f, covers[4]);
-//            applicationBeanList.add(a);
-//
-//            a = new ApplicationBean("I Need a Doctor", 1, covers[5]);
-//            applicationBeanList.add(a);
-//
-//            a = new ApplicationBean("Loud", 4.5f, covers[6]);
-//            applicationBeanList.add(a);
-//
-//            a = new ApplicationBean("Legend", 4.5f, covers[7]);
-//            applicationBeanList.add(a);
-//
-//            a = new ApplicationBean("Hello", 4, covers[8]);
-//            applicationBeanList.add(a);
-//
-//            a = new ApplicationBean("Greatest Hits", 2, covers[9]);
-//            applicationBeanList.add(a);
-//
-//            adapter.notifyDataSetChanged();
-//        }
-
-
-
     }
 
     public AppCollectionAdapter(Context mContext, List<AppCollectionDescriptor> appCollectionDescriptorList) {
@@ -191,7 +131,6 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
                 myIntent.putExtra("collectionName", collectionName);
                 myIntent.putExtra("headline", headline);
                 activity.startActivity(myIntent);
-
             }
         });
 

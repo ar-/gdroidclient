@@ -3,6 +3,7 @@ package org.gdroid.gdroid;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.TextUtils;
+import android.util.ArraySet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -26,12 +28,15 @@ import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class AppDetailActivity extends AppCompatActivity {
 
     Context mContext;
     ApplicationBean mApp;
+    FloatingActionButton fab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,14 +46,6 @@ public class AppDetailActivity extends AppCompatActivity {
         CollapsingToolbarLayout toolbarLayout = findViewById(R.id.toolbar_layout);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         String appId = getIntent().getStringExtra("appId");
@@ -117,22 +114,7 @@ public class AppDetailActivity extends AppCompatActivity {
                 break;
             }
         }
-
         adapter.notifyDataSetChanged();
-
-
-        TextView tv = new TextView(mContext);
-//        tv.setla
-//        android:id="@+id/lbl_cat1"
-//        android:layout_width="wrap_content"
-//        android:layout_height="wrap_content"
-//        android:layout_margin="2dp"
-//        android:background="@drawable/rounded_corner"
-//        android:padding="10dp"
-//        android:text="category1"
-//        android:textColor="@color/album_title"
-//        android:textSize="14sp" />
-
 
         // put HTML description in place
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -147,6 +129,27 @@ public class AppDetailActivity extends AppCompatActivity {
             Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_header_icon));
         }
 
+        // make the star button useful
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Util.toggleAppStarred(mContext,mApp.id);
+                updateStarButton();
+            }
+        });
+        updateStarButton();
+    }
 
+    private void updateStarButton()
+    {
+        if (Util.isAppstarred(mContext, mApp.id))
+        {
+            fab.setImageResource(R.drawable.ic_star_white_24dp);
+        }
+        else
+        {
+            fab.setImageResource(R.drawable.ic_star_border_white_24dp);
+        }
     }
 }
