@@ -1,7 +1,9 @@
 package org.gdroid.gdroid;
 
+import android.app.Activity;
 import android.arch.persistence.room.Room;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
@@ -31,6 +33,7 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title;
+        TextView moreButton;
         public RecyclerView inner_recycler_view;
 
         private AppBeanAdapter adapter;
@@ -40,7 +43,7 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
         public MyViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.collection_headline);
-            TextView moreButton = (TextView) view.findViewById(R.id.more_button);
+            moreButton = (TextView) view.findViewById(R.id.more_button);
             inner_recycler_view = (RecyclerView) view.findViewById(R.id.inner_recycler_view);
 
             applicationBeanList = new ArrayList<>();
@@ -58,22 +61,6 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
                     = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
 
             inner_recycler_view.setLayoutManager(layoutManager2);
-
-//            prepareAlbums();
-
-//            thumbnail = (LinearLayout) view.findViewById(R.id.collection_content);
-//
-//            final Activity activity = (Activity) mContext;
-//            thumbnail.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onCl
-// ick(View v) {
-//                    Intent myIntent = new Intent(activity, AppDetailActivity.class);
-//                    //myIntent.putExtra("key", value); //Optional parameters
-//                    activity.startActivity(myIntent);
-//
-//                }
-//            });
         }
 
         /**
@@ -170,12 +157,17 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         AppCollectionDescriptor appCollectionDescriptor = appCollectionDescriptorList.get(position);
-        String collectionName = appCollectionDescriptor.getName();
+        final String collectionName = appCollectionDescriptor.getName();
+        final String headline;
         if (collectionName.startsWith("cat:"))
         {
-            collectionName = collectionName.replace("cat:","");
+            headline = collectionName.replace("cat:","");
         }
-        holder.title.setText(collectionName);
+        else
+        {
+            headline = collectionName;
+        }
+        holder.title.setText(headline);
         holder.applicationBeanList.clear();
         holder.applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
         holder.adapter.notifyDataSetChanged();
@@ -186,10 +178,23 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
 
 //        holder.overflow.setOnClickListener(new View.OnClickListener() {
 //            @Override
-//            public void onClick(View view) {
-//                showPopupMenu(holder.overflow);
+////            public void onClick(View view) {
+////                showPopupMenu(holder.overflow);
 //            }
 //        });
+
+        final Activity activity = (Activity) mContext;
+        holder.moreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(activity, AppCollectionActivity.class);
+                myIntent.putExtra("collectionName", collectionName);
+                myIntent.putExtra("headline", headline);
+                activity.startActivity(myIntent);
+
+            }
+        });
+
     }
 
     /**

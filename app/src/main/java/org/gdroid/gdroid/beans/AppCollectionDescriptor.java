@@ -10,12 +10,24 @@ import java.util.List;
  * wraps a name of a collection and a list of apps to be contained in the collection, to be shown in the UI
  */
 public class AppCollectionDescriptor {
+    private final int mLimit;
+    private final int mOffset;
     private Context mContext;
     private String name;
     private List<ApplicationBean> applicationBeanList;
 
     public AppCollectionDescriptor(Context context, String name) {
+        this(context,name, 10);
+    }
+
+    public AppCollectionDescriptor(Context context, String name, int limit) {
+        this(context,name, limit, 0);
+    }
+
+    public AppCollectionDescriptor(Context context, String name, int limit, int offset) {
         this.mContext = context;
+        this.mOffset = offset;
+        this.mLimit = limit;
         applicationBeanList = new ArrayList<>();
         setName(name);
     }
@@ -35,7 +47,7 @@ public class AppCollectionDescriptor {
         {
             AppDatabase db = AppDatabase.get(mContext);
 
-            ApplicationBean[] appsInDb = db.appDao().getLastAdded(10);
+            ApplicationBean[] appsInDb = db.appDao().getLastAdded(mLimit,mOffset);
 
             applicationBeanList.clear();
             for (ApplicationBean ab: appsInDb ) {
@@ -45,7 +57,7 @@ public class AppCollectionDescriptor {
         else if (collectionName.equals("Recently updated"))
         {
             AppDatabase db = AppDatabase.get(mContext);
-            ApplicationBean[] appsInDb = db.appDao().getLastUpdated(10);
+            ApplicationBean[] appsInDb = db.appDao().getLastUpdated(mLimit,mOffset);
 
             applicationBeanList.clear();
             for (ApplicationBean ab: appsInDb ) {
@@ -56,7 +68,7 @@ public class AppCollectionDescriptor {
         {
             String cat = collectionName.replace("cat:","");
             AppDatabase db = AppDatabase.get(mContext);
-            ApplicationBean[] appsInDb = db.appDao().getAllAppsForCategory(cat, 10);
+            ApplicationBean[] appsInDb = db.appDao().getAllAppsForCategory(cat, mLimit, mOffset);
 
             applicationBeanList.clear();
             for (ApplicationBean ab: appsInDb ) {

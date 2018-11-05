@@ -13,11 +13,11 @@ public interface SimpleApplicationDao {
     @Query("SELECT * FROM ApplicationBean")
     public ApplicationBean[] loadAllApplicationBeans();
 
-    @Query("SELECT * FROM ApplicationBean ORDER BY lastupdated DESC LIMIT :limit")
-    public ApplicationBean[] getLastUpdated(int limit);
+    @Query("SELECT * FROM ApplicationBean ORDER BY lastupdated DESC LIMIT :limit OFFSET :offset")
+    public ApplicationBean[] getLastUpdated(int limit, int offset);
 
-    @Query("SELECT * FROM ApplicationBean ORDER BY added DESC LIMIT :limit")
-    public ApplicationBean[] getLastAdded(int limit);
+    @Query("SELECT * FROM ApplicationBean ORDER BY added DESC LIMIT :limit OFFSET :offset")
+    public ApplicationBean[] getLastAdded(int limit, int offset);
 
     @Query("SELECT * FROM ApplicationBean WHERE id = :id LIMIT 1")
     public ApplicationBean getApplicationBean(String id);
@@ -42,8 +42,8 @@ public interface SimpleApplicationDao {
 
     // TODO ask the user what to ORDER BY in the settings
     @Query("SELECT a.* FROM CategoryBean c LEFT JOIN ApplicationBean a ON (c.appId = a.id) WHERE c.catName = :catName" +
-            " ORDER BY a.lastupdated DESC, a.added ASC LIMIT :limit")
-    public ApplicationBean[] getAllAppsForCategory(String catName, int limit);
+            " ORDER BY a.lastupdated DESC, a.added ASC LIMIT :limit OFFSET :offset")
+    public ApplicationBean[] getAllAppsForCategory(String catName, int limit, int offset);
 
     @Query("SELECT DISTINCT catName FROM CategoryBean")
     public String[] getAllCategoryNames();
