@@ -196,72 +196,81 @@
         </TableLayout>
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
-            android:text="Developer"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TableLayout
-            android:visibility="visible"
+        <LinearLayout
+            android:id="@+id/view_developer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="15dp">
+            android:orientation="vertical"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
 
-            <TableRow>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_language_black_24dp"
-                    android:padding="2dp"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Website"
-                    android:layout_gravity="center_vertical"
-                    android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:text="Developer"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                <Space android:minWidth="50dp"/>
+            <TableLayout
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_email_black_24dp"
-                    android:padding="2dp"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:layout_gravity="center_vertical"
-                    android:textStyle="bold" />
-            </TableRow>
+                <TableRow>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_language_black_24dp"
+                        android:padding="2dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Website"
+                        android:layout_gravity="center_vertical"
+                        android:textStyle="bold" />
 
-            <TableRow>
-                <Space />
-                <TextView
-                    android:id="@+id/lbl_website"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="www.g-droid.org" />
-                <Space />
-                <Space />
-                <TextView
-                    android:id="@+id/lbl_email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="contact@g-droid.org" />
-            </TableRow>
+                    <Space android:minWidth="50dp"/>
 
-        </TableLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_email_black_24dp"
+                        android:padding="2dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:layout_gravity="center_vertical"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+                    <Space />
+                    <TextView
+                        android:id="@+id/lbl_website"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="www.g-droid.org" />
+                    <Space />
+                    <Space />
+                    <TextView
+                        android:id="@+id/lbl_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="contact@g-droid.org" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"

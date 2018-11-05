@@ -11,6 +11,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -57,6 +58,12 @@ public class AppDetailActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.lbl_license)).setText(app.license);
         ((TextView)findViewById(R.id.lbl_website)).setText(app.web);
         ((TextView)findViewById(R.id.lbl_email)).setText(app.email);
+
+        // developer view can be hidden if no data for it
+        if (TextUtils.isEmpty(app.web) && TextUtils.isEmpty(app.email))
+        {
+            findViewById(R.id.view_developer).setVisibility(View.GONE);
+        }
 
         // fill categories in
         final CategoryBean[] categories = db.appDao().getAllCategoriesForApp(app.id);
