@@ -45,6 +45,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/lbl_app_author"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
@@ -143,6 +144,7 @@
             android:background="?android:attr/listDivider" />
 
         <TextView
+            android:id="@+id/lbl_app_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
@@ -184,6 +186,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/lbl_license"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="5dp"
@@ -244,12 +247,14 @@
             <TableRow>
                 <Space />
                 <TextView
+                    android:id="@+id/lbl_website"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="www.g-droid.org" />
                 <Space />
                 <Space />
                 <TextView
+                    android:id="@+id/lbl_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="contact@g-droid.org" />

@@ -89,6 +89,8 @@ public class FDroidRepoXmlParser {
                 ret.changelog = readTag(parser,"changelog");
             } else if (name.equals("author")) {
                 ret.author = readTag(parser,"author");
+            } else if (name.equals("email")) {
+                ret.email = readTag(parser,"email");
             } else if (name.equals("bitcoin")) {
                 ret.bitcoin = readTag(parser,"bitcoin");
             } else if (name.equals("liberapay")) {

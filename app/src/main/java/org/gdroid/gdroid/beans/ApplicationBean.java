@@ -36,6 +36,7 @@ public class ApplicationBean {
     public String marketvercode;
     public String antifeatures;
     public String author;
+    public String email;
 
     public ApplicationBean() {
     }
