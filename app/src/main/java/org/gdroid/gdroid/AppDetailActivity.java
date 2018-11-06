@@ -28,6 +28,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -166,57 +167,33 @@ public class AppDetailActivity extends AppCompatActivity {
                                           doInBackground("https://f-droid.org/repo/"+mApp.apkname);
                                       }
                                   });
-
-//                File otaFile;
-//                try{ otaFile = new File(getApplicationContext().getExternalCacheDir().getAbsolutePath() + File.separator + "update_unsigned" + ".apk");
-//
-//                    Uri uri = Uri.parse("https://f-droid.org/repo/com.gitlab.ardash.appleflinger.android_1005005.apk");
-//
-//                    DownloadManager.Request request = new DownloadManager.Request(uri);
-//                    request.setTitle("DL title xxx").
-//                            setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-//                    request.setDestinationUri(Uri.fromFile(otaFile));
-//
-//                    final DownloadManager downloadManager = (DownloadManager) mContext.getSystemService(DOWNLOAD_SERVICE);
-//                    long downloadId = downloadManager.enqueue(request);
-//
-//                    AsyncTask.execute(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            DownloadManager.Query query = null;
-//                            query = new DownloadManager.Query();
-//                            query.setFilterByStatus(DownloadManager.STATUS_FAILED|DownloadManager.STATUS_PAUSED|DownloadManager.STATUS_SUCCESSFUL|DownloadManager.STATUS_RUNNING|DownloadManager.STATUS_PENDING);
-//                            boolean downloading = true;
-//                            while (downloading) {
-//                                c = downloadManager.query(query);
-//                                if(c.moveToFirst()) {
-//                                    Log.i ("FLAG","Downloading");
-//                                    int status =c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
-//
-//                                    if (status==DownloadManager.STATUS_SUCCESSFUL) {
-//                                        Log.i ("FLAG","done");
-//                                        downloading = false;
-//                                        flag=true;
-//                                        break;
-//                                    }
-//                                    if (status==DownloadManager.STATUS_FAILED) {
-//                                        Log.i ("FLAG","Fail");
-//                                        downloading = false;
-//                                        flag=false;
-//                                        break;
-//                                    }
-//                                }
-//                            }
-//                        }
-//                    });
-//
-//                    //emitter.onSuccess("saving to " + otaFile + " id -  " + downloadId);
-//                } catch (Exception e) {
-//                    //emitter.onError(new Throwable(e.getMessage()));
-//                }
-
             }
         });
+
+        // populate the Links-section with further upstream links
+        populateUpstreamLink(mApp.source, R.id.tbl_row_source_code);
+        populateUpstreamLink(mApp.tracker, R.id.tbl_row_bugtracker);
+        populateUpstreamLink(mApp.changelog, R.id.tbl_row_changelog);
+    }
+
+    private void populateUpstreamLink(final String appAttribute, int tableRowId) {
+        if (!TextUtils.isEmpty(appAttribute))
+        {
+            final TableRow tblRow = findViewById(tableRowId);
+            tblRow.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse(appAttribute));
+                    startActivity(i);
+                }
+            });
+        }
+        else
+        {
+            final TableRow tblRow = findViewById(tableRowId);
+            tblRow.setVisibility(View.GONE);
+        }
     }
 
     protected Boolean doInBackground(String url) {

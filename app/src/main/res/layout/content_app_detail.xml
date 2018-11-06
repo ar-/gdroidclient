@@ -329,7 +329,9 @@
             android:layout_height="wrap_content"
             android:padding="15dp">
 
-            <TableRow>
+            <TableRow
+                android:id="@+id/tbl_row_source_code"
+                >
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -344,7 +346,9 @@
                     android:textStyle="bold" />
             </TableRow>
 
-            <TableRow>
+            <TableRow
+                android:id="@+id/tbl_row_changelog"
+                >
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -359,7 +363,9 @@
                     android:textStyle="bold" />
             </TableRow>
 
-            <TableRow>
+            <TableRow
+                android:id="@+id/tbl_row_bugtracker"
+                >
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
