@@ -184,5 +184,6 @@
     <string name="title_myapps">my apps</string>
     <string name="title_search">search</string>
     <string name="title_activity_app_collection">AppCollectionActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
 
 </resources>

@@ -71,6 +71,18 @@ public class AppCollectionDescriptor {
             applicationBeanList.clear();
             applicationBeanList.addAll(Util.getStarredApps(mContext));
         }
+        else if (collectionName.startsWith("search:"))
+        {
+            String searchString = collectionName.replace("search:","");
+            searchString = "%"+searchString+"%";
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getAllAppsForSearchString(searchString, mLimit, mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+        }
         else if (collectionName.startsWith("cat:"))
         {
             String cat = collectionName.replace("cat:","");

@@ -18,14 +18,18 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
+import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.tasks.DownloadXmlTask;
 
 import java.util.ArrayList;
@@ -38,16 +42,19 @@ public class MainActivity extends AppCompatActivity
     //private RecyclerView innerRecyclerView;
     //private LinearLayout collectionContent;
     //private HorizontalScrollView inner_scroll_view;
-//    private AppBeanAdapter adapter;
-//    private List<ApplicationBean> appDescriptorList;
+    private AppBeanAdapter adapter;
+    private List<ApplicationBean> appBeanList;
     private List<AppCollectionDescriptor> appCollectionDescriptorList;
     private AppCollectionAdapter appCollectionAdapter;
+
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.loadingPanel).setVisibility(View.GONE);
+        searchView = findViewById(R.id.search_view);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -60,41 +67,15 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        //innerRecyclerView = (RecyclerView) findViewById(R.id.inner_recycler_view);
-        //collectionContent = (LinearLayout) findViewById(R.id.collection_content);
-        //inner_scroll_view = (HorizontalScrollView) findViewById(R.id.inner_scroll_view);
+        setUpCollectionCards();
+        prepareAppCollections("home");
 
-//        appDescriptorList = new ArrayList<>();
-//        adapter = new AppBeanAdapter(this, appDescriptorList);
-
-        //RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 3);
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
-        recyclerView.setLayoutManager(mLayoutManager);
-        //recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        //recyclerView.setAdapter(adapter);
-
-        LinearLayoutManager layoutManager
-                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        //RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
-        //innerRecyclerView.setLayoutManager(layoutManager);
-        //innerRecyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
-        //innerRecyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
-        //innerRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        //innerRecyclerView.setAdapter(adapter);
-        //innerRecyclerView.setAdapter(appCollectionAdapter);
-        appCollectionDescriptorList = new ArrayList<>();
-        appCollectionAdapter = new AppCollectionAdapter(this, appCollectionDescriptorList);
-        recyclerView.setAdapter(appCollectionAdapter);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
 
 
-        prepareAppCollections("home");
 
         final MainActivity activity = this;
         // TODO initial refresh only when DB empty
@@ -117,6 +98,84 @@ public class MainActivity extends AppCompatActivity
 
 
 
+    }
+
+    /**
+     * Call this to initialize ethe main view with collection cards.
+     * These are cards that ontain on row of cards of apps.
+     */
+    private void setUpCollectionCards() {
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        //innerRecyclerView = (RecyclerView) findViewById(R.id.inner_recycler_view);
+        //collectionContent = (LinearLayout) findViewById(R.id.collection_content);
+        //inner_scroll_view = (HorizontalScrollView) findViewById(R.id.inner_scroll_view);
+
+//        appDescriptorList = new ArrayList<>();
+//        adapter = new AppBeanAdapter(this, appDescriptorList);
+
+        //RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 3);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
+        recyclerView.setLayoutManager(mLayoutManager);
+        //recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
+        removeAllitemDecorations();
+        recyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        //recyclerView.setAdapter(adapter);
+
+//        LinearLayoutManager layoutManager
+//                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        //RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
+        //innerRecyclerView.setLayoutManager(layoutManager);
+        //innerRecyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
+        //innerRecyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
+        //innerRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        //innerRecyclerView.setAdapter(adapter);
+        //innerRecyclerView.setAdapter(appCollectionAdapter);
+        appCollectionDescriptorList = new ArrayList<>();
+        appCollectionAdapter = new AppCollectionAdapter(this, appCollectionDescriptorList);
+        recyclerView.setAdapter(appCollectionAdapter);
+    }
+
+    /**
+     * call this to set up the main view to show a bunch of apps on a grid with 3 columns
+     */
+    private void setUpAppCards() {
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+
+        appBeanList = new ArrayList<>();
+        adapter = new AppBeanAdapter(this, appBeanList);
+
+        //inner_recycler_view.setLayoutManager(mLayoutManager);
+        //recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
+        //inner_recycler_view.addItemDecoration(new MainActivity.GridSpacingItemDecoration(1, dpToPx(10), true));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        recyclerView.setAdapter(adapter);
+
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 3);
+        removeAllitemDecorations();
+        recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
+
+//        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 1);
+//        LinearLayoutManager layoutManager2
+//                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+
+        recyclerView.setLayoutManager(mLayoutManager);
+    }
+
+    private void removeAllitemDecorations()
+    {
+        while (true)
+        {
+            if (recyclerView.getItemDecorationCount() >0)
+            {
+                recyclerView.removeItemDecorationAt(0);
+            }
+            else
+            {
+                break;
+            }
+        }
     }
 
     private void prepareAppCollections(String screen) {
@@ -162,29 +221,91 @@ public class MainActivity extends AppCompatActivity
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            searchView.setVisibility(View.GONE);
             switch (item.getItemId()) {
                 case R.id.navigation_home:
+                    setUpCollectionCards();
                     prepareAppCollections("home");
                     return true;
                 case R.id.navigation_categories:
+                    setUpCollectionCards();
                     prepareAppCollections("categories");
                     return true;
                 case R.id.navigation_starred:
-                    Intent myIntent = new Intent(getApplicationContext(), AppCollectionActivity.class);
-                    myIntent.putExtra("collectionName", "starred");
-                    myIntent.putExtra("headline", "starred");
-                    startActivity(myIntent);
+                    setUpAppCards();
+                    AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(),"starred");
+                    appBeanList.clear();
+                    appBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
+                    adapter.notifyDataSetChanged();
+//                    Intent myIntent = new Intent(getApplicationContext(), AppCollectionActivity.class);
+//                    myIntent.putExtra("collectionName", "starred");
+//                    myIntent.putExtra("headline", "starred");
+//                    startActivity(myIntent);
                     return true;
                 case R.id.navigation_myapps:
                     prepareAppCollections("myapps");
                     return true;
                 case R.id.navigation_search:
-                    prepareAppCollections("search");
+                    searchView.setVisibility(View.VISIBLE);
+                    searchView.setIconifiedByDefault(false);
+//                    searchView.requestFocus();
+//                    hideSoftKeyboard(searchView);
+                    showSoftKeyboard(searchView);
+//                    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+
+                    setUpAppCards();
+//                    final CharSequence query = searchView.getQuery();
+//                    AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(),"search:"+query,10);
+//                    appBeanList.clear();
+//                    appBeanList.addAll(acd.getApplicationBeanList());
+
+                    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                        @Override
+                        public boolean onQueryTextSubmit(String s) {
+                            final CharSequence query = searchView.getQuery();
+                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(),"search:"+query,2000);
+                            appBeanList.clear();
+                            appBeanList.addAll(acd.getApplicationBeanList());
+                            adapter.notifyDataSetChanged();
+                            return false;
+                        }
+
+                        @Override
+                        public boolean onQueryTextChange(String s) {
+                            final CharSequence query = searchView.getQuery();
+                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(),"search:"+query,20);
+                            appBeanList.clear();
+                            appBeanList.addAll(acd.getApplicationBeanList());
+                            adapter.notifyDataSetChanged();
+                            return false;
+                        }
+                    });
+//                    Intent searchIntent = new Intent(getApplicationContext(), SearchActivity.class);
+//                    searchIntent.putExtra("collectionName", "starred");
+//                    searchIntent.putExtra("headline", "starred");
+//                    startActivity(searchIntent);
                     return true;
             }
             return false;
         }
     };
+
+    public void showSoftKeyboard(View view) {
+//        if (view.requestFocus()) {
+            InputMethodManager imm = (InputMethodManager)
+                    getSystemService(Context.INPUT_METHOD_SERVICE);
+//        imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT);
+        imm.showSoftInput(view, InputMethodManager.SHOW_FORCED);
+//        InputMethodManager inputMethodManager = (InputMethodManager) view.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+//        view.requestFocus();
+//        inputMethodManager.showSoftInput(view, 0);
+//        }
+    }
+
+    public void hideSoftKeyboard(View view) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_IMPLICIT_ONLY);
+    }
 
     @Override
     public void onBackPressed() {

@@ -45,6 +45,10 @@ public interface SimpleApplicationDao {
             " ORDER BY a.lastupdated DESC, a.added ASC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getAllAppsForCategory(String catName, int limit, int offset);
 
+    @Query("SELECT * FROM ApplicationBean WHERE name like :ss " +
+            " ORDER BY lastupdated DESC, added ASC LIMIT :limit OFFSET :offset")
+    public ApplicationBean[] getAllAppsForSearchString(String ss, int limit, int offset);
+
     @Query("SELECT DISTINCT catName FROM CategoryBean")
     public String[] getAllCategoryNames();
 }
