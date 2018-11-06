@@ -4,6 +4,7 @@ import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.CursorWindow;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -152,11 +153,13 @@ public class AppDetailActivity extends AppCompatActivity {
         updateStarButton();
 
         //make the install button useful
-        Button btnInstall = findViewById(R.id.btn_install);
+        final Button btnInstall = findViewById(R.id.btn_install);
         btnInstall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+//                btnInstall.setEnabled(false);
+                btnInstall.setAlpha(.5f);
+                btnInstall.setClickable(false);
                 AsyncTask.execute(new Runnable() {
                                       @Override
                                       public void run() {
@@ -223,11 +226,12 @@ public class AppDetailActivity extends AppCompatActivity {
         boolean flag = true;
         boolean downloading =true;
         try{
+            // TODO use another library to download, this google thing sucks
             DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
             DownloadManager.Request mRqRequest = new DownloadManager.Request(
                     Uri.parse(url));
             //mRqRequest.setTitle("DL title xxxzzz");
-            mRqRequest.setTitle("DL title xxx555555").setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            mRqRequest.setTitle(mApp.name).setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             mRqRequest.setDestinationUri(Uri.fromFile(otaFile));
             long idDownLoad=mManager.enqueue(mRqRequest);
             DownloadManager.Query query = null;
@@ -291,9 +295,17 @@ public class AppDetailActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                startActivityForResult(intent, 0);
-                                //mContext.startActivity(intent);
+                                //startActivityForResult(intent, 0);
+                                mContext.startActivity(intent);
 
+                                // own parcelable cursor:
+                                // https://stackoverflow.com/questions/17527095/could-not-write-cursorwindow-to-parcel-due-to-error-2147483641/19976499
+
+                                // must use another download lib to prevent this
+//                                11-07 06:24:14.995 15992-14156/? E/CursorWindow: Could not allocate
+//                                CursorWindow
+//                                '/data/data/com.android.providers.downloads/databases/downloads.db' of size 2097152 due to error -12.
+//                                11-07 06:24:15.005 15992-14156/? E/DownloadManager: [11771] Failed: android.database.CursorWindowAllocationException: Cursor window allocation of 2048 kb failed. # Open Cursors=723 (# cursors opened by pid 13969=723)
                             }
                         });
 
