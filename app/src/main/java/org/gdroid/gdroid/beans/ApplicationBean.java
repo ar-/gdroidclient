@@ -42,6 +42,7 @@ public class ApplicationBean {
     public String author;
     public String email;
     public String permissions;
+    public String apkname;
 
     public ApplicationBean() {
     }

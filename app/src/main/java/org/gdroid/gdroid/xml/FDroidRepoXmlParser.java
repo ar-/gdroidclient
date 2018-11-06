@@ -99,9 +99,10 @@ public class FDroidRepoXmlParser {
             } else if (name.equals("antifeatures")) {
                 ret.antifeatures = readTag(parser,"antifeatures");
             } else if (name.equals("package")) {
-                String p = readPermissions(parser);
-                if (TextUtils.isEmpty(ret.permissions)) {
-                    ret.permissions = p;
+                Pack p = readPackage(parser);
+                if (TextUtils.isEmpty(ret.apkname)) {
+                    ret.permissions = p.permissions;
+                    ret.apkname = p.apkname;
                 }
             } else {
                 skip(parser);
@@ -169,21 +170,24 @@ public class FDroidRepoXmlParser {
         return result;
     }
 
-    private String readPermissions(XmlPullParser parser) throws XmlPullParserException, IOException {
+    private Pack readPackage(XmlPullParser parser) throws XmlPullParserException, IOException {
         parser.require(XmlPullParser.START_TAG, ns, "package");
-        String perm = "";
+        Pack ret = new Pack();
+        //String perm = "";
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
                 continue;
             }
             String name = parser.getName();
-            if (name.equals("permissions")) {
-                perm = readTag(parser,"permissions");
+            if (name.equals("apkname")) {
+                ret.apkname = readTag(parser,"apkname");
+            } else if (name.equals("permissions")) {
+                ret.permissions = readTag(parser,"permissions");
             } else {
                 skip(parser);
             }
         }
-        return perm;
+        return ret;
     }
 
 
@@ -202,6 +206,11 @@ public class FDroidRepoXmlParser {
                     break;
             }
         }
+    }
+
+    public class Pack{
+        String apkname = "";
+        String permissions = "";
     }
 
 }

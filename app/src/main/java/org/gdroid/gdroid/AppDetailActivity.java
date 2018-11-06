@@ -1,8 +1,15 @@
 package org.gdroid.gdroid;
 
+import android.app.DownloadManager;
 import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -15,7 +22,9 @@ import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.TextUtils;
 import android.util.ArraySet;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -27,6 +36,8 @@ import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
 
+import java.io.File;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -139,6 +150,169 @@ public class AppDetailActivity extends AppCompatActivity {
             }
         });
         updateStarButton();
+
+        //make the install button useful
+        Button btnInstall = findViewById(R.id.btn_install);
+        btnInstall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AsyncTask.execute(new Runnable() {
+                                      @Override
+                                      public void run() {
+                                          doInBackground("https://f-droid.org/repo/"+mApp.apkname);
+                                      }
+                                  });
+
+//                File otaFile;
+//                try{ otaFile = new File(getApplicationContext().getExternalCacheDir().getAbsolutePath() + File.separator + "update_unsigned" + ".apk");
+//
+//                    Uri uri = Uri.parse("https://f-droid.org/repo/com.gitlab.ardash.appleflinger.android_1005005.apk");
+//
+//                    DownloadManager.Request request = new DownloadManager.Request(uri);
+//                    request.setTitle("DL title xxx").
+//                            setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+//                    request.setDestinationUri(Uri.fromFile(otaFile));
+//
+//                    final DownloadManager downloadManager = (DownloadManager) mContext.getSystemService(DOWNLOAD_SERVICE);
+//                    long downloadId = downloadManager.enqueue(request);
+//
+//                    AsyncTask.execute(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            DownloadManager.Query query = null;
+//                            query = new DownloadManager.Query();
+//                            query.setFilterByStatus(DownloadManager.STATUS_FAILED|DownloadManager.STATUS_PAUSED|DownloadManager.STATUS_SUCCESSFUL|DownloadManager.STATUS_RUNNING|DownloadManager.STATUS_PENDING);
+//                            boolean downloading = true;
+//                            while (downloading) {
+//                                c = downloadManager.query(query);
+//                                if(c.moveToFirst()) {
+//                                    Log.i ("FLAG","Downloading");
+//                                    int status =c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
+//
+//                                    if (status==DownloadManager.STATUS_SUCCESSFUL) {
+//                                        Log.i ("FLAG","done");
+//                                        downloading = false;
+//                                        flag=true;
+//                                        break;
+//                                    }
+//                                    if (status==DownloadManager.STATUS_FAILED) {
+//                                        Log.i ("FLAG","Fail");
+//                                        downloading = false;
+//                                        flag=false;
+//                                        break;
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    });
+//
+//                    //emitter.onSuccess("saving to " + otaFile + " id -  " + downloadId);
+//                } catch (Exception e) {
+//                    //emitter.onError(new Throwable(e.getMessage()));
+//                }
+
+            }
+        });
+    }
+
+    protected Boolean doInBackground(String url) {
+        File otaFile;
+        otaFile = new File(getApplicationContext().getExternalCacheDir().getAbsolutePath() + File.separator + "last_download" + ".apk");
+
+        boolean flag = true;
+        boolean downloading =true;
+        try{
+            DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+            DownloadManager.Request mRqRequest = new DownloadManager.Request(
+                    Uri.parse(url));
+            //mRqRequest.setTitle("DL title xxxzzz");
+            mRqRequest.setTitle("DL title xxx555555").setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            mRqRequest.setDestinationUri(Uri.fromFile(otaFile));
+            long idDownLoad=mManager.enqueue(mRqRequest);
+            DownloadManager.Query query = null;
+            query = new DownloadManager.Query();
+            Cursor c = null;
+            if(query!=null) {
+                query.setFilterByStatus(DownloadManager.STATUS_FAILED|DownloadManager.STATUS_PAUSED|DownloadManager.STATUS_SUCCESSFUL|DownloadManager.STATUS_RUNNING|DownloadManager.STATUS_PENDING);
+            } else {
+                return flag;
+            }
+
+            while (downloading) {
+                c = mManager.query(query);
+                if(c.moveToFirst()) {
+                    Log.e ("FLAG","Downloading");
+                    int status =c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
+
+                    if (status==DownloadManager.STATUS_SUCCESSFUL) {
+                        Log.e ("FLAG","done");
+                        downloading = false;
+                        flag=true;
+
+//                        Intent intent = new Intent(Intent.ACTION_VIEW);
+//                        intent.setDataAndType(Uri.fromFile(otaFile), "application/vnd.android.package-archive");
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // without this flag android returned a intent error!
+//                        mContext.startActivity(intent);
+                        //File file = new File(dir, "App.apk");
+                        Uri uri = Uri.fromFile(otaFile);
+                        final Intent intent = new Intent();
+                        if(Build.VERSION.SDK_INT>=24){
+                            try{
+                                Method m = StrictMode.class.getMethod("disableDeathOnFileUriExposure");
+                                m.invoke(null);
+                            }catch(Exception e){
+                                e.printStackTrace();
+                            }
+                        }
+
+                        if (Build.VERSION.SDK_INT < 14) {
+                            intent.setAction(Intent.ACTION_VIEW);
+                            intent.setDataAndType(uri, "application/vnd.android.package-archive");
+                        } else if (Build.VERSION.SDK_INT < 16) {
+                            intent.setAction(Intent.ACTION_INSTALL_PACKAGE);
+                            intent.setData(uri);
+                            intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
+                            intent.putExtra(Intent.EXTRA_NOT_UNKNOWN_SOURCE, true);
+                            intent.putExtra(Intent.EXTRA_ALLOW_REPLACE, true);
+                        } else if (Build.VERSION.SDK_INT < 24) {
+                            intent.setAction(Intent.ACTION_INSTALL_PACKAGE);
+                            intent.setData(uri);
+                            intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
+                            intent.putExtra(Intent.EXTRA_NOT_UNKNOWN_SOURCE, true);
+                        } else {
+                            intent.setAction(Intent.ACTION_INSTALL_PACKAGE);
+                            intent.setData(uri);
+                            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                            intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
+                            intent.putExtra(Intent.EXTRA_NOT_UNKNOWN_SOURCE, true);
+                        }
+                        //startActivityForResult(intent, 0);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                startActivityForResult(intent, 0);
+                                //mContext.startActivity(intent);
+
+                            }
+                        });
+
+                        break;
+                    }
+                    if (status==DownloadManager.STATUS_FAILED) {
+                        Log.e ("FLAG","Fail");
+                        downloading = false;
+                        flag=false;
+                        break;
+                    }
+                }
+            }
+
+            return flag;
+        }catch (Exception e) {
+            flag = false;
+            return flag;
+        }
     }
 
     private void updateStarButton()
