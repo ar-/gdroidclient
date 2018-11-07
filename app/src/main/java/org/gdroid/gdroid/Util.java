@@ -22,6 +22,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.preference.PreferenceManager;
 
 import org.gdroid.gdroid.beans.AppDatabase;
@@ -108,6 +110,22 @@ public class Util {
         for (String starredAppId: starred) {
             final ApplicationBean app = db.appDao().getApplicationBean(starredAppId);
             ret.add(app);
+        }
+        return ret;
+    }
+
+    public static List<ApplicationBean> getInstalledApps(Context context)
+    {
+        final PackageManager pm = context.getPackageManager();
+        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
+        List<ApplicationBean> ret = new ArrayList<>();
+        AppDatabase db = AppDatabase.get(context);
+        for (ApplicationInfo packageInfo : packages) {
+            final ApplicationBean app = db.appDao().getApplicationBean(packageInfo.packageName);
+
+            // only apps in the repo
+            if (app!=null)
+                ret.add(app);
         }
         return ret;
     }

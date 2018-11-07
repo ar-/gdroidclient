@@ -20,6 +20,9 @@ package org.gdroid.gdroid.beans;
 
 import android.arch.persistence.room.Room;
 import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.util.Log;
 
 import org.gdroid.gdroid.Util;
 
@@ -88,6 +91,11 @@ public class AppCollectionDescriptor {
         {
             applicationBeanList.clear();
             applicationBeanList.addAll(Util.getStarredApps(mContext));
+        }
+        else if (collectionName.equals("myapps"))
+        {
+            applicationBeanList.clear();
+            applicationBeanList.addAll(Util.getInstalledApps(mContext));
         }
         else if (collectionName.startsWith("search:"))
         {

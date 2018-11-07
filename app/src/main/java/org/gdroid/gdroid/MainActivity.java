@@ -21,7 +21,10 @@ package org.gdroid.gdroid;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -38,6 +41,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -55,6 +59,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private static final String TAG = "MainActivity";
 
     private RecyclerView recyclerView;
     //private RecyclerView innerRecyclerView;
@@ -261,7 +267,23 @@ public class MainActivity extends AppCompatActivity
 //                    startActivity(myIntent);
                     return true;
                 case R.id.navigation_myapps:
-                    prepareAppCollections("myapps");
+                    setUpAppCards();
+                    AsyncTask.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            AppCollectionDescriptor myAppsCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(),"myapps");
+                            appBeanList.clear();
+                            appBeanList.addAll(myAppsCollectionDescriptor.getApplicationBeanList());
+
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    adapter.notifyDataSetChanged();
+                                }
+                            });
+                        }
+                    });
+
                     return true;
                 case R.id.navigation_search:
                     searchView.setVisibility(View.VISIBLE);
