@@ -91,14 +91,9 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        setUpCollectionCards();
-        prepareAppCollections("home");
-
-
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-
+        navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem(Util.getLastMenuItem(getApplicationContext())));
 
 
         final MainActivity activity = this;
@@ -122,6 +117,23 @@ public class MainActivity extends AppCompatActivity
 
 
 
+    }
+
+    private int getItemIdForHomeScreenMenuItem(String lastMenuItem) {
+        switch (lastMenuItem){
+            case "home":
+                return R.id.navigation_home;
+            case "categories":
+                return R.id.navigation_categories;
+            case "starred":
+                return R.id.navigation_starred;
+            case "myapps":
+                return R.id.navigation_myapps;
+            case "search":
+                return R.id.navigation_search;
+            default:
+                return R.id.navigation_home;
+        }
     }
 
     /**
@@ -246,18 +258,25 @@ public class MainActivity extends AppCompatActivity
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             searchView.setVisibility(View.GONE);
+            String screenName = "";
             switch (item.getItemId()) {
                 case R.id.navigation_home:
+                    screenName = "home";
+                    Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpCollectionCards();
-                    prepareAppCollections("home");
+                    prepareAppCollections(screenName);
                     return true;
                 case R.id.navigation_categories:
+                    screenName = "categories";
+                    Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpCollectionCards();
-                    prepareAppCollections("categories");
+                    prepareAppCollections(screenName);
                     return true;
                 case R.id.navigation_starred:
+                    screenName = "starred";
+                    Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpAppCards();
-                    AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(),"starred");
+                    AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(),screenName);
                     appBeanList.clear();
                     appBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
                     adapter.notifyDataSetChanged();
@@ -267,11 +286,14 @@ public class MainActivity extends AppCompatActivity
 //                    startActivity(myIntent);
                     return true;
                 case R.id.navigation_myapps:
+                    screenName = "myapps";
+                    Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpAppCards();
+                    final String finalScreenName = screenName;
                     AsyncTask.execute(new Runnable() {
                         @Override
                         public void run() {
-                            AppCollectionDescriptor myAppsCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(),"myapps");
+                            AppCollectionDescriptor myAppsCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(),finalScreenName);
                             appBeanList.clear();
                             appBeanList.addAll(myAppsCollectionDescriptor.getApplicationBeanList());
 
@@ -286,6 +308,8 @@ public class MainActivity extends AppCompatActivity
 
                     return true;
                 case R.id.navigation_search:
+                    screenName = "search";
+                    Util.setLastMenuItem(getApplicationContext(), screenName);
                     searchView.setVisibility(View.VISIBLE);
                     searchView.setIconifiedByDefault(false);
 //                    searchView.requestFocus();

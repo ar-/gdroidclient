@@ -56,6 +56,23 @@ public class Util {
         return null;
     }
 
+    public static void setLastMenuItem (Context context, String menuItem)
+    {
+        String key = "lastmenuitem";
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(key,menuItem);
+        editor.apply();
+    }
+
+    public static String getLastMenuItem (Context context)
+    {
+        String key = "lastmenuitem";
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        final String setting = sharedPref.getString(key, "home");
+        return setting;
+    }
+
     public static void starApp (Context context, String appId)
     {
         String key = "starred";
