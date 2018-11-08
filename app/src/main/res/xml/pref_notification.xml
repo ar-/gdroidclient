@@ -21,7 +21,8 @@
     <!-- A 'parent' preference, which enables/disables child preferences (below)
          when checked/unchecked. -->
     <SwitchPreference
-        android:defaultValue="true"
+        android:defaultValue="false"
+        android:enabled="false"
         android:key="notifications_new_message"
         android:title="@string/pref_title_new_message_notifications" />
 
@@ -37,7 +38,7 @@
 
     <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
     <SwitchPreference
-        android:defaultValue="true"
+        android:defaultValue="false"
         android:dependency="notifications_new_message"
         android:key="notifications_new_message_vibrate"
         android:title="@string/pref_title_vibrate" />
