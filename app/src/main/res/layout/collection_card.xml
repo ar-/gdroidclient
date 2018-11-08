@@ -34,6 +34,7 @@
         card_view:cardCornerRadius="@dimen/card_album_radius">
 
         <RelativeLayout
+            android:id="@+id/collection_headline_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
@@ -45,7 +46,7 @@
                 android:layout_alignParentLeft="true"
                 android:clickable="true"
                 android:padding="16dp"
-                android:text="headline asdkjfbahrjbfbf"
+                android:text="headline"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 

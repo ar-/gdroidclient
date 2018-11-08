@@ -34,6 +34,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,6 +53,7 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title;
         TextView moreButton;
+        RelativeLayout headlineContainer;
         public RecyclerView inner_recycler_view;
 
         private AppBeanAdapter adapter;
@@ -60,6 +62,7 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
 
         public MyViewHolder(View view) {
             super(view);
+            headlineContainer = (RelativeLayout) view.findViewById(R.id.collection_headline_container);
             title = (TextView) view.findViewById(R.id.collection_headline);
             moreButton = (TextView) view.findViewById(R.id.more_button);
             inner_recycler_view = (RecyclerView) view.findViewById(R.id.inner_recycler_view);
@@ -142,7 +145,7 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
 //        });
 
         final Activity activity = (Activity) mContext;
-        holder.moreButton.setOnClickListener(new View.OnClickListener() {
+        final View.OnClickListener clickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(activity, AppCollectionActivity.class);
@@ -150,7 +153,10 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
                 myIntent.putExtra("headline", headline);
                 activity.startActivity(myIntent);
             }
-        });
+        };
+        holder.moreButton.setOnClickListener(clickListener);
+        holder.headlineContainer.setOnClickListener(clickListener);
+        holder.title.setOnClickListener(clickListener);
 
     }
 
