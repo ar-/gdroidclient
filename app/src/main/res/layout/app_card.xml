@@ -17,6 +17,7 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -67,6 +68,9 @@
                 android:maxLines="1"
                 android:singleLine="true"
                 android:textColor="@color/album_title"
+                android:text="name of the app goes here"
+                android:maxWidth="20dp"
+                android:width="2dp"
                 android:textSize="@dimen/album_title" />
 
             <TextView
@@ -77,6 +81,7 @@
                 android:paddingBottom="@dimen/songs_count_padding_bottom"
                 android:paddingLeft="@dimen/album_title_padding"
                 android:paddingRight="@dimen/album_title_padding"
+                android:text="counter"
                 android:textSize="@dimen/songs_count" />
 
             <ImageView
@@ -87,7 +92,8 @@
                 android:layout_below="@id/thumbnail"
                 android:layout_marginTop="@dimen/ic_album_overflow_margin_top"
                 android:scaleType="centerCrop"
-                android:src="@drawable/dots" />
+                app:srcCompat="@drawable/ic_more_vert_black_24dp"
+                />
 
 
         </RelativeLayout>

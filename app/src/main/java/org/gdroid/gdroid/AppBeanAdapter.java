@@ -110,39 +110,46 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         holder.overflow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showPopupMenu(holder.overflow);
+                showPopupMenu(holder);
             }
         });
     }
 
     /**
      * Showing popup menu when tapping on 3 dots
+     * @param holder
      */
-    private void showPopupMenu(View view) {
+    private void showPopupMenu(MyViewHolder holder) {
         // inflate menu
-        PopupMenu popup = new PopupMenu(mContext, view);
+        PopupMenu popup = new PopupMenu(mContext, holder.overflow);
         MenuInflater inflater = popup.getMenuInflater();
         inflater.inflate(R.menu.menu_album, popup.getMenu());
-        popup.setOnMenuItemClickListener(new MyMenuItemClickListener());
+        popup.setOnMenuItemClickListener(new AppCardPopupMenuItemClickListener(holder));
         popup.show();
     }
 
     /**
      * Click listener for popup menu items
      */
-    class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
+    class AppCardPopupMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
 
-        public MyMenuItemClickListener() {
+        private final MyViewHolder holder;
+
+        public AppCardPopupMenuItemClickListener(MyViewHolder holder) {
+            this.holder = holder;
         }
 
         @Override
         public boolean onMenuItemClick(MenuItem menuItem) {
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
-                    Toast.makeText(mContext, "Add to favourite", Toast.LENGTH_SHORT).show();
+                    Util.starApp(mContext,holder.appId);
                     return true;
                 case R.id.action_play_next:
-                    Toast.makeText(mContext, "Play next", Toast.LENGTH_SHORT).show();
+                    Intent myIntent = new Intent(mContext, AppDetailActivity.class);
+                    myIntent.putExtra("appId", holder.appId);
+                    myIntent.putExtra("action", "install");
+                    mContext.startActivity(myIntent);
                     return true;
                 default:
             }

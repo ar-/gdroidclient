@@ -220,6 +220,16 @@ public class AppDetailActivity extends AppCompatActivity {
                 }
             });
         }
+
+        // was there any action on this view in the intent?
+        String action = getIntent().getStringExtra("action");
+        if (!TextUtils.isEmpty(action))
+        {
+            if (action.equals("install"))
+            {
+                btnInstall.performClick();
+            }
+        }
     }
 
     private void populateUpstreamLink(final String appAttribute, int tableRowId) {
