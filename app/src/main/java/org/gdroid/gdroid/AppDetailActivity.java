@@ -137,7 +137,7 @@ public class AppDetailActivity extends AppCompatActivity {
         applicationBeanList.clear();
         applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
 
-        // remove this app itself, becasue it is similar to itself
+        // remove this app itself, because it is similar to itself
         for (ApplicationBean ab:applicationBeanList) {
             if (ab.id.equals(this.mApp.id))
             {
@@ -192,6 +192,34 @@ public class AppDetailActivity extends AppCompatActivity {
         populateUpstreamLink(mApp.source, R.id.tbl_row_source_code);
         populateUpstreamLink(mApp.tracker, R.id.tbl_row_bugtracker);
         populateUpstreamLink(mApp.changelog, R.id.tbl_row_changelog);
+
+        // enable website link
+        if (!TextUtils.isEmpty(mApp.web))
+        {
+            findViewById(R.id.lbl_website).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse(mApp.web));
+                    startActivity(i);
+                }
+            });
+        }
+
+        // enable email link
+        if (!TextUtils.isEmpty(mApp.email))
+        {
+            findViewById(R.id.lbl_email).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                            "mailto",mApp.email, null));
+                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "App "+ mApp.name + " in G-Droid");
+                    emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{mApp.email});
+                    startActivity(Intent.createChooser(emailIntent, "Send email..."));
+                }
+            });
+        }
     }
 
     private void populateUpstreamLink(final String appAttribute, int tableRowId) {
