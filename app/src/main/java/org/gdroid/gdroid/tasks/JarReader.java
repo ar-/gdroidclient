@@ -22,11 +22,11 @@ import java.util.*;
 import java.util.zip.*;
 
 /**
- * JarResources: JarResources maps all resources included in a
+ * JarReader: JarReader maps all resources included in a
  * Zip or Jar file. Additionaly, it provides a method to extract one
  * as a blob.
  */
-public final class JarResources
+public final class JarReader
 {
 
     // external debug flag
@@ -40,11 +40,11 @@ public final class JarResources
     private String jarFileName;
 
     /**
-     * creates a JarResources. It extracts all resources from a Jar
+     * creates a JarReader. It extracts all resources from a Jar
      * into an internal hashtable, keyed by resource names.
      * @param jarFileName a jar or zip file
      */
-    public JarResources(String jarFileName)
+    public JarReader(String jarFileName)
     {
         this.jarFileName=jarFileName;
         init();
@@ -185,11 +185,11 @@ public final class JarResources
      *
      * <strong>Example</strong>
      * Let's say you have a JAR file which jarred up a bunch of gif image
-     * files. Now, by using JarResources, you could extract, create, and
+     * files. Now, by using JarReader, you could extract, create, and
      * display those images on-the-fly.
      * <pre>
      *     ...
-     *     JarResources JR=new JarResources("GifBundle.jar");
+     *     JarReader JR=new JarReader("GifBundle.jar");
      *     Image image=Toolkit.createImage(JR.getResource("logo.gif");
      *     Image logo=Toolkit.getDefaultToolkit().createImage(
      *                   JR.getResources("logo.gif")
@@ -202,12 +202,12 @@ public final class JarResources
         if (args.length!=2)
         {
             System.err.println(
-                    "usage: java JarResources <jar file name> <resource name>"
+                    "usage: java JarReader <jar file name> <resource name>"
             );
             System.exit(1);
         }
 
-        JarResources jr=new JarResources(args[0]);
+        JarReader jr=new JarReader(args[0]);
         byte[] buff=jr.getResource(args[1]);
         if (buff==null)
         {
@@ -220,4 +220,4 @@ public final class JarResources
         }
     }
 
-}	// End of JarResources class.
+}	// End of JarReader class.

@@ -58,7 +58,10 @@ import org.gdroid.gdroid.beans.CategoryBean;
 
 import java.io.File;
 import java.lang.reflect.Method;
+import java.security.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
@@ -87,7 +90,9 @@ public class AppDetailActivity extends AppCompatActivity {
         toolbarLayout.setTitle(mApp.name);
         ((TextView)findViewById(R.id.lbl_app_name)).setText(mApp.name);
         ((TextView)findViewById(R.id.lbl_app_summary)).setText(mApp.summary);
-        ((TextView)findViewById(R.id.lbl_lastupdated)).setText(Long.toString(mApp.lastupdated)); // TODO convert date
+        Date lastUpdateDate = new Date(mApp.lastupdated );
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        ((TextView)findViewById(R.id.lbl_lastupdated)).setText(sdf.format(lastUpdateDate));
         ((TextView)findViewById(R.id.lbl_app_author)).setText(mApp.author);
         ((TextView)findViewById(R.id.lbl_license)).setText(mApp.license);
         ((TextView)findViewById(R.id.lbl_website)).setText(mApp.web);
@@ -155,9 +160,17 @@ public class AppDetailActivity extends AppCompatActivity {
         }
 
 
+        Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
         if (mApp.icon != null) {
-            Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
-            Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_header_icon));
+            if (TextUtils.isEmpty(mApp.featureGraphic))
+            {
+                Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_header_icon));
+            }
+            else
+            {
+                Glide.with(mContext).load("https://f-droid.org/repo/"+mApp.id+"/"+ mApp.featureGraphic).into((ImageView) findViewById(R.id.img_header_icon));
+            }
+
         }
 
         // make the star button useful

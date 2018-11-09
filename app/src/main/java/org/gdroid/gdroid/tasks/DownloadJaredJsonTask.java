@@ -18,11 +18,11 @@
 
 package org.gdroid.gdroid.tasks;
 
-import android.arch.persistence.room.Ignore;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Pair;
 import android.view.View;
 
 import org.gdroid.gdroid.AppCollectionAdapter;
@@ -33,7 +33,6 @@ import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
-import org.gdroid.gdroid.xml.FDroidRepoXmlParser;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -129,7 +128,6 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
     private List<ApplicationBean> loadXmlFromNetwork(String urlString) throws XmlPullParserException, IOException {
         InputStream stream = null;
         // Instantiate the parser
-        FDroidRepoXmlParser dfroidRepoXmlParser = new FDroidRepoXmlParser();
         List<ApplicationBean> entries = null;
 
         String jsonString ="{}";
@@ -143,7 +141,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                 outputStream.write(buffer, 0, len);
             }
             outputStream.close();
-            JarResources jr = new JarResources(mContext.getCacheDir()+"/i.jar");
+            JarReader jr = new JarReader(mContext.getCacheDir()+"/i.jar");
             final byte[] bytes = jr.getResource("index-v1.json");
             jsonString = new String(bytes);
 
@@ -156,11 +154,12 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         try {
             JSONObject jo=new JSONObject(jsonString);
             final JSONArray apps = jo.getJSONArray("apps");
+            final JSONObject packages = jo.getJSONObject("packages");
             entries = new ArrayList<>(apps.length());
             for (int i = 0; i < apps.length(); i++) {
                 JSONObject app = apps.getJSONObject(i);
                 try {
-                    ApplicationBean ab = jSonObjToAppBean(app);
+                    ApplicationBean ab = jSonObjToAppBean(app, packages);
                     entries.add(ab);
                 } catch (JSONException e)
                 {
@@ -177,7 +176,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         return entries;
     }
 
-    private ApplicationBean jSonObjToAppBean(JSONObject app) throws JSONException {
+    private ApplicationBean jSonObjToAppBean(JSONObject app, JSONObject packages) throws JSONException {
         ApplicationBean ab = new ApplicationBean();
         ab.id = app.getString("packageName");
         ab.added = app.getLong("added");
@@ -188,6 +187,12 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         ab.name = getLocalizedStringItem(app, "name");
         ab.summary = getLocalizedStringItem(app, "summary"); // summary is optional
         ab.desc = getLocalizedStringItem(app, "description");
+        ab.whatsNew = getLocalizedStringItem(app, "whatsNew");
+
+        // featureGraphic localized and optional string
+        final Pair<String, String> fg = getLocalizedStringItemAndLocale(app, "featureGraphic");
+        if (fg != null)
+            ab.featureGraphic = fg.second + "/" + fg.first;
 
         //get categories as string separated list
         ab.categories = new ArrayList<>();
@@ -208,19 +213,58 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         ab.author = app.optString("authorName");
         ab.email = app.optString("authorEmail");
 
-        // TODO apk name from packaes
-        ab.apkname = "testXXXXXXXXXXXX.apk";
+        // apk name from packages
+        // package must be found, otherwise app ise useles,as it wont hav an APK
+        final JSONArray appPackages = packages.getJSONArray(ab.id);
+        final JSONObject latestPackage = appPackages.getJSONObject(0);
+        ab.apkname = latestPackage.getString("apkName");
 
-        // TODO antifeatures lie kcategires
-        ab.antifeatures = app.optString("antiFeatures");
+        // permissions from packages (optional)
+        final JSONArray permissionsArray = latestPackage.optJSONArray("uses-permission");
+        if (permissionsArray != null)
+        {
+            List<String> pList = new ArrayList<>();
+            for (int i = 0 ; i < permissionsArray.length() ; i++)
+            {
+                final String per = permissionsArray.getJSONArray(i).getString(0);
+                pList.add(per);
+            }
+            ab.permissions = TextUtils.join(",",pList);
+        }
 
-        //TODo permissions from packages
-        ab.permissions = app.optString("webSite");
+        // antifeatures
+        final JSONArray afArray = app.optJSONArray("antiFeatures");
+        if (afArray != null) {
+            List<String> afList = new ArrayList<>();
+            for (int i = 0; i < afArray.length(); i++) {
+                afList.add(afArray.get(i).toString());
+            }
+            ab.antifeatures = TextUtils.join(",",afList);
+        }
+
+
+        // TODO screenshots array
+
+
 
         return ab;
     }
 
+    /**
+     *
+     * @param app
+     * @param name
+     * @return A pair of (Item,Locale)
+     * @throws JSONException
+     */
     private String getLocalizedStringItem(JSONObject app, String name) throws JSONException {
+        final Pair<String, String> ret = getLocalizedStringItemAndLocale(app, name);
+        if (ret == null)
+            return null;
+        return ret.first;
+    }
+
+    private Pair<String,String> getLocalizedStringItemAndLocale(JSONObject app, String name) throws JSONException {
         final String repoLocale="en";
 
         // Map locale -> itemcontent
@@ -258,7 +302,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         final String usableLocale = Util.getUsableLocale(resLocales);
 
         // this can't be null anymore, otherwise we wouldn't have arrived here
-        return availalableLocales.get(usableLocale);
+        return new Pair(availalableLocales.get(usableLocale), usableLocale);
     }
 
     // Given a string representation of a URL, sets up a connection and gets

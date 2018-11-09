@@ -61,6 +61,8 @@ public class ApplicationBean {
     public String email;
     public String permissions;
     public String apkname;
+    public String whatsNew;
+    public String featureGraphic;
 
     public ApplicationBean() {
     }
