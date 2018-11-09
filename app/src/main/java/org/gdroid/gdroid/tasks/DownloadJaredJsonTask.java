@@ -242,9 +242,21 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
             ab.antifeatures = TextUtils.join(",",afList);
         }
 
+        // screenshots array
+        final Pair<JSONArray, String> phoneScreenshots = getLocalizedArrayItemAndLocale(app, "phoneScreenshots");
+        if (phoneScreenshots != null)
+        {
+            final String ssLocale = phoneScreenshots.second;
+            final JSONArray ssArray = phoneScreenshots.first;
+            if (ssArray != null && ssLocale != null) {
+                List<String> ssList = new ArrayList<>();
+                for (int i = 0; i < ssArray.length(); i++) {
+                    ssList.add(ssLocale+"/phoneScreenshots/"+ssArray.get(i).toString());
+                }
+                ab.screenshots = TextUtils.join(";",ssList);
+            }
 
-        // TODO screenshots array
-
+        }
 
 
         return ab;
@@ -254,7 +266,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
      *
      * @param app
      * @param name
-     * @return A pair of (Item,Locale)
+     * @return the string only (taken from the best locale)
      * @throws JSONException
      */
     private String getLocalizedStringItem(JSONObject app, String name) throws JSONException {
@@ -264,6 +276,13 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         return ret.first;
     }
 
+    /**
+     *
+     * @param app
+     * @param name
+     * @return A pair of (Item,Locale)
+     * @throws JSONException
+     */
     private Pair<String,String> getLocalizedStringItemAndLocale(JSONObject app, String name) throws JSONException {
         final String repoLocale="en";
 
@@ -302,7 +321,55 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         final String usableLocale = Util.getUsableLocale(resLocales);
 
         // this can't be null anymore, otherwise we wouldn't have arrived here
-        return new Pair(availalableLocales.get(usableLocale), usableLocale);
+        return new Pair<String,String>(availalableLocales.get(usableLocale), usableLocale);
+    }
+
+    /**
+     *
+     * @param app
+     * @param name
+     * @return A pair of (ItemArray,Locale)
+     * @throws JSONException
+     */
+    private Pair<JSONArray,String> getLocalizedArrayItemAndLocale(JSONObject app, String name) throws JSONException {
+        final String repoLocale="en";
+
+        // Map locale -> itemcontent
+        Map<String, JSONArray> availalableLocales = new HashMap<>();
+
+        //gather available Locales for this item
+        final JSONArray unLocalisedItem = app.optJSONArray(name);
+        if (unLocalisedItem != null)
+        {
+            availalableLocales.put(repoLocale,unLocalisedItem);
+        }
+
+        final JSONObject localized = app.optJSONObject("localized");
+        if (localized != null)
+        {
+            Iterator<String> keys = localized.keys();
+
+            while(keys.hasNext()) {
+                String resLocale = keys.next();
+                final JSONObject localizedJSONObject = localized.getJSONObject(resLocale);
+                final JSONArray localisedArrayItem = localizedJSONObject.optJSONArray(name);
+                if (localisedArrayItem != null)
+                {
+                    availalableLocales.put(resLocale,localisedArrayItem);
+                }
+            }
+        }
+
+        // for some items (like 'name') having none is bad, others (like 'whatsNew') are optional
+        if (availalableLocales.isEmpty())
+            return null;
+
+        final Set<String> keySet = availalableLocales.keySet();
+        String[] resLocales = keySet.toArray(new String[keySet.size()]);
+        final String usableLocale = Util.getUsableLocale(resLocales);
+
+        // this can't be null anymore, otherwise we wouldn't have arrived here
+        return new Pair<JSONArray,String>(availalableLocales.get(usableLocale), usableLocale);
     }
 
     // Given a string representation of a URL, sets up a connection and gets

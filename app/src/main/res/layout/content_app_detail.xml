@@ -119,16 +119,20 @@
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/grp_screenshots"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/img_tmp_ss1"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
                     android:src="@drawable/ic_phone"
                     android:minHeight="200dp"
                     android:minWidth="200dp"
+                    android:maxHeight="200dp"
+                    android:maxWidth="200dp"
                     />
                 <ImageView
                     android:layout_width="wrap_content"
