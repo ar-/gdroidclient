@@ -87,7 +87,7 @@ public class AppDetailActivity extends AppCompatActivity {
         toolbarLayout.setTitle(mApp.name);
         ((TextView)findViewById(R.id.lbl_app_name)).setText(mApp.name);
         ((TextView)findViewById(R.id.lbl_app_summary)).setText(mApp.summary);
-        ((TextView)findViewById(R.id.lbl_lastupdated)).setText(mApp.lastupdated);
+        ((TextView)findViewById(R.id.lbl_lastupdated)).setText(Long.toString(mApp.lastupdated)); // TODO convert date
         ((TextView)findViewById(R.id.lbl_app_author)).setText(mApp.author);
         ((TextView)findViewById(R.id.lbl_license)).setText(mApp.license);
         ((TextView)findViewById(R.id.lbl_website)).setText(mApp.web);

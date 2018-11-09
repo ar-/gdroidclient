@@ -38,8 +38,8 @@ public class ApplicationBean {
     @PrimaryKey
     @NonNull
     public String id;
-    public String added;
-    public String lastupdated;
+    public long added;
+    public long lastupdated;
     public String name;
     public String summary;
     public String icon;
@@ -47,7 +47,7 @@ public class ApplicationBean {
     public String desc;
     public String license;
     @Ignore
-    public String categories;
+    public List<String> categories;
     public String web;
     public String source;
     public String tracker;
@@ -86,7 +86,7 @@ public class ApplicationBean {
         ArrayList<CategoryBean> ret = new ArrayList<>(2);
         if (categories != null)
         {
-            for (String cat:categories.split(",")) {
+            for (String cat:categories) {
                 CategoryBean cb = new CategoryBean(cat,id);
                 ret.add(cb);
             }

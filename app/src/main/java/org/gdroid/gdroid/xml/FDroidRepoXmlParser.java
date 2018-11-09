@@ -71,61 +71,61 @@ public class FDroidRepoXmlParser {
     private ApplicationBean readEntry(XmlPullParser parser) throws XmlPullParserException, IOException {
         parser.require(XmlPullParser.START_TAG, ns, "application");
         ApplicationBean ret = new ApplicationBean();
-        while (parser.next() != XmlPullParser.END_TAG) {
-            if (parser.getEventType() != XmlPullParser.START_TAG) {
-                continue;
-            }
-            String name = parser.getName();
-            if (name.equals("name")) {
-                ret.name = readTag(parser,"name");
-            } else if (name.equals("id")) {
-                ret.id = readTag(parser,"id");
-            } else if (name.equals("lastupdated")) {
-                ret.lastupdated = readTag(parser,"lastupdated");
-            } else if (name.equals("summary")) {
-                ret.summary = readTag(parser,"summary");
-            } else if (name.equals("added")) {
-                ret.added = readTag(parser,"added");
-            } else if (name.equals("icon")) {
-                ret.icon = readTag(parser,"icon");
-            } else if (name.equals("desc")) {
-                ret.desc = readTag(parser,"desc");
-            } else if (name.equals("license")) {
-                ret.license = readTag(parser,"license");
-            } else if (name.equals("categories")) {
-                ret.categories = readTag(parser,"categories");
-            } else if (name.equals("web")) {
-                ret.web = readTag(parser,"web");
-            } else if (name.equals("source")) {
-                ret.source = readTag(parser,"source");
-            } else if (name.equals("tracker")) {
-                ret.tracker = readTag(parser,"tracker");
-            } else if (name.equals("changelog")) {
-                ret.changelog = readTag(parser,"changelog");
-            } else if (name.equals("author")) {
-                ret.author = readTag(parser,"author");
-            } else if (name.equals("email")) {
-                ret.email = readTag(parser,"email");
-            } else if (name.equals("bitcoin")) {
-                ret.bitcoin = readTag(parser,"bitcoin");
-            } else if (name.equals("liberapay")) {
-                ret.liberapay = readTag(parser,"liberapay");
-            } else if (name.equals("marketversion")) {
-                ret.marketversion = readTag(parser,"marketversion");
-            } else if (name.equals("marketvercode")) {
-                ret.marketvercode = readTag(parser,"marketvercode");
-            } else if (name.equals("antifeatures")) {
-                ret.antifeatures = readTag(parser,"antifeatures");
-            } else if (name.equals("package")) {
-                Pack p = readPackage(parser);
-                if (TextUtils.isEmpty(ret.apkname)) {
-                    ret.permissions = p.permissions;
-                    ret.apkname = p.apkname;
-                }
-            } else {
-                skip(parser);
-            }
-        }
+//        while (parser.next() != XmlPullParser.END_TAG) {
+//            if (parser.getEventType() != XmlPullParser.START_TAG) {
+//                continue;
+//            }
+//            String name = parser.getName();
+//            if (name.equals("name")) {
+//                ret.name = readTag(parser,"name");
+//            } else if (name.equals("id")) {
+//                ret.id = readTag(parser,"id");
+//            } else if (name.equals("lastupdated")) {
+//                ret.lastupdated = readTag(parser,"lastupdated");
+//            } else if (name.equals("summary")) {
+//                ret.summary = readTag(parser,"summary");
+//            } else if (name.equals("added")) {
+//                ret.added = readTag(parser,"added");
+//            } else if (name.equals("icon")) {
+//                ret.icon = readTag(parser,"icon");
+//            } else if (name.equals("desc")) {
+//                ret.desc = readTag(parser,"desc");
+//            } else if (name.equals("license")) {
+//                ret.license = readTag(parser,"license");
+//            } else if (name.equals("categories")) {
+//                ret.categories = readTag(parser,"categories");
+//            } else if (name.equals("web")) {
+//                ret.web = readTag(parser,"web");
+//            } else if (name.equals("source")) {
+//                ret.source = readTag(parser,"source");
+//            } else if (name.equals("tracker")) {
+//                ret.tracker = readTag(parser,"tracker");
+//            } else if (name.equals("changelog")) {
+//                ret.changelog = readTag(parser,"changelog");
+//            } else if (name.equals("author")) {
+//                ret.author = readTag(parser,"author");
+//            } else if (name.equals("email")) {
+//                ret.email = readTag(parser,"email");
+//            } else if (name.equals("bitcoin")) {
+//                ret.bitcoin = readTag(parser,"bitcoin");
+//            } else if (name.equals("liberapay")) {
+//                ret.liberapay = readTag(parser,"liberapay");
+//            } else if (name.equals("marketversion")) {
+//                ret.marketversion = readTag(parser,"marketversion");
+//            } else if (name.equals("marketvercode")) {
+//                ret.marketvercode = readTag(parser,"marketvercode");
+//            } else if (name.equals("antifeatures")) {
+//                ret.antifeatures = readTag(parser,"antifeatures");
+//            } else if (name.equals("package")) {
+//                Pack p = readPackage(parser);
+//                if (TextUtils.isEmpty(ret.apkname)) {
+//                    ret.permissions = p.permissions;
+//                    ret.apkname = p.apkname;
+//                }
+//            } else {
+//                skip(parser);
+//            }
+//        }
 
         return ret;
     }

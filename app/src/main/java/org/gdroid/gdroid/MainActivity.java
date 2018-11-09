@@ -52,6 +52,7 @@ import android.view.inputmethod.InputMethodManager;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
 import org.gdroid.gdroid.tasks.DownloadXmlTask;
 
 import java.util.ArrayList;
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
 
 
-                new DownloadXmlTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
+                new DownloadJaredJsonTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index-v1.jar");
 
             }
         });
