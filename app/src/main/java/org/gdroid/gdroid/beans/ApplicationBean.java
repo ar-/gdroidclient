@@ -38,8 +38,8 @@ public class ApplicationBean {
     @PrimaryKey
     @NonNull
     public String id;
-    public String added;
-    public String lastupdated;
+    public long added;
+    public long lastupdated;
     public String name;
     public String summary;
     public String icon;
@@ -47,7 +47,7 @@ public class ApplicationBean {
     public String desc;
     public String license;
     @Ignore
-    public String categories;
+    public List<String> categories;
     public String web;
     public String source;
     public String tracker;
@@ -61,6 +61,9 @@ public class ApplicationBean {
     public String email;
     public String permissions;
     public String apkname;
+    public String whatsNew;
+    public String featureGraphic;
+    public String screenshots;
 
     public ApplicationBean() {
     }
@@ -69,14 +72,8 @@ public class ApplicationBean {
         this.id = id;
     }
 
-//    public ApplicationBean(String name, float stars, int thumbnail) {
-//        this.name = name;
-//        this.stars = stars;
-//        this.thumbnail = thumbnail;
-//    }
-
     /**
-     * Gets a list of catgories, if the bean has jsut been filled by XML parser.
+     * Gets a list of catgories, if the bean has just been filled by parser.
      * Otherwise this method will not work.
      * If this bean has been retireved later, eg. from the DB, the categoreis must also be fetched from the separate DAO.
      * @return
@@ -86,7 +83,7 @@ public class ApplicationBean {
         ArrayList<CategoryBean> ret = new ArrayList<>(2);
         if (categories != null)
         {
-            for (String cat:categories.split(",")) {
+            for (String cat:categories) {
                 CategoryBean cb = new CategoryBean(cat,id);
                 ret.add(cb);
             }
@@ -94,35 +91,18 @@ public class ApplicationBean {
         return ret;
     }
 
-//    public String getId() {
-//        return id;
-//    }
-//
-//    public void setId(String id) {
-//        this.id = id;
-//    }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public float getStars() {
-//        return stars;
-//    }
-//
-//    public void setStars(float stars) {
-//        this.stars = stars;
-//    }
+    public List<String> getScreenshotList()
+    {
+        ArrayList<String> ret = new ArrayList<>();
+        if (screenshots != null)
+        {
+            for (String s:screenshots.split(";")) {
+                ret.add(s);
+            }
+        }
+        return ret;
+    }
 
-//    public int getThumbnail() {
-//        return thumbnail;
-//    }
-//
-//    public void setThumbnail(int thumbnail) {
-//        this.thumbnail = thumbnail;
-//    }
+
+
 }

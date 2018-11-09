@@ -58,7 +58,10 @@ import org.gdroid.gdroid.beans.CategoryBean;
 
 import java.io.File;
 import java.lang.reflect.Method;
+import java.security.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
@@ -87,7 +90,9 @@ public class AppDetailActivity extends AppCompatActivity {
         toolbarLayout.setTitle(mApp.name);
         ((TextView)findViewById(R.id.lbl_app_name)).setText(mApp.name);
         ((TextView)findViewById(R.id.lbl_app_summary)).setText(mApp.summary);
-        ((TextView)findViewById(R.id.lbl_lastupdated)).setText(mApp.lastupdated);
+        Date lastUpdateDate = new Date(mApp.lastupdated );
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        ((TextView)findViewById(R.id.lbl_lastupdated)).setText(sdf.format(lastUpdateDate));
         ((TextView)findViewById(R.id.lbl_app_author)).setText(mApp.author);
         ((TextView)findViewById(R.id.lbl_license)).setText(mApp.license);
         ((TextView)findViewById(R.id.lbl_website)).setText(mApp.web);
@@ -155,10 +160,43 @@ public class AppDetailActivity extends AppCompatActivity {
         }
 
 
+        // load icon image (alternatively feature graphic)
+        Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
         if (mApp.icon != null) {
-            Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
-            Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_header_icon));
+            if (TextUtils.isEmpty(mApp.featureGraphic))
+            {
+                Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_header_icon));
+            }
+            else
+            {
+                Glide.with(mContext).load("https://f-droid.org/repo/"+mApp.id+"/"+ mApp.featureGraphic).into((ImageView) findViewById(R.id.img_header_icon));
+            }
         }
+
+        // load screenshots
+        final LinearLayout grpScreenshots = (LinearLayout) findViewById(R.id.grp_screenshots);
+        if (!TextUtils.isEmpty(mApp.screenshots)) {
+            grpScreenshots.removeAllViews();
+            for (String ss :
+                    mApp.getScreenshotList()) {
+                ImageView iv = new ImageView(mContext);
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT);
+                lp.width =384;
+                lp.height =384;
+                iv.setLayoutParams(lp);
+                iv.setPadding(5,5,5,5);
+                Glide.with(mContext).load("https://f-droid.org/repo/"+mApp.id+"/"+ ss).override(384, 384).into(iv);
+                grpScreenshots.addView(iv);
+            }
+        }
+        else
+        {
+            grpScreenshots.setVisibility(View.GONE);
+        }
+
+        // TODO show changelog from fastlane
 
         // make the star button useful
         fab = (FloatingActionButton) findViewById(R.id.fab);

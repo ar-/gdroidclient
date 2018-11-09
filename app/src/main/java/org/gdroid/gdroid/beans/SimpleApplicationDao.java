@@ -29,7 +29,7 @@ import android.arch.persistence.room.Update;
 public interface SimpleApplicationDao {
 
     @Query("SELECT * FROM ApplicationBean")
-    public ApplicationBean[] loadAllApplicationBeans();
+    public ApplicationBean[] getAllApplicationBeans();
 
     @Query("SELECT * FROM ApplicationBean ORDER BY lastupdated DESC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getLastUpdated(int limit, int offset);

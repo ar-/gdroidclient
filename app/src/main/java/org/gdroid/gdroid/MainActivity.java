@@ -18,11 +18,8 @@
 
 package org.gdroid.gdroid;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -37,22 +34,19 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
-import org.gdroid.gdroid.tasks.DownloadXmlTask;
+import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -93,12 +87,24 @@ public class MainActivity extends AppCompatActivity
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem(Util.getLastMenuItem(getApplicationContext())));
+
+        AppDatabase db = AppDatabase.get(getApplicationContext());
+        final ApplicationBean[] allApps = db.appDao().getAllApplicationBeans();
+
+        //if db empty
+        if (allApps.length == 0)
+        {
+            navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem("home"));
+            // TODO initial refresh only when DB empty
+            //new DownloadJsonTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
+        }
+        else
+        {
+            navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem(Util.getLastMenuItem(getApplicationContext())));
+        }
 
 
         final MainActivity activity = this;
-        // TODO initial refresh only when DB empty
-        //new DownloadXmlTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +116,7 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
 
 
-                new DownloadXmlTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
+                new DownloadJaredJsonTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index-v1.jar");
 
             }
         });

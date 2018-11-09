@@ -24,14 +24,21 @@ import android.content.ContextWrapper;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.preference.PreferenceManager;
+import android.support.v4.os.ConfigurationCompat;
+import android.support.v4.os.LocaleListCompat;
+import android.util.ArraySet;
+import android.util.Log;
 
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 public class Util {
@@ -145,6 +152,107 @@ public class Util {
                 ret.add(app);
         }
         return ret;
+    }
+
+    /**
+     * uses the installed system locales as userLocales
+     * Is similar to localeListCompat.getFirstMatch(resLocales) but returns only a definatetly available Locale.
+     * @param resLocales
+     * @return
+     */
+    public static String getUsableLocale(String[] resLocales) {
+        //String[] systemLocales = Resources.getSystem().getAssets().getLocales();
+//        List<Locale> systemLocales
+        final LocaleListCompat localeListCompat = ConfigurationCompat.getLocales(Resources.getSystem().getConfiguration());
+        List<String> enabledLocalesAsStrings = new ArrayList<>();
+        for (int i = 0 ; i< localeListCompat.size(); i++)
+        {
+            enabledLocalesAsStrings.add(localeListCompat.get(i).toString());
+        }
+
+////        final Locale[] systemLocales = Locale.get getAvailableLocales();
+//        Set<String> localeSet = new HashSet<>();
+//        for (Locale l :
+//                systemLocales) {
+//            l.toString();
+//        }
+//
+        String[] userLocalesAsString = enabledLocalesAsStrings.toArray(new String[enabledLocalesAsStrings.size()]);
+        if (userLocalesAsString.length==0)
+        {
+            Log.e("Util","no system locals detected, that must be an error. Putting 'en' in place to go ahead");
+            userLocalesAsString = new String[]{"en"};
+        }
+
+        return  getUsableLocale( userLocalesAsString, resLocales);
+    }
+        /**
+         * retruns one of the resLocals. the one that can be used to show to the user
+         * @param userLocales ordered by priority
+         * @param resLocales unordered
+         * @return
+         */
+    public static String getUsableLocale(String[] userLocales, String[] resLocales){
+        if (userLocales.length==0)
+            throw new RuntimeException("userLocales cant be empty");
+            //return ret;
+        if (resLocales.length==0)
+            throw new RuntimeException("resLocales cant be empty");
+            //return ret;
+
+        // a quick return just in case there is only one of each and they are equal
+        if (userLocales[0].equals(resLocales[0]))
+            return resLocales[0];
+
+        String defaultResLocale = resLocales[0]; // chuck the first one in as default
+
+        final List<String> resLocList = Arrays.asList(resLocales);
+
+        for (String userLocale :
+                userLocales) {
+            // 1. check for exact match of locales
+            if (resLocList.contains(userLocale))
+                return userLocale;
+
+            // 2. check plain language match
+            final String userLang = getLangFromLocale(userLocale);
+            if (resLocList.contains(userLang))
+                return userLang;
+
+            // 3. check if same language in other area-codes match (first hit is fine)
+            for (String resLocale :
+                    resLocales) {
+                final String resLang = getLangFromLocale(resLocale);
+                if (resLang.equals(userLang))
+                    return resLocale;
+            }
+
+            // 4. repeat for all userLocales :-)
+        }
+
+        return defaultResLocale;
+    }
+
+    /**
+     *
+     * @param locale something like "de_AT" "de-DE" "de" ....
+     * @return
+     */
+    private static String getLangFromLocale(String locale) {
+        locale = locale.replace('_','-');
+        if (locale.contains("-"))
+        {
+            final String[] parts = locale.split("-");
+            // it can have more than 2 parts. format is:
+            // language + "_" + country + "_" + (variant + "_#" | "#") + script + "-" + extensions
+            return parts[0];
+        }
+        else
+        {
+            // there might be invalid names for manguages in upstream (obf,off,opf,opff)
+            // but they will be irgores, because user can't have such a language activated
+            return locale; // if there was no separator, it is probalby a language without location
+        }
     }
 
 }

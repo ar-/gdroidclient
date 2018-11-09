@@ -92,6 +92,8 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         ApplicationBean applicationBean = applicationBeanList.get(position);
+        if (applicationBean == null)
+            return;
         holder.appId = applicationBean.id;
         holder.title.setText(applicationBean.name);
         holder.count.setText(applicationBean.stars + " ★");
