@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
 
 
-                new DownloadJaredJsonTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index-v1.jar");
+                new DownloadJaredJsonTask(activity, appCollectionAdapter, adapter).execute("https://f-droid.org/repo/index-v1.jar");
 
             }
         });
@@ -148,31 +148,11 @@ public class MainActivity extends AppCompatActivity
      */
     private void setUpCollectionCards() {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        //innerRecyclerView = (RecyclerView) findViewById(R.id.inner_recycler_view);
-        //collectionContent = (LinearLayout) findViewById(R.id.collection_content);
-        //inner_scroll_view = (HorizontalScrollView) findViewById(R.id.inner_scroll_view);
-
-//        appDescriptorList = new ArrayList<>();
-//        adapter = new AppBeanAdapter(this, appDescriptorList);
-
-        //RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 3);
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
         recyclerView.setLayoutManager(mLayoutManager);
-        //recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
         removeAllitemDecorations();
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        //recyclerView.setAdapter(adapter);
-
-//        LinearLayoutManager layoutManager
-//                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        //RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
-        //innerRecyclerView.setLayoutManager(layoutManager);
-        //innerRecyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
-        //innerRecyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
-        //innerRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        //innerRecyclerView.setAdapter(adapter);
-        //innerRecyclerView.setAdapter(appCollectionAdapter);
         appCollectionDescriptorList = new ArrayList<>();
         appCollectionAdapter = new AppCollectionAdapter(this, appCollectionDescriptorList);
         recyclerView.setAdapter(appCollectionAdapter);
@@ -187,21 +167,12 @@ public class MainActivity extends AppCompatActivity
         appBeanList = new ArrayList<>();
         adapter = new AppBeanAdapter(this, appBeanList);
 
-        //inner_recycler_view.setLayoutManager(mLayoutManager);
-        //recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
-        //inner_recycler_view.addItemDecoration(new MainActivity.GridSpacingItemDecoration(1, dpToPx(10), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-
         recyclerView.setAdapter(adapter);
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 3);
         removeAllitemDecorations();
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
-
-//        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 1);
-//        LinearLayoutManager layoutManager2
-//                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-
         recyclerView.setLayoutManager(mLayoutManager);
     }
 

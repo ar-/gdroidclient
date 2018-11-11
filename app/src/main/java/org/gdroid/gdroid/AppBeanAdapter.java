@@ -34,6 +34,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.util.List;
@@ -46,6 +47,10 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
 
     public int getCount() {
         return applicationBeanList.size();
+    }
+
+    public List<ApplicationBean> getAppBeanList() {
+        return applicationBeanList;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

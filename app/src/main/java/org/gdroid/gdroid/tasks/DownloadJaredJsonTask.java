@@ -25,6 +25,7 @@ import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 
+import org.gdroid.gdroid.AppBeanAdapter;
 import org.gdroid.gdroid.AppCollectionAdapter;
 import org.gdroid.gdroid.MainActivity;
 import org.gdroid.gdroid.R;
@@ -58,19 +59,21 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
     private final Context mContext;
     private final MainActivity mMainActivity;
     private final AppCollectionAdapter mAppCollectionAdapter;
+    private final AppBeanAdapter mAdapter;
 
     // parameter is the adapter that can be notified after processing
-    public DownloadJaredJsonTask(MainActivity mainActivity, AppCollectionAdapter appCollectionAdapter) {
+    public DownloadJaredJsonTask(MainActivity mainActivity, AppCollectionAdapter appCollectionAdapter, AppBeanAdapter adapter) {
         mMainActivity = mainActivity;
         mContext = mMainActivity.getApplicationContext();
         mAppCollectionAdapter = appCollectionAdapter;
+        mAdapter = adapter;
     }
 
     @Override
     protected List<ApplicationBean> doInBackground(String... urls) {
         List<ApplicationBean> ret = new ArrayList<>();
             try {
-                ret = loadXmlFromNetwork(urls[0]);
+                ret = loadJsonFromNetwork(urls[0]);
 
                 // update the local DB
                 AppDatabase db = AppDatabase.get(mContext);
@@ -87,9 +90,13 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                     }
                 }
 
-                // update the UI after DB has been updated
-                for (AppCollectionDescriptor acd :mAppCollectionAdapter.getAppCollectionDescriptorList()) {
-                    acd.updateAppsInCollection();
+                db.close();
+
+                // update the UI after DB has been updated (on the first 2 tabs)
+                if (mAppCollectionAdapter != null) {
+                    for (AppCollectionDescriptor acd : mAppCollectionAdapter.getAppCollectionDescriptorList()) {
+                        acd.updateAppsInCollection();
+                    }
                 }
 
                 return ret;
@@ -104,28 +111,15 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
 
     @Override
     protected void onPostExecute(List<ApplicationBean> result) {
-//            setContentView(R.layout.main);
-//            // Displays the HTML string in the UI via a WebView
-//            WebView myWebView = (WebView) findViewById(R.id.webview);
-//            myWebView.loadData(result, "text/html", null);
-
-//        List<AppCollectionDescriptor> l = mAppCollectionAdapter.getAppCollectionDescriptorList();
-//        result.get(0);
-//        l.get(0).setName(result.get(0).name);
-//        l.get(1).setName(result.get(1).name);
-//        l.get(2).setName(result.get(2).name);
-//        for (ApplicationBean ab: result) {
-//            SimpleApplicationDao.class
-//        }
         mMainActivity.findViewById(R.id.loadingPanel).setVisibility(View.GONE);
         mMainActivity.findViewById(R.id.fab).setEnabled(true);
-        mAppCollectionAdapter.notifyDataSetChanged();
+        if (mAppCollectionAdapter != null) {
+            mAppCollectionAdapter.notifyDataSetChanged();
+        }
         Log.e("DownloadXmlTask","download complete");
         }
 
-    // Uploads XML from stackoverflow.com, parses it, and combines it with
-    // HTML markup. Returns HTML string.
-    private List<ApplicationBean> loadXmlFromNetwork(String urlString) throws XmlPullParserException, IOException {
+    private List<ApplicationBean> loadJsonFromNetwork(String urlString) throws XmlPullParserException, IOException {
         InputStream stream = null;
         // Instantiate the parser
         List<ApplicationBean> entries = null;
