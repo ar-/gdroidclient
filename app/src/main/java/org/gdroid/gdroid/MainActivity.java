@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
 
 
-                new DownloadJaredJsonTask(activity, appCollectionAdapter, adapter).execute("https://f-droid.org/repo/index-v1.jar");
+                new DownloadJaredJsonTask(activity, appCollectionAdapter, "index-v1.json").execute("https://f-droid.org/repo/index-v1.jar");
 
             }
         });

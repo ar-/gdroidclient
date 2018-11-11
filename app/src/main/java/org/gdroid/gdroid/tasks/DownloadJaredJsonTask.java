@@ -20,6 +20,9 @@ package org.gdroid.gdroid.tasks;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
@@ -59,21 +62,21 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
     private final Context mContext;
     private final MainActivity mMainActivity;
     private final AppCollectionAdapter mAppCollectionAdapter;
-    private final AppBeanAdapter mAdapter;
+    private final String mJsonFileInJar;
 
     // parameter is the adapter that can be notified after processing
-    public DownloadJaredJsonTask(MainActivity mainActivity, AppCollectionAdapter appCollectionAdapter, AppBeanAdapter adapter) {
+    public DownloadJaredJsonTask(MainActivity mainActivity, AppCollectionAdapter appCollectionAdapter, String jsonFileInJar) {
         mMainActivity = mainActivity;
         mContext = mMainActivity.getApplicationContext();
         mAppCollectionAdapter = appCollectionAdapter;
-        mAdapter = adapter;
+        mJsonFileInJar=jsonFileInJar;
     }
 
     @Override
     protected List<ApplicationBean> doInBackground(String... urls) {
         List<ApplicationBean> ret = new ArrayList<>();
             try {
-                ret = loadJsonFromNetwork(urls[0]);
+                ret = loadJsonFromNetwork(urls[0], mJsonFileInJar);
 
                 // update the local DB
                 AppDatabase db = AppDatabase.get(mContext);
@@ -119,24 +122,44 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         Log.e("DownloadXmlTask","download complete");
         }
 
-    private List<ApplicationBean> loadJsonFromNetwork(String urlString) throws XmlPullParserException, IOException {
+    private List<ApplicationBean> loadJsonFromNetwork(String urlString, String jsonFileInJar) throws XmlPullParserException, IOException {
+        String jsonString = getJsonStringFromFileInJar(urlString, jsonFileInJar);
+
+        // report back to the UI, that downloading is over and processing has begun
+        mMainActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Snackbar.make(mMainActivity.findViewById(R.id.fab), "Processing data ...", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
+            }
+        });
+
+        JsonParser abjp = new AppBeanJsonParser();
+        List<ApplicationBean> entries = abjp.getApplicationBeansFromJson(jsonString);
+        return entries;
+    }
+
+//    @Nullable
+
+    @NonNull
+    private String getJsonStringFromFileInJar(String urlString, String jsonFileInJar) throws IOException {
+        String fileName = urlString.substring( urlString.lastIndexOf('/')+1, urlString.length() );
         InputStream stream = null;
-        // Instantiate the parser
-        List<ApplicationBean> entries = null;
 
         String jsonString ="{}";
         try {
             stream = downloadUrl(urlString);
             OutputStream outputStream =
-                    new FileOutputStream(new File(mContext.getCacheDir()+"/i.jar"));
+                    new FileOutputStream(new File(mContext.getCacheDir()+"/"+fileName));
             byte[] buffer = new byte[1024];
             int len;
             while ((len = stream.read(buffer)) != -1) {
                 outputStream.write(buffer, 0, len);
             }
             outputStream.close();
-            JarReader jr = new JarReader(mContext.getCacheDir()+"/i.jar");
-            final byte[] bytes = jr.getResource("index-v1.json");
+            JarReader jr = new JarReader(mContext.getCacheDir()+"/"+fileName);
+            final byte[] bytes = jr.getResource(jsonFileInJar);
             jsonString = new String(bytes);
 
         } finally {
@@ -144,226 +167,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                 stream.close();
             }
         }
-
-        try {
-            JSONObject jo=new JSONObject(jsonString);
-            final JSONArray apps = jo.getJSONArray("apps");
-            final JSONObject packages = jo.getJSONObject("packages");
-            entries = new ArrayList<>(apps.length());
-            for (int i = 0; i < apps.length(); i++) {
-                JSONObject app = apps.getJSONObject(i);
-                try {
-                    ApplicationBean ab = jSonObjToAppBean(app, packages);
-                    entries.add(ab);
-                } catch (JSONException e)
-                {
-                    Log.e("Parser","ignoring "+app.optString("name", "unknown app"));
-                    e.printStackTrace();
-                    //skip
-                }
-            }
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        return entries;
-    }
-
-    private ApplicationBean jSonObjToAppBean(JSONObject app, JSONObject packages) throws JSONException {
-        ApplicationBean ab = new ApplicationBean();
-        ab.id = app.getString("packageName");
-        ab.added = app.getLong("added");
-        ab.lastupdated = app.getLong("lastUpdated");
-        ab.license = app.getString("license");
-        ab.icon = app.optString("icon");
-
-        ab.name = getLocalizedStringItem(app, "name");
-        ab.summary = getLocalizedStringItem(app, "summary"); // summary is optional
-        ab.desc = getLocalizedStringItem(app, "description");
-        ab.whatsNew = getLocalizedStringItem(app, "whatsNew");
-
-        // featureGraphic localized and optional string
-        final Pair<String, String> fg = getLocalizedStringItemAndLocale(app, "featureGraphic");
-        if (fg != null)
-            ab.featureGraphic = fg.second + "/" + fg.first;
-
-        //get categories as string separated list
-        ab.categories = new ArrayList<>();
-        final JSONArray cats = app.getJSONArray("categories");
-        for (int i=0;i<cats.length();i++)
-        {
-            ab.categories.add(cats.get(i).toString());
-        }
-
-        ab.web = app.optString("webSite");
-        ab.source = app.optString("sourceCode");
-        ab.tracker = app.optString("issueTracker");
-        ab.changelog = app.optString("changelog");
-        ab.bitcoin = app.optString("bitcoin");
-        ab.liberapay = app.optString("liberapayID");
-        ab.marketversion = app.optString("suggestedVersionName");
-        ab.marketvercode = app.optString("suggestedVersionCode");
-        ab.author = app.optString("authorName");
-        ab.email = app.optString("authorEmail");
-
-        // apk name from packages
-        // package must be found, otherwise app ise useles,as it wont hav an APK
-        final JSONArray appPackages = packages.getJSONArray(ab.id);
-        final JSONObject latestPackage = appPackages.getJSONObject(0);
-        ab.apkname = latestPackage.getString("apkName");
-
-        // permissions from packages (optional)
-        final JSONArray permissionsArray = latestPackage.optJSONArray("uses-permission");
-        if (permissionsArray != null)
-        {
-            List<String> pList = new ArrayList<>();
-            for (int i = 0 ; i < permissionsArray.length() ; i++)
-            {
-                final String per = permissionsArray.getJSONArray(i).getString(0);
-                pList.add(per);
-            }
-            ab.permissions = TextUtils.join(",",pList);
-        }
-
-        // antifeatures
-        final JSONArray afArray = app.optJSONArray("antiFeatures");
-        if (afArray != null) {
-            List<String> afList = new ArrayList<>();
-            for (int i = 0; i < afArray.length(); i++) {
-                afList.add(afArray.get(i).toString());
-            }
-            ab.antifeatures = TextUtils.join(",",afList);
-        }
-
-        // screenshots array
-        final Pair<JSONArray, String> phoneScreenshots = getLocalizedArrayItemAndLocale(app, "phoneScreenshots");
-        if (phoneScreenshots != null)
-        {
-            final String ssLocale = phoneScreenshots.second;
-            final JSONArray ssArray = phoneScreenshots.first;
-            if (ssArray != null && ssLocale != null) {
-                List<String> ssList = new ArrayList<>();
-                for (int i = 0; i < ssArray.length(); i++) {
-                    ssList.add(ssLocale+"/phoneScreenshots/"+ssArray.get(i).toString());
-                }
-                ab.screenshots = TextUtils.join(";",ssList);
-            }
-
-        }
-
-
-        return ab;
-    }
-
-    /**
-     *
-     * @param app
-     * @param name
-     * @return the string only (taken from the best locale)
-     * @throws JSONException
-     */
-    private String getLocalizedStringItem(JSONObject app, String name) throws JSONException {
-        final Pair<String, String> ret = getLocalizedStringItemAndLocale(app, name);
-        if (ret == null)
-            return null;
-        return ret.first;
-    }
-
-    /**
-     *
-     * @param app
-     * @param name
-     * @return A pair of (Item,Locale)
-     * @throws JSONException
-     */
-    private Pair<String,String> getLocalizedStringItemAndLocale(JSONObject app, String name) throws JSONException {
-        final String repoLocale="en";
-
-        // Map locale -> itemcontent
-        Map<String, String> availalableLocales = new HashMap<>();
-
-        //gather available Locales for this item
-        final String unLocalisedItem = app.optString(name);
-        if (!TextUtils.isEmpty(unLocalisedItem))
-        {
-            availalableLocales.put(repoLocale,unLocalisedItem);
-        }
-
-        final JSONObject localized = app.optJSONObject("localized");
-        if (localized != null)
-        {
-            Iterator<String> keys = localized.keys();
-
-            while(keys.hasNext()) {
-                String resLocale = keys.next();
-                final JSONObject localizedJSONObject = localized.getJSONObject(resLocale);
-                final String localisedString = localizedJSONObject.optString(name);
-                if (!TextUtils.isEmpty(localisedString))
-                {
-                    availalableLocales.put(resLocale,localisedString);
-                }
-            }
-        }
-
-        // for some items (like 'name') having none is bad, others (like 'whatsNew') are optional
-        if (availalableLocales.isEmpty())
-            return null;
-
-        final Set<String> keySet = availalableLocales.keySet();
-        String[] resLocales = keySet.toArray(new String[keySet.size()]);
-        final String usableLocale = Util.getUsableLocale(resLocales);
-
-        // this can't be null anymore, otherwise we wouldn't have arrived here
-        return new Pair<String,String>(availalableLocales.get(usableLocale), usableLocale);
-    }
-
-    /**
-     *
-     * @param app
-     * @param name
-     * @return A pair of (ItemArray,Locale)
-     * @throws JSONException
-     */
-    private Pair<JSONArray,String> getLocalizedArrayItemAndLocale(JSONObject app, String name) throws JSONException {
-        final String repoLocale="en";
-
-        // Map locale -> itemcontent
-        Map<String, JSONArray> availalableLocales = new HashMap<>();
-
-        //gather available Locales for this item
-        final JSONArray unLocalisedItem = app.optJSONArray(name);
-        if (unLocalisedItem != null)
-        {
-            availalableLocales.put(repoLocale,unLocalisedItem);
-        }
-
-        final JSONObject localized = app.optJSONObject("localized");
-        if (localized != null)
-        {
-            Iterator<String> keys = localized.keys();
-
-            while(keys.hasNext()) {
-                String resLocale = keys.next();
-                final JSONObject localizedJSONObject = localized.getJSONObject(resLocale);
-                final JSONArray localisedArrayItem = localizedJSONObject.optJSONArray(name);
-                if (localisedArrayItem != null)
-                {
-                    availalableLocales.put(resLocale,localisedArrayItem);
-                }
-            }
-        }
-
-        // for some items (like 'name') having none is bad, others (like 'whatsNew') are optional
-        if (availalableLocales.isEmpty())
-            return null;
-
-        final Set<String> keySet = availalableLocales.keySet();
-        String[] resLocales = keySet.toArray(new String[keySet.size()]);
-        final String usableLocale = Util.getUsableLocale(resLocales);
-
-        // this can't be null anymore, otherwise we wouldn't have arrived here
-        return new Pair<JSONArray,String>(availalableLocales.get(usableLocale), usableLocale);
+        return jsonString;
     }
 
     // Given a string representation of a URL, sets up a connection and gets
