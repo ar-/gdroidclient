@@ -21,25 +21,17 @@ package org.gdroid.gdroid.tasks;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
-import android.text.TextUtils;
 import android.util.Log;
-import android.util.Pair;
 import android.view.View;
 
-import org.gdroid.gdroid.AppBeanAdapter;
 import org.gdroid.gdroid.AppCollectionAdapter;
 import org.gdroid.gdroid.MainActivity;
 import org.gdroid.gdroid.R;
-import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.File;
@@ -50,49 +42,66 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.concurrent.ExecutionException;
 
 public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<ApplicationBean>> {
 
+    public static final String TAG = "DownloadJaredJsonTask";
 
-    private final Context mContext;
+    private Context mContext;
     private final MainActivity mMainActivity;
     private final AppCollectionAdapter mAppCollectionAdapter;
-    private final String mJsonFileInJar;
+    protected final String mJsonFileInJar;
 
     // parameter is the adapter that can be notified after processing
     public DownloadJaredJsonTask(MainActivity mainActivity, AppCollectionAdapter appCollectionAdapter, String jsonFileInJar) {
         mMainActivity = mainActivity;
-        mContext = mMainActivity.getApplicationContext();
+        if (mMainActivity != null)
+            mContext = mMainActivity.getApplicationContext();
         mAppCollectionAdapter = appCollectionAdapter;
         mJsonFileInJar=jsonFileInJar;
     }
 
     @Override
     protected List<ApplicationBean> doInBackground(String... urls) {
-        List<ApplicationBean> ret = new ArrayList<>();
+        List<ApplicationBean> abl = new ArrayList<>();
             try {
-                ret = loadJsonFromNetwork(urls[0], mJsonFileInJar);
+                abl = loadJsonFromNetwork(urls[0], mJsonFileInJar, new AppBeanJsonParser());
+
+                // TODO doesnt work. one asyc task can't call annother async task; solution: move the other task to onPostUpdate or simpler: move all functionality out of task classes!!
+                final MetaDownloadJaredJsonTask task = new MetaDownloadJaredJsonTask(mMainActivity, "metadata/gdroid.json", abl);
+                task.doInBackground("https://gitlab.com/gdroid/gdroiddata/raw/master/metadata/gdroid.jar");
+
+                // report back to the UI, that downloading is over and processing has begun
+                mMainActivity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Snackbar.make(mMainActivity.findViewById(R.id.fab), "Storing data locally...", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                });
+
 
                 // update the local DB
                 AppDatabase db = AppDatabase.get(mContext);
 
-                for (ApplicationBean ab: ret) {
-                    db.appDao().insertApplicationBeans(ab);
+                // insert all apps at once
+                db.appDao().insertApplicationBeans(abl);
+
+                final List<CategoryBean> allCategoryMappings = new ArrayList<>();
+
+                for (ApplicationBean ab: abl) {
                     final List<CategoryBean> categoryList = ab.getCategoryList();
                     if (categoryList !=null)
                     {
+                        allCategoryMappings.addAll(categoryList);
+                        //TODO the delete can also run in one txn, but all it has to collect all to be deleted before updating apps
                         db.appDao().deleteCategoriesForApp(ab.id);
-                        for (CategoryBean c: categoryList) {
-                            db.appDao().insertCategories(c);
-                        }
                     }
                 }
 
+                db.appDao().insertCategories(allCategoryMappings);
                 db.close();
 
                 // update the UI after DB has been updated (on the first 2 tabs)
@@ -102,13 +111,10 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                     }
                 }
 
-                return ret;
+                return abl;
             } catch (IOException e) {
-                return ret;
+                return abl;
 //            return getResources().getString(R.string.connection_error);
-            } catch (XmlPullParserException e) {
-                return ret;
-//            return getResources().getString(R.string.xml_error);
             }
         }
 
@@ -119,24 +125,13 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         if (mAppCollectionAdapter != null) {
             mAppCollectionAdapter.notifyDataSetChanged();
         }
-        Log.e("DownloadXmlTask","download complete");
-        }
+        Log.e(TAG,"download complete");
+    }
 
-    private List<ApplicationBean> loadJsonFromNetwork(String urlString, String jsonFileInJar) throws XmlPullParserException, IOException {
+    protected List<ApplicationBean> loadJsonFromNetwork(String urlString, String jsonFileInJar, JsonParser parser) throws IOException {
         String jsonString = getJsonStringFromFileInJar(urlString, jsonFileInJar);
 
-        // report back to the UI, that downloading is over and processing has begun
-        mMainActivity.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Snackbar.make(mMainActivity.findViewById(R.id.fab), "Processing data ...", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
-            }
-        });
-
-        JsonParser abjp = new AppBeanJsonParser();
-        List<ApplicationBean> entries = abjp.getApplicationBeansFromJson(jsonString);
+        List<ApplicationBean> entries = parser.getApplicationBeansFromJson(jsonString);
         return entries;
     }
 

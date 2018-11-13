@@ -37,6 +37,7 @@ import com.bumptech.glide.Glide;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHolder> {
@@ -101,7 +102,8 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
             return;
         holder.appId = applicationBean.id;
         holder.title.setText(applicationBean.name);
-        holder.count.setText(applicationBean.stars + " ★");
+        DecimalFormat df = new DecimalFormat("0.0");
+        holder.count.setText(df.format(applicationBean.stars) + " ★");
 
         // loading applicationBean cover using Glide library
         //Glide.with(mContext).load(applicationBean.getThumbnail()).into(holder.thumbnail);

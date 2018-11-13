@@ -25,6 +25,8 @@ import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
+import java.util.List;
+
 @Dao
 public interface SimpleApplicationDao {
 
@@ -43,14 +45,20 @@ public interface SimpleApplicationDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     public void insertApplicationBeans(ApplicationBean... ApplicationBeans);
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    public void insertApplicationBeans(List<ApplicationBean> ApplicationBeans);
+
     @Update
     public void updateApplicationBeans(ApplicationBean... ApplicationBeans);
 
     @Delete
     public void deleteApplicationBeans(ApplicationBean... ApplicationBeans);
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     public void insertCategories(CategoryBean... CategoryBeans);
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    public void insertCategories(List<CategoryBean> CategoryBeans);
 
     @Query("DELETE FROM CategoryBean WHERE appId = :appId")
     public void deleteCategoriesForApp(String appId);
