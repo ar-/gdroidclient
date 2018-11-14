@@ -70,6 +70,7 @@ public class AppDetailActivity extends AppCompatActivity {
     Context mContext;
     ApplicationBean mApp;
     FloatingActionButton fab;
+    FloatingActionButton fabShare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -205,6 +206,17 @@ public class AppDetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Util.toggleAppStarred(mContext,mApp.id);
                 updateStarButton();
+            }
+        });
+
+        fabShare = (FloatingActionButton) findViewById(R.id.fab_share);
+        fabShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // this intent will open the app in available market apps (users choice - but should be F-Droid)
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://play.google.com/store/apps/details?id="+mApp.id));
+                startActivity(intent);
             }
         });
         updateStarButton();
