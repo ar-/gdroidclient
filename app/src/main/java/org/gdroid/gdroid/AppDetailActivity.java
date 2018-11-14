@@ -238,6 +238,19 @@ public class AppDetailActivity extends AppCompatActivity {
             }
         });
 
+        // make the install button say "update" if already installed
+        if (Util.isAppInstalled(mContext, mApp.id))
+        {
+            if (! mApp.marketversion.equals(Util.getInstalledVersionOfApp(mContext, mApp.id)))
+            {
+                btnInstall.setText("Update");
+            }
+            else
+            {
+                btnInstall.setVisibility(View.GONE);
+            }
+        }
+
         // populate the Links-section with further upstream links
         populateUpstreamLink(mApp.source, R.id.tbl_row_source_code);
         populateUpstreamLink(mApp.tracker, R.id.tbl_row_bugtracker);
@@ -313,9 +326,9 @@ public class AppDetailActivity extends AppCompatActivity {
             DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
             DownloadManager.Request mRqRequest = new DownloadManager.Request(
                     Uri.parse(url));
-            //mRqRequest.setTitle("DL title xxxzzz");
             mRqRequest.setTitle(mApp.name).setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             mRqRequest.setDestinationUri(Uri.fromFile(otaFile));
+            Util.deleteFileIfExist(otaFile.getAbsolutePath());
             long idDownLoad=mManager.enqueue(mRqRequest);
             DownloadManager.Query query = null;
             query = new DownloadManager.Query();
