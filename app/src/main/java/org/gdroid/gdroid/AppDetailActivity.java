@@ -87,6 +87,10 @@ public class AppDetailActivity extends AppCompatActivity {
 
         AppDatabase db = AppDatabase.get(getApplicationContext());
         mApp = db.appDao().getApplicationBean(appId);
+
+        // just a data-repair on the display (too easy to do in repo)
+        repairMissingData();
+
         toolbar.setTitle(mApp.name);
         toolbarLayout.setTitle(mApp.name);
         ((TextView)findViewById(R.id.lbl_app_name)).setText(mApp.name);
@@ -293,6 +297,39 @@ public class AppDetailActivity extends AppCompatActivity {
                 btnInstall.performClick();
             }
         }
+    }
+
+    private void repairMissingData() {
+        if (TextUtils.isEmpty(mApp.web))
+        {
+            // Many websites have been removed by the F-Droid maintainers, because they thought, duplicated links are useless
+            // or README files are not websites. Indeed MANY free apps use a nicely formatted README.md file as
+            // primary website. So it should be shown here. ... Just another messy ad-hoc decision.
+            if (! TextUtils.isEmpty(mApp.source))
+            {
+                mApp.web = mApp.source;
+            }
+        }
+
+        if (TextUtils.isEmpty(mApp.author))
+        {
+            if (! TextUtils.isEmpty(mApp.source))
+            {
+                // fetch author form github url (try catch is just to be safe)
+                try {
+                    String g = "github.com/";
+                    final int from = mApp.source.indexOf(g) + g.length();
+                    final int to = mApp.source.indexOf('/', from);
+                    String a = mApp.source.substring(from, to);
+                    mApp.author = a;
+                } catch (Throwable t)
+                {
+                    // nothing but log
+                    Log.e("ADA", "could not fetch author name from github url", t);
+                }
+            }
+        }
+
     }
 
     private void populateUpstreamLink(final String appAttribute, int tableRowId) {
