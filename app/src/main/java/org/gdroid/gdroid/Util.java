@@ -23,8 +23,10 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.v4.os.ConfigurationCompat;
 import android.support.v4.os.LocaleListCompat;
@@ -34,6 +36,7 @@ import android.util.Log;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -252,6 +255,52 @@ public class Util {
             // there might be invalid names for manguages in upstream (obf,off,opf,opff)
             // but they will be irgores, because user can't have such a language activated
             return locale; // if there was no separator, it is probalby a language without location
+        }
+    }
+
+    public static boolean isAppInstalled(Context context, String packageName) {
+        try {
+            context.getPackageManager().getApplicationInfo(packageName, 0);
+            return true;
+        }
+        catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+
+
+    public static String getInstalledVersionOfApp(Context context, String packageName) {
+        try {
+            PackageInfo pinfo = null;
+            pinfo = context.getPackageManager().getPackageInfo(packageName, 0);
+            String verName = pinfo.versionName;
+            return verName;
+        }
+        catch (PackageManager.NameNotFoundException e) {
+            return "";
+        }
+    }
+
+    private static boolean isFileExisting(String filename){
+
+        File folder1 = new File(filename);
+        return folder1.exists();
+
+
+    }
+
+    private static boolean deleteFile( String filename){
+
+        File folder1 = new File(filename);
+        return folder1.delete();
+
+
+    }
+
+    public static void deleteFileIfExist(String filename){
+        if (isFileExisting(filename))
+        {
+            deleteFile(filename);
         }
     }
 

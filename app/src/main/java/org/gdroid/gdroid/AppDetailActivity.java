@@ -70,6 +70,7 @@ public class AppDetailActivity extends AppCompatActivity {
     Context mContext;
     ApplicationBean mApp;
     FloatingActionButton fab;
+    FloatingActionButton fabShare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +87,10 @@ public class AppDetailActivity extends AppCompatActivity {
 
         AppDatabase db = AppDatabase.get(getApplicationContext());
         mApp = db.appDao().getApplicationBean(appId);
+
+        // just a data-repair on the display (too easy to do in repo)
+        repairMissingData();
+
         toolbar.setTitle(mApp.name);
         toolbarLayout.setTitle(mApp.name);
         ((TextView)findViewById(R.id.lbl_app_name)).setText(mApp.name);
@@ -207,6 +212,17 @@ public class AppDetailActivity extends AppCompatActivity {
                 updateStarButton();
             }
         });
+
+        fabShare = (FloatingActionButton) findViewById(R.id.fab_share);
+        fabShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // this intent will open the app in available market apps (users choice - but should be F-Droid)
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://play.google.com/store/apps/details?id="+mApp.id));
+                startActivity(intent);
+            }
+        });
         updateStarButton();
 
         //make the install button useful
@@ -225,6 +241,19 @@ public class AppDetailActivity extends AppCompatActivity {
                                   });
             }
         });
+
+        // make the install button say "update" if already installed
+        if (Util.isAppInstalled(mContext, mApp.id))
+        {
+            if (! mApp.marketversion.equals(Util.getInstalledVersionOfApp(mContext, mApp.id)))
+            {
+                btnInstall.setText("Update");
+            }
+            else
+            {
+                btnInstall.setVisibility(View.GONE);
+            }
+        }
 
         // populate the Links-section with further upstream links
         populateUpstreamLink(mApp.source, R.id.tbl_row_source_code);
@@ -270,6 +299,39 @@ public class AppDetailActivity extends AppCompatActivity {
         }
     }
 
+    private void repairMissingData() {
+        if (TextUtils.isEmpty(mApp.web))
+        {
+            // Many websites have been removed by the F-Droid maintainers, because they thought, duplicated links are useless
+            // or README files are not websites. Indeed MANY free apps use a nicely formatted README.md file as
+            // primary website. So it should be shown here. ... Just another messy ad-hoc decision.
+            if (! TextUtils.isEmpty(mApp.source))
+            {
+                mApp.web = mApp.source;
+            }
+        }
+
+        if (TextUtils.isEmpty(mApp.author))
+        {
+            if (! TextUtils.isEmpty(mApp.source))
+            {
+                // fetch author form github url (try catch is just to be safe)
+                try {
+                    String g = "github.com/";
+                    final int from = mApp.source.indexOf(g) + g.length();
+                    final int to = mApp.source.indexOf('/', from);
+                    String a = mApp.source.substring(from, to);
+                    mApp.author = a;
+                } catch (Throwable t)
+                {
+                    // nothing but log
+                    Log.e("ADA", "could not fetch author name from github url", t);
+                }
+            }
+        }
+
+    }
+
     private void populateUpstreamLink(final String appAttribute, int tableRowId) {
         if (!TextUtils.isEmpty(appAttribute))
         {
@@ -301,9 +363,9 @@ public class AppDetailActivity extends AppCompatActivity {
             DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
             DownloadManager.Request mRqRequest = new DownloadManager.Request(
                     Uri.parse(url));
-            //mRqRequest.setTitle("DL title xxxzzz");
             mRqRequest.setTitle(mApp.name).setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             mRqRequest.setDestinationUri(Uri.fromFile(otaFile));
+            Util.deleteFileIfExist(otaFile.getAbsolutePath());
             long idDownLoad=mManager.enqueue(mRqRequest);
             DownloadManager.Query query = null;
             query = new DownloadManager.Query();
