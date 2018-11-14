@@ -21,6 +21,7 @@ package org.gdroid.gdroid;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -38,6 +39,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -162,6 +164,14 @@ public class MainActivity extends AppCompatActivity
      * call this to set up the main view to show a bunch of apps on a grid with 3 columns
      */
     private void setUpAppCards() {
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        final int screenWidth = size.x;
+        final int gapDp = 10;
+        final int imgWidth = dpToPx(160+gapDp);
+        int columns = screenWidth / imgWidth;
+
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         appBeanList = new ArrayList<>();
@@ -170,9 +180,9 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
 
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 3);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, columns);
         removeAllitemDecorations();
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
+        recyclerView.addItemDecoration(new GridSpacingItemDecoration(columns, dpToPx(gapDp), true));
         recyclerView.setLayoutManager(mLayoutManager);
     }
 
