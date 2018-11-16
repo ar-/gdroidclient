@@ -21,6 +21,7 @@ package org.gdroid.gdroid;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -105,12 +106,18 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         DecimalFormat df = new DecimalFormat("0.0");
         holder.count.setText(df.format(applicationBean.stars) + " ★");
 
-        // loading applicationBean cover using Glide library
-        //Glide.with(mContext).load(applicationBean.getThumbnail()).into(holder.thumbnail);
-        //Glide.with(mContext).load()
-//        holder.thumbnail.setImageDrawable();
+        CircularProgressDrawable circularProgressDrawable = new CircularProgressDrawable(mContext);
+        circularProgressDrawable.setStrokeWidth(5f);
+        circularProgressDrawable.setCenterRadius(30f);
+        circularProgressDrawable.start();
+
         if (applicationBean.icon != null) {
-            Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+applicationBean.icon).override(192, 192).into(holder.thumbnail);
+            Glide.with(mContext)
+                    .load("https://f-droid.org/repo/icons-640/"+applicationBean.icon)
+                    .override(192, 192)
+                    .placeholder(circularProgressDrawable)
+                    .error(R.drawable.ic_android_black_24dp)
+                    .into(holder.thumbnail);
         }
 //        new DownloadImageTask(holder.thumbnail)
 //                .execute("https://f-droid.org/repo/icons-640/community.fairphone.fplauncher3.10.png");

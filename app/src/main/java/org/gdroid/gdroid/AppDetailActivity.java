@@ -33,6 +33,7 @@ import android.preference.PreferenceManager;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -164,17 +165,25 @@ public class AppDetailActivity extends AppCompatActivity {
             ((TextView)findViewById(R.id.lbl_app_desc)).setText(Html.fromHtml(mApp.desc));
         }
 
+        CircularProgressDrawable circularProgressDrawable2 = new CircularProgressDrawable(this);
+        circularProgressDrawable2.setStrokeWidth(5f);
+        circularProgressDrawable2.setCenterRadius(30f);
+        circularProgressDrawable2.start();
 
         // load icon image (alternatively feature graphic)
         Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
         if (mApp.icon != null) {
             if (TextUtils.isEmpty(mApp.featureGraphic))
             {
-                Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_header_icon));
+                Glide.with(mContext)
+                        .load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192)
+                        .into((ImageView) findViewById(R.id.img_header_icon));
             }
             else
             {
-                Glide.with(mContext).load("https://f-droid.org/repo/"+mApp.id+"/"+ mApp.featureGraphic).into((ImageView) findViewById(R.id.img_header_icon));
+                Glide.with(mContext)
+                        .load("https://f-droid.org/repo/"+mApp.id+"/"+ mApp.featureGraphic)
+                        .into((ImageView) findViewById(R.id.img_header_icon));
             }
         }
 
@@ -192,7 +201,16 @@ public class AppDetailActivity extends AppCompatActivity {
                 lp.height =384;
                 iv.setLayoutParams(lp);
                 iv.setPadding(5,5,5,5);
-                Glide.with(mContext).load("https://f-droid.org/repo/"+mApp.id+"/"+ ss).override(384, 384).into(iv);
+                CircularProgressDrawable circularProgressDrawable = new CircularProgressDrawable(this);
+                circularProgressDrawable.setStrokeWidth(5f);
+                circularProgressDrawable.setCenterRadius(30f);
+                circularProgressDrawable.start();
+                Glide.with(mContext)
+                        .load("https://f-droid.org/repo/"+mApp.id+"/"+ ss)
+                        .override(384, 384)
+                        .placeholder(circularProgressDrawable)
+                        .error(R.drawable.ic_phone_android_black_24dp)
+                        .into(iv);
                 grpScreenshots.addView(iv);
             }
         }
