@@ -20,6 +20,7 @@ package org.gdroid.gdroid;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -30,6 +31,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
+import android.view.Display;
 
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.ApplicationBean;
@@ -68,22 +70,25 @@ public class AppCollectionActivity extends AppCompatActivity {
         ((CollapsingToolbarLayout)findViewById(R.id.toolbar_layout)).setTitle(headline);
 
         //populate apps
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        final int screenWidth = size.x;
+        final int gapDp = 5;
+        final int imgWidth = dpToPx(160+gapDp);
+        int columns = screenWidth / imgWidth;
+
         RecyclerView viewAppCollection = (RecyclerView) findViewById(R.id.view_app_collection);
+
         applicationBeanList = new ArrayList<>();
         adapter = new AppBeanAdapter(mContext, applicationBeanList);
+
         adapter.setActivity(this); // make this Activity the calling context
         viewAppCollection.setItemAnimator(new DefaultItemAnimator());
         viewAppCollection.setAdapter(adapter);
 
-        final RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 3);
-        viewAppCollection.setLayoutManager(layoutManager);
-        viewAppCollection.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
-//        viewAppCollection.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
-
-//        LinearLayoutManager layoutManager2
-//                = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
-        //viewAppCollection.setLayoutManager(layoutManager);
-
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, columns);
+        viewAppCollection.setLayoutManager(mLayoutManager);
 
 //        loadMore();
         AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(mContext,collectionName,itemsToShow);

@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
         recyclerView.setLayoutManager(mLayoutManager);
         removeAllitemDecorations();
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
+        //recyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         appCollectionDescriptorList = new ArrayList<>();
         appCollectionAdapter = new AppCollectionAdapter(this, appCollectionDescriptorList);
@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity
         Point size = new Point();
         display.getSize(size);
         final int screenWidth = size.x;
-        final int gapDp = 10;
+        final int gapDp = 5;
         final int imgWidth = dpToPx(160+gapDp);
         int columns = screenWidth / imgWidth;
 
@@ -182,7 +182,6 @@ public class MainActivity extends AppCompatActivity
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, columns);
         removeAllitemDecorations();
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(columns, dpToPx(gapDp), true));
         recyclerView.setLayoutManager(mLayoutManager);
     }
 

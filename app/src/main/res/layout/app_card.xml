@@ -30,14 +30,14 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/card_margin"
+        android:layout_margin="10dp"
         android:elevation="3dp"
         android:clickable="true"
-        android:layout_marginLeft="@dimen/my_cardview_margin"
-        android:layout_marginRight="@dimen/my_cardview_margin"
         android:minWidth="150dp"
         android:maxWidth="150dp"
         card_view:cardCornerRadius="@dimen/card_album_radius">
+        <!--android:layout_marginLeft="@dimen/my_cardview_margin"-->
+        <!--android:layout_marginRight="@dimen/my_cardview_margin"-->
 
         <RelativeLayout
             android:layout_width="150dp"
@@ -47,7 +47,8 @@
             <ImageView
                 android:id="@+id/thumbnail"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/album_cover_height"
+                android:layout_height="130dp"
+                android:layout_margin="5dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
                 />
