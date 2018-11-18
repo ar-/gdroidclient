@@ -51,6 +51,10 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.tonyodev.fetch2.Download;
+import com.tonyodev.fetch2.Error;
+import com.tonyodev.fetch2.FetchListener;
+import com.tonyodev.fetch2core.DownloadBlock;
 
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
@@ -251,12 +255,13 @@ public class AppDetailActivity extends AppCompatActivity {
 //                btnInstall.setEnabled(false);
                 btnInstall.setAlpha(.5f);
                 btnInstall.setClickable(false);
-                AsyncTask.execute(new Runnable() {
-                                      @Override
-                                      public void run() {
-                                          doInBackground("https://f-droid.org/repo/"+mApp.apkname);
-                                      }
-                                  });
+                AppDownloader.download(mContext, mApp);
+//                AsyncTask.execute(new Runnable() {
+//                                      @Override
+//                                      public void run() {
+//                                          doInBackground("https://f-droid.org/repo/"+mApp.apkname);
+//                                      }
+//                                  });
             }
         });
 
@@ -368,6 +373,75 @@ public class AppDetailActivity extends AppCompatActivity {
             final TableRow tblRow = findViewById(tableRowId);
             tblRow.setVisibility(View.GONE);
         }
+    }
+
+    private FetchListener getFetchListener (){
+        return new FetchListener() {
+            @Override
+            public void onAdded(Download download) {
+
+            }
+
+            @Override
+            public void onQueued(Download download, boolean b) {
+
+            }
+
+            @Override
+            public void onWaitingNetwork(Download download) {
+
+            }
+
+            @Override
+            public void onCompleted(Download download) {
+
+            }
+
+            @Override
+            public void onError(Download download, Error error, Throwable throwable) {
+
+            }
+
+            @Override
+            public void onDownloadBlockUpdated(Download download, DownloadBlock downloadBlock, int i) {
+
+            }
+
+            @Override
+            public void onStarted(Download download, List<? extends DownloadBlock> list, int i) {
+
+            }
+
+            @Override
+            public void onProgress(Download download, long l, long l1) {
+
+            }
+
+            @Override
+            public void onPaused(Download download) {
+
+            }
+
+            @Override
+            public void onResumed(Download download) {
+
+            }
+
+            @Override
+            public void onCancelled(Download download) {
+
+            }
+
+            @Override
+            public void onRemoved(Download download) {
+
+            }
+
+            @Override
+            public void onDeleted(Download download) {
+
+            }
+        };
     }
 
     protected Boolean doInBackground(String url) {
