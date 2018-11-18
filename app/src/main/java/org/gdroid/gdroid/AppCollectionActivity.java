@@ -81,7 +81,7 @@ public class AppCollectionActivity extends AppCompatActivity {
         RecyclerView viewAppCollection = (RecyclerView) findViewById(R.id.view_app_collection);
 
         applicationBeanList = new ArrayList<>();
-        adapter = new AppBeanAdapter(mContext, applicationBeanList);
+        adapter = new AppBeanAdapter(this, applicationBeanList);
 
         adapter.setActivity(this); // make this Activity the calling context
         viewAppCollection.setItemAnimator(new DefaultItemAnimator());
