@@ -64,6 +64,8 @@ public class ApplicationBean {
     public String whatsNew;
     public String featureGraphic;
     public String screenshots;
+    public String metricsJson;
+    public int metriccount;
 
     public ApplicationBean() {
     }

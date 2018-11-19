@@ -56,10 +56,13 @@ import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.lang.reflect.Method;
 import java.security.Timestamp;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -304,6 +307,68 @@ public class AppDetailActivity extends AppCompatActivity {
                     startActivity(Intent.createChooser(emailIntent, "Send email..."));
                 }
             });
+        }
+
+        // fill in the ratings
+        if (!TextUtils.isEmpty(mApp.metricsJson))
+        {
+            DecimalFormat df = new DecimalFormat("0.0");
+            ((TextView)findViewById(R.id.lbl_rating_gdroid_1)).setText(df.format(mApp.stars) + " ★");
+            ((TextView)findViewById(R.id.lbl_rating_gdroid_2)).setText(mApp.metriccount + " G-Droid metrics");
+
+            try {
+                JSONObject metrics = new JSONObject(mApp.metricsJson);
+
+                // upstream stars
+                boolean hasUpstreamRating = false;
+                for (String upstreamSource: new String[]{"Github", "Gitlab"}) {
+                    final String metricName = "m_"+upstreamSource.toLowerCase()+"_stars";
+                    final int ustars = metrics.optInt(metricName);
+                    if (ustars != 0)
+                    {
+                        ((TextView)findViewById(R.id.lbl_rating_upstream_1)).setText(ustars + " ★");
+                        ((TextView)findViewById(R.id.lbl_rating_upstream_2)).setText("stars on "+upstreamSource);
+                        hasUpstreamRating = true;
+                    }
+                }
+                if (!hasUpstreamRating)
+                {
+                    findViewById(R.id.grp_rating_upstream).setVisibility(View.GONE);
+                }
+
+                // up-to-date-ness
+                final double norm_a24 = metrics.optDouble("age_last_v_24");
+                if (! Double.isNaN(norm_a24))
+                {
+                    ((TextView)findViewById(R.id.lbl_rating_uptodate_1)).setText(df.format(norm_a24*100f) + " %");
+                }
+                else
+                {
+                    findViewById(R.id.grp_rating_uptodate).setVisibility(View.GONE);
+                }
+
+                // update-cycle
+                final double norm_ac = metrics.optDouble("avg_update_frequency");
+                if (! Double.isNaN(norm_ac))
+                {
+                    ((TextView)findViewById(R.id.lbl_rating_releasecycle_1)).setText(df.format(norm_ac) + " days");
+                }
+                else
+                {
+                    findViewById(R.id.grp_rating_releasecycle).setVisibility(View.GONE);
+                }
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+                findViewById(R.id.grp_rating_upstream).setVisibility(View.GONE);
+                findViewById(R.id.grp_rating_uptodate).setVisibility(View.GONE);
+                findViewById(R.id.grp_rating_releasecycle).setVisibility(View.GONE);
+            }
+
+        }
+        else
+        {
+            findViewById(R.id.grp_ratings).setVisibility(View.GONE);
         }
 
         // was there any action on this view in the intent?

@@ -93,4 +93,8 @@ public class MetaMetric {
         values.clear();
         weights.clear();
     }
+
+    public int countMetrics() {
+        return values.size();
+    }
 }
