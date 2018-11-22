@@ -40,7 +40,7 @@ public class AppCollectionDescriptor {
     private List<ApplicationBean> applicationBeanList;
 
     public AppCollectionDescriptor(Context context, String name) {
-        this(context,name, 10);
+        this(context,name, 12);
     }
 
     public AppCollectionDescriptor(Context context, String name, int limit) {
@@ -81,6 +81,26 @@ public class AppCollectionDescriptor {
         {
             AppDatabase db = AppDatabase.get(mContext);
             ApplicationBean[] appsInDb = db.appDao().getLastUpdated(mLimit,mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+        }
+        else if (collectionName.equals("High rated"))
+        {
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getHighRated(mLimit,mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+        }
+        else if (collectionName.equals("Random apps"))
+        {
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getRandom(mLimit,mOffset);
 
             applicationBeanList.clear();
             for (ApplicationBean ab: appsInDb ) {

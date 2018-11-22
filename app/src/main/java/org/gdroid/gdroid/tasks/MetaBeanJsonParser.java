@@ -18,6 +18,7 @@
 
 package org.gdroid.gdroid.tasks;
 
+import android.text.TextUtils;
 import android.util.Log;
 
 import org.gdroid.gdroid.MetaMetric;
@@ -64,6 +65,8 @@ class MetaBeanJsonParser implements JsonParser {
     }
 
     private void jSonObjToAppBean(String appId, JSONObject content) throws JSONException {
+        if (TextUtils.isEmpty(appId))
+            return;
         //annotate the existing list of the previous download
         ApplicationBean ab = abMap.get(appId);
         final JSONObject metrics = content.optJSONObject("metrics");
@@ -71,20 +74,36 @@ class MetaBeanJsonParser implements JsonParser {
 
         if (metrics != null)
         {
-            final double norm_spd = metrics.optDouble("m_github_stars_per_day_normalised");
-            final double norm_a24 = metrics.getDouble("age_last_v_24");
+            // store raw metrics for later use
+            ab.metricsJson = metrics.toString();
+
+            // eval the meta-metric
+
+            final double norm_ghspd = metrics.optDouble("m_github_stars_per_day_normalised");
+            final double norm_glspd = metrics.optDouble("m_gitlab_stars_per_day_normalised");
+            final double norm_a24 = metrics.optDouble("age_last_v_24");
+            final double norm_udf = metrics.optDouble("avg_update_frequency_normalised");
             MetaMetric mm = new MetaMetric();
-            if (! Double.isNaN(norm_spd))
+            if (! Double.isNaN(norm_ghspd))
             {
                 // TODO let the user choose the weights
-                mm.addMetric(norm_spd,1);
+                mm.addMetric(norm_ghspd,1);
+            }
+            if (! Double.isNaN(norm_glspd))
+            {
+                mm.addMetric(norm_glspd,1);
             }
             if (! Double.isNaN(norm_a24))
             {
                 //TODO ask the user in the settings about the weight of each metric
                 mm.addMetric(norm_a24,1);
             }
+            if (! Double.isNaN(norm_udf))
+            {
+                mm.addMetric(norm_udf,1);
+            }
             ab.stars = (float) mm.getScaledValue(5.0);
+            ab.metriccount = mm.countMetrics();
         }
 
     }

@@ -39,6 +39,12 @@ public interface SimpleApplicationDao {
     @Query("SELECT * FROM ApplicationBean ORDER BY added DESC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getLastAdded(int limit, int offset);
 
+    @Query("SELECT * FROM ApplicationBean WHERE metriccount>=3 ORDER BY stars DESC, RANDOM() LIMIT :limit OFFSET :offset")
+    public ApplicationBean[] getHighRated(int limit, int offset);
+
+    @Query("SELECT * FROM ApplicationBean ORDER BY RANDOM() LIMIT :limit OFFSET :offset")
+    public ApplicationBean[] getRandom(int limit, int offset);
+
     @Query("SELECT * FROM ApplicationBean WHERE id = :id LIMIT 1")
     public ApplicationBean getApplicationBean(String id);
 
