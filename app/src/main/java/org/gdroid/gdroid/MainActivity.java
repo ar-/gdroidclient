@@ -209,8 +209,10 @@ public class MainActivity extends AppCompatActivity
             appCollectionDescriptorList.add(a);
             AppCollectionDescriptor a2 = new AppCollectionDescriptor(context, "Recently updated");
             appCollectionDescriptorList.add(a2);
-//            AppCollectionDescriptor a3 = new AppCollectionDescriptor(context, "Recommended for you");
-//            appCollectionDescriptorList.add(a3);
+            AppCollectionDescriptor a3 = new AppCollectionDescriptor(context, "High rated");
+            appCollectionDescriptorList.add(a3);
+            AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "Random apps");
+            appCollectionDescriptorList.add(a4);
 //            AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "top rates apps");
 //            appCollectionDescriptorList.add(a4);
 //            AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "you might also like");

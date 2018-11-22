@@ -48,7 +48,8 @@ class AppBeanJsonParser implements JsonParser{
                 JSONObject app = apps.getJSONObject(i);
                 try {
                     ApplicationBean ab = jSonObjToAppBean(app, packages);
-                    entries.add(ab);
+                    if (!TextUtils.isEmpty(ab.id))
+                        entries.add(ab);
                 } catch (JSONException e)
                 {
                     Log.e("Parser","ignoring "+app.optString("name", "unknown app"));

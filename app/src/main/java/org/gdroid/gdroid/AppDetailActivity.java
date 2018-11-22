@@ -336,6 +336,7 @@ public class AppDetailActivity extends AppCompatActivity {
                     findViewById(R.id.grp_rating_upstream).setVisibility(View.GONE);
                 }
 
+                df = new DecimalFormat("0");
                 // up-to-date-ness
                 final double norm_a24 = metrics.optDouble("age_last_v_24");
                 if (! Double.isNaN(norm_a24))

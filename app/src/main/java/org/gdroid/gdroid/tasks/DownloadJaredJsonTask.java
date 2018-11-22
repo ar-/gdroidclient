@@ -89,6 +89,17 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                 // insert all apps at once
                 db.appDao().insertApplicationBeans(abl);
 
+//                for (ApplicationBean ab :
+//                        abl) {
+//                    try {
+//                        db.appDao().insertApplicationBeans(abl);
+//                    }
+//                    catch (Throwable t)
+//                    {
+//                        Log.e("Parser","error inserting "+ab.id , t);
+//                    }
+//                }
+
                 final List<CategoryBean> allCategoryMappings = new ArrayList<>();
 
                 for (ApplicationBean ab: abl) {

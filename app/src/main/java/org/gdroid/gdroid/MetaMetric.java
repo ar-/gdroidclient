@@ -29,8 +29,8 @@ public class MetaMetric {
     List<Integer> weights;
     public MetaMetric()
     {
-        values = new ArrayList<>(2);
-        weights = new ArrayList<>(2);
+        values = new ArrayList<>(3);
+        weights = new ArrayList<>(3);
     }
 
     /**
