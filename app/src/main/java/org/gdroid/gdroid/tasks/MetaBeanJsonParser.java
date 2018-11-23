@@ -69,6 +69,11 @@ class MetaBeanJsonParser implements JsonParser {
             return;
         //annotate the existing list of the previous download
         ApplicationBean ab = abMap.get(appId);
+
+        // fix for #40 , app might not be there if F-Droid moved it to the archive
+        if (ab == null)
+            return;
+
         final JSONObject metrics = content.optJSONObject("metrics");
         //final JSONObject neighbours = content.optJSONObject("neighbours"); // TODO use neighbours
 
