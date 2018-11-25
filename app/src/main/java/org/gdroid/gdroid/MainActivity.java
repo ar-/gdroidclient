@@ -25,7 +25,8 @@ import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
+import android.support.design.internal.BottomNavigationMenu;
+import org.gdroid.gdroid.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -38,6 +39,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Display;
 import android.view.Menu;
@@ -50,6 +52,8 @@ import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -420,5 +424,30 @@ public class MainActivity extends AppCompatActivity
     private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+
+
+    public MainActivity ()
+    {
+        try {
+            setFinalStatic(BottomNavigationMenu.class.getField("MAX_ITEM_COUNT"), 6);
+            Log.e("MAIN ACT",BottomNavigationMenu.MAX_ITEM_COUNT+"");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    static void setFinalStatic(Field field, Object newValue) throws Exception {
+        field.setAccessible(true);
+//        final int modifiers = field.getModifiers();
+
+
+        Field modifiersField = Field.class.getDeclaredField("accessFlags");
+        modifiersField.setAccessible(true);
+//        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+        modifiersField.setInt(field, Modifier.STATIC | Modifier.PUBLIC);
+
+        field.set(null, newValue);
     }
 }

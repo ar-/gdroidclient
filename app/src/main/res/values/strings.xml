@@ -105,6 +105,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_categories">categories</string>
+    <string name="title_tags">tags</string>
     <string name="title_starred">starred</string>
     <string name="title_myapps">my apps</string>
     <string name="title_search">search</string>
