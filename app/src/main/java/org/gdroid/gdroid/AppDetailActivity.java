@@ -56,6 +56,7 @@ import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
+import org.gdroid.gdroid.beans.TagBean;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -132,6 +133,22 @@ public class AppDetailActivity extends AppCompatActivity {
             tv.setTextColor(getResources().getColor(R.color.album_title));
             tv.setTextSize(14);
             tv.setText(cb.catName);
+            categoryView.addView(tv);
+        }
+
+        // fill tags - the same way as categories
+        final TagBean[] tags = db.appDao().getAllTagsForApp(mApp.id);
+        for (TagBean tb:tags) {
+            TextView tv = new TextView(mContext);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            params.setMargins(2,2,2,2);
+            tv.setLayoutParams(params);
+            tv.setBackgroundResource(R.drawable.rounded_corner_tag);
+            tv.setPadding(10,10,10,10);
+            tv.setTextColor(getResources().getColor(R.color.album_title));
+            tv.setTextSize(14);
+            String tagname = Util.getStringResourceByName(mContext,tb.tagName);
+            tv.setText(tagname);
             categoryView.addView(tv);
         }
 
