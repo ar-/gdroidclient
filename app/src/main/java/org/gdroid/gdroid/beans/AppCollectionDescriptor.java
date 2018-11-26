@@ -140,6 +140,17 @@ public class AppCollectionDescriptor {
                 applicationBeanList.add(ab);
             }
         }
+        else if (collectionName.startsWith("tag:"))
+        {
+            String tag = collectionName.replace("tag:","");
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getAllAppsForTag(tag, mLimit, mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+        }
     }
 
     public List<ApplicationBean> getApplicationBeanList() {

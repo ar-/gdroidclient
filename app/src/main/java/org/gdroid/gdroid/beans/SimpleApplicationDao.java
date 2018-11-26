@@ -60,6 +60,13 @@ public interface SimpleApplicationDao {
     @Delete
     public void deleteApplicationBeans(ApplicationBean... ApplicationBeans);
 
+    @Query("SELECT * FROM ApplicationBean WHERE name like :ss " +
+            " ORDER BY lastupdated DESC, added ASC LIMIT :limit OFFSET :offset")
+    public ApplicationBean[] getAllAppsForSearchString(String ss, int limit, int offset);
+
+
+    // categories
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     public void insertCategories(CategoryBean... CategoryBeans);
 
@@ -77,10 +84,25 @@ public interface SimpleApplicationDao {
             " ORDER BY a.lastupdated DESC, a.added ASC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getAllAppsForCategory(String catName, int limit, int offset);
 
-    @Query("SELECT * FROM ApplicationBean WHERE name like :ss " +
-            " ORDER BY lastupdated DESC, added ASC LIMIT :limit OFFSET :offset")
-    public ApplicationBean[] getAllAppsForSearchString(String ss, int limit, int offset);
-
     @Query("SELECT DISTINCT catName FROM CategoryBean")
     public String[] getAllCategoryNames();
+
+
+    // tags
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    public void insertTags(List<TagBean> TagBeans);
+
+    @Query("DELETE FROM TagBean WHERE appId = :appId")
+    public void deleteTagsForApp(String appId);
+
+    @Query("SELECT * FROM TagBean WHERE appId = :appId")
+    public TagBean[] getAllTagsForApp(String appId);
+
+    @Query("SELECT a.* FROM TagBean c LEFT JOIN ApplicationBean a ON (c.appId = a.id) WHERE c.tagName = :tagName" +
+            " ORDER BY a.lastupdated DESC, a.added ASC LIMIT :limit OFFSET :offset")
+    public ApplicationBean[] getAllAppsForTag(String tagName, int limit, int offset);
+
+    @Query("SELECT DISTINCT tagName FROM TagBean")
+    public String[] getAllTagNames();
 }

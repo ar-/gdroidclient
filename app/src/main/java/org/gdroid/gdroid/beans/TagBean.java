@@ -18,18 +18,26 @@
 
 package org.gdroid.gdroid.beans;
 
-import android.arch.persistence.room.Database;
-import android.arch.persistence.room.Room;
-import android.arch.persistence.room.RoomDatabase;
-import android.content.Context;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Index;
+import android.support.annotation.NonNull;
 
-@Database(entities = {ApplicationBean.class,CategoryBean.class,TagBean.class}, version = 13)
-public abstract class AppDatabase extends RoomDatabase {
-    public static final String db="gdroiddb";
-    public abstract SimpleApplicationDao appDao();
+@Entity(primaryKeys = {"tagName", "appId"},
+        indices = {@Index("tagName")
+        ,@Index("appId")
+})
 
-    public static final AppDatabase get(Context context)
-    {
-        return Room.databaseBuilder(context, AppDatabase.class, AppDatabase.db).fallbackToDestructiveMigration().allowMainThreadQueries().build();
+public class TagBean {
+    @NonNull
+    public String tagName;
+    @NonNull
+    public String appId;
+
+    public TagBean() {
+    }
+
+    public TagBean(@NonNull String catName, @NonNull String appId) {
+        this.tagName = catName;
+        this.appId = appId;
     }
 }

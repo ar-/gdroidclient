@@ -111,6 +111,18 @@ class MetaBeanJsonParser implements JsonParser {
             ab.metriccount = mm.countMetrics();
         }
 
+        // tags
+        final JSONArray tags = content.optJSONArray("tags");
+        if (tags != null)
+        {
+            ab.tags = new ArrayList<>();
+            for (int i=0;i<tags.length();i++)
+            {
+                ab.tags.add(tags.get(i).toString());
+            }
+        }
+
+
     }
 
 }

@@ -124,10 +124,17 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
         {
             headline = collectionName.replace("cat:","");
         }
+        else if (collectionName.startsWith("tag:"))
+        {
+            String tagName = collectionName.replace("tag:","");
+            headline = Util.getStringResourceByName(mContext, tagName);
+        }
         else
         {
             headline = collectionName;
         }
+
+
         holder.title.setText(headline);
         holder.applicationBeanList.clear();
         holder.applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
