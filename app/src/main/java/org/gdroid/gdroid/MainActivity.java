@@ -25,7 +25,6 @@ import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -49,6 +48,7 @@ import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
+import org.gdroid.gdroid.widget.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,14 +94,11 @@ public class MainActivity extends AppCompatActivity
         final ApplicationBean[] allApps = db.appDao().getAllApplicationBeans();
 
         //if db empty
-        if (allApps.length == 0)
-        {
+        if (allApps.length == 0) {
             navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem("home"));
             // TODO initial refresh only when DB empty
             //new DownloadJsonTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
-        }
-        else
-        {
+        } else {
             navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem(Util.getLastMenuItem(getApplicationContext())));
         }
 
@@ -124,15 +121,16 @@ public class MainActivity extends AppCompatActivity
         });
 
 
-
     }
 
     private int getItemIdForHomeScreenMenuItem(String lastMenuItem) {
-        switch (lastMenuItem){
+        switch (lastMenuItem) {
             case "home":
                 return R.id.navigation_home;
             case "categories":
                 return R.id.navigation_categories;
+            case "tags":
+                return R.id.navigation_tags;
             case "starred":
                 return R.id.navigation_starred;
             case "myapps":
@@ -169,7 +167,7 @@ public class MainActivity extends AppCompatActivity
         display.getSize(size);
         final int screenWidth = size.x;
         final int gapDp = 5;
-        final int imgWidth = dpToPx(160+gapDp);
+        final int imgWidth = dpToPx(160 + gapDp);
         int columns = screenWidth / imgWidth;
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -185,16 +183,11 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setLayoutManager(mLayoutManager);
     }
 
-    private void removeAllitemDecorations()
-    {
-        while (true)
-        {
-            if (recyclerView.getItemDecorationCount() >0)
-            {
+    private void removeAllitemDecorations() {
+        while (true) {
+            if (recyclerView.getItemDecorationCount() > 0) {
                 recyclerView.removeItemDecorationAt(0);
-            }
-            else
-            {
+            } else {
                 break;
             }
         }
@@ -202,8 +195,7 @@ public class MainActivity extends AppCompatActivity
 
     private void prepareAppCollections(String screen) {
         final Context context = getApplicationContext();
-        if (screen.equals("home"))
-        {
+        if (screen.equals("home")) {
             appCollectionDescriptorList.clear();
             AppCollectionDescriptor a = new AppCollectionDescriptor(context, "Newest apps");
             appCollectionDescriptorList.add(a);
@@ -225,23 +217,31 @@ public class MainActivity extends AppCompatActivity
 //            appCollectionDescriptorList.add(a8);
 //            AppCollectionDescriptor a9 = new AppCollectionDescriptor(context, "well maintained");
 //            appCollectionDescriptorList.add(a9);
-        }
-        else if (screen.equals("categories"))
-        {
+        } else if (screen.equals("categories")) {
             appCollectionDescriptorList.clear();
             AppDatabase db = AppDatabase.get(context);
             final String[] categoryNames = db.appDao().getAllCategoryNames();
-            for (String cn:categoryNames) {
-                AppCollectionDescriptor ad = new AppCollectionDescriptor(context, "cat:"+cn);
+            for (String cn : categoryNames) {
+                AppCollectionDescriptor ad = new AppCollectionDescriptor(context, "cat:" + cn);
                 appCollectionDescriptorList.add(ad);
             }
+            db.close();
+        } else if (screen.equals("tags")) {
+            appCollectionDescriptorList.clear();
+            AppDatabase db = AppDatabase.get(context);
+            final String[] tagNames = db.appDao().getAllTagNames();
+            for (String tn : tagNames) {
+                AppCollectionDescriptor ad = new AppCollectionDescriptor(context, "tag:" + tn);
+                appCollectionDescriptorList.add(ad);
+            }
+            db.close();
         }
 
         appCollectionAdapter.notifyDataSetChanged();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-        = new BottomNavigationView.OnNavigationItemSelectedListener() {
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -260,11 +260,17 @@ public class MainActivity extends AppCompatActivity
                     setUpCollectionCards();
                     prepareAppCollections(screenName);
                     return true;
+                case R.id.navigation_tags:
+                    screenName = "tags";
+                    Util.setLastMenuItem(getApplicationContext(), screenName);
+                    setUpCollectionCards();
+                    prepareAppCollections(screenName);
+                    return true;
                 case R.id.navigation_starred:
                     screenName = "starred";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpAppCards();
-                    AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(),screenName);
+                    AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(), screenName);
                     appBeanList.clear();
                     appBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
                     adapter.notifyDataSetChanged();
@@ -281,7 +287,7 @@ public class MainActivity extends AppCompatActivity
                     AsyncTask.execute(new Runnable() {
                         @Override
                         public void run() {
-                            AppCollectionDescriptor myAppsCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(),finalScreenName);
+                            AppCollectionDescriptor myAppsCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(), finalScreenName);
                             appBeanList.clear();
                             appBeanList.addAll(myAppsCollectionDescriptor.getApplicationBeanList());
 
@@ -315,7 +321,7 @@ public class MainActivity extends AppCompatActivity
                         @Override
                         public boolean onQueryTextSubmit(String s) {
                             final CharSequence query = searchView.getQuery();
-                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(),"search:"+query,2000);
+                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search:" + query, 2000);
                             appBeanList.clear();
                             appBeanList.addAll(acd.getApplicationBeanList());
                             adapter.notifyDataSetChanged();
@@ -325,7 +331,7 @@ public class MainActivity extends AppCompatActivity
                         @Override
                         public boolean onQueryTextChange(String s) {
                             final CharSequence query = searchView.getQuery();
-                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(),"search:"+query,20);
+                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search:" + query, 20);
                             appBeanList.clear();
                             appBeanList.addAll(acd.getApplicationBeanList());
                             adapter.notifyDataSetChanged();
@@ -344,8 +350,8 @@ public class MainActivity extends AppCompatActivity
 
     public void showSoftKeyboard(View view) {
 //        if (view.requestFocus()) {
-            InputMethodManager imm = (InputMethodManager)
-                    getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager)
+                getSystemService(Context.INPUT_METHOD_SERVICE);
 //        imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT);
         imm.showSoftInput(view, InputMethodManager.SHOW_FORCED);
 //        InputMethodManager inputMethodManager = (InputMethodManager) view.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -421,4 +427,5 @@ public class MainActivity extends AppCompatActivity
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
     }
+
 }

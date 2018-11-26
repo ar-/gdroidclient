@@ -258,6 +258,14 @@ public class Util {
         }
     }
 
+    public static String getStringResourceByName(Context c, String aString) {
+        String packageName = c.getPackageName();
+        int resId = c.getResources().getIdentifier(aString, "string", packageName);
+        if (resId == 0)
+            return aString;
+        return c.getString(resId);
+    }
+
     public static boolean isAppInstalled(Context context, String packageName) {
         try {
             context.getPackageManager().getApplicationInfo(packageName, 0);

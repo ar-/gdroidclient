@@ -28,7 +28,7 @@
     tools:showIn="@layout/activity_main">
 
 
-    <android.support.design.widget.BottomNavigationView
+    <org.gdroid.gdroid.widget.BottomNavigationView
     android:id="@+id/navigation"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

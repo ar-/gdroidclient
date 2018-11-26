@@ -32,7 +32,7 @@ import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
-import org.xmlpull.v1.XmlPullParserException;
+import org.gdroid.gdroid.beans.TagBean;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -43,7 +43,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<ApplicationBean>> {
 
@@ -100,8 +99,8 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
 //                    }
 //                }
 
+                // categories
                 final List<CategoryBean> allCategoryMappings = new ArrayList<>();
-
                 for (ApplicationBean ab: abl) {
                     final List<CategoryBean> categoryList = ab.getCategoryList();
                     if (categoryList !=null)
@@ -111,8 +110,24 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                         db.appDao().deleteCategoriesForApp(ab.id);
                     }
                 }
-
                 db.appDao().insertCategories(allCategoryMappings);
+
+                // tags
+                final List<TagBean> allTagMappings = new ArrayList<>();
+                for (ApplicationBean ab: abl) {
+                    final List<TagBean> tagList = ab.getTagList();
+                    if (tagList !=null)
+                    {
+                        if (! tagList.isEmpty())
+                        {
+                            allTagMappings.addAll(tagList);
+                            db.appDao().deleteTagsForApp(ab.id);
+                        }
+                    }
+                }
+                db.appDao().insertTags(allTagMappings);
+
+
                 db.close();
 
                 // update the UI after DB has been updated (on the first 2 tabs)

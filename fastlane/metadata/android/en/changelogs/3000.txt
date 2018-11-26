@@ -1,0 +1,9 @@
+0.3.0
+  * added tags for apps that are used for standard tasks
+  * changed logo to something purple
+
+0.2.3
+  * bugfix: fixed crash when updating archived apps
+
+0.2.2
+  * added metrics and star indicators
