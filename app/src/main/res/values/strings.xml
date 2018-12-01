@@ -113,13 +113,19 @@
     <string name="title_activity_search">SearchActivity</string>
 
     <!--tags comming via json-->
+    <string name="app_store">App Store</string>
     <string name="calendar">Calendar</string>
     <string name="camera">Camera</string>
     <string name="contacts">Contacts</string>
     <string name="email_client">Email Client</string>
     <string name="file_browser">File Browser</string>
     <string name="gallery">Gallery</string>
+    <string name="launcher">Launcher</string>
     <string name="music_player">Music Player</string>
+    <string name="shopping_list">Shopping List</string>
+    <string name="text_editor">Text Editor</string>
+    <string name="todo_list">Todo List</string>
+    <string name="torrent_downloader">Torrent Downloader</string>
     <string name="web_browser">Web Browser</string>
     <string name="youtube_player">Youtube Player</string>
 
