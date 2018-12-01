@@ -10,10 +10,10 @@
     <string name="category_Time">Kohë</string>
     <string name="category_Writing">Shkrim</string>
     <string name="antifeatures">Kundër-veçori</string>
-    <string name="antiadslist">Ky aplikacion përmban reklama</string>
-    <string name="antinonfreeadlist">Ky aplikacion rekomandon shtesa jo-falas</string>
-    <string name="antinonfreenetlist">Ky aplikacion rekomandon rrjet shërbime jo-falas</string>
-    <string name="antinonfreedeplist">Ky aplikacion varet nga aplikacionet të tjera jo-falas</string>
-    <string name="antiupstreamnonfreelist">Kodi burimor nuk është plotësisht Falas</string>
-    <string name="antinonfreeassetslist">Ky aplikacion përmban pronë jo-falas</string>
+    <string name="anti_ads">Ky aplikacion përmban reklama</string>
+    <string name="anti_nonfreeadd">Ky aplikacion rekomandon shtesa jo-falas</string>
+    <string name="anti_nonfreenet">Ky aplikacion rekomandon rrjet shërbime jo-falas</string>
+    <string name="anti_nonfreedep">Ky aplikacion varet nga aplikacionet të tjera jo-falas</string>
+    <string name="anti_upstreamnonfree">Kodi burimor nuk është plotësisht Falas</string>
+    <string name="anti_nonfreeassets">Ky aplikacion përmban pronë jo-falas</string>
 </resources>

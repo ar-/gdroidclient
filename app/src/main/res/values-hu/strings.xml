@@ -19,14 +19,14 @@
     <string name="category_Time">Idő</string>
     <string name="category_Writing">Írás</string>
     <string name="antifeatures">Előnytelen funkciók</string>
-    <string name="antiadslist">Az alkalmazás reklámot tartalmaz</string>
-    <string name="antitracklist">Az alkalmazás nyomon követi és jelenti a tevékenységeit</string>
-    <string name="antinonfreeadlist">Az alkalmazás nem szabad szoftver kiegészítőket támogat</string>
-    <string name="antinonfreenetlist">Az alkalmazás nem szabad szoftver alapú hálózati szolgáltatásokat támogat</string>
-    <string name="antinonfreedeplist">Az alkalmazás egyéb, nem szabad alkalmazásoktól függ</string>
-    <string name="antiupstreamnonfreelist">Az upstream forráskód nem teljesen szabad</string>
-    <string name="antinonfreeassetslist">Az alkalmazás nem szabad szoftveres eszközöket tartalmaz</string>
-    <string name="antidisabledalgorithmlist">Az alkalmazásnak gyenge a biztonsági aláírása</string>
-    <string name="antiknownvulnlist">Az alkalmazás ismert biztonsági rést tartalmaz</string>
-    <string name="antinosourcesince">A forráskód többé nem érhető el, a frissítések nem lehetségesek.</string>
+    <string name="anti_ads">Az alkalmazás reklámot tartalmaz</string>
+    <string name="anti_tracking">Az alkalmazás nyomon követi és jelenti a tevékenységeit</string>
+    <string name="anti_nonfreeadd">Az alkalmazás nem szabad szoftver kiegészítőket támogat</string>
+    <string name="anti_nonfreenet">Az alkalmazás nem szabad szoftver alapú hálózati szolgáltatásokat támogat</string>
+    <string name="anti_nonfreedep">Az alkalmazás egyéb, nem szabad alkalmazásoktól függ</string>
+    <string name="anti_upstreamnonfree">Az upstream forráskód nem teljesen szabad</string>
+    <string name="anti_nonfreeassets">Az alkalmazás nem szabad szoftveres eszközöket tartalmaz</string>
+    <string name="anti_disabledalgorithm">Az alkalmazásnak gyenge a biztonsági aláírása</string>
+    <string name="anti_knownvuln">Az alkalmazás ismert biztonsági rést tartalmaz</string>
+    <string name="anti_nosourcesince">A forráskód többé nem érhető el, a frissítések nem lehetségesek.</string>
 </resources>

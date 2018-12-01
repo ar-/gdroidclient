@@ -19,14 +19,14 @@
     <string name="category_Time">Tempus</string>
     <string name="category_Writing">Iscritura</string>
     <string name="antifeatures">Anti-funtzionalidades</string>
-    <string name="antiadslist">Custa aplicatzione cuntènnidi publitzidade</string>
-    <string name="antitracklist">Custa aplicatzione compidat e riferit a àteros de sas atividades tuas</string>
-    <string name="antinonfreeadlist">Custa aplicatzione promovet estensiones (add-ons) non lìberas</string>
-    <string name="antinonfreenetlist">Custa aplicatzione promovet servìtzios de retza non lìberos</string>
-    <string name="antinonfreedeplist">Custa aplicatzione dipendet dae àteros aplicos non lìberos</string>
-    <string name="antiupstreamnonfreelist">Su còdighe mitza originale no est lìberu de su totu</string>
-    <string name="antinonfreeassetslist">Custa aplicatzione cuntennit cantos non lìberos</string>
-    <string name="antidisabledalgorithmlist">Custa aplicatzione tenet una firma de seguresa dèbile</string>
-    <string name="antiknownvulnlist">Custa aplicatzione tenet una vulnerabilidade de seguresa connota</string>
-    <string name="antinosourcesince">Su còdighe mitza no est prus disponìbile, no est possìbile fàghere agiornamentos.</string>
+    <string name="anti_ads">Custa aplicatzione cuntènnidi publitzidade</string>
+    <string name="anti_tracking">Custa aplicatzione compidat e riferit a àteros de sas atividades tuas</string>
+    <string name="anti_nonfreeadd">Custa aplicatzione promovet estensiones (add-ons) non lìberas</string>
+    <string name="anti_nonfreenet">Custa aplicatzione promovet servìtzios de retza non lìberos</string>
+    <string name="anti_nonfreedep">Custa aplicatzione dipendet dae àteros aplicos non lìberos</string>
+    <string name="anti_upstreamnonfree">Su còdighe mitza originale no est lìberu de su totu</string>
+    <string name="anti_nonfreeassets">Custa aplicatzione cuntennit cantos non lìberos</string>
+    <string name="anti_disabledalgorithm">Custa aplicatzione tenet una firma de seguresa dèbile</string>
+    <string name="anti_knownvuln">Custa aplicatzione tenet una vulnerabilidade de seguresa connota</string>
+    <string name="anti_nosourcesince">Su còdighe mitza no est prus disponìbile, no est possìbile fàghere agiornamentos.</string>
 </resources>

@@ -19,14 +19,14 @@
     <string name="category_Time">Время</string>
     <string name="category_Writing">Работа с текстом</string>
     <string name="antifeatures">Сомнительный функционал</string>
-    <string name="antiadslist">Это приложение содержит рекламу</string>
-    <string name="antitracklist">Это приложение будет отслеживать ваши действия и сообщать о вашей деятельности</string>
-    <string name="antinonfreeadlist">Это приложение поддерживает дополнения с закрытым исходным кодом</string>
-    <string name="antinonfreenetlist">Это приложение продвигает сетевые сервисы с закрытым исходным кодом, собирающие пользовательские данные</string>
-    <string name="antinonfreedeplist">Это приложение зависит от других приложений с закрытым исходным кодом</string>
-    <string name="antiupstreamnonfreelist">Оригинальный исходный код не является полностью свободным</string>
-    <string name="antinonfreeassetslist">Это приложение включает в себя ресурсы с закрытым исходным кодом</string>
-    <string name="antidisabledalgorithmlist">Это приложение имеет слабую подпись безопасности</string>
-    <string name="antiknownvulnlist">Это приложение содержит известную уязвимость безопасности</string>
-    <string name="antinosourcesince">Исходный код больше недоступен, обновления невозможны.</string>
+    <string name="anti_ads">Это приложение содержит рекламу</string>
+    <string name="anti_tracking">Это приложение будет отслеживать ваши действия и сообщать о вашей деятельности</string>
+    <string name="anti_nonfreeadd">Это приложение поддерживает дополнения с закрытым исходным кодом</string>
+    <string name="anti_nonfreenet">Это приложение продвигает сетевые сервисы с закрытым исходным кодом, собирающие пользовательские данные</string>
+    <string name="anti_nonfreedep">Это приложение зависит от других приложений с закрытым исходным кодом</string>
+    <string name="anti_upstreamnonfree">Оригинальный исходный код не является полностью свободным</string>
+    <string name="anti_nonfreeassets">Это приложение включает в себя ресурсы с закрытым исходным кодом</string>
+    <string name="anti_disabledalgorithm">Это приложение имеет слабую подпись безопасности</string>
+    <string name="anti_knownvuln">Это приложение содержит известную уязвимость безопасности</string>
+    <string name="anti_nosourcesince">Исходный код больше недоступен, обновления невозможны.</string>
 </resources>

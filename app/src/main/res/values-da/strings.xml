@@ -19,13 +19,13 @@
     <string name="category_Time">Tid</string>
     <string name="category_Writing">Skrivning</string>
     <string name="antifeatures">Antifunktionalitet</string>
-    <string name="antiadslist">Appen indeholder annoncering</string>
-    <string name="antitracklist">Denne app sporer og indberetter din aktivitet</string>
-    <string name="antinonfreeadlist">Appen fremmer ikke-frie tilføjelser</string>
-    <string name="antinonfreenetlist">Appen fremmer ikke-frie netværkstjenester</string>
-    <string name="antinonfreedeplist">Denne app afhænger af andre ikke-frie apps</string>
-    <string name="antiupstreamnonfreelist">Kildekoden opstrøms er ikke udelukkende fri</string>
-    <string name="antinonfreeassetslist">Denne app indeholder ikke-frit indhold</string>
-    <string name="antidisabledalgorithmlist">Denne app har en svag sikkerhedssignatur</string>
-    <string name="antiknownvulnlist">Denne app indeholder en kendt sårbarhed</string>
+    <string name="anti_ads">Appen indeholder annoncering</string>
+    <string name="anti_tracking">Denne app sporer og indberetter din aktivitet</string>
+    <string name="anti_nonfreeadd">Appen fremmer ikke-frie tilføjelser</string>
+    <string name="anti_nonfreenet">Appen fremmer ikke-frie netværkstjenester</string>
+    <string name="anti_nonfreedep">Denne app afhænger af andre ikke-frie apps</string>
+    <string name="anti_upstreamnonfree">Kildekoden opstrøms er ikke udelukkende fri</string>
+    <string name="anti_nonfreeassets">Denne app indeholder ikke-frit indhold</string>
+    <string name="anti_disabledalgorithm">Denne app har en svag sikkerhedssignatur</string>
+    <string name="anti_knownvuln">Denne app indeholder en kendt sårbarhed</string>
 </resources>

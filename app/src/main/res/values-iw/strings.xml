@@ -19,14 +19,14 @@
     <string name="category_Time">זמן</string>
     <string name="category_Writing">כתיבה</string>
     <string name="antifeatures">תכונות שליליות</string>
-    <string name="antiadslist">יישומון זה מכיל פרסום</string>
-    <string name="antitracklist">יישומון זה עוקב ומדווח על פעילותך</string>
-    <string name="antinonfreeadlist">יישומון זה מקדם תוספים שאינם חופשיים</string>
-    <string name="antinonfreenetlist">יישומון זה מקדם שירותי רשת שאינם חופשיים</string>
-    <string name="antinonfreedeplist">יישומון זה תלוי ביישומונים אחרים שאינם חופשיים</string>
-    <string name="antiupstreamnonfreelist">קוד המקור בתצורתו המקורית אינו חופשי לחלוטין</string>
-    <string name="antinonfreeassetslist">יישומון זה מכיל נכסים בלתי חופשיים</string>
-    <string name="antidisabledalgorithmlist">ליישומון זה יש חתימת אבטחה חלשה</string>
-    <string name="antiknownvulnlist">יישומון זה מכיל חולשת אבטחה ידועה</string>
-    <string name="antinosourcesince">קוד המקור אינו זמין עוד, אין עדכונים.</string>
+    <string name="anti_ads">יישומון זה מכיל פרסום</string>
+    <string name="anti_tracking">יישומון זה עוקב ומדווח על פעילותך</string>
+    <string name="anti_nonfreeadd">יישומון זה מקדם תוספים שאינם חופשיים</string>
+    <string name="anti_nonfreenet">יישומון זה מקדם שירותי רשת שאינם חופשיים</string>
+    <string name="anti_nonfreedep">יישומון זה תלוי ביישומונים אחרים שאינם חופשיים</string>
+    <string name="anti_upstreamnonfree">קוד המקור בתצורתו המקורית אינו חופשי לחלוטין</string>
+    <string name="anti_nonfreeassets">יישומון זה מכיל נכסים בלתי חופשיים</string>
+    <string name="anti_disabledalgorithm">ליישומון זה יש חתימת אבטחה חלשה</string>
+    <string name="anti_knownvuln">יישומון זה מכיל חולשת אבטחה ידועה</string>
+    <string name="anti_nosourcesince">קוד המקור אינו זמין עוד, אין עדכונים.</string>
 </resources>

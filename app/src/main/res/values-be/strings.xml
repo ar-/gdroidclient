@@ -19,14 +19,14 @@
     <string name="category_Time">Час</string>
     <string name="category_Writing">Рэдагаванне</string>
     <string name="antifeatures">Непажаданыя функцыі</string>
-    <string name="antiadslist">Гэтая праграма змяшчае рэкламу</string>
-    <string name="antitracklist">Гэтая праграма адсочвае вашую актыўнасць</string>
-    <string name="antinonfreeadlist">Гэтая праграма прапануе не вольныя дадаткі</string>
-    <string name="antinonfreenetlist">Гэтая праграма прапануе не вольныя сеткавыя паслугі</string>
-    <string name="antinonfreedeplist">Гэтая праграма залежыць ад іншых не вольных праграм</string>
-    <string name="antiupstreamnonfreelist">Зыходны код не поўнасцю вольны</string>
-    <string name="antinonfreeassetslist">Гэтая праграма змяшчае не вольны змест</string>
-    <string name="antidisabledalgorithmlist">Гэтая праграма мае слабы подпіс бяспекі</string>
-    <string name="antiknownvulnlist">Гэтая праграма змяшчае вядомую ўразлівасць бяспекі</string>
-    <string name="antinosourcesince">Зыходны код больш недаступны — абноўленні немагчымыя.</string>
+    <string name="anti_ads">Гэтая праграма змяшчае рэкламу</string>
+    <string name="anti_tracking">Гэтая праграма адсочвае вашую актыўнасць</string>
+    <string name="anti_nonfreeadd">Гэтая праграма прапануе не вольныя дадаткі</string>
+    <string name="anti_nonfreenet">Гэтая праграма прапануе не вольныя сеткавыя паслугі</string>
+    <string name="anti_nonfreedep">Гэтая праграма залежыць ад іншых не вольных праграм</string>
+    <string name="anti_upstreamnonfree">Зыходны код не поўнасцю вольны</string>
+    <string name="anti_nonfreeassets">Гэтая праграма змяшчае не вольны змест</string>
+    <string name="anti_disabledalgorithm">Гэтая праграма мае слабы подпіс бяспекі</string>
+    <string name="anti_knownvuln">Гэтая праграма змяшчае вядомую ўразлівасць бяспекі</string>
+    <string name="anti_nosourcesince">Зыходны код больш недаступны — абноўленні немагчымыя.</string>
 </resources>

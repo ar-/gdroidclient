@@ -18,11 +18,11 @@
     <string name="category_Theming">Teme</string>
     <string name="category_Time">Vrijeme</string>
     <string name="category_Writing">Pisanje</string>
-    <string name="antiadslist">Ova aplikacija sadržava oglase</string>
-    <string name="antitracklist">Ova aplikacija prati i javlja Vašu aktivnost</string>
-    <string name="antinonfreeadlist">Ova aplikacija promovira neslobodne dodatke</string>
-    <string name="antinonfreenetlist">Ova aplikacija promovira neslobodne mrežne usluge</string>
-    <string name="antinonfreedeplist">Ova aplikacija ovisi o drugim neslobodnim aplikacijama</string>
-    <string name="antiupstreamnonfreelist">Uzvodni izvorni kod nije u potpunosti otvoren/slobodan</string>
-    <string name="antinonfreeassetslist">Ova aplikacija sadrži neslobodne resurse</string>
+    <string name="anti_ads">Ova aplikacija sadržava oglase</string>
+    <string name="anti_tracking">Ova aplikacija prati i javlja Vašu aktivnost</string>
+    <string name="anti_nonfreeadd">Ova aplikacija promovira neslobodne dodatke</string>
+    <string name="anti_nonfreenet">Ova aplikacija promovira neslobodne mrežne usluge</string>
+    <string name="anti_nonfreedep">Ova aplikacija ovisi o drugim neslobodnim aplikacijama</string>
+    <string name="anti_upstreamnonfree">Uzvodni izvorni kod nije u potpunosti otvoren/slobodan</string>
+    <string name="anti_nonfreeassets">Ova aplikacija sadrži neslobodne resurse</string>
 </resources>

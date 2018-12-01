@@ -19,14 +19,14 @@
     <string name="category_Time">Tempo</string>
     <string name="category_Writing">Escrita</string>
     <string name="antifeatures">Anti-funcionalidades</string>
-    <string name="antiadslist">Esta aplicação contém publicidade</string>
-    <string name="antitracklist">Esta aplicação monitoriza e reporta a sua atividade</string>
-    <string name="antinonfreeadlist">Esta aplicação promove extras não livres</string>
-    <string name="antinonfreenetlist">Esta aplicação promove serviços de rede não livres</string>
-    <string name="antinonfreedeplist">Esta aplicação depende de aplicações não livres</string>
-    <string name="antiupstreamnonfreelist">O código-fonte não é integralmente Livre</string>
-    <string name="antinonfreeassetslist">Esta aplicação contém recursos não livres</string>
-    <string name="antidisabledalgorithmlist">Esta aplicação tem uma assinatura de segurança fraca</string>
-    <string name="antiknownvulnlist">Esta aplicação contém uma vulnerabilidade conhecida</string>
-    <string name="antinosourcesince">O código fonte já não está disponível e não é possível a atualização.</string>
+    <string name="anti_ads">Esta aplicação contém publicidade</string>
+    <string name="anti_tracking">Esta aplicação monitoriza e reporta a sua atividade</string>
+    <string name="anti_nonfreeadd">Esta aplicação promove extras não livres</string>
+    <string name="anti_nonfreenet">Esta aplicação promove serviços de rede não livres</string>
+    <string name="anti_nonfreedep">Esta aplicação depende de aplicações não livres</string>
+    <string name="anti_upstreamnonfree">O código-fonte não é integralmente Livre</string>
+    <string name="anti_nonfreeassets">Esta aplicação contém recursos não livres</string>
+    <string name="anti_disabledalgorithm">Esta aplicação tem uma assinatura de segurança fraca</string>
+    <string name="anti_knownvuln">Esta aplicação contém uma vulnerabilidade conhecida</string>
+    <string name="anti_nosourcesince">O código fonte já não está disponível e não é possível a atualização.</string>
 </resources>

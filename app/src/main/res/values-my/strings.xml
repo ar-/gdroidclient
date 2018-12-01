@@ -19,11 +19,11 @@
     <string name="category_Time">အခ်ိန္</string>
     <string name="category_Writing">ေရးသားျခင္း</string>
     <string name="antifeatureswarning">ဒီအက်ပ်သည် သင်မကြိုက်သည့်အင်္ဂါရပ်ရှိကောင်းရှိနိုင်သည်</string>
-    <string name="antiadslist">ဒီ app သည္ ေၾကျငာမ်ားပါဝင္သည္</string>
-    <string name="antitracklist">ဒီ app သည္ သင့္လႈပ္ရွားမႈမ်ားကိုလိုက္ၾကည့္ျပီးမွတ္တမ္း မွတ္သည္</string>
-    <string name="antinonfreeadlist">ဒီ app သည္ အခမဲ့မဟုတ္ေသာ ေနာက္ထပ္ပါဝင္သည့္အရာမ်ားပါဝင္သည္</string>
-    <string name="antinonfreenetlist">ဒီ app သည္ အခမဲ့မဟုတ္ေသာကြန္ရက္ ဝန္ေဆာင္မႈကိုေထာက္ပံ့သည္</string>
-    <string name="antinonfreedeplist">ဒီ app သည္ တျခားအခမဲ့မဟုတ္ေသာ app မ်ားေပၚမူတည္သည္</string>
-    <string name="antiupstreamnonfreelist">ဆိုစ့္ကုဒ္သည္ လံုးဝအခမဲ့မဟုတ္ပါ</string>
-    <string name="antinonfreeassetslist">ဒီ app သည္ အခမဲ့မဟုတ္ေသာ ပံုမ်ားပါဝင္သည္</string>
+    <string name="anti_ads">ဒီ app သည္ ေၾကျငာမ်ားပါဝင္သည္</string>
+    <string name="anti_tracking">ဒီ app သည္ သင့္လႈပ္ရွားမႈမ်ားကိုလိုက္ၾကည့္ျပီးမွတ္တမ္း မွတ္သည္</string>
+    <string name="anti_nonfreeadd">ဒီ app သည္ အခမဲ့မဟုတ္ေသာ ေနာက္ထပ္ပါဝင္သည့္အရာမ်ားပါဝင္သည္</string>
+    <string name="anti_nonfreenet">ဒီ app သည္ အခမဲ့မဟုတ္ေသာကြန္ရက္ ဝန္ေဆာင္မႈကိုေထာက္ပံ့သည္</string>
+    <string name="anti_nonfreedep">ဒီ app သည္ တျခားအခမဲ့မဟုတ္ေသာ app မ်ားေပၚမူတည္သည္</string>
+    <string name="anti_upstreamnonfree">ဆိုစ့္ကုဒ္သည္ လံုးဝအခမဲ့မဟုတ္ပါ</string>
+    <string name="anti_nonfreeassets">ဒီ app သည္ အခမဲ့မဟုတ္ေသာ ပံုမ်ားပါဝင္သည္</string>
 </resources>

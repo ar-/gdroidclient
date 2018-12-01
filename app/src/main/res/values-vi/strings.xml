@@ -19,13 +19,13 @@
     <string name="category_Time">Thời gian</string>
     <string name="category_Writing">Soạn thảo</string>
     <string name="antifeatures">Tính năng không mong muốn</string>
-    <string name="antiadslist">Ứng dụng này có quảng cáo</string>
-    <string name="antitracklist">Ứng dụng này theo dõi và báo cáo hoạt động của bạn</string>
-    <string name="antinonfreeadlist">Ứng dụng này khuyến khích sử dụng phần mở rộng không tự do</string>
-    <string name="antinonfreenetlist">Ứng dụng này khuyến khích sử dụng dịch vụ mạng không tự do</string>
-    <string name="antinonfreedeplist">Ứng dụng này phụ thuộc vào các ứng dụng không tự do khác</string>
-    <string name="antiupstreamnonfreelist">Mã nguồn không hoàn toàn tự do</string>
-    <string name="antinonfreeassetslist">Ứng dụng này có những phần không tự do</string>
-    <string name="antidisabledalgorithmlist">Ứng dụng này có chữ kí bảo mật yếu</string>
-    <string name="antiknownvulnlist">Ứng dụng này có lỗ hổng bảo mật đã bị phát hiện</string>
+    <string name="anti_ads">Ứng dụng này có quảng cáo</string>
+    <string name="anti_tracking">Ứng dụng này theo dõi và báo cáo hoạt động của bạn</string>
+    <string name="anti_nonfreeadd">Ứng dụng này khuyến khích sử dụng phần mở rộng không tự do</string>
+    <string name="anti_nonfreenet">Ứng dụng này khuyến khích sử dụng dịch vụ mạng không tự do</string>
+    <string name="anti_nonfreedep">Ứng dụng này phụ thuộc vào các ứng dụng không tự do khác</string>
+    <string name="anti_upstreamnonfree">Mã nguồn không hoàn toàn tự do</string>
+    <string name="anti_nonfreeassets">Ứng dụng này có những phần không tự do</string>
+    <string name="anti_disabledalgorithm">Ứng dụng này có chữ kí bảo mật yếu</string>
+    <string name="anti_knownvuln">Ứng dụng này có lỗ hổng bảo mật đã bị phát hiện</string>
 </resources>

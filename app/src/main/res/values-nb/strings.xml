@@ -19,14 +19,14 @@
     <string name="category_Time">Tid</string>
     <string name="category_Writing">Skriving</string>
     <string name="antifeatures">Anti-funksjoner</string>
-    <string name="antiadslist">Dette programmet inneholder reklame</string>
-    <string name="antitracklist">Dette programmet sporer og rapporterer din aktivitet</string>
-    <string name="antinonfreeadlist">Dette programmet promoterer ufrie utvidelser</string>
-    <string name="antinonfreenetlist">Dette programmet promoterer ufrie nettverkstjenester</string>
-    <string name="antinonfreedeplist">Dette programmet avhenger av andre ufrie applikasjoner</string>
-    <string name="antiupstreamnonfreelist">Kildekoden er ikke helt fri</string>
-    <string name="antinonfreeassetslist">Dette programmet inneholder ufrie gjenstander</string>
-    <string name="antidisabledalgorithmlist">Dette programmet har en svak sikkerhetssignatur</string>
-    <string name="antiknownvulnlist">Dette programmet inneholder en kjent sikkerhetsfeil</string>
-    <string name="antinosourcesince">Kildekoden er ikke lenger tilgengelig, ingen oppgraderinger mulig.</string>
+    <string name="anti_ads">Dette programmet inneholder reklame</string>
+    <string name="anti_tracking">Dette programmet sporer og rapporterer din aktivitet</string>
+    <string name="anti_nonfreeadd">Dette programmet promoterer ufrie utvidelser</string>
+    <string name="anti_nonfreenet">Dette programmet promoterer ufrie nettverkstjenester</string>
+    <string name="anti_nonfreedep">Dette programmet avhenger av andre ufrie applikasjoner</string>
+    <string name="anti_upstreamnonfree">Kildekoden er ikke helt fri</string>
+    <string name="anti_nonfreeassets">Dette programmet inneholder ufrie gjenstander</string>
+    <string name="anti_disabledalgorithm">Dette programmet har en svak sikkerhetssignatur</string>
+    <string name="anti_knownvuln">Dette programmet inneholder en kjent sikkerhetsfeil</string>
+    <string name="anti_nosourcesince">Kildekoden er ikke lenger tilgengelig, ingen oppgraderinger mulig.</string>
 </resources>

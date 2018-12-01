@@ -19,14 +19,14 @@
     <string name="category_Time">Tími</string>
     <string name="category_Writing">Skrifa</string>
     <string name="antifeatures">Neikvæðir eiginleikar</string>
-    <string name="antiadslist">Þetta forrit inniheldur auglýsingar</string>
-    <string name="antitracklist">Þetta forrit fylgist með og gefur skýrslu um hegðun þína</string>
-    <string name="antinonfreeadlist">Þetta forrit ýtir undir notkun ófrjálsra viðbóta</string>
-    <string name="antinonfreenetlist">Þetta forrit ýtir undir notkun ófrjálsrar þjónustu</string>
-    <string name="antinonfreedeplist">Þetta forrit er háð öðrum ófrjálsum forritum</string>
-    <string name="antiupstreamnonfreelist">Grunnkóði útgefanda er ekki fullkomlega frjáls</string>
-    <string name="antinonfreeassetslist">Þetta forrit inniheldur ófrjáls tilföng</string>
-    <string name="antidisabledalgorithmlist">Þetta forrit er með veika öryggisundirritun</string>
-    <string name="antiknownvulnlist">Þetta forrit inniheldur þekktan öryggisveikleika</string>
-    <string name="antinosourcesince">Grunnkóðinn er ekki lengur tiltækur, engar uppfærslur eru mögulegar.</string>
+    <string name="anti_ads">Þetta forrit inniheldur auglýsingar</string>
+    <string name="anti_tracking">Þetta forrit fylgist með og gefur skýrslu um hegðun þína</string>
+    <string name="anti_nonfreeadd">Þetta forrit ýtir undir notkun ófrjálsra viðbóta</string>
+    <string name="anti_nonfreenet">Þetta forrit ýtir undir notkun ófrjálsrar þjónustu</string>
+    <string name="anti_nonfreedep">Þetta forrit er háð öðrum ófrjálsum forritum</string>
+    <string name="anti_upstreamnonfree">Grunnkóði útgefanda er ekki fullkomlega frjáls</string>
+    <string name="anti_nonfreeassets">Þetta forrit inniheldur ófrjáls tilföng</string>
+    <string name="anti_disabledalgorithm">Þetta forrit er með veika öryggisundirritun</string>
+    <string name="anti_knownvuln">Þetta forrit inniheldur þekktan öryggisveikleika</string>
+    <string name="anti_nosourcesince">Grunnkóðinn er ekki lengur tiltækur, engar uppfærslur eru mögulegar.</string>
 </resources>

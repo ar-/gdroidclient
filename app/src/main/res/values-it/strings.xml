@@ -19,14 +19,14 @@
     <string name="category_Time">Tempo</string>
     <string name="category_Writing">Scrittura</string>
     <string name="antifeatures">Anti-caratteristiche</string>
-    <string name="antiadslist">Questa app contiene pubblicità</string>
-    <string name="antitracklist">Questa app monitora e riferisce sulle tue attività</string>
-    <string name="antinonfreeadlist">Questa app promuove add-on non liberi</string>
-    <string name="antinonfreenetlist">Questa app promuove servizi di rete non liberi</string>
-    <string name="antinonfreedeplist">Questa app dipende da altre app non libere</string>
-    <string name="antiupstreamnonfreelist">Il codice sorgente a monte non è completamente libero</string>
-    <string name="antinonfreeassetslist">Questa app contiene risorse non libere</string>
-    <string name="antidisabledalgorithmlist">Questa app ha una firma di sicurezza debole</string>
-    <string name="antiknownvulnlist">Questa app contiene una vulnerabilità di sicurezza nota</string>
-    <string name="antinosourcesince">Il codice sorgente non è più disponibile, aggiornamenti non possibili.</string>
+    <string name="anti_ads">Questa app contiene pubblicità</string>
+    <string name="anti_tracking">Questa app monitora e riferisce sulle tue attività</string>
+    <string name="anti_nonfreeadd">Questa app promuove add-on non liberi</string>
+    <string name="anti_nonfreenet">Questa app promuove servizi di rete non liberi</string>
+    <string name="anti_nonfreedep">Questa app dipende da altre app non libere</string>
+    <string name="anti_upstreamnonfree">Il codice sorgente a monte non è completamente libero</string>
+    <string name="anti_nonfreeassets">Questa app contiene risorse non libere</string>
+    <string name="anti_disabledalgorithm">Questa app ha una firma di sicurezza debole</string>
+    <string name="anti_knownvuln">Questa app contiene una vulnerabilità di sicurezza nota</string>
+    <string name="anti_nosourcesince">Il codice sorgente non è più disponibile, aggiornamenti non possibili.</string>
 </resources>

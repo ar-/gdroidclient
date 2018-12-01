@@ -19,9 +19,9 @@
     <string name="category_Time">ۋاقىت</string>
     <string name="category_Writing">يېزىقچىلىق</string>
     <string name="antifeatures">ئىقتىدار-قارشى</string>
-    <string name="antiadslist">بۇ ئەپتە ئېلان بار</string>
-    <string name="antitracklist">بۇ ئەپ پائالىيەتلىرىڭىزنى ئىزلاپ، دوكلات قىلىدۇ</string>
-    <string name="antinonfreeadlist">بۇ ئەپ ھەقسىز بولمىغان قىستۇرمىلارنى تەۋسىيە قىلىدۇ</string>
-    <string name="antinonfreenetlist">بۇ ئەپ ھەقسىز بولمىغان تور مۇلازىمەتلىرىنى تەۋسىيە قىلىدۇ</string>
-    <string name="antinonfreedeplist">بۇ ئەپ ھەقسىز بولمىغان باشقا ئەپلەرگە بېقىنىدۇ</string>
+    <string name="anti_ads">بۇ ئەپتە ئېلان بار</string>
+    <string name="anti_tracking">بۇ ئەپ پائالىيەتلىرىڭىزنى ئىزلاپ، دوكلات قىلىدۇ</string>
+    <string name="anti_nonfreeadd">بۇ ئەپ ھەقسىز بولمىغان قىستۇرمىلارنى تەۋسىيە قىلىدۇ</string>
+    <string name="anti_nonfreenet">بۇ ئەپ ھەقسىز بولمىغان تور مۇلازىمەتلىرىنى تەۋسىيە قىلىدۇ</string>
+    <string name="anti_nonfreedep">بۇ ئەپ ھەقسىز بولمىغان باشقا ئەپلەرگە بېقىنىدۇ</string>
 </resources>

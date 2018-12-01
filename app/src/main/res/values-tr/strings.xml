@@ -19,14 +19,14 @@
     <string name="category_Time">Zaman</string>
     <string name="category_Writing">Yazma</string>
     <string name="antifeatures">Karşıt-özellikler</string>
-    <string name="antiadslist">Bu uygulama reklam içerir</string>
-    <string name="antitracklist">Bu uygulama etkinliklerinizi izler ve bildirir</string>
-    <string name="antinonfreeadlist">Bu uygulama özgür olmayan eklentiler önerir</string>
-    <string name="antinonfreenetlist">Bu uygulama özgür olmayan ağ servisleri önerir</string>
-    <string name="antinonfreedeplist">Bu uygulama özgür olmayan başka uygulamalara bağımlıdır</string>
-    <string name="antiupstreamnonfreelist">Kaynak kod tamamen özgür değildir</string>
-    <string name="antinonfreeassetslist">Bu uygulama özgür olmayan unsurlar içerir</string>
-    <string name="antidisabledalgorithmlist">Bu uygulamanın zayıf güvenlikli imzası var</string>
-    <string name="antiknownvulnlist">Bu uygulama bilinen bir güvenlik zafiyeti içerir</string>
-    <string name="antinosourcesince">Kaynak kodu artık mevcut değil, güncelleme mümkün değil.</string>
+    <string name="anti_ads">Bu uygulama reklam içerir</string>
+    <string name="anti_tracking">Bu uygulama etkinliklerinizi izler ve bildirir</string>
+    <string name="anti_nonfreeadd">Bu uygulama özgür olmayan eklentiler önerir</string>
+    <string name="anti_nonfreenet">Bu uygulama özgür olmayan ağ servisleri önerir</string>
+    <string name="anti_nonfreedep">Bu uygulama özgür olmayan başka uygulamalara bağımlıdır</string>
+    <string name="anti_upstreamnonfree">Kaynak kod tamamen özgür değildir</string>
+    <string name="anti_nonfreeassets">Bu uygulama özgür olmayan unsurlar içerir</string>
+    <string name="anti_disabledalgorithm">Bu uygulamanın zayıf güvenlikli imzası var</string>
+    <string name="anti_knownvuln">Bu uygulama bilinen bir güvenlik zafiyeti içerir</string>
+    <string name="anti_nosourcesince">Kaynak kodu artık mevcut değil, güncelleme mümkün değil.</string>
 </resources>

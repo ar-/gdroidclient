@@ -26,11 +26,9 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.v4.os.ConfigurationCompat;
 import android.support.v4.os.LocaleListCompat;
-import android.util.ArraySet;
 import android.util.Log;
 
 import org.gdroid.gdroid.beans.AppDatabase;
@@ -41,7 +39,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 
 public class Util {
@@ -268,12 +265,12 @@ public class Util {
 
     public static String getLocalisedAntifeatureDescriptoon(Context c, String af)
     {
-        // in the strign XML all antifeatures are prefixed by 'anti', most of them suffixed by 'list' and all lowercase
-        af = af.toLowerCase();
-        if (!af.equals("nosourcesince"))
-            af += "list";
-        af = "anti"+af;
-        return getStringResourceByName(c, af);
+        // found in json: "Ads", "NonFreeAdd", "NonFreeAssets", "NonFreeDep", "NonFreeNet", "NoSourceSince", "Tracking", "UpstreamNonFree"
+        // in the F-Droid string XML all antifeatures are prefixed by 'anti', most of them suffixed by 'list' and all lowercase
+        // and then sometimes again renamed, that is way to inconsistent, so I rename them with a proper schema using the
+        // names in the upstream json file
+
+        return getStringResourceByName(c, "anti_"+af.toLowerCase());
     }
 
     /**
@@ -284,19 +281,19 @@ public class Util {
         int i = 0;
 
         // anti
-        i = R.string.antiadslist;
-        i = R.string.antidisabledalgorithmlist;
         i = R.string.antifeatures;
-        i = R.string.antifeatureswarning;
-        i = R.string.antiknownvulnlist;
-        i = R.string.antiadslist;
-        i = R.string.antinonfreeadlist;
-        i = R.string.antinonfreeassetslist;
-        i = R.string.antinonfreedeplist;
-        i = R.string.antinonfreenetlist;
-        i = R.string.antinosourcesince;
-        i = R.string.antitracklist;
-        i = R.string.antiupstreamnonfreelist;
+        i = R.string.anti_ads;
+        i = R.string.anti_nonfreeadd;
+        i = R.string.anti_nonfreeassets;
+        i = R.string.anti_nonfreedep;
+        i = R.string.anti_nonfreenet;
+        i = R.string.anti_nosourcesince;
+        i = R.string.anti_tracking;
+        i = R.string.anti_upstreamnonfree;
+
+        // in archive
+        i = R.string.anti_disabledalgorithm;
+        i = R.string.anti_knownvuln;
 
         // cats
         i = R.string.category_Development;

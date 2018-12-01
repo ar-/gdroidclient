@@ -18,11 +18,11 @@
     <string name="category_Theming">ธีมต่างๆ</string>
     <string name="category_Time">เวลาและวันที่</string>
     <string name="category_Writing">การเขียน</string>
-    <string name="antiadslist">โปรแกรมนี้มีโฆษณา</string>
-    <string name="antitracklist">โปรแกรมนี้ติดตามและส่งต่อข้อมูลกิจกรรมของคุณให้บุคคลภายนอก</string>
-    <string name="antinonfreeadlist">โปรแกรมนี้สนับสนุนส่วนขยายที่ไม่เสรี</string>
-    <string name="antinonfreenetlist">โปรแกรมนี้สนับสนุนการใช้งานบริการที่ไม่เสรี</string>
-    <string name="antinonfreedeplist">โปรแกรมนี้พึ่งพาโปรแกรมไม่เสรีอื่นๆ</string>
-    <string name="antiupstreamnonfreelist">ซอร์สโค้ดต้นฉบับมีบางส่วนที่ไม่เสรี</string>
-    <string name="antinonfreeassetslist">โปรแกรมนี้มีส่วนประกอบภาพเสียงที่ไม่เสรี</string>
+    <string name="anti_ads">โปรแกรมนี้มีโฆษณา</string>
+    <string name="anti_tracking">โปรแกรมนี้ติดตามและส่งต่อข้อมูลกิจกรรมของคุณให้บุคคลภายนอก</string>
+    <string name="anti_nonfreeadd">โปรแกรมนี้สนับสนุนส่วนขยายที่ไม่เสรี</string>
+    <string name="anti_nonfreenet">โปรแกรมนี้สนับสนุนการใช้งานบริการที่ไม่เสรี</string>
+    <string name="anti_nonfreedep">โปรแกรมนี้พึ่งพาโปรแกรมไม่เสรีอื่นๆ</string>
+    <string name="anti_upstreamnonfree">ซอร์สโค้ดต้นฉบับมีบางส่วนที่ไม่เสรี</string>
+    <string name="anti_nonfreeassets">โปรแกรมนี้มีส่วนประกอบภาพเสียงที่ไม่เสรี</string>
 </resources>

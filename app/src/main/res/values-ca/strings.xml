@@ -19,14 +19,14 @@
     <string name="category_Time">Temps</string>
     <string name="category_Writing">Per a escriure</string>
     <string name="antifeatures">Característiques no lliures</string>
-    <string name="antiadslist">Aquesta aplicació conté publicitat</string>
-    <string name="antitracklist">Aquesta aplicació segueix i informa sobre la vostra activitat</string>
-    <string name="antinonfreeadlist">Aquesta aplicació promou complements no lliures</string>
-    <string name="antinonfreenetlist">Aquesta aplicació promou serveis de xarxa no lliures</string>
-    <string name="antinonfreedeplist">Aquesta aplicació depèn d'altres aplicacions no lliures</string>
-    <string name="antiupstreamnonfreelist">El codi font no és del tot lliure</string>
-    <string name="antinonfreeassetslist">Aquesta aplicació conté parts no lliures</string>
-    <string name="antidisabledalgorithmlist">La signatura de seguretat de l'aplicació és feble</string>
-    <string name="antiknownvulnlist">Aquesta aplicació té un problema de seguretat conegut</string>
-    <string name="antinosourcesince">El codi font ja no està disponible, no és possible actualitzar.</string>
+    <string name="anti_ads">Aquesta aplicació conté publicitat</string>
+    <string name="anti_tracking">Aquesta aplicació segueix i informa sobre la vostra activitat</string>
+    <string name="anti_nonfreeadd">Aquesta aplicació promou complements no lliures</string>
+    <string name="anti_nonfreenet">Aquesta aplicació promou serveis de xarxa no lliures</string>
+    <string name="anti_nonfreedep">Aquesta aplicació depèn d\'altres aplicacions no lliures</string>
+    <string name="anti_upstreamnonfree">El codi font no és del tot lliure</string>
+    <string name="anti_nonfreeassets">Aquesta aplicació conté parts no lliures</string>
+    <string name="anti_disabledalgorithm">La signatura de seguretat de l\'aplicació és feble</string>
+    <string name="anti_knownvuln">Aquesta aplicació té un problema de seguretat conegut</string>
+    <string name="anti_nosourcesince">El codi font ja no està disponible, no és possible actualitzar.</string>
 </resources>

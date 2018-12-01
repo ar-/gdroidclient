@@ -19,13 +19,13 @@
     <string name="category_Time">Tijd</string>
     <string name="category_Writing">Schrijven</string>
     <string name="antifeatures">Anti-functies</string>
-    <string name="antiadslist">Dezen app bevat advertenties</string>
-    <string name="antitracklist">Deze app houdt uw activiteiten bij en rapporteert ze</string>
-    <string name="antinonfreeadlist">Dezen app promoot niet-vrije add-ons</string>
-    <string name="antinonfreenetlist">Dezen app promoot niet-vrije netwerkdiensten</string>
-    <string name="antinonfreedeplist">Dezen app vereist andere niet-vrije apps</string>
-    <string name="antiupstreamnonfreelist">De broncode stroomopwaarts is niet volledig vrij</string>
-    <string name="antinonfreeassetslist">Dezen app bevat niet-vrije elementen</string>
-    <string name="antidisabledalgorithmlist">Dezen app heeft een zwakke beveiligingshandtekening</string>
-    <string name="antiknownvulnlist">Dezen app bevat een bekend probleem in de beveiliging</string>
+    <string name="anti_ads">Dezen app bevat advertenties</string>
+    <string name="anti_tracking">Deze app houdt uw activiteiten bij en rapporteert ze</string>
+    <string name="anti_nonfreeadd">Dezen app promoot niet-vrije add-ons</string>
+    <string name="anti_nonfreenet">Dezen app promoot niet-vrije netwerkdiensten</string>
+    <string name="anti_nonfreedep">Dezen app vereist andere niet-vrije apps</string>
+    <string name="anti_upstreamnonfree">De broncode stroomopwaarts is niet volledig vrij</string>
+    <string name="anti_nonfreeassets">Dezen app bevat niet-vrije elementen</string>
+    <string name="anti_disabledalgorithm">Dezen app heeft een zwakke beveiligingshandtekening</string>
+    <string name="anti_knownvuln">Dezen app bevat een bekend probleem in de beveiliging</string>
 </resources>

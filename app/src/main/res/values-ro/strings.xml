@@ -19,14 +19,14 @@
     <string name="category_Time">Timp</string>
     <string name="category_Writing">Scris</string>
     <string name="antifeatures">Caracteristici negative</string>
-    <string name="antiadslist">Aplicația conține reclamă</string>
-    <string name="antitracklist">Aplicația îți înregistrează și raportează activitatea undeva</string>
-    <string name="antinonfreeadlist">Aplicația promovează anexe ce nu sunt software liber</string>
-    <string name="antinonfreenetlist">Aplicația promovează servicii de rețea ce nu sunt accesibile la liber</string>
-    <string name="antinonfreedeplist">Aplicația depinde de alte aplicații ce nu sunt software liber</string>
-    <string name="antiupstreamnonfreelist">Codul sursa originar nu este în totalitatea lui software liber</string>
-    <string name="antinonfreeassetslist">Aceasta aplicație conține resurse ce nu sunt la disponibile la liber</string>
-    <string name="antidisabledalgorithmlist">Aplicația are o semnătură slab securizată</string>
-    <string name="antiknownvulnlist">Aplicația conține o vulnerabilitate de securitate cunoscută</string>
-    <string name="antinosourcesince">Codul sursă nu mai este disponibil, nu mai există posibilitatea de a actualiza.</string>
+    <string name="anti_ads">Aplicația conține reclamă</string>
+    <string name="anti_tracking">Aplicația îți înregistrează și raportează activitatea undeva</string>
+    <string name="anti_nonfreeadd">Aplicația promovează anexe ce nu sunt software liber</string>
+    <string name="anti_nonfreenet">Aplicația promovează servicii de rețea ce nu sunt accesibile la liber</string>
+    <string name="anti_nonfreedep">Aplicația depinde de alte aplicații ce nu sunt software liber</string>
+    <string name="anti_upstreamnonfree">Codul sursa originar nu este în totalitatea lui software liber</string>
+    <string name="anti_nonfreeassets">Aceasta aplicație conține resurse ce nu sunt la disponibile la liber</string>
+    <string name="anti_disabledalgorithm">Aplicația are o semnătură slab securizată</string>
+    <string name="anti_knownvuln">Aplicația conține o vulnerabilitate de securitate cunoscută</string>
+    <string name="anti_nosourcesince">Codul sursă nu mai este disponibil, nu mai există posibilitatea de a actualiza.</string>
 </resources>

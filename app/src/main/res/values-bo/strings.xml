@@ -19,11 +19,11 @@
     <string name="category_Time">དུས་ཚོད།</string>
     <string name="category_Writing">འབྲི་བཞིན་པ།</string>
     <string name="antifeatures">ཁྱད་ཆོས་འགལ་ཟླ།</string>
-    <string name="antiadslist">མཉེན་ཆས་འདིའི་ནང་ཁྱབ་བསྒྲགས་ཡོད།</string>
-    <string name="antitracklist">མཉེན་ཆས་འདིས་ཁྱེད་རང་རྗེས་འདེད་བཏང་ནས་ལས་ཀ་གང་བྱས་ཀྱང་བརྡ་ལན་སྤྲད་ཀྱི་རེད།</string>
-    <string name="antinonfreeadlist">མཉེན་ཆས་འདི་རིན་མེད་མ་ཡིན་པའི་ཆ་རྐྱེན་འཕར་མ་རྒྱབ་སྐྱོར་བྱེད་ཀྱི་ཡོད།</string>
-    <string name="antinonfreenetlist">མཉེས་ཆས་འདིས་རིན་མེད་མ་ཡིན་པའི་དྲྭ་རྒྱའི་ཞབས་ཞུ་ཁྱབ་བསྒྲགས་བྱེད་ཀྱི་ཡོད།</string>
-    <string name="antinonfreedeplist">མཉེན་ཆས་འདི་རིན་མེད་མ་ཡིན་པའི་མཉེན་ཆས་གཞན་ལ་བརྟེན་ནས་ཡོད།</string>
-    <string name="antiupstreamnonfreelist">འབྱུང་ཁུངས་ཨང་རྟགས་འདི་ཆ་ཚང་རིན་མེད་མ་རེད།</string>
-    <string name="antinonfreeassetslist">མཉེན་ཆས་འདིའི་ནང་རིན་མེད་མ་ཡིན་པའི་རྒྱུ་ཆ་ཡོད།</string>
+    <string name="anti_ads">མཉེན་ཆས་འདིའི་ནང་ཁྱབ་བསྒྲགས་ཡོད།</string>
+    <string name="anti_tracking">མཉེན་ཆས་འདིས་ཁྱེད་རང་རྗེས་འདེད་བཏང་ནས་ལས་ཀ་གང་བྱས་ཀྱང་བརྡ་ལན་སྤྲད་ཀྱི་རེད།</string>
+    <string name="anti_nonfreeadd">མཉེན་ཆས་འདི་རིན་མེད་མ་ཡིན་པའི་ཆ་རྐྱེན་འཕར་མ་རྒྱབ་སྐྱོར་བྱེད་ཀྱི་ཡོད།</string>
+    <string name="anti_nonfreenet">མཉེས་ཆས་འདིས་རིན་མེད་མ་ཡིན་པའི་དྲྭ་རྒྱའི་ཞབས་ཞུ་ཁྱབ་བསྒྲགས་བྱེད་ཀྱི་ཡོད།</string>
+    <string name="anti_nonfreedep">མཉེན་ཆས་འདི་རིན་མེད་མ་ཡིན་པའི་མཉེན་ཆས་གཞན་ལ་བརྟེན་ནས་ཡོད།</string>
+    <string name="anti_upstreamnonfree">འབྱུང་ཁུངས་ཨང་རྟགས་འདི་ཆ་ཚང་རིན་མེད་མ་རེད།</string>
+    <string name="anti_nonfreeassets">མཉེན་ཆས་འདིའི་ནང་རིན་མེད་མ་ཡིན་པའི་རྒྱུ་ཆ་ཡོད།</string>
 </resources>

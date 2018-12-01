@@ -1,7 +1,6 @@
 <resources>
 
     <string name="category_Connectivity">Connectivité</string>
-
     <string name="category_Development">Développement</string>
     <string name="category_Games">Jeux</string>
     <string name="category_Graphics">Graphisme</string>
@@ -19,15 +18,15 @@
     <string name="category_Time">Temps</string>
     <string name="category_Writing">Écriture</string>
     <string name="antifeatures">Fonctionnalités problématiques</string>
-    <string name="antiadslist">Cette appli contient des publicités</string>
-    <string name="antitracklist">Cette appli suit et transmet votre activité</string>
-    <string name="antinonfreeadlist">Cette appli promeut des extensions qui ne sont pas libres/open source</string>
-    <string name="antinonfreenetlist">Cette appli promeut des services réseaux qui ne sont pas libres/open source
-    <string name="antinonfreedeplist">Cette appli dépend d'autres applis qui ne sont pas libres/open source</string>
-    <string name="antiupstreamnonfreelist">Le code source amont n'est pas entièrement libre/open source</string>
-    <string name="antinonfreeassetslist">Cette appli comprend des parties qui ne sont pas libres/open-source</string>
-    <string name="antidisabledalgorithmlist">La signature de sécurité de cette application est faible</string>
-    <string name="antiknownvulnlist">Cette application contient une vulnérabilité de sécurité connue</string>
-    <string name="antinosourcesince">Le code source n'est désormais plus en accès libre, les mises à jour ne sont plus possibles.</string>
+    <string name="anti_ads">Cette appli contient des publicités</string>
+    <string name="anti_tracking">Cette appli suit et transmet votre activité</string>
+    <string name="anti_nonfreeadd">Cette appli promeut des extensions qui ne sont pas libres/open source</string>
+    <string name="anti_nonfreenet">Cette appli promeut des services réseaux qui ne sont pas libres/open source</string>
+    <string name="anti_nonfreedep">Cette appli dépend d\'autres applis qui ne sont pas libres/open source</string>
+    <string name="anti_upstreamnonfree">Le code source amont n\'est pas entièrement libre/open source</string>
+    <string name="anti_nonfreeassets">Cette appli comprend des parties qui ne sont pas libres/open-source</string>
+    <string name="anti_disabledalgorithm">La signature de sécurité de cette application est faible</string>
+    <string name="anti_knownvuln">Cette application contient une vulnérabilité de sécurité connue</string>
+    <string name="anti_nosourcesince">Le code source n\'est désormais plus en accès libre, les mises à jour ne sont plus possibles.</string>
 
 </resources>

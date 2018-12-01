@@ -19,14 +19,14 @@
     <string name="category_Time">Tempo</string>
     <string name="category_Writing">Escrita</string>
     <string name="antifeatures">Características indesejadas</string>
-    <string name="antiadslist">Este aplicativo contém propaganda</string>
-    <string name="antitracklist">Este aplicativo rastreia e relata sua atividade</string>
-    <string name="antinonfreeadlist">Este aplicativo promove complementos não livres</string>
-    <string name="antinonfreenetlist">Este aplicativo promove serviços de rede não livres</string>
-    <string name="antinonfreedeplist">Este aplicativo depende de aplicativos não livres</string>
-    <string name="antiupstreamnonfreelist">O código fonte original não é totalmente livre</string>
-    <string name="antinonfreeassetslist">Este aplicativo contém conteúdo não-livre</string>
-    <string name="antidisabledalgorithmlist">Este aplicativo tem um assinatura de segurança fraca</string>
-    <string name="antiknownvulnlist">Este aplicativo contém uma falha de segurança já conhecida</string>
-    <string name="antinosourcesince">Não é possível atualizar, o código fonte não está mais disponivel.</string>
+    <string name="anti_ads">Este aplicativo contém propaganda</string>
+    <string name="anti_tracking">Este aplicativo rastreia e relata sua atividade</string>
+    <string name="anti_nonfreeadd">Este aplicativo promove complementos não livres</string>
+    <string name="anti_nonfreenet">Este aplicativo promove serviços de rede não livres</string>
+    <string name="anti_nonfreedep">Este aplicativo depende de aplicativos não livres</string>
+    <string name="anti_upstreamnonfree">O código fonte original não é totalmente livre</string>
+    <string name="anti_nonfreeassets">Este aplicativo contém conteúdo não-livre</string>
+    <string name="anti_disabledalgorithm">Este aplicativo tem um assinatura de segurança fraca</string>
+    <string name="anti_knownvuln">Este aplicativo contém uma falha de segurança já conhecida</string>
+    <string name="anti_nosourcesince">Não é possível atualizar, o código fonte não está mais disponivel.</string>
 </resources>

@@ -144,16 +144,16 @@
 
     <!--anti features-->
     <string name="antifeatures">Anti-features</string>
-    <string name="antiadslist">This app contains advertising</string>
-    <string name="antitracklist">This app tracks and reports your activity</string>
-    <string name="antinonfreeadlist">This app promotes non-free add-ons</string>
-    <string name="antinonfreenetlist">This app promotes non-free network services</string>
-    <string name="antinonfreedeplist">This app depends on other non-free apps</string>
-    <string name="antiupstreamnonfreelist">The upstream source code is not entirely Free</string>
-    <string name="antinonfreeassetslist">This app contains non-free assets</string>
-    <string name="antidisabledalgorithmlist">This app has a weak security signature</string>
-    <string name="antiknownvulnlist">This app contains a known security vulnerability</string>
-    <string name="antinosourcesince">The source code is no longer available, no updates possible.</string>
+    <string name="anti_ads">This app contains advertising</string>
+    <string name="anti_tracking">This app tracks and reports your activity</string>
+    <string name="anti_nonfreeadd">This app promotes non-free add-ons</string>
+    <string name="anti_nonfreenet">This app promotes non-free network services</string>
+    <string name="anti_nonfreedep">This app depends on other non-free apps</string>
+    <string name="anti_upstreamnonfree">The upstream source code is not entirely Free</string>
+    <string name="anti_nonfreeassets">This app contains non-free assets</string>
+    <string name="anti_disabledalgorithm">This app has a weak security signature</string>
+    <string name="anti_knownvuln">This app contains a known security vulnerability</string>
+    <string name="anti_nosourcesince">The source code is no longer available, no updates possible.</string>
 
 
 </resources>

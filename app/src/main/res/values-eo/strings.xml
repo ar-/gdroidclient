@@ -19,14 +19,14 @@
     <string name="category_Time">Tempo</string>
     <string name="category_Writing">Skribado</string>
     <string name="antifeatures">Fiebloj</string>
-    <string name="antiadslist">Tiu ĉi aplikaĵo enhavas reklamojn</string>
-    <string name="antitracklist">Tiu ĉi aplikaĵo spuras kaj raportas vian agadon</string>
-    <string name="antinonfreeadlist">Tiu ĉi aplikaĵo favoras neliberajn aldonaĵojn</string>
-    <string name="antinonfreenetlist">Tiu ĉi aplikaĵo favoras neliberajn retservojn</string>
-    <string name="antinonfreedeplist">Tiu ĉi aplikaĵo dependas de aliaj neliberaj aplikaĵoj</string>
-    <string name="antiupstreamnonfreelist">La fontkodo ne estas tute libera</string>
-    <string name="antinonfreeassetslist">Tiu ĉi aplikaĵo enhavas neliberan enhavon</string>
-    <string name="antidisabledalgorithmlist">Tiu ĉi aplikaĵo posedas malfortan sekurecan subskribon</string>
-    <string name="antiknownvulnlist">Tiu ĉi aplikaĵo posedas sekurecan vundeblon</string>
-    <string name="antinosourcesince">La fontkodo ne estas plu disponebla, neniuj eblaj ĝisdatigoj.</string>
+    <string name="anti_ads">Tiu ĉi aplikaĵo enhavas reklamojn</string>
+    <string name="anti_tracking">Tiu ĉi aplikaĵo spuras kaj raportas vian agadon</string>
+    <string name="anti_nonfreeadd">Tiu ĉi aplikaĵo favoras neliberajn aldonaĵojn</string>
+    <string name="anti_nonfreenet">Tiu ĉi aplikaĵo favoras neliberajn retservojn</string>
+    <string name="anti_nonfreedep">Tiu ĉi aplikaĵo dependas de aliaj neliberaj aplikaĵoj</string>
+    <string name="anti_upstreamnonfree">La fontkodo ne estas tute libera</string>
+    <string name="anti_nonfreeassets">Tiu ĉi aplikaĵo enhavas neliberan enhavon</string>
+    <string name="anti_disabledalgorithm">Tiu ĉi aplikaĵo posedas malfortan sekurecan subskribon</string>
+    <string name="anti_knownvuln">Tiu ĉi aplikaĵo posedas sekurecan vundeblon</string>
+    <string name="anti_nosourcesince">La fontkodo ne estas plu disponebla, neniuj eblaj ĝisdatigoj.</string>
 </resources>

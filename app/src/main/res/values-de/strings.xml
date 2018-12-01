@@ -17,14 +17,14 @@
     <string name="category_Time">Zeit</string>
     <string name="category_Writing">Schreiben</string>
     <string name="antifeatures">Unerwünschte Merkmale</string>
-    <string name="antiadslist">Diese Anwendung enthält Werbung</string>
-    <string name="antitracklist">Diese Anwendung verfolgt und versendet Ihre Aktivitäten</string>
-    <string name="antinonfreeadlist">Diese Anwendung bewirbt nicht freie Erweiterungen</string>
-    <string name="antinonfreenetlist">Diese Anwendung bewirbt nicht freie Netzwerkdienste</string>
-    <string name="antinonfreedeplist">Diese Anwendung hängt von nicht freien Anwendungen ab</string>
-    <string name="antiupstreamnonfreelist">Der Originalcode ist nicht völlig frei</string>
-    <string name="antinonfreeassetslist">Diese Anwendung enthält nicht freie Bestandteile</string>
-    <string name="antidisabledalgorithmlist">Diese App hat eine schwache Sicherheitssignatur</string>
-    <string name="antiknownvulnlist">Diese Anwendung enthält eine bekannte Sicherheitslücke</string>
-    <string name="antinosourcesince">Der Quelltext ist nicht mehr verfügbar, keine Aktualisierungen möglich.</string>
+    <string name="anti_ads">Diese Anwendung enthält Werbung</string>
+    <string name="anti_tracking">Diese Anwendung verfolgt und versendet Ihre Aktivitäten</string>
+    <string name="anti_nonfreeadd">Diese Anwendung bewirbt nicht freie Erweiterungen</string>
+    <string name="anti_nonfreenet">Diese Anwendung bewirbt nicht freie Netzwerkdienste</string>
+    <string name="anti_nonfreedep">Diese Anwendung hängt von nicht freien Anwendungen ab</string>
+    <string name="anti_upstreamnonfree">Der Originalcode ist nicht völlig frei</string>
+    <string name="anti_nonfreeassets">Diese Anwendung enthält nicht freie Bestandteile</string>
+    <string name="anti_disabledalgorithm">Diese App hat eine schwache Sicherheitssignatur</string>
+    <string name="anti_knownvuln">Diese Anwendung enthält eine bekannte Sicherheitslücke</string>
+    <string name="anti_nosourcesince">Der Quelltext ist nicht mehr verfügbar, keine Aktualisierungen möglich.</string>
 </resources>

@@ -19,14 +19,14 @@
     <string name="category_Time">Denbora</string>
     <string name="category_Writing">Idazketa</string>
     <string name="antifeatures">Ezaugarri zalantzagarriak</string>
-    <string name="antiadslist">Aplikazio honek iragarkiak ditu</string>
-    <string name="antitracklist">Aplikazio honek zure eginkizunen jarraipena egiten du eta berri ematen du</string>
-    <string name="antinonfreeadlist">Aplikazio honen libreak ez diren gehigarriak bultzatzen ditu</string>
-    <string name="antinonfreenetlist">Aplikazio honek libreak ez diren sare zerbitzuak bultzatzen ditu</string>
-    <string name="antinonfreedeplist">Aplikazio honek libreak ez diren beste aplikazio batzuk behar ditu</string>
-    <string name="antiupstreamnonfreelist">Jatorrizko iturburu kodea ez da guztiz librea</string>
-    <string name="antinonfreeassetslist">Aplikazio honek libreak ez diren atalak ditu</string>
-    <string name="antidisabledalgorithmlist">Aplikazio honek segurtasun sinadura ahula du</string>
-    <string name="antiknownvulnlist">Aplikazio honek segurtasun arazo ezagun bat du</string>
-    <string name="antinosourcesince">Iturburu kodea ez dago jada eskuragarri, ezin izango dira eguneraketak egin.</string>
+    <string name="anti_ads">Aplikazio honek iragarkiak ditu</string>
+    <string name="anti_tracking">Aplikazio honek zure eginkizunen jarraipena egiten du eta berri ematen du</string>
+    <string name="anti_nonfreeadd">Aplikazio honen libreak ez diren gehigarriak bultzatzen ditu</string>
+    <string name="anti_nonfreenet">Aplikazio honek libreak ez diren sare zerbitzuak bultzatzen ditu</string>
+    <string name="anti_nonfreedep">Aplikazio honek libreak ez diren beste aplikazio batzuk behar ditu</string>
+    <string name="anti_upstreamnonfree">Jatorrizko iturburu kodea ez da guztiz librea</string>
+    <string name="anti_nonfreeassets">Aplikazio honek libreak ez diren atalak ditu</string>
+    <string name="anti_disabledalgorithm">Aplikazio honek segurtasun sinadura ahula du</string>
+    <string name="anti_knownvuln">Aplikazio honek segurtasun arazo ezagun bat du</string>
+    <string name="anti_nosourcesince">Iturburu kodea ez dago jada eskuragarri, ezin izango dira eguneraketak egin.</string>
 </resources>

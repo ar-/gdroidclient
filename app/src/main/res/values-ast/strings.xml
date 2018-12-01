@@ -19,11 +19,11 @@
     <string name="category_Time">Tiempu</string>
     <string name="category_Writing">Escritura</string>
     <string name="antifeatures">Carauterístiques non llibres</string>
-    <string name="antiadslist">Esta aplicación contién publicidá</string>
-    <string name="antitracklist">Esta aplicación rastrexa ya informa de la to actividá</string>
-    <string name="antinonfreeadlist">Esta aplicación da puxu a amiestos non llibres</string>
-    <string name="antinonfreenetlist">Esta aplicación da puxu a servicios de rede non llibres</string>
-    <string name="antinonfreedeplist">Esta aplicación ta arreyada a otres aplicaciones non llibres</string>
-    <string name="antiupstreamnonfreelist">El códigu fonte principal nun ye llibre dafechu</string>
-    <string name="antinonfreeassetslist">Esta aplicación contién activos non llibres</string>
+    <string name="anti_ads">Esta aplicación contién publicidá</string>
+    <string name="anti_tracking">Esta aplicación rastrexa ya informa de la to actividá</string>
+    <string name="anti_nonfreeadd">Esta aplicación da puxu a amiestos non llibres</string>
+    <string name="anti_nonfreenet">Esta aplicación da puxu a servicios de rede non llibres</string>
+    <string name="anti_nonfreedep">Esta aplicación ta arreyada a otres aplicaciones non llibres</string>
+    <string name="anti_upstreamnonfree">El códigu fonte principal nun ye llibre dafechu</string>
+    <string name="anti_nonfreeassets">Esta aplicación contién activos non llibres</string>
 </resources>

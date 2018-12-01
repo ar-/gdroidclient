@@ -19,11 +19,11 @@
     <string name="category_Time">Čas</string>
     <string name="category_Writing">Písanie</string>
     <string name="antifeatures">Anti-funkcie</string>
-    <string name="antiadslist">Táto aplikácia obsahuje reklamy</string>
-    <string name="antitracklist">Táto aplikácia zaznamenáva a hlási vaše aktivity</string>
-    <string name="antinonfreeadlist">Táto aplikácia propaguje neslobodné doplnky</string>
-    <string name="antinonfreenetlist">Táto aplikácia propaguje neslobodné sieťové služby</string>
-    <string name="antinonfreedeplist">Táto aplikácia závisí na iných neslobodných aplikáciách</string>
-    <string name="antiupstreamnonfreelist">Originálny zdrojový kód nie je úplne slobodný</string>
-    <string name="antinonfreeassetslist">Táto aplikácia obsahuje proprietárne časti</string>
+    <string name="anti_ads">Táto aplikácia obsahuje reklamy</string>
+    <string name="anti_tracking">Táto aplikácia zaznamenáva a hlási vaše aktivity</string>
+    <string name="anti_nonfreeadd">Táto aplikácia propaguje neslobodné doplnky</string>
+    <string name="anti_nonfreenet">Táto aplikácia propaguje neslobodné sieťové služby</string>
+    <string name="anti_nonfreedep">Táto aplikácia závisí na iných neslobodných aplikáciách</string>
+    <string name="anti_upstreamnonfree">Originálny zdrojový kód nie je úplne slobodný</string>
+    <string name="anti_nonfreeassets">Táto aplikácia obsahuje proprietárne časti</string>
 </resources>

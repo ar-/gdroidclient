@@ -19,14 +19,14 @@
     <string name="category_Time">Czas</string>
     <string name="category_Writing">Edycja tekstu</string>
     <string name="antifeatures">Niepożądane funkcje</string>
-    <string name="antiadslist">Ta aplikacja zawiera reklamy</string>
-    <string name="antitracklist">Ta aplikacja śledzi i raportuje Twoją aktywność</string>
-    <string name="antinonfreeadlist">Ta aplikacja promuje niewolne dodatki</string>
-    <string name="antinonfreenetlist">Ta aplikacja promuje niewolne usługi sieciowe</string>
-    <string name="antinonfreedeplist">Ta aplikacja wymaga innych, niewolnych aplikacji</string>
-    <string name="antiupstreamnonfreelist">Upstreamowy kod źródłowy nie jest w pełni wolny</string>
-    <string name="antinonfreeassetslist">Ta aplikacja zawiera niewolną zawartość</string>
-    <string name="antidisabledalgorithmlist">Ta aplikacja posiada słabą sygnaturę bezpieczeństwa</string>
-    <string name="antiknownvulnlist">Ta aplikacja ma znaną podatność bezpieczeństwa</string>
-    <string name="antinosourcesince">Kod źródłowy nie jest już dostępny, nie są możliwe aktualizacje.</string>
+    <string name="anti_ads">Ta aplikacja zawiera reklamy</string>
+    <string name="anti_tracking">Ta aplikacja śledzi i raportuje Twoją aktywność</string>
+    <string name="anti_nonfreeadd">Ta aplikacja promuje niewolne dodatki</string>
+    <string name="anti_nonfreenet">Ta aplikacja promuje niewolne usługi sieciowe</string>
+    <string name="anti_nonfreedep">Ta aplikacja wymaga innych, niewolnych aplikacji</string>
+    <string name="anti_upstreamnonfree">Upstreamowy kod źródłowy nie jest w pełni wolny</string>
+    <string name="anti_nonfreeassets">Ta aplikacja zawiera niewolną zawartość</string>
+    <string name="anti_disabledalgorithm">Ta aplikacja posiada słabą sygnaturę bezpieczeństwa</string>
+    <string name="anti_knownvuln">Ta aplikacja ma znaną podatność bezpieczeństwa</string>
+    <string name="anti_nosourcesince">Kod źródłowy nie jest już dostępny, nie są możliwe aktualizacje.</string>
 </resources>

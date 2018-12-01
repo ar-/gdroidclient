@@ -19,14 +19,14 @@
     <string name="category_Time">زمان</string>
     <string name="category_Writing">نوشتن</string>
     <string name="antifeatures">ضد ویژگی‌ها</string>
-    <string name="antiadslist">این برنامه دارای تبلیغات است</string>
-    <string name="antitracklist">این برنامه، فعّالیت‌هایتان را ردیابی و گزارش می‌کند</string>
-    <string name="antinonfreeadlist">این برنامه، افزونه‌های غیر آزاد را تبلیغ می‌کند</string>
-    <string name="antinonfreenetlist">این برنامه، خدمات شبکه‌های غیر آزاد را تبلیغ می‌کند</string>
-    <string name="antinonfreedeplist">این برنامه، به دیگر کاره‌های غیر آزاد وابسته است</string>
-    <string name="antiupstreamnonfreelist">کد مبدأ بالادستی کاملاً آزاد نیست</string>
-    <string name="antinonfreeassetslist">این کاره شامل ابزارهای پولی است</string>
-    <string name="antidisabledalgorithmlist">این کاره یک امضای امنیتی ضعیف دارد</string>
-    <string name="antiknownvulnlist">این کاره یک آسیب‌پذیری امنیتی شناخته‌شده دارد</string>
-    <string name="antinosourcesince">کد مبدأ دیگر در دسترس نیست، به‌روز رسانی ناممکن است.</string>
+    <string name="anti_ads">این برنامه دارای تبلیغات است</string>
+    <string name="anti_tracking">این برنامه، فعّالیت‌هایتان را ردیابی و گزارش می‌کند</string>
+    <string name="anti_nonfreeadd">این برنامه، افزونه‌های غیر آزاد را تبلیغ می‌کند</string>
+    <string name="anti_nonfreenet">این برنامه، خدمات شبکه‌های غیر آزاد را تبلیغ می‌کند</string>
+    <string name="anti_nonfreedep">این برنامه، به دیگر کاره‌های غیر آزاد وابسته است</string>
+    <string name="anti_upstreamnonfree">کد مبدأ بالادستی کاملاً آزاد نیست</string>
+    <string name="anti_nonfreeassets">این کاره شامل ابزارهای پولی است</string>
+    <string name="anti_disabledalgorithm">این کاره یک امضای امنیتی ضعیف دارد</string>
+    <string name="anti_knownvuln">این کاره یک آسیب‌پذیری امنیتی شناخته‌شده دارد</string>
+    <string name="anti_nosourcesince">کد مبدأ دیگر در دسترس نیست، به‌روز رسانی ناممکن است.</string>
 </resources>

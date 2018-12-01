@@ -19,13 +19,13 @@
     <string name="category_Time">Tempo</string>
     <string name="category_Writing">Escrita</string>
     <string name="antifeatures">Características indesexadas</string>
-    <string name="antiadslist">Esta ap contén publicidade</string>
-    <string name="antitracklist">Esta ap rexistra e informa da súa actividade</string>
-    <string name="antinonfreeadlist">Esta ap promociona engadidos que non son libres</string>
-    <string name="antinonfreenetlist">Esta ap promove servizos de rede que non son libres</string>
-    <string name="antinonfreedeplist">Esta ap depende doutras aps non libres</string>
-    <string name="antiupstreamnonfreelist">O código fonte non é completamente libre</string>
-    <string name="antinonfreeassetslist">Este app contén elementos non-libres</string>
-    <string name="antidisabledalgorithmlist">Este aplicativo ten unha sinatura de seguridade feble</string>
-    <string name="antiknownvulnlist">Esta aplicación contén unha vulnerabilidade de seguridade coñecida</string>
+    <string name="anti_ads">Esta ap contén publicidade</string>
+    <string name="anti_tracking">Esta ap rexistra e informa da súa actividade</string>
+    <string name="anti_nonfreeadd">Esta ap promociona engadidos que non son libres</string>
+    <string name="anti_nonfreenet">Esta ap promove servizos de rede que non son libres</string>
+    <string name="anti_nonfreedep">Esta ap depende doutras aps non libres</string>
+    <string name="anti_upstreamnonfree">O código fonte non é completamente libre</string>
+    <string name="anti_nonfreeassets">Este app contén elementos non-libres</string>
+    <string name="anti_disabledalgorithm">Este aplicativo ten unha sinatura de seguridade feble</string>
+    <string name="anti_knownvuln">Esta aplicación contén unha vulnerabilidade de seguridade coñecida</string>
 </resources>

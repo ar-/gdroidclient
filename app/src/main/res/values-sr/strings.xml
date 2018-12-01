@@ -19,11 +19,11 @@
     <string name="category_Time">Време</string>
     <string name="category_Writing">Писање</string>
     <string name="antifeatures">Анти-могућности</string>
-    <string name="antiadslist">Ова апликација садржи огласе</string>
-    <string name="antitracklist">Ова апликација прати и пријављује ваше активности</string>
-    <string name="antinonfreeadlist">Ова апликација предлаже неслободне додатке</string>
-    <string name="antinonfreenetlist">Ова апликација предлаже неслободне мрежне услуге</string>
-    <string name="antinonfreedeplist">Ова апликација зависи од неслободних апликација</string>
-    <string name="antiupstreamnonfreelist">Изворни кôд није у потпуности слободан</string>
-    <string name="antinonfreeassetslist">Ова апликација садржи неслободне ресурсе</string>
+    <string name="anti_ads">Ова апликација садржи огласе</string>
+    <string name="anti_tracking">Ова апликација прати и пријављује ваше активности</string>
+    <string name="anti_nonfreeadd">Ова апликација предлаже неслободне додатке</string>
+    <string name="anti_nonfreenet">Ова апликација предлаже неслободне мрежне услуге</string>
+    <string name="anti_nonfreedep">Ова апликација зависи од неслободних апликација</string>
+    <string name="anti_upstreamnonfree">Изворни кôд није у потпуности слободан</string>
+    <string name="anti_nonfreeassets">Ова апликација садржи неслободне ресурсе</string>
 </resources>

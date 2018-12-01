@@ -18,13 +18,13 @@
     <string name="category_Time">Laikas</string>
     <string name="category_Writing">Rašymas</string>
     <string name="antifeatureswarning">Ši programa turi funkcijų, kurios jums gali nepatikti.</string>
-    <string name="antiadslist">Ši programa turi reklamas</string>
-    <string name="antitracklist">Ši programėlė seka ir perduoda Jūsų veiksmus</string>
-    <string name="antinonfreeadlist">Ši programa palaiko mokamus papildinius</string>
-    <string name="antinonfreenetlist">Ši programa palaiko mokamas interneto paslaugas</string>
-    <string name="antinonfreedeplist">Ši programa priklauso nuo kitų mokamų programų</string>
-    <string name="antinonfreeassetslist">Ši programa palaiko mokamas lėšas</string>
-    <string name="antidisabledalgorithmlist">Ši programa turi silpnai apsaugotą parašą</string>
-    <string name="antiknownvulnlist">Ši programa turi žinomą saugos pažeidžiamumą</string>
-    <string name="antinosourcesince">Pirminis kodas nebepalaikomas, neįmanomi atnaujinimai.</string>
+    <string name="anti_ads">Ši programa turi reklamas</string>
+    <string name="anti_tracking">Ši programėlė seka ir perduoda Jūsų veiksmus</string>
+    <string name="anti_nonfreeadd">Ši programa palaiko mokamus papildinius</string>
+    <string name="anti_nonfreenet">Ši programa palaiko mokamas interneto paslaugas</string>
+    <string name="anti_nonfreedep">Ši programa priklauso nuo kitų mokamų programų</string>
+    <string name="anti_nonfreeassets">Ši programa palaiko mokamas lėšas</string>
+    <string name="anti_disabledalgorithm">Ši programa turi silpnai apsaugotą parašą</string>
+    <string name="anti_knownvuln">Ši programa turi žinomą saugos pažeidžiamumą</string>
+    <string name="anti_nosourcesince">Pirminis kodas nebepalaikomas, neįmanomi atnaujinimai.</string>
 </resources>

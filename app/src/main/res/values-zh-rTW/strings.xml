@@ -19,14 +19,14 @@
     <string name="category_Time">時間</string>
     <string name="category_Writing">書寫</string>
     <string name="antifeatures">反特徵</string>
-    <string name="antiadslist">此應用程式含有廣告</string>
-    <string name="antitracklist">本應用程式會追蹤和彙報您的行為</string>
-    <string name="antinonfreeadlist">此應用程式推廣非自由的附加元件</string>
-    <string name="antinonfreenetlist">此應用程式推廣非自由的網路服務</string>
-    <string name="antinonfreedeplist">此應用程式依賴其他非自由的應用程式</string>
-    <string name="antiupstreamnonfreelist">上游原始碼並非完全自由</string>
-    <string name="antinonfreeassetslist">此應用程式含有非自由的資源</string>
-    <string name="antidisabledalgorithmlist">這個應用程式的安全簽章較弱</string>
-    <string name="antiknownvulnlist">這個應用程式包含了已知的安全性漏洞</string>
-    <string name="antinosourcesince">原始碼不再能取得，無法更新。</string>
+    <string name="anti_ads">此應用程式含有廣告</string>
+    <string name="anti_tracking">本應用程式會追蹤和彙報您的行為</string>
+    <string name="anti_nonfreeadd">此應用程式推廣非自由的附加元件</string>
+    <string name="anti_nonfreenet">此應用程式推廣非自由的網路服務</string>
+    <string name="anti_nonfreedep">此應用程式依賴其他非自由的應用程式</string>
+    <string name="anti_upstreamnonfree">上游原始碼並非完全自由</string>
+    <string name="anti_nonfreeassets">此應用程式含有非自由的資源</string>
+    <string name="anti_disabledalgorithm">這個應用程式的安全簽章較弱</string>
+    <string name="anti_knownvuln">這個應用程式包含了已知的安全性漏洞</string>
+    <string name="anti_nosourcesince">原始碼不再能取得，無法更新。</string>
 </resources>

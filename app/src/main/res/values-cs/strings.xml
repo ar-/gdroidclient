@@ -19,14 +19,14 @@
     <string name="category_Time">Čas</string>
     <string name="category_Writing">Psaní</string>
     <string name="antifeatures">Anti-funkce</string>
-    <string name="antiadslist">Tato aplikace obsahuje reklamu</string>
-    <string name="antitracklist">Tato aplikace zaznamenává a hlásí vaše aktivity</string>
-    <string name="antinonfreeadlist">Tato aplikace propaguje nesvobodné doplňky</string>
-    <string name="antinonfreenetlist">Tato aplikace propaguje nesvobodné síťové služby</string>
-    <string name="antinonfreedeplist">Tato aplikace závisí na ostatních nesvobodných aplikacích</string>
-    <string name="antiupstreamnonfreelist">Originální zdrojový kód je částečně nesvovodný</string>
-    <string name="antinonfreeassetslist">Tato aplikace obsahuje nesvobodné části</string>
-    <string name="antidisabledalgorithmlist">Tato aplikace má slabý bezpečnostní podpis</string>
-    <string name="antiknownvulnlist">Tato aplikace má známou zranitelnost v zabezpečení</string>
-    <string name="antinosourcesince">Zdrojový kód už není k dispozici, aktualizace nejsou možné.</string>
+    <string name="anti_ads">Tato aplikace obsahuje reklamu</string>
+    <string name="anti_tracking">Tato aplikace zaznamenává a hlásí vaše aktivity</string>
+    <string name="anti_nonfreeadd">Tato aplikace propaguje nesvobodné doplňky</string>
+    <string name="anti_nonfreenet">Tato aplikace propaguje nesvobodné síťové služby</string>
+    <string name="anti_nonfreedep">Tato aplikace závisí na ostatních nesvobodných aplikacích</string>
+    <string name="anti_upstreamnonfree">Originální zdrojový kód je částečně nesvovodný</string>
+    <string name="anti_nonfreeassets">Tato aplikace obsahuje nesvobodné části</string>
+    <string name="anti_disabledalgorithm">Tato aplikace má slabý bezpečnostní podpis</string>
+    <string name="anti_knownvuln">Tato aplikace má známou zranitelnost v zabezpečení</string>
+    <string name="anti_nosourcesince">Zdrojový kód už není k dispozici, aktualizace nejsou možné.</string>
 </resources>

@@ -19,13 +19,13 @@
     <string name="category_Time">Čas</string>
     <string name="category_Writing">Pisanje</string>
     <string name="antifeatures">Neželjene lastnosti</string>
-    <string name="antiadslist">Ta aplikacija vsebuje oglaševanje</string>
-    <string name="antitracklist">Ta aplikacija vam sledi in poroča o vaši aktivnosti</string>
-    <string name="antinonfreeadlist">Ta aplikacija promovira plačljive dodatke</string>
-    <string name="antinonfreenetlist">Ta aplikacija promovira plačljive internetne storitve</string>
-    <string name="antinonfreedeplist">Ta aplikcija je odvisna od ostalih ne odprtih aplikacijah</string>
-    <string name="antiupstreamnonfreelist">Originalna koda ni popolnoma odprta</string>
-    <string name="antinonfreeassetslist">Ta aplikacija vsebuje neodprte enote</string>
-    <string name="antidisabledalgorithmlist">Ta aplikacija ima šibek varnostni podpis</string>
-    <string name="antiknownvulnlist">Ta aplikacija vsebuje znano varnostno pomanjkljivost</string>
+    <string name="anti_ads">Ta aplikacija vsebuje oglaševanje</string>
+    <string name="anti_tracking">Ta aplikacija vam sledi in poroča o vaši aktivnosti</string>
+    <string name="anti_nonfreeadd">Ta aplikacija promovira plačljive dodatke</string>
+    <string name="anti_nonfreenet">Ta aplikacija promovira plačljive internetne storitve</string>
+    <string name="anti_nonfreedep">Ta aplikcija je odvisna od ostalih ne odprtih aplikacijah</string>
+    <string name="anti_upstreamnonfree">Originalna koda ni popolnoma odprta</string>
+    <string name="anti_nonfreeassets">Ta aplikacija vsebuje neodprte enote</string>
+    <string name="anti_disabledalgorithm">Ta aplikacija ima šibek varnostni podpis</string>
+    <string name="anti_knownvuln">Ta aplikacija vsebuje znano varnostno pomanjkljivost</string>
 </resources>

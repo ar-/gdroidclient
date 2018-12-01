@@ -17,6 +17,6 @@
     <string name="category_System">Sistēmas</string>
     <string name="category_Time">Laiks</string>
     <string name="category_Writing">Rakstīšana</string>
-    <string name="antiadslist">Programma satur reklāmu</string>
-    <string name="antitracklist">Šī programma seko jūsu aktivitātēm un ziņo par tām</string>
+    <string name="anti_ads">Programma satur reklāmu</string>
+    <string name="anti_tracking">Šī programma seko jūsu aktivitātēm un ziņo par tām</string>
 </resources>

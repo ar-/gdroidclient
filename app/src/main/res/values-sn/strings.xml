@@ -18,11 +18,11 @@
     <string name="category_Theming">Kudingindira</string>
     <string name="category_Time">Nguva</string>
     <string name="category_Writing">Kunyora</string>
-    <string name="antiadslist">App ino ine zvakashambadzwa zvemamwe makambani</string>
-    <string name="antitracklist">App ino inotevera nekududzira zvauri kuita</string>
-    <string name="antinonfreeadlist">App inosesedza zvinowedzerwa paapp ino zvinobhadharwa</string>
-    <string name="antinonfreenetlist">App ino inosesedza zvirango zvemasaisai zvinobhadharwa</string>
-    <string name="antinonfreedeplist">App ino inotemba nemamwe maapps anobhadharwa</string>
-    <string name="antiupstreamnonfreelist">Nyuko yemurau irikumberi haisi yemahara</string>
-    <string name="antinonfreeassetslist">App ino inenhumbi dzinobhadharwa</string>
+    <string name="anti_ads">App ino ine zvakashambadzwa zvemamwe makambani</string>
+    <string name="anti_tracking">App ino inotevera nekududzira zvauri kuita</string>
+    <string name="anti_nonfreeadd">App inosesedza zvinowedzerwa paapp ino zvinobhadharwa</string>
+    <string name="anti_nonfreenet">App ino inosesedza zvirango zvemasaisai zvinobhadharwa</string>
+    <string name="anti_nonfreedep">App ino inotemba nemamwe maapps anobhadharwa</string>
+    <string name="anti_upstreamnonfree">Nyuko yemurau irikumberi haisi yemahara</string>
+    <string name="anti_nonfreeassets">App ino inenhumbi dzinobhadharwa</string>
 </resources>

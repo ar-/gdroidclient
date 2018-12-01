@@ -19,14 +19,14 @@
     <string name="category_Time">Aika</string>
     <string name="category_Writing">Kirjoittaminen</string>
     <string name="antifeatures">Anti-ominaisuudet</string>
-    <string name="antiadslist">Tämä sovellus sisältää mainoksia</string>
-    <string name="antitracklist">Tämä sovellus tarkkailee ja raportoi toimintaasi</string>
-    <string name="antinonfreeadlist">Tämä sovellus suosittelee ei-vapaita lisäosia</string>
-    <string name="antinonfreenetlist">Tämä sovellus tukee ei-vapaita verkkopalveluja</string>
-    <string name="antinonfreedeplist">Tämä sovellus on riippuvainen muista, ei-vapaista sovelluksista</string>
-    <string name="antiupstreamnonfreelist">Ylävirran lähdekoodi ei ole kokonaan vapaata</string>
-    <string name="antinonfreeassetslist">Tämä sovellus sisältää ei-vapaita osia</string>
-    <string name="antidisabledalgorithmlist">Tällä sovelluksella on heikko turvallisuusallekirjoitus</string>
-    <string name="antiknownvulnlist">Tämä sovellus sisältää tunnetun haavoittuvuuden</string>
-    <string name="antinosourcesince">Lähdekoodi ei ole enää käytettävissä, päivitykset eivät mahdollisia.</string>
+    <string name="anti_ads">Tämä sovellus sisältää mainoksia</string>
+    <string name="anti_tracking">Tämä sovellus tarkkailee ja raportoi toimintaasi</string>
+    <string name="anti_nonfreeadd">Tämä sovellus suosittelee ei-vapaita lisäosia</string>
+    <string name="anti_nonfreenet">Tämä sovellus tukee ei-vapaita verkkopalveluja</string>
+    <string name="anti_nonfreedep">Tämä sovellus on riippuvainen muista, ei-vapaista sovelluksista</string>
+    <string name="anti_upstreamnonfree">Ylävirran lähdekoodi ei ole kokonaan vapaata</string>
+    <string name="anti_nonfreeassets">Tämä sovellus sisältää ei-vapaita osia</string>
+    <string name="anti_disabledalgorithm">Tällä sovelluksella on heikko turvallisuusallekirjoitus</string>
+    <string name="anti_knownvuln">Tämä sovellus sisältää tunnetun haavoittuvuuden</string>
+    <string name="anti_nosourcesince">Lähdekoodi ei ole enää käytettävissä, päivitykset eivät mahdollisia.</string>
 </resources>
