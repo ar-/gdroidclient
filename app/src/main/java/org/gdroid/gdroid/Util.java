@@ -263,7 +263,7 @@ public class Util {
         return c.getString(resId);
     }
 
-    public static String getLocalisedAntifeatureDescriptoon(Context c, String af)
+    public static String getLocalisedAntifeatureDescription(Context c, String af)
     {
         // found in json: "Ads", "NonFreeAdd", "NonFreeAssets", "NonFreeDep", "NonFreeNet", "NoSourceSince", "Tracking", "UpstreamNonFree"
         // in the F-Droid string XML all antifeatures are prefixed by 'anti', most of them suffixed by 'list' and all lowercase
