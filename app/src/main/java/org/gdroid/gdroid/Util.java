@@ -273,6 +273,12 @@ public class Util {
         return getStringResourceByName(c, "anti_"+af.toLowerCase());
     }
 
+    public static String getLocalisedCategoryName(Context c, String cn)
+    {
+        cn = cn.replace("& ","").replace(" ","_");
+        return getStringResourceByName(c, "category_"+cn);
+    }
+
     /**
      * references to all string IDs so they don't get removed by the "remove unused" function
      */
