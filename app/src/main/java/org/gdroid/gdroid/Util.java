@@ -31,17 +31,21 @@ import android.support.v4.os.ConfigurationCompat;
 import android.support.v4.os.LocaleListCompat;
 import android.util.Log;
 
+import org.gdroid.gdroid.beans.AppBeanNameComparator;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 public class Util {
+
+
     public static Activity getActivity(Context context)
     {
         if (context == null)
@@ -135,6 +139,7 @@ public class Util {
             final ApplicationBean app = db.appDao().getApplicationBean(starredAppId);
             ret.add(app);
         }
+        Collections.sort(ret, new AppBeanNameComparator());
         return ret;
     }
 
@@ -151,6 +156,7 @@ public class Util {
             if (app!=null)
                 ret.add(app);
         }
+        Collections.sort(ret, new AppBeanNameComparator());
         return ret;
     }
 
