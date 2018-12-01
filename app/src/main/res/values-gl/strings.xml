@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="category_Connectivity">Conectividade</string>
+
+    <string name="category_Development">Desenvolvemento</string>
+    <string name="category_Games">Xogos</string>
+    <string name="category_Graphics">Gráficos</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Cartos</string>
+    <string name="category_Multimedia">Multimedia</string>
+    <string name="category_Navigation">Navegación</string>
+    <string name="category_Phone_SMS">Teléfono e SMS</string>
+    <string name="category_Reading">Lectura</string>
+    <string name="category_Science_Education">Ciencia e educación</string>
+    <string name="category_Security">Seguridade</string>
+    <string name="category_Sports_Health">Deportes e Saúde</string>
+    <string name="category_System">Sistema</string>
+    <string name="category_Theming">Customización</string>
+    <string name="category_Time">Tempo</string>
+    <string name="category_Writing">Escrita</string>
+    <string name="antifeatures">Características indesexadas</string>
+    <string name="anti_ads">Esta ap contén publicidade</string>
+    <string name="anti_tracking">Esta ap rexistra e informa da súa actividade</string>
+    <string name="anti_nonfreeadd">Esta ap promociona engadidos que non son libres</string>
+    <string name="anti_nonfreenet">Esta ap promove servizos de rede que non son libres</string>
+    <string name="anti_nonfreedep">Esta ap depende doutras aps non libres</string>
+    <string name="anti_upstreamnonfree">O código fonte non é completamente libre</string>
+    <string name="anti_nonfreeassets">Este app contén elementos non-libres</string>
+    <string name="anti_disabledalgorithm">Este aplicativo ten unha sinatura de seguridade feble</string>
+    <string name="anti_knownvuln">Esta aplicación contén unha vulnerabilidade de seguridade coñecida</string>
+</resources>

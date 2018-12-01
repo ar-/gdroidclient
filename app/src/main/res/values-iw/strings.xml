@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">קישוריות</string>
+
+    <string name="category_Development">פיתוח</string>
+    <string name="category_Games">משחקים</string>
+    <string name="category_Graphics">גרפיקה</string>
+    <string name="category_Internet">אינטרנט</string>
+    <string name="category_Money">כלכלה</string>
+    <string name="category_Multimedia">מולטימדיה</string>
+    <string name="category_Navigation">ניווט</string>
+    <string name="category_Phone_SMS">טלפון ומסרונים</string>
+    <string name="category_Reading">קריאה</string>
+    <string name="category_Science_Education">מדע וחינוך</string>
+    <string name="category_Security">אבטחה</string>
+    <string name="category_Sports_Health">בריאות וספורט</string>
+    <string name="category_System">מערכת</string>
+    <string name="category_Theming">עיצוב</string>
+    <string name="category_Time">זמן</string>
+    <string name="category_Writing">כתיבה</string>
+    <string name="antifeatures">תכונות שליליות</string>
+    <string name="anti_ads">יישומון זה מכיל פרסום</string>
+    <string name="anti_tracking">יישומון זה עוקב ומדווח על פעילותך</string>
+    <string name="anti_nonfreeadd">יישומון זה מקדם תוספים שאינם חופשיים</string>
+    <string name="anti_nonfreenet">יישומון זה מקדם שירותי רשת שאינם חופשיים</string>
+    <string name="anti_nonfreedep">יישומון זה תלוי ביישומונים אחרים שאינם חופשיים</string>
+    <string name="anti_upstreamnonfree">קוד המקור בתצורתו המקורית אינו חופשי לחלוטין</string>
+    <string name="anti_nonfreeassets">יישומון זה מכיל נכסים בלתי חופשיים</string>
+    <string name="anti_disabledalgorithm">ליישומון זה יש חתימת אבטחה חלשה</string>
+    <string name="anti_knownvuln">יישומון זה מכיל חולשת אבטחה ידועה</string>
+    <string name="anti_nosourcesince">קוד המקור אינו זמין עוד, אין עדכונים.</string>
+</resources>

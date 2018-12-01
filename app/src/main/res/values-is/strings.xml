@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Tengingar</string>
+
+    <string name="category_Development">Þróun</string>
+    <string name="category_Games">Leikir</string>
+    <string name="category_Graphics">Myndefni</string>
+    <string name="category_Internet">Internetið</string>
+    <string name="category_Money">Fjármál</string>
+    <string name="category_Multimedia">Margmiðlun</string>
+    <string name="category_Navigation">Yfirsýn</string>
+    <string name="category_Phone_SMS">Símar og SMS</string>
+    <string name="category_Reading">Lestur</string>
+    <string name="category_Science_Education">Menntun og vísindi</string>
+    <string name="category_Security">Öryggi</string>
+    <string name="category_Sports_Health">Íþróttir og heilsa</string>
+    <string name="category_System">Kerfið</string>
+    <string name="category_Theming">Þemu</string>
+    <string name="category_Time">Tími</string>
+    <string name="category_Writing">Skrifa</string>
+    <string name="antifeatures">Neikvæðir eiginleikar</string>
+    <string name="anti_ads">Þetta forrit inniheldur auglýsingar</string>
+    <string name="anti_tracking">Þetta forrit fylgist með og gefur skýrslu um hegðun þína</string>
+    <string name="anti_nonfreeadd">Þetta forrit ýtir undir notkun ófrjálsra viðbóta</string>
+    <string name="anti_nonfreenet">Þetta forrit ýtir undir notkun ófrjálsrar þjónustu</string>
+    <string name="anti_nonfreedep">Þetta forrit er háð öðrum ófrjálsum forritum</string>
+    <string name="anti_upstreamnonfree">Grunnkóði útgefanda er ekki fullkomlega frjáls</string>
+    <string name="anti_nonfreeassets">Þetta forrit inniheldur ófrjáls tilföng</string>
+    <string name="anti_disabledalgorithm">Þetta forrit er með veika öryggisundirritun</string>
+    <string name="anti_knownvuln">Þetta forrit inniheldur þekktan öryggisveikleika</string>
+    <string name="anti_nosourcesince">Grunnkóðinn er ekki lengur tiltækur, engar uppfærslur eru mögulegar.</string>
+</resources>

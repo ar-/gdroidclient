@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Connectivitat</string>
+
+    <string name="category_Development">Desenvolupament</string>
+    <string name="category_Games">Jocs</string>
+    <string name="category_Graphics">Gràfics</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Diners</string>
+    <string name="category_Multimedia">Multimèdia</string>
+    <string name="category_Navigation">Navegació</string>
+    <string name="category_Phone_SMS">Mòbil i missatgeria</string>
+    <string name="category_Reading">Per a llegir</string>
+    <string name="category_Science_Education">Ciència i educació</string>
+    <string name="category_Security">Seguretat</string>
+    <string name="category_Sports_Health">Esports i Salut</string>
+    <string name="category_System">Sistema</string>
+    <string name="category_Theming">Temes</string>
+    <string name="category_Time">Temps</string>
+    <string name="category_Writing">Per a escriure</string>
+    <string name="antifeatures">Característiques no lliures</string>
+    <string name="anti_ads">Aquesta aplicació conté publicitat</string>
+    <string name="anti_tracking">Aquesta aplicació segueix i informa sobre la vostra activitat</string>
+    <string name="anti_nonfreeadd">Aquesta aplicació promou complements no lliures</string>
+    <string name="anti_nonfreenet">Aquesta aplicació promou serveis de xarxa no lliures</string>
+    <string name="anti_nonfreedep">Aquesta aplicació depèn d\'altres aplicacions no lliures</string>
+    <string name="anti_upstreamnonfree">El codi font no és del tot lliure</string>
+    <string name="anti_nonfreeassets">Aquesta aplicació conté parts no lliures</string>
+    <string name="anti_disabledalgorithm">La signatura de seguretat de l\'aplicació és feble</string>
+    <string name="anti_knownvuln">Aquesta aplicació té un problema de seguretat conegut</string>
+    <string name="anti_nosourcesince">El codi font ja no està disponible, no és possible actualitzar.</string>
+</resources>

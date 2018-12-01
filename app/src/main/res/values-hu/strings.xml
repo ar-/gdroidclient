@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Kapcsolódás</string>
+
+    <string name="category_Development">Fejlesztés</string>
+    <string name="category_Games">Játékok</string>
+    <string name="category_Graphics">Grafika</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Pénzügyek</string>
+    <string name="category_Multimedia">Multimédia</string>
+    <string name="category_Navigation">Navigáció</string>
+    <string name="category_Phone_SMS">Telefon és SMS</string>
+    <string name="category_Reading">Olvasás</string>
+    <string name="category_Science_Education">Tudomány és oktatás</string>
+    <string name="category_Security">Biztonság</string>
+    <string name="category_Sports_Health">Sport és egészség</string>
+    <string name="category_System">Rendszer</string>
+    <string name="category_Theming">Stílus</string>
+    <string name="category_Time">Idő</string>
+    <string name="category_Writing">Írás</string>
+    <string name="antifeatures">Előnytelen funkciók</string>
+    <string name="anti_ads">Az alkalmazás reklámot tartalmaz</string>
+    <string name="anti_tracking">Az alkalmazás nyomon követi és jelenti a tevékenységeit</string>
+    <string name="anti_nonfreeadd">Az alkalmazás nem szabad szoftver kiegészítőket támogat</string>
+    <string name="anti_nonfreenet">Az alkalmazás nem szabad szoftver alapú hálózati szolgáltatásokat támogat</string>
+    <string name="anti_nonfreedep">Az alkalmazás egyéb, nem szabad alkalmazásoktól függ</string>
+    <string name="anti_upstreamnonfree">Az upstream forráskód nem teljesen szabad</string>
+    <string name="anti_nonfreeassets">Az alkalmazás nem szabad szoftveres eszközöket tartalmaz</string>
+    <string name="anti_disabledalgorithm">Az alkalmazásnak gyenge a biztonsági aláírása</string>
+    <string name="anti_knownvuln">Az alkalmazás ismert biztonsági rést tartalmaz</string>
+    <string name="anti_nosourcesince">A forráskód többé nem érhető el, a frissítések nem lehetségesek.</string>
+</resources>

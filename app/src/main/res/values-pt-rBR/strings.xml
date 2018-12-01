@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Conectividade</string>
+
+    <string name="category_Development">Desenvolvimento</string>
+    <string name="category_Games">Jogos</string>
+    <string name="category_Graphics">Gráficos</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Dinheiro</string>
+    <string name="category_Multimedia">Multimídia</string>
+    <string name="category_Navigation">Navegação</string>
+    <string name="category_Phone_SMS">Telefone &amp; SMS</string>
+    <string name="category_Reading">Leitura</string>
+    <string name="category_Science_Education">Ciência e Educação</string>
+    <string name="category_Security">Segurança</string>
+    <string name="category_Sports_Health">Esportes &amp; Saúde</string>
+    <string name="category_System">Sistema</string>
+    <string name="category_Theming">Temas</string>
+    <string name="category_Time">Tempo</string>
+    <string name="category_Writing">Escrita</string>
+    <string name="antifeatures">Características indesejadas</string>
+    <string name="anti_ads">Este aplicativo contém propaganda</string>
+    <string name="anti_tracking">Este aplicativo rastreia e relata sua atividade</string>
+    <string name="anti_nonfreeadd">Este aplicativo promove complementos não livres</string>
+    <string name="anti_nonfreenet">Este aplicativo promove serviços de rede não livres</string>
+    <string name="anti_nonfreedep">Este aplicativo depende de aplicativos não livres</string>
+    <string name="anti_upstreamnonfree">O código fonte original não é totalmente livre</string>
+    <string name="anti_nonfreeassets">Este aplicativo contém conteúdo não-livre</string>
+    <string name="anti_disabledalgorithm">Este aplicativo tem um assinatura de segurança fraca</string>
+    <string name="anti_knownvuln">Este aplicativo contém uma falha de segurança já conhecida</string>
+    <string name="anti_nosourcesince">Não é possível atualizar, o código fonte não está mais disponivel.</string>
+</resources>

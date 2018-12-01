@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Konektifitas</string>
+
+    <string name="category_Development">Pengembangan</string>
+    <string name="category_Games">Permainan</string>
+    <string name="category_Graphics">Grafis</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Finansial</string>
+    <string name="category_Multimedia">Multimedia</string>
+    <string name="category_Navigation">Navigasi</string>
+    <string name="category_Phone_SMS">Telepon &amp; SMS</string>
+    <string name="category_Reading">Membaca</string>
+    <string name="category_Science_Education">Sains &amp; Edukasi</string>
+    <string name="category_Security">Keamanan</string>
+    <string name="category_Sports_Health">Olahraga &amp; Kesehatan</string>
+    <string name="category_System">Sistem</string>
+    <string name="category_Theming">Personalisasi</string>
+    <string name="category_Time">Waktu</string>
+    <string name="category_Writing">Menulis</string>
+    <string name="antifeatures">Anti-fitur</string>
+    <string name="anti_ads">Aplikasi ini berisi iklan</string>
+    <string name="anti_tracking">Aplikasi ini melacak dan melaporkan aktivitas Anda</string>
+    <string name="anti_nonfreeadd">Aplikasi ini mempromosikan pengaya tak-bebas</string>
+    <string name="anti_nonfreenet">Aplikasi ini mempromosikan layanan jaringan tak-bebas</string>
+    <string name="anti_nonfreedep">Aplikasi ini bergantung pada aplikasi tak-bebas lainnya</string>
+    <string name="anti_upstreamnonfree">Kode sumber utama tidak sepenuhnya Bebas</string>
+    <string name="anti_nonfreeassets">Apl ini mengandung aset tak-bebas</string>
+    <string name="anti_disabledalgorithm">Aplikasi ini mempunyai tanda tangan keamanan yang lemah</string>
+    <string name="anti_knownvuln">Aplikasi ini berisi kerentanan keamanan yang dikenal</string>
+    <string name="anti_nosourcesince">Sumber kode ini sudah tidak tersedia, tidak akan ada pembaharuan.</string>
+</resources>

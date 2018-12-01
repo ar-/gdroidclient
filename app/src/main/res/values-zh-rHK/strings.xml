@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="category_Connectivity">網絡</string>
+
+    <string name="category_Development">開發</string>
+    <string name="category_Games">遊戲</string>
+    <string name="category_Graphics">繪圖</string>
+    <string name="category_Internet">互聯網</string>
+    <string name="category_Money">財經</string>
+    <string name="category_Multimedia">多媒體</string>
+    <string name="category_Navigation">導航</string>
+    <string name="category_Phone_SMS">通話與短訊</string>
+    <string name="category_Reading">閱讀</string>
+    <string name="category_Science_Education">科學與教育</string>
+    <string name="category_Security">安全與保安</string>
+    <string name="category_Sports_Health">體育與健康</string>
+    <string name="category_System">系統</string>
+    <string name="category_Theming">主題</string>
+    <string name="category_Time">時間</string>
+    <string name="category_Writing">文書</string>
+    <string name="antifeatures">反功能</string>
+    <string name="anti_ads">此應用程式含有廣告</string>
+    <string name="anti_tracking">此應用程式會跟蹤及彙報您的行為</string>
+    <string name="anti_nonfreeadd">此應用程式推廣非自由的附加元件</string>
+    <string name="anti_nonfreenet">此應用程式推廣非自由的網絡服務</string>
+    <string name="anti_nonfreedep">此應用程式依賴其他非自由的應用程式</string>
+    <string name="anti_upstreamnonfree">上游原始碼並非完全自由</string>
+    <string name="anti_nonfreeassets">此應用程式含有非自由的資源</string>
+</resources>

@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">접속성</string>
+
+    <string name="category_Development">개발</string>
+    <string name="category_Games">게임</string>
+    <string name="category_Graphics">그래픽</string>
+    <string name="category_Internet">인터넷</string>
+    <string name="category_Money">금융</string>
+    <string name="category_Multimedia">멀티미디어</string>
+    <string name="category_Navigation">네비게이션</string>
+    <string name="category_Phone_SMS">전화 및 문자</string>
+    <string name="category_Reading">독서</string>
+    <string name="category_Science_Education">과학 및 교육</string>
+    <string name="category_Security">보안</string>
+    <string name="category_Sports_Health">스포츠 및 건강</string>
+    <string name="category_System">시스템</string>
+    <string name="category_Theming">꾸미기</string>
+    <string name="category_Time">시간</string>
+    <string name="category_Writing">작성</string>
+    <string name="antifeatures">안티 기능</string>
+    <string name="anti_ads">이 앱에는 광고를 포함합니다</string>
+    <string name="anti_tracking">이 앱은 당신의 활동을 추적하여 보고합니다</string>
+    <string name="anti_nonfreeadd">이 앱은 자유롭지 않은 부가 기능을 권장하고 있습니다</string>
+    <string name="anti_nonfreenet">이 앱은 자유롭지 않은 네트워크 서비스를 권장하고 있습니다</string>
+    <string name="anti_nonfreedep">이 앱은 다른 자유롭지 않은 앱에 의존합니다</string>
+    <string name="anti_upstreamnonfree">업스트림 소스 코드가 완전히 자유롭지 않습니다</string>
+    <string name="anti_nonfreeassets">이 앱은 자유롭지 않은 자산을 포함합니다</string>
+    <string name="anti_disabledalgorithm">이 앱은 약한 보안 서명이 있습니다</string>
+    <string name="anti_knownvuln">이 앱은 알려진 보안 취약점을 포함합니다</string>
+    <string name="anti_nosourcesince">소스 코드는 더 이상 사용 가능하지 않으며, 업데이트 가능성은 없습니다.</string>
+</resources>

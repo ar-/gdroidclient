@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Bağlantı</string>
+
+    <string name="category_Development">Geliştirme</string>
+    <string name="category_Games">Oyunlar</string>
+    <string name="category_Graphics">Grafik</string>
+    <string name="category_Internet">İnternet</string>
+    <string name="category_Money">Para</string>
+    <string name="category_Multimedia">Çoklu Ortam</string>
+    <string name="category_Navigation">Gezinim</string>
+    <string name="category_Phone_SMS">Telefon ve SMS</string>
+    <string name="category_Reading">Okuma</string>
+    <string name="category_Science_Education">Bilim ve Eğitim</string>
+    <string name="category_Security">Güvenlik</string>
+    <string name="category_Sports_Health">Spor ve Sağlık</string>
+    <string name="category_System">Sistem</string>
+    <string name="category_Theming">Temalandırma</string>
+    <string name="category_Time">Zaman</string>
+    <string name="category_Writing">Yazma</string>
+    <string name="antifeatures">Karşıt-özellikler</string>
+    <string name="anti_ads">Bu uygulama reklam içerir</string>
+    <string name="anti_tracking">Bu uygulama etkinliklerinizi izler ve bildirir</string>
+    <string name="anti_nonfreeadd">Bu uygulama özgür olmayan eklentiler önerir</string>
+    <string name="anti_nonfreenet">Bu uygulama özgür olmayan ağ servisleri önerir</string>
+    <string name="anti_nonfreedep">Bu uygulama özgür olmayan başka uygulamalara bağımlıdır</string>
+    <string name="anti_upstreamnonfree">Kaynak kod tamamen özgür değildir</string>
+    <string name="anti_nonfreeassets">Bu uygulama özgür olmayan unsurlar içerir</string>
+    <string name="anti_disabledalgorithm">Bu uygulamanın zayıf güvenlikli imzası var</string>
+    <string name="anti_knownvuln">Bu uygulama bilinen bir güvenlik zafiyeti içerir</string>
+    <string name="anti_nosourcesince">Kaynak kodu artık mevcut değil, güncelleme mümkün değil.</string>
+</resources>

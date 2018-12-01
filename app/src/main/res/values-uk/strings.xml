@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Зв\'язок</string>
+
+    <string name="category_Development">Розробка</string>
+    <string name="category_Games">Ігри</string>
+    <string name="category_Graphics">Графіка</string>
+    <string name="category_Internet">Інтернет</string>
+    <string name="category_Money">Фінанси</string>
+    <string name="category_Multimedia">Мультимедіа</string>
+    <string name="category_Navigation">Навігація</string>
+    <string name="category_Phone_SMS">Дзвінки та SMS</string>
+    <string name="category_Reading">Читання</string>
+    <string name="category_Science_Education">Освіта та наука</string>
+    <string name="category_Security">Безпека</string>
+    <string name="category_Sports_Health">Спорт та здоров\'я</string>
+    <string name="category_System">Система</string>
+    <string name="category_Theming">Тематика</string>
+    <string name="category_Time">Час</string>
+    <string name="category_Writing">Написання</string>
+    <string name="antifeatures">Небажані функції</string>
+    <string name="anti_ads">Цей застосунок містить рекламу</string>
+    <string name="anti_tracking">Цей застосунок відстежує та повідомляє вашу активність</string>
+    <string name="anti_nonfreeadd">Цей застосунок пропонує не-безкоштовні надбудови</string>
+    <string name="anti_nonfreenet">Цей застосунок пропонує не-безкоштовні мережеві послуги</string>
+    <string name="anti_nonfreedep">Цей застосунок залежить від іншого не-безкоштовного застосунку</string>
+    <string name="anti_upstreamnonfree">Вихідний код випуску не повністю безкоштовний</string>
+    <string name="anti_nonfreeassets">Цей застосунок містить не-безкоштовні активи</string>
+    <string name="anti_disabledalgorithm">Цей застосунок має слабкий підпис безпеки</string>
+    <string name="anti_knownvuln">Цей застосунок містить знану вразливість безпеки</string>
+    <string name="anti_nosourcesince">Джерельний код вже не є доступним, оновлення не є можливими.</string>
+</resources>

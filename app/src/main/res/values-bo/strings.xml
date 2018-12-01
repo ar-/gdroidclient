@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="category_Connectivity">མཐུད་མཚམས།</string>
+
+    <string name="category_Development">ཡར་རྒྱས།</string>
+    <string name="category_Games">རྩེད་རིགས།</string>
+    <string name="category_Graphics">བརྐོས་རིས།</string>
+    <string name="category_Internet">དྲྭ་རྒྱ།</string>
+    <string name="category_Money">དངུལ།</string>
+    <string name="category_Multimedia">བརྒྱུད་ལམ་སྣ་ཚོགས།</string>
+    <string name="category_Navigation">ཕྱོགས་ཁྲིད།</string>
+    <string name="category_Phone_SMS">ཁ་པར་དང་འཕྲིན་ཐུང་།</string>
+    <string name="category_Reading">ཀློག་བཞིན་པ།</string>
+    <string name="category_Science_Education">ཚན་རིག་དང་ཤེས་ཡོན།</string>
+    <string name="category_Security">སྲུང་སྐྱོབ།</string>
+    <string name="category_Sports_Health">རྩེད་རིགས་དང་འཕྲོད་བསྟེན།</string>
+    <string name="category_System">མ་ལག</string>
+    <string name="category_Theming">བརྗོད་གཞི་གླེང་བཞིན་པ།</string>
+    <string name="category_Time">དུས་ཚོད།</string>
+    <string name="category_Writing">འབྲི་བཞིན་པ།</string>
+    <string name="antifeatures">ཁྱད་ཆོས་འགལ་ཟླ།</string>
+    <string name="anti_ads">མཉེན་ཆས་འདིའི་ནང་ཁྱབ་བསྒྲགས་ཡོད།</string>
+    <string name="anti_tracking">མཉེན་ཆས་འདིས་ཁྱེད་རང་རྗེས་འདེད་བཏང་ནས་ལས་ཀ་གང་བྱས་ཀྱང་བརྡ་ལན་སྤྲད་ཀྱི་རེད།</string>
+    <string name="anti_nonfreeadd">མཉེན་ཆས་འདི་རིན་མེད་མ་ཡིན་པའི་ཆ་རྐྱེན་འཕར་མ་རྒྱབ་སྐྱོར་བྱེད་ཀྱི་ཡོད།</string>
+    <string name="anti_nonfreenet">མཉེས་ཆས་འདིས་རིན་མེད་མ་ཡིན་པའི་དྲྭ་རྒྱའི་ཞབས་ཞུ་ཁྱབ་བསྒྲགས་བྱེད་ཀྱི་ཡོད།</string>
+    <string name="anti_nonfreedep">མཉེན་ཆས་འདི་རིན་མེད་མ་ཡིན་པའི་མཉེན་ཆས་གཞན་ལ་བརྟེན་ནས་ཡོད།</string>
+    <string name="anti_upstreamnonfree">འབྱུང་ཁུངས་ཨང་རྟགས་འདི་ཆ་ཚང་རིན་མེད་མ་རེད།</string>
+    <string name="anti_nonfreeassets">མཉེན་ཆས་འདིའི་ནང་རིན་མེད་མ་ཡིན་པའི་རྒྱུ་ཆ་ཡོད།</string>
+</resources>

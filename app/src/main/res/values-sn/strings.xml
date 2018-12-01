@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="category_Connectivity">Mahakiro</string>
+
+    <string name="category_Development">Tsvitsa</string>
+    <string name="category_Games">Mitambo</string>
+    <string name="category_Graphics">Magraphics</string>
+    <string name="category_Internet">Dandemutande</string>
+    <string name="category_Money">Mari</string>
+    <string name="category_Multimedia">Midhiya yakasiyana</string>
+    <string name="category_Navigation">Mafambiro</string>
+    <string name="category_Phone_SMS">Nhare neTsamba pfupi</string>
+    <string name="category_Reading">Kuverenga</string>
+    <string name="category_Science_Education">zveScience neFundo</string>
+    <string name="category_Security">Zvekukwdekwera</string>
+    <string name="category_Sports_Health">Nhabvu neUtano</string>
+    <string name="category_System">Sistemu</string>
+    <string name="category_Theming">Kudingindira</string>
+    <string name="category_Time">Nguva</string>
+    <string name="category_Writing">Kunyora</string>
+    <string name="anti_ads">App ino ine zvakashambadzwa zvemamwe makambani</string>
+    <string name="anti_tracking">App ino inotevera nekududzira zvauri kuita</string>
+    <string name="anti_nonfreeadd">App inosesedza zvinowedzerwa paapp ino zvinobhadharwa</string>
+    <string name="anti_nonfreenet">App ino inosesedza zvirango zvemasaisai zvinobhadharwa</string>
+    <string name="anti_nonfreedep">App ino inotemba nemamwe maapps anobhadharwa</string>
+    <string name="anti_upstreamnonfree">Nyuko yemurau irikumberi haisi yemahara</string>
+    <string name="anti_nonfreeassets">App ino inenhumbi dzinobhadharwa</string>
+</resources>

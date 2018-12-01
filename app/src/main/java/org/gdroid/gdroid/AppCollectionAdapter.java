@@ -122,7 +122,8 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
         final String headline;
         if (collectionName.startsWith("cat:"))
         {
-            headline = collectionName.replace("cat:","");
+            String catName = collectionName.replace("cat:","");
+            headline = Util.getLocalisedCategoryName(mContext, catName);
         }
         else if (collectionName.startsWith("tag:"))
         {

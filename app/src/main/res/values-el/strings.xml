@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Συνδεσιμότητα</string>
+
+    <string name="category_Development">Προγραμματισμός</string>
+    <string name="category_Games">Παιχνίδια</string>
+    <string name="category_Graphics">Γραφικά</string>
+    <string name="category_Internet">Διαδίκτυο</string>
+    <string name="category_Money">Οικονομικά</string>
+    <string name="category_Multimedia">Πολυμέσα</string>
+    <string name="category_Navigation">Πλοήγηση</string>
+    <string name="category_Phone_SMS">Τηλέφωνο &amp; μηνύματα</string>
+    <string name="category_Reading">Ανάγνωση</string>
+    <string name="category_Science_Education">Επιστήμη &amp; Εκπαίδευση</string>
+    <string name="category_Security">Ασφάλεια</string>
+    <string name="category_Sports_Health">Αθλητισμός &amp; Υγεία</string>
+    <string name="category_System">Σύστημα</string>
+    <string name="category_Theming">Προσωποποίηση</string>
+    <string name="category_Time">Χρόνος</string>
+    <string name="category_Writing">Γραφή</string>
+    <string name="antifeatures">ανεπιθύμητα χαρακτηριστικά</string>
+    <string name="anti_ads">Αυτή η εφαρμογή περιέχει διαφημίσεις</string>
+    <string name="anti_tracking">Αυτή η εφαρμογή παρακολουθεί και αναφέρει την δραστηριότητα σας</string>
+    <string name="anti_nonfreeadd">Αυτή η εφαρμογή προωθεί μη-ελεύθερα πρόσθετα</string>
+    <string name="anti_nonfreenet">Αυτή η εφαρμογή προωθεί μη ελεύθερες υπηρεσίες δικτύου</string>
+    <string name="anti_nonfreedep">Αυτή η εφαρμογή εξαρτάται από άλλες μη-ελεύθερες εφαρμογές</string>
+    <string name="anti_upstreamnonfree">Ο αρχικός πηγαίος κώδικας δεν είναι εξ ολοκλήρου ελεύθερος</string>
+    <string name="anti_nonfreeassets">Αυτή η εφαρμογή περιέχει μη-ελεύθερα στοιχεία</string>
+    <string name="anti_disabledalgorithm">Αυτή η εφαρμογή έχει αδύναμη υπογραφή ασφαλείας</string>
+    <string name="anti_knownvuln">Αυτή η εφαρμογή περιέχει μια γνωστή ευπάθεια ασφαλείας</string>
+    <string name="anti_nosourcesince">Ο πηγαίος κώδικας δεν είναι πλέον διαθέσιμος, η ενημέρωση δεν είναι πλέον δυνατή.</string>
+</resources>
