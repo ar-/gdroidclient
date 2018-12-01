@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Connectiviteit</string>
+
+    <string name="category_Development">Ontwikkeling</string>
+    <string name="category_Games">Spellen</string>
+    <string name="category_Graphics">Grafisch</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Geld</string>
+    <string name="category_Multimedia">Multimedia</string>
+    <string name="category_Navigation">Navigatie</string>
+    <string name="category_Phone_SMS">Telefoon &amp; SMS</string>
+    <string name="category_Reading">Lezen</string>
+    <string name="category_Science_Education">Onderwijs &amp; wetenschap</string>
+    <string name="category_Security">Beveiliging</string>
+    <string name="category_Sports_Health">Sport &amp; gezondheid</string>
+    <string name="category_System">Systeem</string>
+    <string name="category_Theming">Thema's</string>
+    <string name="category_Time">Tijd</string>
+    <string name="category_Writing">Schrijven</string>
+    <string name="antifeatures">Anti-functies</string>
+    <string name="antiadslist">Deze app bevat advertenties</string>
+    <string name="antitracklist">Deze app houdt je activiteiten bij en rapporteert ze</string>
+    <string name="antinonfreeadlist">Deze app promoot niet-vrije add-ons</string>
+    <string name="antinonfreenetlist">Deze app promoot niet-vrije netwerkdiensten</string>
+    <string name="antinonfreedeplist">Deze app vereist andere niet-vrije apps</string>
+    <string name="antiupstreamnonfreelist">De broncode stroomopwaarts is niet helemaal vrij (open-bron)</string>
+    <string name="antinonfreeassetslist">Deze app bevat niet-vrije elementen</string>
+    <string name="antidisabledalgorithmlist">Deze app heeft een zwakke beveiligingshandtekening</string>
+    <string name="antiknownvulnlist">Deze app bevat een bekend probleem in de beveiliging</string>
+    <string name="antinosourcesince">De broncode is niet langer beschikbaar, geen updates mogelijk.</string>
+</resources>

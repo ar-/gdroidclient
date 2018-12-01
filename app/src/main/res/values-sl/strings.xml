@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="category_Connectivity">Povezljivost</string>
+
+    <string name="category_Development">Razvijanje</string>
+    <string name="category_Games">Igre</string>
+    <string name="category_Graphics">Grafika</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Denar</string>
+    <string name="category_Multimedia">Multimedija</string>
+    <string name="category_Navigation">Navigacija</string>
+    <string name="category_Phone_SMS">Telefon &amp; SMS</string>
+    <string name="category_Reading">Branje</string>
+    <string name="category_Science_Education">Znanost &amp; Izobrazba</string>
+    <string name="category_Security">Varnost</string>
+    <string name="category_Sports_Health">Šport &amp; zdravje</string>
+    <string name="category_System">Sistem</string>
+    <string name="category_Theming">Izgled</string>
+    <string name="category_Time">Čas</string>
+    <string name="category_Writing">Pisanje</string>
+    <string name="antifeatures">Neželjene lastnosti</string>
+    <string name="antiadslist">Ta aplikacija vsebuje oglaševanje</string>
+    <string name="antitracklist">Ta aplikacija vam sledi in poroča o vaši aktivnosti</string>
+    <string name="antinonfreeadlist">Ta aplikacija promovira plačljive dodatke</string>
+    <string name="antinonfreenetlist">Ta aplikacija promovira plačljive internetne storitve</string>
+    <string name="antinonfreedeplist">Ta aplikcija je odvisna od ostalih ne odprtih aplikacijah</string>
+    <string name="antiupstreamnonfreelist">Originalna koda ni popolnoma odprta</string>
+    <string name="antinonfreeassetslist">Ta aplikacija vsebuje neodprte enote</string>
+    <string name="antidisabledalgorithmlist">Ta aplikacija ima šibek varnostni podpis</string>
+    <string name="antiknownvulnlist">Ta aplikacija vsebuje znano varnostno pomanjkljivost</string>
+</resources>

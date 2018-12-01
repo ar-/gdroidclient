@@ -1,0 +1,8 @@
+<resources>
+
+
+    <string name="category_Games">ಆಟಗಳು</string>
+    <string name="category_Security">ಸುರಕ್ಷತೆ</string>
+    <string name="category_Sports_Health">ಕ್ರೀಡೆ &amp; ಆರೋಗ್ಯ</string>
+    <string name="category_Time">ಸಮಯ</string>
+</resources>

@@ -152,6 +152,27 @@ public class AppDetailActivity extends AppCompatActivity {
             categoryView.addView(tv);
         }
 
+        // fill anti-features
+        final TextView lblAntiFeatures = findViewById(R.id.lbl_antifeatures);
+        if (!TextUtils.isEmpty(mApp.antifeatures))
+        {
+            String afsString = "";
+            final String[] afs = mApp.antifeatures.split(",");
+            for (int i = 0 ; i< afs.length ;i++)
+            {
+                if (i>0)
+                {
+                    afsString+=", ";
+                }
+                afsString += Util.getLocalisedAntifeatureDescriptoon(mContext, afs[i]);
+            }
+            lblAntiFeatures.setText(afsString);
+        }
+        else
+        {
+            lblAntiFeatures.setVisibility(View.GONE);
+        }
+
         // populate similar apps
         List<ApplicationBean> applicationBeanList;
         RecyclerView viewSameCat = (RecyclerView) findViewById(R.id.rec_view_same_category);

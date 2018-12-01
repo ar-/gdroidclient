@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Tilkobling</string>
+
+    <string name="category_Development">Utvikling</string>
+    <string name="category_Games">Spill</string>
+    <string name="category_Graphics">Grafikk</string>
+    <string name="category_Internet">Internett</string>
+    <string name="category_Money">Penger</string>
+    <string name="category_Multimedia">Multimedia</string>
+    <string name="category_Navigation">Navigasjon</string>
+    <string name="category_Phone_SMS">Telefon og SMS</string>
+    <string name="category_Reading">Lesning</string>
+    <string name="category_Science_Education">Vitenskap &amp; utdanning</string>
+    <string name="category_Security">Sikkerhet</string>
+    <string name="category_Sports_Health">Idrett og helse</string>
+    <string name="category_System">System</string>
+    <string name="category_Theming">Kostymering</string>
+    <string name="category_Time">Tid</string>
+    <string name="category_Writing">Skriving</string>
+    <string name="antifeatures">Anti-funksjoner</string>
+    <string name="antiadslist">Dette programmet inneholder reklame</string>
+    <string name="antitracklist">Dette programmet sporer og rapporterer din aktivitet</string>
+    <string name="antinonfreeadlist">Dette programmet promoterer ufrie utvidelser</string>
+    <string name="antinonfreenetlist">Dette programmet promoterer ufrie nettverkstjenester</string>
+    <string name="antinonfreedeplist">Dette programmet avhenger av andre ufrie applikasjoner</string>
+    <string name="antiupstreamnonfreelist">Kildekoden er ikke helt fri</string>
+    <string name="antinonfreeassetslist">Dette programmet inneholder ufrie gjenstander</string>
+    <string name="antidisabledalgorithmlist">Dette programmet har en svak sikkerhetssignatur</string>
+    <string name="antiknownvulnlist">Dette programmet inneholder en kjent sikkerhetsfeil</string>
+    <string name="antinosourcesince">Kildekoden er ikke lenger tilgengelig, ingen oppgraderinger mulig.</string>
+</resources>

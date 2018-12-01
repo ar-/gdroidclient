@@ -1,0 +1,8 @@
+<resources>
+
+
+    <string name="category_Internet">இணையம்</string>
+    <string name="category_Money">பணம்</string>
+    <string name="antiadslist">இச்செயலியில் விளம்பரங்கள் உள்ளன</string>
+    <string name="antitracklist">இச்செயலி உங்கள் செயல்பாடுகளை கண்கானித்து தகவல்களை வேறொருவருக்குத் தெரிவிக்கிறது</string>
+</resources>

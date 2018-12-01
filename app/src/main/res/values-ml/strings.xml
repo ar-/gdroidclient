@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="category_Connectivity">കൂട്ടുകെട്ട്‌</string>
+
+    <string name="category_Development">ഡെവലപ്മെന്റ്</string>
+    <string name="category_Games">കളികള്‍</string>
+    <string name="category_Graphics">ചിത്രങ്ങള്‍</string>
+    <string name="category_Internet">ഇന്റര്‍നെറ്റ്</string>
+    <string name="category_Money">സാമ്പത്തികം</string>
+    <string name="category_Multimedia">മൾട്ടിമീഡിയ</string>
+    <string name="category_Navigation">ഗതിനിയന്ത്രണം</string>
+    <string name="category_Phone_SMS">ഫോണും സന്ദേശങ്ങളും</string>
+    <string name="category_Reading">വായന</string>
+    <string name="category_Science_Education">ശാസ്ത്രവും വിദ്യാഭ്യാസവും</string>
+    <string name="category_Security">സുരക്ഷ</string>
+    <string name="category_Sports_Health">കായികവും ആരോഗ്യവും</string>
+    <string name="category_System">സിസ്റ്റം</string>
+    <string name="category_Theming">തീമിംഗ്</string>
+    <string name="category_Time">സമയം</string>
+    <string name="category_Writing">എഴുത്ത്</string>
+    <string name="antifeatures">വിരുദ്ധ സവിശേഷതകൾ</string>
+    <string name="antiadslist">ഈ പ്രയോഗത്തില്‍ പരസ്യം നൽകിയിരിക്കുന്നു</string>
+    <string name="antitracklist">ഈ പ്രയോഗം നിങ്ങളുടെ പ്രവര്‍ത്തനങ്ങള്‍ നിരീക്ഷിക്കുകയും പ്രസിദ്ധപ്പെടുത്തുകയും ചെയ്യുന്നു</string>
+    <string name="antinonfreeadlist">ഈ പ്രയോഗം സ്വതന്ത്രമല്ലാത്ത ആഡ്-ഓണുകള്‍ പ്രോത്സാഹിപ്പിക്കുന്നു</string>
+    <string name="antinonfreenetlist">ഈ പ്രയോഗം സ്വതന്ത്രമല്ലാത്ത നെറ്റ്‌വര്‍ക് സേവനങ്ങള്‍ പ്രോത്സാഹിപ്പിക്കുന്നു</string>
+    <string name="antinonfreedeplist">ഈ പ്രയോഗം സ്വതന്ത്രമല്ലാത്ത മറ്റു പ്രയോഗങ്ങളെ ആശ്രയിക്കുന്നു</string>
+    <string name="antiupstreamnonfreelist">അപ്സ്ട്രീം സോഴ്സ് കോഡ് പൂർണ്ണമായും സ്വതന്ത്രമല്ല</string>
+    <string name="antinonfreeassetslist">ഈ പ്രയോഹം സ്വതന്ത്രമല്ലാത്ത ആസ്തികള്‍ ഉപയോഗിക്കുന്നു</string>
+</resources>

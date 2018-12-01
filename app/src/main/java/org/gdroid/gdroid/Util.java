@@ -266,6 +266,68 @@ public class Util {
         return c.getString(resId);
     }
 
+    public static String getLocalisedAntifeatureDescriptoon(Context c, String af)
+    {
+        // in the strign XML all antifeatures are prefixed by 'anti', most of them suffixed by 'list' and all lowercase
+        af = af.toLowerCase();
+        if (!af.equals("nosourcesince"))
+            af += "list";
+        af = "anti"+af;
+        return getStringResourceByName(c, af);
+    }
+
+    /**
+     * references to all string IDs so they don't get removed by the "remove unused" function
+     */
+    public static void getReferenceToallStrings()
+    {
+        int i = 0;
+
+        // anti
+        i = R.string.antiadslist;
+        i = R.string.antidisabledalgorithmlist;
+        i = R.string.antifeatures;
+        i = R.string.antifeatureswarning;
+        i = R.string.antiknownvulnlist;
+        i = R.string.antiadslist;
+        i = R.string.antinonfreeadlist;
+        i = R.string.antinonfreeassetslist;
+        i = R.string.antinonfreedeplist;
+        i = R.string.antinonfreenetlist;
+        i = R.string.antinosourcesince;
+        i = R.string.antitracklist;
+        i = R.string.antiupstreamnonfreelist;
+
+        // cats
+        i = R.string.category_Development;
+        i = R.string.category_Games;
+        i = R.string.category_Graphics;
+        i = R.string.category_Internet;
+        i = R.string.category_Money;
+        i = R.string.category_Multimedia;
+        i = R.string.category_Navigation;
+        i = R.string.category_Phone_SMS;
+        i = R.string.category_Reading;
+        i = R.string.category_Science_Education;
+        i = R.string.category_Security;
+        i = R.string.category_Sports_Health;
+        i = R.string.category_System;
+        i = R.string.category_Theming;
+        i = R.string.category_Time;
+        i = R.string.category_Writing;
+
+        // tags
+        i = R.string.calendar;
+        i = R.string.camera;
+        i = R.string.email_client;
+        i = R.string.file_browser;
+        i = R.string.gallery;
+        i = R.string.music_player;
+        i = R.string.web_browser;
+        i = R.string.youtube_player;
+
+    }
+
     public static boolean isAppInstalled(Context context, String packageName) {
         try {
             context.getPackageManager().getApplicationInfo(packageName, 0);

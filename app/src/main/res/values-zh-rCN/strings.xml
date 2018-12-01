@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">连接</string>
+
+    <string name="category_Development">开发</string>
+    <string name="category_Games">游戏</string>
+    <string name="category_Graphics">图像</string>
+    <string name="category_Internet">网络</string>
+    <string name="category_Money">理财</string>
+    <string name="category_Multimedia">多媒体</string>
+    <string name="category_Navigation">导航</string>
+    <string name="category_Phone_SMS">通话与短信</string>
+    <string name="category_Reading">阅读</string>
+    <string name="category_Science_Education">科学与教育</string>
+    <string name="category_Security">安全</string>
+    <string name="category_Sports_Health">运动与健康</string>
+    <string name="category_System">系统</string>
+    <string name="category_Theming">主题</string>
+    <string name="category_Time">时间</string>
+    <string name="category_Writing">记录</string>
+    <string name="antifeatures">Anti-feature</string>
+    <string name="antiadslist">该应用程序包含广告</string>
+    <string name="antitracklist">此应用会记录并报告您的行为</string>
+    <string name="antinonfreeadlist">该应用程序会推广非自由的插件或扩展</string>
+    <string name="antinonfreenetlist">该应用程序会推广非自由的网络服务</string>
+    <string name="antinonfreedeplist">该应用程序依赖于其它非自由的应用程序</string>
+    <string name="antiupstreamnonfreelist">上游源代码不是完全自由的</string>
+    <string name="antinonfreeassetslist">该应用包含非自由资产</string>
+    <string name="antidisabledalgorithmlist">这个应用程序的安全签名较弱</string>
+    <string name="antiknownvulnlist">这个应用程序包含已知的安全漏洞</string>
+    <string name="antinosourcesince">源代码不再可用，无法更新。</string>
+</resources>

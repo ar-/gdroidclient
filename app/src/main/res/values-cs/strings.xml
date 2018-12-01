@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Připojení</string>
+
+    <string name="category_Development">Vývoj</string>
+    <string name="category_Games">Hry</string>
+    <string name="category_Graphics">Grafika</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Peníze</string>
+    <string name="category_Multimedia">Multimédia</string>
+    <string name="category_Navigation">Navigace</string>
+    <string name="category_Phone_SMS">Telefon a SMS</string>
+    <string name="category_Reading">Čtení</string>
+    <string name="category_Science_Education">Věda a vzdělání</string>
+    <string name="category_Security">Zabezpečení</string>
+    <string name="category_Sports_Health">Sport a zdraví</string>
+    <string name="category_System">Systém</string>
+    <string name="category_Theming">Vzhledy</string>
+    <string name="category_Time">Čas</string>
+    <string name="category_Writing">Psaní</string>
+    <string name="antifeatures">Anti-funkce</string>
+    <string name="antiadslist">Tato aplikace obsahuje reklamu</string>
+    <string name="antitracklist">Tato aplikace zaznamenává a hlásí vaše aktivity</string>
+    <string name="antinonfreeadlist">Tato aplikace propaguje nesvobodné doplňky</string>
+    <string name="antinonfreenetlist">Tato aplikace propaguje nesvobodné síťové služby</string>
+    <string name="antinonfreedeplist">Tato aplikace závisí na ostatních nesvobodných aplikacích</string>
+    <string name="antiupstreamnonfreelist">Originální zdrojový kód je částečně nesvovodný</string>
+    <string name="antinonfreeassetslist">Tato aplikace obsahuje nesvobodné části</string>
+    <string name="antidisabledalgorithmlist">Tato aplikace má slabý bezpečnostní podpis</string>
+    <string name="antiknownvulnlist">Tato aplikace má známou zranitelnost v zabezpečení</string>
+    <string name="antinosourcesince">Zdrojový kód už není k dispozici, aktualizace nejsou možné.</string>
+</resources>

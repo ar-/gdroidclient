@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="category_Connectivity">Povezivanje</string>
+
+    <string name="category_Development">Razvoj</string>
+    <string name="category_Games">Igre</string>
+    <string name="category_Graphics">Grafika</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Novac</string>
+    <string name="category_Multimedia">Multimedija</string>
+    <string name="category_Navigation">Navigacija</string>
+    <string name="category_Phone_SMS">Telefon i SMS</string>
+    <string name="category_Reading">Čitanje</string>
+    <string name="category_Science_Education">Znanost i edukacija</string>
+    <string name="category_Security">Sigurnost</string>
+    <string name="category_Sports_Health">Sport i zdravlje</string>
+    <string name="category_System">Sustav</string>
+    <string name="category_Theming">Teme</string>
+    <string name="category_Time">Vrijeme</string>
+    <string name="category_Writing">Pisanje</string>
+    <string name="antiadslist">Ova aplikacija sadržava oglase</string>
+    <string name="antitracklist">Ova aplikacija prati i javlja Vašu aktivnost</string>
+    <string name="antinonfreeadlist">Ova aplikacija promovira neslobodne dodatke</string>
+    <string name="antinonfreenetlist">Ova aplikacija promovira neslobodne mrežne usluge</string>
+    <string name="antinonfreedeplist">Ova aplikacija ovisi o drugim neslobodnim aplikacijama</string>
+    <string name="antiupstreamnonfreelist">Uzvodni izvorni kod nije u potpunosti otvoren/slobodan</string>
+    <string name="antinonfreeassetslist">Ova aplikacija sadrži neslobodne resurse</string>
+</resources>

@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="category_Connectivity">Tilslutningsmuligheder</string>
+
+    <string name="category_Development">Udvikling</string>
+    <string name="category_Games">Spil</string>
+    <string name="category_Graphics">Grafik</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Penge</string>
+    <string name="category_Multimedia">Multimedie</string>
+    <string name="category_Navigation">Navigation</string>
+    <string name="category_Phone_SMS">Telefon &amp; SMS</string>
+    <string name="category_Reading">Læsning</string>
+    <string name="category_Science_Education">Videnskab &amp; Uddannelse</string>
+    <string name="category_Security">Sikkerhed</string>
+    <string name="category_Sports_Health">Sport &amp; Sundhed</string>
+    <string name="category_System">System</string>
+    <string name="category_Theming">Temaer</string>
+    <string name="category_Time">Tid</string>
+    <string name="category_Writing">Skrivning</string>
+    <string name="antifeatures">Antifunktionalitet</string>
+    <string name="antiadslist">Appen indeholder annoncering</string>
+    <string name="antitracklist">Denne app sporer og indberetter din aktivitet</string>
+    <string name="antinonfreeadlist">Appen fremmer ikke-frie tilføjelser</string>
+    <string name="antinonfreenetlist">Appen fremmer ikke-frie netværkstjenester</string>
+    <string name="antinonfreedeplist">Denne app afhænger af andre ikke-frie apps</string>
+    <string name="antiupstreamnonfreelist">Kildekoden opstrøms er ikke udelukkende fri</string>
+    <string name="antinonfreeassetslist">Denne app indeholder ikke-frit indhold</string>
+    <string name="antidisabledalgorithmlist">Denne app har en svag sikkerhedssignatur</string>
+    <string name="antiknownvulnlist">Denne app indeholder en kendt sårbarhed</string>
+</resources>

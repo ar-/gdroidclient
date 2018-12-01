@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="category_Connectivity">Tuqqniwt</string>
+
+    <string name="category_Development">Taneflit</string>
+    <string name="category_Games">Uraren</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Tadrimt</string>
+    <string name="category_Multimedia">Umuγ n ugetmedia</string>
+    <string name="category_Navigation">Asnirem</string>
+    <string name="category_Phone_SMS">Tiliγri &amp; SMS</string>
+    <string name="category_Reading">Taγuri</string>
+    <string name="category_Science_Education">Tussna &amp; Usegmi</string>
+    <string name="category_Security">Taγellist</string>
+    <string name="category_Sports_Health">Addal &amp; Tazmert</string>
+    <string name="category_System">Anagraw</string>
+    <string name="category_Time">Akud</string>
+    <string name="category_Writing">Tira</string>
+    <string name="antifeatures">Timahilin</string>
+    <string name="antitracklist">Asnas-agi ad yeḍfeṛ udiγ ad d-yazen armud-ik</string>
+</resources>

@@ -16,7 +16,7 @@
   ~
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -122,6 +122,38 @@
     <string name="music_player">Music Player</string>
     <string name="web_browser">Web Browser</string>
     <string name="youtube_player">Youtube Player</string>
+
+    <!--categories-->
+    <string tools:ignore="UnusedResources" name="category_Connectivity">Connectivity</string>
+    <string tools:ignore="UnusedResources" name="category_Development">Development</string>
+    <string tools:ignore="UnusedResources" name="category_Games">Games</string>
+    <string tools:ignore="UnusedResources" name="category_Graphics">Graphics</string>
+    <string tools:ignore="UnusedResources" name="category_Internet">Internet</string>
+    <string tools:ignore="UnusedResources" name="category_Money">Money</string>
+    <string tools:ignore="UnusedResources" name="category_Multimedia">Multimedia</string>
+    <string tools:ignore="UnusedResources" name="category_Navigation">Navigation</string>
+    <string tools:ignore="UnusedResources" name="category_Phone_SMS">Phone &amp; SMS</string>
+    <string tools:ignore="UnusedResources" name="category_Reading">Reading</string>
+    <string tools:ignore="UnusedResources" name="category_Science_Education">Science &amp; Education</string>
+    <string tools:ignore="UnusedResources" name="category_Security">Security</string>
+    <string tools:ignore="UnusedResources" name="category_Sports_Health">Sports &amp; Health</string>
+    <string tools:ignore="UnusedResources" name="category_System">System</string>
+    <string tools:ignore="UnusedResources" name="category_Theming">Theming</string>
+    <string tools:ignore="UnusedResources" name="category_Time">Time</string>
+    <string tools:ignore="UnusedResources" name="category_Writing">Writing</string>
+
+    <!--anti features-->
+    <string name="antifeatures">Anti-features</string>
+    <string name="antiadslist">This app contains advertising</string>
+    <string name="antitracklist">This app tracks and reports your activity</string>
+    <string name="antinonfreeadlist">This app promotes non-free add-ons</string>
+    <string name="antinonfreenetlist">This app promotes non-free network services</string>
+    <string name="antinonfreedeplist">This app depends on other non-free apps</string>
+    <string name="antiupstreamnonfreelist">The upstream source code is not entirely Free</string>
+    <string name="antinonfreeassetslist">This app contains non-free assets</string>
+    <string name="antidisabledalgorithmlist">This app has a weak security signature</string>
+    <string name="antiknownvulnlist">This app contains a known security vulnerability</string>
+    <string name="antinosourcesince">The source code is no longer available, no updates possible.</string>
 
 
 </resources>

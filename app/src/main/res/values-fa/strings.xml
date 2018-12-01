@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">اتّصال</string>
+
+    <string name="category_Development">توسعه</string>
+    <string name="category_Games">بازی</string>
+    <string name="category_Graphics">گرافیک</string>
+    <string name="category_Internet">اینترنت</string>
+    <string name="category_Money">مالی</string>
+    <string name="category_Multimedia">چندرسانه‌ای</string>
+    <string name="category_Navigation">ناوبری</string>
+    <string name="category_Phone_SMS">تلفن و پیامک</string>
+    <string name="category_Reading">خواندن</string>
+    <string name="category_Science_Education">علم و آموزش</string>
+    <string name="category_Security">امنیت</string>
+    <string name="category_Sports_Health">ورزش و سلامت</string>
+    <string name="category_System">سیستم</string>
+    <string name="category_Theming">شخصی‌سازی</string>
+    <string name="category_Time">زمان</string>
+    <string name="category_Writing">نوشتن</string>
+    <string name="antifeatures">ضد ویژگی‌ها</string>
+    <string name="antiadslist">این برنامه دارای تبلیغات است</string>
+    <string name="antitracklist">این برنامه، فعّالیت‌هایتان را ردیابی و گزارش می‌کند</string>
+    <string name="antinonfreeadlist">این برنامه، افزونه‌های غیر آزاد را تبلیغ می‌کند</string>
+    <string name="antinonfreenetlist">این برنامه، خدمات شبکه‌های غیر آزاد را تبلیغ می‌کند</string>
+    <string name="antinonfreedeplist">این برنامه، به دیگر کاره‌های غیر آزاد وابسته است</string>
+    <string name="antiupstreamnonfreelist">کد مبدأ بالادستی کاملاً آزاد نیست</string>
+    <string name="antinonfreeassetslist">این کاره شامل ابزارهای پولی است</string>
+    <string name="antidisabledalgorithmlist">این کاره یک امضای امنیتی ضعیف دارد</string>
+    <string name="antiknownvulnlist">این کاره یک آسیب‌پذیری امنیتی شناخته‌شده دارد</string>
+    <string name="antinosourcesince">کد مبدأ دیگر در دسترس نیست، به‌روز رسانی ناممکن است.</string>
+</resources>

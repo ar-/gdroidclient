@@ -1,0 +1,22 @@
+<resources>
+
+<string name="category_Connectivity">Savienojamība</string>
+
+    <string name="category_Development">Izstrādāšana</string>
+    <string name="category_Games">Spēles</string>
+    <string name="category_Graphics">Grafika</string>
+    <string name="category_Internet">Internets</string>
+    <string name="category_Money">Nauda</string>
+    <string name="category_Multimedia">Multivides</string>
+    <string name="category_Navigation">Navigācija</string>
+    <string name="category_Phone_SMS">Tālrunis &amp; īsziņa</string>
+    <string name="category_Reading">Lasījumam</string>
+    <string name="category_Science_Education">Zinātne un Izglītība</string>
+    <string name="category_Security">Drošība</string>
+    <string name="category_Sports_Health">Sports un veselība</string>
+    <string name="category_System">Sistēmas</string>
+    <string name="category_Time">Laiks</string>
+    <string name="category_Writing">Rakstīšana</string>
+    <string name="antiadslist">Programma satur reklāmu</string>
+    <string name="antitracklist">Šī programma seko jūsu aktivitātēm un ziņo par tām</string>
+</resources>

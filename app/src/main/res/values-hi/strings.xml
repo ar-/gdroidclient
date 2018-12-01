@@ -1,0 +1,12 @@
+<resources>
+
+
+    <string name="category_Games">खेल</string>
+    <string name="category_Internet">ईंटरनेट</string>
+    <string name="category_Money">पैसे</string>
+    <string name="category_Navigation">पथ प्रदर्शन</string>
+    <string name="category_Reading">पठन</string>
+    <string name="category_Security">सुरक्षा</string>
+    <string name="category_Sports_Health">खेल एवं स्वास्थ्य</string>
+    <string name="category_Writing">लेख</string>
+</resources>

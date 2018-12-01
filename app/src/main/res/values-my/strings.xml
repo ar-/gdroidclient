@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="category_Connectivity">ခ်ိတ္ဆက္မႈ</string>
+
+    <string name="category_Development">ေရးသားမႈ</string>
+    <string name="category_Games">ဂိမ္းမ်ား</string>
+    <string name="category_Graphics">ဂရပ္ဖစ္</string>
+    <string name="category_Internet">အင္တာနက္</string>
+    <string name="category_Money">ေငြေၾကး</string>
+    <string name="category_Multimedia">မာလ္တီမီဒီယာ</string>
+    <string name="category_Navigation">လမ္းညႊန္</string>
+    <string name="category_Phone_SMS">ဓာတ္ပံုႏွင့္ စာတို</string>
+    <string name="category_Reading">ဖတ္ေနသည္</string>
+    <string name="category_Science_Education">သိပၸံႏွင့္ ပညာေရး</string>
+    <string name="category_Security">လံုျခံဳေရး</string>
+    <string name="category_Sports_Health">အားကစားႏွင့္ က်န္းမာေရး</string>
+    <string name="category_System">စနစ္</string>
+    <string name="category_Theming">အျပင္အဆင္</string>
+    <string name="category_Time">အခ်ိန္</string>
+    <string name="category_Writing">ေရးသားျခင္း</string>
+    <string name="antifeatureswarning">ဒီအက်ပ်သည် သင်မကြိုက်သည့်အင်္ဂါရပ်ရှိကောင်းရှိနိုင်သည်</string>
+    <string name="antiadslist">ဒီ app သည္ ေၾကျငာမ်ားပါဝင္သည္</string>
+    <string name="antitracklist">ဒီ app သည္ သင့္လႈပ္ရွားမႈမ်ားကိုလိုက္ၾကည့္ျပီးမွတ္တမ္း မွတ္သည္</string>
+    <string name="antinonfreeadlist">ဒီ app သည္ အခမဲ့မဟုတ္ေသာ ေနာက္ထပ္ပါဝင္သည့္အရာမ်ားပါဝင္သည္</string>
+    <string name="antinonfreenetlist">ဒီ app သည္ အခမဲ့မဟုတ္ေသာကြန္ရက္ ဝန္ေဆာင္မႈကိုေထာက္ပံ့သည္</string>
+    <string name="antinonfreedeplist">ဒီ app သည္ တျခားအခမဲ့မဟုတ္ေသာ app မ်ားေပၚမူတည္သည္</string>
+    <string name="antiupstreamnonfreelist">ဆိုစ့္ကုဒ္သည္ လံုးဝအခမဲ့မဟုတ္ပါ</string>
+    <string name="antinonfreeassetslist">ဒီ app သည္ အခမဲ့မဟုတ္ေသာ ပံုမ်ားပါဝင္သည္</string>
+</resources>

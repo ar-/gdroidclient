@@ -108,6 +108,16 @@
             android:textColor="#ffffffff"
             />
 
+        <TextView
+            android:id="@+id/lbl_antifeatures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:textColor="#FF0000"
+            android:text="antifeatures are to be show here antifeatures are to be show here "
+            />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"

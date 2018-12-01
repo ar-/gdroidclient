@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Liitettävyys</string>
+
+    <string name="category_Development">Kehittäminen</string>
+    <string name="category_Games">Pelit</string>
+    <string name="category_Graphics">Grafiikka</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Raha</string>
+    <string name="category_Multimedia">Multimedia</string>
+    <string name="category_Navigation">Navigointi</string>
+    <string name="category_Phone_SMS">Puhelin &amp; SMS</string>
+    <string name="category_Reading">Lukeminen</string>
+    <string name="category_Science_Education">Tiede &amp; koulutus</string>
+    <string name="category_Security">Tietoturva</string>
+    <string name="category_Sports_Health">Urheilu &amp; terveys</string>
+    <string name="category_System">Järjestelmä</string>
+    <string name="category_Theming">Teemat</string>
+    <string name="category_Time">Aika</string>
+    <string name="category_Writing">Kirjoittaminen</string>
+    <string name="antifeatures">Anti-ominaisuudet</string>
+    <string name="antiadslist">Tämä sovellus sisältää mainoksia</string>
+    <string name="antitracklist">Tämä sovellus tarkkailee ja raportoi toimintaasi</string>
+    <string name="antinonfreeadlist">Tämä sovellus suosittelee ei-vapaita lisäosia</string>
+    <string name="antinonfreenetlist">Tämä sovellus tukee ei-vapaita verkkopalveluja</string>
+    <string name="antinonfreedeplist">Tämä sovellus on riippuvainen muista, ei-vapaista sovelluksista</string>
+    <string name="antiupstreamnonfreelist">Ylävirran lähdekoodi ei ole kokonaan vapaata</string>
+    <string name="antinonfreeassetslist">Tämä sovellus sisältää ei-vapaita osia</string>
+    <string name="antidisabledalgorithmlist">Tällä sovelluksella on heikko turvallisuusallekirjoitus</string>
+    <string name="antiknownvulnlist">Tämä sovellus sisältää tunnetun haavoittuvuuden</string>
+    <string name="antinosourcesince">Lähdekoodi ei ole enää käytettävissä, päivitykset eivät mahdollisia.</string>
+</resources>

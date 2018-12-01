@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Сувязь</string>
+
+    <string name="category_Development">Распрацоўка</string>
+    <string name="category_Games">Гульні</string>
+    <string name="category_Graphics">Графіка</string>
+    <string name="category_Internet">Інтэрнэт</string>
+    <string name="category_Money">Фінансы</string>
+    <string name="category_Multimedia">Мультымедыя</string>
+    <string name="category_Navigation">Навігацыя</string>
+    <string name="category_Phone_SMS">Телефон і SMS</string>
+    <string name="category_Reading">Чытанне</string>
+    <string name="category_Science_Education">Навука і асвета</string>
+    <string name="category_Security">Бяспека</string>
+    <string name="category_Sports_Health">Спорт і здароўе</string>
+    <string name="category_System">Сістэма</string>
+    <string name="category_Theming">Тэмы</string>
+    <string name="category_Time">Час</string>
+    <string name="category_Writing">Рэдагаванне</string>
+    <string name="antifeatures">Непажаданыя функцыі</string>
+    <string name="antiadslist">Гэтая праграма змяшчае рэкламу</string>
+    <string name="antitracklist">Гэтая праграма адсочвае вашую актыўнасць</string>
+    <string name="antinonfreeadlist">Гэтая праграма прапануе не вольныя дадаткі</string>
+    <string name="antinonfreenetlist">Гэтая праграма прапануе не вольныя сеткавыя паслугі</string>
+    <string name="antinonfreedeplist">Гэтая праграма залежыць ад іншых не вольных праграм</string>
+    <string name="antiupstreamnonfreelist">Зыходны код не поўнасцю вольны</string>
+    <string name="antinonfreeassetslist">Гэтая праграма змяшчае не вольны змест</string>
+    <string name="antidisabledalgorithmlist">Гэтая праграма мае слабы подпіс бяспекі</string>
+    <string name="antiknownvulnlist">Гэтая праграма змяшчае вядомую ўразлівасць бяспекі</string>
+    <string name="antinosourcesince">Зыходны код больш недаступны — абноўленні немагчымыя.</string>
+</resources>

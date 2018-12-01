@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="category_Connectivity">Connectivité</string>
+
+    <string name="category_Development">Développement</string>
+    <string name="category_Games">Jeux</string>
+    <string name="category_Graphics">Graphisme</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Finances</string>
+    <string name="category_Multimedia">Multimédia</string>
+    <string name="category_Navigation">Navigation</string>
+    <string name="category_Phone_SMS">Téléphone &amp; SMS</string>
+    <string name="category_Reading">Lecture</string>
+    <string name="category_Science_Education">Science &amp; Éducation</string>
+    <string name="category_Security">Sécurité</string>
+    <string name="category_Sports_Health">Sport &amp; Santé</string>
+    <string name="category_System">Système</string>
+    <string name="category_Theming">Personnalisation</string>
+    <string name="category_Time">Temps</string>
+    <string name="category_Writing">Écriture</string>
+    <string name="antifeatures">Fonctionnalités problématiques</string>
+    <string name="antiadslist">Cette appli contient des publicités</string>
+    <string name="antitracklist">Cette appli suit et transmet votre activité</string>
+    <string name="antinonfreeadlist">Cette appli promeut des extensions qui ne sont pas libres/open source</string>
+    <string name="antinonfreenetlist">Cette appli promeut des services réseaux qui ne sont pas libres/open source
+    <string name="antinonfreedeplist">Cette appli dépend d'autres applis qui ne sont pas libres/open source</string>
+    <string name="antiupstreamnonfreelist">Le code source amont n'est pas entièrement libre/open source</string>
+    <string name="antinonfreeassetslist">Cette appli comprend des parties qui ne sont pas libres/open-source</string>
+    <string name="antidisabledalgorithmlist">La signature de sécurité de cette application est faible</string>
+    <string name="antiknownvulnlist">Cette application contient une vulnérabilité de sécurité connue</string>
+    <string name="antinosourcesince">Le code source n'est désormais plus en accès libre, les mises à jour ne sont plus possibles.</string>
+
+</resources>

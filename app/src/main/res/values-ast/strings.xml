@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="category_Connectivity">Coneutividá</string>
+
+    <string name="category_Development">Desendolcu</string>
+    <string name="category_Games">Xuegos</string>
+    <string name="category_Graphics">Gráficos</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Dineru</string>
+    <string name="category_Multimedia">Multimedia</string>
+    <string name="category_Navigation">Navegación</string>
+    <string name="category_Phone_SMS">Teléfonu y SMS</string>
+    <string name="category_Reading">Llectura</string>
+    <string name="category_Science_Education">Ciencia y educación</string>
+    <string name="category_Security">Seguranza</string>
+    <string name="category_Sports_Health">Deporte y salú</string>
+    <string name="category_System">Sistema</string>
+    <string name="category_Theming">Temes</string>
+    <string name="category_Time">Tiempu</string>
+    <string name="category_Writing">Escritura</string>
+    <string name="antifeatures">Carauterístiques non llibres</string>
+    <string name="antiadslist">Esta aplicación contién publicidá</string>
+    <string name="antitracklist">Esta aplicación rastrexa ya informa de la to actividá</string>
+    <string name="antinonfreeadlist">Esta aplicación da puxu a amiestos non llibres</string>
+    <string name="antinonfreenetlist">Esta aplicación da puxu a servicios de rede non llibres</string>
+    <string name="antinonfreedeplist">Esta aplicación ta arreyada a otres aplicaciones non llibres</string>
+    <string name="antiupstreamnonfreelist">El códigu fonte principal nun ye llibre dafechu</string>
+    <string name="antinonfreeassetslist">Esta aplicación contién activos non llibres</string>
+</resources>

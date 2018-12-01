@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">Ühenduvus</string>
+
+    <string name="category_Development">Arendus</string>
+    <string name="category_Games">Mängud</string>
+    <string name="category_Graphics">Graafika</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Raha</string>
+    <string name="category_Multimedia">Multimeedia</string>
+    <string name="category_Navigation">Navigeerimine</string>
+    <string name="category_Phone_SMS">Telefon &amp; SMS</string>
+    <string name="category_Reading">Lugemine</string>
+    <string name="category_Science_Education">Teadus &amp; haridus</string>
+    <string name="category_Security">Turvalisus</string>
+    <string name="category_Sports_Health">Sport &amp; tervis</string>
+    <string name="category_System">Süsteem</string>
+    <string name="category_Theming">Teemad</string>
+    <string name="category_Time">Aeg</string>
+    <string name="category_Writing">Kirjutamine</string>
+    <string name="antifeatures">Anti funktsioonid</string>
+    <string name="antiadslist">Selles rakenduses on reklaame</string>
+    <string name="antitracklist">See rakendus jälgib ja raporteerib su aktiivsusest</string>
+    <string name="antinonfreeadlist">See rakendus edendab mitte-vabu laiendusi</string>
+    <string name="antinonfreenetlist">See rakendus edendab mitte-vabu võrguteenuseid</string>
+    <string name="antinonfreedeplist">See rakendus sõltub teistest mitte-vabadest rakendustest</string>
+    <string name="antiupstreamnonfreelist">Ülesvoolu lähtekood ei ole täiesti vaba</string>
+    <string name="antinonfreeassetslist">Selles rakenduses on mitte-vabu varasid</string>
+    <string name="antidisabledalgorithmlist">Sellel rakendusel on nõrk turvasignatuur</string>
+    <string name="antiknownvulnlist">Sellel rakendusel on tuntud turvanõrkus</string>
+    <string name="antinosourcesince">Lähtekood ei ole enam saadaval, uuendused ei ole enam võimalikud.</string>
+</resources>

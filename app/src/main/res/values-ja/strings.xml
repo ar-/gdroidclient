@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="category_Connectivity">通信</string>
+
+    <string name="category_Development">開発</string>
+    <string name="category_Games">ゲーム</string>
+    <string name="category_Graphics">グラフィック</string>
+    <string name="category_Internet">インターネット</string>
+    <string name="category_Money">金融</string>
+    <string name="category_Multimedia">マルチメディア</string>
+    <string name="category_Navigation">地図とナビ</string>
+    <string name="category_Phone_SMS">電話とSMS</string>
+    <string name="category_Reading">読書</string>
+    <string name="category_Science_Education">科学と教育</string>
+    <string name="category_Security">セキュリティ</string>
+    <string name="category_Sports_Health">運動と健康</string>
+    <string name="category_System">システム</string>
+    <string name="category_Theming">テーマ</string>
+    <string name="category_Time">日付と時刻</string>
+    <string name="category_Writing">執筆</string>
+    <string name="antifeatures">好ましくない機能</string>
+    <string name="antiadslist">このアプリは広告を表示します</string>
+    <string name="antitracklist">このアプリはあなたの操作を記録し報告します</string>
+    <string name="antinonfreeadlist">このアプリは有料アドオンを推奨します</string>
+    <string name="antinonfreenetlist">このアプリは従量課金制ネットワークサービスを推奨します</string>
+    <string name="antinonfreedeplist">このアプリは他の有料アプリに依存します</string>
+    <string name="antiupstreamnonfreelist">アップストリームのソースコードは一部が無料ではありません</string>
+    <string name="antinonfreeassetslist">このアプリにはフリーではないアセットが含まれています</string>
+    <string name="antidisabledalgorithmlist">このアプリは弱いセキュリティ署名を使用しています</string>
+    <string name="antiknownvulnlist">このアプリは既知のセキュリティ脆弱性が含まれています</string>
+    <string name="antinosourcesince">ソースコードはもう利用できません。更新できません。</string>
+</resources>

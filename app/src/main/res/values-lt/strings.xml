@@ -1,0 +1,30 @@
+<resources>
+
+    <string name="category_Connectivity">Jungiamumas</string>
+
+    <string name="category_Development">Vystymas</string>
+    <string name="category_Games">Žaidimai</string>
+    <string name="category_Graphics">Grafika</string>
+    <string name="category_Internet">Internetas</string>
+    <string name="category_Money">Pinigai</string>
+    <string name="category_Multimedia">Multimedija</string>
+    <string name="category_Navigation">Navigacija</string>
+    <string name="category_Phone_SMS">Telefonas ir SMS</string>
+    <string name="category_Reading">Skaitymas</string>
+    <string name="category_Science_Education">Mokslas ir mokymasis</string>
+    <string name="category_Security">Sauga</string>
+    <string name="category_Sports_Health">Sportas ir sveikata</string>
+    <string name="category_System">Sistema</string>
+    <string name="category_Time">Laikas</string>
+    <string name="category_Writing">Rašymas</string>
+    <string name="antifeatureswarning">Ši programa turi funkcijų, kurios jums gali nepatikti.</string>
+    <string name="antiadslist">Ši programa turi reklamas</string>
+    <string name="antitracklist">Ši programėlė seka ir perduoda Jūsų veiksmus</string>
+    <string name="antinonfreeadlist">Ši programa palaiko mokamus papildinius</string>
+    <string name="antinonfreenetlist">Ši programa palaiko mokamas interneto paslaugas</string>
+    <string name="antinonfreedeplist">Ši programa priklauso nuo kitų mokamų programų</string>
+    <string name="antinonfreeassetslist">Ši programa palaiko mokamas lėšas</string>
+    <string name="antidisabledalgorithmlist">Ši programa turi silpnai apsaugotą parašą</string>
+    <string name="antiknownvulnlist">Ši programa turi žinomą saugos pažeidžiamumą</string>
+    <string name="antinosourcesince">Pirminis kodas nebepalaikomas, neįmanomi atnaujinimai.</string>
+</resources>
