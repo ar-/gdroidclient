@@ -49,7 +49,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 
 # FAQ
 
-## Where to the ratings com from?
+## Where to the ratings come from?
 
 The implementation of the star ratings is not finalised yet. 
 
@@ -75,3 +75,7 @@ And then all of it can be done for each app in the F-Droid repo and compared wit
 Doing all these things manually is very cumbersome so G-Droid assists in that, to provide a better user experience.
 
 And no. The data does not come from G-Droid users as there is (and will be) no tracking in the app. And is doesn't come from other stores, as that would be irrelevant information and mostly spam that has been bought for money (eg. in Googles play store).
+
+## How can I add or remove an app from the tags?
+
+If you are technically experienced you can look at this file: https://gitlab.com/gdroid/gdroiddata/blob/master/metadata/tags.yaml , change it and submit a merge request. If you don't have the technical expertise or don't have time to fiddle with it, you can open a new issue (https://gitlab.com/gdroid/gdroidclient/issues/new) or send an email. It will be sorted out for you. Either way, every contribution is welcome.
