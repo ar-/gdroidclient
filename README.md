@@ -13,8 +13,8 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * star ratings of apps (up to 5 stars) - machine generated metrics
 * shows the star upstream star ratings (github, gitlab, sourceforge)
 * implements more metrics bases on open source data (like average release cycle time) to generate a star-rating
-* let the user choose which metrics are important for him, so there is no 'best app' in the repo - there is only a 'best app' from the point of view of the current user
-* shows 'similar apps' when wathcing an app
+* let the users choose which metrics are important to them, so there is no 'best app' in the repo - there is only a 'best app' from the point of view of the current user
+* shows 'similar apps' when watching an app
 * show web-site of the app - even if it is 'only a README file on github'. F-Droid has recently removed many websites to punish open source developers who can't effort their own domain.
 * showing newest apps and recently updated apps separated
 * showing cards in same size for better overview
@@ -24,10 +24,10 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * makes use of larger screens: show actually more apps on tablets
 * tags to find apps for standard-tasks easily (email clients, file browsers, text editors), since the F-Droid categories are too broad
 * view for 'random apps' to discover apps you usually wouldn't find
-* aims to provide many different views to the app repository in order to assist the user to find, what she wants to find and encourage to use more open source apps from the repository
+* aims to provide many different views to the app repository in order to assist the user to find what she wants to find and encourage to use more open source apps from the repository
 * 'share' apps so it can still be opened with another store (F-Droid, Yalp, Aurora, ...), to get more information about the app.
 * different search algorithm
-* many more to come (G-Droid is jsut a few weeks old) ...
+* many more to come (G-Droid is just a few weeks old) ...
 
 # Things that G-Droid can NOT do (yet) compared to F-Droid
 
@@ -39,11 +39,11 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * use the privileged extension
 * update autmatically
 * http proxy settings
-* G-Droid helps you in different ways to find better apps: but in some cases you might still need the 'share' button, to open that app in F-Droid to install it. G-Droid is right now not a complete replacement yet for the F-Droid app.
+* G-Droid helps you in different ways to find better apps: but in some cases you might still need the 'share' button, to open that app in F-Droid to install it. G-Droid right now is not yet a complete replacement for the F-Droid app.
 
-# Things that are he same in G-Droid and F-Droid
+# Things that are the same in G-Droid and F-Droid
 
-* shows the same apps - G-Droid does not add any apps or modify the builds or download-urls
+* shows the same apps - G-Droid does not add any apps or modify the builds or download URLs
 * all additional meta-data is provided by F-Droid as well (eg. the link to github)
 * GPL3 license 
 
@@ -51,7 +51,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 
 ## Where to the ratings com from?
 
-The implementation of the star ratings are not finalised yet. 
+The implementation of the star ratings is not finalised yet. 
 
 For now all that users can do is read the code. It is all open source. You can read on https://gitlab.com/gdroid/gdroiddata/blob/master/env/process_meta_metric.py how to extract metrics out of the f-droid repository. 
 
