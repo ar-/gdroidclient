@@ -108,6 +108,12 @@ class AppBeanJsonParser implements JsonParser{
         final JSONObject latestPackage = appPackages.getJSONObject(0);
         ab.apkname = latestPackage.getString("apkName");
 
+        // marketversion and marketvercode are sometimes wrong in the json, like a higher version that doesn't exist yet
+        // or just an empty string. let's redefine it, and use the lates version as merket version.
+        ab.marketversion = latestPackage.getString("versionName");
+        ab.marketvercode = latestPackage.getString("versionCode");
+
+
         // permissions from packages (optional)
         final JSONArray permissionsArray = latestPackage.optJSONArray("uses-permission");
         if (permissionsArray != null)
