@@ -143,19 +143,6 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
                 if (Util.isAppUpdateable(mContext, applicationBean)) {
                     drawableToBeSet = R.drawable.ic_update_green_24dp;
                 }
-//                if (!TextUtils.isEmpty(installedVersionOfApp))
-//                {
-//                    if (! applicationBean.marketversion.equals(installedVersionOfApp))
-//                    {
-//                        drawableToBeSet = R.drawable.ic_update_green_24dp;
-//                        //Log.i("ABA", installedVersionOfApp +" installed and market has "+ applicationBean.marketversion + " of app " + applicationBean.id);
-//                    }
-//                    else
-//                    {
-//                        // else part is needed becasue receycled cards will have wrong icon otherwise
-//                        //drawableToBeSet = R.drawable.ic_more_vert_black_24dp;
-//                    }
-//                }
                 holder.overflow.setImageResource(drawableToBeSet);
             }
         });
