@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -112,12 +113,19 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         circularProgressDrawable.start();
 
         if (applicationBean.icon != null) {
-            Glide.with(mContext)
-                    .load("https://f-droid.org/repo/icons-640/"+applicationBean.icon)
-                    .override(192, 192)
-                    .placeholder(circularProgressDrawable)
-                    .error(R.drawable.ic_android_black_24dp)
-                    .into(holder.thumbnail);
+            try
+            {
+                Glide.with(mContext)
+                        .load("https://f-droid.org/repo/icons-640/"+applicationBean.icon)
+                        .override(192, 192)
+                        .placeholder(circularProgressDrawable)
+                        .error(R.drawable.ic_android_black_24dp)
+                        .into(holder.thumbnail);
+            }
+            catch (Throwable t)
+            {
+                Log.e("ABA", "error while glide sets the app logo", t);
+            }
         }
 //        new DownloadImageTask(holder.thumbnail)
 //                .execute("https://f-droid.org/repo/icons-640/community.fairphone.fplauncher3.10.png");
