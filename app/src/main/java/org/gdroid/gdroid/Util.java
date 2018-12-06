@@ -29,6 +29,7 @@ import android.content.res.Resources;
 import android.preference.PreferenceManager;
 import android.support.v4.os.ConfigurationCompat;
 import android.support.v4.os.LocaleListCompat;
+import android.text.TextUtils;
 import android.util.Log;
 
 import org.gdroid.gdroid.beans.AppBeanNameComparator;
@@ -139,7 +140,7 @@ public class Util {
             final ApplicationBean app = db.appDao().getApplicationBean(starredAppId);
             ret.add(app);
         }
-        Collections.sort(ret, new AppBeanNameComparator());
+        Collections.sort(ret, new AppBeanNameComparator(context));
         return ret;
     }
 
@@ -156,7 +157,7 @@ public class Util {
             if (app!=null)
                 ret.add(app);
         }
-        Collections.sort(ret, new AppBeanNameComparator());
+        Collections.sort(ret, new AppBeanNameComparator(context));
         return ret;
     }
 
@@ -358,6 +359,19 @@ public class Util {
         catch (PackageManager.NameNotFoundException e) {
             return "";
         }
+    }
+
+    public static boolean isAppUpdateable (Context context, ApplicationBean applicationBean)
+    {
+        final String installedVersionOfApp = Util.getInstalledVersionOfApp(context, applicationBean.id);
+        if (!TextUtils.isEmpty(installedVersionOfApp))
+        {
+            if (! applicationBean.marketversion.equals(installedVersionOfApp))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static boolean isFileExisting(String filename){
