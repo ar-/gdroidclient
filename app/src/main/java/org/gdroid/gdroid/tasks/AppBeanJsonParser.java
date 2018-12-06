@@ -103,10 +103,16 @@ class AppBeanJsonParser implements JsonParser{
         ab.email = app.optString("authorEmail");
 
         // apk name from packages
-        // package must be found, otherwise app ise useles,as it wont hav an APK
+        // package must be found, otherwise app is useless, as it wont have an APK
         final JSONArray appPackages = packages.getJSONArray(ab.id);
         final JSONObject latestPackage = appPackages.getJSONObject(0);
         ab.apkname = latestPackage.getString("apkName");
+
+        // marketversion and marketvercode are sometimes wrong in the json, like a higher version that doesn't exist yet
+        // or just an empty string. let's redefine it, and use the latest version as market version.
+        ab.marketversion = latestPackage.getString("versionName");
+        ab.marketvercode = latestPackage.getString("versionCode");
+
 
         // permissions from packages (optional)
         final JSONArray permissionsArray = latestPackage.optJSONArray("uses-permission");
