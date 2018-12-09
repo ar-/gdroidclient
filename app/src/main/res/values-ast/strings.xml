@@ -31,4 +31,8 @@
     <string name="perms_description_app">Forníu por %1$s.</string>
     <string name="perms_new_perm_prefix">Nuevo:</string>
     <string name="permissions">Permisos</string>
+    <string name="links">Enllaces</string>
+    <string name="action_install">Instalar</string>
+    <string name="action_upgrade">Anovar</string>
+    <string name="action_launch">Executar</string>
 </resources>

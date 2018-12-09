@@ -34,4 +34,8 @@
     <string name="perms_description_app">Disediakan oleh %1$s.</string>
     <string name="perms_new_perm_prefix">Baru:</string>
     <string name="permissions">Perizinan</string>
+    <string name="links">Tautan</string>
+    <string name="action_install">Pasang</string>
+    <string name="action_upgrade">Tingkatkan</string>
+    <string name="action_launch">Jalankan</string>
 </resources>

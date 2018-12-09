@@ -34,4 +34,8 @@
     <string name="perms_description_app">فراهم شده توسّط: %1$s.</string>
     <string name="perms_new_perm_prefix">جدید:</string>
     <string name="permissions">دسترسی ها</string>
+    <string name="links">پیوندها</string>
+    <string name="action_install">نصب</string>
+    <string name="action_upgrade">ارتقا</string>
+    <string name="action_launch">اجرا</string>
 </resources>

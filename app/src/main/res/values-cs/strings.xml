@@ -34,4 +34,8 @@
     <string name="perms_description_app">Poskytováno %1$s.</string>
     <string name="perms_new_perm_prefix">Nová:</string>
     <string name="permissions">Oprávnění</string>
+    <string name="links">Odkazy</string>
+    <string name="action_install">Nainstalovat</string>
+    <string name="action_upgrade">Aktualizovat</string>
+    <string name="action_launch">Spustit</string>
 </resources>

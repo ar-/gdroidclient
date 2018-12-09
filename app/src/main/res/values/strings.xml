@@ -27,7 +27,6 @@
 
 
     <string name="action_add_favourite">Add to Favourites</string>
-    <string name="action_install">Install</string>
 
 
     <string name="title_activity_settings">Settings</string>
@@ -168,4 +167,8 @@
     <string name="perms_description_app">Provided by %1$s.</string>
     <string name="perms_new_perm_prefix">New:</string>
     <string name="permissions">Permissions</string>
+    <string name="links">Links</string>
+    <string name="action_install">Install</string>
+    <string name="action_upgrade">Upgrade</string>
+    <string name="action_launch">Run</string>
 </resources>

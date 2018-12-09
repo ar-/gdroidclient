@@ -276,32 +276,48 @@ public class AppDetailActivity extends AppCompatActivity {
 
         //make the install button useful
         final Button btnInstall = findViewById(R.id.btn_install);
+        final Button btnLaunch = findViewById(R.id.btn_launch);
         btnInstall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                btnInstall.setEnabled(false);
                 btnInstall.setAlpha(.5f);
                 btnInstall.setClickable(false);
                 AsyncTask.execute(new Runnable() {
-                                      @Override
-                                      public void run() {
-                                          doInBackground("https://f-droid.org/repo/"+mApp.apkname);
-                                      }
-                                  });
+                    @Override
+                    public void run() {
+                        doInBackground("https://f-droid.org/repo/"+mApp.apkname);
+                    }
+                });
             }
         });
 
-        // make the install button say "update" if already installed
+        btnLaunch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent launchIntent = getPackageManager().getLaunchIntentForPackage(mApp.id);
+                if (launchIntent != null) {
+                    startActivity(launchIntent);//null pointer check in case package name was not found
+                }
+            }
+        });
+
+        // make the install button say "upgrade" if already installed
         if (Util.isAppInstalled(mContext, mApp.id))
         {
-            if (! mApp.marketversion.equals(Util.getInstalledVersionOfApp(mContext, mApp.id)))
+            if (Util.isAppUpdateable(mContext, mApp))
             {
-                btnInstall.setText("Update");
+                btnInstall.setText(getString(R.string.action_upgrade));
             }
             else
             {
                 btnInstall.setVisibility(View.GONE);
             }
+
+            //TODO use R.string.menu_launch and then rename them all with the menu orefuix
+        }
+        else
+        {
+            btnLaunch.setVisibility(View.GONE);
         }
 
         // populate the Links-section with further upstream links

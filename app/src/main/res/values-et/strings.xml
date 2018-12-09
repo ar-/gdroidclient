@@ -34,4 +34,8 @@
     <string name="perms_description_app">Tagas %1$s.</string>
     <string name="perms_new_perm_prefix">Uus:</string>
     <string name="permissions">Volitused</string>
+    <string name="links">Lingid</string>
+    <string name="action_install">Paigalda</string>
+    <string name="action_upgrade">Uuenda</string>
+    <string name="action_launch">Käivita</string>
 </resources>

@@ -34,4 +34,8 @@
     <string name="perms_description_app">%1$s 제공.</string>
     <string name="perms_new_perm_prefix">새 권한:</string>
     <string name="permissions">권한</string>
+    <string name="links">링크</string>
+    <string name="action_install">설치</string>
+    <string name="action_upgrade">업그레이드</string>
+    <string name="action_launch">실행</string>
 </resources>

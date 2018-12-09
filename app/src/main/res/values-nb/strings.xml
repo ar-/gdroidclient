@@ -34,4 +34,8 @@
     <string name="perms_description_app">Tilbudt av %1$s.</string>
     <string name="perms_new_perm_prefix">Ny:</string>
     <string name="permissions">Rettigheter</string>
+    <string name="links">Lenker</string>
+    <string name="action_install">Installer</string>
+    <string name="action_upgrade">Oppgrader</string>
+    <string name="action_launch">Kjør</string>
 </resources>

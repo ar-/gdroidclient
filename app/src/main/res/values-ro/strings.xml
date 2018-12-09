@@ -34,4 +34,8 @@
     <string name="perms_description_app">Disponibil de la %1$s.</string>
     <string name="perms_new_perm_prefix">Nou:</string>
     <string name="permissions">Permisiuni</string>
+    <string name="links">Legături</string>
+    <string name="action_install">Instalează</string>
+    <string name="action_upgrade">Actualizează</string>
+    <string name="action_launch">Porneste</string>
 </resources>

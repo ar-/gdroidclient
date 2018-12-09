@@ -34,4 +34,8 @@
     <string name="perms_description_app">Прадастаўлена %1$s.</string>
     <string name="perms_new_perm_prefix">Новыя:</string>
     <string name="permissions">Прывілеі</string>
+    <string name="links">Спасылкі</string>
+    <string name="action_install">Усталяваць</string>
+    <string name="action_upgrade">Абнавіць</string>
+    <string name="action_launch">Запусціць</string>
 </resources>

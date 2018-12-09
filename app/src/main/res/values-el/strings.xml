@@ -34,4 +34,8 @@
     <string name="perms_description_app">Παρέχεται από %1$s.</string>
     <string name="perms_new_perm_prefix">Νέα:</string>
     <string name="permissions">Άδειες</string>
+    <string name="links">Σύνδεσμοι</string>
+    <string name="action_install">Εγκατάσταση</string>
+    <string name="action_upgrade">Αναβάθμιση</string>
+    <string name="action_launch">Εκτέλεση</string>
 </resources>

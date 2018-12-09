@@ -30,4 +30,8 @@
     <string name="perms_description_app">Pruža %1$s.</string>
     <string name="perms_new_perm_prefix">Novo:</string>
     <string name="permissions">Dozvole</string>
+    <string name="links">Poveznice</string>
+    <string name="action_install">Instaliraj</string>
+    <string name="action_upgrade">Nadogradi</string>
+    <string name="action_launch">Pokreni</string>
 </resources>

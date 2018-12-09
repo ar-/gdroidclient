@@ -31,4 +31,8 @@
     <string name="perms_description_app">སྤྲད་མཁན་%1$s.</string>
     <string name="perms_new_perm_prefix">གསར་པ།:</string>
     <string name="permissions">ཆོག་མཆན།</string>
+    <string name="links">སྦྲེལ་མཐུད་ཁག</string>
+    <string name="action_install">འགྲིག་བཅུག</string>
+    <string name="action_upgrade">རིམ་སྤར།</string>
+    <string name="action_launch">འཁོར་སྐྱོད།</string>
 </resources>

@@ -20,4 +20,7 @@
     <string name="perms_description_app">Mundësuar nga %1$s.</string>
     <string name="perms_new_perm_prefix">Risi:</string>
     <string name="permissions">Autorizimet</string>
+    <string name="links">Lidhje</string>
+    <string name="action_install">Instalo</string>
+<string name="action_launch">Zbotoje</string>
 </resources>

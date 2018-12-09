@@ -31,4 +31,8 @@
     <string name="perms_description_app">%1$s നൽകിയത്.</string>
     <string name="perms_new_perm_prefix">പുതിയ:</string>
     <string name="permissions">അനുമതികൾ</string>
+    <string name="links">കണ്ണികള്‍</string>
+    <string name="action_install">സ്ഥാപിക്കുക</string>
+    <string name="action_upgrade">പുതുക്കുക</string>
+    <string name="action_launch">തുടങ്ങുക</string>
 </resources>

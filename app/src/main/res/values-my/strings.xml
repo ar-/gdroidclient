@@ -30,4 +30,8 @@
     <string name="perms_description_app">%1$s မွေထာက္ပံ့ထားသည္.</string>
     <string name="perms_new_perm_prefix">အသစ္ -</string>
     <string name="permissions">ခြင့္ျပဳခ်က္မ်ား</string>
+    <string name="links">လင့္ခ္</string>
+    <string name="action_install">သြင္းမည္</string>
+    <string name="action_upgrade">အဆင့္ျမင့္တင္မည္</string>
+    <string name="action_launch">ဖြင့္မည္</string>
 </resources>

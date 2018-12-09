@@ -20,4 +20,8 @@
     <string name="anti_tracking">Asnas-agi ad yeḍfeṛ udiγ ad d-yazen armud-ik</string>
     <string name="perms_new_perm_prefix">Amaynut:</string>
     <string name="permissions">Tisirag</string>
+    <string name="links">Isɣewnen</string>
+    <string name="action_install">Sbedd</string>
+    <string name="action_upgrade">Leqqem</string>
+    <string name="action_launch">Serreḥ</string>
 </resources>

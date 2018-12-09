@@ -34,4 +34,8 @@
     <string name="perms_description_app">Disponibilizada por %1$s.</string>
     <string name="perms_new_perm_prefix">Novas:</string>
     <string name="permissions">Permissões</string>
+    <string name="links">Ligações</string>
+    <string name="action_install">Instalar</string>
+    <string name="action_upgrade">Atualizar</string>
+    <string name="action_launch">Executar</string>
 </resources>

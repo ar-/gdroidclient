@@ -34,4 +34,8 @@
     <string name="perms_description_app">由 %1$s 提供。</string>
     <string name="perms_new_perm_prefix">新的：</string>
     <string name="permissions">存取權</string>
+    <string name="links">連結</string>
+    <string name="action_install">安裝</string>
+    <string name="action_upgrade">更新</string>
+    <string name="action_launch">執行</string>
 </resources>

@@ -34,4 +34,8 @@
     <string name="perms_description_app">Предоставлено %1$s.</string>
     <string name="perms_new_perm_prefix">Новые:</string>
     <string name="permissions">Разрешения</string>
+    <string name="links">Ссылки</string>
+    <string name="action_install">Установить</string>
+    <string name="action_upgrade">Обновить</string>
+    <string name="action_launch">Запустить</string>
 </resources>

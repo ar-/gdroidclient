@@ -24,4 +24,7 @@
     <string name="perms_description_app">Տրամադրված է %1$s։</string>
     <string name="perms_new_perm_prefix">Նոր.</string>
     <string name="permissions">Թույլատվություններ</string>
+    <string name="links">Հղումներ</string>
+    <string name="action_install">Տեղադրել</string>
+    <string name="action_upgrade">Նորացնել</string>
 </resources>

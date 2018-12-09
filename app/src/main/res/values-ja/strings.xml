@@ -34,4 +34,8 @@
     <string name="perms_description_app">%1$sによって提供されます。</string>
     <string name="perms_new_perm_prefix">新規:</string>
     <string name="permissions">権限</string>
+    <string name="links">リンク</string>
+    <string name="action_install">インストール</string>
+    <string name="action_upgrade">アップグレード</string>
+    <string name="action_launch">開く</string>
 </resources>

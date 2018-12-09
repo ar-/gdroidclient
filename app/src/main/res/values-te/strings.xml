@@ -29,4 +29,8 @@
     <string name="no_permissions">అనుమతులు ఏవీ ఉపయోగించబడవు.</string>
     <string name="perms_new_perm_prefix">కొత్తది:</string>
     <string name="permissions">అనుమతులు</string>
+    <string name="links">లంకెలు</string>
+    <string name="action_install">స్థాపించు</string>
+    <string name="action_upgrade">నవీకరణించు</string>
+    <string name="action_launch">నడుపు</string>
 </resources>

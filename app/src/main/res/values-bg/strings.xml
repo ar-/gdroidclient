@@ -31,4 +31,8 @@
     <string name="perms_description_app">Предоставено от %1$s.</string>
     <string name="perms_new_perm_prefix">Ново:</string>
     <string name="permissions">Разрешения</string>
+    <string name="links">Връзки</string>
+    <string name="action_install">Инсталиране</string>
+    <string name="action_upgrade">Обновяване</string>
+    <string name="action_launch">Пускане</string>
 </resources>

@@ -33,4 +33,8 @@
     <string name="perms_description_app">Priskrbljeno od %1$s.</string>
     <string name="perms_new_perm_prefix">Novo:</string>
     <string name="permissions">Dovoljenja</string>
+    <string name="links">Povezave</string>
+    <string name="action_install">Namesti</string>
+    <string name="action_upgrade">Nadgradnja</string>
+    <string name="action_launch">Zaženi</string>
 </resources>

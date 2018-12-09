@@ -34,4 +34,8 @@
     <string name="perms_description_app">Proporcionado por %1$s.</string>
     <string name="perms_new_perm_prefix">Nuevos:</string>
     <string name="permissions">Permisos</string>
+    <string name="links">Enlaces</string>
+    <string name="action_install">Instalar</string>
+    <string name="action_upgrade">Actualización (a nueva versión)</string>
+    <string name="action_launch">Ejecutar</string>
 </resources>

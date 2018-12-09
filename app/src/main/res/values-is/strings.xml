@@ -34,4 +34,8 @@
     <string name="perms_description_app">Útgefið af %1$s.</string>
     <string name="perms_new_perm_prefix">Nýtt:</string>
     <string name="permissions">Aðgangsheimildir</string>
+    <string name="links">Tenglar</string>
+    <string name="action_install">Setja inn</string>
+    <string name="action_upgrade">Uppfæra</string>
+    <string name="action_launch">Keyra</string>
 </resources>

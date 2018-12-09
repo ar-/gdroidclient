@@ -33,4 +33,8 @@
     <string name="perms_description_app">Aangeboden door %1$s.</string>
     <string name="perms_new_perm_prefix">Nieuw:</string>
     <string name="permissions">Machtigingen</string>
+    <string name="links">Links</string>
+    <string name="action_install">Installeren</string>
+    <string name="action_upgrade">Bijwerken</string>
+    <string name="action_launch">Uitvoeren</string>
 </resources>

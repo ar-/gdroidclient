@@ -33,4 +33,8 @@
     <string name="perms_description_app">Được cung cấp bởi %1$s.</string>
     <string name="perms_new_perm_prefix">Mới:</string>
     <string name="permissions">Quyền</string>
+    <string name="links">Liên kết</string>
+    <string name="action_install">Cài đặt</string>
+    <string name="action_upgrade">Nâng cấp</string>
+    <string name="action_launch">Chạy</string>
 </resources>

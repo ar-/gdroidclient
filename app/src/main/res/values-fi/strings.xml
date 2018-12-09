@@ -34,4 +34,8 @@
     <string name="perms_description_app">Toimittaja: %1$s.</string>
     <string name="perms_new_perm_prefix">Uutta:</string>
     <string name="permissions">Käyttöoikeudet</string>
+    <string name="links">Linkit</string>
+    <string name="action_install">Asenna</string>
+    <string name="action_upgrade">Päivitä</string>
+    <string name="action_launch">Suorita</string>
 </resources>

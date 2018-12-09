@@ -31,4 +31,8 @@
     <string name="perms_description_app">Verskaf deur %1$s.</string>
     <string name="perms_new_perm_prefix">Nuwe:</string>
     <string name="permissions">Magtigings</string>
+    <string name="links">Skakels</string>
+    <string name="action_install">Installeer</string>
+    <string name="action_upgrade">Opgradering</string>
+    <string name="action_launch">Begin</string>
 </resources>

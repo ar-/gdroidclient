@@ -34,4 +34,8 @@
     <string name="perms_description_app">%1$s tarafından sağlanmıştır.</string>
     <string name="perms_new_perm_prefix">Yeni:</string>
     <string name="permissions">İzinler</string>
+    <string name="links">Bağlantılar</string>
+    <string name="action_install">Kur</string>
+    <string name="action_upgrade">Yükselt</string>
+    <string name="action_launch">Çalıştır</string>
 </resources>
