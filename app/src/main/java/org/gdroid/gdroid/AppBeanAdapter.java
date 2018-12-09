@@ -62,6 +62,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         public String appId;
         public TextView title, count;
         public ImageView thumbnail, overflow;
+        private final ImageView starOnCard;
 
         public MyViewHolder(View view) {
             super(view);
@@ -69,15 +70,15 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
             count = (TextView) view.findViewById(R.id.count);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
             overflow = (ImageView) view.findViewById(R.id.overflow);
+            starOnCard = (ImageView) view.findViewById(R.id.img_star_on_card);
 
-            //final Activity activity = (Activity) mContext;
-            final Activity activity = getActivity();
+            mActivity = getActivity();
             thumbnail.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent myIntent = new Intent(activity, AppDetailActivity.class);
+                    Intent myIntent = new Intent(mActivity, AppDetailActivity.class);
                     myIntent.putExtra("appId", appId);
-                    activity.startActivity(myIntent);
+                    mActivity.startActivity(myIntent);
 
                 }
             });
@@ -129,8 +130,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
                 Log.e("ABA", "error while glide sets the app logo", t);
             }
         }
-//        new DownloadImageTask(holder.thumbnail)
-//                .execute("https://f-droid.org/repo/icons-640/community.fairphone.fplauncher3.10.png");
+
 
 
         holder.overflow.setOnClickListener(new View.OnClickListener() {
@@ -151,6 +151,20 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
                     drawableToBeSet = R.drawable.ic_update_green_24dp;
                 }
                 holder.overflow.setImageResource(drawableToBeSet);
+            }
+        });
+
+        // if the app is starred show a star, also in background, since it will be slow to do this for each app
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                final boolean isStarred = Util.isAppstarred(mContext, applicationBean.id);
+                mActivity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        holder.starOnCard.setVisibility(isStarred ? View.VISIBLE : View.GONE);
+                    }
+                });
             }
         });
 
