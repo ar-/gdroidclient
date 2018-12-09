@@ -155,6 +155,7 @@ public class AppSecurityPermissions {
         MyPermissionGroupInfo group;
         MyPermissionInfo perm;
         AlertDialog dialog;
+        Context dialogContext;
 
         public PermissionItemView(Context context, AttributeSet attrs) {
             super(context, attrs);
@@ -194,6 +195,10 @@ public class AppSecurityPermissions {
             setOnClickListener(this);
         }
 
+        public void setDialogContext(Context dialogContext) {
+            this.dialogContext = dialogContext;
+        }
+
         @Override
         public void onClick(View v) {
             if (group != null && perm != null) {
@@ -201,7 +206,7 @@ public class AppSecurityPermissions {
                     dialog.dismiss();
                 }
                 PackageManager pm = getContext().getPackageManager();
-                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                AlertDialog.Builder builder = new AlertDialog.Builder(dialogContext);
                 builder.setTitle(group.label);
                 if (perm.descriptionRes != 0) {
                     builder.setMessage(perm.loadDescription(pm));
@@ -422,6 +427,7 @@ public class AppSecurityPermissions {
                         ? R.layout.app_permission_item_money : R.layout.app_permission_item,
                 null);
         permView.setPermission(grp, perm, first, newPermPrefix);
+        permView.setDialogContext(context);
         return permView;
     }
 

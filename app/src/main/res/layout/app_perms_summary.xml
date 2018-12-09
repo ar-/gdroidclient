@@ -25,10 +25,10 @@
     <TextView
         android:id="@+id/no_permissions"
         android:text="@string/no_permissions"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:visibility="gone"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

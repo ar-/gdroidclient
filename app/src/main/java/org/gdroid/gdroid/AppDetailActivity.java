@@ -103,11 +103,6 @@ public class AppDetailActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.lbl_website)).setText(mApp.web);
         ((TextView)findViewById(R.id.lbl_email)).setText(mApp.email);
 
-        if (!TextUtils.isEmpty(mApp.permissions))
-        {
-            ((TextView)findViewById(R.id.lbl_permissions)).setText(mApp.permissions);
-        }
-
         // developer view can be hidden if no data for it
         if (TextUtils.isEmpty(mApp.web) && TextUtils.isEmpty(mApp.email))
         {
@@ -400,8 +395,8 @@ public class AppDetailActivity extends AppCompatActivity {
             }
 
             // show permissions
-            AppDiff appDiff = new AppDiff(mContext, mApp);
-            AppSecurityPermissions perms = new AppSecurityPermissions(mContext, appDiff.apkPackageInfo);
+            AppDiff appDiff = new AppDiff(this, mApp);
+            AppSecurityPermissions perms = new AppSecurityPermissions(this, appDiff.apkPackageInfo);
 
             final LinearLayout permContainer = findViewById(R.id.ll_permissions_container);
             permContainer.addView(perms.getPermissionsView(AppSecurityPermissions.WHICH_ALL));

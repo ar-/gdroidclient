@@ -22,6 +22,8 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.text.TextUtils;
+
 import org.gdroid.gdroid.beans.ApplicationBean;
 
 /**
@@ -38,7 +40,11 @@ public class AppDiff {
         apkPackageInfo = new PackageInfo();
         apkPackageInfo.packageName = apk.id;
         apkPackageInfo.applicationInfo = new ApplicationInfo();
-        apkPackageInfo.requestedPermissions = apk.permissions.split(",");
+        final String permissions = apk.permissions;
+        if (!TextUtils.isEmpty(permissions))
+            apkPackageInfo.requestedPermissions = permissions.split(",");
+        else
+            apkPackageInfo.requestedPermissions = new String[0];
 
         String packageName = apkPackageInfo.packageName;
         // Check if there is already a package on the device with this name
