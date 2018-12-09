@@ -312,8 +312,6 @@ public class AppDetailActivity extends AppCompatActivity {
             {
                 btnInstall.setVisibility(View.GONE);
             }
-
-            //TODO use R.string.menu_launch and then rename them all with the menu orefuix
         }
         else
         {
