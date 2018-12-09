@@ -3,6 +3,7 @@
   * added translations for some more GUI elements
   * added a run-button for installed apps
   * tags and categories in the app detail view are now clickable
+  * screenshots are now complete (unlike F-Droid), up-to-date (unlike F-Droid) and in correct language (unlike F-Droid)
 
 0.3.2
   * mark apps that can be updated with a logo directly on the card

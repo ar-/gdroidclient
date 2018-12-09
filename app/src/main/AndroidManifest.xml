@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
   ~
   ~ This program is free software: you can redistribute it and/or modify
@@ -15,14 +14,15 @@
   ~ You should have received a copy of the GNU General Public License
   ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   ~
-  -->
-
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.gdroid.gdroid" >
+    package="org.gdroid.gdroid">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="22" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="22" />
 
     <application
         android:allowBackup="true"
@@ -30,9 +30,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
-
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|screenSize"
@@ -70,6 +68,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.gdroid.gdroid.MainActivity" />
         </activity>
+        <activity android:name=".ImageActivity"></activity>
     </application>
 
 </manifest>

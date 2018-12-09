@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-class AppBeanJsonParser extends  AbstractJsonParser implements JsonParser{
+class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
     @Override
     public List<ApplicationBean> getApplicationBeansFromJson(String jsonString) {
         List<ApplicationBean> entries = null;

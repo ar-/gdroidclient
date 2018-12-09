@@ -249,19 +249,32 @@ public class AppDetailActivity extends AppCompatActivity {
                 circularProgressDrawable.setStrokeWidth(5f);
                 circularProgressDrawable.setCenterRadius(30f);
                 circularProgressDrawable.start();
-                String ssUrl = "https://f-droid.org/repo/" + mApp.id + "/" + ss;
+                final String ssUrl;
                 if (ss.startsWith("http"))
                 {
-                    // use abosolute links starting with https or http
+                    // use absolute links starting with https or http
                     ssUrl = ss;
+                }
+                else
+                {
+                    ssUrl = "https://f-droid.org/repo/" + mApp.id + "/" + ss;
                 }
                 Glide.with(mContext)
                         .load(ssUrl)
-                        .override(384, 384)
                         .placeholder(circularProgressDrawable)
                         .error(R.drawable.ic_phone_android_black_24dp)
                         .into(iv);
                 grpScreenshots.addView(iv);
+
+                // make each screenshot clickable
+                iv.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent myIntent = new Intent(mContext, ImageActivity.class);
+                        myIntent.putExtra("imgUrl", ssUrl);
+                        mContext.startActivity(myIntent);
+                    }
+                });
             }
         }
         else
