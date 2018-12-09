@@ -236,8 +236,7 @@ public class AppDetailActivity extends AppCompatActivity {
         final LinearLayout grpScreenshots = (LinearLayout) findViewById(R.id.grp_screenshots);
         if (!TextUtils.isEmpty(mApp.screenshots)) {
             grpScreenshots.removeAllViews();
-            for (String ss :
-                    mApp.getScreenshotList()) {
+            for (String ss : mApp.getScreenshotList()) {
                 ImageView iv = new ImageView(mContext);
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -250,8 +249,14 @@ public class AppDetailActivity extends AppCompatActivity {
                 circularProgressDrawable.setStrokeWidth(5f);
                 circularProgressDrawable.setCenterRadius(30f);
                 circularProgressDrawable.start();
+                String ssUrl = "https://f-droid.org/repo/" + mApp.id + "/" + ss;
+                if (ss.startsWith("http"))
+                {
+                    // use abosolute links starting with https or http
+                    ssUrl = ss;
+                }
                 Glide.with(mContext)
-                        .load("https://f-droid.org/repo/"+mApp.id+"/"+ ss)
+                        .load(ssUrl)
                         .override(384, 384)
                         .placeholder(circularProgressDrawable)
                         .error(R.drawable.ic_phone_android_black_24dp)
