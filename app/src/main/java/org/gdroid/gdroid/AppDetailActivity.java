@@ -236,8 +236,7 @@ public class AppDetailActivity extends AppCompatActivity {
         final LinearLayout grpScreenshots = (LinearLayout) findViewById(R.id.grp_screenshots);
         if (!TextUtils.isEmpty(mApp.screenshots)) {
             grpScreenshots.removeAllViews();
-            for (String ss :
-                    mApp.getScreenshotList()) {
+            for (String ss : mApp.getScreenshotList()) {
                 ImageView iv = new ImageView(mContext);
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -250,13 +249,32 @@ public class AppDetailActivity extends AppCompatActivity {
                 circularProgressDrawable.setStrokeWidth(5f);
                 circularProgressDrawable.setCenterRadius(30f);
                 circularProgressDrawable.start();
+                final String ssUrl;
+                if (ss.startsWith("http"))
+                {
+                    // use absolute links starting with https or http
+                    ssUrl = ss;
+                }
+                else
+                {
+                    ssUrl = "https://f-droid.org/repo/" + mApp.id + "/" + ss;
+                }
                 Glide.with(mContext)
-                        .load("https://f-droid.org/repo/"+mApp.id+"/"+ ss)
-                        .override(384, 384)
+                        .load(ssUrl)
                         .placeholder(circularProgressDrawable)
                         .error(R.drawable.ic_phone_android_black_24dp)
                         .into(iv);
                 grpScreenshots.addView(iv);
+
+                // make each screenshot clickable
+                iv.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent myIntent = new Intent(mContext, ImageActivity.class);
+                        myIntent.putExtra("imgUrl", ssUrl);
+                        mContext.startActivity(myIntent);
+                    }
+                });
             }
         }
         else

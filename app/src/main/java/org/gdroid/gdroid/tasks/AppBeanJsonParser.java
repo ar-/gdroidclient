@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-class AppBeanJsonParser implements JsonParser{
+class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
     @Override
     public List<ApplicationBean> getApplicationBeansFromJson(String jsonString) {
         List<ApplicationBean> entries = null;
@@ -219,53 +219,6 @@ class AppBeanJsonParser implements JsonParser{
         return new Pair<String,String>(availalableLocales.get(usableLocale), usableLocale);
     }
 
-    /**
-     *
-     * @param app
-     * @param name
-     * @return A pair of (ItemArray,Locale)
-     * @throws JSONException
-     */
-    private Pair<JSONArray,String> getLocalizedArrayItemAndLocale(JSONObject app, String name) throws JSONException {
-        final String repoLocale="en";
-
-        // Map locale -> itemcontent
-        Map<String, JSONArray> availalableLocales = new HashMap<>();
-
-        //gather available Locales for this item
-        final JSONArray unLocalisedItem = app.optJSONArray(name);
-        if (unLocalisedItem != null)
-        {
-            availalableLocales.put(repoLocale,unLocalisedItem);
-        }
-
-        final JSONObject localized = app.optJSONObject("localized");
-        if (localized != null)
-        {
-            Iterator<String> keys = localized.keys();
-
-            while(keys.hasNext()) {
-                String resLocale = keys.next();
-                final JSONObject localizedJSONObject = localized.getJSONObject(resLocale);
-                final JSONArray localisedArrayItem = localizedJSONObject.optJSONArray(name);
-                if (localisedArrayItem != null)
-                {
-                    availalableLocales.put(resLocale,localisedArrayItem);
-                }
-            }
-        }
-
-        // for some items (like 'name') having none is bad, others (like 'whatsNew') are optional
-        if (availalableLocales.isEmpty())
-            return null;
-
-        final Set<String> keySet = availalableLocales.keySet();
-        String[] resLocales = keySet.toArray(new String[keySet.size()]);
-        final String usableLocale = Util.getUsableLocale(resLocales);
-
-        // this can't be null anymore, otherwise we wouldn't have arrived here
-        return new Pair<JSONArray,String>(availalableLocales.get(usableLocale), usableLocale);
-    }
 
 
 }
