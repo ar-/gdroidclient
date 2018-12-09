@@ -18,6 +18,7 @@
 
 package org.gdroid.gdroid;
 
+import android.app.Activity;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
@@ -122,8 +123,15 @@ public class AppDetailActivity extends AppCompatActivity {
             tv.setPadding(10,10,10,10);
             tv.setTextColor(getResources().getColor(R.color.album_title));
             tv.setTextSize(14);
-            tv.setText(cb.catName);
+            final String lcn = Util.getLocalisedCategoryName(this, cb.catName);
+            tv.setText(lcn);
             categoryView.addView(tv);
+
+            // make it clickable
+            final String collectionName = "cat:" + cb.catName;
+            final String headline = AppCollectionAdapter.getHeadlineForCatOrTag(mContext, collectionName);
+            final View.OnClickListener clickListener = AppCollectionAdapter.getOnClickListenerForCatOrTag(collectionName, headline, this);
+            tv.setOnClickListener(clickListener);
         }
 
         // fill tags - the same way as categories
@@ -140,6 +148,12 @@ public class AppDetailActivity extends AppCompatActivity {
             String tagname = Util.getStringResourceByName(mContext,tb.tagName);
             tv.setText(tagname);
             categoryView.addView(tv);
+
+            // make it clickable
+            final String collectionName = "tag:" + tb.tagName;
+            final String headline = AppCollectionAdapter.getHeadlineForCatOrTag(mContext, collectionName);
+            final View.OnClickListener clickListener = AppCollectionAdapter.getOnClickListenerForCatOrTag(collectionName, headline, this);
+            tv.setOnClickListener(clickListener);
         }
 
         // fill anti-features
