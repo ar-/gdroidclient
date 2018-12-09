@@ -1,4 +1,4 @@
-# What is this
+# What is this app
 
 G-Droid can browse the free F-Droid app-repository. It is an alternative client to the F-Droid client.
 
@@ -15,25 +15,25 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * implements more metrics bases on open source data (like average release cycle time) to generate a star-rating
 * let the users choose which metrics are important to them, so there is no 'best app' in the repo - there is only a 'best app' from the point of view of the current user
 * shows 'similar apps' when watching an app
-* show web-site of the app - even if it is 'only a README file on github'. F-Droid has recently removed many websites to punish open source developers who can't effort their own domain.
-* showing newest apps and recently updated apps separated
-* showing cards in same size for better overview
+* shows web-site of the app - even if it is 'only a README file on github'. F-Droid has recently removed many websites to punish open source developers who can't effort their own domain.
+* shows newest apps and recently updated apps separated
+* shows cards in same size for better overview
 * ability to 'star' apps to mark them
-* showing categories in correct translation (if available) after changing language on the device
-* showing screenshots in correct translation
+* shows categories in correct translation (if available) after changing language on the device
+* shows screenshots in correct translation
 * makes use of larger screens: show actually more apps on tablets
 * tags to find apps for standard-tasks easily (email clients, file browsers, text editors), since the F-Droid categories are too broad
 * view for 'random apps' to discover apps you usually wouldn't find
 * aims to provide many different views to the app repository in order to assist the user to find what she wants to find and encourage to use more open source apps from the repository
 * 'share' apps so it can still be opened with another store (F-Droid, Yalp, Aurora, ...), to get more information about the app.
 * different search algorithm
+* G-Droid is actively maintained (the F-Droid client is not any more)
 * many more to come (G-Droid is just a few weeks old) ...
 
 # Things that G-Droid can NOT do (yet) compared to F-Droid
 
 * uninstall apps
 * show or install an older version of an app
-* show the permissions correctly translated
 * create a local repo, share apps with 'near' people or share apps via bluetooth
 * add other repositories than the F-Droid repo
 * use the privileged extension
