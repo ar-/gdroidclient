@@ -63,6 +63,11 @@ public class ApplicationBean {
     public String apkname;
     public String whatsNew;
     public String featureGraphic;
+
+    /**
+     * List of screenshots, separated by semicolon (since comma can be in filename),
+     * points relatively to the F-Droid repo, but can be an absolute URL as well.
+     */
     public String screenshots;
     public String metricsJson;
     public int metriccount;

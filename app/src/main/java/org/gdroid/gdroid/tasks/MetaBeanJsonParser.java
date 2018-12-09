@@ -20,6 +20,7 @@ package org.gdroid.gdroid.tasks;
 
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Pair;
 
 import org.gdroid.gdroid.MetaMetric;
 import org.gdroid.gdroid.beans.ApplicationBean;
@@ -33,7 +34,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-class MetaBeanJsonParser implements JsonParser {
+class MetaBeanJsonParser extends AbstractJsonParser implements JsonParser{
     // map: pkgname -> AppBean
     Map<String,ApplicationBean> abMap;
 
@@ -122,7 +123,23 @@ class MetaBeanJsonParser implements JsonParser {
             }
         }
 
+        // screenshots array
+        final Pair<JSONArray, String> phoneScreenshots = getLocalizedArrayItemAndLocale(content, "phoneScreenshots");
+        if (phoneScreenshots != null)
+        {
+            final String ssLocale = phoneScreenshots.second;
+            final JSONArray ssArray = phoneScreenshots.first;
+            if (ssArray != null && ssLocale != null) {
+                List<String> ssList = new ArrayList<>();
+                for (int i = 0; i < ssArray.length(); i++) {
+                    ssList.add(ssArray.get(i).toString());
+                }
+                // overwrite any existing entries, because the F-Droid ones are likely to be wrong, outdated, wrong language etc.
+                ab.screenshots = TextUtils.join(";",ssList);
+            }
+        }
+
+
 
     }
-
 }

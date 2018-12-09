@@ -18,9 +18,19 @@
 
 package org.gdroid.gdroid.tasks;
 
-import org.gdroid.gdroid.beans.ApplicationBean;
+import android.util.Pair;
 
+import org.gdroid.gdroid.Util;
+import org.gdroid.gdroid.beans.ApplicationBean;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 interface JsonParser {
     List<ApplicationBean> getApplicationBeansFromJson(String jsonString);
