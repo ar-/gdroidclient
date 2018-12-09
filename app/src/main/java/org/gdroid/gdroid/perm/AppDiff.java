@@ -1,5 +1,6 @@
 /*
 **
+** Copyright 2018, Andreas Redmer <ar-gdroid@abga.be>
 ** Copyright 2007, The Android Open Source Project
 ** Copyright 2015 Dominik Schürmann <dominik@dominikschuermann.de>
 **
