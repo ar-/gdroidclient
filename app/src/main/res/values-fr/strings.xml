@@ -29,4 +29,13 @@
     <string name="anti_knownvuln">Cette application contient une vulnérabilité de sécurité connue</string>
     <string name="anti_nosourcesince">Le code source n\'est désormais plus en accès libre, les mises à jour ne sont plus possibles.</string>
 
+    <string name="no_permissions">Aucune autorisation n\'est utilisée.</string>
+    <string name="perm_costs_money">Peut vous coûter de l\'argent</string>
+    <string name="perms_description_app">Fourni par %1$s.</string>
+    <string name="perms_new_perm_prefix">Nouveauté :</string>
+    <string name="permissions">Autorisations</string>
+    <string name="links">Liens</string>
+    <string name="action_install">Installer</string>
+    <string name="action_upgrade">Mettre à jour</string>
+    <string name="action_launch">Lancer</string>
 </resources>

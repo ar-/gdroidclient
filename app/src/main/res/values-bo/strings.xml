@@ -26,4 +26,13 @@
     <string name="anti_nonfreedep">མཉེན་ཆས་འདི་རིན་མེད་མ་ཡིན་པའི་མཉེན་ཆས་གཞན་ལ་བརྟེན་ནས་ཡོད།</string>
     <string name="anti_upstreamnonfree">འབྱུང་ཁུངས་ཨང་རྟགས་འདི་ཆ་ཚང་རིན་མེད་མ་རེད།</string>
     <string name="anti_nonfreeassets">མཉེན་ཆས་འདིའི་ནང་རིན་མེད་མ་ཡིན་པའི་རྒྱུ་ཆ་ཡོད།</string>
+    <string name="no_permissions">ཆོག་མཆན་བེད་སྤྱོད་བྱེད་མེད།</string>
+    <string name="perm_costs_money">དངུལ་སྤྲད་དགོས་སྲིད།</string>
+    <string name="perms_description_app">སྤྲད་མཁན་%1$s.</string>
+    <string name="perms_new_perm_prefix">གསར་པ།:</string>
+    <string name="permissions">ཆོག་མཆན།</string>
+    <string name="links">སྦྲེལ་མཐུད་ཁག</string>
+    <string name="action_install">འགྲིག་བཅུག</string>
+    <string name="action_upgrade">རིམ་སྤར།</string>
+    <string name="action_launch">འཁོར་སྐྱོད།</string>
 </resources>

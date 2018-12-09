@@ -29,4 +29,13 @@
     <string name="anti_disabledalgorithm">这个应用程序的安全签名较弱</string>
     <string name="anti_knownvuln">这个应用程序包含已知的安全漏洞</string>
     <string name="anti_nosourcesince">源代码不再可用，无法更新。</string>
+    <string name="no_permissions">未使用任何权限。</string>
+    <string name="perm_costs_money">这可能会产生费用</string>
+    <string name="perms_description_app">由 %1$s 提供。</string>
+    <string name="perms_new_perm_prefix">新的：</string>
+    <string name="permissions">权限</string>
+    <string name="links">链接</string>
+    <string name="action_install">安装</string>
+    <string name="action_upgrade">更新</string>
+    <string name="action_launch">运行</string>
 </resources>

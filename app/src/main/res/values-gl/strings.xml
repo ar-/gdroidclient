@@ -28,4 +28,13 @@
     <string name="anti_nonfreeassets">Este app contén elementos non-libres</string>
     <string name="anti_disabledalgorithm">Este aplicativo ten unha sinatura de seguridade feble</string>
     <string name="anti_knownvuln">Esta aplicación contén unha vulnerabilidade de seguridade coñecida</string>
+    <string name="no_permissions">Non se usan permisos.</string>
+    <string name="perm_costs_money">Esto pode costarlle cartos</string>
+    <string name="perms_description_app">Ofertado por %1$s.</string>
+    <string name="perms_new_perm_prefix">Novo:</string>
+    <string name="permissions">Permisos</string>
+    <string name="links">Ligazóns</string>
+    <string name="action_install">Instalar</string>
+    <string name="action_upgrade">Actualizar</string>
+    <string name="action_launch">Executar</string>
 </resources>

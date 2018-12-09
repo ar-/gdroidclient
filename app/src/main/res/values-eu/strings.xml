@@ -29,4 +29,13 @@
     <string name="anti_disabledalgorithm">Aplikazio honek segurtasun sinadura ahula du</string>
     <string name="anti_knownvuln">Aplikazio honek segurtasun arazo ezagun bat du</string>
     <string name="anti_nosourcesince">Iturburu kodea ez dago jada eskuragarri, ezin izango dira eguneraketak egin.</string>
+    <string name="no_permissions">Ez da baimenik erabiltzen.</string>
+    <string name="perm_costs_money">Honek dirua kosta dakizuke</string>
+    <string name="perms_description_app">%1$sk hornitua.</string>
+    <string name="perms_new_perm_prefix">Berria:</string>
+    <string name="permissions">Baimenak</string>
+    <string name="links">Loturak</string>
+    <string name="action_install">Instalatu</string>
+    <string name="action_upgrade">Bertsio-berritu</string>
+    <string name="action_launch">Exekutatu</string>
 </resources>

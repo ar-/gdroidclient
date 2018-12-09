@@ -29,4 +29,13 @@
     <string name="anti_disabledalgorithm">Az alkalmazásnak gyenge a biztonsági aláírása</string>
     <string name="anti_knownvuln">Az alkalmazás ismert biztonsági rést tartalmaz</string>
     <string name="anti_nosourcesince">A forráskód többé nem érhető el, a frissítések nem lehetségesek.</string>
+    <string name="no_permissions">Nincsenek engedélyei.</string>
+    <string name="perm_costs_money">Ez pénzbe kerülhet Önnek</string>
+    <string name="perms_description_app">A(z) %1$s által biztosítva.</string>
+    <string name="perms_new_perm_prefix">Új:</string>
+    <string name="permissions">Engedélyek</string>
+    <string name="links">Hivatkozások</string>
+    <string name="action_install">Telepítés</string>
+    <string name="action_upgrade">Frissítés</string>
+    <string name="action_launch">Indítás</string>
 </resources>

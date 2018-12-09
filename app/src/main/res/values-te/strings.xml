@@ -26,4 +26,11 @@
     <string name="anti_nonfreeassets">ఈ అనువర్తనం ఉచితం కానీ ఆస్తులను కలిగి ఉంది</string>
     <string name="anti_disabledalgorithm">ఈ అనువర్తనం బలహీన భద్రతా సంతకం కలిగి ఉంది</string>
     <string name="anti_knownvuln">ఈ అనువర్తనం తెలిసిన భద్రతా దుర్బలత్వాన్ని కలిగి ఉంది</string>
+    <string name="no_permissions">అనుమతులు ఏవీ ఉపయోగించబడవు.</string>
+    <string name="perms_new_perm_prefix">కొత్తది:</string>
+    <string name="permissions">అనుమతులు</string>
+    <string name="links">లంకెలు</string>
+    <string name="action_install">స్థాపించు</string>
+    <string name="action_upgrade">నవీకరణించు</string>
+    <string name="action_launch">నడుపు</string>
 </resources>

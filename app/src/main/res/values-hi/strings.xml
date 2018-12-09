@@ -9,4 +9,8 @@
     <string name="category_Security">सुरक्षा</string>
     <string name="category_Sports_Health">खेल एवं स्वास्थ्य</string>
     <string name="category_Writing">लेख</string>
+    <string name="perm_costs_money">यह तुम्हारे पैसे खर्च कर सकते हैं</string>
+    <string name="perms_description_app">%1$s द्वारा उपलब्ध कराया गया|</string>
+    <string name="perms_new_perm_prefix">नया:</string>
+    <string name="links">संधियां</string>
 </resources>

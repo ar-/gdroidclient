@@ -25,4 +25,13 @@
     <string name="anti_nonfreedep">ဒီ app သည္ တျခားအခမဲ့မဟုတ္ေသာ app မ်ားေပၚမူတည္သည္</string>
     <string name="anti_upstreamnonfree">ဆိုစ့္ကုဒ္သည္ လံုးဝအခမဲ့မဟုတ္ပါ</string>
     <string name="anti_nonfreeassets">ဒီ app သည္ အခမဲ့မဟုတ္ေသာ ပံုမ်ားပါဝင္သည္</string>
+    <string name="no_permissions">မည္သည့္ခြင့္ျပဳခ်က္ကိုမွမသံုးခဲ့ပါ.</string>
+    <string name="perm_costs_money">၄င္းသည္ ေငြေၾကးကုန္က်ႏိုင္သည္</string>
+    <string name="perms_description_app">%1$s မွေထာက္ပံ့ထားသည္.</string>
+    <string name="perms_new_perm_prefix">အသစ္ -</string>
+    <string name="permissions">ခြင့္ျပဳခ်က္မ်ား</string>
+    <string name="links">လင့္ခ္</string>
+    <string name="action_install">သြင္းမည္</string>
+    <string name="action_upgrade">အဆင့္ျမင့္တင္မည္</string>
+    <string name="action_launch">ဖြင့္မည္</string>
 </resources>

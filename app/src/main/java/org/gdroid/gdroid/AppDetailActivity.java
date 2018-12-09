@@ -52,6 +52,8 @@ import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
 import org.gdroid.gdroid.beans.TagBean;
+import org.gdroid.gdroid.perm.AppDiff;
+import org.gdroid.gdroid.perm.AppSecurityPermissions;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -100,11 +102,6 @@ public class AppDetailActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.lbl_license)).setText(mApp.license);
         ((TextView)findViewById(R.id.lbl_website)).setText(mApp.web);
         ((TextView)findViewById(R.id.lbl_email)).setText(mApp.email);
-
-        if (!TextUtils.isEmpty(mApp.permissions))
-        {
-            ((TextView)findViewById(R.id.lbl_permissions)).setText(mApp.permissions);
-        }
 
         // developer view can be hidden if no data for it
         if (TextUtils.isEmpty(mApp.web) && TextUtils.isEmpty(mApp.email))
@@ -279,32 +276,46 @@ public class AppDetailActivity extends AppCompatActivity {
 
         //make the install button useful
         final Button btnInstall = findViewById(R.id.btn_install);
+        final Button btnLaunch = findViewById(R.id.btn_launch);
         btnInstall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                btnInstall.setEnabled(false);
                 btnInstall.setAlpha(.5f);
                 btnInstall.setClickable(false);
                 AsyncTask.execute(new Runnable() {
-                                      @Override
-                                      public void run() {
-                                          doInBackground("https://f-droid.org/repo/"+mApp.apkname);
-                                      }
-                                  });
+                    @Override
+                    public void run() {
+                        doInBackground("https://f-droid.org/repo/"+mApp.apkname);
+                    }
+                });
             }
         });
 
-        // make the install button say "update" if already installed
+        btnLaunch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent launchIntent = getPackageManager().getLaunchIntentForPackage(mApp.id);
+                if (launchIntent != null) {
+                    startActivity(launchIntent);//null pointer check in case package name was not found
+                }
+            }
+        });
+
+        // make the install button say "upgrade" if already installed
         if (Util.isAppInstalled(mContext, mApp.id))
         {
-            if (! mApp.marketversion.equals(Util.getInstalledVersionOfApp(mContext, mApp.id)))
+            if (Util.isAppUpdateable(mContext, mApp))
             {
-                btnInstall.setText("Update");
+                btnInstall.setText(getString(R.string.action_upgrade));
             }
             else
             {
                 btnInstall.setVisibility(View.GONE);
             }
+        }
+        else
+        {
+            btnLaunch.setVisibility(View.GONE);
         }
 
         // populate the Links-section with further upstream links
@@ -396,6 +407,15 @@ public class AppDetailActivity extends AppCompatActivity {
                 findViewById(R.id.grp_rating_uptodate).setVisibility(View.GONE);
                 findViewById(R.id.grp_rating_releasecycle).setVisibility(View.GONE);
             }
+
+            // show permissions
+            AppDiff appDiff = new AppDiff(this, mApp);
+            AppSecurityPermissions perms = new AppSecurityPermissions(this, appDiff.apkPackageInfo);
+
+            final LinearLayout permContainer = findViewById(R.id.ll_permissions_container);
+            permContainer.addView(perms.getPermissionsView(AppSecurityPermissions.WHICH_ALL));
+
+
 
         }
         else
@@ -586,4 +606,6 @@ public class AppDetailActivity extends AppCompatActivity {
             fab.setImageResource(R.drawable.ic_star_border_white_24dp);
         }
     }
+
+
 }

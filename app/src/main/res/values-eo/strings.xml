@@ -29,4 +29,13 @@
     <string name="anti_disabledalgorithm">Tiu ĉi aplikaĵo posedas malfortan sekurecan subskribon</string>
     <string name="anti_knownvuln">Tiu ĉi aplikaĵo posedas sekurecan vundeblon</string>
     <string name="anti_nosourcesince">La fontkodo ne estas plu disponebla, neniuj eblaj ĝisdatigoj.</string>
+    <string name="no_permissions">Neniu permeso estas uzata.</string>
+    <string name="perm_costs_money">Tio ĉi povas elspezi vian monon</string>
+    <string name="perms_description_app">Liverita per %1$s.</string>
+    <string name="perms_new_perm_prefix">nova:</string>
+    <string name="permissions">Permesoj</string>
+    <string name="links">Ligiloj</string>
+    <string name="action_install">Instali</string>
+    <string name="action_upgrade">Ĝisdatigi</string>
+    <string name="action_launch">Lanĉi</string>
 </resources>

@@ -29,4 +29,13 @@
     <string name="anti_disabledalgorithm">이 앱은 약한 보안 서명이 있습니다</string>
     <string name="anti_knownvuln">이 앱은 알려진 보안 취약점을 포함합니다</string>
     <string name="anti_nosourcesince">소스 코드는 더 이상 사용 가능하지 않으며, 업데이트 가능성은 없습니다.</string>
+    <string name="no_permissions">사용된 권한이 없습니다.</string>
+    <string name="perm_costs_money">금전을 요구할 수 있습니다</string>
+    <string name="perms_description_app">%1$s 제공.</string>
+    <string name="perms_new_perm_prefix">새 권한:</string>
+    <string name="permissions">권한</string>
+    <string name="links">링크</string>
+    <string name="action_install">설치</string>
+    <string name="action_upgrade">업그레이드</string>
+    <string name="action_launch">실행</string>
 </resources>

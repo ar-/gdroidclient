@@ -29,4 +29,13 @@
     <string name="anti_disabledalgorithm">Цей застосунок має слабкий підпис безпеки</string>
     <string name="anti_knownvuln">Цей застосунок містить знану вразливість безпеки</string>
     <string name="anti_nosourcesince">Джерельний код вже не є доступним, оновлення не є можливими.</string>
+    <string name="no_permissions">Не потребує дозволів.</string>
+    <string name="perm_costs_money">Це може вам коштувати грошей</string>
+    <string name="perms_description_app">Надано %1$s.</string>
+    <string name="perms_new_perm_prefix">Нові:</string>
+    <string name="permissions">Привілеї</string>
+    <string name="links">Посилання</string>
+    <string name="action_install">Встановити</string>
+    <string name="action_upgrade">Оновити</string>
+    <string name="action_launch">Запустити</string>
 </resources>

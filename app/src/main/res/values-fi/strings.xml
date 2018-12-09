@@ -29,4 +29,13 @@
     <string name="anti_disabledalgorithm">Tällä sovelluksella on heikko turvallisuusallekirjoitus</string>
     <string name="anti_knownvuln">Tämä sovellus sisältää tunnetun haavoittuvuuden</string>
     <string name="anti_nosourcesince">Lähdekoodi ei ole enää käytettävissä, päivitykset eivät mahdollisia.</string>
+    <string name="no_permissions">Käyttöoikeuksia ei tarvita.</string>
+    <string name="perm_costs_money">Tämä voi olla maksullista</string>
+    <string name="perms_description_app">Toimittaja: %1$s.</string>
+    <string name="perms_new_perm_prefix">Uutta:</string>
+    <string name="permissions">Käyttöoikeudet</string>
+    <string name="links">Linkit</string>
+    <string name="action_install">Asenna</string>
+    <string name="action_upgrade">Päivitä</string>
+    <string name="action_launch">Suorita</string>
 </resources>

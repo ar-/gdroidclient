@@ -25,4 +25,13 @@
     <string name="anti_nonfreedep">โปรแกรมนี้พึ่งพาโปรแกรมไม่เสรีอื่นๆ</string>
     <string name="anti_upstreamnonfree">ซอร์สโค้ดต้นฉบับมีบางส่วนที่ไม่เสรี</string>
     <string name="anti_nonfreeassets">โปรแกรมนี้มีส่วนประกอบภาพเสียงที่ไม่เสรี</string>
+    <string name="no_permissions">ไม่มีการขออนุญาตใดๆ เป็นพิเศษ</string>
+    <string name="perm_costs_money">อาจจะัทำให้คุณเสียค่าใช้จ่าย</string>
+    <string name="perms_description_app">จัดให้โดย %1$s</string>
+    <string name="perms_new_perm_prefix">ใหม่:</string>
+    <string name="permissions">การขออนุญาตพิเศษ</string>
+    <string name="links">ลิงค์</string>
+    <string name="action_install">ติดตั้ง</string>
+    <string name="action_upgrade">อัพเกรด</string>
+    <string name="action_launch">เริ่มโปรแกรม</string>
 </resources>

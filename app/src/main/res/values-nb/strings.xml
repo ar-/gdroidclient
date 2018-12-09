@@ -29,4 +29,13 @@
     <string name="anti_disabledalgorithm">Dette programmet har en svak sikkerhetssignatur</string>
     <string name="anti_knownvuln">Dette programmet inneholder en kjent sikkerhetsfeil</string>
     <string name="anti_nosourcesince">Kildekoden er ikke lenger tilgengelig, ingen oppgraderinger mulig.</string>
+    <string name="no_permissions">Krever ingen tillatelser.</string>
+    <string name="perm_costs_money">Dette kan koste penger</string>
+    <string name="perms_description_app">Tilbudt av %1$s.</string>
+    <string name="perms_new_perm_prefix">Ny:</string>
+    <string name="permissions">Rettigheter</string>
+    <string name="links">Lenker</string>
+    <string name="action_install">Installer</string>
+    <string name="action_upgrade">Oppgrader</string>
+    <string name="action_launch">Kjør</string>
 </resources>

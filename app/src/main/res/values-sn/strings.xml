@@ -25,4 +25,13 @@
     <string name="anti_nonfreedep">App ino inotemba nemamwe maapps anobhadharwa</string>
     <string name="anti_upstreamnonfree">Nyuko yemurau irikumberi haisi yemahara</string>
     <string name="anti_nonfreeassets">App ino inenhumbi dzinobhadharwa</string>
+    <string name="no_permissions">Hapana mibvumo yakashandiswa.</string>
+    <string name="perm_costs_money">Izvi zvichada mari</string>
+    <string name="perms_description_app">Kuyananiswa na %1$s.</string>
+    <string name="perms_new_perm_prefix">Chitsva:</string>
+    <string name="permissions">Mibvumo</string>
+    <string name="links">Kochekero</string>
+    <string name="action_install">Vakirira</string>
+    <string name="action_upgrade">Kwidziridza</string>
+    <string name="action_launch">Ita</string>
 </resources>

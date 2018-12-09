@@ -29,4 +29,13 @@
     <string name="anti_disabledalgorithm">Esta aplicación tiene una firma de seguridad débil</string>
     <string name="anti_knownvuln">Esta aplicación contiene una vulnerabilidad de seguridad conocida</string>
     <string name="anti_nosourcesince">El código fuente ya no está disponible, no se puede actualizar.</string>
+    <string name="no_permissions">No se usan permisos.</string>
+    <string name="perm_costs_money">Esto puede costar dinero</string>
+    <string name="perms_description_app">Proporcionado por %1$s.</string>
+    <string name="perms_new_perm_prefix">Nuevos:</string>
+    <string name="permissions">Permisos</string>
+    <string name="links">Enlaces</string>
+    <string name="action_install">Instalar</string>
+    <string name="action_upgrade">Actualización (a nueva versión)</string>
+    <string name="action_launch">Ejecutar</string>
 </resources>

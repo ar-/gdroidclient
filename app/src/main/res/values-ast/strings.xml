@@ -26,4 +26,13 @@
     <string name="anti_nonfreedep">Esta aplicación ta arreyada a otres aplicaciones non llibres</string>
     <string name="anti_upstreamnonfree">El códigu fonte principal nun ye llibre dafechu</string>
     <string name="anti_nonfreeassets">Esta aplicación contién activos non llibres</string>
+    <string name="no_permissions">Nun s\'usaron permisos.</string>
+    <string name="perm_costs_money">Quiciabes esto te cueste perres</string>
+    <string name="perms_description_app">Forníu por %1$s.</string>
+    <string name="perms_new_perm_prefix">Nuevo:</string>
+    <string name="permissions">Permisos</string>
+    <string name="links">Enllaces</string>
+    <string name="action_install">Instalar</string>
+    <string name="action_upgrade">Anovar</string>
+    <string name="action_launch">Executar</string>
 </resources>
