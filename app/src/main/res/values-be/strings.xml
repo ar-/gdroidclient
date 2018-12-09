@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">Гэтая праграма мае слабы подпіс бяспекі</string>
     <string name="anti_knownvuln">Гэтая праграма змяшчае вядомую ўразлівасць бяспекі</string>
     <string name="anti_nosourcesince">Зыходны код больш недаступны — абноўленні немагчымыя.</string>
+    <string name="no_permissions">Не патрабуе дазволаў.</string>
+    <string name="perm_costs_money">Гэта можа каштаваць грошай</string>
+    <string name="perms_description_app">Прадастаўлена %1$s.</string>
+    <string name="perms_new_perm_prefix">Новыя:</string>
+    <string name="permissions">Прывілеі</string>
 </resources>

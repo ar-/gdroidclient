@@ -19,4 +19,6 @@
     <string name="category_Writing">Rakstīšana</string>
     <string name="anti_ads">Programma satur reklāmu</string>
     <string name="anti_tracking">Šī programma seko jūsu aktivitātēm un ziņo par tām</string>
+    <string name="no_permissions">Ši aplikācija neizmanto nekādu īpašu privilēģiju.</string>
+    <string name="permissions">Privilēģija</string>
 </resources>

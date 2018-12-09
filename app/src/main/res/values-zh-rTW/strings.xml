@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">這個應用程式的安全簽章較弱</string>
     <string name="anti_knownvuln">這個應用程式包含了已知的安全性漏洞</string>
     <string name="anti_nosourcesince">原始碼不再能取得，無法更新。</string>
+    <string name="no_permissions">不需要任何權限。</string>
+    <string name="perm_costs_money">這或許會有資金消耗</string>
+    <string name="perms_description_app">由 %1$s 提供。</string>
+    <string name="perms_new_perm_prefix">新的：</string>
+    <string name="permissions">存取權</string>
 </resources>

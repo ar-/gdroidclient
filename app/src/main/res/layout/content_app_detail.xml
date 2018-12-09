@@ -613,9 +613,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="Permissions"
+            android:text="@string/permissions"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ll_permissions_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/lbl_permissions"

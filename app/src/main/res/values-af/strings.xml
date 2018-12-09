@@ -26,4 +26,9 @@
     <string name="anti_nonfreedep">Hierdie program is afhanklik van ander nie-vrye programme</string>
     <string name="anti_upstreamnonfree">Die stroomop bronkode is nie heeltemal vry nie</string>
     <string name="anti_nonfreeassets">Hierdie program bevat nie-vrye bates</string>
+    <string name="no_permissions">Geen magtigings in gebruik.</string>
+    <string name="perm_costs_money">Dit kan jy dalk geld kos</string>
+    <string name="perms_description_app">Verskaf deur %1$s.</string>
+    <string name="perms_new_perm_prefix">Nuwe:</string>
+    <string name="permissions">Magtigings</string>
 </resources>

@@ -26,4 +26,6 @@
     <string name="anti_disabledalgorithm">Ši programa turi silpnai apsaugotą parašą</string>
     <string name="anti_knownvuln">Ši programa turi žinomą saugos pažeidžiamumą</string>
     <string name="anti_nosourcesince">Pirminis kodas nebepalaikomas, neįmanomi atnaujinimai.</string>
+    <string name="no_permissions">Nebuvo panaudoti jokie įgaliojimai.</string>
+    <string name="permissions">Įgaliojimai</string>
 </resources>

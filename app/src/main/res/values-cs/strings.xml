@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">Tato aplikace má slabý bezpečnostní podpis</string>
     <string name="anti_knownvuln">Tato aplikace má známou zranitelnost v zabezpečení</string>
     <string name="anti_nosourcesince">Zdrojový kód už není k dispozici, aktualizace nejsou možné.</string>
+    <string name="no_permissions">Žádná oprávnění nejsou použita.</string>
+    <string name="perm_costs_money">Toto může stát peníze</string>
+    <string name="perms_description_app">Poskytováno %1$s.</string>
+    <string name="perms_new_perm_prefix">Nová:</string>
+    <string name="permissions">Oprávnění</string>
 </resources>

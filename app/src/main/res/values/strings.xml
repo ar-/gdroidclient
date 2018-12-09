@@ -162,4 +162,10 @@
     <string name="anti_nosourcesince">The source code is no longer available, no updates possible.</string>
 
 
+    <string name="no_permissions">No permissions are used.</string>
+
+    <string name="perm_costs_money">This may cost you money</string>
+    <string name="perms_description_app">Provided by %1$s.</string>
+    <string name="perms_new_perm_prefix">New:</string>
+    <string name="permissions">Permissions</string>
 </resources>

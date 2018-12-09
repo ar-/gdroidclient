@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">Deze app heeft een zwakke beveiligingshandtekening</string>
     <string name="anti_knownvuln">Deze app bevat een bekend probleem in de beveiliging</string>
     <string name="anti_nosourcesince">De broncode is niet langer beschikbaar, geen updates mogelijk.</string>
+    <string name="no_permissions">Geen machtigingen in gebruik.</string>
+    <string name="perm_costs_money">Dit kan geld kosten</string>
+    <string name="perms_description_app">Aangeboden door %1$s.</string>
+    <string name="perms_new_perm_prefix">Nieuw:</string>
+    <string name="permissions">Machtigingen</string>
 </resources>

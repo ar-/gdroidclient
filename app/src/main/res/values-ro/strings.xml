@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">Aplicația are o semnătură slab securizată</string>
     <string name="anti_knownvuln">Aplicația conține o vulnerabilitate de securitate cunoscută</string>
     <string name="anti_nosourcesince">Codul sursă nu mai este disponibil, nu mai există posibilitatea de a actualiza.</string>
+    <string name="no_permissions">Nu folosește nici o permisiune.</string>
+    <string name="perm_costs_money">Aceasta s-ar putea să coste bani</string>
+    <string name="perms_description_app">Disponibil de la %1$s.</string>
+    <string name="perms_new_perm_prefix">Nou:</string>
+    <string name="permissions">Permisiuni</string>
 </resources>

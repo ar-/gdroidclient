@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">Questa app ha una firma di sicurezza debole</string>
     <string name="anti_knownvuln">Questa app contiene una vulnerabilità di sicurezza nota</string>
     <string name="anti_nosourcesince">Il codice sorgente non è più disponibile, aggiornamenti non possibili.</string>
+    <string name="no_permissions">Non viene usata alcuna autorizzazione.</string>
+    <string name="perm_costs_money">Questo potrebbe essere a pagamento</string>
+    <string name="perms_description_app">Fornito da %1$s.</string>
+    <string name="perms_new_perm_prefix">Nuovo:</string>
+    <string name="permissions">Autorizzazioni</string>
 </resources>

@@ -26,4 +26,9 @@
     <string name="anti_nonfreedep">Táto aplikácia závisí na iných neslobodných aplikáciách</string>
     <string name="anti_upstreamnonfree">Originálny zdrojový kód nie je úplne slobodný</string>
     <string name="anti_nonfreeassets">Táto aplikácia obsahuje proprietárne časti</string>
+    <string name="no_permissions">Nepoužívajú sa žiadne povolenia.</string>
+    <string name="perm_costs_money">Môže stáť peniaze</string>
+    <string name="perms_description_app">Poskytované %1$s.</string>
+    <string name="perms_new_perm_prefix">Nové:</string>
+    <string name="permissions">Povolenia aplikácie</string>
 </resources>

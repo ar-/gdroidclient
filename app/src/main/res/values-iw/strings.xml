@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">ליישומון זה יש חתימת אבטחה חלשה</string>
     <string name="anti_knownvuln">יישומון זה מכיל חולשת אבטחה ידועה</string>
     <string name="anti_nosourcesince">קוד המקור אינו זמין עוד, אין עדכונים.</string>
+    <string name="no_permissions">אין הרשאות בשימוש.</string>
+    <string name="perm_costs_money">זה עשוי לעלות לך כסף</string>
+    <string name="perms_description_app">מסופק על ידי %1$s.</string>
+    <string name="perms_new_perm_prefix">חדש:</string>
+    <string name="permissions">הרשאות</string>
 </resources>

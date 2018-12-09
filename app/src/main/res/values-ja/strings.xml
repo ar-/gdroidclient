@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">このアプリは弱いセキュリティ署名を使用しています</string>
     <string name="anti_knownvuln">このアプリは既知のセキュリティ脆弱性が含まれています</string>
     <string name="anti_nosourcesince">ソースコードはもう利用できません。更新できません。</string>
+    <string name="no_permissions">使用される権限はありません。</string>
+    <string name="perm_costs_money">通信料金が発生する場合があります</string>
+    <string name="perms_description_app">%1$sによって提供されます。</string>
+    <string name="perms_new_perm_prefix">新規:</string>
+    <string name="permissions">権限</string>
 </resources>

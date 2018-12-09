@@ -28,4 +28,9 @@
     <string name="anti_nonfreeassets">Denne app indeholder ikke-frit indhold</string>
     <string name="anti_disabledalgorithm">Denne app har en svag sikkerhedssignatur</string>
     <string name="anti_knownvuln">Denne app indeholder en kendt sårbarhed</string>
+    <string name="no_permissions">Ingen tilladelser bliver brugt.</string>
+    <string name="perm_costs_money">Dette koster dig muligvis penge</string>
+    <string name="perms_description_app">Udbudt af %1$s.</string>
+    <string name="perms_new_perm_prefix">Nye:</string>
+    <string name="permissions">Tilladelser</string>
 </resources>

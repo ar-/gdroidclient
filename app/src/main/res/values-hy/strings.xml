@@ -19,4 +19,9 @@
     <string name="category_Time">Ժամանակ</string>
     <string name="category_Writing">Տեքստ</string>
     <string name="anti_ads">Այս ափփը պարունակում է գովազդ</string>
+    <string name="no_permissions">Թույլատվություններ օգտագործված չեն</string>
+    <string name="perm_costs_money">Սա կարող է քեզ գումար արժենալ</string>
+    <string name="perms_description_app">Տրամադրված է %1$s։</string>
+    <string name="perms_new_perm_prefix">Նոր.</string>
+    <string name="permissions">Թույլատվություններ</string>
 </resources>

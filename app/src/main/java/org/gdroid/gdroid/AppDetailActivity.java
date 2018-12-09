@@ -52,6 +52,8 @@ import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
 import org.gdroid.gdroid.beans.TagBean;
+import org.gdroid.gdroid.perm.AppDiff;
+import org.gdroid.gdroid.perm.AppSecurityPermissions;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -397,6 +399,15 @@ public class AppDetailActivity extends AppCompatActivity {
                 findViewById(R.id.grp_rating_releasecycle).setVisibility(View.GONE);
             }
 
+            // show permissions
+            AppDiff appDiff = new AppDiff(mContext, mApp);
+            AppSecurityPermissions perms = new AppSecurityPermissions(mContext, appDiff.apkPackageInfo);
+
+            final LinearLayout permContainer = findViewById(R.id.ll_permissions_container);
+            permContainer.addView(perms.getPermissionsView(AppSecurityPermissions.WHICH_ALL));
+
+
+
         }
         else
         {
@@ -586,4 +597,6 @@ public class AppDetailActivity extends AppCompatActivity {
             fab.setImageResource(R.drawable.ic_star_border_white_24dp);
         }
     }
+
+
 }

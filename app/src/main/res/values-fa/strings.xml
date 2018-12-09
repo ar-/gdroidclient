@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">این کاره یک امضای امنیتی ضعیف دارد</string>
     <string name="anti_knownvuln">این کاره یک آسیب‌پذیری امنیتی شناخته‌شده دارد</string>
     <string name="anti_nosourcesince">کد مبدأ دیگر در دسترس نیست، به‌روز رسانی ناممکن است.</string>
+    <string name="no_permissions">دسترسی ای استفاده نشده است.</string>
+    <string name="perm_costs_money">ممکن است این کار برایتان خرج داشته باشد</string>
+    <string name="perms_description_app">فراهم شده توسّط: %1$s.</string>
+    <string name="perms_new_perm_prefix">جدید:</string>
+    <string name="permissions">دسترسی ها</string>
 </resources>

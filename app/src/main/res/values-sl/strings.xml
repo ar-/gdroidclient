@@ -28,4 +28,9 @@
     <string name="anti_nonfreeassets">Ta aplikacija vsebuje neodprte enote</string>
     <string name="anti_disabledalgorithm">Ta aplikacija ima šibek varnostni podpis</string>
     <string name="anti_knownvuln">Ta aplikacija vsebuje znano varnostno pomanjkljivost</string>
+    <string name="no_permissions">Nobena dovoljenja niso v uporabi.</string>
+    <string name="perm_costs_money">To vas lahko finančno bremeni</string>
+    <string name="perms_description_app">Priskrbljeno od %1$s.</string>
+    <string name="perms_new_perm_prefix">Novo:</string>
+    <string name="permissions">Dovoljenja</string>
 </resources>

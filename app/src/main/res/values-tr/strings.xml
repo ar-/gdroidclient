@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">Bu uygulamanın zayıf güvenlikli imzası var</string>
     <string name="anti_knownvuln">Bu uygulama bilinen bir güvenlik zafiyeti içerir</string>
     <string name="anti_nosourcesince">Kaynak kodu artık mevcut değil, güncelleme mümkün değil.</string>
+    <string name="no_permissions">Hiçbir izin kullanılmıyor.</string>
+    <string name="perm_costs_money">Bu size paraya mal olabilir</string>
+    <string name="perms_description_app">%1$s tarafından sağlanmıştır.</string>
+    <string name="perms_new_perm_prefix">Yeni:</string>
+    <string name="permissions">İzinler</string>
 </resources>

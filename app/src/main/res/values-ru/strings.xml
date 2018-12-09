@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">Это приложение имеет слабую подпись безопасности</string>
     <string name="anti_knownvuln">Это приложение содержит известную уязвимость безопасности</string>
     <string name="anti_nosourcesince">Исходный код больше недоступен, обновления невозможны.</string>
+    <string name="no_permissions">Разрешений не требуется.</string>
+    <string name="perm_costs_money">Это может стоить вам денег</string>
+    <string name="perms_description_app">Предоставлено %1$s.</string>
+    <string name="perms_new_perm_prefix">Новые:</string>
+    <string name="permissions">Разрешения</string>
 </resources>

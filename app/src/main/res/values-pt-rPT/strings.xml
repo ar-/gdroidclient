@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">Esta aplicação tem uma assinatura de segurança fraca</string>
     <string name="anti_knownvuln">Esta aplicação contém uma vulnerabilidade conhecida</string>
     <string name="anti_nosourcesince">O código fonte já não está disponível e não é possível a atualização.</string>
+    <string name="no_permissions">Não utiliza permissões.</string>
+    <string name="perm_costs_money">Pode implicar gastos</string>
+    <string name="perms_description_app">Disponibilizada por %1$s.</string>
+    <string name="perms_new_perm_prefix">Novas:</string>
+    <string name="permissions">Permissões</string>
 </resources>

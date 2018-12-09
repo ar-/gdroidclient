@@ -29,4 +29,9 @@
     <string name="anti_disabledalgorithm">Ta aplikacja posiada słabą sygnaturę bezpieczeństwa</string>
     <string name="anti_knownvuln">Ta aplikacja ma znaną podatność bezpieczeństwa</string>
     <string name="anti_nosourcesince">Kod źródłowy nie jest już dostępny, nie są możliwe aktualizacje.</string>
+    <string name="no_permissions">Brak wymaganych uprawnień.</string>
+    <string name="perm_costs_money">To może Cię kosztować</string>
+    <string name="perms_description_app">Dostarczone przez %1$s.</string>
+    <string name="perms_new_perm_prefix">Nowe:</string>
+    <string name="permissions">Uprawnienia</string>
 </resources>

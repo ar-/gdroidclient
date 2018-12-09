@@ -18,4 +18,6 @@
     <string name="category_Writing">Tira</string>
     <string name="antifeatures">Timahilin</string>
     <string name="anti_tracking">Asnas-agi ad yeḍfeṛ udiγ ad d-yazen armud-ik</string>
+    <string name="perms_new_perm_prefix">Amaynut:</string>
+    <string name="permissions">Tisirag</string>
 </resources>
