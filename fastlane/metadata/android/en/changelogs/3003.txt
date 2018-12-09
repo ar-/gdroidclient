@@ -1,6 +1,7 @@
 0.3.3
   * added the permissions to be shown correctly translated, described, clickable and formated
-  * added some more translations
+  * added translations for some more GUI elements
+  * added a run-button for instlled apps
 
 0.3.2
   * mark apps that can be updated with a logo directly on the card
