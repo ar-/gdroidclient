@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
     <string name="category_Connectivity">Tilkobling</string>
@@ -38,4 +39,63 @@
     <string name="action_install">Installer</string>
     <string name="action_upgrade">Oppgrader</string>
     <string name="action_launch">Kjør</string>
-</resources>
+<string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">Åpne navigasjonsskuff</string>
+    <string name="navigation_drawer_close">Lukk navigasjonsskuff</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="nav_header_subtitle">klient for F-Droid-programmarkedet</string>
+    <string name="nav_header_desc">Navigasjonshode</string>
+    <string name="action_settings">Innstillinger</string>
+
+
+    <string name="action_add_favourite">Legg til i favoritter</string>
+
+
+    <string name="title_activity_settings">Innstillinger</string>
+
+    <string name="pref_header_general">Generelt</string>
+
+    <string name="pref_title_social_recommendations">Skru på anbefalinger</string>
+    <string name="pref_description_social_recommendations">virker ikke enda</string>
+
+    <string name="pref_title_display_name">Avskrudd</string>
+
+    <string name="pref_title_add_friends_to_messages">avskrudd</string>
+    <string name="pref_header_data_sync">Data og synkronisering</string>
+
+    <string name="pref_title_sync_frequency">Synkroniseringshyppighet</string>
+    <string name="pref_title_system_sync_settings">Systemsynkroniseringsinnstillinger</string>
+
+    <string name="pref_header_notifications">Merknader</string>
+
+    <string name="pref_title_new_message_notifications">Nye meldingsmerknader</string>
+
+    <string name="pref_title_ringtone">Ringetone</string>
+    <string name="pref_ringtone_silent">Stille</string>
+
+    <string name="pref_title_vibrate">Vibrer</string>
+    <string name="title_home">Hjem</string>
+    <string name="title_dashboard">Oversikt</string>
+    <string name="title_notifications">Merknader</string>
+    <string name="title_categories">kategorier</string>
+    <string name="title_tags">etiketter</string>
+    <string name="title_starred">stjernemerket</string>
+    <string name="title_myapps">mine programmer</string>
+    <string name="title_search">søk</string>
+    <string name="app_store">Programmarked</string>
+    <string name="calendar">Kalender</string>
+    <string name="camera">Kamera</string>
+    <string name="contacts">Kontakter</string>
+    <string name="email_client">E-postklient</string>
+    <string name="file_browser">Filutforsker</string>
+    <string name="gallery">Galleri</string>
+    <string name="launcher">Oppstarter</string>
+    <string name="music_player">Musikkspiller</string>
+    <string name="shopping_list">Handleliste</string>
+    <string name="text_editor">Tekstbehandler</string>
+    <string name="todo_list">Gjøremålsliste</string>
+    <string name="torrent_downloader">Torrent-nedlaster</string>
+    <string name="web_browser">Nettleser</string>
+    <string name="youtube_player">YouTube-spiller</string>
+
+    </resources>
