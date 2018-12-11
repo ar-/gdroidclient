@@ -1,4 +1,4 @@
-0.3.3
+0.4.0
   * added the permissions to be shown correctly translated, described, clickable and formated
   * added translations for some more GUI elements
   * added a run-button for installed apps

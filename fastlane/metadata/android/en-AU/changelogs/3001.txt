@@ -1,0 +1,13 @@
+0.3.1
+  * added more I18N support
+  * show antifeatures (below the install button in red) in the correct language (if available)
+  * changing system language will show categories correctly translated (unlike in F-Droid)
+  * sort starred apps and my apps alphabetically
+  * added missing translation strings for tags
+
+0.3.0
+  * added tags for apps that are used for standard tasks
+  * changed logo to something purple
+
+0.2.3
+  * bugfix: fixed crash when updating archived apps
