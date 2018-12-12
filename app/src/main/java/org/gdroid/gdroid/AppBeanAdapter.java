@@ -21,8 +21,10 @@ package org.gdroid.gdroid;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.support.v4.widget.CircularProgressDrawable;
+import android.support.v7.content.res.AppCompatResources;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -118,11 +120,12 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         if (applicationBean.icon != null) {
             try
             {
+                final Drawable errorImg = AppCompatResources.getDrawable(mContext, R.drawable.ic_android_black_24dp);
                 Glide.with(mContext)
                         .load("https://f-droid.org/repo/icons-640/"+applicationBean.icon)
                         .override(192, 192)
                         .placeholder(circularProgressDrawable)
-                        .error(R.drawable.ic_android_black_24dp)
+                        .error(errorImg)
                         .into(holder.thumbnail);
             }
             catch (Throwable t)

@@ -18,10 +18,12 @@
 
 package org.gdroid.gdroid;
 
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.content.res.AppCompatResources;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -41,10 +43,11 @@ public class ImageActivity extends AppCompatActivity {
         circularProgressDrawable.setCenterRadius(30f);
         circularProgressDrawable.start();
 
+        final Drawable errorImg = AppCompatResources.getDrawable(this, R.drawable.ic_android_black_24dp);
         Glide.with(getApplicationContext())
                 .load(imgUrl)
                 .placeholder(circularProgressDrawable)
-                .error(R.drawable.ic_phone_android_black_24dp)
+                .error(errorImg)
                 .into(iv);
     }
 }

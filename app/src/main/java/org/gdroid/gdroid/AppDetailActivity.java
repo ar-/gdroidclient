@@ -23,6 +23,7 @@ import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -32,6 +33,7 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.content.res.AppCompatResources;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -259,10 +261,11 @@ public class AppDetailActivity extends AppCompatActivity {
                 {
                     ssUrl = "https://f-droid.org/repo/" + mApp.id + "/" + ss;
                 }
+                final Drawable errorImg = AppCompatResources.getDrawable(mContext, R.drawable.ic_android_black_24dp);
                 Glide.with(mContext)
                         .load(ssUrl)
                         .placeholder(circularProgressDrawable)
-                        .error(R.drawable.ic_phone_android_black_24dp)
+                        .error(errorImg)
                         .into(iv);
                 grpScreenshots.addView(iv);
 
