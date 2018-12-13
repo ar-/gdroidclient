@@ -26,6 +26,11 @@
         android:title="@string/pref_header_general" />
 
     <header
+        android:fragment="org.gdroid.gdroid.SettingsActivity$RatingsPreferenceFragment"
+        android:icon="@drawable/ic_star_border_black_24dp"
+        android:title="@string/pref_header_ratings" />
+
+    <header
         android:fragment="org.gdroid.gdroid.SettingsActivity$NotificationPreferenceFragment"
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="@string/pref_header_notifications" />
