@@ -1,0 +1,74 @@
+<!--
+  ~ Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <org.gdroid.gdroid.WeightEditTextPreference
+        android:capitalize="words"
+        android:enabled="false"
+        android:title="@string/pref_title_ratings_headline"
+        android:summary="@string/pref_title_ratings_summary"
+        />
+
+    <org.gdroid.gdroid.WeightEditTextPreference
+        android:capitalize="words"
+        android:enabled="true"
+        android:defaultValue="1"
+        android:inputType="number"
+        android:key="weight_upstream_ratings"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:numeric="integer"
+        android:maxLength="2"
+        android:title="@string/pref_title_upstream_ratings"
+        android:summary="1"
+        />
+
+    <org.gdroid.gdroid.WeightEditTextPreference
+        android:capitalize="words"
+        android:enabled="true"
+        android:defaultValue="1"
+        android:inputType="number"
+        android:key="weight_last_update_2_years"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:numeric="integer"
+        android:maxLength="2"
+        android:title="@string/pref_title_updated_in_2_years"
+        android:summary="1"
+        />
+
+    <org.gdroid.gdroid.WeightEditTextPreference
+        android:capitalize="words"
+        android:enabled="true"
+        android:defaultValue="1"
+        android:inputType="number"
+        android:key="weight_release_cycle_time"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:numeric="integer"
+        android:maxLength="2"
+        android:title="@string/pref_title_release_cycle_time"
+        android:summary="1"
+        />
+
+
+</PreferenceScreen>

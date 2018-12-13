@@ -48,7 +48,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
 
     public static final String TAG = "DownloadJaredJsonTask";
 
-    private Context mContext;
+    protected Context mContext;
     private final MainActivity mMainActivity;
     private final AppCollectionAdapter mAppCollectionAdapter;
     protected final String mJsonFileInJar;

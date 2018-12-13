@@ -144,6 +144,20 @@ public class Util {
         return ret;
     }
 
+    public static int getWeightOfMetric(Context context, String metric)
+    {
+        try
+        {
+            return PreferenceManager
+                    .getDefaultSharedPreferences(context)
+                    .getInt(metric, 1);
+        }
+        catch (Throwable t)
+        {
+            return 1;
+        }
+    }
+
     public static List<ApplicationBean> getInstalledApps(Context context)
     {
         final PackageManager pm = context.getPackageManager();

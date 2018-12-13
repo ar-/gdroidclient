@@ -18,11 +18,13 @@
 
 package org.gdroid.gdroid.tasks;
 
+import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
 
 import org.gdroid.gdroid.MetaMetric;
+import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,6 +39,9 @@ import java.util.Map;
 class MetaBeanJsonParser extends AbstractJsonParser implements JsonParser{
     // map: pkgname -> AppBean
     Map<String,ApplicationBean> abMap;
+    private int weight_upstream_ratings;
+    private int weight_last_update_2_years;
+    private int weight_release_cycle_time;
 
     public MetaBeanJsonParser(List<ApplicationBean> appBeanList) {
         abMap = new HashMap<>(appBeanList.size());
@@ -44,6 +49,18 @@ class MetaBeanJsonParser extends AbstractJsonParser implements JsonParser{
                 appBeanList) {
             abMap.put(ab.id,ab);
         }
+        weight_upstream_ratings = 1;
+        weight_last_update_2_years = 1;
+        weight_release_cycle_time = 1;
+    }
+
+    public void initMetricWeightsFromPreferences(Context context)
+    {
+        // read the weights of the metrics
+        weight_upstream_ratings = Util.getWeightOfMetric(context,"weight_upstream_ratings");
+        weight_last_update_2_years = Util.getWeightOfMetric(context,"weight_last_update_2_years");
+        weight_release_cycle_time = Util.getWeightOfMetric(context,"weight_release_cycle_time");
+
     }
 
     @Override
@@ -92,21 +109,19 @@ class MetaBeanJsonParser extends AbstractJsonParser implements JsonParser{
             MetaMetric mm = new MetaMetric();
             if (! Double.isNaN(norm_ghspd))
             {
-                // TODO let the user choose the weights
-                mm.addMetric(norm_ghspd,1);
+                mm.addMetric(norm_ghspd,weight_upstream_ratings);
             }
             if (! Double.isNaN(norm_glspd))
             {
-                mm.addMetric(norm_glspd,1);
+                mm.addMetric(norm_glspd,weight_upstream_ratings);
             }
             if (! Double.isNaN(norm_a24))
             {
-                //TODO ask the user in the settings about the weight of each metric
-                mm.addMetric(norm_a24,1);
+                mm.addMetric(norm_a24,weight_last_update_2_years);
             }
             if (! Double.isNaN(norm_udf))
             {
-                mm.addMetric(norm_udf,1);
+                mm.addMetric(norm_udf,weight_release_cycle_time);
             }
             ab.stars = (float) mm.getScaledValue(5.0);
             ab.metriccount = mm.countMetrics();

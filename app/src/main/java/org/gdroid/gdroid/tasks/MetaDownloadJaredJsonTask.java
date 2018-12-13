@@ -37,7 +37,9 @@ public class MetaDownloadJaredJsonTask extends DownloadJaredJsonTask {
     protected List<ApplicationBean> doInBackground(String... urls) {
         List<ApplicationBean> abl = new ArrayList<>();
         try {
-            abl = loadJsonFromNetwork(urls[0], mJsonFileInJar, new MetaBeanJsonParser(mAppBeanList));
+            final MetaBeanJsonParser parser = new MetaBeanJsonParser(mAppBeanList);
+            parser.initMetricWeightsFromPreferences(mContext);
+            abl = loadJsonFromNetwork(urls[0], mJsonFileInJar, parser);
 
         } catch (IOException e) {
             e.printStackTrace();

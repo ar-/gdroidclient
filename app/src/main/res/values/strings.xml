@@ -171,4 +171,11 @@
     <string name="action_install">Install</string>
     <string name="action_upgrade">Upgrade</string>
     <string name="action_launch">Run</string>
+
+    <string name="pref_header_ratings">Star Ratings</string>
+    <string name="pref_title_upstream_ratings">Ratings from Github, Gitlab and Sourceforge</string>
+    <string name="pref_title_ratings_headline">Set your importance for each metric</string>
+    <string name="pref_title_ratings_summary">Assign a number from 0 to 10 to each metric. Higher number means higher importance.</string>
+    <string name="pref_title_updated_in_2_years">last update in recent 2 years</string>
+    <string name="pref_title_release_cycle_time">Release cycle time</string>
 </resources>
