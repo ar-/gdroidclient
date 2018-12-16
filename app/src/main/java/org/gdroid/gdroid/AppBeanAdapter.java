@@ -149,11 +149,21 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
             @Override
             public void run() {
                 final String installedVersionOfApp = Util.getInstalledVersionOfApp(mContext, applicationBean.id);
-                int drawableToBeSet = R.drawable.ic_more_vert_black_24dp;
-                if (Util.isAppUpdateable(mContext, applicationBean)) {
+                final int drawableToBeSet;
+                if (Util.isAppUpdateable(mContext, applicationBean))
+                {
                     drawableToBeSet = R.drawable.ic_update_green_24dp;
                 }
-                holder.overflow.setImageResource(drawableToBeSet);
+                else
+                {
+                    drawableToBeSet = R.drawable.ic_more_vert_black_24dp;
+                }
+                mActivity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        holder.overflow.setImageResource(drawableToBeSet);
+                    }
+                });
             }
         });
 
