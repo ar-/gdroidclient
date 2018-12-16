@@ -54,6 +54,11 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * all additional meta-data is provided by F-Droid as well (eg. the link to github)
 * GPL3 license 
 
+# Explanation of permissions
+
+* INTERNET: to download the app-metadata and the apps
+* WRITE_EXTERNAL_STORAGE: To store the downloaded apps temporarily (permission only on older Android version enforced)
+
 # FAQ
 
 ## Where to the ratings come from?
