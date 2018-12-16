@@ -24,8 +24,8 @@ android {
         applicationId "org.gdroid.gdroid"
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 4002
-        versionName "0.4.2"
+        versionCode 4003
+        versionName "0.4.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }

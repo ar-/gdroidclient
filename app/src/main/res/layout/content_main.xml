@@ -61,6 +61,32 @@
 
         </android.support.v7.widget.SearchView>
 
+        <Button
+            android:id="@+id/btn_search_harder"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search_harder"
+            android:background="@drawable/rounded_corner_button"
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF"
+            android:minHeight="30dp"
+            android:maxHeight="30dp"
+            />
+
+        <Button
+            android:id="@+id/btn_search_even_harder"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search_even_harder"
+            android:background="@drawable/rounded_corner_button"
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF"
+            android:minHeight="30dp"
+            android:maxHeight="30dp"
+            />
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
@@ -69,6 +95,7 @@
             android:scrollbars="vertical"
             />
         <!--android:paddingTop="50dp"-->
+
 
     </LinearLayout>
 
