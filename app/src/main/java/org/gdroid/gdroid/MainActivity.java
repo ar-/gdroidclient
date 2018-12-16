@@ -253,28 +253,32 @@ public class MainActivity extends AppCompatActivity
             searchView.setVisibility(View.GONE);
             btnSearchHarder.setVisibility(View.GONE);
             btnSearchEvenHarder.setVisibility(View.GONE);
-            String screenName = "";
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    screenName = "home";
+                {
+                    final String screenName = "home";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpCollectionCards();
                     prepareAppCollections(screenName);
                     return true;
+                }
                 case R.id.navigation_categories:
-                    screenName = "categories";
+                {
+                    final String screenName = "categories";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpCollectionCards();
                     prepareAppCollections(screenName);
                     return true;
-                case R.id.navigation_tags:
-                    screenName = "tags";
+                }
+                case R.id.navigation_tags: {
+                    final String screenName = "tags";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpCollectionCards();
                     prepareAppCollections(screenName);
                     return true;
-                case R.id.navigation_starred:
-                    screenName = "starred";
+                }
+                case R.id.navigation_starred: {
+                    final String screenName = "starred";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpAppCards();
                     AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(), screenName);
@@ -282,8 +286,10 @@ public class MainActivity extends AppCompatActivity
                     appBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
                     adapter.notifyDataSetChanged();
                     return true;
+                }
                 case R.id.navigation_myapps:
-                    screenName = "myapps";
+                {
+                    final String screenName = "myapps";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpAppCards();
                     final String finalScreenName = screenName;
@@ -291,21 +297,25 @@ public class MainActivity extends AppCompatActivity
                         @Override
                         public void run() {
                             AppCollectionDescriptor myAppsCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(), finalScreenName);
-                            appBeanList.clear();
-                            appBeanList.addAll(myAppsCollectionDescriptor.getApplicationBeanList());
+                            if (Util.getLastMenuItem(getApplicationContext()).equals(screenName)) // only if selected tab still the same
+                            {
+                                appBeanList.clear();
+                                appBeanList.addAll(myAppsCollectionDescriptor.getApplicationBeanList());
 
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    adapter.notifyDataSetChanged();
-                                }
-                            });
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        adapter.notifyDataSetChanged();
+                                    }
+                                });
+                            }
                         }
                     });
 
                     return true;
-                case R.id.navigation_search:
-                    screenName = "search";
+                 }
+                case R.id.navigation_search: {
+                    final String screenName = "search";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     searchView.setVisibility(View.VISIBLE);
                     searchView.setIconifiedByDefault(false);
@@ -317,13 +327,10 @@ public class MainActivity extends AppCompatActivity
                         public boolean onQueryTextSubmit(String s) {
                             final CharSequence query = searchView.getQuery();
                             final boolean shortQuery = query.length() < 2;
-                            if (shortQuery)
-                            {
+                            if (shortQuery) {
                                 btnSearchHarder.setVisibility(View.GONE);
                                 btnSearchEvenHarder.setVisibility(View.GONE);
-                            }
-                            else
-                            {
+                            } else {
                                 btnSearchHarder.setVisibility(View.VISIBLE);
                                 btnSearchEvenHarder.setVisibility(View.GONE);
                             }
@@ -338,13 +345,10 @@ public class MainActivity extends AppCompatActivity
                         public boolean onQueryTextChange(String s) {
                             final CharSequence query = searchView.getQuery();
                             final boolean shortQuery = query.length() < 2;
-                            if (shortQuery)
-                            {
+                            if (shortQuery) {
                                 btnSearchHarder.setVisibility(View.GONE);
                                 btnSearchEvenHarder.setVisibility(View.GONE);
-                            }
-                            else
-                            {
+                            } else {
                                 btnSearchHarder.setVisibility(View.VISIBLE);
                                 btnSearchEvenHarder.setVisibility(View.GONE);
                             }
@@ -364,7 +368,7 @@ public class MainActivity extends AppCompatActivity
                             btnSearchEvenHarder.setVisibility(View.VISIBLE);
                             hideSoftKeyboard(btnSearchHarder);
                             final CharSequence query = searchView.getQuery();
-                            int limit = query.length()<2 ? 20 : 2000;
+                            int limit = query.length() < 2 ? 20 : 2000;
                             AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search2:" + query, limit);
                             appBeanList.clear();
                             appBeanList.addAll(acd.getApplicationBeanList());
@@ -378,7 +382,7 @@ public class MainActivity extends AppCompatActivity
                             btnSearchEvenHarder.setVisibility(View.GONE);
                             hideSoftKeyboard(btnSearchHarder);
                             final CharSequence query = searchView.getQuery();
-                            int limit = query.length()<2 ? 20 : 2000;
+                            int limit = query.length() < 2 ? 20 : 2000;
                             AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search3:" + query, limit);
                             appBeanList.clear();
                             appBeanList.addAll(acd.getApplicationBeanList());
@@ -386,6 +390,7 @@ public class MainActivity extends AppCompatActivity
                         }
                     });
                     return true;
+                }
             }
             return false;
         }
