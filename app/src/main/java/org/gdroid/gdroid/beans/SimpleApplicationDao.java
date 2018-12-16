@@ -64,6 +64,14 @@ public interface SimpleApplicationDao {
             " ORDER BY lastupdated DESC, added ASC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getAllAppsForSearchString(String ss, int limit, int offset);
 
+    @Query("SELECT * FROM ApplicationBean WHERE name like :ss OR summary like :ss " +
+            " ORDER BY lastupdated DESC, added ASC LIMIT :limit OFFSET :offset")
+    public ApplicationBean[] getAllAppsForSearch2String(String ss, int limit, int offset);
+
+    @Query("SELECT * FROM ApplicationBean WHERE name like :ss OR summary like :ss OR `desc` like :ss " +
+            " ORDER BY lastupdated DESC, added ASC LIMIT :limit OFFSET :offset")
+    public ApplicationBean[] getAllAppsForSearch3String(String ss, int limit, int offset);
+
 
     // categories
 

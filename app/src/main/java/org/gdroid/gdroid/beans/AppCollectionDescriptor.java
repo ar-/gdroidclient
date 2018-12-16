@@ -129,6 +129,30 @@ public class AppCollectionDescriptor {
                 applicationBeanList.add(ab);
             }
         }
+        else if (collectionName.startsWith("search2:")) // level 2 search
+        {
+            String searchString = collectionName.replace("search2:","");
+            searchString = "%"+searchString+"%";
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getAllAppsForSearch2String(searchString, mLimit, mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+        }
+        else if (collectionName.startsWith("search3:")) // level 3 search
+        {
+            String searchString = collectionName.replace("search3:","");
+            searchString = "%"+searchString+"%";
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getAllAppsForSearch3String(searchString, mLimit, mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+        }
         else if (collectionName.startsWith("cat:"))
         {
             String cat = collectionName.replace("cat:","");
