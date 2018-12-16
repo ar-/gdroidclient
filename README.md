@@ -4,9 +4,11 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 
 # Screenshots
 
-<img src="fastlane/metadata/android/en/images/phoneScreenshots/s1.png"  width="320">
-<img src="fastlane/metadata/android/en/images/phoneScreenshots/s2.png"  width="320">
-<img src="fastlane/metadata/android/en/images/phoneScreenshots/s3.png"  width="320">
+<img src="fastlane/metadata/android/en-AU/images/phoneScreenshots/s1.png"  width="320">
+<img src="fastlane/metadata/android/en-AU/images/phoneScreenshots/s2.png"  width="320">
+<img src="fastlane/metadata/android/en-AU/images/phoneScreenshots/s3.png"  width="320">
+<img src="fastlane/metadata/android/en-AU/images/phoneScreenshots/s4.png"  width="320">
+<img src="fastlane/metadata/android/en-AU/images/phoneScreenshots/s5.png"  width="320">
 
 # Additional features compared to F-Droid
 
@@ -26,7 +28,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * view for 'random apps' to discover apps you usually wouldn't find
 * aims to provide many different views to the app repository in order to assist the user to find what she wants to find and encourage to use more open source apps from the repository
 * 'share' apps so it can still be opened with another store (F-Droid, Yalp, Aurora, ...), to get more information about the app.
-* different search algorithm
+* different search algorithm, can 'search harder' to continue a search if the results are insufficient
 * shows the logos of apps all the time (if network connection is okay)
 * shows more screenshots
 * shows screenshots, completely, up-to-date and in the correct language
@@ -41,14 +43,14 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * show or install an older version of an app
 * create a local repo, share apps with 'near' people or share apps via bluetooth
 * add other repositories than the F-Droid repo
-* use the privileged extension
+* use the privileged extension (done, but extension is not adjusted yet)
 * update autmatically
 * http proxy settings
 * G-Droid helps you in different ways to find better apps: but in some cases you might still need the 'share' button, to open that app in F-Droid to install it. G-Droid right now is not yet a complete replacement for the F-Droid app.
 
 # Things that are the same in G-Droid and F-Droid
 
-* shows the same apps - G-Droid does not add any apps or modify the builds or download URLs
+* shows the same apps - G-Droid does not add any apps or modify the builds, signatures or download URLs
 * all additional meta-data is provided by F-Droid as well (eg. the link to github)
 * GPL3 license 
 
@@ -84,3 +86,9 @@ And no. The data does not come from G-Droid users as there is (and will be) no t
 ## How can I add or remove an app from the tags?
 
 If you are technically experienced you can look at this file: https://gitlab.com/gdroid/gdroiddata/blob/master/metadata/tags.yaml , change it and submit a merge request. If you don't have the technical expertise or don't have time to fiddle with it, you can open a new issue (https://gitlab.com/gdroid/gdroidclient/issues/new) or send an email. It will be sorted out for you. Either way, every contribution is welcome.
+
+## What does the 'search harder' and 'search even harder' do?
+
+* The normal search is searching only in the app names in your language (yes, apps can have different names in different languages).
+* 'search harder' includes the app-summary into the search, which is a short description of the app in one or 2 sentences.
+* 'search even harder' includes also the app description in the search result. This is similar to the search in the F-Droid client. The result will contain a maximum of results but many of them might be irrelevant.
