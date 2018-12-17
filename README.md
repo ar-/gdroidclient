@@ -61,7 +61,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 
 # FAQ
 
-## Where to the ratings come from?
+## Where do the ratings come from?
 
 The implementation of the star ratings is not finalised yet. 
 
