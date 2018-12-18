@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="category_Connectivity">Konnektiwiteit</string>
+
+    <string name="category_Development">Ontwikkeling</string>
+    <string name="category_Games">Speletjies</string>
+    <string name="category_Graphics">Grafika</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Geld</string>
+    <string name="category_Multimedia">Multimedia</string>
+    <string name="category_Navigation">Navigasie</string>
+    <string name="category_Phone_SMS">Telefoon &amp; SMS</string>
+    <string name="category_Reading">Lees</string>
+    <string name="category_Science_Education">Wetenskap en onderwys</string>
+    <string name="category_Security">Sekuriteit</string>
+    <string name="category_Sports_Health">Sport en gesondheid</string>
+    <string name="category_System">Stelsel</string>
+    <string name="category_Theming">Thema\'s</string>
+    <string name="category_Time">Tyd</string>
+    <string name="category_Writing">Skryf</string>
+    <string name="antifeatures">Anti-kenmerke</string>
+    <string name="anti_ads">Hierdie program bevat advertensies</string>
+    <string name="anti_tracking">Hierdie program speur op, en rapporteer jou aktiwiteite</string>
+    <string name="anti_nonfreeadd">Hierdie program bevorder nie-vrye toevoegsels</string>
+    <string name="anti_nonfreenet">Hierdie program bevorder nie-vrye netwerk dienste</string>
+    <string name="anti_nonfreedep">Hierdie program is afhanklik van ander nie-vrye programme</string>
+    <string name="anti_upstreamnonfree">Die stroomop bronkode is nie heeltemal vry nie</string>
+    <string name="anti_nonfreeassets">Hierdie program bevat nie-vrye bates</string>
+    <string name="no_permissions">Geen magtigings in gebruik.</string>
+    <string name="perm_costs_money">Dit kan jy dalk geld kos</string>
+    <string name="perms_description_app">Verskaf deur %1$s.</string>
+    <string name="perms_new_perm_prefix">Nuwe:</string>
+    <string name="permissions">Magtigings</string>
+    <string name="links">Skakels</string>
+    <string name="action_install">Installeer</string>
+    <string name="action_upgrade">Opgradering</string>
+    <string name="action_launch">Begin</string>
+</resources>

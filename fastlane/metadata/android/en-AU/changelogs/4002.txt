@@ -1,0 +1,20 @@
+0.4.2
+  * added a setting to adjust the importance of the star ratings automatically
+
+0.4.1
+  * bugfix for vector images on pre-lollipop devices cashing the app when loaded with Glide
+  
+0.4.0
+  * added the permissions to be shown correctly translated, described, clickable and formated
+  * added translations for some more GUI elements
+  * added a run-button for installed apps
+  * starred apps show a star on the app card as well
+  * tags and categories in the app detail view are now clickable
+  * screenshots are now complete (unlike F-Droid), up-to-date (unlike F-Droid) and in correct language (unlike F-Droid)
+  * screenshots will also be shown, if they are not in a known structure (like fastlane)
+  * screenshots are now clickable
+
+0.3.2
+  * mark apps that can be updated with a logo directly on the card
+  * show a list of apps that can be updated in the my-apps tab
+  * fix the Jolla C / ICS scroll bug, caused by vector graphics in glide on older Android versions

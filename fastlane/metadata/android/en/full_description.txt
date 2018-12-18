@@ -1,1 +1,0 @@
-G-Droid is a client application to browse the F-Droid repository. It has a slighly different approach of UI design to the F-Droid client.

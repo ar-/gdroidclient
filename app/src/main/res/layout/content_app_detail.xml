@@ -97,17 +97,235 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_install"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            >
+
+            <Button
+                android:id="@+id/btn_launch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_launch"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#ffffffff"
+                />
+
+            <Button
+                android:id="@+id/btn_install"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_install"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#ffffffff"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lbl_antifeatures"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/action_install"
-            android:layout_alignParentRight="true"
             android:layout_gravity="right"
-            android:backgroundTint="@color/colorPrimary"
-            android:textColor="#ffffffff"
+            android:gravity="right"
+            android:textColor="#FF0000"
+            android:text="antifeatures are to be show here antifeatures are to be show here "
             />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:id="@+id/grp_ratings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/grp_rating_gdroid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="4dp"
+                >
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/lbl_rating_gdroid_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="0.0 ★"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/lbl_rating_gdroid_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 G-Droid metrics"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:maxWidth="70dp"
+                    />
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/grp_rating_upstream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="4dp"
+                >
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/lbl_rating_upstream_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="00000 ★"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/lbl_rating_upstream_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="on upstream"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:maxWidth="70dp"
+                    />
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/grp_rating_uptodate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="4dp"
+                >
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/lbl_rating_uptodate_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="000 %"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="up-to-date"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:maxWidth="70dp"
+                    />
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/grp_rating_releasecycle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="4dp"
+                >
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/lbl_rating_releasecycle_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="000 days"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="release cycle"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:maxWidth="70dp"
+                    />
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+            </LinearLayout>
+
+
+        </LinearLayout>
 
 
         <View
@@ -131,7 +349,7 @@
                     android:id="@+id/img_tmp_ss1"
                     android:layout_width="300dp"
                     android:layout_height="200dp"
-                    android:src="@drawable/ic_phone"
+                    app:srcCompat="@drawable/ic_phone_android_black_24dp"
                     android:minHeight="200dp"
                     android:minWidth="200dp"
                     android:maxHeight="200dp"
@@ -140,14 +358,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_phone"
+                    app:srcCompat="@drawable/ic_phone_android_black_24dp"
                     android:minHeight="200dp"
                     android:minWidth="200dp"
                     />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_phone"
+                    app:srcCompat="@drawable/ic_phone_android_black_24dp"
                     android:minHeight="200dp"
                     android:minWidth="200dp"
                     />
@@ -345,7 +563,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="Links"
+            android:text="@string/links"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -415,21 +633,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="Permissions"
+            android:text="@string/permissions"
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/lbl_permissions"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/ll_permissions_container"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
-            android:text="no permissions needed by this app"
-            />
+            android:orientation="vertical"
+            >
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
+            android:paddingTop="6dp"
             android:background="?android:attr/listDivider" />
 
 

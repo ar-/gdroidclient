@@ -1,0 +1,19 @@
+0.4.3
+  * added 2 more search algorithms "search harder" and "search even harder", adding the summary and the app description to the search
+  * bugfix: update icon not set on UI thread on some devices
+
+0.4.2
+  * added a setting to adjust the importance of the star ratings automatically
+
+0.4.1
+  * bugfix for vector images on pre-lollipop devices cashing the app when loaded with Glide
+  
+0.4.0
+  * added the permissions to be shown correctly translated, described, clickable and formated
+  * added translations for some more GUI elements
+  * added a run-button for installed apps
+  * starred apps show a star on the app card as well
+  * tags and categories in the app detail view are now clickable
+  * screenshots are now complete (unlike F-Droid), up-to-date (unlike F-Droid) and in correct language (unlike F-Droid)
+  * screenshots will also be shown, if they are not in a known structure (like fastlane)
+  * screenshots are now clickable

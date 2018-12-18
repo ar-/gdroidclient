@@ -16,21 +16,21 @@
 #-------------------------------------------------------------------------------
 EXCLUDE="./app/build/generated/*"
 # check source
-RET=`licensecheck \`find . \( -name "*.java" -or -name "*.properties" -or -name "*.xml"  -or -name "*.sh" \) -not -path "./tmp/*" -not -path "$EXCLUDE"\` | grep -v "GPL (v3 or later)" | grep -v "GENERATED FILE" | wc -l`
+RET=`licensecheck \`find . \( -name "*.java" -or -name "*.properties" -or -name "*.xml"  -or -name "*.sh" \) -not -path "./tmp/*" -not -path "$EXCLUDE"\` | grep -v "GPL (v3 or later)" | grep -v "Apache (v2.0)" | grep -v "GENERATED FILE" | wc -l`
 if [ $RET -eq 0 ]; then
 	echo all licences in directory okay
 else
-	licensecheck `find . \( -name "*.java" -or -name "*.properties" -or -name "*.xml"  -or -name "*.sh" \) -not -path "./tmp/*" -not -path "$EXCLUDE"` | grep -v "GPL (v3 or later)" | grep -v "GENERATED FILE"
+	licensecheck `find . \( -name "*.java" -or -name "*.properties" -or -name "*.xml"  -or -name "*.sh" \) -not -path "./tmp/*" -not -path "$EXCLUDE"` | grep -v "GPL (v3 or later)" | grep -v "Apache (v2.0)" | grep -v "GENERATED FILE"
 	echo ERROR : there are $RET files with wrong licence - listed above
 	exit 1
 fi
 
 # check source again with all files in git history
-RET=`licensecheck \`git whatchanged --since '01/01/2012' --oneline --name-only --pretty=format: | sort | uniq\` |grep -v "GPL (v3 or later)" | grep -v "GENERATED FILE" | grep -v ".md:" | grep -v COPYING | grep -v ".p:" | wc -l`
+RET=`licensecheck \`git whatchanged --since '01/01/2012' --oneline --name-only --pretty=format: | sort | uniq\` |grep -v "GPL (v3 or later)" | grep -v "Apache (v2.0)" | grep -v "GENERATED FILE" | grep -v ".md:" | grep -v COPYING | grep -v ".p:" | wc -l`
 if [ $RET -eq 0 ]; then
 	echo all licences in git managed files okay
 else
-	licensecheck `git whatchanged --since '01/01/2012' --oneline --name-only --pretty=format: | sort | uniq` |grep -v "GPL (v3 or later)" | grep -v "GENERATED FILE" | grep -v ".md:" | grep -v COPYING | grep -v ".p:"
+	licensecheck `git whatchanged --since '01/01/2012' --oneline --name-only --pretty=format: | sort | uniq` |grep -v "GPL (v3 or later)" | grep -v "Apache (v2.0)" | grep -v "GENERATED FILE" | grep -v ".md:" | grep -v COPYING | grep -v ".p:"
 	echo ERROR : there are $RET files with wrong licence - listed above
 	exit 1
 fi

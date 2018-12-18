@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="category_Connectivity">Повезивање</string>
+
+    <string name="category_Development">Развој</string>
+    <string name="category_Games">Игре</string>
+    <string name="category_Graphics">Графика</string>
+    <string name="category_Internet">Интернет</string>
+    <string name="category_Money">Финансије</string>
+    <string name="category_Multimedia">Мултимедија</string>
+    <string name="category_Navigation">Навигација</string>
+    <string name="category_Phone_SMS">Телефон и СМС</string>
+    <string name="category_Reading">Читање</string>
+    <string name="category_Science_Education">Наука и образовање</string>
+    <string name="category_Security">Безбедност</string>
+    <string name="category_Sports_Health">Спорт и здравље</string>
+    <string name="category_System">Систем</string>
+    <string name="category_Theming">Теме</string>
+    <string name="category_Time">Време</string>
+    <string name="category_Writing">Писање</string>
+    <string name="antifeatures">Анти-могућности</string>
+    <string name="anti_ads">Ова апликација садржи огласе</string>
+    <string name="anti_tracking">Ова апликација прати и пријављује ваше активности</string>
+    <string name="anti_nonfreeadd">Ова апликација предлаже неслободне додатке</string>
+    <string name="anti_nonfreenet">Ова апликација предлаже неслободне мрежне услуге</string>
+    <string name="anti_nonfreedep">Ова апликација зависи од неслободних апликација</string>
+    <string name="anti_upstreamnonfree">Изворни кôд није у потпуности слободан</string>
+    <string name="anti_nonfreeassets">Ова апликација садржи неслободне ресурсе</string>
+    <string name="no_permissions">Не захтева никакве дозволе.</string>
+    <string name="perm_costs_money">Ово може да вас кошта</string>
+    <string name="perms_description_app">Обезбеђује %1$s.</string>
+    <string name="perms_new_perm_prefix">Ново:</string>
+    <string name="permissions">Дозволе</string>
+    <string name="links">Везе</string>
+    <string name="action_install">Инсталирај</string>
+    <string name="action_upgrade">Надогради</string>
+    <string name="action_launch">Покрени</string>
+</resources>

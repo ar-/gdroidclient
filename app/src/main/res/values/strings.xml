@@ -16,7 +16,7 @@
   ~
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -27,7 +27,6 @@
 
 
     <string name="action_add_favourite">Add to Favourites</string>
-    <string name="action_install">Install</string>
 
 
     <string name="title_activity_settings">Settings</string>
@@ -105,10 +104,83 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_categories">categories</string>
+    <string name="title_tags">tags</string>
     <string name="title_starred">starred</string>
     <string name="title_myapps">my apps</string>
     <string name="title_search">search</string>
     <string name="title_activity_app_collection">AppCollectionActivity</string>
     <string name="title_activity_search">SearchActivity</string>
+
+    <!--tags comming via json-->
+    <string name="app_store">App Store</string>
+    <string name="calendar">Calendar</string>
+    <string name="camera">Camera</string>
+    <string name="contacts">Contacts</string>
+    <string name="email_client">Email Client</string>
+    <string name="file_browser">File Browser</string>
+    <string name="gallery">Gallery</string>
+    <string name="launcher">Launcher</string>
+    <string name="music_player">Music Player</string>
+    <string name="shopping_list">Shopping List</string>
+    <string name="text_editor">Text Editor</string>
+    <string name="todo_list">Todo List</string>
+    <string name="torrent_downloader">Torrent Downloader</string>
+    <string name="web_browser">Web Browser</string>
+    <string name="youtube_player">Youtube Player</string>
+
+    <!--categories-->
+    <string name="category_Connectivity" tools:ignore="UnusedResources">Connectivity</string>
+    <string name="category_Development" tools:ignore="UnusedResources">Development</string>
+    <string name="category_Games" tools:ignore="UnusedResources">Games</string>
+    <string name="category_Graphics" tools:ignore="UnusedResources">Graphics</string>
+    <string name="category_Internet" tools:ignore="UnusedResources">Internet</string>
+    <string name="category_Money" tools:ignore="UnusedResources">Money</string>
+    <string name="category_Multimedia" tools:ignore="UnusedResources">Multimedia</string>
+    <string name="category_Navigation" tools:ignore="UnusedResources">Navigation</string>
+    <string name="category_Phone_SMS" tools:ignore="UnusedResources">Phone &amp; SMS</string>
+    <string name="category_Reading" tools:ignore="UnusedResources">Reading</string>
+    <string name="category_Science_Education" tools:ignore="UnusedResources">Science &amp; Education</string>
+    <string name="category_Security" tools:ignore="UnusedResources">Security</string>
+    <string name="category_Sports_Health" tools:ignore="UnusedResources">Sports &amp; Health</string>
+    <string name="category_System" tools:ignore="UnusedResources">System</string>
+    <string name="category_Theming" tools:ignore="UnusedResources">Theming</string>
+    <string name="category_Time" tools:ignore="UnusedResources">Time</string>
+    <string name="category_Writing" tools:ignore="UnusedResources">Writing</string>
+
+    <!--anti features-->
+    <string name="antifeatures">Anti-features</string>
+    <string name="anti_ads">This app contains advertising</string>
+    <string name="anti_tracking">This app tracks and reports your activity</string>
+    <string name="anti_nonfreeadd">This app promotes non-free add-ons</string>
+    <string name="anti_nonfreenet">This app promotes non-free network services</string>
+    <string name="anti_nonfreedep">This app depends on other non-free apps</string>
+    <string name="anti_upstreamnonfree">The upstream source code is not entirely Free</string>
+    <string name="anti_nonfreeassets">This app contains non-free assets</string>
+    <string name="anti_disabledalgorithm">This app has a weak security signature</string>
+    <string name="anti_knownvuln">This app contains a known security vulnerability</string>
+    <string name="anti_nosourcesince">The source code is no longer available, no updates possible.</string>
+
+
+    <string name="no_permissions">No permissions are used.</string>
+
+    <string name="perm_costs_money">This may cost you money</string>
+    <string name="perms_description_app">Provided by %1$s.</string>
+    <string name="perms_new_perm_prefix">New:</string>
+    <string name="permissions">Permissions</string>
+    <string name="links">Links</string>
+    <string name="action_install">Install</string>
+    <string name="action_upgrade">Upgrade</string>
+    <string name="action_launch">Run</string>
+
+    <string name="pref_header_ratings">Star Ratings</string>
+    <string name="pref_title_upstream_ratings">Ratings from Github, Gitlab and Sourceforge</string>
+    <string name="pref_title_ratings_headline">Set your importance for each metric</string>
+    <string name="pref_title_ratings_summary">Assign a number from 0 to 10 to each metric. Higher number means higher importance.</string>
+    <string name="pref_title_updated_in_2_years">last update in recent 2 years</string>
+    <string name="pref_title_release_cycle_time">Release cycle time</string>
+
+    <string name="search_harder">search harder</string>
+    <string name="search_even_harder">search even harder</string>
+
 
 </resources>

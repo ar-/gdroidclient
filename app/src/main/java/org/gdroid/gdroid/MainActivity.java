@@ -25,7 +25,6 @@ import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -44,11 +43,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
+import org.gdroid.gdroid.widget.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,6 +69,8 @@ public class MainActivity extends AppCompatActivity
     private AppCollectionAdapter appCollectionAdapter;
 
     SearchView searchView;
+    private Button btnSearchHarder;
+    private Button btnSearchEvenHarder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +78,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         findViewById(R.id.loadingPanel).setVisibility(View.GONE);
         searchView = findViewById(R.id.search_view);
+        btnSearchHarder = findViewById(R.id.btn_search_harder);
+        btnSearchEvenHarder = findViewById(R.id.btn_search_even_harder);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -94,14 +99,11 @@ public class MainActivity extends AppCompatActivity
         final ApplicationBean[] allApps = db.appDao().getAllApplicationBeans();
 
         //if db empty
-        if (allApps.length == 0)
-        {
+        if (allApps.length == 0) {
             navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem("home"));
             // TODO initial refresh only when DB empty
             //new DownloadJsonTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
-        }
-        else
-        {
+        } else {
             navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem(Util.getLastMenuItem(getApplicationContext())));
         }
 
@@ -124,15 +126,16 @@ public class MainActivity extends AppCompatActivity
         });
 
 
-
     }
 
     private int getItemIdForHomeScreenMenuItem(String lastMenuItem) {
-        switch (lastMenuItem){
+        switch (lastMenuItem) {
             case "home":
                 return R.id.navigation_home;
             case "categories":
                 return R.id.navigation_categories;
+            case "tags":
+                return R.id.navigation_tags;
             case "starred":
                 return R.id.navigation_starred;
             case "myapps":
@@ -153,7 +156,7 @@ public class MainActivity extends AppCompatActivity
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
         recyclerView.setLayoutManager(mLayoutManager);
         removeAllitemDecorations();
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
+        //recyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         appCollectionDescriptorList = new ArrayList<>();
         appCollectionAdapter = new AppCollectionAdapter(this, appCollectionDescriptorList);
@@ -168,8 +171,8 @@ public class MainActivity extends AppCompatActivity
         Point size = new Point();
         display.getSize(size);
         final int screenWidth = size.x;
-        final int gapDp = 10;
-        final int imgWidth = dpToPx(160+gapDp);
+        final int gapDp = 5;
+        final int imgWidth = dpToPx(160 + gapDp);
         int columns = screenWidth / imgWidth;
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -182,20 +185,14 @@ public class MainActivity extends AppCompatActivity
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, columns);
         removeAllitemDecorations();
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(columns, dpToPx(gapDp), true));
         recyclerView.setLayoutManager(mLayoutManager);
     }
 
-    private void removeAllitemDecorations()
-    {
-        while (true)
-        {
-            if (recyclerView.getItemDecorationCount() >0)
-            {
+    private void removeAllitemDecorations() {
+        while (true) {
+            if (recyclerView.getItemDecorationCount() > 0) {
                 recyclerView.removeItemDecorationAt(0);
-            }
-            else
-            {
+            } else {
                 break;
             }
         }
@@ -203,15 +200,16 @@ public class MainActivity extends AppCompatActivity
 
     private void prepareAppCollections(String screen) {
         final Context context = getApplicationContext();
-        if (screen.equals("home"))
-        {
+        if (screen.equals("home")) {
             appCollectionDescriptorList.clear();
             AppCollectionDescriptor a = new AppCollectionDescriptor(context, "Newest apps");
             appCollectionDescriptorList.add(a);
             AppCollectionDescriptor a2 = new AppCollectionDescriptor(context, "Recently updated");
             appCollectionDescriptorList.add(a2);
-//            AppCollectionDescriptor a3 = new AppCollectionDescriptor(context, "Recommended for you");
-//            appCollectionDescriptorList.add(a3);
+            AppCollectionDescriptor a3 = new AppCollectionDescriptor(context, "High rated");
+            appCollectionDescriptorList.add(a3);
+            AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "Random apps");
+            appCollectionDescriptorList.add(a4);
 //            AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "top rates apps");
 //            appCollectionDescriptorList.add(a4);
 //            AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "you might also like");
@@ -224,97 +222,119 @@ public class MainActivity extends AppCompatActivity
 //            appCollectionDescriptorList.add(a8);
 //            AppCollectionDescriptor a9 = new AppCollectionDescriptor(context, "well maintained");
 //            appCollectionDescriptorList.add(a9);
-        }
-        else if (screen.equals("categories"))
-        {
+        } else if (screen.equals("categories")) {
             appCollectionDescriptorList.clear();
             AppDatabase db = AppDatabase.get(context);
             final String[] categoryNames = db.appDao().getAllCategoryNames();
-            for (String cn:categoryNames) {
-                AppCollectionDescriptor ad = new AppCollectionDescriptor(context, "cat:"+cn);
+            for (String cn : categoryNames) {
+                AppCollectionDescriptor ad = new AppCollectionDescriptor(context, "cat:" + cn);
                 appCollectionDescriptorList.add(ad);
             }
+            db.close();
+        } else if (screen.equals("tags")) {
+            appCollectionDescriptorList.clear();
+            AppDatabase db = AppDatabase.get(context);
+            final String[] tagNames = db.appDao().getAllTagNames();
+            for (String tn : tagNames) {
+                AppCollectionDescriptor ad = new AppCollectionDescriptor(context, "tag:" + tn);
+                appCollectionDescriptorList.add(ad);
+            }
+            db.close();
         }
 
         appCollectionAdapter.notifyDataSetChanged();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-        = new BottomNavigationView.OnNavigationItemSelectedListener() {
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             searchView.setVisibility(View.GONE);
-            String screenName = "";
+            btnSearchHarder.setVisibility(View.GONE);
+            btnSearchEvenHarder.setVisibility(View.GONE);
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    screenName = "home";
+                {
+                    final String screenName = "home";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpCollectionCards();
                     prepareAppCollections(screenName);
                     return true;
+                }
                 case R.id.navigation_categories:
-                    screenName = "categories";
+                {
+                    final String screenName = "categories";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpCollectionCards();
                     prepareAppCollections(screenName);
                     return true;
-                case R.id.navigation_starred:
-                    screenName = "starred";
+                }
+                case R.id.navigation_tags: {
+                    final String screenName = "tags";
+                    Util.setLastMenuItem(getApplicationContext(), screenName);
+                    setUpCollectionCards();
+                    prepareAppCollections(screenName);
+                    return true;
+                }
+                case R.id.navigation_starred: {
+                    final String screenName = "starred";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpAppCards();
-                    AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(),screenName);
+                    AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(), screenName);
                     appBeanList.clear();
                     appBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
                     adapter.notifyDataSetChanged();
-//                    Intent myIntent = new Intent(getApplicationContext(), AppCollectionActivity.class);
-//                    myIntent.putExtra("collectionName", "starred");
-//                    myIntent.putExtra("headline", "starred");
-//                    startActivity(myIntent);
                     return true;
+                }
                 case R.id.navigation_myapps:
-                    screenName = "myapps";
+                {
+                    final String screenName = "myapps";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpAppCards();
                     final String finalScreenName = screenName;
                     AsyncTask.execute(new Runnable() {
                         @Override
                         public void run() {
-                            AppCollectionDescriptor myAppsCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(),finalScreenName);
-                            appBeanList.clear();
-                            appBeanList.addAll(myAppsCollectionDescriptor.getApplicationBeanList());
+                            AppCollectionDescriptor myAppsCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(), finalScreenName);
+                            if (Util.getLastMenuItem(getApplicationContext()).equals(screenName)) // only if selected tab still the same
+                            {
+                                appBeanList.clear();
+                                appBeanList.addAll(myAppsCollectionDescriptor.getApplicationBeanList());
 
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    adapter.notifyDataSetChanged();
-                                }
-                            });
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        adapter.notifyDataSetChanged();
+                                    }
+                                });
+                            }
                         }
                     });
 
                     return true;
-                case R.id.navigation_search:
-                    screenName = "search";
+                 }
+                case R.id.navigation_search: {
+                    final String screenName = "search";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     searchView.setVisibility(View.VISIBLE);
                     searchView.setIconifiedByDefault(false);
-//                    searchView.requestFocus();
-//                    hideSoftKeyboard(searchView);
                     showSoftKeyboard(searchView);
-//                    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
-
                     setUpAppCards();
-//                    final CharSequence query = searchView.getQuery();
-//                    AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(),"search:"+query,10);
-//                    appBeanList.clear();
-//                    appBeanList.addAll(acd.getApplicationBeanList());
 
                     searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                         @Override
                         public boolean onQueryTextSubmit(String s) {
                             final CharSequence query = searchView.getQuery();
-                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(),"search:"+query,2000);
+                            final boolean shortQuery = query.length() < 2;
+                            if (shortQuery) {
+                                btnSearchHarder.setVisibility(View.GONE);
+                                btnSearchEvenHarder.setVisibility(View.GONE);
+                            } else {
+                                btnSearchHarder.setVisibility(View.VISIBLE);
+                                btnSearchEvenHarder.setVisibility(View.GONE);
+                            }
+                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search:" + query, 2000);
                             appBeanList.clear();
                             appBeanList.addAll(acd.getApplicationBeanList());
                             adapter.notifyDataSetChanged();
@@ -324,18 +344,53 @@ public class MainActivity extends AppCompatActivity
                         @Override
                         public boolean onQueryTextChange(String s) {
                             final CharSequence query = searchView.getQuery();
-                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(),"search:"+query,20);
+                            final boolean shortQuery = query.length() < 2;
+                            if (shortQuery) {
+                                btnSearchHarder.setVisibility(View.GONE);
+                                btnSearchEvenHarder.setVisibility(View.GONE);
+                            } else {
+                                btnSearchHarder.setVisibility(View.VISIBLE);
+                                btnSearchEvenHarder.setVisibility(View.GONE);
+                            }
+                            final int limit = shortQuery ? 20 : 2000;
+                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search:" + query, limit);
                             appBeanList.clear();
                             appBeanList.addAll(acd.getApplicationBeanList());
                             adapter.notifyDataSetChanged();
                             return false;
                         }
                     });
-//                    Intent searchIntent = new Intent(getApplicationContext(), SearchActivity.class);
-//                    searchIntent.putExtra("collectionName", "starred");
-//                    searchIntent.putExtra("headline", "starred");
-//                    startActivity(searchIntent);
+
+                    btnSearchHarder.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            btnSearchHarder.setVisibility(View.GONE);
+                            btnSearchEvenHarder.setVisibility(View.VISIBLE);
+                            hideSoftKeyboard(btnSearchHarder);
+                            final CharSequence query = searchView.getQuery();
+                            int limit = query.length() < 2 ? 20 : 2000;
+                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search2:" + query, limit);
+                            appBeanList.clear();
+                            appBeanList.addAll(acd.getApplicationBeanList());
+                            adapter.notifyDataSetChanged();
+                        }
+                    });
+                    btnSearchEvenHarder.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            btnSearchHarder.setVisibility(View.GONE);
+                            btnSearchEvenHarder.setVisibility(View.GONE);
+                            hideSoftKeyboard(btnSearchHarder);
+                            final CharSequence query = searchView.getQuery();
+                            int limit = query.length() < 2 ? 20 : 2000;
+                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search3:" + query, limit);
+                            appBeanList.clear();
+                            appBeanList.addAll(acd.getApplicationBeanList());
+                            adapter.notifyDataSetChanged();
+                        }
+                    });
                     return true;
+                }
             }
             return false;
         }
@@ -343,8 +398,8 @@ public class MainActivity extends AppCompatActivity
 
     public void showSoftKeyboard(View view) {
 //        if (view.requestFocus()) {
-            InputMethodManager imm = (InputMethodManager)
-                    getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager)
+                getSystemService(Context.INPUT_METHOD_SERVICE);
 //        imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT);
         imm.showSoftInput(view, InputMethodManager.SHOW_FORCED);
 //        InputMethodManager inputMethodManager = (InputMethodManager) view.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -420,4 +475,5 @@ public class MainActivity extends AppCompatActivity
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
     }
+
 }

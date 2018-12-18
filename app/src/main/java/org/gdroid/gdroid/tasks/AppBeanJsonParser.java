@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-class AppBeanJsonParser implements JsonParser{
+class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
     @Override
     public List<ApplicationBean> getApplicationBeansFromJson(String jsonString) {
         List<ApplicationBean> entries = null;
@@ -48,7 +48,8 @@ class AppBeanJsonParser implements JsonParser{
                 JSONObject app = apps.getJSONObject(i);
                 try {
                     ApplicationBean ab = jSonObjToAppBean(app, packages);
-                    entries.add(ab);
+                    if (!TextUtils.isEmpty(ab.id))
+                        entries.add(ab);
                 } catch (JSONException e)
                 {
                     Log.e("Parser","ignoring "+app.optString("name", "unknown app"));
@@ -102,10 +103,16 @@ class AppBeanJsonParser implements JsonParser{
         ab.email = app.optString("authorEmail");
 
         // apk name from packages
-        // package must be found, otherwise app ise useles,as it wont hav an APK
+        // package must be found, otherwise app is useless, as it wont have an APK
         final JSONArray appPackages = packages.getJSONArray(ab.id);
         final JSONObject latestPackage = appPackages.getJSONObject(0);
         ab.apkname = latestPackage.getString("apkName");
+
+        // marketversion and marketvercode are sometimes wrong in the json, like a higher version that doesn't exist yet
+        // or just an empty string. let's redefine it, and use the latest version as market version.
+        ab.marketversion = latestPackage.getString("versionName");
+        ab.marketvercode = latestPackage.getString("versionCode");
+
 
         // permissions from packages (optional)
         final JSONArray permissionsArray = latestPackage.optJSONArray("uses-permission");
@@ -212,53 +219,6 @@ class AppBeanJsonParser implements JsonParser{
         return new Pair<String,String>(availalableLocales.get(usableLocale), usableLocale);
     }
 
-    /**
-     *
-     * @param app
-     * @param name
-     * @return A pair of (ItemArray,Locale)
-     * @throws JSONException
-     */
-    private Pair<JSONArray,String> getLocalizedArrayItemAndLocale(JSONObject app, String name) throws JSONException {
-        final String repoLocale="en";
-
-        // Map locale -> itemcontent
-        Map<String, JSONArray> availalableLocales = new HashMap<>();
-
-        //gather available Locales for this item
-        final JSONArray unLocalisedItem = app.optJSONArray(name);
-        if (unLocalisedItem != null)
-        {
-            availalableLocales.put(repoLocale,unLocalisedItem);
-        }
-
-        final JSONObject localized = app.optJSONObject("localized");
-        if (localized != null)
-        {
-            Iterator<String> keys = localized.keys();
-
-            while(keys.hasNext()) {
-                String resLocale = keys.next();
-                final JSONObject localizedJSONObject = localized.getJSONObject(resLocale);
-                final JSONArray localisedArrayItem = localizedJSONObject.optJSONArray(name);
-                if (localisedArrayItem != null)
-                {
-                    availalableLocales.put(resLocale,localisedArrayItem);
-                }
-            }
-        }
-
-        // for some items (like 'name') having none is bad, others (like 'whatsNew') are optional
-        if (availalableLocales.isEmpty())
-            return null;
-
-        final Set<String> keySet = availalableLocales.keySet();
-        String[] resLocales = keySet.toArray(new String[keySet.size()]);
-        final String usableLocale = Util.getUsableLocale(resLocales);
-
-        // this can't be null anymore, otherwise we wouldn't have arrived here
-        return new Pair<JSONArray,String>(availalableLocales.get(usableLocale), usableLocale);
-    }
 
 
 }

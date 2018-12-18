@@ -1,0 +1,30 @@
+<resources>
+
+    <string name="category_Connectivity">Կապ</string>
+
+    <string name="category_Development">Ծրագրավորում</string>
+    <string name="category_Games">Խաղեր</string>
+    <string name="category_Graphics">Գրաֆիկա</string>
+    <string name="category_Internet">Ցանց</string>
+    <string name="category_Money">Փող</string>
+    <string name="category_Multimedia">Մուլտիմեդիա</string>
+    <string name="category_Navigation">Կողմնորոշում</string>
+    <string name="category_Phone_SMS">Հեռախոս և կարճ հաղորդագրություն</string>
+    <string name="category_Reading">Ընթերցում</string>
+    <string name="category_Science_Education">Կրթություն և գիտություն</string>
+    <string name="category_Security">Անվտանգություն</string>
+    <string name="category_Sports_Health">Սպորտ և առողջություն</string>
+    <string name="category_System">Համակարգ</string>
+    <string name="category_Theming">Ոճ</string>
+    <string name="category_Time">Ժամանակ</string>
+    <string name="category_Writing">Տեքստ</string>
+    <string name="anti_ads">Այս ափփը պարունակում է գովազդ</string>
+    <string name="no_permissions">Թույլատվություններ օգտագործված չեն</string>
+    <string name="perm_costs_money">Սա կարող է քեզ գումար արժենալ</string>
+    <string name="perms_description_app">Տրամադրված է %1$s։</string>
+    <string name="perms_new_perm_prefix">Նոր.</string>
+    <string name="permissions">Թույլատվություններ</string>
+    <string name="links">Հղումներ</string>
+    <string name="action_install">Տեղադրել</string>
+    <string name="action_upgrade">Նորացնել</string>
+</resources>

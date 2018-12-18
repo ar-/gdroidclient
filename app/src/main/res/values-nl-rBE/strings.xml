@@ -1,0 +1,40 @@
+<resources>
+
+    <string name="category_Connectivity">Connectiviteit</string>
+
+    <string name="category_Development">Ontwikkeling</string>
+    <string name="category_Games">Spellen</string>
+    <string name="category_Graphics">Grafisch</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Geld</string>
+    <string name="category_Multimedia">Multimedia</string>
+    <string name="category_Navigation">Navigatie</string>
+    <string name="category_Phone_SMS">Gsm &amp; sms</string>
+    <string name="category_Reading">Lezen</string>
+    <string name="category_Science_Education">Onderwijs &amp; wetenschap</string>
+    <string name="category_Security">Beveiliging</string>
+    <string name="category_Sports_Health">Sport &amp; gezondheid</string>
+    <string name="category_System">Systeem</string>
+    <string name="category_Theming">Thema’s</string>
+    <string name="category_Time">Tijd</string>
+    <string name="category_Writing">Schrijven</string>
+    <string name="antifeatures">Anti-functies</string>
+    <string name="anti_ads">Dezen app bevat advertenties</string>
+    <string name="anti_tracking">Deze app houdt uw activiteiten bij en rapporteert ze</string>
+    <string name="anti_nonfreeadd">Dezen app promoot niet-vrije add-ons</string>
+    <string name="anti_nonfreenet">Dezen app promoot niet-vrije netwerkdiensten</string>
+    <string name="anti_nonfreedep">Dezen app vereist andere niet-vrije apps</string>
+    <string name="anti_upstreamnonfree">De broncode stroomopwaarts is niet volledig vrij</string>
+    <string name="anti_nonfreeassets">Dezen app bevat niet-vrije elementen</string>
+    <string name="anti_disabledalgorithm">Dezen app heeft een zwakke beveiligingshandtekening</string>
+    <string name="anti_knownvuln">Dezen app bevat een bekend probleem in de beveiliging</string>
+    <string name="no_permissions">Geen machtigingen in gebruik.</string>
+    <string name="perm_costs_money">Dit kan geld kosten</string>
+    <string name="perms_description_app">Aangeboden door %1$s.</string>
+    <string name="perms_new_perm_prefix">Nieuw:</string>
+    <string name="permissions">Machtigingen</string>
+    <string name="links">Links</string>
+    <string name="action_install">Installeren</string>
+    <string name="action_upgrade">Bijwerken</string>
+    <string name="action_launch">Uitvoeren</string>
+</resources>

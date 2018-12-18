@@ -26,8 +26,13 @@
 
     <item
         android:id="@+id/navigation_categories"
-        android:icon="@drawable/ic_label_outline_black_24dp"
+        android:icon="@drawable/ic_category_black_24dp"
         android:title="@string/title_categories" />
+
+    <item
+        android:id="@+id/navigation_tags"
+        android:icon="@drawable/ic_label_outline_black_24dp"
+        android:title="@string/title_tags" />
 
     <item
         android:id="@+id/navigation_starred"

@@ -19,10 +19,10 @@
 package org.gdroid.gdroid;
 
 import android.app.Activity;
-import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -39,7 +39,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
-import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.util.ArrayList;
@@ -119,45 +118,50 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         AppCollectionDescriptor appCollectionDescriptor = appCollectionDescriptorList.get(position);
         final String collectionName = appCollectionDescriptor.getName();
-        final String headline;
-        if (collectionName.startsWith("cat:"))
-        {
-            headline = collectionName.replace("cat:","");
-        }
-        else
-        {
-            headline = collectionName;
-        }
+        final String headline = getHeadlineForCatOrTag(mContext, collectionName);
+        final View.OnClickListener clickListener = getOnClickListenerForCatOrTag(collectionName, headline, (Activity)mContext);
+
         holder.title.setText(headline);
         holder.applicationBeanList.clear();
         holder.applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
         holder.adapter.notifyDataSetChanged();
 
-        // loading appDescriptor cover using Glide library
-        //Glide.with(mContext).load(appDescriptor.getThumbnail()).into(holder.thumbnail);
-//        holder.thumbnail.setImageDrawable();
-
-//        holder.overflow.setOnClickListener(new View.OnClickListener() {
-//            @Override
-////            public void onClick(View view) {
-////                showPopupMenu(holder.overflow);
-//            }
-//        });
-
-        final Activity activity = (Activity) mContext;
-        final View.OnClickListener clickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(activity, AppCollectionActivity.class);
-                myIntent.putExtra("collectionName", collectionName);
-                myIntent.putExtra("headline", headline);
-                activity.startActivity(myIntent);
-            }
-        };
         holder.moreButton.setOnClickListener(clickListener);
         holder.headlineContainer.setOnClickListener(clickListener);
         holder.title.setOnClickListener(clickListener);
 
+    }
+
+    public static String getHeadlineForCatOrTag(Context mContext, String collectionName) {
+        final String headline;
+        if (collectionName.startsWith("cat:"))
+        {
+            String catName = collectionName.replace("cat:","");
+            headline = Util.getLocalisedCategoryName(mContext, catName);
+        }
+        else if (collectionName.startsWith("tag:"))
+        {
+            String tagName = collectionName.replace("tag:","");
+            headline = Util.getStringResourceByName(mContext, tagName);
+        }
+        else
+        {
+            headline = collectionName;
+        }
+        return headline;
+    }
+
+    @NonNull
+    public static View.OnClickListener getOnClickListenerForCatOrTag(final String collectionName, final String headline, final Activity activity) {
+        return new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent myIntent = new Intent(activity, AppCollectionActivity.class);
+                    myIntent.putExtra("collectionName", collectionName);
+                    myIntent.putExtra("headline", headline);
+                    activity.startActivity(myIntent);
+                }
+            };
     }
 
     /**

@@ -21,9 +21,14 @@ package org.gdroid.gdroid;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.support.v4.widget.CircularProgressDrawable;
+import android.support.v7.content.res.AppCompatResources;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -59,6 +64,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         public String appId;
         public TextView title, count;
         public ImageView thumbnail, overflow;
+        private final ImageView starOnCard;
 
         public MyViewHolder(View view) {
             super(view);
@@ -66,15 +72,15 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
             count = (TextView) view.findViewById(R.id.count);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
             overflow = (ImageView) view.findViewById(R.id.overflow);
+            starOnCard = (ImageView) view.findViewById(R.id.img_star_on_card);
 
-            //final Activity activity = (Activity) mContext;
-            final Activity activity = getActivity();
+            mActivity = getActivity();
             thumbnail.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent myIntent = new Intent(activity, AppDetailActivity.class);
+                    Intent myIntent = new Intent(mActivity, AppDetailActivity.class);
                     myIntent.putExtra("appId", appId);
-                    activity.startActivity(myIntent);
+                    mActivity.startActivity(myIntent);
 
                 }
             });
@@ -98,7 +104,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        ApplicationBean applicationBean = applicationBeanList.get(position);
+        final ApplicationBean applicationBean = applicationBeanList.get(position);
         if (applicationBean == null)
             return;
         holder.appId = applicationBean.id;
@@ -112,15 +118,22 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         circularProgressDrawable.start();
 
         if (applicationBean.icon != null) {
-            Glide.with(mContext)
-                    .load("https://f-droid.org/repo/icons-640/"+applicationBean.icon)
-                    .override(192, 192)
-                    .placeholder(circularProgressDrawable)
-                    .error(R.drawable.ic_android_black_24dp)
-                    .into(holder.thumbnail);
+            try
+            {
+                final Drawable errorImg = AppCompatResources.getDrawable(mContext, R.drawable.ic_android_black_24dp);
+                Glide.with(mContext)
+                        .load("https://f-droid.org/repo/icons-640/"+applicationBean.icon)
+                        .override(192, 192)
+                        .placeholder(circularProgressDrawable)
+                        .error(errorImg)
+                        .into(holder.thumbnail);
+            }
+            catch (Throwable t)
+            {
+                Log.e("ABA", "error while glide sets the app logo", t);
+            }
         }
-//        new DownloadImageTask(holder.thumbnail)
-//                .execute("https://f-droid.org/repo/icons-640/community.fairphone.fplauncher3.10.png");
+
 
 
         holder.overflow.setOnClickListener(new View.OnClickListener() {
@@ -129,6 +142,46 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
                 showPopupMenu(holder);
             }
         });
+
+        // show an updateable logo on the card, if there is an update for this app
+        // do in background to make it faster
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                final String installedVersionOfApp = Util.getInstalledVersionOfApp(mContext, applicationBean.id);
+                final int drawableToBeSet;
+                if (Util.isAppUpdateable(mContext, applicationBean))
+                {
+                    drawableToBeSet = R.drawable.ic_update_green_24dp;
+                }
+                else
+                {
+                    drawableToBeSet = R.drawable.ic_more_vert_black_24dp;
+                }
+                mActivity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        holder.overflow.setImageResource(drawableToBeSet);
+                    }
+                });
+            }
+        });
+
+        // if the app is starred show a star, also in background, since it will be slow to do this for each app
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                final boolean isStarred = Util.isAppstarred(mContext, applicationBean.id);
+                mActivity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        holder.starOnCard.setVisibility(isStarred ? View.VISIBLE : View.GONE);
+                    }
+                });
+            }
+        });
+
+
     }
 
     /**

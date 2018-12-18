@@ -26,25 +26,27 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.v4.os.ConfigurationCompat;
 import android.support.v4.os.LocaleListCompat;
-import android.util.ArraySet;
+import android.text.TextUtils;
 import android.util.Log;
 
+import org.gdroid.gdroid.beans.AppBeanNameComparator;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 
 public class Util {
+
+
     public static Activity getActivity(Context context)
     {
         if (context == null)
@@ -138,7 +140,22 @@ public class Util {
             final ApplicationBean app = db.appDao().getApplicationBean(starredAppId);
             ret.add(app);
         }
+        Collections.sort(ret, new AppBeanNameComparator(context));
         return ret;
+    }
+
+    public static int getWeightOfMetric(Context context, String metric)
+    {
+        try
+        {
+            return PreferenceManager
+                    .getDefaultSharedPreferences(context)
+                    .getInt(metric, 1);
+        }
+        catch (Throwable t)
+        {
+            return 1;
+        }
     }
 
     public static List<ApplicationBean> getInstalledApps(Context context)
@@ -154,6 +171,7 @@ public class Util {
             if (app!=null)
                 ret.add(app);
         }
+        Collections.sort(ret, new AppBeanNameComparator(context));
         return ret;
     }
 
@@ -258,6 +276,82 @@ public class Util {
         }
     }
 
+    public static String getStringResourceByName(Context c, String aString) {
+        String packageName = c.getPackageName();
+        int resId = c.getResources().getIdentifier(aString, "string", packageName);
+        if (resId == 0)
+            return aString;
+        return c.getString(resId);
+    }
+
+    public static String getLocalisedAntifeatureDescription(Context c, String af)
+    {
+        // found in json: "Ads", "NonFreeAdd", "NonFreeAssets", "NonFreeDep", "NonFreeNet", "NoSourceSince", "Tracking", "UpstreamNonFree"
+        // in the F-Droid string XML all antifeatures are prefixed by 'anti', most of them suffixed by 'list' and all lowercase
+        // and then sometimes again renamed, that is way to inconsistent, so I rename them with a proper schema using the
+        // names in the upstream json file
+
+        return getStringResourceByName(c, "anti_"+af.toLowerCase());
+    }
+
+    public static String getLocalisedCategoryName(Context c, String cn)
+    {
+        cn = cn.replace("& ","").replace(" ","_");
+        return getStringResourceByName(c, "category_"+cn);
+    }
+
+    /**
+     * references to all string IDs so they don't get removed by the "remove unused" function
+     */
+    public static void getReferenceToallStrings()
+    {
+        int i = 0;
+
+        // anti
+        i = R.string.antifeatures;
+        i = R.string.anti_ads;
+        i = R.string.anti_nonfreeadd;
+        i = R.string.anti_nonfreeassets;
+        i = R.string.anti_nonfreedep;
+        i = R.string.anti_nonfreenet;
+        i = R.string.anti_nosourcesince;
+        i = R.string.anti_tracking;
+        i = R.string.anti_upstreamnonfree;
+
+        // in archive
+        i = R.string.anti_disabledalgorithm;
+        i = R.string.anti_knownvuln;
+
+        // cats
+        i = R.string.category_Development;
+        i = R.string.category_Games;
+        i = R.string.category_Graphics;
+        i = R.string.category_Internet;
+        i = R.string.category_Money;
+        i = R.string.category_Multimedia;
+        i = R.string.category_Navigation;
+        i = R.string.category_Phone_SMS;
+        i = R.string.category_Reading;
+        i = R.string.category_Science_Education;
+        i = R.string.category_Security;
+        i = R.string.category_Sports_Health;
+        i = R.string.category_System;
+        i = R.string.category_Theming;
+        i = R.string.category_Time;
+        i = R.string.category_Writing;
+
+        // tags
+        i = R.string.calendar;
+        i = R.string.camera;
+        i = R.string.email_client;
+        i = R.string.file_browser;
+        i = R.string.gallery;
+        i = R.string.music_player;
+        i = R.string.web_browser;
+        i = R.string.youtube_player;
+
+    }
+
     public static boolean isAppInstalled(Context context, String packageName) {
         try {
             context.getPackageManager().getApplicationInfo(packageName, 0);
@@ -279,6 +373,19 @@ public class Util {
         catch (PackageManager.NameNotFoundException e) {
             return "";
         }
+    }
+
+    public static boolean isAppUpdateable (Context context, ApplicationBean applicationBean)
+    {
+        final String installedVersionOfApp = Util.getInstalledVersionOfApp(context, applicationBean.id);
+        if (!TextUtils.isEmpty(installedVersionOfApp))
+        {
+            if (! applicationBean.marketversion.equals(installedVersionOfApp))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static boolean isFileExisting(String filename){

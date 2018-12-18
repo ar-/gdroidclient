@@ -40,7 +40,7 @@ public class AppCollectionDescriptor {
     private List<ApplicationBean> applicationBeanList;
 
     public AppCollectionDescriptor(Context context, String name) {
-        this(context,name, 10);
+        this(context,name, 12);
     }
 
     public AppCollectionDescriptor(Context context, String name, int limit) {
@@ -87,6 +87,26 @@ public class AppCollectionDescriptor {
                 applicationBeanList.add(ab);
             }
         }
+        else if (collectionName.equals("High rated"))
+        {
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getHighRated(mLimit,mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+        }
+        else if (collectionName.equals("Random apps"))
+        {
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getRandom(mLimit,mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+        }
         else if (collectionName.equals("starred"))
         {
             applicationBeanList.clear();
@@ -109,11 +129,46 @@ public class AppCollectionDescriptor {
                 applicationBeanList.add(ab);
             }
         }
+        else if (collectionName.startsWith("search2:")) // level 2 search
+        {
+            String searchString = collectionName.replace("search2:","");
+            searchString = "%"+searchString+"%";
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getAllAppsForSearch2String(searchString, mLimit, mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+        }
+        else if (collectionName.startsWith("search3:")) // level 3 search
+        {
+            String searchString = collectionName.replace("search3:","");
+            searchString = "%"+searchString+"%";
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getAllAppsForSearch3String(searchString, mLimit, mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+        }
         else if (collectionName.startsWith("cat:"))
         {
             String cat = collectionName.replace("cat:","");
             AppDatabase db = AppDatabase.get(mContext);
             ApplicationBean[] appsInDb = db.appDao().getAllAppsForCategory(cat, mLimit, mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+        }
+        else if (collectionName.startsWith("tag:"))
+        {
+            String tag = collectionName.replace("tag:","");
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getAllAppsForTag(tag, mLimit, mOffset);
 
             applicationBeanList.clear();
             for (ApplicationBean ab: appsInDb ) {

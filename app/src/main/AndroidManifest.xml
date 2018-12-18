@@ -68,6 +68,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.gdroid.gdroid.MainActivity" />
         </activity>
+        <activity android:name=".ImageActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,9 @@
+0.2.3
+  * bugfix: fixed crash when updating archived apps
+
+0.2.2
+  * added metrics and star indicators
+
+0.2.1
+  * added loading animation for loading images
+  * fixed oversized images on some devices

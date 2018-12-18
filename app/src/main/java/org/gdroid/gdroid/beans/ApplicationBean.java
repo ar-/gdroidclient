@@ -63,7 +63,16 @@ public class ApplicationBean {
     public String apkname;
     public String whatsNew;
     public String featureGraphic;
+
+    /**
+     * List of screenshots, separated by semicolon (since comma can be in filename),
+     * points relatively to the F-Droid repo, but can be an absolute URL as well.
+     */
     public String screenshots;
+    public String metricsJson;
+    public int metriccount;
+    @Ignore
+    public List<String> tags;
 
     public ApplicationBean() {
     }
@@ -80,12 +89,25 @@ public class ApplicationBean {
      */
     public List<CategoryBean> getCategoryList()
     {
-        ArrayList<CategoryBean> ret = new ArrayList<>(2);
+        ArrayList<CategoryBean> ret = new ArrayList<>();
         if (categories != null)
         {
             for (String cat:categories) {
                 CategoryBean cb = new CategoryBean(cat,id);
                 ret.add(cb);
+            }
+        }
+        return ret;
+    }
+
+    public List<TagBean> getTagList()
+    {
+        ArrayList<TagBean> ret = new ArrayList<>();
+        if (tags != null)
+        {
+            for (String cat:tags) {
+                TagBean tb = new TagBean(cat,id);
+                ret.add(tb);
             }
         }
         return ret;

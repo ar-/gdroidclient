@@ -30,73 +30,116 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/card_margin"
+        android:layout_margin="10dp"
         android:elevation="3dp"
         android:clickable="true"
-        android:layout_marginLeft="@dimen/my_cardview_margin"
-        android:layout_marginRight="@dimen/my_cardview_margin"
         android:minWidth="150dp"
         android:maxWidth="150dp"
         card_view:cardCornerRadius="@dimen/card_album_radius">
+        <!--android:layout_marginLeft="@dimen/my_cardview_margin"-->
+        <!--android:layout_marginRight="@dimen/my_cardview_margin"-->
 
-        <RelativeLayout
+        <!--main layout-->
+        <LinearLayout
             android:layout_width="150dp"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             >
 
-            <ImageView
-                android:id="@+id/thumbnail"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/album_cover_height"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_margin="5dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_star_on_card"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_star_yellow_24dp"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
             <!--android:minHeight="100dp"-->
             <!--android:maxHeight="100dp"-->
             <!--android:minWidth="100dp"-->
             <!--android:maxWidth="100dp"-->
 
-            <TextView
-                android:id="@+id/title"
+            <!--layput to put dots-button and text next to each other-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/thumbnail"
-                android:paddingLeft="@dimen/album_title_padding"
-                android:paddingRight="@dimen/album_title_padding"
-                android:paddingTop="@dimen/album_title_padding"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textColor="@color/album_title"
-                android:text="name of the app goes here"
-                android:maxWidth="20dp"
-                android:width="2dp"
-                android:textSize="@dimen/album_title" />
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/count"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/title"
-                android:paddingBottom="@dimen/songs_count_padding_bottom"
-                android:paddingLeft="@dimen/album_title_padding"
-                android:paddingRight="@dimen/album_title_padding"
-                android:text="counter"
-                android:textSize="@dimen/songs_count" />
+                <!--layout for lines of text-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.9"
+                    >
 
-            <ImageView
-                android:id="@+id/overflow"
-                android:layout_width="@dimen/ic_album_overflow_width"
-                android:layout_height="@dimen/ic_album_overflow_height"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/thumbnail"
-                android:layout_marginTop="@dimen/ic_album_overflow_margin_top"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/ic_more_vert_black_24dp"
-                />
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/thumbnail"
+                        android:paddingLeft="@dimen/album_title_padding"
+                        android:paddingRight="@dimen/album_title_padding"
+                        android:paddingTop="@dimen/album_title_padding"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/album_title"
+                        android:text="name of the app goes here"
+                        android:textSize="@dimen/album_title" />
+                    <!--android:maxWidth="20dp"-->
+                    <!--android:width="2dp"-->
+
+                    <TextView
+                        android:id="@+id/count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title"
+                        android:paddingBottom="@dimen/songs_count_padding_bottom"
+                        android:paddingLeft="@dimen/album_title_padding"
+                        android:paddingRight="@dimen/album_title_padding"
+                        android:text="counter"
+                        android:textSize="@dimen/songs_count" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/overflow"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:maxWidth="30dp"
+                    android:minWidth="30dp"
+                    android:maxHeight="30dp"
+                    android:minHeight="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_more_vert_black_24dp"
+                    android:layout_gravity="right|center"
+                    android:layout_weight="0.1"
+                    />
+
+            </LinearLayout>
 
 
-        </RelativeLayout>
+
+
+        </LinearLayout>
 
     </android.support.v7.widget.CardView>
 

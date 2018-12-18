@@ -1,0 +1,37 @@
+<resources>
+
+    <string name="category_Connectivity">การสื่อสาร</string>
+
+    <string name="category_Development">การพัฒนาซอฟต์แวร์</string>
+    <string name="category_Games">เกม</string>
+    <string name="category_Graphics">กราฟิก</string>
+    <string name="category_Internet">อินเตอร์เน็ต</string>
+    <string name="category_Money">การเงิน</string>
+    <string name="category_Multimedia">สื่อผสม</string>
+    <string name="category_Navigation">การนำทาง</string>
+    <string name="category_Phone_SMS">โทรศัพท์และ SMS</string>
+    <string name="category_Reading">การอ่าน</string>
+    <string name="category_Science_Education">วิทยาศาสตร์และการศึกษา</string>
+    <string name="category_Security">ความมั่นคง</string>
+    <string name="category_Sports_Health">กีฬาและสุขภาพ</string>
+    <string name="category_System">เครื่องมือระบบ</string>
+    <string name="category_Theming">ธีมต่างๆ</string>
+    <string name="category_Time">เวลาและวันที่</string>
+    <string name="category_Writing">การเขียน</string>
+    <string name="anti_ads">โปรแกรมนี้มีโฆษณา</string>
+    <string name="anti_tracking">โปรแกรมนี้ติดตามและส่งต่อข้อมูลกิจกรรมของคุณให้บุคคลภายนอก</string>
+    <string name="anti_nonfreeadd">โปรแกรมนี้สนับสนุนส่วนขยายที่ไม่เสรี</string>
+    <string name="anti_nonfreenet">โปรแกรมนี้สนับสนุนการใช้งานบริการที่ไม่เสรี</string>
+    <string name="anti_nonfreedep">โปรแกรมนี้พึ่งพาโปรแกรมไม่เสรีอื่นๆ</string>
+    <string name="anti_upstreamnonfree">ซอร์สโค้ดต้นฉบับมีบางส่วนที่ไม่เสรี</string>
+    <string name="anti_nonfreeassets">โปรแกรมนี้มีส่วนประกอบภาพเสียงที่ไม่เสรี</string>
+    <string name="no_permissions">ไม่มีการขออนุญาตใดๆ เป็นพิเศษ</string>
+    <string name="perm_costs_money">อาจจะัทำให้คุณเสียค่าใช้จ่าย</string>
+    <string name="perms_description_app">จัดให้โดย %1$s</string>
+    <string name="perms_new_perm_prefix">ใหม่:</string>
+    <string name="permissions">การขออนุญาตพิเศษ</string>
+    <string name="links">ลิงค์</string>
+    <string name="action_install">ติดตั้ง</string>
+    <string name="action_upgrade">อัพเกรด</string>
+    <string name="action_launch">เริ่มโปรแกรม</string>
+</resources>

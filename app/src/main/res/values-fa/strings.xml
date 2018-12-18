@@ -1,0 +1,41 @@
+<resources>
+
+    <string name="category_Connectivity">اتّصال</string>
+
+    <string name="category_Development">توسعه</string>
+    <string name="category_Games">بازی</string>
+    <string name="category_Graphics">گرافیک</string>
+    <string name="category_Internet">اینترنت</string>
+    <string name="category_Money">مالی</string>
+    <string name="category_Multimedia">چندرسانه‌ای</string>
+    <string name="category_Navigation">ناوبری</string>
+    <string name="category_Phone_SMS">تلفن و پیامک</string>
+    <string name="category_Reading">خواندن</string>
+    <string name="category_Science_Education">علم و آموزش</string>
+    <string name="category_Security">امنیت</string>
+    <string name="category_Sports_Health">ورزش و سلامت</string>
+    <string name="category_System">سیستم</string>
+    <string name="category_Theming">شخصی‌سازی</string>
+    <string name="category_Time">زمان</string>
+    <string name="category_Writing">نوشتن</string>
+    <string name="antifeatures">ضد ویژگی‌ها</string>
+    <string name="anti_ads">این برنامه دارای تبلیغات است</string>
+    <string name="anti_tracking">این برنامه، فعّالیت‌هایتان را ردیابی و گزارش می‌کند</string>
+    <string name="anti_nonfreeadd">این برنامه، افزونه‌های غیر آزاد را تبلیغ می‌کند</string>
+    <string name="anti_nonfreenet">این برنامه، خدمات شبکه‌های غیر آزاد را تبلیغ می‌کند</string>
+    <string name="anti_nonfreedep">این برنامه، به دیگر کاره‌های غیر آزاد وابسته است</string>
+    <string name="anti_upstreamnonfree">کد مبدأ بالادستی کاملاً آزاد نیست</string>
+    <string name="anti_nonfreeassets">این کاره شامل ابزارهای پولی است</string>
+    <string name="anti_disabledalgorithm">این کاره یک امضای امنیتی ضعیف دارد</string>
+    <string name="anti_knownvuln">این کاره یک آسیب‌پذیری امنیتی شناخته‌شده دارد</string>
+    <string name="anti_nosourcesince">کد مبدأ دیگر در دسترس نیست، به‌روز رسانی ناممکن است.</string>
+    <string name="no_permissions">دسترسی ای استفاده نشده است.</string>
+    <string name="perm_costs_money">ممکن است این کار برایتان خرج داشته باشد</string>
+    <string name="perms_description_app">فراهم شده توسّط: %1$s.</string>
+    <string name="perms_new_perm_prefix">جدید:</string>
+    <string name="permissions">دسترسی ها</string>
+    <string name="links">پیوندها</string>
+    <string name="action_install">نصب</string>
+    <string name="action_upgrade">ارتقا</string>
+    <string name="action_launch">اجرا</string>
+</resources>

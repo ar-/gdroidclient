@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="category_Connectivity">Pripojiteľnosť</string>
+
+    <string name="category_Development">Vývoj</string>
+    <string name="category_Games">Hry</string>
+    <string name="category_Graphics">Grafika</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Financie</string>
+    <string name="category_Multimedia">Multimédiá</string>
+    <string name="category_Navigation">Navigácia</string>
+    <string name="category_Phone_SMS">Telefón a SMS</string>
+    <string name="category_Reading">Čítanie</string>
+    <string name="category_Science_Education">Veda a výuka</string>
+    <string name="category_Security">Bezpečnosť</string>
+    <string name="category_Sports_Health">Šport &amp; Zdravie</string>
+    <string name="category_System">Systém</string>
+    <string name="category_Theming">Témy</string>
+    <string name="category_Time">Čas</string>
+    <string name="category_Writing">Písanie</string>
+    <string name="antifeatures">Anti-funkcie</string>
+    <string name="anti_ads">Táto aplikácia obsahuje reklamy</string>
+    <string name="anti_tracking">Táto aplikácia zaznamenáva a hlási vaše aktivity</string>
+    <string name="anti_nonfreeadd">Táto aplikácia propaguje neslobodné doplnky</string>
+    <string name="anti_nonfreenet">Táto aplikácia propaguje neslobodné sieťové služby</string>
+    <string name="anti_nonfreedep">Táto aplikácia závisí na iných neslobodných aplikáciách</string>
+    <string name="anti_upstreamnonfree">Originálny zdrojový kód nie je úplne slobodný</string>
+    <string name="anti_nonfreeassets">Táto aplikácia obsahuje proprietárne časti</string>
+    <string name="no_permissions">Nepoužívajú sa žiadne povolenia.</string>
+    <string name="perm_costs_money">Môže stáť peniaze</string>
+    <string name="perms_description_app">Poskytované %1$s.</string>
+    <string name="perms_new_perm_prefix">Nové:</string>
+    <string name="permissions">Povolenia aplikácie</string>
+    <string name="links">Linky</string>
+    <string name="action_install">Inštalovať</string>
+    <string name="action_upgrade">Inovovať</string>
+    <string name="action_launch">Spustiť</string>
+</resources>

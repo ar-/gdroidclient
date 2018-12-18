@@ -1,0 +1,37 @@
+<resources>
+
+    <string name="category_Connectivity">Povezivanje</string>
+
+    <string name="category_Development">Razvoj</string>
+    <string name="category_Games">Igre</string>
+    <string name="category_Graphics">Grafika</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Novac</string>
+    <string name="category_Multimedia">Multimedija</string>
+    <string name="category_Navigation">Navigacija</string>
+    <string name="category_Phone_SMS">Telefon i SMS</string>
+    <string name="category_Reading">Čitanje</string>
+    <string name="category_Science_Education">Znanost i edukacija</string>
+    <string name="category_Security">Sigurnost</string>
+    <string name="category_Sports_Health">Sport i zdravlje</string>
+    <string name="category_System">Sustav</string>
+    <string name="category_Theming">Teme</string>
+    <string name="category_Time">Vrijeme</string>
+    <string name="category_Writing">Pisanje</string>
+    <string name="anti_ads">Ova aplikacija sadržava oglase</string>
+    <string name="anti_tracking">Ova aplikacija prati i javlja Vašu aktivnost</string>
+    <string name="anti_nonfreeadd">Ova aplikacija promovira neslobodne dodatke</string>
+    <string name="anti_nonfreenet">Ova aplikacija promovira neslobodne mrežne usluge</string>
+    <string name="anti_nonfreedep">Ova aplikacija ovisi o drugim neslobodnim aplikacijama</string>
+    <string name="anti_upstreamnonfree">Uzvodni izvorni kod nije u potpunosti otvoren/slobodan</string>
+    <string name="anti_nonfreeassets">Ova aplikacija sadrži neslobodne resurse</string>
+    <string name="no_permissions">Ne koriste se dozvole.</string>
+    <string name="perm_costs_money">Ovo se može naplaćivati</string>
+    <string name="perms_description_app">Pruža %1$s.</string>
+    <string name="perms_new_perm_prefix">Novo:</string>
+    <string name="permissions">Dozvole</string>
+    <string name="links">Poveznice</string>
+    <string name="action_install">Instaliraj</string>
+    <string name="action_upgrade">Nadogradi</string>
+    <string name="action_launch">Pokreni</string>
+</resources>

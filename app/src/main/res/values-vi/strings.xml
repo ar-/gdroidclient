@@ -1,0 +1,40 @@
+<resources>
+
+    <string name="category_Connectivity">Kết nối</string>
+
+    <string name="category_Development">Lập trình</string>
+    <string name="category_Games">Trò chơi</string>
+    <string name="category_Graphics">Đồ hoạ</string>
+    <string name="category_Internet">Internet</string>
+    <string name="category_Money">Tài chính</string>
+    <string name="category_Multimedia">Đa phương tiện</string>
+    <string name="category_Navigation">Điều hướng</string>
+    <string name="category_Phone_SMS">Đàm thoại &amp; nhắn tin</string>
+    <string name="category_Reading">Đọc</string>
+    <string name="category_Science_Education">Khoa học &amp; giáo dục</string>
+    <string name="category_Security">Bảo mật</string>
+    <string name="category_Sports_Health">Thể thao &amp; sức khoẻ</string>
+    <string name="category_System">Hệ thống</string>
+    <string name="category_Theming">Giao diện</string>
+    <string name="category_Time">Thời gian</string>
+    <string name="category_Writing">Soạn thảo</string>
+    <string name="antifeatures">Tính năng không mong muốn</string>
+    <string name="anti_ads">Ứng dụng này có quảng cáo</string>
+    <string name="anti_tracking">Ứng dụng này theo dõi và báo cáo hoạt động của bạn</string>
+    <string name="anti_nonfreeadd">Ứng dụng này khuyến khích sử dụng phần mở rộng không tự do</string>
+    <string name="anti_nonfreenet">Ứng dụng này khuyến khích sử dụng dịch vụ mạng không tự do</string>
+    <string name="anti_nonfreedep">Ứng dụng này phụ thuộc vào các ứng dụng không tự do khác</string>
+    <string name="anti_upstreamnonfree">Mã nguồn không hoàn toàn tự do</string>
+    <string name="anti_nonfreeassets">Ứng dụng này có những phần không tự do</string>
+    <string name="anti_disabledalgorithm">Ứng dụng này có chữ kí bảo mật yếu</string>
+    <string name="anti_knownvuln">Ứng dụng này có lỗ hổng bảo mật đã bị phát hiện</string>
+    <string name="no_permissions">Không sử dụng quyền nào.</string>
+    <string name="perm_costs_money">Việc này có thể mất phí</string>
+    <string name="perms_description_app">Được cung cấp bởi %1$s.</string>
+    <string name="perms_new_perm_prefix">Mới:</string>
+    <string name="permissions">Quyền</string>
+    <string name="links">Liên kết</string>
+    <string name="action_install">Cài đặt</string>
+    <string name="action_upgrade">Nâng cấp</string>
+    <string name="action_launch">Chạy</string>
+</resources>

@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="category_Connectivity">ئۇلىنىشچانلىق</string>
+
+    <string name="category_Development">تەرەققىيات</string>
+    <string name="category_Games">ئويۇنلار</string>
+    <string name="category_Graphics">رەسىملەر</string>
+    <string name="category_Internet">تور</string>
+    <string name="category_Money">پۇل</string>
+    <string name="category_Multimedia">كۆپ ۋاسىتە</string>
+    <string name="category_Navigation">يول باشلاش</string>
+    <string name="category_Phone_SMS">فون &amp; قىسقا ئۇچۇر</string>
+    <string name="category_Reading">ئوقۇشلۇق</string>
+    <string name="category_Science_Education">پەن &amp; مائارىپ</string>
+    <string name="category_Security">بىخەتەرلىك</string>
+    <string name="category_Sports_Health">تەنتەربىيە &amp; ساغلاملىق</string>
+    <string name="category_System">سىستېما</string>
+    <string name="category_Theming">ئاساسىي ئۇسلۇب</string>
+    <string name="category_Time">ۋاقىت</string>
+    <string name="category_Writing">يېزىقچىلىق</string>
+    <string name="antifeatures">ئىقتىدار-قارشى</string>
+    <string name="anti_ads">بۇ ئەپتە ئېلان بار</string>
+    <string name="anti_tracking">بۇ ئەپ پائالىيەتلىرىڭىزنى ئىزلاپ، دوكلات قىلىدۇ</string>
+    <string name="anti_nonfreeadd">بۇ ئەپ ھەقسىز بولمىغان قىستۇرمىلارنى تەۋسىيە قىلىدۇ</string>
+    <string name="anti_nonfreenet">بۇ ئەپ ھەقسىز بولمىغان تور مۇلازىمەتلىرىنى تەۋسىيە قىلىدۇ</string>
+    <string name="anti_nonfreedep">بۇ ئەپ ھەقسىز بولمىغان باشقا ئەپلەرگە بېقىنىدۇ</string>
+    <string name="no_permissions">ھېچقانداق ھوقۇق ئىشلەتمەيدۇ.</string>
+    <string name="permissions">تەستىقلار</string>
+    <string name="links">ئۇلىنىشلار</string>
+    <string name="action_install">ئورنات</string>
+    <string name="action_upgrade">يۈكسەلت</string>
+    <string name="action_launch">ئىجرا قىل</string>
+</resources>

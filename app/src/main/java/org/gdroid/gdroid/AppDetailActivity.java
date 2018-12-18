@@ -18,11 +18,12 @@
 
 package org.gdroid.gdroid;
 
+import android.app.Activity;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.CursorWindow;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -35,6 +36,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.content.res.AppCompatResources;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -60,10 +62,15 @@ import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
+import org.gdroid.gdroid.beans.TagBean;
+import org.gdroid.gdroid.perm.AppDiff;
+import org.gdroid.gdroid.perm.AppSecurityPermissions;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.lang.reflect.Method;
-import java.security.Timestamp;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -108,11 +115,6 @@ public class AppDetailActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.lbl_website)).setText(mApp.web);
         ((TextView)findViewById(R.id.lbl_email)).setText(mApp.email);
 
-        if (!TextUtils.isEmpty(mApp.permissions))
-        {
-            ((TextView)findViewById(R.id.lbl_permissions)).setText(mApp.permissions);
-        }
-
         // developer view can be hidden if no data for it
         if (TextUtils.isEmpty(mApp.web) && TextUtils.isEmpty(mApp.email))
         {
@@ -132,8 +134,58 @@ public class AppDetailActivity extends AppCompatActivity {
             tv.setPadding(10,10,10,10);
             tv.setTextColor(getResources().getColor(R.color.album_title));
             tv.setTextSize(14);
-            tv.setText(cb.catName);
+            final String lcn = Util.getLocalisedCategoryName(this, cb.catName);
+            tv.setText(lcn);
             categoryView.addView(tv);
+
+            // make it clickable
+            final String collectionName = "cat:" + cb.catName;
+            final String headline = AppCollectionAdapter.getHeadlineForCatOrTag(mContext, collectionName);
+            final View.OnClickListener clickListener = AppCollectionAdapter.getOnClickListenerForCatOrTag(collectionName, headline, this);
+            tv.setOnClickListener(clickListener);
+        }
+
+        // fill tags - the same way as categories
+        final TagBean[] tags = db.appDao().getAllTagsForApp(mApp.id);
+        for (TagBean tb:tags) {
+            TextView tv = new TextView(mContext);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            params.setMargins(2,2,2,2);
+            tv.setLayoutParams(params);
+            tv.setBackgroundResource(R.drawable.rounded_corner_tag);
+            tv.setPadding(10,10,10,10);
+            tv.setTextColor(getResources().getColor(R.color.album_title));
+            tv.setTextSize(14);
+            String tagname = Util.getStringResourceByName(mContext,tb.tagName);
+            tv.setText(tagname);
+            categoryView.addView(tv);
+
+            // make it clickable
+            final String collectionName = "tag:" + tb.tagName;
+            final String headline = AppCollectionAdapter.getHeadlineForCatOrTag(mContext, collectionName);
+            final View.OnClickListener clickListener = AppCollectionAdapter.getOnClickListenerForCatOrTag(collectionName, headline, this);
+            tv.setOnClickListener(clickListener);
+        }
+
+        // fill anti-features
+        final TextView lblAntiFeatures = findViewById(R.id.lbl_antifeatures);
+        if (!TextUtils.isEmpty(mApp.antifeatures))
+        {
+            String afsString = "";
+            final String[] afs = mApp.antifeatures.split(",");
+            for (int i = 0 ; i< afs.length ;i++)
+            {
+                if (i>0)
+                {
+                    afsString+=", ";
+                }
+                afsString += Util.getLocalisedAntifeatureDescription(mContext, afs[i]);
+            }
+            lblAntiFeatures.setText(afsString);
+        }
+        else
+        {
+            lblAntiFeatures.setVisibility(View.GONE);
         }
 
         // populate similar apps
@@ -195,8 +247,7 @@ public class AppDetailActivity extends AppCompatActivity {
         final LinearLayout grpScreenshots = (LinearLayout) findViewById(R.id.grp_screenshots);
         if (!TextUtils.isEmpty(mApp.screenshots)) {
             grpScreenshots.removeAllViews();
-            for (String ss :
-                    mApp.getScreenshotList()) {
+            for (String ss : mApp.getScreenshotList()) {
                 ImageView iv = new ImageView(mContext);
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -209,13 +260,33 @@ public class AppDetailActivity extends AppCompatActivity {
                 circularProgressDrawable.setStrokeWidth(5f);
                 circularProgressDrawable.setCenterRadius(30f);
                 circularProgressDrawable.start();
+                final String ssUrl;
+                if (ss.startsWith("http"))
+                {
+                    // use absolute links starting with https or http
+                    ssUrl = ss;
+                }
+                else
+                {
+                    ssUrl = "https://f-droid.org/repo/" + mApp.id + "/" + ss;
+                }
+                final Drawable errorImg = AppCompatResources.getDrawable(mContext, R.drawable.ic_android_black_24dp);
                 Glide.with(mContext)
-                        .load("https://f-droid.org/repo/"+mApp.id+"/"+ ss)
-                        .override(384, 384)
+                        .load(ssUrl)
                         .placeholder(circularProgressDrawable)
-                        .error(R.drawable.ic_phone_android_black_24dp)
+                        .error(errorImg)
                         .into(iv);
                 grpScreenshots.addView(iv);
+
+                // make each screenshot clickable
+                iv.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent myIntent = new Intent(mContext, ImageActivity.class);
+                        myIntent.putExtra("imgUrl", ssUrl);
+                        mContext.startActivity(myIntent);
+                    }
+                });
             }
         }
         else
@@ -249,6 +320,7 @@ public class AppDetailActivity extends AppCompatActivity {
 
         //make the install button useful
         final Button btnInstall = findViewById(R.id.btn_install);
+        final Button btnLaunch = findViewById(R.id.btn_launch);
         btnInstall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -265,17 +337,31 @@ public class AppDetailActivity extends AppCompatActivity {
             }
         });
 
-        // make the install button say "update" if already installed
+        btnLaunch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent launchIntent = getPackageManager().getLaunchIntentForPackage(mApp.id);
+                if (launchIntent != null) {
+                    startActivity(launchIntent);//null pointer check in case package name was not found
+                }
+            }
+        });
+
+        // make the install button say "upgrade" if already installed
         if (Util.isAppInstalled(mContext, mApp.id))
         {
-            if (! mApp.marketversion.equals(Util.getInstalledVersionOfApp(mContext, mApp.id)))
+            if (Util.isAppUpdateable(mContext, mApp))
             {
-                btnInstall.setText("Update");
+                btnInstall.setText(getString(R.string.action_upgrade));
             }
             else
             {
                 btnInstall.setVisibility(View.GONE);
             }
+        }
+        else
+        {
+            btnLaunch.setVisibility(View.GONE);
         }
 
         // populate the Links-section with further upstream links
@@ -309,6 +395,78 @@ public class AppDetailActivity extends AppCompatActivity {
                     startActivity(Intent.createChooser(emailIntent, "Send email..."));
                 }
             });
+        }
+
+        // fill in the ratings
+        if (!TextUtils.isEmpty(mApp.metricsJson))
+        {
+            DecimalFormat df = new DecimalFormat("0.0");
+            ((TextView)findViewById(R.id.lbl_rating_gdroid_1)).setText(df.format(mApp.stars) + " ★");
+            ((TextView)findViewById(R.id.lbl_rating_gdroid_2)).setText(mApp.metriccount + " G-Droid metrics");
+
+            try {
+                JSONObject metrics = new JSONObject(mApp.metricsJson);
+
+                // upstream stars
+                boolean hasUpstreamRating = false;
+                for (String upstreamSource: new String[]{"Github", "Gitlab"}) {
+                    final String metricName = "m_"+upstreamSource.toLowerCase()+"_stars";
+                    final int ustars = metrics.optInt(metricName);
+                    if (ustars != 0)
+                    {
+                        ((TextView)findViewById(R.id.lbl_rating_upstream_1)).setText(ustars + " ★");
+                        ((TextView)findViewById(R.id.lbl_rating_upstream_2)).setText("stars on "+upstreamSource);
+                        hasUpstreamRating = true;
+                    }
+                }
+                if (!hasUpstreamRating)
+                {
+                    findViewById(R.id.grp_rating_upstream).setVisibility(View.GONE);
+                }
+
+                df = new DecimalFormat("0");
+                // up-to-date-ness
+                final double norm_a24 = metrics.optDouble("age_last_v_24");
+                if (! Double.isNaN(norm_a24))
+                {
+                    ((TextView)findViewById(R.id.lbl_rating_uptodate_1)).setText(df.format(norm_a24*100f) + " %");
+                }
+                else
+                {
+                    findViewById(R.id.grp_rating_uptodate).setVisibility(View.GONE);
+                }
+
+                // update-cycle
+                final double norm_ac = metrics.optDouble("avg_update_frequency");
+                if (! Double.isNaN(norm_ac))
+                {
+                    ((TextView)findViewById(R.id.lbl_rating_releasecycle_1)).setText(df.format(norm_ac) + " days");
+                }
+                else
+                {
+                    findViewById(R.id.grp_rating_releasecycle).setVisibility(View.GONE);
+                }
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+                findViewById(R.id.grp_rating_upstream).setVisibility(View.GONE);
+                findViewById(R.id.grp_rating_uptodate).setVisibility(View.GONE);
+                findViewById(R.id.grp_rating_releasecycle).setVisibility(View.GONE);
+            }
+
+            // show permissions
+            AppDiff appDiff = new AppDiff(this, mApp);
+            AppSecurityPermissions perms = new AppSecurityPermissions(this, appDiff.apkPackageInfo);
+
+            final LinearLayout permContainer = findViewById(R.id.ll_permissions_container);
+            permContainer.addView(perms.getPermissionsView(AppSecurityPermissions.WHICH_ALL));
+
+
+
+        }
+        else
+        {
+            findViewById(R.id.grp_ratings).setVisibility(View.GONE);
         }
 
         // was there any action on this view in the intent?
@@ -563,4 +721,6 @@ public class AppDetailActivity extends AppCompatActivity {
             fab.setImageResource(R.drawable.ic_star_border_white_24dp);
         }
     }
+
+
 }

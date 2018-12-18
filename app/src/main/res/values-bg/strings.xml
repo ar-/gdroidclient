@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="category_Connectivity">Свързаност</string>
+
+    <string name="category_Development">Разработване</string>
+    <string name="category_Games">Игри</string>
+    <string name="category_Graphics">Изображения</string>
+    <string name="category_Internet">Интернет</string>
+    <string name="category_Money">Пари</string>
+    <string name="category_Multimedia">Мултимедия</string>
+    <string name="category_Navigation">Навигация</string>
+    <string name="category_Phone_SMS">Телефон и SMS</string>
+    <string name="category_Reading">Четене</string>
+    <string name="category_Science_Education">Наука и образование</string>
+    <string name="category_Security">Сигурност</string>
+    <string name="category_Sports_Health">Спорт и здраве</string>
+    <string name="category_System">Система</string>
+    <string name="category_Theming">Теми</string>
+    <string name="category_Time">Час</string>
+    <string name="category_Writing">Писане</string>
+    <string name="antifeatures">Анти-функции</string>
+    <string name="anti_ads">Приложението съдържа реклами</string>
+    <string name="anti_tracking">Приложението следи и докладва активността ви</string>
+    <string name="anti_nonfreeadd">Приложението промотира несвободни добавки</string>
+    <string name="anti_nonfreenet">Приложението промотира несвободни мрежови услуги</string>
+    <string name="anti_nonfreedep">Приложението зависи от други несвободни приложения</string>
+    <string name="anti_upstreamnonfree">Изходният код не е напълно свободен</string>
+    <string name="anti_nonfreeassets">Това приложение съдържа несвободни елементи</string>
+    <string name="no_permissions">Не изисква разрешения.</string>
+    <string name="perm_costs_money">Може да ви струва пари</string>
+    <string name="perms_description_app">Предоставено от %1$s.</string>
+    <string name="perms_new_perm_prefix">Ново:</string>
+    <string name="permissions">Разрешения</string>
+    <string name="links">Връзки</string>
+    <string name="action_install">Инсталиране</string>
+    <string name="action_upgrade">Обновяване</string>
+    <string name="action_launch">Пускане</string>
+</resources>
