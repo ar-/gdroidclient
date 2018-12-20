@@ -206,12 +206,17 @@ public class AppDetailActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
 
         // put HTML description in place
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            ((TextView)findViewById(R.id.lbl_app_desc)).setText(Html.fromHtml(mApp.desc, Html.FROM_HTML_MODE_COMPACT));
-        } else {
-            ((TextView)findViewById(R.id.lbl_app_desc)).setText(Html.fromHtml(mApp.desc));
+        if (! TextUtils.isEmpty(mApp.desc)) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                ((TextView) findViewById(R.id.lbl_app_desc)).setText(Html.fromHtml(mApp.desc, Html.FROM_HTML_MODE_COMPACT));
+            } else {
+                ((TextView) findViewById(R.id.lbl_app_desc)).setText(Html.fromHtml(mApp.desc));
+            }
         }
-
+        else
+        {
+            ((TextView) findViewById(R.id.lbl_app_desc)).setText("");
+        }
         CircularProgressDrawable circularProgressDrawable2 = new CircularProgressDrawable(this);
         circularProgressDrawable2.setStrokeWidth(5f);
         circularProgressDrawable2.setCenterRadius(30f);
