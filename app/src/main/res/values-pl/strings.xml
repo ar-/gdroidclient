@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">Łączność</string>
@@ -38,4 +39,23 @@
     <string name="action_install">Zainstaluj</string>
     <string name="action_upgrade">Zaktualizuj</string>
     <string name="action_launch">Uruchom</string>
+    <string name="app_name">G-Droid</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="action_add_favourite">Dodaj do ulubionych</string>
+    <string name="title_activity_settings">Ustawienia</string>
+    <string name="pref_header_notifications">Powiadomienia</string>
+    <string name="pref_title_ringtone">Dzwonek</string>
+    <string name="title_activity_temp_tab">TempTabActivity</string>
+    <string name="title_home">Strona główna</string>
+    <string name="title_notifications">Powiadomienia</string>
+    <string name="title_categories">kategorie</string>
+    <string name="title_activity_app_collection">AppCollectionActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="calendar">Kalendarz</string>
+    <string name="camera">Kamera</string>
+    <string name="contacts">Kontakty</string>
+    <string name="gallery">Galeria</string>
+    <string name="text_editor">Edytor tekstu</string>
+    <string name="web_browser">Przeglądarka internetowa</string>
 </resources>
