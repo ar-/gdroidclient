@@ -326,13 +326,14 @@ public class AppDetailActivity extends AppCompatActivity {
         //make the install button useful
         final Button btnInstall = findViewById(R.id.btn_install);
         final Button btnLaunch = findViewById(R.id.btn_launch);
+        final Activity callerActivity = this;
         btnInstall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                btnInstall.setEnabled(false);
                 btnInstall.setAlpha(.5f);
                 btnInstall.setClickable(false);
-                AppDownloader.download(mContext, mApp);
+                AppDownloader.download(callerActivity, mApp);
 //                AsyncTask.execute(new Runnable() {
 //                                      @Override
 //                                      public void run() {
@@ -634,7 +635,7 @@ public class AppDetailActivity extends AppCompatActivity {
             while (downloading) {
                 c = mManager.query(query);
                 if(c.moveToFirst()) {
-                    Log.e ("FLAG","Downloading");
+                    //Log.e ("FLAG","Downloading");
                     int status =c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
 
                     if (status==DownloadManager.STATUS_SUCCESSFUL) {
