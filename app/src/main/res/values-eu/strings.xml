@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">Sareak</string>
@@ -38,4 +39,52 @@
     <string name="action_install">Instalatu</string>
     <string name="action_upgrade">Bertsio-berritu</string>
     <string name="action_launch">Exekutatu</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">Ireki nabigazioaren tiradera</string>
+    <string name="navigation_drawer_close">Itxi nabigazioaren tiradera</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="nav_header_subtitle">F-Droid biltegirako bezeroa</string>
+    <string name="nav_header_desc">Nabigazio goiburua</string>
+    <string name="action_settings">Ezarpenak</string>
+    <string name="action_add_favourite">Gehitu gogokoetara</string>
+    <string name="title_activity_settings">Ezarpenak</string>
+    <string name="pref_header_general">Orokorra</string>
+    <string name="pref_title_social_recommendations">Gaitu gomendioak</string>
+    <string name="pref_description_social_recommendations">ez dabil oraindik</string>
+    <string name="pref_title_display_name">Desaktibatuta</string>
+    <string name="pref_title_add_friends_to_messages">desaktibatuta</string>
+    <string name="pref_header_data_sync">Datuak eta sinkronizazioa</string>
+    <string name="pref_title_sync_frequency">Sinkronizazioaren maiztasuna</string>
+    <string name="pref_title_system_sync_settings">Sistemaren sinkronizazio-ezarpenak</string>
+    <string name="pref_header_notifications">Jakinarazpenak</string>
+    <string name="pref_title_new_message_notifications">Mezu berrien jakinarazpenak</string>
+    <string name="pref_title_ringtone">Dei-doinua</string>
+    <string name="pref_ringtone_silent">Isila</string>
+    <string name="pref_title_vibrate">Dardaratu</string>
+    <string name="title_activity_temp_tab">FitxaTenporalarenJarduera</string>
+    <string name="title_home">Hasiera</string>
+    <string name="title_dashboard">Kontrol panela</string>
+    <string name="title_notifications">Jakinarazpenak</string>
+    <string name="title_categories">kategoriak</string>
+    <string name="title_tags">etiketak</string>
+    <string name="title_starred">gogokoa</string>
+    <string name="title_myapps">nire aplikazioak</string>
+    <string name="title_search">bilatu</string>
+    <string name="title_activity_app_collection">AplikazioBilketarenJarduera</string>
+    <string name="title_activity_search">BilaketaJarduera</string>
+    <string name="app_store">Aplikazio biltegia</string>
+    <string name="calendar">Egutegia</string>
+    <string name="camera">Kamera</string>
+    <string name="contacts">Kontaktuak</string>
+    <string name="email_client">E-mail bezeroa</string>
+    <string name="file_browser">Fitxategi arakatzailea</string>
+    <string name="gallery">Galeria</string>
+    <string name="launcher">Abiarazlea</string>
+    <string name="music_player">Musika erreproduzigailua</string>
+    <string name="shopping_list">Erosketa zerrenda</string>
+    <string name="text_editor">Testu editorea</string>
+    <string name="todo_list">Egitekoen zerrenda</string>
+    <string name="torrent_downloader">Torrent bezeroa</string>
+    <string name="web_browser">Web nabigatzailea</string>
+    <string name="youtube_player">YouTube bezeroa</string>
 </resources>
