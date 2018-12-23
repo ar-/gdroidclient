@@ -1,0 +1,16 @@
+0.4.5
+  * replaced Android's download manger with fetch2, fixing many download errors
+
+0.4.4
+  * updated upgrade logo
+  * fixed crash when app description is empty
+
+0.4.3
+  * added 2 more search algorithms "search harder" and "search even harder", adding the summary and the app description to the search
+  * bugfix: update icon not set on UI thread on some devices
+
+0.4.2
+  * added a setting to adjust the importance of the star ratings automatically
+
+0.4.1
+  * bugfix for vector images on pre-lollipop devices cashing the app when loaded with Glide
