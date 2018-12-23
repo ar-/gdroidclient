@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.StrictMode;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.tonyodev.fetch2.Download;
@@ -34,10 +35,14 @@ import com.tonyodev.fetch2.FetchListener;
 import com.tonyodev.fetch2.NetworkType;
 import com.tonyodev.fetch2.Priority;
 import com.tonyodev.fetch2.Request;
+import com.tonyodev.fetch2.Status;
 import com.tonyodev.fetch2core.DownloadBlock;
 import com.tonyodev.fetch2core.Func;
+import com.tonyodev.fetch2core.MutableExtras;
 
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.installer.DefaultInstaller;
+import org.gdroid.gdroid.installer.Installer;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
@@ -48,21 +53,20 @@ class AppDownloader {
 
     public static final String repoBaseUrl = "https://f-droid.org/repo/";
 
-    public static void download(final Context context, ApplicationBean mApp) {
-        FetchConfiguration fetchConfiguration = new FetchConfiguration.Builder(context)
-                .setDownloadConcurrentLimit(5)
-                .setNamespace("AppDownloader")
-                .build();
-
-        Fetch fetch = Fetch.Impl.getInstance(fetchConfiguration);
+    public static Request download(final Context context, ApplicationBean mApp) {
+        final Fetch fetch = getFetch(context);
 
         String url = repoBaseUrl+mApp.apkname;
         final String file = context.getExternalCacheDir()+"/"+mApp.apkname;
 
 
+        final MutableExtras extras = new MutableExtras();
+        extras.putString("id", mApp.id);
+
         final Request request = new Request(url, file);
         request.setPriority(Priority.HIGH);
         request.setNetworkType(NetworkType.ALL);
+        request.setExtras(extras);
 
         fetch.enqueue(request, new Func<Request>() {
             @Override
@@ -96,60 +100,33 @@ class AppDownloader {
 
             @Override
             public void onCompleted(Download download) {
+                fetch.removeListener(this);
 
-                Log.e ("FLAG","done");
-                File otaFile = new File(file);
-
-                Uri uri = Uri.fromFile(otaFile);
-                final Intent intent = new Intent();
-                if(Build.VERSION.SDK_INT>=24){
-                    try{
-                        Method m = StrictMode.class.getMethod("disableDeathOnFileUriExposure");
-                        m.invoke(null);
-                    }catch(Exception e){
-                        e.printStackTrace();
-                    }
-                }
-
-                if (Build.VERSION.SDK_INT < 14) {
-                    intent.setAction(Intent.ACTION_VIEW);
-                    intent.setDataAndType(uri, "application/vnd.android.package-archive");
-                } else if (Build.VERSION.SDK_INT < 16) {
-                    intent.setAction(Intent.ACTION_INSTALL_PACKAGE);
-                    intent.setData(uri);
-                    intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
-                    intent.putExtra(Intent.EXTRA_NOT_UNKNOWN_SOURCE, true);
-                    intent.putExtra(Intent.EXTRA_ALLOW_REPLACE, true);
-                } else if (Build.VERSION.SDK_INT < 24) {
-                    intent.setAction(Intent.ACTION_INSTALL_PACKAGE);
-                    intent.setData(uri);
-                    intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
-                    intent.putExtra(Intent.EXTRA_NOT_UNKNOWN_SOURCE, true);
-                } else {
-                    intent.setAction(Intent.ACTION_INSTALL_PACKAGE);
-                    intent.setData(uri);
-                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                    intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
-                    intent.putExtra(Intent.EXTRA_NOT_UNKNOWN_SOURCE, true);
-                }
-                //startActivityForResult(intent, 0);
-                ((Activity)context).runOnUiThread(new Runnable() {
+                Runnable onComplete = new Runnable() {
                     @Override
                     public void run() {
-                        //startActivityForResult(intent, 0);
-                        context.startActivity(intent);
-
-                        // own parcelable cursor:
-                        // https://stackoverflow.com/questions/17527095/could-not-write-cursorwindow-to-parcel-due-to-error-2147483641/19976499
-
-                        // must use another download lib to prevent this
-//                                11-07 06:24:14.995 15992-14156/? E/CursorWindow: Could not allocate
-//                                CursorWindow
-//                                '/data/data/com.android.providers.downloads/databases/downloads.db' of size 2097152 due to error -12.
-//                                11-07 06:24:15.005 15992-14156/? E/DownloadManager: [11771] Failed: android.database.CursorWindowAllocationException: Cursor window allocation of 2048 kb failed. # Open Cursors=723 (# cursors opened by pid 13969=723)
+                        if (context instanceof AppDetailActivity)
+                        {
+                            final AppDetailActivity ada = (AppDetailActivity) context;
+                            ada.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    try {
+                                        ada.updateInstallStatus(Status.NONE);
+                                    }
+                                    catch (Throwable t)
+                                    {
+                                        Log.e("ADA","error in updateInstallStatus", t);
+                                    }
+                                }
+                            });
+                        }
                     }
-                });
+                };
 
+                Log.d ("ADL","done");
+                Installer installer = new DefaultInstaller();
+                installer.installApp(context, file, onComplete);
             }
 
             @Override
@@ -158,17 +135,17 @@ class AppDownloader {
             }
 
             @Override
-            public void onDownloadBlockUpdated(Download download, DownloadBlock downloadBlock, int i) {
+            public void onDownloadBlockUpdated(Download download, @NotNull DownloadBlock downloadBlock, int totalBlocks) {
 
             }
 
             @Override
-            public void onStarted(Download download, List<? extends DownloadBlock> list, int i) {
+            public void onStarted(Download download, @NotNull List<? extends DownloadBlock> downloadBlocks, int totalBlocks) {
 
             }
 
             @Override
-            public void onProgress(Download download, long l, long l1) {
+            public void onProgress(Download download, long etaInMilliseconds, long downloadedBytesPerSecond) {
 
             }
 
@@ -198,5 +175,17 @@ class AppDownloader {
             }
         });
 
+        return request;
     }
+
+    @NonNull
+    public static Fetch getFetch(Context context) {
+        FetchConfiguration fetchConfiguration = new FetchConfiguration.Builder(context)
+                .setDownloadConcurrentLimit(5)
+                .setNamespace("AppDownloader")
+                .build();
+
+        return Fetch.Impl.getInstance(fetchConfiguration);
+    }
+
 }

@@ -47,6 +47,8 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
             for (int i = 0; i < apps.length(); i++) {
                 JSONObject app = apps.getJSONObject(i);
                 try {
+                    if (i%100 ==0)
+                        System.gc(); // avoid out of memory exception on older devices
                     ApplicationBean ab = jSonObjToAppBean(app, packages);
                     if (!TextUtils.isEmpty(ab.id))
                         entries.add(ab);
@@ -153,7 +155,7 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
 
         }
 
-
+        //System.gc();
         return ab;
     }
 
