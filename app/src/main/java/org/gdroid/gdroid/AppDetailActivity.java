@@ -28,9 +28,12 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.StrictMode;
+import android.preference.PreferenceManager;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.content.res.AppCompatResources;
@@ -40,15 +43,23 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.TextUtils;
+import android.util.ArraySet;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.tonyodev.fetch2.Download;
+import com.tonyodev.fetch2.Error;
+import com.tonyodev.fetch2.FetchListener;
+import com.tonyodev.fetch2.Request;
+import com.tonyodev.fetch2.Status;
+import com.tonyodev.fetch2core.DownloadBlock;
 
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
@@ -57,6 +68,7 @@ import org.gdroid.gdroid.beans.CategoryBean;
 import org.gdroid.gdroid.beans.TagBean;
 import org.gdroid.gdroid.perm.AppDiff;
 import org.gdroid.gdroid.perm.AppSecurityPermissions;
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -66,14 +78,17 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 
-public class AppDetailActivity extends AppCompatActivity {
+public class AppDetailActivity extends AppCompatActivity implements FetchListener {
 
     Context mContext;
     ApplicationBean mApp;
     FloatingActionButton fab;
     FloatingActionButton fabShare;
+    ProgressBar progressBar;
+    Request downloadRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -315,22 +330,19 @@ public class AppDetailActivity extends AppCompatActivity {
         updateStarButton();
 
         //make the install button useful
+        progressBar = findViewById(R.id.progress_bar);
         final Button btnInstall = findViewById(R.id.btn_install);
-        final Button btnLaunch = findViewById(R.id.btn_launch);
+        final Activity callerActivity = this;
         btnInstall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnInstall.setAlpha(.5f);
-                btnInstall.setClickable(false);
-                AsyncTask.execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        doInBackground("https://f-droid.org/repo/"+mApp.apkname);
-                    }
-                });
+                //btnInstall.setAlpha(.5f);
+                //btnInstall.setClickable(false);
+                downloadRequest = AppDownloader.download(callerActivity, mApp);
             }
         });
 
+        final Button btnLaunch = findViewById(R.id.btn_launch);
         btnLaunch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -341,22 +353,18 @@ public class AppDetailActivity extends AppCompatActivity {
             }
         });
 
-        // make the install button say "upgrade" if already installed
-        if (Util.isAppInstalled(mContext, mApp.id))
-        {
-            if (Util.isAppUpdateable(mContext, mApp))
-            {
-                btnInstall.setText(getString(R.string.action_upgrade));
+        final Button btnCancelDownload = findViewById(R.id.btn_cancel_download);
+        btnCancelDownload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (downloadRequest != null)
+                {
+                    AppDownloader.getFetch(callerActivity).delete(downloadRequest.getId());
+                }
             }
-            else
-            {
-                btnInstall.setVisibility(View.GONE);
-            }
-        }
-        else
-        {
-            btnLaunch.setVisibility(View.GONE);
-        }
+        });
+
+        updateInstallStatus(Status.NONE);
 
         // populate the Links-section with further upstream links
         populateUpstreamLink(mApp.source, R.id.tbl_row_source_code);
@@ -527,6 +535,75 @@ public class AppDetailActivity extends AppCompatActivity {
         }
     }
 
+    private FetchListener getFetchListener (){
+        return new FetchListener() {
+            @Override
+            public void onAdded(Download download) {
+
+            }
+
+            @Override
+            public void onQueued(Download download, boolean b) {
+
+            }
+
+            @Override
+            public void onWaitingNetwork(Download download) {
+
+            }
+
+            @Override
+            public void onCompleted(Download download) {
+
+            }
+
+            @Override
+            public void onError(Download download, Error error, Throwable throwable) {
+
+            }
+
+            @Override
+            public void onDownloadBlockUpdated(Download download, DownloadBlock downloadBlock, int i) {
+
+            }
+
+            @Override
+            public void onStarted(Download download, List<? extends DownloadBlock> list, int i) {
+
+            }
+
+            @Override
+            public void onProgress(Download download, long l, long l1) {
+
+            }
+
+            @Override
+            public void onPaused(Download download) {
+
+            }
+
+            @Override
+            public void onResumed(Download download) {
+
+            }
+
+            @Override
+            public void onCancelled(Download download) {
+
+            }
+
+            @Override
+            public void onRemoved(Download download) {
+
+            }
+
+            @Override
+            public void onDeleted(Download download) {
+
+            }
+        };
+    }
+
     protected Boolean doInBackground(String url) {
         File otaFile;
         otaFile = new File(getApplicationContext().getExternalCacheDir().getAbsolutePath() + File.separator + "last_download" + ".apk");
@@ -554,7 +631,7 @@ public class AppDetailActivity extends AppCompatActivity {
             while (downloading) {
                 c = mManager.query(query);
                 if(c.moveToFirst()) {
-                    Log.e ("FLAG","Downloading");
+                    //Log.e ("FLAG","Downloading");
                     int status =c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
 
                     if (status==DownloadManager.STATUS_SUCCESSFUL) {
@@ -647,5 +724,148 @@ public class AppDetailActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AppDownloader.getFetch(this).addListener(this);
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AppDownloader.getFetch(this).removeListener(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        AppDownloader.getFetch(this).close();
+    }
+
+    /**
+     * sets the area of the look next to the app logo.
+     * like: install/update/downloading/uninstall
+     * @param status
+     */
+    public void updateInstallStatus(Status status)
+    {
+        final Button btnInstall = findViewById(R.id.btn_install);
+        final Button btnLaunch = findViewById(R.id.btn_launch);
+        final LinearLayout pbh = findViewById(R.id.progress_bar_holder);
+        btnInstall.setVisibility(View.GONE);
+        btnLaunch.setVisibility(View.GONE);
+        pbh.setVisibility(View.GONE);
+
+        switch (status)
+        {
+            case PAUSED:
+            case ADDED:
+            case DOWNLOADING:
+            case QUEUED: {
+                pbh.setVisibility(View.VISIBLE);
+                break;
+            }
+
+            // this happens when app is not being downloading right now
+            default: {
+                // make the install button say "upgrade" if already installed
+                if (Util.isAppInstalled(mContext, mApp.id))
+                {
+                    btnLaunch.setVisibility(View.VISIBLE);
+                    if (Util.isAppUpdateable(mContext, mApp))
+                    {
+                        btnInstall.setText(getString(R.string.action_upgrade));
+                        btnInstall.setVisibility(View.VISIBLE);
+                    }
+                }
+                else
+                {
+                    btnInstall.setText(getString(R.string.action_install));
+                    btnInstall.setVisibility(View.VISIBLE);
+                }
+            }
+        }
+    }
+
+    /*
+     * fetch listener implementation
+     *
+     */
+
+    @Override
+    public void onAdded(Download download) {
+        if (download.getExtras().getString("id","").equals(mApp.id))
+            updateInstallStatus(download.getStatus());
+    }
+
+    @Override
+    public void onCancelled(Download download) {
+        if (download.getExtras().getString("id","").equals(mApp.id))
+            updateInstallStatus(download.getStatus());
+    }
+
+    @Override
+    public void onCompleted(Download download) {
+        if (download.getExtras().getString("id","").equals(mApp.id))
+            updateInstallStatus(download.getStatus());
+    }
+
+    @Override
+    public void onDeleted(Download download) {
+        if (download.getExtras().getString("id","").equals(mApp.id))
+            updateInstallStatus(download.getStatus());
+    }
+
+    @Override
+    public void onDownloadBlockUpdated(Download download, @NotNull DownloadBlock downloadBlock, int totalBlocks) {
+//        updateInstallStatus(download.getStatus());
+    }
+
+    @Override
+    public void onError(Download download, Error error, Throwable throwable) {
+        if (download.getExtras().getString("id","").equals(mApp.id))
+            updateInstallStatus(download.getStatus());
+    }
+
+    @Override
+    public void onPaused(Download download) {
+        // not pausable
+    }
+
+    @Override
+    public void onProgress(Download download, long etaInMilliseconds, long downloadedBytesPerSecond) {
+        if (download.getExtras().getString("id","").equals(mApp.id)) {
+            updateInstallStatus(download.getStatus());
+            progressBar.setProgress(download.getProgress());
+        }
+    }
+
+    @Override
+    public void onQueued(Download download, boolean b) {
+        if (download.getExtras().getString("id","").equals(mApp.id))
+            updateInstallStatus(download.getStatus());
+    }
+
+    @Override
+    public void onRemoved(Download download) {
+        if (download.getExtras().getString("id","").equals(mApp.id))
+            updateInstallStatus(download.getStatus());
+    }
+
+    @Override
+    public void onResumed(Download download) {
+        // not pausable
+    }
+
+    @Override
+    public void onStarted(Download download, @NotNull List<? extends DownloadBlock> downloadBlocks, int totalBlocks) {
+        if (download.getExtras().getString("id","").equals(mApp.id))
+            updateInstallStatus(download.getStatus());
+    }
+
+    @Override
+    public void onWaitingNetwork(Download download) {
+        if (download.getExtras().getString("id","").equals(mApp.id))
+            updateInstallStatus(download.getStatus());
+    }
 }

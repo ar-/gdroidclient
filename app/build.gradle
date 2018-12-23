@@ -24,8 +24,8 @@ android {
         applicationId "org.gdroid.gdroid"
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 4004
-        versionName "0.4.4"
+        versionCode 4005
+        versionName "0.4.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
@@ -47,6 +47,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "com.tonyodev.fetch2:fetch2:2.3.0-RC1"
 
     // Glide
     compile 'com.github.bumptech.glide:glide:3.7.0'
