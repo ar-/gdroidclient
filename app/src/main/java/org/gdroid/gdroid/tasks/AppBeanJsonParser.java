@@ -155,7 +155,6 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
 
         }
 
-        //System.gc();
         return ab;
     }
 
