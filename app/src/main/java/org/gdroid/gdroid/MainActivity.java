@@ -172,7 +172,9 @@ public class MainActivity extends AppCompatActivity
         display.getSize(size);
         final int screenWidth = size.x;
         final int gapDp = 5;
-        final int imgWidth = dpToPx(160 + gapDp);
+        final int cardWidth = 90;
+        final int topup = 10;
+        final int imgWidth = dpToPx(cardWidth+topup + gapDp);
         int columns = screenWidth / imgWidth;
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
