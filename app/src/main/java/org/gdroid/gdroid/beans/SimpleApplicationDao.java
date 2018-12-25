@@ -72,6 +72,19 @@ public interface SimpleApplicationDao {
             " ORDER BY lastupdated DESC, added ASC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getAllAppsForSearch3String(String ss, int limit, int offset);
 
+    // hidden apps
+
+    @Query("SELECT * FROM HiddenApplicationBean")
+    public HiddenApplicationBean[] getAllHiddenApps();
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    public void insertHiddenApps(HiddenApplicationBean... HiddenApplicationBeans);
+
+    @Update
+    public void updateHiddenApps(HiddenApplicationBean... HiddenApplicationBeans);
+
+    @Delete
+    public void deleteHiddenApps(HiddenApplicationBean... HiddenApplicationBeans);
 
     // categories
 
