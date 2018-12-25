@@ -69,18 +69,14 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
             applicationBeanList = new ArrayList<>();
             adapter = new AppBeanAdapter(mContext, applicationBeanList);
 
-            //inner_recycler_view.setLayoutManager(mLayoutManager);
-            //recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), true));
-            //inner_recycler_view.addItemDecoration(new MainActivity.GridSpacingItemDecoration(1, dpToPx(10), true));
             inner_recycler_view.setItemAnimator(new DefaultItemAnimator());
 
             inner_recycler_view.setAdapter(adapter);
 
-            RecyclerView.LayoutManager layoutManager = new GridLayoutManager(mContext, 1);
-            LinearLayoutManager layoutManager2
+            LinearLayoutManager layoutManager
                     = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
 
-            inner_recycler_view.setLayoutManager(layoutManager2);
+            inner_recycler_view.setLayoutManager(layoutManager);
         }
 
         /**
