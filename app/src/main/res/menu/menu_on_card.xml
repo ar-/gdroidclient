@@ -25,7 +25,18 @@
         android:title="@string/action_add_favourite" />
 
     <item
-        android:id="@+id/action_play_next"
+        android:id="@+id/action_install"
         android:orderInCategory="101"
         android:title="@string/action_install" />
+
+    <item
+        android:id="@+id/action_hide"
+        android:orderInCategory="102"
+        android:title="@string/action_hide" />
+
+    <item
+        android:id="@+id/action_unhide"
+        android:orderInCategory="103"
+        android:title="@string/action_unhide" />
+
 </menu>

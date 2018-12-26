@@ -117,6 +117,11 @@ public class AppCollectionDescriptor {
             applicationBeanList.clear();
             applicationBeanList.addAll(Util.getInstalledApps(mContext));
         }
+        else if (collectionName.equals("hiddenapps"))
+        {
+            applicationBeanList.clear();
+            applicationBeanList.addAll(Util.getHiddenApps(mContext));
+        }
         else if (collectionName.startsWith("search:"))
         {
             String searchString = collectionName.replace("search:","");

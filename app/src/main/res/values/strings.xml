@@ -171,6 +171,8 @@
     <string name="action_install">Install</string>
     <string name="action_upgrade">Upgrade</string>
     <string name="action_launch">Run</string>
+    <string name="action_hide">Hide</string>
+    <string name="action_unhide">Unhide</string>
 
     <string name="pref_header_ratings">Star Ratings</string>
     <string name="pref_title_upstream_ratings">Ratings from Github, Gitlab and Sourceforge</string>
@@ -181,6 +183,8 @@
 
     <string name="search_harder">search harder</string>
     <string name="search_even_harder">search even harder</string>
+    <string name="menu_my_apps">My apps</string>
+    <string name="menu_hidden_apps">Hidden apps</string>
 
 
 </resources>

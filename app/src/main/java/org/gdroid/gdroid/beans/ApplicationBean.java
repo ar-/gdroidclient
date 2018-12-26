@@ -74,6 +74,8 @@ public class ApplicationBean {
     @Ignore
     public List<String> tags;
 
+    public boolean isHidden = false;
+
     public ApplicationBean() {
     }
 

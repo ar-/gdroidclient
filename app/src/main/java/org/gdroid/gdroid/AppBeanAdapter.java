@@ -27,7 +27,6 @@ import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.content.res.AppCompatResources;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
@@ -36,11 +35,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
-import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.text.DecimalFormat;
@@ -139,7 +136,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         holder.overflow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showPopupMenu(holder);
+                showPopupMenu(holder, applicationBean);
             }
         });
 
@@ -188,12 +185,17 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
      * Showing popup menu when tapping on 3 dots
      * @param holder
      */
-    private void showPopupMenu(MyViewHolder holder) {
+    private void showPopupMenu(MyViewHolder holder, ApplicationBean app) {
         // inflate menu
         PopupMenu popup = new PopupMenu(mContext, holder.overflow);
         MenuInflater inflater = popup.getMenuInflater();
-        inflater.inflate(R.menu.menu_album, popup.getMenu());
+        inflater.inflate(R.menu.menu_on_card, popup.getMenu());
         popup.setOnMenuItemClickListener(new AppCardPopupMenuItemClickListener(holder));
+        // show hide or unhide option (#62)
+        if (app.isHidden)
+            popup.getMenu().removeItem(R.id.action_hide);
+        else
+            popup.getMenu().removeItem(R.id.action_unhide);
         popup.show();
     }
 
@@ -214,7 +216,13 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
                 case R.id.action_add_favourite:
                     Util.starApp(mContext,holder.appId);
                     return true;
-                case R.id.action_play_next:
+                case R.id.action_hide:
+                    Util.hideApp(mContext,holder.appId);
+                    return true;
+                case R.id.action_unhide:
+                    Util.unhideApp(mContext,holder.appId);
+                    return true;
+                case R.id.action_install:
                     Intent myIntent = new Intent(mContext, AppDetailActivity.class);
                     myIntent.putExtra("appId", holder.appId);
                     myIntent.putExtra("action", "install");
