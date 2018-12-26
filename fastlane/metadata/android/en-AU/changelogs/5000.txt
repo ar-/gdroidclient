@@ -1,5 +1,7 @@
-0.4.5
-  * replaced Android's download manger with fetch2, fixing many download errors
+0.5.0
+  * replaced Android's download manager with fetch2, fixing many download errors
+  * reduced optical size of cards
+  * added ability to hide apps
 
 0.4.4
   * updated upgrade logo
