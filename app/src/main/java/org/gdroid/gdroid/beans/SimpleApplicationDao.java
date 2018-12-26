@@ -114,7 +114,7 @@ public interface SimpleApplicationDao {
     @Query("SELECT * FROM TagBean WHERE appId = :appId")
     public TagBean[] getAllTagsForApp(String appId);
 
-    @Query("SELECT a.* FROM TagBean c LEFT JOIN ApplicationBean a ON (c.appId = a.id) WHERE c.tagName = :tagName" +
+    @Query("SELECT a.* FROM TagBean c LEFT JOIN ApplicationBean a ON (c.appId = a.id) WHERE c.tagName = :tagName AND NOT a.isHidden " +
             " ORDER BY a.lastupdated DESC, a.added ASC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getAllAppsForTag(String tagName, int limit, int offset);
 

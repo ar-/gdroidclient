@@ -163,6 +163,7 @@ public class Util {
         List<ApplicationBean> ret = new ArrayList<>();
         AppDatabase db = AppDatabase.get(context);
         final ApplicationBean[] hiddenApps = db.appDao().getAllHiddenApps();
+        db.close();
         for (ApplicationBean app: hiddenApps) {
             ret.add(app);
         }
