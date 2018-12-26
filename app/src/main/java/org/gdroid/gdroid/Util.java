@@ -144,6 +144,32 @@ public class Util {
         return ret;
     }
 
+    public static void hideApp (Context context, String appId)
+    {
+        AppDatabase db = AppDatabase.get(context);
+        db.appDao().hideApp(appId, true);
+        db.close();
+    }
+
+    public static void unhideApp (Context context, String appId)
+    {
+        AppDatabase db = AppDatabase.get(context);
+        db.appDao().hideApp(appId, false);
+        db.close();
+    }
+
+    public static List<ApplicationBean> getHiddenApps(Context context)
+    {
+        List<ApplicationBean> ret = new ArrayList<>();
+        AppDatabase db = AppDatabase.get(context);
+        final ApplicationBean[] hiddenApps = db.appDao().getAllHiddenApps();
+        for (ApplicationBean app: hiddenApps) {
+            ret.add(app);
+        }
+        Collections.sort(ret, new AppBeanNameComparator(context));
+        return ret;
+    }
+
     public static int getWeightOfMetric(Context context, String metric)
     {
         try

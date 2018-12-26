@@ -33,16 +33,16 @@ public interface SimpleApplicationDao {
     @Query("SELECT * FROM ApplicationBean")
     public ApplicationBean[] getAllApplicationBeans();
 
-    @Query("SELECT * FROM ApplicationBean ORDER BY lastupdated DESC LIMIT :limit OFFSET :offset")
+    @Query("SELECT * FROM ApplicationBean WHERE NOT isHidden ORDER BY lastupdated DESC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getLastUpdated(int limit, int offset);
 
-    @Query("SELECT * FROM ApplicationBean ORDER BY added DESC LIMIT :limit OFFSET :offset")
+    @Query("SELECT * FROM ApplicationBean WHERE NOT isHidden ORDER BY added DESC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getLastAdded(int limit, int offset);
 
-    @Query("SELECT * FROM ApplicationBean WHERE metriccount>=3 ORDER BY stars DESC, RANDOM() LIMIT :limit OFFSET :offset")
+    @Query("SELECT * FROM ApplicationBean WHERE NOT isHidden AND metriccount>=3 ORDER BY stars DESC, RANDOM() LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getHighRated(int limit, int offset);
 
-    @Query("SELECT * FROM ApplicationBean ORDER BY RANDOM() LIMIT :limit OFFSET :offset")
+    @Query("SELECT * FROM ApplicationBean WHERE NOT isHidden ORDER BY RANDOM() LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getRandom(int limit, int offset);
 
     @Query("SELECT * FROM ApplicationBean WHERE id = :id LIMIT 1")
@@ -60,7 +60,7 @@ public interface SimpleApplicationDao {
     @Delete
     public void deleteApplicationBeans(ApplicationBean... ApplicationBeans);
 
-    @Query("SELECT * FROM ApplicationBean WHERE name like :ss " +
+    @Query("SELECT * FROM ApplicationBean WHERE NOT isHidden AND name like :ss " +
             " ORDER BY lastupdated DESC, added ASC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getAllAppsForSearchString(String ss, int limit, int offset);
 
@@ -74,17 +74,11 @@ public interface SimpleApplicationDao {
 
     // hidden apps
 
-    @Query("SELECT * FROM HiddenApplicationBean")
-    public HiddenApplicationBean[] getAllHiddenApps();
+    @Query("SELECT * FROM ApplicationBean where isHidden")
+    public ApplicationBean[] getAllHiddenApps();
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    public void insertHiddenApps(HiddenApplicationBean... HiddenApplicationBeans);
-
-    @Update
-    public void updateHiddenApps(HiddenApplicationBean... HiddenApplicationBeans);
-
-    @Delete
-    public void deleteHiddenApps(HiddenApplicationBean... HiddenApplicationBeans);
+    @Query("UPDATE ApplicationBean SET isHidden = :hide where id = :appId")
+    public void hideApp(String appId, boolean hide);
 
     // categories
 
@@ -101,7 +95,7 @@ public interface SimpleApplicationDao {
     public CategoryBean[] getAllCategoriesForApp(String appId);
 
     // TODO ask the user what to ORDER BY in the settings
-    @Query("SELECT a.* FROM CategoryBean c LEFT JOIN ApplicationBean a ON (c.appId = a.id) WHERE c.catName = :catName" +
+    @Query("SELECT a.* FROM CategoryBean c LEFT JOIN ApplicationBean a ON (c.appId = a.id) WHERE c.catName = :catName AND NOT a.isHidden " +
             " ORDER BY a.lastupdated DESC, a.added ASC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getAllAppsForCategory(String catName, int limit, int offset);
 

@@ -458,7 +458,13 @@ public class MainActivity extends AppCompatActivity
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         if (id == R.id.nav_my_apps) {
             navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem("myapps"));
-//        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_hidden_apps) {
+            Intent myIntent = new Intent(this, AppCollectionActivity.class);
+            myIntent.putExtra("collectionName", "hiddenapps");
+            final String headline = Util.getStringResourceByName(this, "menu_hidden_apps");
+            myIntent.putExtra("headline", headline);
+            this.startActivity(myIntent);
+
 //        } else if (id == R.id.nav_slideshow) {
 //        } else if (id == R.id.nav_manage) {
 //        } else if (id == R.id.nav_share) {
