@@ -489,7 +489,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         }
         else
         {
-            if (recViewToFill == R.id.lbl_same_author) {
+            if (headlineLabel == R.id.lbl_same_author) {
                 String a = lblHeadlineLabel.getText().toString();
                 if (!TextUtils.isEmpty(mApp.author))
                     a += " (" + mApp.author + ")";
