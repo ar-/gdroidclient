@@ -17,6 +17,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * implements more metrics bases on open source data (like average release cycle time) to generate a star-rating
 * let the users choose which metrics are important to them, so there is no 'best app' in the repo - there is only a 'best app' from the point of view of the current user
 * shows 'similar apps' when watching an app
+* shows 'apps of the same author' when watching an app
 * shows web-site of the app - even if it is 'only a README file on github'. F-Droid has recently removed many websites to punish open source developers who can't effort their own domain.
 * shows newest apps and recently updated apps separated
 * shows cards in same size for better overview
