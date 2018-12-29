@@ -493,26 +493,6 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 mApp.web = mApp.source;
             }
         }
-
-        if (TextUtils.isEmpty(mApp.author))
-        {
-            if (! TextUtils.isEmpty(mApp.source))
-            {
-                // fetch author form github url (try catch is just to be safe)
-                try {
-                    String g = "github.com/";
-                    final int from = mApp.source.indexOf(g) + g.length();
-                    final int to = mApp.source.indexOf('/', from);
-                    String a = mApp.source.substring(from, to);
-                    mApp.author = a;
-                } catch (Throwable t)
-                {
-                    // nothing but log
-                    Log.e("ADA", "could not fetch author name from github url", t);
-                }
-            }
-        }
-
     }
 
     private void populateUpstreamLink(final String appAttribute, int tableRowId) {

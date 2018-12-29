@@ -155,6 +155,37 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
 
         }
 
+        //repair missing data
+        if (TextUtils.isEmpty(ab.author))
+        {
+            if (! TextUtils.isEmpty(ab.source))
+            {
+                String [] providers = new String[] {"github.com/","gitlab.com/","bitbucket.org/","sourceforge.net/p/","launchpad.net/","framagit.org/","code.google.com/p/","gitorious.org/"};
+                for (String g:providers) {
+                    // fetch author form github url (try catch is just to be safe)
+                    try
+                    {
+                        if (ab.source.contains(g))
+                        {
+                            final int from = ab.source.indexOf(g) + g.length();
+                            int to = ab.source.indexOf('/', from);
+                            if (to <=from || to> ab.source.length())
+                            {
+                                to = ab.source.length();
+                            }
+                            String a = ab.source.substring(from, to);
+                            ab.author = a;
+                            break;
+                        }
+                    } catch (Throwable t)
+                    {
+                        // nothing but log
+                        Log.e("ADA", "could not fetch author name from github url "+ab.source, t);
+                    }
+                }
+            }
+        }
+
         return ab;
     }
 
