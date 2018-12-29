@@ -25,15 +25,11 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.StrictMode;
-import android.preference.PreferenceManager;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.content.res.AppCompatResources;
@@ -43,7 +39,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.TextUtils;
-import android.util.ArraySet;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -78,7 +73,6 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
 
 public class AppDetailActivity extends AppCompatActivity implements FetchListener {
@@ -195,30 +189,13 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         }
 
         // populate similar apps
-        List<ApplicationBean> applicationBeanList;
-        RecyclerView viewSameCat = (RecyclerView) findViewById(R.id.rec_view_same_category);
-        applicationBeanList = new ArrayList<>();
-        AppBeanAdapter adapter = new AppBeanAdapter(mContext, applicationBeanList);
-        adapter.setActivity(this); // make this Activity the calling context
-        viewSameCat.setItemAnimator(new DefaultItemAnimator());
-        viewSameCat.setAdapter(adapter);
-        LinearLayoutManager layoutManager2
-                = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
-        viewSameCat.setLayoutManager(layoutManager2);
-        // use just fist category for now
-        AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(mContext,"cat:" + categories[0].catName);
-        applicationBeanList.clear();
-        applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
+        // use just first category for now
+        AppCollectionDescriptor sameCatCollectionDescriptor = new AppCollectionDescriptor(mContext,"cat:" + categories[0].catName);
+        populateSimilarAppsView(sameCatCollectionDescriptor,   R.id.lbl_same_category,  R.id.rec_view_same_category);
 
-        // remove this app itself, because it is similar to itself
-        for (ApplicationBean ab:applicationBeanList) {
-            if (ab.id.equals(this.mApp.id))
-            {
-                applicationBeanList.remove(ab);
-                break;
-            }
-        }
-        adapter.notifyDataSetChanged();
+        AppCollectionDescriptor sameAuthorCollectionDescriptor = new AppCollectionDescriptor(mContext,"author:" + mApp.author);
+        populateSimilarAppsView(sameAuthorCollectionDescriptor,  R.id.lbl_same_author,  R.id.rec_view_same_author);
+
 
         // put HTML description in place
         if (! TextUtils.isEmpty(mApp.desc)) {
@@ -482,6 +459,47 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         }
     }
 
+    private void populateSimilarAppsView(AppCollectionDescriptor appCollectionDescriptor, int headlineLabel, int recViewToFill) {
+        List<ApplicationBean> applicationBeanList;
+        RecyclerView viewSameCat = (RecyclerView) findViewById(recViewToFill);
+        applicationBeanList = new ArrayList<>();
+        AppBeanAdapter adapter = new AppBeanAdapter(mContext, applicationBeanList);
+        adapter.setActivity(this); // make this Activity the calling context
+        viewSameCat.setItemAnimator(new DefaultItemAnimator());
+        viewSameCat.setAdapter(adapter);
+        LinearLayoutManager layoutManager2
+                = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
+        viewSameCat.setLayoutManager(layoutManager2);
+        applicationBeanList.clear();
+        applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
+
+        // remove this app itself, because it is similar to itself
+        for (ApplicationBean ab:applicationBeanList) {
+            if (ab.id.equals(this.mApp.id))
+            {
+                applicationBeanList.remove(ab);
+                break;
+            }
+        }
+
+        TextView lblHeadlineLabel = findViewById(headlineLabel);
+        if (applicationBeanList.isEmpty())
+        {
+            lblHeadlineLabel.setVisibility(View.GONE);
+        }
+        else
+        {
+            if (headlineLabel == R.id.lbl_same_author) {
+                String a = lblHeadlineLabel.getText().toString();
+                if (!TextUtils.isEmpty(mApp.author))
+                    a += " (" + mApp.author + ")";
+                lblHeadlineLabel.setText(a);
+            }
+        }
+
+        adapter.notifyDataSetChanged();
+    }
+
     private void repairMissingData() {
         if (TextUtils.isEmpty(mApp.web))
         {
@@ -493,26 +511,6 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 mApp.web = mApp.source;
             }
         }
-
-        if (TextUtils.isEmpty(mApp.author))
-        {
-            if (! TextUtils.isEmpty(mApp.source))
-            {
-                // fetch author form github url (try catch is just to be safe)
-                try {
-                    String g = "github.com/";
-                    final int from = mApp.source.indexOf(g) + g.length();
-                    final int to = mApp.source.indexOf('/', from);
-                    String a = mApp.source.substring(from, to);
-                    mApp.author = a;
-                } catch (Throwable t)
-                {
-                    // nothing but log
-                    Log.e("ADA", "could not fetch author name from github url", t);
-                }
-            }
-        }
-
     }
 
     private void populateUpstreamLink(final String appAttribute, int tableRowId) {
