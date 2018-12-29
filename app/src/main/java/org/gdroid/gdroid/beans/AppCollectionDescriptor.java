@@ -76,6 +76,7 @@ public class AppCollectionDescriptor {
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            db.close();
         }
         else if (collectionName.equals("Recently updated"))
         {
@@ -86,6 +87,7 @@ public class AppCollectionDescriptor {
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            db.close();
         }
         else if (collectionName.equals("High rated"))
         {
@@ -96,6 +98,7 @@ public class AppCollectionDescriptor {
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            db.close();
         }
         else if (collectionName.equals("Random apps"))
         {
@@ -106,6 +109,7 @@ public class AppCollectionDescriptor {
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            db.close();
         }
         else if (collectionName.equals("starred"))
         {
@@ -133,6 +137,7 @@ public class AppCollectionDescriptor {
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            db.close();
         }
         else if (collectionName.startsWith("search2:")) // level 2 search
         {
@@ -145,6 +150,7 @@ public class AppCollectionDescriptor {
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            db.close();
         }
         else if (collectionName.startsWith("search3:")) // level 3 search
         {
@@ -157,6 +163,19 @@ public class AppCollectionDescriptor {
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            db.close();
+        }
+        else if (collectionName.startsWith("author:"))
+        {
+            String au = collectionName.replace("author:","");
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getAppsByAuthor(au, mLimit, mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+            db.close();
         }
         else if (collectionName.startsWith("cat:"))
         {
@@ -168,6 +187,7 @@ public class AppCollectionDescriptor {
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            db.close();
         }
         else if (collectionName.startsWith("tag:"))
         {
@@ -179,6 +199,7 @@ public class AppCollectionDescriptor {
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            db.close();
         }
     }
 

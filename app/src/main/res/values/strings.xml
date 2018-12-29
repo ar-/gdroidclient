@@ -185,6 +185,8 @@
     <string name="search_even_harder">search even harder</string>
     <string name="menu_my_apps">My apps</string>
     <string name="menu_hidden_apps">Hidden apps</string>
+    <string name="similar_apps">Similar apps</string>
+    <string name="by_same_author">By same Author</string>
 
 
 </resources>

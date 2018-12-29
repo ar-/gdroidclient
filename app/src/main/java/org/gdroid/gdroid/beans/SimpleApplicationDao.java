@@ -72,6 +72,9 @@ public interface SimpleApplicationDao {
             " ORDER BY lastupdated DESC, added ASC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getAllAppsForSearch3String(String ss, int limit, int offset);
 
+    @Query("SELECT * FROM ApplicationBean WHERE author = :author ORDER BY lastupdated DESC LIMIT :limit OFFSET :offset")
+    public ApplicationBean[] getAppsByAuthor(String author, int limit, int offset);
+
     // hidden apps
 
     @Query("SELECT * FROM ApplicationBean where isHidden")

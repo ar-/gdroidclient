@@ -31,6 +31,7 @@ import java.util.List;
 @Entity(indices = {@Index("name")
         ,@Index("lastupdated")
         ,@Index("added")
+        ,@Index("author")
 })
 
 public class ApplicationBean {
