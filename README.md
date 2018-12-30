@@ -45,7 +45,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * create a local repo, share apps with 'near' people or share apps via bluetooth
 * add other repositories than the F-Droid repo
 * use the privileged extension (done, but extension is not adjusted yet)
-* update autmatically
+* update automatically
 * http proxy settings
 * G-Droid helps you in different ways to find better apps: but in some cases you might still need the 'share' button, to open that app in F-Droid to install it. G-Droid right now is not yet a complete replacement for the F-Droid app.
 
