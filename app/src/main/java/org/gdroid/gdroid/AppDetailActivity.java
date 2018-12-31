@@ -497,6 +497,11 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             }
         }
 
+        if (TextUtils.isEmpty(mApp.author) && headlineLabel == R.id.lbl_same_author)
+        {
+            lblHeadlineLabel.setVisibility(View.GONE);
+            viewSameCat.setVisibility(View.GONE);
+        }
         adapter.notifyDataSetChanged();
     }
 
