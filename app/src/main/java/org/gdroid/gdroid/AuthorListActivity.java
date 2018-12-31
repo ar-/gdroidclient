@@ -19,6 +19,7 @@
 package org.gdroid.gdroid;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -77,12 +78,21 @@ public class AuthorListActivity extends AppCompatActivity {
         final AuthorArrayAdapter adapter = new AuthorArrayAdapter(this, allAuthors);
         authorsList.setAdapter(adapter);
 
+        final AuthorListActivity caller = this;
         authorsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, final View view,
                                     int position, long id) {
                 final AuthorBean item = (AuthorBean) parent.getItemAtPosition(position);
+
+                Intent myIntent = new Intent(caller, AppCollectionActivity.class);
+                myIntent.putExtra("collectionName", "author:"+item.author);
+                //final String headline = Util.getStringResourceByName(caller, "menu_hidden_apps");
+                myIntent.putExtra("headline", item.author);
+                caller.startActivity(myIntent);
+
+
 //                list.remove(item);
 //                adapter.notifyDataSetChanged();
                 //view.setAlpha(1);

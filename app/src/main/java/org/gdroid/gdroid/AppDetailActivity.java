@@ -467,9 +467,9 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         adapter.setActivity(this); // make this Activity the calling context
         viewSameCat.setItemAnimator(new DefaultItemAnimator());
         viewSameCat.setAdapter(adapter);
-        LinearLayoutManager layoutManager2
+        LinearLayoutManager layoutManager
                 = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
-        viewSameCat.setLayoutManager(layoutManager2);
+        viewSameCat.setLayoutManager(layoutManager);
         applicationBeanList.clear();
         applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
 
