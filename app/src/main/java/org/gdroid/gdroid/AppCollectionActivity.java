@@ -92,7 +92,6 @@ public class AppCollectionActivity extends AppCompatActivity {
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, columns);
         viewAppCollection.setLayoutManager(mLayoutManager);
 
-//        loadMore();
         AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(mContext,collectionName,itemsToShow);
         applicationBeanList.clear();
         applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
