@@ -123,4 +123,10 @@ public interface SimpleApplicationDao {
 
     @Query("SELECT DISTINCT tagName FROM TagBean")
     public String[] getAllTagNames();
+
+    // authors
+
+    @Query("SELECT author, count(id) apps, avg(stars) stars FROM ApplicationBean WHERE author IS NOT NULL and author <> '' GROUP BY author ORDER by apps DESC, stars DESC ")
+    public AuthorBean[] getAllAuthors();
+
 }

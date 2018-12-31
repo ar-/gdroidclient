@@ -465,7 +465,10 @@ public class MainActivity extends AppCompatActivity
             myIntent.putExtra("headline", headline);
             this.startActivity(myIntent);
 
-//        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_app_authors) {
+            Intent myIntent = new Intent(this, AuthorListActivity.class);
+            this.startActivity(myIntent);
+
 //        } else if (id == R.id.nav_manage) {
 //        } else if (id == R.id.nav_share) {
 //        } else if (id == R.id.nav_send) {
