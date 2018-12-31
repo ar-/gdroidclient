@@ -53,12 +53,6 @@ public class AuthorArrayAdapter extends ArrayAdapter<AuthorBean> {
         DecimalFormat df = new DecimalFormat("0.0");
         line2.setText(values[position].apps + " apps ("+df.format(values[position].stars) + " ★)");
 //        imageView.setImageResource(R.drawable.ic_update_green_24dp);
-//        String s = values[position];
-//        if (s.startsWith("iPhone")) {
-//        } else {
-//            imageView.setImageResource(R.drawable.ic_more_vert_black_24dp);
-//        }
-
         return rowView;
     }
 }
