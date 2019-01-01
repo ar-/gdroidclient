@@ -189,5 +189,13 @@
     <string name="by_same_author">By same Author</string>
     <string name="menu_app_authors">App Authors</string>
 
+    <string name="installing" formatted="false">Installing %s</string>
+    <string name="installing_details" formatted="false">Installing %d / %d </string>
+    <string name="installation_finished">Installation Finished</string>
+    <string name="installed_details">Installed %d apps successfully</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="use_root">This is a Rooted Device. Do you want to install applications without user interaction, using Root Privilege ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
 </resources>

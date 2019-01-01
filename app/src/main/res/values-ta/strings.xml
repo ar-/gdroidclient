@@ -9,4 +9,6 @@
     <string name="action_install">நிறுவு</string>
     <string name="action_upgrade">மேம்படுத்து</string>
 <string name="action_launch">இயக்க</string>
+    <string name="yes">ஆம்</string>
+    <string name="no">இல்லை</string>
 </resources>

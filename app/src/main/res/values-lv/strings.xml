@@ -24,4 +24,6 @@
     <string name="action_install">Instalēt</string>
     <string name="action_upgrade">Atjaunot</string>
     <string name="action_launch">Palaist</string>
+    <string name="yes">Jā</string>
+    <string name="no">Nē</string>
 </resources>

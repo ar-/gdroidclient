@@ -37,4 +37,6 @@
     <string name="action_install">Installeren</string>
     <string name="action_upgrade">Bijwerken</string>
     <string name="action_launch">Uitvoeren</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nee</string>
 </resources>

@@ -37,4 +37,6 @@
     <string name="action_install">Instalar</string>
     <string name="action_upgrade">Actualizar</string>
     <string name="action_launch">Executar</string>
+    <string name="yes">Si</string>
+    <string name="no">Non</string>
 </resources>

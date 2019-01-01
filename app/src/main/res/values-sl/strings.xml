@@ -37,4 +37,6 @@
     <string name="action_install">Namesti</string>
     <string name="action_upgrade">Nadgradnja</string>
     <string name="action_launch">Zaženi</string>
+    <string name="yes">Da</string>
+    <string name="no">Ne</string>
 </resources>

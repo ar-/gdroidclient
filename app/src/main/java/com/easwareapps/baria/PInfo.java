@@ -1,6 +1,6 @@
-/**
- ************************************** ॐ ***********************************
- ***************************** लोकाः समस्ताः सुखिनो भवन्तु॥**************************
+/*
+ * G-Droid
+ * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
  * <p/>
  * BARIA - Backup And Restore Installed Apps
  * Copyright (C) 2016  vishnu@easwareapps.com

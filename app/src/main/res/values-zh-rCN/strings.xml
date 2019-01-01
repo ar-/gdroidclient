@@ -38,4 +38,6 @@
     <string name="action_install">安装</string>
     <string name="action_upgrade">更新</string>
     <string name="action_launch">运行</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
 </resources>

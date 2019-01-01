@@ -1,7 +1,7 @@
-/**
- ************************************** ॐ ***********************************
- ***************************** लोकाः समस्ताः सुखिनो भवन्तु॥**************************
- * <p/>
+/*
+ * G-Droid
+ * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+` * <p/>
  * BARIA - Backup And Restore Installed Apps
  * Copyright (C) 2016  vishnu@easwareapps.com
  * <p/>
@@ -22,17 +22,14 @@ package com.easwareapps.baria;
 
 import android.app.NotificationManager;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
-import com.easwareapps.baria.PInfo;
-import com.easwareapps.baria.R;
+import org.gdroid.gdroid.R;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -33,4 +33,6 @@
     <string name="action_install">స్థాపించు</string>
     <string name="action_upgrade">నవీకరణించు</string>
     <string name="action_launch">నడుపు</string>
+    <string name="yes">అవును</string>
+    <string name="no">కాదు</string>
 </resources>

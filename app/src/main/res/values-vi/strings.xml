@@ -37,4 +37,6 @@
     <string name="action_install">Cài đặt</string>
     <string name="action_upgrade">Nâng cấp</string>
     <string name="action_launch">Chạy</string>
+    <string name="yes">Có</string>
+    <string name="no">Không</string>
 </resources>

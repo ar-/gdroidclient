@@ -38,4 +38,6 @@
     <string name="action_install">Asenna</string>
     <string name="action_upgrade">Päivitä</string>
     <string name="action_launch">Suorita</string>
+    <string name="yes">Kyllä</string>
+    <string name="no">Ei</string>
 </resources>

@@ -35,4 +35,6 @@
     <string name="action_install">സ്ഥാപിക്കുക</string>
     <string name="action_upgrade">പുതുക്കുക</string>
     <string name="action_launch">തുടങ്ങുക</string>
+    <string name="yes">ശരി</string>
+    <string name="no">വേണ്ട</string>
 </resources>

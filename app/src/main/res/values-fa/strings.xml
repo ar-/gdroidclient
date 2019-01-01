@@ -38,4 +38,6 @@
     <string name="action_install">نصب</string>
     <string name="action_upgrade">ارتقا</string>
     <string name="action_launch">اجرا</string>
+    <string name="yes">بله</string>
+    <string name="no">خیر</string>
 </resources>

@@ -38,4 +38,6 @@
     <string name="action_install">התקנה</string>
     <string name="action_upgrade">שדרוג</string>
     <string name="action_launch">הפעלה</string>
+    <string name="yes">כן</string>
+    <string name="no">לא</string>
 </resources>

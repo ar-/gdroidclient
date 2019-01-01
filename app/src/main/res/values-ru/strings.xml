@@ -38,4 +38,6 @@
     <string name="action_install">Установить</string>
     <string name="action_upgrade">Обновить</string>
     <string name="action_launch">Запустить</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
 </resources>

@@ -24,4 +24,6 @@
     <string name="action_install">Sbedd</string>
     <string name="action_upgrade">Leqqem</string>
     <string name="action_launch">Serreḥ</string>
+    <string name="yes">Ih</string>
+    <string name="no">Ala</string>
 </resources>

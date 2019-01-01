@@ -35,4 +35,6 @@
     <string name="action_install">Installeer</string>
     <string name="action_upgrade">Opgradering</string>
     <string name="action_launch">Begin</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nee</string>
 </resources>

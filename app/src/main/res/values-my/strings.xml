@@ -34,4 +34,6 @@
     <string name="action_install">သြင္းမည္</string>
     <string name="action_upgrade">အဆင့္ျမင့္တင္မည္</string>
     <string name="action_launch">ဖြင့္မည္</string>
+    <string name="yes">ဟုတ္</string>
+    <string name="no">မဟုတ္</string>
 </resources>

@@ -38,4 +38,6 @@
     <string name="action_install">Nainstalovat</string>
     <string name="action_upgrade">Aktualizovat</string>
     <string name="action_launch">Spustit</string>
+    <string name="yes">Ano</string>
+    <string name="no">Ne</string>
 </resources>

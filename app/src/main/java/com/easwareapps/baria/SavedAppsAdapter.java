@@ -1,6 +1,6 @@
-/**
- ************************************** ॐ ***********************************
- ***************************** लोकाः समस्ताः सुखिनो भवन्तु॥**************************
+/*
+ * G-Droid
+ * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
  * <p/>
  * BARIA - Backup And Restore Installed Apps
  * Copyright (C) 2016  vishnu@easwareapps.com
@@ -43,17 +43,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.easwareapps.baria.InstallAppActivity;
-import com.easwareapps.baria.utils.BariaPref;
-import com.easwareapps.baria.utils.BitmapManager;
-import com.easwareapps.baria.utils.InstallTask;
-import com.easwareapps.baria.utils.PInfo;
-import com.easwareapps.baria.R;
+import org.gdroid.gdroid.R;
 
 import java.io.File;
 import java.util.ArrayList;
 
-
+// TODO delete this file
 public class SavedAppsAdapter extends RecyclerView.Adapter<SavedAppsAdapter.ViewHolder> {
 
 
@@ -66,7 +61,7 @@ public class SavedAppsAdapter extends RecyclerView.Adapter<SavedAppsAdapter.View
     static RecyclerView rv;
     ActionMode actionMode;
     static FragmentActivity activity;
-    BariaPref pref;
+//    BariaPref pref;
 
     public static SavedAppsAdapter getInstance(ArrayList<PInfo> apps, Context context,
                                                    int iconSize, RecyclerView rv1, FragmentActivity fa) {
@@ -78,7 +73,7 @@ public class SavedAppsAdapter extends RecyclerView.Adapter<SavedAppsAdapter.View
         instance.appsDetails = apps;
         instance.iconSize = iconSize;
         instance.context = context;
-        instance.pref = BariaPref.getInstance(context);
+//        instance.pref = BariaPref.getInstance(context);
 
         return instance;
     }
@@ -114,8 +109,8 @@ public class SavedAppsAdapter extends RecyclerView.Adapter<SavedAppsAdapter.View
         public ViewHolder(View view){
             super(view);
             mainView = view;
-            icon = (ImageView)view.findViewById(R.id.app_icon);
-            name = (TextView)view.findViewById(R.id.app_name);
+//            icon = (ImageView)view.findViewById(R.id.app_icon);
+//            name = (TextView)view.findViewById(R.id.app_name);
             mainView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -149,9 +144,9 @@ public class SavedAppsAdapter extends RecyclerView.Adapter<SavedAppsAdapter.View
             appsDetails.get(getAdapterPosition()).selected = ! appsDetails.get(getAdapterPosition()).selected;
             view.setSelected(appsDetails.get(getAdapterPosition()).selected);
             if(appsDetails.get(getAdapterPosition()).selected) {
-                view.setBackgroundColor(pref.getSelectionColor());
+//                view.setBackgroundColor(pref.getSelectionColor());
             } else {
-                view.setBackgroundColor(pref.getNormalColor());
+//                view.setBackgroundColor(pref.getNormalColor());
             }
 
 
@@ -164,41 +159,41 @@ public class SavedAppsAdapter extends RecyclerView.Adapter<SavedAppsAdapter.View
 
             try {
                 FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
-                fab.setImageResource(R.mipmap.ic_install);
-                fab.setVisibility(View.VISIBLE);
+//                fab.setImageResource(R.mipmap.ic_install);
+//                fab.setVisibility(View.VISIBLE);
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
             MenuInflater inflater = activity.getMenuInflater();
-            inflater.inflate(R.menu.selection_menu_saved_apps, menu);
+//            inflater.inflate(R.menu.selection_menu_saved_apps, menu);
 
-            MenuItem share = menu.findItem(R.id.menu_share);
-            share.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem menuItem) {
-                    shareApps();
-                    return false;
-                }
-            });
+//            MenuItem share = menu.findItem(R.id.menu_share);
+//            share.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//                @Override
+//                public boolean onMenuItemClick(MenuItem menuItem) {
+//                    shareApps();
+//                    return false;
+//                }
+//            });
 
-            MenuItem copy = menu.findItem(R.id.menu_install);
-            copy.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem menuItem) {
-                    installAPK(null);
-                    return false;
-                }
-            });
+//            MenuItem copy = menu.findItem(R.id.menu_install);
+//            copy.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//                @Override
+//                public boolean onMenuItemClick(MenuItem menuItem) {
+//                    installAPK(null);
+//                    return false;
+//                }
+//            });
 
-            final MenuItem menuSelectAll = menu.findItem(R.id.menu_select_all);
-            menuSelectAll.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem menuItem) {
-                    selectAll();
-                    return false;
-                }
-            });
+//            final MenuItem menuSelectAll = menu.findItem(R.id.menu_select_all);
+//            menuSelectAll.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//                @Override
+//                public boolean onMenuItemClick(MenuItem menuItem) {
+//                    selectAll();
+//                    return false;
+//                }
+//            });
 
 
             return true;
@@ -215,7 +210,7 @@ public class SavedAppsAdapter extends RecyclerView.Adapter<SavedAppsAdapter.View
             selectionStarted = false;
             removeAllSelection();
             FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
-            fab.setVisibility(View.GONE);
+//            fab.setVisibility(View.GONE);
             //fab.startActionMode(null);
 
         }
@@ -242,7 +237,7 @@ public class SavedAppsAdapter extends RecyclerView.Adapter<SavedAppsAdapter.View
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.app_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.author_line, parent, false);
         return new ViewHolder(view);
     }
 
@@ -260,18 +255,18 @@ public class SavedAppsAdapter extends RecyclerView.Adapter<SavedAppsAdapter.View
             holder.icon.setImageBitmap(bitmap);
         } else {
             Resources resource = context.getResources();
-            BitmapManager bm = new BitmapManager(holder.icon, resource, cache);
-            bm.setPackageName(appsDetails.get(position).icon);
-            final BitmapManager.AsyncDrawable asyncDrawable =
-                    new BitmapManager.AsyncDrawable(resource, null, bm);
-            holder.icon.setImageDrawable(asyncDrawable);
-            bm.execute(1);
+//            BitmapManager bm = new BitmapManager(holder.icon, resource, cache);
+//            bm.setPackageName(appsDetails.get(position).icon);
+//            final BitmapManager.AsyncDrawable asyncDrawable =
+//                    new BitmapManager.AsyncDrawable(resource, null, bm);
+//            holder.icon.setImageDrawable(asyncDrawable);
+//            bm.execute(1);
         }
         holder.mainView.setSelected(appsDetails.get(position).selected);
         if(appsDetails.get(position).selected) {
-            holder.mainView.setBackgroundColor(pref.getSelectionColor());
+//            holder.mainView.setBackgroundColor(pref.getSelectionColor());
         } else {
-            holder.mainView.setBackgroundColor(pref.getNormalColor());
+//            holder.mainView.setBackgroundColor(pref.getNormalColor());
         }
 
 
@@ -366,12 +361,12 @@ public class SavedAppsAdapter extends RecyclerView.Adapter<SavedAppsAdapter.View
             Intent share = new Intent(Intent.ACTION_SEND_MULTIPLE);
             share.putParcelableArrayListExtra(Intent.EXTRA_STREAM, files);
             share.setType("application/vnd.android.package-archive");
-            share.putExtra(Intent.EXTRA_TEXT, context.getString(R.string.shared_using_baria, "\n\nhttp://baria.easwareapps.com/"));
+//            share.putExtra(Intent.EXTRA_TEXT, context.getString(R.string.shared_using_baria, "\n\nhttp://baria.easwareapps.com/"));
             context.startActivity(share);
         }else {
-            Snackbar.make(activity.findViewById(R.id.main_content),
-                    context.getString(R.string.nothing_to_share), Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
+//            Snackbar.make(activity.findViewById(R.id.main_content),
+//                    context.getString(R.string.nothing_to_share), Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show();
         }
     }
 

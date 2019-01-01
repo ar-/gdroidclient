@@ -38,4 +38,6 @@
     <string name="action_install">Instalează</string>
     <string name="action_upgrade">Actualizează</string>
     <string name="action_launch">Porneste</string>
+    <string name="yes">Da</string>
+    <string name="no">Nu</string>
 </resources>

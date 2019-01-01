@@ -35,4 +35,6 @@
     <string name="action_install">Inštalovať</string>
     <string name="action_upgrade">Inovovať</string>
     <string name="action_launch">Spustiť</string>
+    <string name="yes">Áno</string>
+    <string name="no">Nie</string>
 </resources>

@@ -38,4 +38,6 @@
     <string name="action_install">インストール</string>
     <string name="action_upgrade">アップグレード</string>
     <string name="action_launch">開く</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
 </resources>

@@ -38,4 +38,6 @@
     <string name="action_install">Εγκατάσταση</string>
     <string name="action_upgrade">Αναβάθμιση</string>
     <string name="action_launch">Εκτέλεση</string>
+    <string name="yes">Ναι</string>
+    <string name="no">Όχι</string>
 </resources>

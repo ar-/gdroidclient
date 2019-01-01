@@ -1,6 +1,6 @@
-/**
- ************************************** ॐ ***********************************
- ***************************** लोकाः समस्ताः सुखिनो भवन्तु॥**************************
+/*
+ * G-Droid
+ * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
  * <p/>
  * BARIA - Backup And Restore Installed Apps
  * Copyright (C) 2016  vishnu@easwareapps.com
@@ -116,7 +116,7 @@ public class InstallAppActivity extends AppCompatActivity {
         if(index == total) {
             showNotification(getResources().getString(R.string.installation_finished),
                     getResources().getString(R.string.installed_details, index),
-                    BitmapFactory.decodeResource(getResources(), R.mipmap.ic_install));
+                    BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
             finish();
         }else{
             installAppManually(apps.get(index));

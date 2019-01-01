@@ -37,4 +37,6 @@
     <string name="action_install">Installer</string>
     <string name="action_upgrade">Opgrader</string>
     <string name="action_launch">Kør</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nej</string>
 </resources>

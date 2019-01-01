@@ -32,4 +32,6 @@
     <string name="action_install">Įdiegti</string>
     <string name="action_upgrade">Atnaujinti</string>
     <string name="action_launch">Vykdyti</string>
+    <string name="yes">Taip</string>
+    <string name="no">Ne</string>
 </resources>

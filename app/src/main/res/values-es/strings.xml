@@ -38,4 +38,6 @@
     <string name="action_install">Instalar</string>
     <string name="action_upgrade">Actualización (a nueva versión)</string>
     <string name="action_launch">Ejecutar</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
 </resources>

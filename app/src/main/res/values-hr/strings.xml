@@ -34,4 +34,6 @@
     <string name="action_install">Instaliraj</string>
     <string name="action_upgrade">Nadogradi</string>
     <string name="action_launch">Pokreni</string>
+    <string name="yes">Da</string>
+    <string name="no">Ne</string>
 </resources>

@@ -38,4 +38,6 @@
     <string name="action_install">Paigalda</string>
     <string name="action_upgrade">Uuenda</string>
     <string name="action_launch">Käivita</string>
+    <string name="yes">Jah</string>
+    <string name="no">Ei</string>
 </resources>
