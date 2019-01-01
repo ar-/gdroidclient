@@ -40,4 +40,5 @@
     <string name="action_launch">Çalıştır</string>
     <string name="yes">Evet</string>
     <string name="no">Hayır</string>
+    <string name="download_all_updates">Tüm güncellemeleri indir</string>
 </resources>

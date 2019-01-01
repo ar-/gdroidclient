@@ -40,4 +40,5 @@
     <string name="action_launch">Spustit</string>
     <string name="yes">Ano</string>
     <string name="no">Ne</string>
+    <string name="download_all_updates">Stáhnout všechny aktualizace</string>
 </resources>

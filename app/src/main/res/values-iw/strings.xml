@@ -40,4 +40,5 @@
     <string name="action_launch">הפעלה</string>
     <string name="yes">כן</string>
     <string name="no">לא</string>
+    <string name="download_all_updates">הורדת כל העדכונים</string>
 </resources>

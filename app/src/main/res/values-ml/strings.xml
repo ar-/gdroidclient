@@ -37,4 +37,5 @@
     <string name="action_launch">തുടങ്ങുക</string>
     <string name="yes">ശരി</string>
     <string name="no">വേണ്ട</string>
+    <string name="download_all_updates">എല്ലാ പുതുക്കലുകളും ഡൌണ്‍ലോഡ് ചെയ്യുക</string>
 </resources>

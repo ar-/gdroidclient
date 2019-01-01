@@ -39,4 +39,5 @@
     <string name="action_launch">Zaženi</string>
     <string name="yes">Da</string>
     <string name="no">Ne</string>
+    <string name="download_all_updates">Prenesi vse posodobitve</string>
 </resources>

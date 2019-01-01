@@ -40,4 +40,5 @@
     <string name="action_launch">Jalankan</string>
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
+    <string name="download_all_updates">Unduh semua pembaruan</string>
 </resources>

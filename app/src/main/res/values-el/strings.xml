@@ -40,4 +40,5 @@
     <string name="action_launch">Εκτέλεση</string>
     <string name="yes">Ναι</string>
     <string name="no">Όχι</string>
+    <string name="download_all_updates">Λήψη όλων των ενημερώσεων</string>
 </resources>

@@ -40,4 +40,5 @@
     <string name="action_launch">Ejecutar</string>
     <string name="yes">Sí</string>
     <string name="no">No</string>
+    <string name="download_all_updates">Descargar todas las actualizaciones</string>
 </resources>

@@ -40,4 +40,5 @@
     <string name="action_launch">Exekutatu</string>
     <string name="yes">Bai</string>
     <string name="no">Ez</string>
+    <string name="download_all_updates">Deskargatu eguneraketa guztiak</string>
 </resources>

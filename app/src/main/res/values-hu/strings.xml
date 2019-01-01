@@ -40,4 +40,5 @@
     <string name="action_launch">Indítás</string>
     <string name="yes">Igen</string>
     <string name="no">Nem</string>
+    <string name="download_all_updates">Összes frissítés letöltése</string>
 </resources>

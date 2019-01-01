@@ -35,4 +35,5 @@
     <string name="action_launch">నడుపు</string>
     <string name="yes">అవును</string>
     <string name="no">కాదు</string>
+    <string name="download_all_updates">అన్ని నవీకరణలను దింపుకోండి</string>
 </resources>

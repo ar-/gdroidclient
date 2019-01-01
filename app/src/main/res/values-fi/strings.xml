@@ -40,4 +40,5 @@
     <string name="action_launch">Suorita</string>
     <string name="yes">Kyllä</string>
     <string name="no">Ei</string>
+    <string name="download_all_updates">Lataa kaikki päivitykset</string>
 </resources>

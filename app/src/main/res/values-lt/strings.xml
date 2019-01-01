@@ -34,4 +34,5 @@
     <string name="action_launch">Vykdyti</string>
     <string name="yes">Taip</string>
     <string name="no">Ne</string>
+    <string name="download_all_updates">Atsiųsti visus atnaujinimus</string>
 </resources>

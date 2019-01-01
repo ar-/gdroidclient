@@ -39,4 +39,5 @@
     <string name="action_launch">Chạy</string>
     <string name="yes">Có</string>
     <string name="no">Không</string>
+    <string name="download_all_updates">Tải về tất cả các bản cập nhật</string>
 </resources>

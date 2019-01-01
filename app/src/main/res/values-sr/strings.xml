@@ -37,4 +37,5 @@
     <string name="action_launch">Покрени</string>
     <string name="yes">Да</string>
     <string name="no">Не</string>
+    <string name="download_all_updates">Преузми све надоградње</string>
 </resources>

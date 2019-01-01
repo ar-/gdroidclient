@@ -197,5 +197,6 @@
     <string name="use_root">This is a Rooted Device. Do you want to install applications without user interaction, using Root Privilege ?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="download_all_updates">Download all updates</string>
 
 </resources>

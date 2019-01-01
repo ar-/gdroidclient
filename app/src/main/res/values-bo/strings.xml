@@ -37,4 +37,5 @@
     <string name="action_launch">འཁོར་སྐྱོད།</string>
     <string name="yes">རེད།</string>
     <string name="no">མ་རེད།</string>
+    <string name="download_all_updates">གསར་བསྒྱུར་ཚང་མ་ཕབ་ལེན་བྱེད།</string>
 </resources>
