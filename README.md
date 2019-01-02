@@ -88,7 +88,7 @@ And then all of it can be done for each app in the F-Droid repo and compared wit
 
 Doing all these things manually is very cumbersome so G-Droid assists in that, to provide a better user experience.
 
-And no. The data does not come from G-Droid users as there is (and will be) no tracking in the app. And is doesn't come from other stores, as that would be irrelevant information and mostly spam that has been bought for money (eg. in Googles play store).
+And no. The data does not come from G-Droid users as there is (and will be) no tracking in the app. And it doesn't come from other stores, as that would be irrelevant information and mostly spam that has been bought for money (eg. in Googles play store).
 
 ## How can I add or remove an app from the tags?
 
