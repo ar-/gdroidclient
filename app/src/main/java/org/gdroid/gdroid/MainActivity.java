@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity
     SearchView searchView;
     private Button btnSearchHarder;
     private Button btnSearchEvenHarder;
+    private Button btnUpdateAll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity
         searchView = findViewById(R.id.search_view);
         btnSearchHarder = findViewById(R.id.btn_search_harder);
         btnSearchEvenHarder = findViewById(R.id.btn_search_even_harder);
+        btnUpdateAll = findViewById(R.id.btn_update_all);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -121,6 +123,14 @@ public class MainActivity extends AppCompatActivity
 
 
                 new DownloadJaredJsonTask(activity, appCollectionAdapter, "index-v1.json").execute("https://f-droid.org/repo/index-v1.jar");
+
+            }
+        });
+
+        // download all button
+        btnUpdateAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
             }
         });

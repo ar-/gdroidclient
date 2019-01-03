@@ -1,0 +1,105 @@
+/*
+ * Copyright (C) 2019 Andreas Redmer <ar-gdroid@abga.be>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+package org.gdroid.gdroid.installer;
+
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
+
+import com.easwareapps.baria.InstallAppActivity;
+import com.easwareapps.baria.InstallTask;
+import com.easwareapps.baria.PInfo;
+
+import org.gdroid.gdroid.R;
+
+import java.util.ArrayList;
+
+public class BariaInstaller {
+
+    private final Context context;
+    private final ArrayList<PInfo> appsDetails;
+
+    BariaInstaller(Context context, ArrayList<PInfo> appsDetails)
+    {
+        this.context = context;
+        this.appsDetails = appsDetails;
+    }
+
+    InstallTask installTask;
+    public void installAPK(final ArrayList<PInfo> apps){
+
+        boolean singleApk = false;
+        if(apps != null){
+            installTask = new InstallTask(context, apps);
+            installTask.setSingleApk();
+            singleApk = true;
+        }
+        else
+            installTask = new InstallTask(context, appsDetails);
+        if (installTask.isRooted()) {
+            AlertDialog.Builder questionDialog = new AlertDialog.Builder(context);
+            questionDialog.setTitle(R.string.confirmation)
+                    .setMessage(R.string.use_root)
+                    .setIcon(R.mipmap.ic_launcher);
+            questionDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    installTask.useRootPrivilege();
+                    installTask.execute();
+
+                }
+            });
+
+            questionDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                    installAppsManually(apps);
+
+                }
+            });
+
+            questionDialog.create().show();
+            return;
+        }
+
+        installAppsManually(apps);
+
+
+    }
+
+    private void installAppsManually(ArrayList<PInfo> apps) {
+        ArrayList<String> apks = new ArrayList<>();
+        Intent intent = new Intent(context, InstallAppActivity.class);
+        if(apps != null) {
+            apks.add(apps.get(0).apk);
+
+        }else{
+            for(int i=0;i<appsDetails.size(); i++) {
+                if(appsDetails.get(i).selected)
+                    apks.add(appsDetails.get(i).apk);
+            }
+        }
+        intent.putExtra("apps", apks);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+
+    }
+}

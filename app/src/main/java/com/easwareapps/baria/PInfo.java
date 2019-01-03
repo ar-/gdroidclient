@@ -27,7 +27,7 @@ public class PInfo {
     public String pname = "";
     public String versionName = "";
     public int versionCode = 0;
-    public String apk = "";;
+    public String apk = "";
     public Drawable icon;
     public boolean selected = false;
 
