@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">Connectivité</string>
@@ -38,4 +39,49 @@
     <string name="action_install">Installer</string>
     <string name="action_upgrade">Mettre à jour</string>
     <string name="action_launch">Lancer</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">Ouvrir le volet de navigation</string>
+    <string name="navigation_drawer_close">Fermer le volet de navigation</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="nav_header_subtitle">client pour le magasin F-Droid</string>
+    <string name="nav_header_desc">Entête de navigation</string>
+    <string name="action_settings">Réglages</string>
+    <string name="action_add_favourite">Ajouter aux favoris</string>
+    <string name="title_activity_settings">Réglages</string>
+    <string name="pref_header_general">Général</string>
+    <string name="pref_title_social_recommendations">Activer les suggestions</string>
+    <string name="pref_description_social_recommendations">ne marche pas déjà</string>
+    <string name="pref_title_display_name">Désactivé</string>
+    <string name="pref_title_add_friends_to_messages">désactivé</string>
+    <string name="pref_header_data_sync">Données et synchronisation</string>
+    <string name="pref_title_sync_frequency">Fréquence de synchronisation</string>
+    <string name="pref_title_system_sync_settings">Réglages de synchronisation système</string>
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_title_new_message_notifications">Notifications des nouveaux messages</string>
+    <string name="pref_title_ringtone">Sonner</string>
+    <string name="pref_ringtone_silent">Taire</string>
+    <string name="pref_title_vibrate">Vibrer</string>
+    <string name="title_home">Page principale</string>
+    <string name="title_dashboard">Tableaux de bord</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_categories">rubriques</string>
+    <string name="title_tags">étiquettes</string>
+    <string name="title_starred">favoris</string>
+    <string name="title_myapps">Mes applis</string>
+    <string name="title_search">recherche</string>
+    <string name="app_store">Magasin d\'applis</string>
+    <string name="calendar">Agenda</string>
+    <string name="camera">Caméra</string>
+    <string name="contacts">Contacts</string>
+    <string name="email_client">Client de messagerie électronique</string>
+    <string name="file_browser">Navigateur de fichier</string>
+    <string name="gallery">Galerie</string>
+    <string name="launcher">Lanceur</string>
+    <string name="music_player">Lecteur audio</string>
+    <string name="shopping_list">Liste de courses</string>
+    <string name="text_editor">Éditeur de texte</string>
+    <string name="todo_list">Liste de tâches</string>
+    <string name="torrent_downloader">Client BitTorrent</string>
+    <string name="web_browser">Navigateur Web</string>
+    <string name="youtube_player">Lecteur YouTube</string>
 </resources>
