@@ -48,6 +48,7 @@ import android.widget.Button;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.installer.BariaInstaller;
 import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
 import org.gdroid.gdroid.widget.BottomNavigationView;
 
@@ -131,7 +132,17 @@ public class MainActivity extends AppCompatActivity
         btnUpdateAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                BariaInstaller bariaInstaller = new BariaInstaller(activity);
+                ArrayList<ApplicationBean> appsToInstall = new ArrayList<>();
+                for (ApplicationBean ab :appBeanList) {
+                    final boolean appUpdateable = Util.isAppUpdateable(getApplicationContext(), ab);
+                    if (appUpdateable)
+                    {
+                        AppDownloader.download(getApplicationContext(), ab);
+                        appsToInstall.add(ab);
+                    }
+                }
+                bariaInstaller.installAPK(appsToInstall);
             }
         });
 

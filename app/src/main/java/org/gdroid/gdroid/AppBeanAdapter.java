@@ -145,7 +145,6 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         AsyncTask.execute(new Runnable() {
             @Override
             public void run() {
-                final String installedVersionOfApp = Util.getInstalledVersionOfApp(mContext, applicationBean.id);
                 final int drawableToBeSet;
                 if (Util.isAppUpdateable(mContext, applicationBean))
                 {

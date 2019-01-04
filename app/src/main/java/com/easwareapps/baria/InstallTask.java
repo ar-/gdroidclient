@@ -20,6 +20,7 @@
  */
 package com.easwareapps.baria;
 
+import android.app.Activity;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -29,7 +30,9 @@ import android.os.AsyncTask;
 import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
+import org.gdroid.gdroid.AppDownloader;
 import org.gdroid.gdroid.R;
+import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -37,9 +40,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 
-public class InstallTask extends AsyncTask<Void, PInfo, Void> {
+public class InstallTask extends AsyncTask<Void, ApplicationBean, Void> {
 
-    ArrayList<PInfo> packages;
+    ArrayList<ApplicationBean> packages;
     int totalCount = 0;
     int current = 0;
     int error=  0;
@@ -49,15 +52,15 @@ public class InstallTask extends AsyncTask<Void, PInfo, Void> {
     private boolean useRoot;
     private boolean useSingleApk;
 
-    public  InstallTask(Context ctx, ArrayList<PInfo> packages) {
+    public  InstallTask(Context ctx, ArrayList<ApplicationBean> packages) {
         this.packages = packages;
         this.context = ctx;
         this.useRoot = false;
         this.useSingleApk = false;
-        for (PInfo pkg: packages) {
-            if (pkg.selected) {
+        for (ApplicationBean pkg: packages) {
+//            if (pkg.selected) {
                 totalCount++;
-            }
+//            }
         }
     }
 
@@ -99,23 +102,23 @@ public class InstallTask extends AsyncTask<Void, PInfo, Void> {
     }
 
     @Override
-    protected void onProgressUpdate(PInfo... info) {
+    protected void onProgressUpdate(ApplicationBean... info) {
         Bitmap bitmap = null;
-        Drawable icon = info[0].icon;
+        //Drawable icon = info[0].icon;
         try {
 
-            bitmap = Bitmap.createBitmap(icon.getIntrinsicWidth(), icon.getIntrinsicHeight()
-                    , Bitmap.Config.ARGB_8888);
-            Canvas canvas = new Canvas(bitmap);
-            icon.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-            icon.draw(canvas);
+            //bitmap = Bitmap.createBitmap(icon.getIntrinsicWidth(), icon.getIntrinsicHeight()
+            //        , Bitmap.Config.ARGB_8888);
+            //Canvas canvas = new Canvas(bitmap);
+            //icon.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+            //icon.draw(canvas);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         mBuilder.setProgress(totalCount, current, false);
         mBuilder.setContentTitle(context.getString(R.string.installing_details, current, totalCount))
-                .setContentText(context.getString(R.string.installing, info[0].appname));
+                .setContentText(context.getString(R.string.installing, info[0].name));
         if(bitmap != null) {
             mBuilder.setLargeIcon(bitmap);
         }else {
@@ -128,17 +131,19 @@ public class InstallTask extends AsyncTask<Void, PInfo, Void> {
 
     public void installApps() {
 
-        for(PInfo packageInfo: packages){
-            if (packageInfo.selected || useSingleApk) {
+        for(ApplicationBean packageInfo: packages){
+//            if (useSingleApk) {
                 current++;
-                publishProgress(new PInfo[]{packageInfo});
+                publishProgress(new ApplicationBean[]{packageInfo});
                 try {
-                    if (useRoot && isRooted())
-                        installApp(packageInfo.apk);
+                    if (useRoot && isRooted()) {
+                        final String downloadTarget = AppDownloader.getAbsoluteFilenameOfDownloadTarget(context, packageInfo);
+                        installApp(downloadTarget);
+                    }
                 }catch (Exception e) {
                     e.printStackTrace();
                 }
-            }
+//            }
         }
     }
 
@@ -159,12 +164,24 @@ public class InstallTask extends AsyncTask<Void, PInfo, Void> {
                     {
                         error = s + "\n";
                     }
+                    final String finalError = error;
+                    ((Activity)context).runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(context, finalError, Toast.LENGTH_LONG).show();
 
-                    Toast.makeText(context, error, Toast.LENGTH_LONG).show();
+                        }
+                    });
 
                 }
-            } catch (Exception e) {
-                Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+            } catch (final Exception e) {
+                ((Activity)context).runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+
+                    }
+                });
 
             }
         }

@@ -25,34 +25,32 @@ import android.support.v7.app.AlertDialog;
 
 import com.easwareapps.baria.InstallAppActivity;
 import com.easwareapps.baria.InstallTask;
-import com.easwareapps.baria.PInfo;
 
+import org.gdroid.gdroid.AppDownloader;
 import org.gdroid.gdroid.R;
+import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.util.ArrayList;
 
 public class BariaInstaller {
 
     private final Context context;
-    private final ArrayList<PInfo> appsDetails;
+//    private final ArrayList<PInfo> appsDetails;
 
-    BariaInstaller(Context context, ArrayList<PInfo> appsDetails)
+    public BariaInstaller(Context context)
     {
         this.context = context;
-        this.appsDetails = appsDetails;
     }
 
     InstallTask installTask;
-    public void installAPK(final ArrayList<PInfo> apps){
+    public void installAPK(final ArrayList<ApplicationBean> apps){
 
-        boolean singleApk = false;
         if(apps != null){
             installTask = new InstallTask(context, apps);
             installTask.setSingleApk();
-            singleApk = true;
         }
-        else
-            installTask = new InstallTask(context, appsDetails);
+//        else
+//            installTask = new InstallTask(context, appsDetails);
         if (installTask.isRooted()) {
             AlertDialog.Builder questionDialog = new AlertDialog.Builder(context);
             questionDialog.setTitle(R.string.confirmation)
@@ -85,18 +83,19 @@ public class BariaInstaller {
 
     }
 
-    private void installAppsManually(ArrayList<PInfo> apps) {
+    private void installAppsManually(ArrayList<ApplicationBean> apps) {
         ArrayList<String> apks = new ArrayList<>();
         Intent intent = new Intent(context, InstallAppActivity.class);
-        if(apps != null) {
-            apks.add(apps.get(0).apk);
-
-        }else{
-            for(int i=0;i<appsDetails.size(); i++) {
-                if(appsDetails.get(i).selected)
-                    apks.add(appsDetails.get(i).apk);
+//        if(apps != null) {
+//            apks.add(apps.get(0).apk);
+//
+//        }else{
+            for(int i=0;i<apps.size(); i++) {
+                final String absFile = AppDownloader.getAbsoluteFilenameOfDownloadTarget(context, apps.get(i));
+//                if(apps.get(i).selected)
+                    apks.add(absFile);
             }
-        }
+//        }
         intent.putExtra("apps", apks);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);

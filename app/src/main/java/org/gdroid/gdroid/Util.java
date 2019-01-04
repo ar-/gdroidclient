@@ -402,12 +402,25 @@ public class Util {
         }
     }
 
+    public static long getInstalledVersionCodeOfApp(Context context, String packageName) {
+        try {
+            PackageInfo pinfo = null;
+            pinfo = context.getPackageManager().getPackageInfo(packageName, 0);
+            long code = pinfo.getLongVersionCode();
+            return code;
+        }
+        catch (PackageManager.NameNotFoundException e) {
+            return -1;
+        }
+    }
+
     public static boolean isAppUpdateable (Context context, ApplicationBean applicationBean)
     {
-        final String installedVersionOfApp = Util.getInstalledVersionOfApp(context, applicationBean.id);
-        if (!TextUtils.isEmpty(installedVersionOfApp))
+        final long installedVersionCodeOfApp = Util.getInstalledVersionCodeOfApp(context, applicationBean.id);
+        if (!TextUtils.isEmpty(applicationBean.marketvercode) && installedVersionCodeOfApp > 0 )
         {
-            if (! applicationBean.marketversion.equals(installedVersionOfApp))
+            final long marketvercode = Long.parseLong(applicationBean.marketvercode);
+            if (marketvercode > installedVersionCodeOfApp)
             {
                 return true;
             }

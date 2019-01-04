@@ -49,7 +49,7 @@ import java.io.File;
 import java.lang.reflect.Method;
 import java.util.List;
 
-class AppDownloader {
+public class AppDownloader {
 
     public static final String repoBaseUrl = "https://f-droid.org/repo/";
 
@@ -57,7 +57,7 @@ class AppDownloader {
         final Fetch fetch = getFetch(context);
 
         String url = repoBaseUrl+mApp.apkname;
-        final String file = context.getExternalCacheDir()+"/"+mApp.apkname;
+        final String file = getAbsoluteFilenameOfDownloadTarget(context, mApp);
 
 
         final MutableExtras extras = new MutableExtras();
@@ -126,7 +126,7 @@ class AppDownloader {
 
                 Log.d ("ADL","done");
                 Installer installer = new DefaultInstaller();
-                installer.installApp(context, file, onComplete);
+//                installer.installApp(context, file, onComplete); // TODO IMPORTANT re-enable this instlller !!
             }
 
             @Override
@@ -176,6 +176,11 @@ class AppDownloader {
         });
 
         return request;
+    }
+
+    @NonNull
+    public static String getAbsoluteFilenameOfDownloadTarget(Context context, ApplicationBean mApp) {
+        return context.getExternalCacheDir()+"/"+mApp.apkname;
     }
 
     @NonNull
