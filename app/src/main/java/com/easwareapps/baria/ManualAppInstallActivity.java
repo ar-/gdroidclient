@@ -1,6 +1,6 @@
 /*
  * G-Droid
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
  * <p/>
  * BARIA - Backup And Restore Installed Apps
  * Copyright (C) 2016  vishnu@easwareapps.com
@@ -64,7 +64,7 @@ import java.util.ArrayList;
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-public class InstallAppActivity extends AppCompatActivity {
+public class ManualAppInstallActivity extends AppCompatActivity {
 
 
     int index = 0;

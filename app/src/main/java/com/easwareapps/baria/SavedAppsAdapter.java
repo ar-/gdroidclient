@@ -284,17 +284,17 @@ public class SavedAppsAdapter
 //    }
 //
 //
-//    InstallTask installTask;
+//    AutoRootAppInstallTask installTask;
 //    public void installAPK(final ArrayList<ApplicationBean> apps){
 //
 //        boolean singleApk = false;
 //        if(apps != null){
-//            installTask = new InstallTask(context, apps);
+//            installTask = new AutoRootAppInstallTask(context, apps);
 //            installTask.setSingleApk();
 //            singleApk = true;
 //        }
 //        else
-//            installTask = new InstallTask(context, appsDetails);
+//            installTask = new AutoRootAppInstallTask(context, appsDetails);
 //        if (installTask.isRooted()) {
 //            AlertDialog.Builder questionDialog = new AlertDialog.Builder(context);
 //            questionDialog.setTitle(R.string.confirmation)
@@ -329,7 +329,7 @@ public class SavedAppsAdapter
 //
 //    private void installAppsManually(ArrayList<PInfo> apps) {
 //        ArrayList<String> apks = new ArrayList<>();
-//        Intent intent = new Intent(context, InstallAppActivity.class);
+//        Intent intent = new Intent(context, ManualAppInstallActivity.class);
 //        if(apps != null) {
 //            apks.add(apps.get(0).apk);
 //

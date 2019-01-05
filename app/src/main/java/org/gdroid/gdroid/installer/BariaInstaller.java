@@ -23,8 +23,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 
-import com.easwareapps.baria.InstallAppActivity;
-import com.easwareapps.baria.InstallTask;
+import com.easwareapps.baria.AutoRootAppInstallTask;
+import com.easwareapps.baria.ManualAppInstallActivity;
 
 import org.gdroid.gdroid.AppDownloader;
 import org.gdroid.gdroid.R;
@@ -35,23 +35,22 @@ import java.util.ArrayList;
 public class BariaInstaller {
 
     private final Context context;
-//    private final ArrayList<PInfo> appsDetails;
 
     public BariaInstaller(Context context)
     {
         this.context = context;
     }
 
-    InstallTask installTask;
+    AutoRootAppInstallTask autoRootAppInstallTask;
     public void installAPK(final ArrayList<ApplicationBean> apps){
 
         if(apps != null){
-            installTask = new InstallTask(context, apps);
-            installTask.setSingleApk();
+            autoRootAppInstallTask = new AutoRootAppInstallTask(context, apps);
+            autoRootAppInstallTask.setSingleApk();
         }
 //        else
-//            installTask = new InstallTask(context, appsDetails);
-        if (installTask.isRooted()) {
+//            autoRootAppInstallTask = new AutoRootAppInstallTask(context, appsDetails);
+        if (autoRootAppInstallTask.isRooted()) {
             AlertDialog.Builder questionDialog = new AlertDialog.Builder(context);
             questionDialog.setTitle(R.string.confirmation)
                     .setMessage(R.string.use_root)
@@ -59,8 +58,8 @@ public class BariaInstaller {
             questionDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    installTask.useRootPrivilege();
-                    installTask.execute();
+                    autoRootAppInstallTask.useRootPrivilege();
+                    autoRootAppInstallTask.execute();
 
                 }
             });
@@ -85,7 +84,7 @@ public class BariaInstaller {
 
     private void installAppsManually(ArrayList<ApplicationBean> apps) {
         ArrayList<String> apks = new ArrayList<>();
-        Intent intent = new Intent(context, InstallAppActivity.class);
+        Intent intent = new Intent(context, ManualAppInstallActivity.class);
 //        if(apps != null) {
 //            apks.add(apps.get(0).apk);
 //

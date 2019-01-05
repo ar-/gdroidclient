@@ -41,7 +41,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 
-public class InstallTask extends AsyncTask<Void, ApplicationBean, Void> {
+public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Void> {
 
     ArrayList<ApplicationBean> packages;
     int totalCount = 0;
@@ -53,7 +53,7 @@ public class InstallTask extends AsyncTask<Void, ApplicationBean, Void> {
     private boolean useRoot;
     private boolean useSingleApk;
 
-    public  InstallTask(Context ctx, ArrayList<ApplicationBean> packages) {
+    public AutoRootAppInstallTask(Context ctx, ArrayList<ApplicationBean> packages) {
         this.packages = packages;
         this.context = ctx;
         this.useRoot = false;
