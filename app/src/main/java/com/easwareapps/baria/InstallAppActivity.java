@@ -20,6 +20,7 @@
  */
  package com.easwareapps.baria;
 
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
@@ -28,21 +29,24 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import org.gdroid.gdroid.R;
+import org.gdroid.gdroid.installer.DefaultInstaller;
 
 import java.io.File;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 /**
- * ************************************* ॐ ***********************************
- * **************************** लोकाः समस्ताः सुखिनो भवन्तु॥**************************
  * <p/>
  * EA-BulkReinstaller
  * Copyright (C) 2016  vishnu
@@ -96,10 +100,23 @@ public class InstallAppActivity extends AppCompatActivity {
                 getResources().getString(R.string.installing, appname) , getBitmap(icon));
 
         index ++;
-        Uri uri = Uri.fromFile(new File(file));
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(uri, "application/vnd.android.package-archive");
-        startActivity(intent);
+
+        if(Build.VERSION.SDK_INT>=24){
+            try{
+                Method m = StrictMode.class.getMethod("disableDeathOnFileUriExposure");
+                m.invoke(null);
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+
+        DefaultInstaller installer = new DefaultInstaller();
+        installer.installApp(this, file, null);
+
+//        Uri uri = Uri.fromFile(new File(file));
+//        Intent intent = new Intent(Intent.ACTION_VIEW);
+//        intent.setDataAndType(uri, "application/vnd.android.package-archive");
+//        startActivity(intent);
     }
 
     @Override
@@ -122,10 +139,24 @@ public class InstallAppActivity extends AppCompatActivity {
 
     private void showNotification(String title, String desc,
                                   Bitmap bitmap) {
-
-
         mNotifyManager =  (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        mBuilder = new NotificationCompat.Builder(getApplicationContext());
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            String chanel_id = "30009";
+            CharSequence name = "Channel Name";
+            String description = "Chanel Description";
+            int importance = NotificationManager.IMPORTANCE_LOW;
+            NotificationChannel mChannel = new NotificationChannel(chanel_id, name, importance);
+            mChannel.setDescription(description);
+            mChannel.enableLights(true);
+            mChannel.setLightColor(Color.BLUE);
+            mNotifyManager.createNotificationChannel(mChannel);
+            mBuilder = new NotificationCompat.Builder(this, chanel_id);
+        } else {
+            mBuilder = new NotificationCompat.Builder(this);
+        }
+
+        //mBuilder = new NotificationCompat.Builder(getApplicationContext());
         mBuilder.setContentTitle(title)
                 .setContentText(desc)
                 .setSmallIcon(R.mipmap.ic_launcher)

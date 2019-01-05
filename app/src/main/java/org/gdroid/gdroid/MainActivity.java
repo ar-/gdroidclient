@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity
                     final boolean appUpdateable = Util.isAppUpdateable(getApplicationContext(), ab);
                     if (appUpdateable)
                     {
-                        AppDownloader.download(getApplicationContext(), ab);
+                        AppDownloader.download(activity, ab);
                         appsToInstall.add(ab);
                     }
                 }

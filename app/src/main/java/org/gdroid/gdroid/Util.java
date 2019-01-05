@@ -35,6 +35,9 @@ import android.util.Log;
 import org.gdroid.gdroid.beans.AppBeanNameComparator;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.installer.DefaultInstaller;
+import org.gdroid.gdroid.installer.Installer;
+import org.gdroid.gdroid.installer.RootInstaller;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -402,11 +405,11 @@ public class Util {
         }
     }
 
-    public static long getInstalledVersionCodeOfApp(Context context, String packageName) {
+    public static int getInstalledVersionCodeOfApp(Context context, String packageName) {
         try {
             PackageInfo pinfo = null;
             pinfo = context.getPackageManager().getPackageInfo(packageName, 0);
-            long code = pinfo.getLongVersionCode();
+            int code = pinfo.versionCode;
             return code;
         }
         catch (PackageManager.NameNotFoundException e) {
@@ -419,7 +422,7 @@ public class Util {
         final long installedVersionCodeOfApp = Util.getInstalledVersionCodeOfApp(context, applicationBean.id);
         if (!TextUtils.isEmpty(applicationBean.marketvercode) && installedVersionCodeOfApp > 0 )
         {
-            final long marketvercode = Long.parseLong(applicationBean.marketvercode);
+            final int marketvercode = Integer.parseInt(applicationBean.marketvercode);
             if (marketvercode > installedVersionCodeOfApp)
             {
                 return true;
@@ -430,10 +433,8 @@ public class Util {
 
     private static boolean isFileExisting(String filename){
 
-        File folder1 = new File(filename);
-        return folder1.exists();
-
-
+        File f1 = new File(filename);
+        return f1.exists();
     }
 
     private static boolean deleteFile( String filename){
@@ -451,4 +452,48 @@ public class Util {
         }
     }
 
+    public static boolean isRooted() {
+
+        // get from build info
+        String buildTags = android.os.Build.TAGS;
+        if (buildTags != null && buildTags.contains("test-keys")) {
+            return true;
+        }
+
+        // check if /system/app/Superuser.apk is present
+        try {
+            File file = new File("/system/app/Superuser.apk");
+            if (file.exists()) {
+                return true;
+            }
+        } catch (Exception e1) {
+            // ignore
+        }
+
+        // try executing commands
+        return canExecuteCommand("/system/xbin/which su")
+                || canExecuteCommand("/system/bin/which su") || canExecuteCommand("which su");
+    }
+
+    // executes a command on the system
+    private static boolean canExecuteCommand(String command) {
+        boolean executedSuccesfully;
+        try {
+            Runtime.getRuntime().exec(command);
+            executedSuccesfully = true;
+        } catch (Exception e) {
+            executedSuccesfully = false;
+        }
+
+        return executedSuccesfully;
+    }
+
+    public static Installer getAppInstaller(Context context) {
+        boolean isRooted = true;
+        if (isRooted)
+        {
+            return new RootInstaller();
+        }
+        return new DefaultInstaller();
+    }
 }

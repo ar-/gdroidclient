@@ -55,6 +55,7 @@ public class AppDownloader {
 
     public static Request download(final Context context, ApplicationBean mApp) {
         final Fetch fetch = getFetch(context);
+        final Installer installer = Util.getAppInstaller(context);
 
         String url = repoBaseUrl+mApp.apkname;
         final String file = getAbsoluteFilenameOfDownloadTarget(context, mApp);
@@ -125,8 +126,7 @@ public class AppDownloader {
                 };
 
                 Log.d ("ADL","done");
-                Installer installer = new DefaultInstaller();
-//                installer.installApp(context, file, onComplete); // TODO IMPORTANT re-enable this instlller !!
+                installer.installApp(context, file, onComplete);
             }
 
             @Override

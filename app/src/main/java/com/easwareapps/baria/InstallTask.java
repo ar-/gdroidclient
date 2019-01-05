@@ -33,6 +33,7 @@ import android.widget.Toast;
 import org.gdroid.gdroid.AppDownloader;
 import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.installer.RootInstaller;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -148,6 +149,7 @@ public class InstallTask extends AsyncTask<Void, ApplicationBean, Void> {
     }
 
     public void installApp(String filename) {
+        //RootInstaller
         File file = new File(filename);
         if(file.exists()){
             try {
