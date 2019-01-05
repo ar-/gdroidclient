@@ -313,9 +313,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         btnInstall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //btnInstall.setAlpha(.5f);
-                //btnInstall.setClickable(false);
-                downloadRequest = AppDownloader.download(callerActivity, mApp);
+                downloadRequest = AppDownloader.download(callerActivity, mApp, true);
             }
         });
 

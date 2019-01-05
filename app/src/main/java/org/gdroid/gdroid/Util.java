@@ -496,4 +496,19 @@ public class Util {
         }
         return new DefaultInstaller();
     }
+
+    public static void waitForAllDownloadsToFinish(Context context) {
+        while (true)
+        {
+            final boolean hasActiveDownloads = AppDownloader.getFetch(context).getHasActiveDownloads();
+            if (!hasActiveDownloads)
+                break;
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 }

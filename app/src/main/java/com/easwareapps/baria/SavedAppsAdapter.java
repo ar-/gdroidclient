@@ -142,7 +142,7 @@ public class SavedAppsAdapter
 //            if(!selectionStarted) {
 //                ArrayList<PInfo> app = new ArrayList<>();
 //                app.add(appsDetails.get(getAdapterPosition()));
-//                installAPK(app);
+//                orderApkInstallations(app);
 //                return;
 //            }
 //            appsDetails.get(getAdapterPosition()).selected = ! appsDetails.get(getAdapterPosition()).selected;
@@ -185,7 +185,7 @@ public class SavedAppsAdapter
 ////            copy.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
 ////                @Override
 ////                public boolean onMenuItemClick(MenuItem menuItem) {
-////                    installAPK(null);
+////                    orderApkInstallations(null);
 ////                    return false;
 ////                }
 ////            });
@@ -285,7 +285,7 @@ public class SavedAppsAdapter
 //
 //
 //    AutoRootAppInstallTask installTask;
-//    public void installAPK(final ArrayList<ApplicationBean> apps){
+//    public void orderApkInstallations(final ArrayList<ApplicationBean> apps){
 //
 //        boolean singleApk = false;
 //        if(apps != null){

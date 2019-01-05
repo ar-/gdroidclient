@@ -138,11 +138,11 @@ public class MainActivity extends AppCompatActivity
                     final boolean appUpdateable = Util.isAppUpdateable(getApplicationContext(), ab);
                     if (appUpdateable)
                     {
-                        AppDownloader.download(activity, ab);
+                        AppDownloader.download(activity, ab,false);
                         appsToInstall.add(ab);
                     }
                 }
-                bariaInstaller.installAPK(appsToInstall);
+                bariaInstaller.orderApkInstallations(appsToInstall);
             }
         });
 
@@ -177,7 +177,6 @@ public class MainActivity extends AppCompatActivity
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
         recyclerView.setLayoutManager(mLayoutManager);
         removeAllitemDecorations();
-        //recyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         appCollectionDescriptorList = new ArrayList<>();
         appCollectionAdapter = new AppCollectionAdapter(this, appCollectionDescriptorList);
@@ -237,8 +236,6 @@ public class MainActivity extends AppCompatActivity
 //            appCollectionDescriptorList.add(a4);
 //            AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "you might also like");
 //            appCollectionDescriptorList.add(a5);
-//            AppCollectionDescriptor a6 = new AppCollectionDescriptor(context, "highest rated");
-//            appCollectionDescriptorList.add(a6);
 //            AppCollectionDescriptor a7 = new AppCollectionDescriptor(context, "popular apps");
 //            appCollectionDescriptorList.add(a7);
 //            AppCollectionDescriptor a8 = new AppCollectionDescriptor(context, "System");

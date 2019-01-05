@@ -42,42 +42,38 @@ public class BariaInstaller {
     }
 
     AutoRootAppInstallTask autoRootAppInstallTask;
-    public void installAPK(final ArrayList<ApplicationBean> apps){
+    public void orderApkInstallations(final ArrayList<ApplicationBean> apps){
 
         if(apps != null){
             autoRootAppInstallTask = new AutoRootAppInstallTask(context, apps);
-            autoRootAppInstallTask.setSingleApk();
         }
-//        else
-//            autoRootAppInstallTask = new AutoRootAppInstallTask(context, appsDetails);
         if (autoRootAppInstallTask.isRooted()) {
             AlertDialog.Builder questionDialog = new AlertDialog.Builder(context);
             questionDialog.setTitle(R.string.confirmation)
                     .setMessage(R.string.use_root)
                     .setIcon(R.mipmap.ic_launcher);
+
             questionDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    autoRootAppInstallTask.useRootPrivilege();
                     autoRootAppInstallTask.execute();
-
                 }
             });
 
             questionDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-
                     installAppsManually(apps);
-
                 }
             });
 
             questionDialog.create().show();
-            return;
+        }
+        else
+        {
+            installAppsManually(apps);
         }
 
-        installAppsManually(apps);
 
 
     }

@@ -40,6 +40,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import org.gdroid.gdroid.R;
+import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.installer.DefaultInstaller;
 
 import java.io.File;
@@ -110,6 +111,7 @@ public class ManualAppInstallActivity extends AppCompatActivity {
             }
         }
 
+        Util.waitForAllDownloadsToFinish(this);
         DefaultInstaller installer = new DefaultInstaller();
         installer.installApp(this, file, null);
 

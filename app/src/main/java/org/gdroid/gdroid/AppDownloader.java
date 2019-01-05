@@ -53,7 +53,7 @@ public class AppDownloader {
 
     public static final String repoBaseUrl = "https://f-droid.org/repo/";
 
-    public static Request download(final Context context, ApplicationBean mApp) {
+    public static Request download(final Context context, ApplicationBean mApp, final boolean install) {
         final Fetch fetch = getFetch(context);
         final Installer installer = Util.getAppInstaller(context);
 
@@ -126,7 +126,8 @@ public class AppDownloader {
                 };
 
                 Log.d ("ADL","done");
-                installer.installApp(context, file, onComplete);
+                if (install)
+                    installer.installApp(context, file, onComplete);
             }
 
             @Override

@@ -21,17 +21,21 @@
 package com.easwareapps.baria;
 
 import android.app.Activity;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
 import org.gdroid.gdroid.AppDownloader;
 import org.gdroid.gdroid.R;
+import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.installer.RootInstaller;
 
@@ -50,14 +54,11 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
     Context context;
     NotificationManager mNotifyManager;
     NotificationCompat.Builder mBuilder;
-    private boolean useRoot;
-    private boolean useSingleApk;
+//    private boolean useRoot;
 
     public AutoRootAppInstallTask(Context ctx, ArrayList<ApplicationBean> packages) {
         this.packages = packages;
         this.context = ctx;
-        this.useRoot = false;
-        this.useSingleApk = false;
         for (ApplicationBean pkg: packages) {
 //            if (pkg.selected) {
                 totalCount++;
@@ -65,17 +66,27 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
         }
     }
 
-    public void useRootPrivilege () {
-        this.useRoot = true;
-    }
-
-
     @Override
     protected void onPreExecute() {
         //Create Progressbar
         mNotifyManager =
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        mBuilder = new NotificationCompat.Builder(context);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            String chanel_id = "30009";
+            CharSequence name = "Channel Name";
+            String description = "Chanel Description";
+            int importance = NotificationManager.IMPORTANCE_LOW;
+            NotificationChannel mChannel = new NotificationChannel(chanel_id, name, importance);
+            mChannel.setDescription(description);
+            mChannel.enableLights(true);
+            mChannel.setLightColor(Color.BLUE);
+            mNotifyManager.createNotificationChannel(mChannel);
+            mBuilder = new NotificationCompat.Builder(context, chanel_id);
+        } else {
+            mBuilder = new NotificationCompat.Builder(context);
+        }
+
         mBuilder.setContentTitle(context.getString(R.string.installing_details, current, totalCount))
                 .setContentText(context.getString(R.string.installing, ""))
                 .setSmallIcon(R.mipmap.ic_launcher);
@@ -137,7 +148,7 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
                 current++;
                 publishProgress(new ApplicationBean[]{packageInfo});
                 try {
-                    if (useRoot && isRooted()) {
+                    if (isRooted()) {
                         final String downloadTarget = AppDownloader.getAbsoluteFilenameOfDownloadTarget(context, packageInfo);
                         installApp(downloadTarget);
                     }
@@ -149,7 +160,8 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
     }
 
     public void installApp(String filename) {
-        //RootInstaller
+        Util.waitForAllDownloadsToFinish(context);
+        //TODO use RootInstaller here
         File file = new File(filename);
         if(file.exists()){
             try {
@@ -227,9 +239,4 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
         return executedSuccesfully;
     }
 
-
-    public void setSingleApk() {
-        useSingleApk = true;
-        totalCount = 1;
-    }
 }
