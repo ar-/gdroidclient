@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">קישוריות</string>
@@ -38,4 +39,49 @@
     <string name="action_install">התקנה</string>
     <string name="action_upgrade">שדרוג</string>
     <string name="action_launch">הפעלה</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">פתיחת מגירת הניווט</string>
+    <string name="navigation_drawer_close">סגירת מגירת הניווט</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="nav_header_subtitle">לקוח למאגר F-Droid</string>
+    <string name="nav_header_desc">כותרת ניווט</string>
+    <string name="action_settings">הגדרות</string>
+    <string name="action_add_favourite">הוספה למועדפים</string>
+    <string name="title_activity_settings">הגדרות</string>
+    <string name="pref_header_general">כללי</string>
+    <string name="pref_title_social_recommendations">הפעלת המלצות</string>
+    <string name="pref_description_social_recommendations">לא עובד עדיין</string>
+    <string name="pref_title_display_name">מושבת</string>
+    <string name="pref_title_add_friends_to_messages">מושבת</string>
+    <string name="pref_header_data_sync">נתונים וסנכרון</string>
+    <string name="pref_title_sync_frequency">תדירות סנכרון</string>
+    <string name="pref_title_system_sync_settings">הגדרות סנכרון מערכת</string>
+    <string name="pref_header_notifications">התראות</string>
+    <string name="pref_title_new_message_notifications">התראות על הודעות חדשות</string>
+    <string name="pref_title_ringtone">צלצול</string>
+    <string name="pref_ringtone_silent">שקט</string>
+    <string name="pref_title_vibrate">רטט</string>
+    <string name="title_home">בית</string>
+    <string name="title_dashboard">לוח בקרה</string>
+    <string name="title_notifications">התראות</string>
+    <string name="title_categories">קטגוריות</string>
+    <string name="title_tags">תגיות</string>
+    <string name="title_starred">סומנו בכוכב</string>
+    <string name="title_myapps">היישומונים שלי</string>
+    <string name="title_search">חיפוש</string>
+    <string name="app_store">חנות יישומונים</string>
+    <string name="calendar">לוח שנה</string>
+    <string name="camera">מצלמה</string>
+    <string name="contacts">אנשי קשר</string>
+    <string name="email_client">לקוח דוא״ל</string>
+    <string name="file_browser">סייר קבצים</string>
+    <string name="gallery">גלריה</string>
+    <string name="launcher">משגר</string>
+    <string name="music_player">נגן מוזיקה</string>
+    <string name="shopping_list">רשימת קניות</string>
+    <string name="text_editor">עורך טקסט</string>
+    <string name="todo_list">רשימת מטלות</string>
+    <string name="torrent_downloader">מוריד טורנטים</string>
+    <string name="web_browser">דפדפן</string>
+    <string name="youtube_player">נגן יוטיוב</string>
 </resources>
