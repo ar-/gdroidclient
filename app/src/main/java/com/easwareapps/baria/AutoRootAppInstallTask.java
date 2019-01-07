@@ -25,6 +25,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -125,11 +126,8 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
         mBuilder.setProgress(totalCount, current, false);
         mBuilder.setContentTitle(context.getString(R.string.installing_details, current, totalCount))
                 .setContentText(context.getString(R.string.installing, info[0].name));
-        if(bitmap != null) {
-            mBuilder.setLargeIcon(bitmap);
-        }else {
-            mBuilder.setSmallIcon(R.mipmap.ic_launcher);
-        }
+        mBuilder.setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher));
+        mBuilder.setSmallIcon(R.mipmap.ic_launcher);
         mNotifyManager.notify(14099, mBuilder.build());
         super.onProgressUpdate(info);
 

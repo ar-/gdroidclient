@@ -145,7 +145,7 @@ public class ManualAppInstallActivity extends AppCompatActivity {
         mBuilder.setContentTitle(title)
                 .setContentText(desc)
                 .setSmallIcon(R.mipmap.ic_launcher)
-                .setLargeIcon(bitmap);
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
         mNotifyManager.notify(14099, mBuilder.build());
     }
 
