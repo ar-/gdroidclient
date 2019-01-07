@@ -503,44 +503,26 @@ public class Util {
     }
 
     public static void waitForAllDownloadsToFinish(final Context context) {
-        AppDownloader.getFetch(context).awaitFinishOrTimeout(60000L);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-//        while (true)
-        {
-            AppDownloader.getFetch(context).getDownloads(new Func<List<Download>>() {
-                @Override
-                public void call(@NotNull List<Download> result) {
-                    boolean hasActiveDownloads = false;
-                    for (Download d: result ) {
-                        final Status status = d.getStatus();
-                        if (status == Status.ADDED || status == Status.QUEUED || status == Status.DOWNLOADING)
-                        {
-                            hasActiveDownloads = true;
-                        }
-                    }
-//                    if (!hasActiveDownloads)
-//                        break; // cannot break out of callback
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+        AppDownloader.getFetch(context).awaitFinishOrTimeout(120000L);
+    }
 
-                }
-            });
-            final boolean hasActiveDownloads = AppDownloader.getFetch(context).getHasActiveDownloads();
-//            if (!hasActiveDownloads)
-//                break;
+    public static void waitForFileToBeStable(File file) {
+        long fileSize = file.length();
+        while (true)
+        {
+            Log.d("ARAIT", "waiting for download "+file.getName()+" to settle. Got now "+fileSize+" bytes");
             try {
-                Thread.sleep(1000);
+                Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            long newFileSize = file.length();
+            if (newFileSize == fileSize)
+                break;
+            fileSize = newFileSize;
         }
     }
+
+
 
 }

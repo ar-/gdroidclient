@@ -89,7 +89,7 @@
 
         <Button
             android:id="@+id/btn_update_all"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/download_all_updates"

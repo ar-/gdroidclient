@@ -23,6 +23,7 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.tonyodev.fetch2.Download;
+import com.tonyodev.fetch2.EnqueueAction;
 import com.tonyodev.fetch2.Error;
 import com.tonyodev.fetch2.Fetch;
 import com.tonyodev.fetch2.FetchConfiguration;
@@ -34,12 +35,15 @@ import com.tonyodev.fetch2.Status;
 import com.tonyodev.fetch2core.DownloadBlock;
 import com.tonyodev.fetch2core.Func;
 import com.tonyodev.fetch2core.MutableExtras;
+import com.tonyodev.fetch2okhttp.OkHttpDownloader;
 
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.installer.Installer;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
+
+import okhttp3.OkHttpClient;
 
 public class AppDownloader {
 
@@ -61,7 +65,7 @@ public class AppDownloader {
         request.setNetworkType(NetworkType.ALL);
         request.setExtras(extras);
 
-//        request.setEnqueueAction(EnqueueAction.REPLACE_EXISTING); // can be removed when this is fixed https://github.com/tonyofrancis/Fetch/issues/295
+        request.setEnqueueAction(EnqueueAction.REPLACE_EXISTING); // can be removed when this is fixed https://github.com/tonyofrancis/Fetch/issues/295
         fetch.enqueue(request, new Func<Request>() {
             @Override
             public void call(@NotNull Request result) {
@@ -179,13 +183,13 @@ public class AppDownloader {
     static Fetch fetch = null;
     @NonNull
     public static Fetch getFetch(Context context) {
-        if (fetch !=null)
+        if (fetch !=null && ! fetch.isClosed() )
             return fetch;
-//        OkHttpClient okHttpClient = new OkHttpClient.Builder().build();
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().build();
         FetchConfiguration fetchConfiguration = new FetchConfiguration.Builder(context)
                 .setDownloadConcurrentLimit(5)
                 .setNamespace("AppDownloader")
-//                .setHttpDownloader(new OkHttpDownloader(okHttpClient))
+                .setHttpDownloader(new OkHttpDownloader(okHttpClient))
                 .build();
 
         fetch = Fetch.Impl.getInstance(fetchConfiguration);

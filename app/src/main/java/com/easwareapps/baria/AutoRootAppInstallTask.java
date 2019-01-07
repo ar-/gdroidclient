@@ -30,9 +30,11 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
 import android.widget.Toast;
 
 import org.gdroid.gdroid.AppDownloader;
+import org.gdroid.gdroid.MainActivity;
 import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.beans.ApplicationBean;
@@ -41,7 +43,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-
 
 public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Void> {
 
@@ -106,6 +107,18 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
         mNotifyManager.notify(14099, mBuilder.build());
 
         super.onPostExecute(aVoid);
+
+        //update UI
+        if (context instanceof MainActivity)
+        {
+            final MainActivity ma = (MainActivity) context;
+            ma.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    ma.updateCurrentView();
+                }
+            });
+        }
     }
 
     @Override
@@ -150,9 +163,10 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
     }
 
     public void installApp(String filename) {
-//        Util.waitForAllDownloadsToFinish(context);
+        Util.waitForAllDownloadsToFinish(context);
         //TODO use RootInstaller here
         File file = new File(filename);
+        Util.waitForFileToBeStable(file);
         if(file.exists()){
             try {
                 String command;
@@ -169,6 +183,7 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
                         error = s + "\n";
                     }
                     final String finalError = error;
+                    Log.e("ARAIT", finalError);
                     ((Activity)context).runOnUiThread(new Runnable() {
                         @Override
                         public void run() {

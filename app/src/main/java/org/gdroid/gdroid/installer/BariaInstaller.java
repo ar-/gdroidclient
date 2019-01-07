@@ -28,6 +28,7 @@ import com.easwareapps.baria.ManualAppInstallActivity;
 
 import org.gdroid.gdroid.AppDownloader;
 import org.gdroid.gdroid.R;
+import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ public class BariaInstaller {
     }
 
     AutoRootAppInstallTask autoRootAppInstallTask;
-    public void orderApkInstallations(final ArrayList<ApplicationBean> apps){
+    public void orderApkInstallations(final ArrayList<ApplicationBean> apps) {
 
         if(apps != null){
             autoRootAppInstallTask = new AutoRootAppInstallTask(context, apps);
@@ -73,9 +74,6 @@ public class BariaInstaller {
         {
             installAppsManually(apps);
         }
-
-
-
     }
 
     private void installAppsManually(ArrayList<ApplicationBean> apps) {
@@ -84,10 +82,11 @@ public class BariaInstaller {
         for(int i=0;i<apps.size(); i++) {
             final String absFile = AppDownloader.getAbsoluteFilenameOfDownloadTarget(context, apps.get(i));
             apks.add(absFile);
-
-            // download has been don in MainAct
-            //AppDownloader.download(context, apps.get(i),false);
         }
+
+        // Util.waitForAllDownloadsToFinish(); still doesn't work. fetch2 sucks as well!!
+
+
         intent.putExtra("apps", apks);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);

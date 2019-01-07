@@ -61,9 +61,7 @@ public class MainActivity extends AppCompatActivity
     private static final String TAG = "MainActivity";
 
     private RecyclerView recyclerView;
-    //private RecyclerView innerRecyclerView;
-    //private LinearLayout collectionContent;
-    //private HorizontalScrollView inner_scroll_view;
+    BottomNavigationView navigation;
     private AppBeanAdapter adapter;
     private List<ApplicationBean> appBeanList;
     private List<AppCollectionDescriptor> appCollectionDescriptorList;
@@ -95,7 +93,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         AppDatabase db = AppDatabase.get(getApplicationContext());
@@ -160,6 +158,12 @@ public class MainActivity extends AppCompatActivity
         });
 
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateCurrentView();
     }
 
     private int getItemIdForHomeScreenMenuItem(String lastMenuItem) {
@@ -286,6 +290,7 @@ public class MainActivity extends AppCompatActivity
             searchView.setVisibility(View.GONE);
             btnSearchHarder.setVisibility(View.GONE);
             btnSearchEvenHarder.setVisibility(View.GONE);
+            btnUpdateAll.setVisibility(View.GONE);
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                 {
@@ -339,6 +344,7 @@ public class MainActivity extends AppCompatActivity
                                     @Override
                                     public void run() {
                                         adapter.notifyDataSetChanged();
+                                        btnUpdateAll.setVisibility(View.VISIBLE);
                                     }
                                 });
                             }
@@ -508,6 +514,11 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void updateCurrentView()
+    {
+        navigation.setSelectedItemId(navigation.getSelectedItemId());
     }
 
     /**
