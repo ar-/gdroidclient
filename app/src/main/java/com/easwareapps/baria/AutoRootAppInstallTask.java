@@ -25,9 +25,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
@@ -37,7 +35,6 @@ import org.gdroid.gdroid.AppDownloader;
 import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.beans.ApplicationBean;
-import org.gdroid.gdroid.installer.RootInstaller;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -54,15 +51,12 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
     Context context;
     NotificationManager mNotifyManager;
     NotificationCompat.Builder mBuilder;
-//    private boolean useRoot;
 
     public AutoRootAppInstallTask(Context ctx, ArrayList<ApplicationBean> packages) {
         this.packages = packages;
         this.context = ctx;
         for (ApplicationBean pkg: packages) {
-//            if (pkg.selected) {
                 totalCount++;
-//            }
         }
     }
 
@@ -144,23 +138,21 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
     public void installApps() {
 
         for(ApplicationBean packageInfo: packages){
-//            if (useSingleApk) {
-                current++;
-                publishProgress(new ApplicationBean[]{packageInfo});
-                try {
-                    if (isRooted()) {
-                        final String downloadTarget = AppDownloader.getAbsoluteFilenameOfDownloadTarget(context, packageInfo);
-                        installApp(downloadTarget);
-                    }
-                }catch (Exception e) {
-                    e.printStackTrace();
+            current++;
+            publishProgress(new ApplicationBean[]{packageInfo});
+            try {
+                if (isRooted()) {
+                    final String downloadTarget = AppDownloader.getAbsoluteFilenameOfDownloadTarget(context, packageInfo);
+                    installApp(downloadTarget);
                 }
-//            }
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
     public void installApp(String filename) {
-        Util.waitForAllDownloadsToFinish(context);
+//        Util.waitForAllDownloadsToFinish(context);
         //TODO use RootInstaller here
         File file = new File(filename);
         if(file.exists()){
@@ -200,8 +192,6 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
             }
         }
     }
-
-
 
     public boolean isRooted() {
 

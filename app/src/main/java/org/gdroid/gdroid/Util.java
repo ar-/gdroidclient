@@ -32,12 +32,17 @@ import android.support.v4.os.LocaleListCompat;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.tonyodev.fetch2.Download;
+import com.tonyodev.fetch2.Status;
+import com.tonyodev.fetch2core.Func;
+
 import org.gdroid.gdroid.beans.AppBeanNameComparator;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.installer.DefaultInstaller;
 import org.gdroid.gdroid.installer.Installer;
 import org.gdroid.gdroid.installer.RootInstaller;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -497,12 +502,39 @@ public class Util {
         return new DefaultInstaller();
     }
 
-    public static void waitForAllDownloadsToFinish(Context context) {
-        while (true)
+    public static void waitForAllDownloadsToFinish(final Context context) {
+        AppDownloader.getFetch(context).awaitFinishOrTimeout(60000L);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+//        while (true)
         {
+            AppDownloader.getFetch(context).getDownloads(new Func<List<Download>>() {
+                @Override
+                public void call(@NotNull List<Download> result) {
+                    boolean hasActiveDownloads = false;
+                    for (Download d: result ) {
+                        final Status status = d.getStatus();
+                        if (status == Status.ADDED || status == Status.QUEUED || status == Status.DOWNLOADING)
+                        {
+                            hasActiveDownloads = true;
+                        }
+                    }
+//                    if (!hasActiveDownloads)
+//                        break; // cannot break out of callback
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            });
             final boolean hasActiveDownloads = AppDownloader.getFetch(context).getHasActiveDownloads();
-            if (!hasActiveDownloads)
-                break;
+//            if (!hasActiveDownloads)
+//                break;
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

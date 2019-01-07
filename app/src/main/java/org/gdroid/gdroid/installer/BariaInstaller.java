@@ -81,16 +81,13 @@ public class BariaInstaller {
     private void installAppsManually(ArrayList<ApplicationBean> apps) {
         ArrayList<String> apks = new ArrayList<>();
         Intent intent = new Intent(context, ManualAppInstallActivity.class);
-//        if(apps != null) {
-//            apks.add(apps.get(0).apk);
-//
-//        }else{
-            for(int i=0;i<apps.size(); i++) {
-                final String absFile = AppDownloader.getAbsoluteFilenameOfDownloadTarget(context, apps.get(i));
-//                if(apps.get(i).selected)
-                    apks.add(absFile);
-            }
-//        }
+        for(int i=0;i<apps.size(); i++) {
+            final String absFile = AppDownloader.getAbsoluteFilenameOfDownloadTarget(context, apps.get(i));
+            apks.add(absFile);
+
+            // download has been don in MainAct
+            //AppDownloader.download(context, apps.get(i),false);
+        }
         intent.putExtra("apps", apks);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);

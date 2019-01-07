@@ -18,12 +18,7 @@
 
 package org.gdroid.gdroid;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Build;
-import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -41,12 +36,9 @@ import com.tonyodev.fetch2core.Func;
 import com.tonyodev.fetch2core.MutableExtras;
 
 import org.gdroid.gdroid.beans.ApplicationBean;
-import org.gdroid.gdroid.installer.DefaultInstaller;
 import org.gdroid.gdroid.installer.Installer;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.File;
-import java.lang.reflect.Method;
 import java.util.List;
 
 public class AppDownloader {
@@ -69,6 +61,7 @@ public class AppDownloader {
         request.setNetworkType(NetworkType.ALL);
         request.setExtras(extras);
 
+//        request.setEnqueueAction(EnqueueAction.REPLACE_EXISTING); // can be removed when this is fixed https://github.com/tonyofrancis/Fetch/issues/295
         fetch.enqueue(request, new Func<Request>() {
             @Override
             public void call(@NotNull Request result) {
@@ -101,33 +94,32 @@ public class AppDownloader {
 
             @Override
             public void onCompleted(Download download) {
-                fetch.removeListener(this);
+                if (download.getRequest() == request) {
+                    fetch.removeListener(this);
 
-                Runnable onComplete = new Runnable() {
-                    @Override
-                    public void run() {
-                        if (context instanceof AppDetailActivity)
-                        {
-                            final AppDetailActivity ada = (AppDetailActivity) context;
-                            ada.runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    try {
-                                        ada.updateInstallStatus(Status.NONE);
+                    Runnable onComplete = new Runnable() {
+                        @Override
+                        public void run() {
+                            if (context instanceof AppDetailActivity) {
+                                final AppDetailActivity ada = (AppDetailActivity) context;
+                                ada.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        try {
+                                            ada.updateInstallStatus(Status.NONE);
+                                        } catch (Throwable t) {
+                                            Log.e("ADA", "error in updateInstallStatus", t);
+                                        }
                                     }
-                                    catch (Throwable t)
-                                    {
-                                        Log.e("ADA","error in updateInstallStatus", t);
-                                    }
-                                }
-                            });
+                                });
+                            }
                         }
-                    }
-                };
+                    };
 
-                Log.d ("ADL","done");
-                if (install)
-                    installer.installApp(context, file, onComplete);
+                    Log.d("ADL", "done");
+                    if (install)
+                        installer.installApp(context, file, onComplete);
+                }
             }
 
             @Override
@@ -184,14 +176,20 @@ public class AppDownloader {
         return context.getExternalCacheDir()+"/"+mApp.apkname;
     }
 
+    static Fetch fetch = null;
     @NonNull
     public static Fetch getFetch(Context context) {
+        if (fetch !=null)
+            return fetch;
+//        OkHttpClient okHttpClient = new OkHttpClient.Builder().build();
         FetchConfiguration fetchConfiguration = new FetchConfiguration.Builder(context)
                 .setDownloadConcurrentLimit(5)
                 .setNamespace("AppDownloader")
+//                .setHttpDownloader(new OkHttpDownloader(okHttpClient))
                 .build();
 
-        return Fetch.Impl.getInstance(fetchConfiguration);
+        fetch = Fetch.Impl.getInstance(fetchConfiguration);
+        return fetch;
     }
 
 }

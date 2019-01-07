@@ -132,8 +132,8 @@ public class MainActivity extends AppCompatActivity
         btnUpdateAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BariaInstaller bariaInstaller = new BariaInstaller(activity);
-                ArrayList<ApplicationBean> appsToInstall = new ArrayList<>();
+                final BariaInstaller bariaInstaller = new BariaInstaller(activity);
+                final ArrayList<ApplicationBean> appsToInstall = new ArrayList<>();
                 for (ApplicationBean ab :appBeanList) {
                     final boolean appUpdateable = Util.isAppUpdateable(getApplicationContext(), ab);
                     if (appUpdateable)
@@ -142,7 +142,20 @@ public class MainActivity extends AppCompatActivity
                         appsToInstall.add(ab);
                     }
                 }
-                bariaInstaller.orderApkInstallations(appsToInstall);
+
+                // wait for downloads in background and then install in foreground
+                AsyncTask.execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        Util.waitForAllDownloadsToFinish(activity);
+                        activity.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                bariaInstaller.orderApkInstallations(appsToInstall);
+                            }
+                        });
+                    }
+                });
             }
         });
 

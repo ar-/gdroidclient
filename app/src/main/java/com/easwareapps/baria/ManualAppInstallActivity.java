@@ -31,7 +31,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -43,7 +42,6 @@ import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.installer.DefaultInstaller;
 
-import java.io.File;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
@@ -87,38 +85,24 @@ public class ManualAppInstallActivity extends AppCompatActivity {
             installAppManually(apps.get(0));
         }
 
-
-
         super.onCreate(savedInstanceState);
     }
 
     private void installAppManually(String file) {
+        //await_call_on_ui_thread //TODO has to be done in background, maybe to waiting in backgourn before this activity starts
+        //Util.waitForAllDownloadsToFinish(this); // NPE below does this reead; wait
         PackageManager pm = getPackageManager();
-        PackageInfo p = pm.getPackageArchiveInfo(file, 0);
-        String appname = p.applicationInfo.loadLabel(getPackageManager()).toString();;
+        PackageInfo p = pm.getPackageArchiveInfo(file, 0); // TODO NPW java.lang.NullPointerException: Attempt to read from field 'android.content.pm.ApplicationInfo android.content.pm.PackageInfo.applicationInfo' on a null object reference
+        String appname = p.applicationInfo.loadLabel(getPackageManager()).toString();
         Drawable icon =  p.applicationInfo.loadIcon(getPackageManager());
         showNotification(getResources().getString(R.string.installing_details, index, total),
                 getResources().getString(R.string.installing, appname) , getBitmap(icon));
 
         index ++;
 
-        if(Build.VERSION.SDK_INT>=24){
-            try{
-                Method m = StrictMode.class.getMethod("disableDeathOnFileUriExposure");
-                m.invoke(null);
-            }catch(Exception e){
-                e.printStackTrace();
-            }
-        }
-
-        Util.waitForAllDownloadsToFinish(this);
         DefaultInstaller installer = new DefaultInstaller();
         installer.installApp(this, file, null);
 
-//        Uri uri = Uri.fromFile(new File(file));
-//        Intent intent = new Intent(Intent.ACTION_VIEW);
-//        intent.setDataAndType(uri, "application/vnd.android.package-archive");
-//        startActivity(intent);
     }
 
     @Override
@@ -158,7 +142,6 @@ public class ManualAppInstallActivity extends AppCompatActivity {
             mBuilder = new NotificationCompat.Builder(this);
         }
 
-        //mBuilder = new NotificationCompat.Builder(getApplicationContext());
         mBuilder.setContentTitle(title)
                 .setContentText(desc)
                 .setSmallIcon(R.mipmap.ic_launcher)
