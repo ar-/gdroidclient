@@ -266,11 +266,12 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                         .into(iv);
                 grpScreenshots.addView(iv);
 
+                final Activity callingActivity = this;
                 // make each screenshot clickable
                 iv.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent myIntent = new Intent(mContext, ImageActivity.class);
+                        Intent myIntent = new Intent(callingActivity, ImageActivity.class);
                         myIntent.putExtra("imgUrl", ssUrl);
                         mContext.startActivity(myIntent);
                     }
