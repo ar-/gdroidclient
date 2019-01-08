@@ -1,0 +1,22 @@
+0.5.3
+  * added more weblate translations
+  * bugfix: touching screenshots crashed the app on Android 6
+
+0.5.2
+  * added a view to list all authors and their amount of apps
+
+0.5.1
+  * show apps of the same author in the app detail view
+
+0.5.0
+  * replaced Android's download manager with fetch2, fixing many download errors
+  * reduced optical size of cards
+  * added ability to hide apps
+
+0.4.4
+  * updated upgrade logo
+  * fixed crash when app description is empty
+
+0.4.3
+  * added 2 more search algorithms "search harder" and "search even harder", adding the summary and the app description to the search
+  * bugfix: update icon not set on UI thread on some devices

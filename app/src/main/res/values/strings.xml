@@ -39,7 +39,7 @@
     <string name="pref_title_social_recommendations">Enable recommendations</string>
     <string name="pref_description_social_recommendations">not working yet</string>
 
-    <string name="pref_title_display_name">Deactiavted</string>
+    <string name="pref_title_display_name">Deactivated</string>
 
     <string name="pref_title_add_friends_to_messages">deactivated</string>
     <string-array name="pref_example_list_titles">
@@ -126,7 +126,7 @@
     <string name="todo_list">Todo List</string>
     <string name="torrent_downloader">Torrent Downloader</string>
     <string name="web_browser">Web Browser</string>
-    <string name="youtube_player">Youtube Player</string>
+    <string name="youtube_player">YouTube Player</string>
 
     <!--categories-->
     <string name="category_Connectivity" tools:ignore="UnusedResources">Connectivity</string>
