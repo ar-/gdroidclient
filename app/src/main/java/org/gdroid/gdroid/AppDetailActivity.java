@@ -215,17 +215,17 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         circularProgressDrawable2.start();
 
         // load icon image (alternatively feature graphic)
-        Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
+        GlideApp.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
         if (mApp.icon != null) {
             if (TextUtils.isEmpty(mApp.featureGraphic))
             {
-                Glide.with(mContext)
+                GlideApp.with(mContext)
                         .load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192)
                         .into((ImageView) findViewById(R.id.img_header_icon));
             }
             else
             {
-                Glide.with(mContext)
+                GlideApp.with(mContext)
                         .load("https://f-droid.org/repo/"+mApp.id+"/"+ mApp.featureGraphic)
                         .into((ImageView) findViewById(R.id.img_header_icon));
             }
@@ -259,7 +259,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                     ssUrl = "https://f-droid.org/repo/" + mApp.id + "/" + ss;
                 }
                 final Drawable errorImg = AppCompatResources.getDrawable(mContext, R.drawable.ic_android_black_24dp);
-                Glide.with(mContext)
+                GlideApp.with(mContext)
                         .load(ssUrl)
                         .placeholder(circularProgressDrawable)
                         .error(errorImg)

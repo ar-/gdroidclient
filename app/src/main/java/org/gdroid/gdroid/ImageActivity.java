@@ -44,7 +44,7 @@ public class ImageActivity extends AppCompatActivity {
         circularProgressDrawable.start();
 
         final Drawable errorImg = AppCompatResources.getDrawable(this, R.drawable.ic_android_black_24dp);
-        Glide.with(getApplicationContext())
+        GlideApp.with(getApplicationContext())
                 .load(imgUrl)
                 .placeholder(circularProgressDrawable)
                 .error(errorImg)
