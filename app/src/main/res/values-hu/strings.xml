@@ -41,4 +41,6 @@
     <string name="yes">Igen</string>
     <string name="no">Nem</string>
     <string name="download_all_updates">Összes frissítés letöltése</string>
+    <string name="downloading">Letöltés…</string>
+    <string name="download_pending">Várakozás a letöltés elkezdésére…</string>
 </resources>

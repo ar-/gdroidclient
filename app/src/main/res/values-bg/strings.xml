@@ -38,4 +38,6 @@
     <string name="yes">Да</string>
     <string name="no">Не</string>
     <string name="download_all_updates">Изтегляне на всички обновления</string>
+    <string name="downloading">Сваляне…</string>
+    <string name="download_pending">Изчакване…</string>
 </resources>

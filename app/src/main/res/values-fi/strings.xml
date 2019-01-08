@@ -41,4 +41,6 @@
     <string name="yes">Kyllä</string>
     <string name="no">Ei</string>
     <string name="download_all_updates">Lataa kaikki päivitykset</string>
+    <string name="downloading">Ladataan…</string>
+    <string name="download_pending">Odotetaan latauksen alkamista…</string>
 </resources>

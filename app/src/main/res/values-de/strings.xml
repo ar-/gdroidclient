@@ -39,4 +39,6 @@
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
     <string name="download_all_updates">Alle Aktualisierungen herunterladen</string>
+    <string name="downloading">Wird heruntergeladen …</string>
+    <string name="download_pending">Auf den Start der Übertragung wird gewartet …</string>
 </resources>

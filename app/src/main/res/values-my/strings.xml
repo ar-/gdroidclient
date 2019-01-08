@@ -37,4 +37,6 @@
     <string name="yes">ဟုတ္</string>
     <string name="no">မဟုတ္</string>
     <string name="download_all_updates">အသစ်ထွက်ရှိမှုအားလုံးကိုဒေါင်းလုတ်ဆွဲမည်</string>
+    <string name="downloading">ေဒါင္းလုတ္ဆြဲေနသည္…</string>
+    <string name="download_pending">ေဒါင္းလုတ္စရန္ေစာင့္ဆိုင္းေနသည္…</string>
 </resources>

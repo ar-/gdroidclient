@@ -199,4 +199,6 @@
     <string name="no">No</string>
     <string name="download_all_updates">Download all updates</string>
 
+    <string name="downloading">Downloading…</string>
+    <string name="download_pending">Waiting to start download…</string>
 </resources>

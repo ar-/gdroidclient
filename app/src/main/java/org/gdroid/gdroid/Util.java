@@ -494,7 +494,7 @@ public class Util {
     }
 
     public static Installer getAppInstaller(Context context) {
-        boolean isRooted = true;
+        boolean isRooted = false; // TODO must be fixed before merge
         if (isRooted)
         {
             return new RootInstaller();

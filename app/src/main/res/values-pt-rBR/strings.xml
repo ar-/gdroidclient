@@ -41,4 +41,6 @@
     <string name="yes">Sim</string>
     <string name="no">Não</string>
     <string name="download_all_updates">Baixar todas as atualizações</string>
+    <string name="downloading">Baixando…</string>
+    <string name="download_pending">Esperando para iniciar o download…</string>
 </resources>

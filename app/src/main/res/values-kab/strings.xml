@@ -26,4 +26,5 @@
     <string name="action_launch">Serreḥ</string>
     <string name="yes">Ih</string>
     <string name="no">Ala</string>
+    <string name="downloading">Azdam…</string>
 </resources>

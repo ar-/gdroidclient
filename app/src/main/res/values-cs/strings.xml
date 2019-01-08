@@ -41,4 +41,6 @@
     <string name="yes">Ano</string>
     <string name="no">Ne</string>
     <string name="download_all_updates">Stáhnout všechny aktualizace</string>
+    <string name="downloading">Stahování…</string>
+    <string name="download_pending">Čekání na spuštění stahování…</string>
 </resources>

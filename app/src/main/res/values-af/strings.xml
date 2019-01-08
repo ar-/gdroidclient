@@ -38,4 +38,6 @@
     <string name="yes">Ja</string>
     <string name="no">Nee</string>
     <string name="download_all_updates">Laai alle opdaterings af</string>
+    <string name="downloading">Laai tans af…</string>
+    <string name="download_pending">Wag om aflaai te begin …</string>
 </resources>

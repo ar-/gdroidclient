@@ -36,4 +36,5 @@
     <string name="yes">అవును</string>
     <string name="no">కాదు</string>
     <string name="download_all_updates">అన్ని నవీకరణలను దింపుకోండి</string>
+    <string name="downloading">దింపుకుంటోంది…</string>
 </resources>

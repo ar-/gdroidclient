@@ -41,4 +41,6 @@
     <string name="yes">Bai</string>
     <string name="no">Ez</string>
     <string name="download_all_updates">Deskargatu eguneraketa guztiak</string>
+    <string name="downloading">Deskargatzen…</string>
+    <string name="download_pending">Deskarga hastearen zain…</string>
 </resources>

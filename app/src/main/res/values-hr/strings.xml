@@ -36,4 +36,6 @@
     <string name="action_launch">Pokreni</string>
     <string name="yes">Da</string>
     <string name="no">Ne</string>
+    <string name="downloading">Preuzimanje…</string>
+    <string name="download_pending">Čekanje na početak preuzimanja…</string>
 </resources>

@@ -41,4 +41,6 @@
     <string name="yes">Ja</string>
     <string name="no">Nej</string>
     <string name="download_all_updates">Hämta alla uppdateringar</string>
+    <string name="downloading">Hämtar…</string>
+    <string name="download_pending">Väntar på att påbörja hämtning…</string>
 </resources>

@@ -36,6 +36,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 
+import org.gdroid.gdroid.MainActivity;
 import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.installer.DefaultInstaller;
 
@@ -90,10 +91,10 @@ public class ManualAppInstallActivity extends AppCompatActivity {
             showNotification(getResources().getString(R.string.installation_finished),
                     getResources().getString(R.string.installed_details, index));
 
-            //update UI
-            final ComponentName callingActivity = getCallingActivity();
-            final Activity parent = getParent();
-            final Context baseContext = getBaseContext();
+            // TODO update UI
+//            final ComponentName callingActivity = getCallingActivity();
+//            final Activity parent = getParent();
+//            final Context baseContext = getBaseContext();
 //            if (context instanceof MainActivity)
 //            {
 //                final MainActivity ma = (MainActivity) context;

@@ -41,4 +41,6 @@
     <string name="yes">Да</string>
     <string name="no">Нет</string>
     <string name="download_all_updates">Скачать все обновления</string>
+    <string name="downloading">Загрузка…</string>
+    <string name="download_pending">Ожидание начала загрузки…</string>
 </resources>

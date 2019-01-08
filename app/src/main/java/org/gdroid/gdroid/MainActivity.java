@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 fab.setEnabled(false);
                 findViewById(R.id.loadingPanel).setVisibility(View.VISIBLE);
-                Snackbar.make(view, "Downloading update ...", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, R.string.downloading, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
 
@@ -129,7 +129,11 @@ public class MainActivity extends AppCompatActivity
         // download all button
         btnUpdateAll.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(final View v) {
+                btnUpdateAll.setVisibility(View.GONE);
+                Snackbar.make(v, R.string.download_pending, Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
                 final BariaInstaller bariaInstaller = new BariaInstaller(activity);
                 final ArrayList<ApplicationBean> appsToInstall = new ArrayList<>();
                 for (ApplicationBean ab :appBeanList) {
@@ -149,6 +153,8 @@ public class MainActivity extends AppCompatActivity
                         activity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
+                                Snackbar.make(v, R.string.downloading, Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show();
                                 bariaInstaller.orderApkInstallations(appsToInstall);
                             }
                         });

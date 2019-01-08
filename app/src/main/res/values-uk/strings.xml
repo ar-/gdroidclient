@@ -41,4 +41,6 @@
     <string name="yes">Так</string>
     <string name="no">Ні</string>
     <string name="download_all_updates">Завантажити всі оновлення</string>
+    <string name="downloading">Завантаження…</string>
+    <string name="download_pending">Очікування початку завантаження…</string>
 </resources>

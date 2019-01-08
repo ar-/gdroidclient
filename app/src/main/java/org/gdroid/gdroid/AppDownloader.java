@@ -37,6 +37,7 @@ import com.tonyodev.fetch2core.Func;
 import com.tonyodev.fetch2core.MutableExtras;
 import com.tonyodev.fetch2okhttp.OkHttpDownloader;
 
+import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.installer.Installer;
 import org.jetbrains.annotations.NotNull;
@@ -98,32 +99,35 @@ public class AppDownloader {
 
             @Override
             public void onCompleted(Download download) {
-                if (download.getRequest() == request) {
-                    fetch.removeListener(this);
+                fetch.removeListener(this);
 
-                    Runnable onComplete = new Runnable() {
-                        @Override
-                        public void run() {
-                            if (context instanceof AppDetailActivity) {
-                                final AppDetailActivity ada = (AppDetailActivity) context;
-                                ada.runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        try {
-                                            ada.updateInstallStatus(Status.NONE);
-                                        } catch (Throwable t) {
-                                            Log.e("ADA", "error in updateInstallStatus", t);
-                                        }
+                Runnable onComplete = new Runnable() {
+                    @Override
+                    public void run() {
+                        if (context instanceof AppDetailActivity) {
+                            final AppDetailActivity ada = (AppDetailActivity) context;
+                            ada.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    try {
+                                        ada.updateInstallStatus(Status.NONE);
+                                    } catch (Throwable t) {
+                                        Log.e("ADA", "error in updateInstallStatus", t);
                                     }
-                                });
-                            }
+                                }
+                            });
                         }
-                    };
+                    }
+                };
 
-                    Log.d("ADL", "done");
-                    if (install)
-                        installer.installApp(context, file, onComplete);
-                }
+                Log.d("ADL", "done");
+                String appId = download.getExtras().getString("id","");
+                AppDatabase db = AppDatabase.get(context);
+                ApplicationBean ab = db.appDao().getApplicationBean(appId);
+                db.close();
+                final String fn = getAbsoluteFilenameOfDownloadTarget(context, ab);
+                if (install)
+                    installer.installApp(context, file, onComplete);
             }
 
             @Override
