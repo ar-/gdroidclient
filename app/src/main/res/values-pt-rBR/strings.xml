@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">Conectividade</string>
@@ -38,4 +39,27 @@
     <string name="action_install">Instalar</string>
     <string name="action_upgrade">Atualizar</string>
     <string name="action_launch">Executar</string>
+    <string name="app_name">G-Droid</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="action_settings">Configurações</string>
+    <string name="action_add_favourite">Adicionar aos Favoritos</string>
+    <string name="title_activity_settings">Configurações</string>
+    <string name="pref_title_display_name">Desativado</string>
+    <string name="pref_title_add_friends_to_messages">desativado</string>
+    <string name="pref_header_data_sync">Dados e sincronização</string>
+    <string name="pref_title_sync_frequency">Frequência de sincronização</string>
+    <string name="pref_header_notifications">Notificações</string>
+    <string name="pref_title_ringtone">Toque</string>
+    <string name="pref_ringtone_silent">Silencioso</string>
+    <string name="pref_title_vibrate">Vibração</string>
+    <string name="title_notifications">Notificações</string>
+    <string name="title_categories">categorias</string>
+    <string name="title_myapps">meus aplicativos</string>
+    <string name="title_search">buscar</string>
+    <string name="calendar">Calendário</string>
+    <string name="camera">Câmera</string>
+    <string name="contacts">Contatos</string>
+    <string name="email_client">Cliente de E-mail</string>
+    <string name="gallery">Galeria</string>
+    <string name="text_editor">Editor de Texto</string>
 </resources>
