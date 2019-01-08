@@ -18,9 +18,11 @@
 
 package org.gdroid.gdroid.installer;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 
 import com.easwareapps.baria.AutoRootAppInstallTask;
@@ -31,6 +33,7 @@ import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class BariaInstaller {
@@ -77,19 +80,32 @@ public class BariaInstaller {
     }
 
     private void installAppsManually(ArrayList<ApplicationBean> apps) {
-        ArrayList<String> apks = new ArrayList<>();
-        Intent intent = new Intent(context, ManualAppInstallActivity.class);
+        final ArrayList<String> apks = new ArrayList<>();
         for(int i=0;i<apps.size(); i++) {
             final String absFile = AppDownloader.getAbsoluteFilenameOfDownloadTarget(context, apps.get(i));
             apks.add(absFile);
         }
 
         // Util.waitForAllDownloadsToFinish(); still doesn't work. fetch2 sucks as well!!
-
-
-        intent.putExtra("apps", apks);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                // wait for each file to be completely downloaded
+                for (String fn:apks) {
+                    File f = new File (fn);
+                    Util.waitForFileToBeStable(f);
+                }
+                //then do the installations
+                ((Activity)context).runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(context, ManualAppInstallActivity.class);
+                        intent.putExtra("apps", apks);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        context.startActivity(intent);
+                    }
+                });
+            }
+        });
     }
 }
