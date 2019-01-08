@@ -30,6 +30,7 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.SwitchPreference;
 import android.support.v7.app.ActionBar;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
@@ -95,7 +96,9 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                         preference.setSummary(name);
                     }
                 }
-             } else {
+            } else if (preference instanceof SwitchPreference) {
+                return true;
+            } else {
                 // For all other preferences, set the summary to the value's
                 // simple string representation.
                 preference.setSummary(stringValue);
@@ -130,22 +133,44 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         // Set the listener to watch for value changes.
         preference.setOnPreferenceChangeListener(sBindPreferenceSummaryToValueListener);
 
-        // Trigger the listener immediately with the preference's
-        // current value.
-        String value = "";
-        try {
-            value = PreferenceManager
-                    .getDefaultSharedPreferences(preference.getContext())
-                    .getString(preference.getKey(), "");
+        if (preference instanceof SwitchPreference) {
+            // Trigger the listener immediately with the preference's current value.
+            sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
+                    PreferenceManager
+                            .getDefaultSharedPreferences(preference.getContext())
+                            .getBoolean(preference.getKey(), false));
+
+        } else if (preference instanceof WeightEditTextPreference) {
+            // Trigger the listener immediately with the preference's current value.
+            sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
+                    PreferenceManager
+                            .getDefaultSharedPreferences(preference.getContext())
+                            .getInt(preference.getKey(), 1));
+        } else {
+            // Trigger the listener immediately with the preference's current value.
+            sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
+                    PreferenceManager
+                            .getDefaultSharedPreferences(preference.getContext())
+                            .getString(preference.getKey(), ""));
         }
-        catch (ClassCastException e)
-        {
-            value = Integer.toString(PreferenceManager
-                    .getDefaultSharedPreferences(preference.getContext())
-                    .getInt(preference.getKey(), 1));
-        }
-        sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
-                value);
+
+//        // Trigger the listener immediately with the preference's
+//        // current value.
+//        String value = "";
+//        try {
+//            value = PreferenceManager
+//                    .getDefaultSharedPreferences(preference.getContext())
+//                    .getString(preference.getKey(), "");
+//        }
+//        catch (ClassCastException e)
+//        {
+//            value = Integer.toString(PreferenceManager
+//                    .getDefaultSharedPreferences(preference.getContext())
+//                    .getInt(preference.getKey(), 1));
+//        }
+//
+//        sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
+//                value);
     }
 
     @Override
@@ -222,8 +247,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
-            bindPreferenceSummaryToValue(findPreference("example_text"));
-            bindPreferenceSummaryToValue(findPreference("example_list"));
+            bindPreferenceSummaryToValue(findPreference("use_root"));
         }
 
         @Override

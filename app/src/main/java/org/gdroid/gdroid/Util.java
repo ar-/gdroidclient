@@ -494,8 +494,9 @@ public class Util {
     }
 
     public static Installer getAppInstaller(Context context) {
-        boolean isRooted = false; // TODO must be fixed before merge
-        if (isRooted)
+        boolean isRooted = isRooted();
+        boolean useRoot = PreferenceManager.getDefaultSharedPreferences(context).getBoolean("use_root",false);
+        if (isRooted && useRoot)
         {
             return new RootInstaller();
         }

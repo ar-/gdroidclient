@@ -201,4 +201,6 @@
 
     <string name="downloading">Downloading…</string>
     <string name="download_pending">Waiting to start download…</string>
+    <string name="pref_description_use_root">install and uninstall apps automatically if the device is rooted</string>
+    <string name="pref_title_use_root">Use Root Privilege</string>
 </resources>
