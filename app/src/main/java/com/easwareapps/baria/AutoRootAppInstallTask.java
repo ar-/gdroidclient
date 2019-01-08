@@ -1,6 +1,6 @@
 /*
  * G-Droid
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
 ` * <p/>
  * BARIA - Backup And Restore Installed Apps
  * Copyright (C) 2016  vishnu@easwareapps.com

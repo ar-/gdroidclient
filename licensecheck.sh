@@ -36,11 +36,11 @@ else
 fi
 
 # check years in copyrights, if they were changed this year, they must have this year in the copyright
-RET=`licensecheck --copyright \`git whatchanged --since '01/01/2018' --oneline --name-only --pretty=format: | sort | uniq\` | grep -v 2018 | grep -C1 Copyright | wc -l`
+RET=`licensecheck --copyright \`git whatchanged --since '01/01/2019' --oneline --name-only --pretty=format: | sort | uniq\` | grep -v 2019 | grep -C1 Copyright | wc -l`
 if [ $RET -eq 0 ]; then
 	echo all years in copyright declarations in git managed files for this year okay
 else
-	licensecheck --copyright `git whatchanged --since '01/01/2018' --oneline --name-only --pretty=format: | sort | uniq` | grep -v 2018 | grep -C1 Copyright
+	licensecheck --copyright `git whatchanged --since '01/01/2019' --oneline --name-only --pretty=format: | sort | uniq` | grep -v 2019 | grep -C1 Copyright
 	echo ERROR : the files above have the wrong year in the copyright declaration, they have been touched this year, so they must contain this year
 	exit 1
 fi
