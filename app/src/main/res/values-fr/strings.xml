@@ -84,4 +84,9 @@
     <string name="torrent_downloader">Client BitTorrent</string>
     <string name="web_browser">Navigateur Web</string>
     <string name="youtube_player">Lecteur YouTube</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="download_all_updates">Télécharger toutes les mises jour</string>
+    <string name="downloading">Téléchargement…</string>
+    <string name="download_pending">Téléchargement en attente…</string>
 </resources>

@@ -87,4 +87,9 @@
     <string name="torrent_downloader">Torrent İndiricisi</string>
     <string name="web_browser">Web Tarayıcı</string>
     <string name="youtube_player">YouTube Oynatıcı</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+    <string name="download_all_updates">Tüm güncellemeleri indir</string>
+    <string name="downloading">İndiriliyor…</string>
+    <string name="download_pending">İndirmeye başlamak için bekleniyor…</string>
 </resources>

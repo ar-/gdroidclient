@@ -38,4 +38,9 @@
     <string name="action_install">Pasang</string>
     <string name="action_upgrade">Tingkatkan</string>
     <string name="action_launch">Jalankan</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="download_all_updates">Unduh semua pembaruan</string>
+    <string name="downloading">Mengunduh…</string>
+    <string name="download_pending">Menunggu untuk mulai unduhan…</string>
 </resources>

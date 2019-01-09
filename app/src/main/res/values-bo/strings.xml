@@ -35,4 +35,9 @@
     <string name="action_install">འགྲིག་བཅུག</string>
     <string name="action_upgrade">རིམ་སྤར།</string>
     <string name="action_launch">འཁོར་སྐྱོད།</string>
+    <string name="yes">རེད།</string>
+    <string name="no">མ་རེད།</string>
+    <string name="download_all_updates">གསར་བསྒྱུར་ཚང་མ་ཕབ་ལེན་བྱེད།</string>
+    <string name="downloading">ཕན་ལེན་བྱེད་བཞིན་པ་…</string>
+    <string name="download_pending">ཕབ་ལེན་འགོ་བཙུགས་རེ་སྒུག་བྱེད་བཞིན་པ།…</string>
 </resources>

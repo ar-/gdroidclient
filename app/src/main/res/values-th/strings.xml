@@ -34,4 +34,8 @@
     <string name="action_install">ติดตั้ง</string>
     <string name="action_upgrade">อัพเกรด</string>
     <string name="action_launch">เริ่มโปรแกรม</string>
+    <string name="yes">ใช่</string>
+    <string name="no">ไม่</string>
+    <string name="downloading">กำลังดาวน์โหลด…</string>
+    <string name="download_pending">เตรียมพร้อมจะเริ่มการดาวน์โหลด…</string>
 </resources>

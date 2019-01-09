@@ -23,4 +23,8 @@
     <string name="links">Lidhje</string>
     <string name="action_install">Instalo</string>
 <string name="action_launch">Zbotoje</string>
+    <string name="yes">Po</string>
+    <string name="no">Jo</string>
+    <string name="download_all_updates">Shkarko të gjitha freskimet</string>
+    <string name="downloading">Duke shkarkuar…</string>
 </resources>

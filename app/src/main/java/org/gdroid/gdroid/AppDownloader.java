@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,16 +18,12 @@
 
 package org.gdroid.gdroid;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Build;
-import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.tonyodev.fetch2.Download;
+import com.tonyodev.fetch2.EnqueueAction;
 import com.tonyodev.fetch2.Error;
 import com.tonyodev.fetch2.Fetch;
 import com.tonyodev.fetch2.FetchConfiguration;
@@ -39,25 +35,29 @@ import com.tonyodev.fetch2.Status;
 import com.tonyodev.fetch2core.DownloadBlock;
 import com.tonyodev.fetch2core.Func;
 import com.tonyodev.fetch2core.MutableExtras;
+import com.tonyodev.fetch2okhttp.OkHttpDownloader;
 
+import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
-import org.gdroid.gdroid.installer.DefaultInstaller;
 import org.gdroid.gdroid.installer.Installer;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.File;
-import java.lang.reflect.Method;
+import java.security.acl.Owner;
 import java.util.List;
 
-class AppDownloader {
+import okhttp3.OkHttpClient;
 
+public class AppDownloader {
+
+    public static final String TAG = "AppDownloader";
     public static final String repoBaseUrl = "https://f-droid.org/repo/";
 
-    public static Request download(final Context context, ApplicationBean mApp) {
+    public static Request download(final Context context, ApplicationBean mApp, final boolean install) {
         final Fetch fetch = getFetch(context);
+        final Installer installer = Util.getAppInstaller(context);
 
         String url = repoBaseUrl+mApp.apkname;
-        final String file = context.getExternalCacheDir()+"/"+mApp.apkname;
+        final String file = getAbsoluteFilenameOfDownloadTarget(context, mApp);
 
 
         final MutableExtras extras = new MutableExtras();
@@ -68,6 +68,7 @@ class AppDownloader {
         request.setNetworkType(NetworkType.ALL);
         request.setExtras(extras);
 
+        request.setEnqueueAction(EnqueueAction.REPLACE_EXISTING); // can be removed when this is fixed https://github.com/tonyofrancis/Fetch/issues/295 or then #76 is fixed
         fetch.enqueue(request, new Func<Request>() {
             @Override
             public void call(@NotNull Request result) {
@@ -105,18 +106,15 @@ class AppDownloader {
                 Runnable onComplete = new Runnable() {
                     @Override
                     public void run() {
-                        if (context instanceof AppDetailActivity)
-                        {
+                        if (context instanceof AppDetailActivity) {
                             final AppDetailActivity ada = (AppDetailActivity) context;
                             ada.runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
                                     try {
                                         ada.updateInstallStatus(Status.NONE);
-                                    }
-                                    catch (Throwable t)
-                                    {
-                                        Log.e("ADA","error in updateInstallStatus", t);
+                                    } catch (Throwable t) {
+                                        Log.e(TAG, "error in updateInstallStatus", t);
                                     }
                                 }
                             });
@@ -124,9 +122,14 @@ class AppDownloader {
                     }
                 };
 
-                Log.d ("ADL","done");
-                Installer installer = new DefaultInstaller();
-                installer.installApp(context, file, onComplete);
+                Log.d(TAG, "done");
+                String appId = download.getExtras().getString("id","");
+                AppDatabase db = AppDatabase.get(context);
+                ApplicationBean ab = db.appDao().getApplicationBean(appId);
+                db.close();
+                final String fn = getAbsoluteFilenameOfDownloadTarget(context, ab);
+                if (install)
+                    installer.installApp(context, file, onComplete);
             }
 
             @Override
@@ -179,13 +182,24 @@ class AppDownloader {
     }
 
     @NonNull
+    public static String getAbsoluteFilenameOfDownloadTarget(Context context, ApplicationBean mApp) {
+        return context.getExternalCacheDir()+"/"+mApp.apkname;
+    }
+
+    static Fetch fetch = null;
+    @NonNull
     public static Fetch getFetch(Context context) {
+        if (fetch !=null && ! fetch.isClosed() )
+            return fetch;
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().build();
         FetchConfiguration fetchConfiguration = new FetchConfiguration.Builder(context)
-                .setDownloadConcurrentLimit(5)
+                .setDownloadConcurrentLimit(2)
                 .setNamespace("AppDownloader")
+                .setHttpDownloader(new OkHttpDownloader(okHttpClient))
                 .build();
 
-        return Fetch.Impl.getInstance(fetchConfiguration);
+        fetch = Fetch.Impl.getInstance(fetchConfiguration);
+        return fetch;
     }
 
 }

@@ -34,4 +34,9 @@
     <string name="action_install">Vakirira</string>
     <string name="action_upgrade">Kwidziridza</string>
     <string name="action_launch">Ita</string>
+    <string name="yes">Hongu</string>
+    <string name="no">Kwete</string>
+    <string name="download_all_updates">Tutunura wedzero dzese</string>
+    <string name="downloading">Kututunura…</string>
+    <string name="download_pending">Takamirira kutanga kututunura…</string>
 </resources>

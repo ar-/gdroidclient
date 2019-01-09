@@ -38,4 +38,9 @@
     <string name="action_install">Paigalda</string>
     <string name="action_upgrade">Uuenda</string>
     <string name="action_launch">Käivita</string>
+    <string name="yes">Jah</string>
+    <string name="no">Ei</string>
+    <string name="download_all_updates">Laadi alla kõik värskendused</string>
+    <string name="downloading">Allalaadimine…</string>
+    <string name="download_pending">Oodatakse allalaadimise algamist…</string>
 </resources>

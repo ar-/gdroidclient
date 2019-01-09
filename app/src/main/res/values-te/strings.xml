@@ -33,4 +33,8 @@
     <string name="action_install">స్థాపించు</string>
     <string name="action_upgrade">నవీకరణించు</string>
     <string name="action_launch">నడుపు</string>
+    <string name="yes">అవును</string>
+    <string name="no">కాదు</string>
+    <string name="download_all_updates">అన్ని నవీకరణలను దింపుకోండి</string>
+    <string name="downloading">దింపుకుంటోంది…</string>
 </resources>

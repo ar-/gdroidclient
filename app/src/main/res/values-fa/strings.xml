@@ -38,4 +38,9 @@
     <string name="action_install">نصب</string>
     <string name="action_upgrade">ارتقا</string>
     <string name="action_launch">اجرا</string>
+    <string name="yes">بله</string>
+    <string name="no">خیر</string>
+    <string name="download_all_updates">بارگیری تمام به‌روز رسانی‌ها</string>
+    <string name="downloading">در حال بارگیری…</string>
+    <string name="download_pending">در انتظار شروع بارگیری…</string>
 </resources>

@@ -34,4 +34,9 @@
     <string name="action_install">သြင္းမည္</string>
     <string name="action_upgrade">အဆင့္ျမင့္တင္မည္</string>
     <string name="action_launch">ဖြင့္မည္</string>
+    <string name="yes">ဟုတ္</string>
+    <string name="no">မဟုတ္</string>
+    <string name="download_all_updates">အသစ်ထွက်ရှိမှုအားလုံးကိုဒေါင်းလုတ်ဆွဲမည်</string>
+    <string name="downloading">ေဒါင္းလုတ္ဆြဲေနသည္…</string>
+    <string name="download_pending">ေဒါင္းလုတ္စရန္ေစာင့္ဆိုင္းေနသည္…</string>
 </resources>

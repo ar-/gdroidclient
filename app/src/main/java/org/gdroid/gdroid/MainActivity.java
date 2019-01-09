@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -48,6 +48,7 @@ import android.widget.Button;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.installer.baria.BariaInstaller;
 import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
 import org.gdroid.gdroid.widget.BottomNavigationView;
 
@@ -58,11 +59,10 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "MainActivity";
+    private static MainActivity lastCreatedInstance = null;
 
     private RecyclerView recyclerView;
-    //private RecyclerView innerRecyclerView;
-    //private LinearLayout collectionContent;
-    //private HorizontalScrollView inner_scroll_view;
+    BottomNavigationView navigation;
     private AppBeanAdapter adapter;
     private List<ApplicationBean> appBeanList;
     private List<AppCollectionDescriptor> appCollectionDescriptorList;
@@ -71,15 +71,18 @@ public class MainActivity extends AppCompatActivity
     SearchView searchView;
     private Button btnSearchHarder;
     private Button btnSearchEvenHarder;
+    private Button btnUpdateAll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        lastCreatedInstance = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.loadingPanel).setVisibility(View.GONE);
         searchView = findViewById(R.id.search_view);
         btnSearchHarder = findViewById(R.id.btn_search_harder);
         btnSearchEvenHarder = findViewById(R.id.btn_search_even_harder);
+        btnUpdateAll = findViewById(R.id.btn_update_all);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -92,7 +95,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         AppDatabase db = AppDatabase.get(getApplicationContext());
@@ -116,7 +119,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 fab.setEnabled(false);
                 findViewById(R.id.loadingPanel).setVisibility(View.VISIBLE);
-                Snackbar.make(view, "Downloading update ...", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, R.string.downloading, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
 
@@ -125,7 +128,50 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        // download all button
+        btnUpdateAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                btnUpdateAll.setVisibility(View.GONE);
+                Snackbar.make(v, R.string.download_pending, Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
 
+                final BariaInstaller bariaInstaller = new BariaInstaller(activity);
+                final ArrayList<ApplicationBean> appsToInstall = new ArrayList<>();
+                for (ApplicationBean ab :appBeanList) {
+                    final boolean appUpdateable = Util.isAppUpdateable(getApplicationContext(), ab);
+                    if (appUpdateable)
+                    {
+                        AppDownloader.download(activity, ab,false);
+                        appsToInstall.add(ab);
+                    }
+                }
+
+                // wait for downloads in background and then install in foreground
+                AsyncTask.execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        Util.waitForAllDownloadsToFinish(activity);
+                        activity.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Snackbar.make(v, R.string.downloading, Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show();
+                                bariaInstaller.orderApkInstallations(appsToInstall);
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateCurrentView();
     }
 
     private int getItemIdForHomeScreenMenuItem(String lastMenuItem) {
@@ -156,7 +202,6 @@ public class MainActivity extends AppCompatActivity
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
         recyclerView.setLayoutManager(mLayoutManager);
         removeAllitemDecorations();
-        //recyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(10), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         appCollectionDescriptorList = new ArrayList<>();
         appCollectionAdapter = new AppCollectionAdapter(this, appCollectionDescriptorList);
@@ -212,15 +257,11 @@ public class MainActivity extends AppCompatActivity
             appCollectionDescriptorList.add(a3);
             AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "Random apps");
             appCollectionDescriptorList.add(a4);
-//            AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "top rates apps");
-//            appCollectionDescriptorList.add(a4);
 //            AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "you might also like");
 //            appCollectionDescriptorList.add(a5);
-//            AppCollectionDescriptor a6 = new AppCollectionDescriptor(context, "highest rated");
-//            appCollectionDescriptorList.add(a6);
 //            AppCollectionDescriptor a7 = new AppCollectionDescriptor(context, "popular apps");
 //            appCollectionDescriptorList.add(a7);
-//            AppCollectionDescriptor a8 = new AppCollectionDescriptor(context, "System");
+//            AppCollectionDescriptor a8 = new AppCollectionDescriptor(context, "app of the day");
 //            appCollectionDescriptorList.add(a8);
 //            AppCollectionDescriptor a9 = new AppCollectionDescriptor(context, "well maintained");
 //            appCollectionDescriptorList.add(a9);
@@ -255,6 +296,7 @@ public class MainActivity extends AppCompatActivity
             searchView.setVisibility(View.GONE);
             btnSearchHarder.setVisibility(View.GONE);
             btnSearchEvenHarder.setVisibility(View.GONE);
+            btnUpdateAll.setVisibility(View.GONE);
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                 {
@@ -308,6 +350,7 @@ public class MainActivity extends AppCompatActivity
                                     @Override
                                     public void run() {
                                         adapter.notifyDataSetChanged();
+                                        btnUpdateAll.setVisibility(View.VISIBLE);
                                     }
                                 });
                             }
@@ -479,6 +522,11 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    public void updateCurrentView()
+    {
+        navigation.setSelectedItemId(navigation.getSelectedItemId());
+    }
+
     /**
      * Converting dp to pixel
      */
@@ -487,4 +535,8 @@ public class MainActivity extends AppCompatActivity
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
     }
 
+
+    public static MainActivity getLastCreatedInstance() {
+        return lastCreatedInstance;
+    }
 }

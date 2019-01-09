@@ -37,4 +37,9 @@
     <string name="action_install">Namesti</string>
     <string name="action_upgrade">Nadgradnja</string>
     <string name="action_launch">Zaženi</string>
+    <string name="yes">Da</string>
+    <string name="no">Ne</string>
+    <string name="download_all_updates">Prenesi vse posodobitve</string>
+    <string name="downloading">V prenosu…</string>
+    <string name="download_pending">Čakam na prenos…</string>
 </resources>

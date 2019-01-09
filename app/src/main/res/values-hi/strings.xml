@@ -13,4 +13,7 @@
     <string name="perms_description_app">%1$s द्वारा उपलब्ध कराया गया|</string>
     <string name="perms_new_perm_prefix">नया:</string>
     <string name="links">संधियां</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+    <string name="downloading">डोव्न्लोअदिन्ग…</string>
 </resources>

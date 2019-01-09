@@ -38,4 +38,9 @@
     <string name="action_install">Setja inn</string>
     <string name="action_upgrade">Uppfæra</string>
     <string name="action_launch">Keyra</string>
+    <string name="yes">Já</string>
+    <string name="no">Nei</string>
+    <string name="download_all_updates">Sækja allar uppfærslur</string>
+    <string name="downloading">Sæki…</string>
+    <string name="download_pending">Bíð eftir að niðurhal hefjist…</string>
 </resources>

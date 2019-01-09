@@ -52,4 +52,9 @@
     <string name="pref_title_display_name">Деактивирован</string>
     <string name="pref_title_add_friends_to_messages">деактивирован</string>
     <string name="pref_header_data_sync">данные &amp; синхронизация</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="download_all_updates">Скачать все обновления</string>
+    <string name="downloading">Загрузка…</string>
+    <string name="download_pending">Ожидание начала загрузки…</string>
 </resources>

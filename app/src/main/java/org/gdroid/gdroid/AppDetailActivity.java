@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -215,17 +215,17 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         circularProgressDrawable2.start();
 
         // load icon image (alternatively feature graphic)
-        Glide.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
+        GlideApp.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
         if (mApp.icon != null) {
             if (TextUtils.isEmpty(mApp.featureGraphic))
             {
-                Glide.with(mContext)
+                GlideApp.with(mContext)
                         .load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192)
                         .into((ImageView) findViewById(R.id.img_header_icon));
             }
             else
             {
-                Glide.with(mContext)
+                GlideApp.with(mContext)
                         .load("https://f-droid.org/repo/"+mApp.id+"/"+ mApp.featureGraphic)
                         .into((ImageView) findViewById(R.id.img_header_icon));
             }
@@ -259,7 +259,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                     ssUrl = "https://f-droid.org/repo/" + mApp.id + "/" + ss;
                 }
                 final Drawable errorImg = AppCompatResources.getDrawable(mContext, R.drawable.ic_android_black_24dp);
-                Glide.with(mContext)
+                GlideApp.with(mContext)
                         .load(ssUrl)
                         .placeholder(circularProgressDrawable)
                         .error(errorImg)
@@ -314,9 +314,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         btnInstall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //btnInstall.setAlpha(.5f);
-                //btnInstall.setClickable(false);
-                downloadRequest = AppDownloader.download(callerActivity, mApp);
+                downloadRequest = AppDownloader.download(callerActivity, mApp, true);
             }
         });
 
@@ -458,6 +456,8 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 btnInstall.performClick();
             }
         }
+
+        db.close();
     }
 
     private void populateSimilarAppsView(AppCollectionDescriptor appCollectionDescriptor, int headlineLabel, int recViewToFill) {
@@ -536,183 +536,6 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         {
             final TableRow tblRow = findViewById(tableRowId);
             tblRow.setVisibility(View.GONE);
-        }
-    }
-
-    private FetchListener getFetchListener (){
-        return new FetchListener() {
-            @Override
-            public void onAdded(Download download) {
-
-            }
-
-            @Override
-            public void onQueued(Download download, boolean b) {
-
-            }
-
-            @Override
-            public void onWaitingNetwork(Download download) {
-
-            }
-
-            @Override
-            public void onCompleted(Download download) {
-
-            }
-
-            @Override
-            public void onError(Download download, Error error, Throwable throwable) {
-
-            }
-
-            @Override
-            public void onDownloadBlockUpdated(Download download, DownloadBlock downloadBlock, int i) {
-
-            }
-
-            @Override
-            public void onStarted(Download download, List<? extends DownloadBlock> list, int i) {
-
-            }
-
-            @Override
-            public void onProgress(Download download, long l, long l1) {
-
-            }
-
-            @Override
-            public void onPaused(Download download) {
-
-            }
-
-            @Override
-            public void onResumed(Download download) {
-
-            }
-
-            @Override
-            public void onCancelled(Download download) {
-
-            }
-
-            @Override
-            public void onRemoved(Download download) {
-
-            }
-
-            @Override
-            public void onDeleted(Download download) {
-
-            }
-        };
-    }
-
-    protected Boolean doInBackground(String url) {
-        File otaFile;
-        otaFile = new File(getApplicationContext().getExternalCacheDir().getAbsolutePath() + File.separator + "last_download" + ".apk");
-
-        boolean flag = true;
-        boolean downloading =true;
-        try{
-            // TODO use another library to download, this google thing sucks
-            DownloadManager mManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-            DownloadManager.Request mRqRequest = new DownloadManager.Request(
-                    Uri.parse(url));
-            mRqRequest.setTitle(mApp.name).setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-            mRqRequest.setDestinationUri(Uri.fromFile(otaFile));
-            Util.deleteFileIfExist(otaFile.getAbsolutePath());
-            long idDownLoad=mManager.enqueue(mRqRequest);
-            DownloadManager.Query query = null;
-            query = new DownloadManager.Query();
-            Cursor c = null;
-            if(query!=null) {
-                query.setFilterByStatus(DownloadManager.STATUS_FAILED|DownloadManager.STATUS_PAUSED|DownloadManager.STATUS_SUCCESSFUL|DownloadManager.STATUS_RUNNING|DownloadManager.STATUS_PENDING);
-            } else {
-                return flag;
-            }
-
-            while (downloading) {
-                c = mManager.query(query);
-                if(c.moveToFirst()) {
-                    //Log.e ("FLAG","Downloading");
-                    int status =c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
-
-                    if (status==DownloadManager.STATUS_SUCCESSFUL) {
-                        Log.e ("FLAG","done");
-                        downloading = false;
-                        flag=true;
-
-//                        Intent intent = new Intent(Intent.ACTION_VIEW);
-//                        intent.setDataAndType(Uri.fromFile(otaFile), "application/vnd.android.package-archive");
-//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // without this flag android returned a intent error!
-//                        mContext.startActivity(intent);
-                        //File file = new File(dir, "App.apk");
-                        Uri uri = Uri.fromFile(otaFile);
-                        final Intent intent = new Intent();
-                        if(Build.VERSION.SDK_INT>=24){
-                            try{
-                                Method m = StrictMode.class.getMethod("disableDeathOnFileUriExposure");
-                                m.invoke(null);
-                            }catch(Exception e){
-                                e.printStackTrace();
-                            }
-                        }
-
-                        if (Build.VERSION.SDK_INT < 14) {
-                            intent.setAction(Intent.ACTION_VIEW);
-                            intent.setDataAndType(uri, "application/vnd.android.package-archive");
-                        } else if (Build.VERSION.SDK_INT < 16) {
-                            intent.setAction(Intent.ACTION_INSTALL_PACKAGE);
-                            intent.setData(uri);
-                            intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
-                            intent.putExtra(Intent.EXTRA_NOT_UNKNOWN_SOURCE, true);
-                            intent.putExtra(Intent.EXTRA_ALLOW_REPLACE, true);
-                        } else if (Build.VERSION.SDK_INT < 24) {
-                            intent.setAction(Intent.ACTION_INSTALL_PACKAGE);
-                            intent.setData(uri);
-                            intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
-                            intent.putExtra(Intent.EXTRA_NOT_UNKNOWN_SOURCE, true);
-                        } else {
-                            intent.setAction(Intent.ACTION_INSTALL_PACKAGE);
-                            intent.setData(uri);
-                            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                            intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
-                            intent.putExtra(Intent.EXTRA_NOT_UNKNOWN_SOURCE, true);
-                        }
-                        //startActivityForResult(intent, 0);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                //startActivityForResult(intent, 0);
-                                mContext.startActivity(intent);
-
-                                // own parcelable cursor:
-                                // https://stackoverflow.com/questions/17527095/could-not-write-cursorwindow-to-parcel-due-to-error-2147483641/19976499
-
-                                // must use another download lib to prevent this
-//                                11-07 06:24:14.995 15992-14156/? E/CursorWindow: Could not allocate
-//                                CursorWindow
-//                                '/data/data/com.android.providers.downloads/databases/downloads.db' of size 2097152 due to error -12.
-//                                11-07 06:24:15.005 15992-14156/? E/DownloadManager: [11771] Failed: android.database.CursorWindowAllocationException: Cursor window allocation of 2048 kb failed. # Open Cursors=723 (# cursors opened by pid 13969=723)
-                            }
-                        });
-
-                        break;
-                    }
-                    if (status==DownloadManager.STATUS_FAILED) {
-                        Log.e ("FLAG","Fail");
-                        downloading = false;
-                        flag=false;
-                        break;
-                    }
-                }
-            }
-
-            return flag;
-        }catch (Exception e) {
-            flag = false;
-            return flag;
         }
     }
 

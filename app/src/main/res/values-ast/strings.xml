@@ -35,4 +35,9 @@
     <string name="action_install">Instalar</string>
     <string name="action_upgrade">Anovar</string>
     <string name="action_launch">Executar</string>
+    <string name="yes">Sí</string>
+    <string name="no">Non</string>
+    <string name="download_all_updates">Baxar tolos anovamientos</string>
+    <string name="downloading">Baxando…</string>
+    <string name="download_pending">Esperando p\'aniciar al descarga…</string>
 </resources>
