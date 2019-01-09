@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">Conectividade</string>
@@ -16,7 +17,7 @@
     <string name="category_Sports_Health">Desporto e saúde</string>
     <string name="category_System">Sistema</string>
     <string name="category_Theming">Temas</string>
-    <string name="category_Time">Tempo</string>
+    <string name="category_Time">Data/hora</string>
     <string name="category_Writing">Escrita</string>
     <string name="antifeatures">Anti-funcionalidades</string>
     <string name="anti_ads">Esta aplicação contém publicidade</string>
@@ -24,7 +25,7 @@
     <string name="anti_nonfreeadd">Esta aplicação promove extras não livres</string>
     <string name="anti_nonfreenet">Esta aplicação promove serviços de rede não livres</string>
     <string name="anti_nonfreedep">Esta aplicação depende de aplicações não livres</string>
-    <string name="anti_upstreamnonfree">O código-fonte não é integralmente Livre</string>
+    <string name="anti_upstreamnonfree">O código-fonte não é integralmente livre</string>
     <string name="anti_nonfreeassets">Esta aplicação contém recursos não livres</string>
     <string name="anti_disabledalgorithm">Esta aplicação tem uma assinatura de segurança fraca</string>
     <string name="anti_knownvuln">Esta aplicação contém uma vulnerabilidade conhecida</string>
@@ -32,7 +33,7 @@
     <string name="no_permissions">Não utiliza permissões.</string>
     <string name="perm_costs_money">Pode implicar gastos</string>
     <string name="perms_description_app">Disponibilizada por %1$s.</string>
-    <string name="perms_new_perm_prefix">Novas:</string>
+    <string name="perms_new_perm_prefix">Nova:</string>
     <string name="permissions">Permissões</string>
     <string name="links">Ligações</string>
     <string name="action_install">Instalar</string>
@@ -43,4 +44,73 @@
     <string name="download_all_updates">Descarregar todas as atualizações</string>
     <string name="downloading">A descarregar…</string>
     <string name="download_pending">À espera da descarga…</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">Abrir menu de navegação</string>
+    <string name="navigation_drawer_close">Fechar menu de navegação</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="nav_header_subtitle">Cliente para o repositório F-Droid</string>
+    <string name="nav_header_desc">Cabeçalho de navegação</string>
+    <string name="action_settings">Definições</string>
+    <string name="action_add_favourite">Adicionar aos favoritos</string>
+    <string name="title_activity_settings">Definições</string>
+    <string name="pref_header_general">"Cadeias relacionadas com Definições 
+\n Exemplo para definições gerais  "</string>
+    <string name="pref_title_social_recommendations">Ativar recomendações</string>
+    <string name="pref_description_social_recommendations">Ainda não funcional</string>
+    <string name="pref_title_display_name">Desativada</string>
+    <string name="pref_title_add_friends_to_messages">Desativada</string>
+    <string name="pref_header_data_sync">Exemplo de definições para dados e sincronização</string>
+    <string name="pref_title_sync_frequency">Frequência de sincronização</string>
+    <string name="pref_title_system_sync_settings">Definições de sincronização</string>
+    <string name="pref_header_notifications">Exemplo de definições para notificações</string>
+    <string name="pref_title_new_message_notifications">Notificações para novas mensagens</string>
+    <string name="pref_title_ringtone">Toque</string>
+    <string name="pref_ringtone_silent">Silêncio</string>
+    <string name="pref_title_vibrate">Vibrar</string>
+    <string name="title_home">Início</string>
+    <string name="title_dashboard">Painel de navegação</string>
+    <string name="title_notifications">Notificações</string>
+    <string name="title_categories">Categorias</string>
+    <string name="title_tags">Etiquetas</string>
+    <string name="title_starred">Com estrela</string>
+    <string name="title_myapps">Minhas aplicações</string>
+    <string name="title_search">Pesquisar</string>
+    <string name="app_store">Loja de aplicações</string>
+    <string name="calendar">Calendário</string>
+    <string name="camera">Câmara</string>
+    <string name="contacts">Contactos</string>
+    <string name="email_client">E-mail</string>
+    <string name="file_browser">Explorador de ficheiros</string>
+    <string name="gallery">Galeria</string>
+    <string name="launcher">Launcher</string>
+    <string name="music_player">Reprodutor de música</string>
+    <string name="shopping_list">Lista de compras</string>
+    <string name="text_editor">Editor de texto</string>
+    <string name="todo_list">Lista de tarefas</string>
+    <string name="torrent_downloader">Torrents</string>
+    <string name="web_browser">Navegador web</string>
+    <string name="youtube_player">Reprodutor Youtube</string>
+    <string name="action_hide">Ocultar</string>
+    <string name="action_unhide">Mostrar</string>
+    <string name="pref_header_ratings">Avaliações</string>
+    <string name="pref_title_upstream_ratings">Avaliações de GitHub, GitLab e SourceForge</string>
+    <string name="pref_title_ratings_headline">Definir a importância de cada métrica</string>
+    <string name="pref_title_ratings_summary">Atribua um número de 0 a 10 para cada métrica. Números mais altos implicam maior importância.</string>
+    <string name="pref_title_updated_in_2_years">Última atualização nos últimos 2 anos</string>
+    <string name="pref_title_release_cycle_time">Ciclo de novas versões</string>
+    <string name="search_harder">Pesquisar melhor</string>
+    <string name="search_even_harder">Pesquisar muito melhor</string>
+    <string name="menu_my_apps">Minhas aplicações</string>
+    <string name="menu_hidden_apps">Aplicações ocultas</string>
+    <string name="similar_apps">Aplicações semelhantes</string>
+    <string name="by_same_author">Do mesmo autor</string>
+    <string name="menu_app_authors">Autores</string>
+    <string name="installing" formatted="false">A instalar %s</string>
+    <string name="installing_details" formatted="false">A instalar %d de %d</string>
+    <string name="installation_finished">Instalação terminada</string>
+    <string name="installed_details">%d aplicações instaladas</string>
+    <string name="confirmation">Confirmação</string>
+    <string name="use_root">Deseja instalar as aplicações sem qualquer ação do utilizador, utilizando os privilégios root do dispositivo\?</string>
+    <string name="pref_description_use_root">Instalar e desinstalar aplicações automaticamente se o dispositivo tiver acesso root</string>
+    <string name="pref_title_use_root">Utilizar privilégio root</string>
 </resources>
