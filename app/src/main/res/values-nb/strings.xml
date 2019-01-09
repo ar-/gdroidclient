@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">Tilkobling</string>
@@ -103,4 +103,30 @@
     <string name="download_all_updates">Last ned alle oppdateringer</string>
     <string name="downloading">Laster ned…</string>
     <string name="download_pending">Venter på at nedlastingen skal starte…</string>
+    <string name="title_activity_temp_tab">TempTabActivity</string>
+    <string name="title_activity_app_collection">AppCollectionActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="action_hide">Skjul</string>
+    <string name="action_unhide">Vis</string>
+    <string name="pref_header_ratings">Stjernevurderinger</string>
+    <string name="pref_title_upstream_ratings">Vurderinger fra GitHub, GitLab og Sourceforge</string>
+    <string name="pref_title_ratings_headline">Vekt hver bestanddel</string>
+    <string name="pref_title_ratings_summary">Tildel et tall fra 0 til 10 for hver bestanddel. Høyere nummer er viktigere.</string>
+    <string name="pref_title_updated_in_2_years">siste oppdatering seneste to år</string>
+    <string name="pref_title_release_cycle_time">Utgivelsessyklus</string>
+    <string name="search_harder">søk hardere</string>
+    <string name="search_even_harder">søk enda hardere</string>
+    <string name="menu_my_apps">Mine programmer</string>
+    <string name="menu_hidden_apps">Skjulte programmer</string>
+    <string name="similar_apps">Lignende programmer</string>
+    <string name="by_same_author">Av samme utvikler</string>
+    <string name="menu_app_authors">Programutviklere</string>
+    <string name="installing" formatted="false">Installerer %s</string>
+    <string name="installing_details" formatted="false">Installerer %d / %d</string>
+    <string name="installation_finished">Installasjon fullført</string>
+    <string name="installed_details">Installerte %d programmer</string>
+    <string name="confirmation">Bekreftelse</string>
+    <string name="use_root">Ønsker du å installere programmer uten brukerinnvendinger, ved bruk av root-privilegier som finnes på denne enheten\?</string>
+    <string name="pref_description_use_root">Installer og avinstaller programmer automatisk hvis enheten har root-privilegier</string>
+    <string name="pref_title_use_root">Bruk root-privilegie</string>
 </resources>
