@@ -273,7 +273,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                     public void onClick(View v) {
                         Intent myIntent = new Intent(callingActivity, ImageActivity.class);
                         myIntent.putExtra("imgUrl", ssUrl);
-                        mContext.startActivity(myIntent);
+                        callingActivity.startActivity(myIntent);
                     }
                 });
             }
