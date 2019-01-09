@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">Sareak</string>
@@ -87,4 +86,9 @@
     <string name="torrent_downloader">Torrent bezeroa</string>
     <string name="web_browser">Web nabigatzailea</string>
     <string name="youtube_player">YouTube bezeroa</string>
+    <string name="yes">Bai</string>
+    <string name="no">Ez</string>
+    <string name="download_all_updates">Deskargatu eguneraketa guztiak</string>
+    <string name="downloading">Deskargatzen…</string>
+    <string name="download_pending">Deskarga hastearen zain…</string>
 </resources>

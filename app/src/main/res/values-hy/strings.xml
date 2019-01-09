@@ -27,4 +27,8 @@
     <string name="links">Հղումներ</string>
     <string name="action_install">Տեղադրել</string>
     <string name="action_upgrade">Նորացնել</string>
+    <string name="yes">Այո</string>
+    <string name="no">Ոչ</string>
+    <string name="downloading">Ներբեռնում եմ…</string>
+    <string name="download_pending">Սպասում եմ ներբեռնումը սկսելուն…</string>
 </resources>

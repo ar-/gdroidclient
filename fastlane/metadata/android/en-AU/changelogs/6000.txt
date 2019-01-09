@@ -1,0 +1,19 @@
+0.6.0
+  * added setting to use root, to install automatically
+  * added button to download and install all available updates
+  * increase network timeouts to load more images
+
+0.5.3
+  * added more weblate translations
+  * bugfix: touching screenshots crashed the app on Android 6
+
+0.5.2
+  * added a view to list all authors and their amount of apps
+
+0.5.1
+  * show apps of the same author in the app detail view
+
+0.5.0
+  * replaced Android's download manager with fetch2, fixing many download errors
+  * reduced optical size of cards
+  * added ability to hide apps

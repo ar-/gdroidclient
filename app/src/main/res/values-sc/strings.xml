@@ -38,4 +38,9 @@
     <string name="action_install">Installa</string>
     <string name="action_upgrade">Agiorna</string>
     <string name="action_launch">Allughe</string>
+    <string name="yes">Eja</string>
+    <string name="no">Nono</string>
+    <string name="download_all_updates">Iscàrriga totu sos agiornamentos</string>
+    <string name="downloading">Iscarrighende…</string>
+    <string name="download_pending">Isetende pro incumintzare s\'iscarrigamentu…</string>
 </resources>

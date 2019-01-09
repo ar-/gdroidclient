@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,9 +32,17 @@ import android.support.v4.os.LocaleListCompat;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.tonyodev.fetch2.Download;
+import com.tonyodev.fetch2.Status;
+import com.tonyodev.fetch2core.Func;
+
 import org.gdroid.gdroid.beans.AppBeanNameComparator;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.installer.DefaultInstaller;
+import org.gdroid.gdroid.installer.Installer;
+import org.gdroid.gdroid.installer.RootInstaller;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -46,6 +54,9 @@ import java.util.Set;
 
 public class Util {
 
+
+    public static final String NOTIFICATION_CHANEL_ID = "30009";
+    public static final int NOTIFICATION_ID = 14099;
 
     public static Activity getActivity(Context context)
     {
@@ -402,12 +413,25 @@ public class Util {
         }
     }
 
+    public static int getInstalledVersionCodeOfApp(Context context, String packageName) {
+        try {
+            PackageInfo pinfo = null;
+            pinfo = context.getPackageManager().getPackageInfo(packageName, 0);
+            int code = pinfo.versionCode;
+            return code;
+        }
+        catch (PackageManager.NameNotFoundException e) {
+            return -1;
+        }
+    }
+
     public static boolean isAppUpdateable (Context context, ApplicationBean applicationBean)
     {
-        final String installedVersionOfApp = Util.getInstalledVersionOfApp(context, applicationBean.id);
-        if (!TextUtils.isEmpty(installedVersionOfApp))
+        final long installedVersionCodeOfApp = Util.getInstalledVersionCodeOfApp(context, applicationBean.id);
+        if (!TextUtils.isEmpty(applicationBean.marketvercode) && installedVersionCodeOfApp > 0 )
         {
-            if (! applicationBean.marketversion.equals(installedVersionOfApp))
+            final int marketvercode = Integer.parseInt(applicationBean.marketvercode);
+            if (marketvercode > installedVersionCodeOfApp)
             {
                 return true;
             }
@@ -417,10 +441,8 @@ public class Util {
 
     private static boolean isFileExisting(String filename){
 
-        File folder1 = new File(filename);
-        return folder1.exists();
-
-
+        File f1 = new File(filename);
+        return f1.exists();
     }
 
     private static boolean deleteFile( String filename){
@@ -437,5 +459,74 @@ public class Util {
             deleteFile(filename);
         }
     }
+
+    public static boolean isRooted() {
+
+        // get from build info
+        String buildTags = android.os.Build.TAGS;
+        if (buildTags != null && buildTags.contains("test-keys")) {
+            return true;
+        }
+
+        // check if /system/app/Superuser.apk is present
+        try {
+            File file = new File("/system/app/Superuser.apk");
+            if (file.exists()) {
+                return true;
+            }
+        } catch (Exception e1) {
+            // ignore
+        }
+
+        // try executing commands
+        return canExecuteCommand("/system/xbin/which su")
+                || canExecuteCommand("/system/bin/which su") || canExecuteCommand("which su");
+    }
+
+    // executes a command on the system
+    private static boolean canExecuteCommand(String command) {
+        boolean executedSuccesfully;
+        try {
+            Runtime.getRuntime().exec(command);
+            executedSuccesfully = true;
+        } catch (Exception e) {
+            executedSuccesfully = false;
+        }
+
+        return executedSuccesfully;
+    }
+
+    public static Installer getAppInstaller(Context context) {
+        boolean isRooted = isRooted();
+        boolean useRoot = PreferenceManager.getDefaultSharedPreferences(context).getBoolean("use_root",false);
+        if (isRooted && useRoot)
+        {
+            return new RootInstaller();
+        }
+        return new DefaultInstaller();
+    }
+
+    public static void waitForAllDownloadsToFinish(final Context context) {
+        AppDownloader.getFetch(context).awaitFinishOrTimeout(120000L);
+    }
+
+    public static void waitForFileToBeStable(File file) {
+        long fileSize = file.length();
+        while (true)
+        {
+            Log.d("ARAIT", "waiting for download "+file.getName()+" to settle. Got now "+fileSize+" bytes");
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            long newFileSize = file.length();
+            if (newFileSize == fileSize)
+                break;
+            fileSize = newFileSize;
+        }
+    }
+
+
 
 }

@@ -20,6 +20,14 @@
 
     <SwitchPreference
         android:defaultValue="false"
+        android:enabled="true"
+        android:key="use_root"
+        android:summary="@string/pref_description_use_root"
+        android:title="@string/pref_title_use_root" />
+
+
+    <SwitchPreference
+        android:defaultValue="false"
         android:enabled="false"
         android:key="example_switch"
         android:summary="@string/pref_description_social_recommendations"

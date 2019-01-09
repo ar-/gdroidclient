@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@ public class ImageActivity extends AppCompatActivity {
         circularProgressDrawable.start();
 
         final Drawable errorImg = AppCompatResources.getDrawable(this, R.drawable.ic_android_black_24dp);
-        Glide.with(getApplicationContext())
+        GlideApp.with(getApplicationContext())
                 .load(imgUrl)
                 .placeholder(circularProgressDrawable)
                 .error(errorImg)

@@ -85,4 +85,14 @@
     <string name="torrent_downloader">Torrent-Downloader</string>
     <string name="web_browser">Webbrowser</string>
     <string name="youtube_player">YouTube-Player</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="download_all_updates">Alle Aktualisierungen herunterladen</string>
+    <string name="downloading">Wird heruntergeladen …</string>
+    <string name="download_pending">Auf den Start der Übertragung wird gewartet …</string>
+    <string name="pref_description_use_root">Apps automatisch installieren wenn das Geraet gerootet ist.</string>
+    <string name="pref_title_use_root">Root benutzen</string>
+    <string name="confirmation">Bestaetigung</string>
+    <string name="use_root">Dies ist ein gerootetes Geraet. Willst Du das benutzen um Apps automatisch zu installieren?</string>
+
 </resources>

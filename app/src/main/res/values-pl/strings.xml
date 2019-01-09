@@ -58,4 +58,9 @@
     <string name="gallery">Galeria</string>
     <string name="text_editor">Edytor tekstu</string>
     <string name="web_browser">Przeglądarka internetowa</string>
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
+    <string name="download_all_updates">Pobierz wszystkie aktualizacje</string>
+    <string name="downloading">Pobieranie…</string>
+    <string name="download_pending">Oczekiwanie na pobieranie…</string>
 </resources>

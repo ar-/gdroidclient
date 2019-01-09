@@ -38,4 +38,9 @@
     <string name="action_install">Instal·la</string>
     <string name="action_upgrade">Actualitza</string>
     <string name="action_launch">Executa</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="download_all_updates">Baixa totes les actualitzacions</string>
+    <string name="downloading">S\'està baixant…</string>
+    <string name="download_pending">S\'està esperant que comenci la baixada…</string>
 </resources>

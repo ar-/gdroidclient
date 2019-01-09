@@ -38,4 +38,9 @@
     <string name="action_install">Installer</string>
     <string name="action_upgrade">Mettre à jour</string>
     <string name="action_launch">Lancer</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="download_all_updates">Télécharger toutes les mises jour</string>
+    <string name="downloading">Téléchargement…</string>
+    <string name="download_pending">Téléchargement en attente…</string>
 </resources>

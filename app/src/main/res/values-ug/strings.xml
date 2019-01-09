@@ -30,4 +30,7 @@
     <string name="action_install">ئورنات</string>
     <string name="action_upgrade">يۈكسەلت</string>
     <string name="action_launch">ئىجرا قىل</string>
+    <string name="yes">ھەئە</string>
+    <string name="no">ياق</string>
+    <string name="download_all_updates">بارلىق يېڭىلانمىلارنى چۈشۈرۈش</string>
 </resources>

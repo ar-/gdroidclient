@@ -38,4 +38,9 @@
     <string name="action_install">Installa</string>
     <string name="action_upgrade">Aggiorna</string>
     <string name="action_launch">Avvia</string>
+    <string name="yes">Sì</string>
+    <string name="no">No</string>
+    <string name="download_all_updates">Scarica tutti gli aggiornamenti</string>
+    <string name="downloading">Scaricamento…</string>
+    <string name="download_pending">In attesa di avviare lo scaricamento…</string>
 </resources>

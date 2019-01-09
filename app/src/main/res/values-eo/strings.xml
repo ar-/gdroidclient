@@ -38,4 +38,9 @@
     <string name="action_install">Instali</string>
     <string name="action_upgrade">Ĝisdatigi</string>
     <string name="action_launch">Lanĉi</string>
+    <string name="yes">Jes</string>
+    <string name="no">Ne</string>
+    <string name="download_all_updates">Elŝuti ĉiujn ĝisdatigojn</string>
+    <string name="downloading">Elŝutado…</string>
+    <string name="download_pending">Atendado je instalado…</string>
 </resources>

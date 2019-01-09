@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -118,7 +118,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
             try
             {
                 final Drawable errorImg = AppCompatResources.getDrawable(mContext, R.drawable.ic_android_black_24dp);
-                Glide.with(mContext)
+                GlideApp.with(mContext)
                         .load("https://f-droid.org/repo/icons-640/"+applicationBean.icon)
                         .override(192, 192)
                         .placeholder(circularProgressDrawable)
@@ -145,7 +145,6 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         AsyncTask.execute(new Runnable() {
             @Override
             public void run() {
-                final String installedVersionOfApp = Util.getInstalledVersionOfApp(mContext, applicationBean.id);
                 final int drawableToBeSet;
                 if (Util.isAppUpdateable(mContext, applicationBean))
                 {

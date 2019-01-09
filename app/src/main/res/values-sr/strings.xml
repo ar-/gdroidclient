@@ -35,4 +35,9 @@
     <string name="action_install">Инсталирај</string>
     <string name="action_upgrade">Надогради</string>
     <string name="action_launch">Покрени</string>
+    <string name="yes">Да</string>
+    <string name="no">Не</string>
+    <string name="download_all_updates">Преузми све надоградње</string>
+    <string name="downloading">Преузимам…</string>
+    <string name="download_pending">Чекам на почетак преузимања…</string>
 </resources>
