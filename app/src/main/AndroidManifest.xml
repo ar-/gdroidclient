@@ -78,7 +78,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.gdroid.gdroid.MainActivity" />
         </activity>
-        <activity android:name="com.easwareapps.baria.ManualAppInstallActivity" />
+        <activity android:name=".installer.baria.ManualAppInstallActivity" />
     </application>
 
 </manifest>

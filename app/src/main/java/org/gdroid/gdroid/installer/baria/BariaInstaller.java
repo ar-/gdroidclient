@@ -16,7 +16,7 @@
  *
  */
 
-package org.gdroid.gdroid.installer;
+package org.gdroid.gdroid.installer.baria;
 
 import android.app.Activity;
 import android.content.Context;
@@ -24,9 +24,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
-
-import com.easwareapps.baria.AutoRootAppInstallTask;
-import com.easwareapps.baria.ManualAppInstallActivity;
 
 import org.gdroid.gdroid.AppDownloader;
 import org.gdroid.gdroid.R;
@@ -45,37 +42,37 @@ public class BariaInstaller {
         this.context = context;
     }
 
-    AutoRootAppInstallTask autoRootAppInstallTask;
+//    AutoRootAppInstallTask autoRootAppInstallTask;
     public void orderApkInstallations(final ArrayList<ApplicationBean> apps) {
 
         if(apps != null){
-            autoRootAppInstallTask = new AutoRootAppInstallTask(context, apps);
-        }
-        if (autoRootAppInstallTask.isRooted()) {
-            AlertDialog.Builder questionDialog = new AlertDialog.Builder(context);
-            questionDialog.setTitle(R.string.confirmation)
-                    .setMessage(R.string.use_root)
-                    .setIcon(R.mipmap.ic_launcher);
+            if (Util.isRooted()) {
+                AlertDialog.Builder questionDialog = new AlertDialog.Builder(context);
+                questionDialog.setTitle(R.string.confirmation)
+                        .setMessage(R.string.use_root)
+                        .setIcon(R.mipmap.ic_launcher);
 
-            questionDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    autoRootAppInstallTask.execute();
-                }
-            });
+                questionDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        final AutoRootAppInstallTask autoRootAppInstallTask = new AutoRootAppInstallTask(context, apps);
+                        autoRootAppInstallTask.execute();
+                    }
+                });
 
-            questionDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    installAppsManually(apps);
-                }
-            });
+                questionDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        installAppsManually(apps);
+                    }
+                });
 
-            questionDialog.create().show();
-        }
-        else
-        {
-            installAppsManually(apps);
+                questionDialog.create().show();
+            }
+            else
+            {
+                installAppsManually(apps);
+            }
         }
     }
 

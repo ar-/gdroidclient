@@ -55,6 +55,9 @@ import java.util.Set;
 public class Util {
 
 
+    public static final String NOTIFICATION_CHANEL_ID = "30009";
+    public static final int NOTIFICATION_ID = 14099;
+
     public static Activity getActivity(Context context)
     {
         if (context == null)

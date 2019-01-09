@@ -1,24 +1,21 @@
 /*
- * G-Droid
- * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
-` * <p/>
- * BARIA - Backup And Restore Installed Apps
- * Copyright (C) 2016  vishnu@easwareapps.com
- * <p/>
+ * Copyright (C) 2019 Andreas Redmer <ar-gdroid@abga.be>
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * <p/>
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * <p/>
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
  */
-package com.easwareapps.baria;
+package org.gdroid.gdroid.installer.baria;
 
 import android.app.Activity;
 import android.app.NotificationChannel;
@@ -46,6 +43,7 @@ import java.util.ArrayList;
 
 public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Void> {
 
+    public static final String TAG = "AutoRootAppInstallTask";
     ArrayList<ApplicationBean> packages;
     int totalCount = 0;
     int current = 0;
@@ -69,7 +67,7 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            String chanel_id = "30009";
+            String chanel_id = Util.NOTIFICATION_CHANEL_ID;
             CharSequence name = "Channel Name";
             String description = "Chanel Description";
             int importance = NotificationManager.IMPORTANCE_LOW;
@@ -86,7 +84,6 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
         mBuilder.setContentTitle(context.getString(R.string.installing_details, current, totalCount))
                 .setContentText(context.getString(R.string.installing, ""))
                 .setSmallIcon(R.mipmap.ic_launcher);
-        mNotifyManager.notify(14099, mBuilder.build());
         super.onPreExecute();
     }
 
@@ -104,7 +101,7 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
                 .setContentText(context.getString(R.string.installation_finished))
                 .setSmallIcon(R.mipmap.ic_launcher);
         mBuilder.setProgress(totalCount, current, false);
-        mNotifyManager.notify(14099, mBuilder.build());
+        mNotifyManager.notify(Util.NOTIFICATION_ID, mBuilder.build());
 
         super.onPostExecute(aVoid);
 
@@ -123,25 +120,12 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
 
     @Override
     protected void onProgressUpdate(ApplicationBean... info) {
-        Bitmap bitmap = null;
-        //Drawable icon = info[0].icon;
-        try {
-
-            //bitmap = Bitmap.createBitmap(icon.getIntrinsicWidth(), icon.getIntrinsicHeight()
-            //        , Bitmap.Config.ARGB_8888);
-            //Canvas canvas = new Canvas(bitmap);
-            //icon.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-            //icon.draw(canvas);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
         mBuilder.setProgress(totalCount, current, false);
         mBuilder.setContentTitle(context.getString(R.string.installing_details, current, totalCount))
                 .setContentText(context.getString(R.string.installing, info[0].name));
         mBuilder.setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher));
         mBuilder.setSmallIcon(R.mipmap.ic_launcher);
-        mNotifyManager.notify(14099, mBuilder.build());
+        mNotifyManager.notify(Util.NOTIFICATION_ID, mBuilder.build());
         super.onProgressUpdate(info);
 
     }
@@ -152,7 +136,7 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
             current++;
             publishProgress(new ApplicationBean[]{packageInfo});
             try {
-                if (isRooted()) {
+                if (Util.isRooted()) {
                     final String downloadTarget = AppDownloader.getAbsoluteFilenameOfDownloadTarget(context, packageInfo);
                     installApp(downloadTarget);
                 }
@@ -183,7 +167,7 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
                         error = s + "\n";
                     }
                     final String finalError = error;
-                    Log.e("ARAIT", finalError);
+                    Log.e(TAG, finalError);
                     ((Activity)context).runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -204,42 +188,6 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
 
             }
         }
-    }
-
-    public boolean isRooted() {
-
-        // get from build info
-        String buildTags = android.os.Build.TAGS;
-        if (buildTags != null && buildTags.contains("test-keys")) {
-            return true;
-        }
-
-        // check if /system/app/Superuser.apk is present
-        try {
-            File file = new File("/system/app/Superuser.apk");
-            if (file.exists()) {
-                return true;
-            }
-        } catch (Exception e1) {
-            // ignore
-        }
-
-        // try executing commands
-        return canExecuteCommand("/system/xbin/which su")
-                || canExecuteCommand("/system/bin/which su") || canExecuteCommand("which su");
-    }
-
-    // executes a command on the system
-    private static boolean canExecuteCommand(String command) {
-        boolean executedSuccesfully;
-        try {
-            Runtime.getRuntime().exec(command);
-            executedSuccesfully = true;
-        } catch (Exception e) {
-            executedSuccesfully = false;
-        }
-
-        return executedSuccesfully;
     }
 
 }

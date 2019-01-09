@@ -1,24 +1,21 @@
 /*
- * G-Droid
- * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
- * <p/>
- * BARIA - Backup And Restore Installed Apps
- * Copyright (C) 2016  vishnu@easwareapps.com
- * <p/>
+ * Copyright (C) 2019 Andreas Redmer <ar-gdroid@abga.be>
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * <p/>
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * <p/>
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
  */
- package com.easwareapps.baria;
+ package org.gdroid.gdroid.installer.baria;
 
 import android.app.Activity;
 import android.app.NotificationChannel;
@@ -38,6 +35,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import org.gdroid.gdroid.MainActivity;
 import org.gdroid.gdroid.R;
+import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.installer.DefaultInstaller;
 
 import java.util.ArrayList;
@@ -91,20 +89,17 @@ public class ManualAppInstallActivity extends AppCompatActivity {
             showNotification(getResources().getString(R.string.installation_finished),
                     getResources().getString(R.string.installed_details, index));
 
-            // TODO update UI
-//            final ComponentName callingActivity = getCallingActivity();
-//            final Activity parent = getParent();
-//            final Context baseContext = getBaseContext();
-//            if (context instanceof MainActivity)
-//            {
-//                final MainActivity ma = (MainActivity) context;
-//                ma.runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        ma.updateCurrentView();
-//                    }
-//                });
-//            }
+            // update UI (hack, but at least it works compared to the other methods)
+            final MainActivity ma = MainActivity.getLastCreatedInstance();
+            if (ma !=null)
+            {
+                ma.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ma.updateCurrentView();
+                    }
+                });
+            }
 
             finish();
         }else{
@@ -117,7 +112,7 @@ public class ManualAppInstallActivity extends AppCompatActivity {
         mNotifyManager =  (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            String chanel_id = "30009";
+            String chanel_id = Util.NOTIFICATION_CHANEL_ID;
             CharSequence name = "Channel Name";
             String description = "Chanel Description";
             int importance = NotificationManager.IMPORTANCE_LOW;
@@ -135,6 +130,6 @@ public class ManualAppInstallActivity extends AppCompatActivity {
                 .setContentText(desc)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
-        mNotifyManager.notify(14099, mBuilder.build());
+        mNotifyManager.notify(Util.NOTIFICATION_ID, mBuilder.build());
     }
 }

@@ -153,24 +153,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                             .getDefaultSharedPreferences(preference.getContext())
                             .getString(preference.getKey(), ""));
         }
-
-//        // Trigger the listener immediately with the preference's
-//        // current value.
-//        String value = "";
-//        try {
-//            value = PreferenceManager
-//                    .getDefaultSharedPreferences(preference.getContext())
-//                    .getString(preference.getKey(), "");
-//        }
-//        catch (ClassCastException e)
-//        {
-//            value = Integer.toString(PreferenceManager
-//                    .getDefaultSharedPreferences(preference.getContext())
-//                    .getInt(preference.getKey(), 1));
-//        }
-//
-//        sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
-//                value);
     }
 
     @Override

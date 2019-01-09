@@ -48,7 +48,7 @@ import android.widget.Button;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
-import org.gdroid.gdroid.installer.BariaInstaller;
+import org.gdroid.gdroid.installer.baria.BariaInstaller;
 import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
 import org.gdroid.gdroid.widget.BottomNavigationView;
 
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "MainActivity";
+    private static MainActivity lastCreatedInstance = null;
 
     private RecyclerView recyclerView;
     BottomNavigationView navigation;
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        lastCreatedInstance = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.loadingPanel).setVisibility(View.GONE);
@@ -255,13 +257,11 @@ public class MainActivity extends AppCompatActivity
             appCollectionDescriptorList.add(a3);
             AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "Random apps");
             appCollectionDescriptorList.add(a4);
-//            AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "top rates apps");
-//            appCollectionDescriptorList.add(a4);
 //            AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "you might also like");
 //            appCollectionDescriptorList.add(a5);
 //            AppCollectionDescriptor a7 = new AppCollectionDescriptor(context, "popular apps");
 //            appCollectionDescriptorList.add(a7);
-//            AppCollectionDescriptor a8 = new AppCollectionDescriptor(context, "System");
+//            AppCollectionDescriptor a8 = new AppCollectionDescriptor(context, "app of the day");
 //            appCollectionDescriptorList.add(a8);
 //            AppCollectionDescriptor a9 = new AppCollectionDescriptor(context, "well maintained");
 //            appCollectionDescriptorList.add(a9);
@@ -535,4 +535,8 @@ public class MainActivity extends AppCompatActivity
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
     }
 
+
+    public static MainActivity getLastCreatedInstance() {
+        return lastCreatedInstance;
+    }
 }

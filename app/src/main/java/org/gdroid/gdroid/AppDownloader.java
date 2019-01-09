@@ -42,12 +42,14 @@ import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.installer.Installer;
 import org.jetbrains.annotations.NotNull;
 
+import java.security.acl.Owner;
 import java.util.List;
 
 import okhttp3.OkHttpClient;
 
 public class AppDownloader {
 
+    public static final String TAG = "AppDownloader";
     public static final String repoBaseUrl = "https://f-droid.org/repo/";
 
     public static Request download(final Context context, ApplicationBean mApp, final boolean install) {
@@ -66,7 +68,7 @@ public class AppDownloader {
         request.setNetworkType(NetworkType.ALL);
         request.setExtras(extras);
 
-        request.setEnqueueAction(EnqueueAction.REPLACE_EXISTING); // can be removed when this is fixed https://github.com/tonyofrancis/Fetch/issues/295
+        request.setEnqueueAction(EnqueueAction.REPLACE_EXISTING); // can be removed when this is fixed https://github.com/tonyofrancis/Fetch/issues/295 or then #76 is fixed
         fetch.enqueue(request, new Func<Request>() {
             @Override
             public void call(@NotNull Request result) {
@@ -112,7 +114,7 @@ public class AppDownloader {
                                     try {
                                         ada.updateInstallStatus(Status.NONE);
                                     } catch (Throwable t) {
-                                        Log.e("ADA", "error in updateInstallStatus", t);
+                                        Log.e(TAG, "error in updateInstallStatus", t);
                                     }
                                 }
                             });
@@ -120,7 +122,7 @@ public class AppDownloader {
                     }
                 };
 
-                Log.d("ADL", "done");
+                Log.d(TAG, "done");
                 String appId = download.getExtras().getString("id","");
                 AppDatabase db = AppDatabase.get(context);
                 ApplicationBean ab = db.appDao().getApplicationBean(appId);
@@ -191,7 +193,7 @@ public class AppDownloader {
             return fetch;
         OkHttpClient okHttpClient = new OkHttpClient.Builder().build();
         FetchConfiguration fetchConfiguration = new FetchConfiguration.Builder(context)
-                .setDownloadConcurrentLimit(5)
+                .setDownloadConcurrentLimit(2)
                 .setNamespace("AppDownloader")
                 .setHttpDownloader(new OkHttpDownloader(okHttpClient))
                 .build();
