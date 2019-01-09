@@ -92,4 +92,27 @@
     <string name="download_all_updates">Tüm güncellemeleri indir</string>
     <string name="downloading">İndiriliyor…</string>
     <string name="download_pending">İndirmeye başlamak için bekleniyor…</string>
+    <string name="action_hide">Gizle</string>
+    <string name="action_unhide">Göster</string>
+    <string name="pref_header_ratings">Yıldız Derecelendirmesi</string>
+    <string name="pref_title_upstream_ratings">Github, Gitlab ve Sourceforge\'dan Derecelendirmeler</string>
+    <string name="pref_title_ratings_headline">Her metrik için öneminizi ayarlayın</string>
+    <string name="pref_title_ratings_summary">Her metriğe 0 ile 10 arasında bir sayı atayın. Daha yüksek sayı, daha fazla önem anlamına gelir.</string>
+    <string name="pref_title_updated_in_2_years">son 2 yıldaki son güncelleme</string>
+    <string name="pref_title_release_cycle_time">Devir süresini bırak</string>
+    <string name="search_harder">daha sıkı ara</string>
+    <string name="search_even_harder">daha da sıkı ara</string>
+    <string name="menu_my_apps">"Uygulamalarım "</string>
+    <string name="menu_hidden_apps">Gizli uygulamalar</string>
+    <string name="similar_apps">Benzer uygulamalar</string>
+    <string name="by_same_author">"Aynı Yazar tarafından "</string>
+    <string name="menu_app_authors">Uygulama Yazarları</string>
+    <string name="installing" formatted="false">%s yükleniyor</string>
+    <string name="installing_details" formatted="false">%d/%d yükleniyor</string>
+    <string name="installation_finished">Yükleme Tamamlandı</string>
+    <string name="installed_details">%d uygulama başarıyla yüklendi</string>
+    <string name="confirmation">Doğrulama</string>
+    <string name="use_root">Bu Kök İzinli Bir Cihazdır. Kök Ayrıcalığını kullanarak uygulamaları kullanıcı etkileşimi olmadan yüklemek ister misiniz\?</string>
+    <string name="pref_description_use_root">cihaz kök izinli ise uygulamaları otomatik olarak kur ve kaldır</string>
+    <string name="pref_title_use_root">Kök İzni Ayrıcalığını Kullan</string>
 </resources>
