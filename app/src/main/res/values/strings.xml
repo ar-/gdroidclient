@@ -16,7 +16,6 @@
   ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   ~
   -->
-
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -87,7 +86,7 @@
         <item>3</item>
     </string-array>
 
-    <string-array name="multi_select_list_preference_default_value" />
+    <string-array name="multi_select_list_preference_default_value"/>
 
     <string name="pref_title_system_sync_settings">System sync settings</string>
 
