@@ -33,6 +33,9 @@ public interface SimpleApplicationDao {
     @Query("SELECT * FROM ApplicationBean")
     public ApplicationBean[] getAllApplicationBeans();
 
+    @Query("SELECT * FROM ApplicationBean WHERE NOT isHidden AND id IN (:ids)")
+    public ApplicationBean[] getSomeApplicationBeans(List<String> ids);
+
     @Query("SELECT * FROM ApplicationBean WHERE NOT isHidden ORDER BY lastupdated DESC LIMIT :limit OFFSET :offset")
     public ApplicationBean[] getLastUpdated(int limit, int offset);
 

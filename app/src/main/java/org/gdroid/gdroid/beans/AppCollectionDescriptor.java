@@ -177,6 +177,19 @@ public class AppCollectionDescriptor {
             }
             db.close();
         }
+        else if (collectionName.startsWith("similar:"))
+        {
+            String appToCheck = collectionName.replace("similar:","");
+            AppDatabase db = AppDatabase.get(mContext);
+            final ApplicationBean applicationBean = db.appDao().getApplicationBean(appToCheck);
+            ApplicationBean[] appsInDb = db.appDao().getSomeApplicationBeans(applicationBean.getNeighbours());
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+            db.close();
+        }
         else if (collectionName.startsWith("cat:"))
         {
             String cat = collectionName.replace("cat:","");

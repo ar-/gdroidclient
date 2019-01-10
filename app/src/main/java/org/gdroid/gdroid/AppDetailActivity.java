@@ -188,11 +188,15 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             lblAntiFeatures.setVisibility(View.GONE);
         }
 
-        // populate similar apps
-        // use just first category for now
+//        // populate similar apps
+        AppCollectionDescriptor similarAppsCollectionDescriptor = new AppCollectionDescriptor(mContext,"similar:" + mApp.id);
+        populateSimilarAppsView(similarAppsCollectionDescriptor,   R.id.lbl_similar_apps,  R.id.rec_view_similar_apps);
+
+        // apps in same category
         AppCollectionDescriptor sameCatCollectionDescriptor = new AppCollectionDescriptor(mContext,"cat:" + categories[0].catName);
         populateSimilarAppsView(sameCatCollectionDescriptor,   R.id.lbl_same_category,  R.id.rec_view_same_category);
 
+        // apps by same author
         AppCollectionDescriptor sameAuthorCollectionDescriptor = new AppCollectionDescriptor(mContext,"author:" + mApp.author);
         populateSimilarAppsView(sameAuthorCollectionDescriptor,  R.id.lbl_same_author,  R.id.rec_view_same_author);
 

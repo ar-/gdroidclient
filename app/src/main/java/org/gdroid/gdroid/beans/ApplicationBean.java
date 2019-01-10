@@ -135,7 +135,19 @@ public class ApplicationBean {
         return ret;
     }
 
-    public List<Pair<String,Integer>> getNeighbours()
+    public List<String> getNeighbours()
+    {
+        ArrayList<String> ret = new ArrayList<>();
+        if (neighbours != null)
+        {
+            for (String s:neighbours.split(";")) {
+                ret.add(s);
+            }
+        }
+        return ret;
+    }
+
+    public List<Pair<String,Integer>> getNeighboursWithSimilarity()
     {
         ArrayList<Pair<String,Integer>> ret = new ArrayList<>();
         if (neighbours != null)
