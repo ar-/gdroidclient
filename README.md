@@ -61,13 +61,11 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * INTERNET: to download the app-metadata and the apps
 * WRITE_EXTERNAL_STORAGE: To store the downloaded apps temporarily (permission only on older Android version enforced)
 
-## Translating
+# Translating
 
-The strings are translated using [Weblate](https://hosted.weblate.org/projects/g-droid/translations/). Follow [these instructions](https://hosted.weblate.org/engage/f-droid/) if you would like to contribute.
+The app is translated using [Weblate](https://hosted.weblate.org/projects/g-droid/translations/). Follow [these instructions](https://hosted.weblate.org/engage/g-droid/) if you would like to contribute.
 
-Please *do not* send merge requests or patches modifying the translations. Use Weblate instead - it applies a series of fixes and suggestions, plus it keeps track of modifications and fuzzy translations. Applying translations manually skips all of the fixes and checks, and overrides the fuzzy state of strings.
-
-Note that you cannot change the English strings on Weblate. If you have any suggestions on how to improve them, open a merge request like you would if you were making code changes. This way the changes can be reviewed before the source strings on Weblate are changed.
+While you can also send merge requests or patches modifying the translations, Weblate is a much better way to go. Use Weblate instead - it applies a series of fixes and suggestions, plus it keeps track of modifications and fuzzy translations. Applying translations manually skips all of the fixes and checks, and overrides the fuzzy state of strings.
 
 # FAQ
 
