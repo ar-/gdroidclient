@@ -521,6 +521,8 @@ public class Util {
                 e.printStackTrace();
             }
             long newFileSize = file.length();
+            if (newFileSize == 0L)
+                continue;
             if (newFileSize == fileSize)
                 break;
             fileSize = newFileSize;
