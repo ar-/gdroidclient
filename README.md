@@ -1,3 +1,5 @@
+[![Translation status](https://hosted.weblate.org/widgets/g-droid/-/translations/svg-badge.svg)](https://hosted.weblate.org/engage/g-droid/?utm_source=widget)
+
 # What is this app
 
 G-Droid can browse the free F-Droid app-repository. It is an alternative client to the F-Droid client.
@@ -66,6 +68,10 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 The app is translated using [Weblate](https://hosted.weblate.org/projects/g-droid/translations/). Follow [these instructions](https://hosted.weblate.org/engage/g-droid/) if you would like to contribute.
 
 While you can also send merge requests or patches modifying the translations, Weblate is a much better way to go. Use Weblate instead - it applies a series of fixes and suggestions, plus it keeps track of modifications and fuzzy translations. Applying translations manually skips all of the fixes and checks, and overrides the fuzzy state of strings.
+
+[![Translation status](https://hosted.weblate.org/widgets/g-droid/-/translations/287x66-grey.png)](https://hosted.weblate.org/engage/g-droid/?utm_source=widget)
+
+[![Translation status](https://hosted.weblate.org/widgets/g-droid/-/translations/multi-auto.svg)](https://hosted.weblate.org/engage/g-droid/?utm_source=widget)
 
 # FAQ
 
