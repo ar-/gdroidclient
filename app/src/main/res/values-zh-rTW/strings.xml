@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">連線</string>
@@ -20,7 +21,7 @@
     <string name="category_Writing">書寫</string>
     <string name="antifeatures">反特徵</string>
     <string name="anti_ads">此應用程式含有廣告</string>
-    <string name="anti_tracking">本應用程式會追蹤和彙報您的行為</string>
+    <string name="anti_tracking">本應用程式會追蹤和回報您的行為</string>
     <string name="anti_nonfreeadd">此應用程式推廣非自由的附加元件</string>
     <string name="anti_nonfreenet">此應用程式推廣非自由的網路服務</string>
     <string name="anti_nonfreedep">此應用程式依賴其他非自由的應用程式</string>
@@ -41,6 +42,77 @@
     <string name="yes">是</string>
     <string name="no">否</string>
     <string name="download_all_updates">下載所有更新</string>
-    <string name="downloading">正在下載…</string>
-    <string name="download_pending">等待開始下載…</string>
+    <string name="downloading">正在下載……</string>
+    <string name="download_pending">等待開始下載……</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">開啟導航抽屜</string>
+    <string name="navigation_drawer_close">關閉導航抽屜</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="nav_header_subtitle">F-Droid 軟體庫的客戶端</string>
+    <string name="nav_header_desc">導航標頭</string>
+    <string name="action_settings">設定</string>
+    <string name="action_add_favourite">新增到收藏</string>
+    <string name="title_activity_settings">設定</string>
+    <string name="pref_header_general">一般</string>
+    <string name="pref_title_social_recommendations">啟用建議</string>
+    <string name="pref_description_social_recommendations">無法運作</string>
+    <string name="pref_title_display_name">已停用</string>
+    <string name="pref_title_add_friends_to_messages">已停用</string>
+    <string name="pref_header_data_sync">資料與同步</string>
+    <string name="pref_title_sync_frequency">同步頻率</string>
+    <string name="pref_title_system_sync_settings">系統同步設定</string>
+    <string name="pref_header_notifications">通知</string>
+    <string name="pref_title_new_message_notifications">新訊息通知</string>
+    <string name="pref_title_ringtone">鈴聲</string>
+    <string name="pref_ringtone_silent">安靜</string>
+    <string name="pref_title_vibrate">振動</string>
+    <string name="title_activity_temp_tab">TempTabActivity</string>
+    <string name="title_home">首頁</string>
+    <string name="title_dashboard">儀表板</string>
+    <string name="title_notifications">通知</string>
+    <string name="title_categories">分類</string>
+    <string name="title_tags">標籤</string>
+    <string name="title_starred">已加星號</string>
+    <string name="title_myapps">我的應用程式</string>
+    <string name="title_search">搜尋</string>
+    <string name="title_activity_app_collection">AppCollectionActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="app_store">應用程式商店</string>
+    <string name="calendar">日曆</string>
+    <string name="camera">相機</string>
+    <string name="contacts">聯絡人</string>
+    <string name="email_client">電子郵件客戶端</string>
+    <string name="file_browser">檔案瀏覽器</string>
+    <string name="gallery">相簿</string>
+    <string name="launcher">啟動器</string>
+    <string name="music_player">音樂播放器</string>
+    <string name="shopping_list">購物清單</string>
+    <string name="text_editor">文字編輯器</string>
+    <string name="todo_list">待辦清單</string>
+    <string name="torrent_downloader">種子下載器</string>
+    <string name="web_browser">網路瀏覽器</string>
+    <string name="youtube_player">YouTube 播放器</string>
+    <string name="action_hide">隱藏</string>
+    <string name="action_unhide">取消隱藏</string>
+    <string name="pref_header_ratings">評價</string>
+    <string name="pref_title_upstream_ratings">從 GitHub、GitLab 與 SourceForge 而來的評價</string>
+    <string name="pref_title_ratings_headline">設定每個指標的重要程度</string>
+    <string name="pref_title_ratings_summary">為每個指標給予一個從 0 到 10 的數字。較高的數字代表較高的重要程度。</string>
+    <string name="pref_title_updated_in_2_years">最近更新在 2 年內</string>
+    <string name="pref_title_release_cycle_time">釋出週期時間</string>
+    <string name="search_harder">更努力地搜尋</string>
+    <string name="search_even_harder">非常努力搜尋</string>
+    <string name="menu_my_apps">我的應用程式</string>
+    <string name="menu_hidden_apps">已隱藏的應用程式</string>
+    <string name="similar_apps">類似的應用程式</string>
+    <string name="by_same_author">相同作者</string>
+    <string name="menu_app_authors">應用程式作者</string>
+    <string name="installing" formatted="false">正在安裝 %s</string>
+    <string name="installing_details" formatted="false">正在安裝 %d / %d</string>
+    <string name="installation_finished">安裝完成</string>
+    <string name="installed_details">已安裝 %d 應用程式</string>
+    <string name="confirmation">確認</string>
+    <string name="use_root">您想要使用在此裝置上可用的 root 權限以在沒有使用者介入的情況下安裝應用程式嗎？</string>
+    <string name="pref_description_use_root">如果裝置已 root 則自動安裝與解除安裝應用程式</string>
+    <string name="pref_title_use_root">使用 Root 權限</string>
 </resources>
