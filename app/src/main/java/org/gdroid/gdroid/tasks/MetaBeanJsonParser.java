@@ -93,7 +93,6 @@ class MetaBeanJsonParser extends AbstractJsonParser implements JsonParser{
             return;
 
         final JSONObject metrics = content.optJSONObject("metrics");
-        //final JSONObject neighbours = content.optJSONObject("neighbours"); // TODO use neighbours
 
         if (metrics != null)
         {
@@ -125,6 +124,21 @@ class MetaBeanJsonParser extends AbstractJsonParser implements JsonParser{
             }
             ab.stars = (float) mm.getScaledValue(5.0);
             ab.metriccount = mm.countMetrics();
+        }
+
+        // neighbours
+        final JSONObject neighbours = content.optJSONObject("neighbours");
+        if (neighbours != null)
+        {
+            final JSONArray a = neighbours.optJSONArray("a");
+            if (a != null)
+            {
+                ArrayList<String> al = new ArrayList<>(a.length());
+                for (int i = 0 ; i < a.length() ; i++) {
+                    al.add(a.get(i).toString());
+                }
+                ab.neighbours = TextUtils.join(";", al);
+            }
         }
 
         // tags

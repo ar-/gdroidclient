@@ -23,6 +23,7 @@ import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
+import android.util.Pair;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -77,6 +78,12 @@ public class ApplicationBean {
 
     public boolean isHidden = false;
 
+    /**
+     * List of neighbours, separated by semicolon (since comma can be in id)
+     */
+    public String neighbours;
+
+
     public ApplicationBean() {
     }
 
@@ -123,6 +130,20 @@ public class ApplicationBean {
         {
             for (String s:screenshots.split(";")) {
                 ret.add(s);
+            }
+        }
+        return ret;
+    }
+
+    public List<Pair<String,Integer>> getNeighbours()
+    {
+        ArrayList<Pair<String,Integer>> ret = new ArrayList<>();
+        if (neighbours != null)
+        {
+            String[] split = neighbours.split(";");
+            int i = split.length+1;
+            for (String s:split) {
+                ret.add(new Pair<>(s, i--));
             }
         }
         return ret;
