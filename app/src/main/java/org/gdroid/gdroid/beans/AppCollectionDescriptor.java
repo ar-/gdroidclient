@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -170,6 +170,19 @@ public class AppCollectionDescriptor {
             String au = collectionName.replace("author:","");
             AppDatabase db = AppDatabase.get(mContext);
             ApplicationBean[] appsInDb = db.appDao().getAppsByAuthor(au, mLimit, mOffset);
+
+            applicationBeanList.clear();
+            for (ApplicationBean ab: appsInDb ) {
+                applicationBeanList.add(ab);
+            }
+            db.close();
+        }
+        else if (collectionName.startsWith("similar:"))
+        {
+            String appToCheck = collectionName.replace("similar:","");
+            AppDatabase db = AppDatabase.get(mContext);
+            final ApplicationBean applicationBean = db.appDao().getApplicationBean(appToCheck);
+            ApplicationBean[] appsInDb = db.appDao().getSomeApplicationBeans(applicationBean.getNeighbours());
 
             applicationBeanList.clear();
             for (ApplicationBean ab: appsInDb ) {

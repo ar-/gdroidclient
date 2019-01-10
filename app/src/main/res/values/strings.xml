@@ -15,8 +15,7 @@
   ~ You should have received a copy of the GNU General Public License
   ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   ~
-  -->
-<resources xmlns:tools="http://schemas.android.com/tools">
+  --><resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -175,7 +174,7 @@
     <string name="action_unhide">Unhide</string>
 
     <string name="pref_header_ratings">Star Ratings</string>
-    <string name="pref_title_upstream_ratings">Ratings from Github, Gitlab and Sourceforge</string>
+    <string name="pref_title_upstream_ratings">Ratings from GitHub, GitLab and SourceForge</string>
     <string name="pref_title_ratings_headline">Set your importance for each metric</string>
     <string name="pref_title_ratings_summary">Assign a number from 0 to 10 to each metric. Higher number means higher importance.</string>
     <string name="pref_title_updated_in_2_years">last update in recent 2 years</string>
@@ -192,9 +191,9 @@
     <string name="installing" formatted="false">Installing %s</string>
     <string name="installing_details" formatted="false">Installing %d / %d </string>
     <string name="installation_finished">Installation Finished</string>
-    <string name="installed_details">Installed %d apps successfully</string>
+    <string name="installed_details">Installed %d apps</string>
     <string name="confirmation">Confirmation</string>
-    <string name="use_root">This is a Rooted Device. Do you want to install applications without user interaction, using Root Privilege ?</string>
+    <string name="use_root">Do you want to install apps without user interaction, using root privileges available on this device\?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="download_all_updates">Download all updates</string>
@@ -203,4 +202,5 @@
     <string name="download_pending">Waiting to start download…</string>
     <string name="pref_description_use_root">install and uninstall apps automatically if the device is rooted</string>
     <string name="pref_title_use_root">Use Root Privilege</string>
+    <string name="in_same_category">Same category</string>
 </resources>
