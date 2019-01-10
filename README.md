@@ -16,7 +16,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * shows the star upstream star ratings (github, gitlab, sourceforge)
 * implements more metrics bases on open source data (like average release cycle time) to generate a star-rating
 * let the users choose which metrics are important to them, so there is no 'best app' in the repo - there is only a 'best app' from the point of view of the current user
-* shows 'similar apps' when watching an app
+* shows 'similar apps' and 'apps of the same category' when watching an app
 * shows 'apps of the same author' when watching an app
 * shows a list of all authors, with their apps and average star rating
 * shows web-site of the app - even if it is 'only a README file on github'. F-Droid has recently removed many websites to punish open source developers who can't effort their own domain.
@@ -99,3 +99,7 @@ If you are technically experienced you can look at this file: https://gitlab.com
 * The normal search is searching only in the app names in your language (yes, apps can have different names in different languages).
 * 'search harder' includes the app-summary into the search, which is a short description of the app in one or 2 sentences.
 * 'search even harder' includes also the app description in the search result. This is similar to the search in the F-Droid client. The result will contain a maximum of results but many of them might be irrelevant.
+
+## Where do the similar apps come from?
+
+They are calculated by this R script https://gitlab.com/frief/app_match.r made by Frieder Ferlemann. Please check it out and feel free to contribute to it, if you'd like to improve the similar apps.
