@@ -89,4 +89,23 @@
     <string name="download_all_updates">הורדת כל העדכונים</string>
     <string name="downloading">מתבצעת הורדה…</string>
     <string name="download_pending">בהמתנה להתחלת ההורדה…</string>
+    <string name="title_activity_temp_tab">TempTabActivity</string>
+    <string name="title_activity_app_collection">AppCollectionActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="action_hide">הסתרה</string>
+    <string name="action_unhide">הצגה</string>
+    <string name="pref_header_ratings">ציון בכוכבים</string>
+    <string name="pref_title_upstream_ratings">דירוגים מ־GitHub,‏ GitLab ו־Sourceforge</string>
+    <string name="pref_title_ratings_headline">הגדרת עדיפות משלך לכל מדד</string>
+    <string name="pref_title_updated_in_2_years">עדכון אחרון בטווח השנתיים האחרונות</string>
+    <string name="pref_title_release_cycle_time">מועד מחזור גרסה</string>
+    <string name="menu_my_apps">היישומונים שלי</string>
+    <string name="menu_hidden_apps">יישומונים מוסתרים</string>
+    <string name="similar_apps">יישומונים דומים</string>
+    <string name="by_same_author">מאותו בית יוצר</string>
+    <string name="menu_app_authors">מפתחי יישומונים</string>
+    <string name="installing" formatted="false">%s בהליכי התקנה</string>
+    <string name="installation_finished">ההתקנה הסתיימה</string>
+    <string name="installed_details">הותקנו %d יישומונים</string>
+    <string name="confirmation">אישור</string>
 </resources>
