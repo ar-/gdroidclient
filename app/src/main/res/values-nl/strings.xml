@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">Connectiviteit</string>
@@ -43,4 +44,75 @@
     <string name="download_all_updates">Alle updates downloaden</string>
     <string name="downloading">Downloaden…</string>
     <string name="download_pending">Wachten op start van download…</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">Navigatiebalk openen</string>
+    <string name="navigation_drawer_close">Navigatiebalk sluiten</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="nav_header_subtitle">cliënt voor de F-Droid-pakketbron</string>
+    <string name="nav_header_desc">Navigatiehoofding</string>
+    <string name="action_settings">Instellingen</string>
+    <string name="action_add_favourite">Toevoegen aan favorieten</string>
+    <string name="title_activity_settings">Instellingen</string>
+    <string name="pref_header_general">Algemeen</string>
+    <string name="pref_title_social_recommendations">Aanbevelingen inschakelen</string>
+    <string name="pref_description_social_recommendations">werkt nog niet</string>
+    <string name="pref_title_display_name">Uitgeschakeld</string>
+    <string name="pref_title_add_friends_to_messages">uitgeschakeld</string>
+    <string name="pref_header_data_sync">Gegevens &amp; synchronisatie</string>
+    <string name="pref_title_sync_frequency">Synchroniseerfrequentie</string>
+    <string name="pref_title_system_sync_settings">Systeemsynchronisatieinstellingen</string>
+    <string name="pref_header_notifications">Meldingen</string>
+    <string name="pref_title_new_message_notifications">Nieuwe meldingen</string>
+    <string name="pref_title_ringtone">Beltoon</string>
+    <string name="pref_ringtone_silent">Stil</string>
+    <string name="pref_title_vibrate">Trillen</string>
+    <string name="title_activity_temp_tab">TempTabActivity</string>
+    <string name="title_home">Start</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Meldingen</string>
+    <string name="title_categories">categorieën</string>
+    <string name="title_tags">tags</string>
+    <string name="title_starred">favorieten</string>
+    <string name="title_myapps">mijn apps</string>
+    <string name="title_search">zoeken</string>
+    <string name="title_activity_app_collection">AppCollectionActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="app_store">Appwinkel</string>
+    <string name="calendar">Agenda</string>
+    <string name="camera">Camera</string>
+    <string name="contacts">Contacten</string>
+    <string name="email_client">E-mailcliënt</string>
+    <string name="file_browser">Bestandbeheerder</string>
+    <string name="gallery">Galerij</string>
+    <string name="launcher">Appstarter</string>
+    <string name="music_player">Muziekspeler</string>
+    <string name="shopping_list">Boodschappenlijstje</string>
+    <string name="text_editor">Tekstverwerker</string>
+    <string name="todo_list">Todo-lijstje</string>
+    <string name="torrent_downloader">Torrentdownloader</string>
+    <string name="web_browser">Webbrowser</string>
+    <string name="youtube_player">YouTube-speler</string>
+    <string name="action_hide">Verbergen</string>
+    <string name="action_unhide">Weergeven</string>
+    <string name="pref_header_ratings">Sterwaarderingen</string>
+    <string name="pref_title_upstream_ratings">Waarderingen van GitHub, GitLab en SourceForge</string>
+    <string name="pref_title_ratings_headline">Stel in welk belang u hecht aan elke metriek</string>
+    <string name="pref_title_ratings_summary">Wijs een getal van 0 tot 10 toe aan iedere metriek. Een hoger cijfer komt overeen met een groter belang.</string>
+    <string name="pref_title_updated_in_2_years">laatst bijgewerkt in de afgelopen twee jaar</string>
+    <string name="pref_title_release_cycle_time">Uitgavecyclus</string>
+    <string name="search_harder">harder zoeken</string>
+    <string name="search_even_harder">nog harder zoeken</string>
+    <string name="menu_my_apps">Mijn apps</string>
+    <string name="menu_hidden_apps">Verborgen apps</string>
+    <string name="similar_apps">Gelijkaardige apps</string>
+    <string name="by_same_author">Van dezelfde ontwikkelaar</string>
+    <string name="menu_app_authors">Appontwikkelaars</string>
+    <string name="installing" formatted="false">%s wordt geïnstalleerd</string>
+    <string name="installing_details" formatted="false">Bezig met installeren %d / %d</string>
+    <string name="installation_finished">Installatie voltooid</string>
+    <string name="installed_details">%d apps geïnstalleerd</string>
+    <string name="confirmation">Bevestiging</string>
+    <string name="use_root">Wilt u apps kunnen installeren zonder gebruikersinteractie, met behulp van rootprivileges beschikbaar op dit apparaat\?</string>
+    <string name="pref_description_use_root">apps automatisch installeren en verwijderen als het apparaat geroot is</string>
+    <string name="pref_title_use_root">Rootprivileges gebruiken</string>
 </resources>
