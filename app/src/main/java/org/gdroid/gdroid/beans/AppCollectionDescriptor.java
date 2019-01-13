@@ -190,6 +190,22 @@ public class AppCollectionDescriptor {
             }
             db.close();
         }
+        else if (collectionName.startsWith("similar_ordered:"))
+        {
+            String appToCheck = collectionName.replace("similar_ordered:","");
+            AppDatabase db = AppDatabase.get(mContext);
+            final ApplicationBean applicationBean = db.appDao().getApplicationBean(appToCheck);
+            final List<String> neighbours = applicationBean.getNeighbours();
+            applicationBeanList.clear();
+            for (String n :neighbours) {
+                final ApplicationBean ab = db.appDao().getApplicationBean(n);
+                if (ab != null)
+                {
+                    applicationBeanList.add(ab);
+                }
+            }
+            db.close();
+        }
         else if (collectionName.startsWith("cat:"))
         {
             String cat = collectionName.replace("cat:","");

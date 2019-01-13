@@ -25,6 +25,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -188,18 +189,22 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             lblAntiFeatures.setVisibility(View.GONE);
         }
 
-//        // populate similar apps
-        AppCollectionDescriptor similarAppsCollectionDescriptor = new AppCollectionDescriptor(mContext,"similar:" + mApp.id);
-        populateSimilarAppsView(similarAppsCollectionDescriptor,   R.id.lbl_similar_apps,  R.id.rec_view_similar_apps);
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                // populate similar apps (similar_ordered = the slow algorithm)
+                AppCollectionDescriptor similarAppsCollectionDescriptor = new AppCollectionDescriptor(mContext,"similar_ordered:" + mApp.id);
+                populateSimilarAppsView(similarAppsCollectionDescriptor,   R.id.lbl_similar_apps,  R.id.rec_view_similar_apps);
 
-        // apps in same category
-        AppCollectionDescriptor sameCatCollectionDescriptor = new AppCollectionDescriptor(mContext,"cat:" + categories[0].catName);
-        populateSimilarAppsView(sameCatCollectionDescriptor,   R.id.lbl_same_category,  R.id.rec_view_same_category);
+                // apps in same category
+                AppCollectionDescriptor sameCatCollectionDescriptor = new AppCollectionDescriptor(mContext,"cat:" + categories[0].catName);
+                populateSimilarAppsView(sameCatCollectionDescriptor,   R.id.lbl_same_category,  R.id.rec_view_same_category);
 
-        // apps by same author
-        AppCollectionDescriptor sameAuthorCollectionDescriptor = new AppCollectionDescriptor(mContext,"author:" + mApp.author);
-        populateSimilarAppsView(sameAuthorCollectionDescriptor,  R.id.lbl_same_author,  R.id.rec_view_same_author);
-
+                // apps by same author
+                AppCollectionDescriptor sameAuthorCollectionDescriptor = new AppCollectionDescriptor(mContext,"author:" + mApp.author);
+                populateSimilarAppsView(sameAuthorCollectionDescriptor,  R.id.lbl_same_author,  R.id.rec_view_same_author);
+            }
+        });
 
         // put HTML description in place
         if (! TextUtils.isEmpty(mApp.desc)) {
@@ -464,50 +469,64 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         db.close();
     }
 
-    private void populateSimilarAppsView(AppCollectionDescriptor appCollectionDescriptor, int headlineLabel, int recViewToFill) {
-        List<ApplicationBean> applicationBeanList;
-        RecyclerView viewSameCat = (RecyclerView) findViewById(recViewToFill);
-        applicationBeanList = new ArrayList<>();
-        AppBeanAdapter adapter = new AppBeanAdapter(mContext, applicationBeanList, true);
-        adapter.setActivity(this); // make this Activity the calling context
-        viewSameCat.setItemAnimator(new DefaultItemAnimator());
-        viewSameCat.setAdapter(adapter);
-        LinearLayoutManager layoutManager
-                = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
-        viewSameCat.setLayoutManager(layoutManager);
-        applicationBeanList.clear();
-        applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
+    private void populateSimilarAppsView(final AppCollectionDescriptor appCollectionDescriptor, final int headlineLabel, final int recViewToFill) {
+        final Activity caller = this;
+        // run it in background because it might be slow and data can change later
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                List<ApplicationBean> applicationBeanList;
+                RecyclerView viewSimilarApps = (RecyclerView) findViewById(recViewToFill);
+                applicationBeanList = new ArrayList<>();
+                final AppBeanAdapter adapter = new AppBeanAdapter(mContext, applicationBeanList, true);
+                adapter.setActivity(caller); // make this Activity the calling context
+                viewSimilarApps.setItemAnimator(new DefaultItemAnimator());
+                viewSimilarApps.setAdapter(adapter);
+                LinearLayoutManager layoutManager
+                        = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
+                viewSimilarApps.setLayoutManager(layoutManager);
+                applicationBeanList.clear();
+                applicationBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
 
-        // remove this app itself, because it is similar to itself
-        for (ApplicationBean ab:applicationBeanList) {
-            if (ab.id.equals(this.mApp.id))
-            {
-                applicationBeanList.remove(ab);
-                break;
+                // remove this app itself, because it is similar to itself
+                for (ApplicationBean ab:applicationBeanList) {
+                    if (ab.id.equals(mApp.id))
+                    {
+                        applicationBeanList.remove(ab);
+                        break;
+                    }
+                }
+
+                TextView lblHeadlineLabel = findViewById(headlineLabel);
+                if (applicationBeanList.isEmpty())
+                {
+                    lblHeadlineLabel.setVisibility(View.GONE);
+                }
+                else
+                {
+                    if (headlineLabel == R.id.lbl_same_author) {
+                        String a = lblHeadlineLabel.getText().toString();
+                        if (!TextUtils.isEmpty(mApp.author))
+                            a += " (" + mApp.author + ")";
+                        lblHeadlineLabel.setText(a);
+                    }
+                }
+
+                if (TextUtils.isEmpty(mApp.author) && headlineLabel == R.id.lbl_same_author)
+                {
+                    lblHeadlineLabel.setVisibility(View.GONE);
+                    viewSimilarApps.setVisibility(View.GONE);
+                }
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        adapter.notifyDataSetChanged();
+                    }
+                });
             }
-        }
+        });
 
-        TextView lblHeadlineLabel = findViewById(headlineLabel);
-        if (applicationBeanList.isEmpty())
-        {
-            lblHeadlineLabel.setVisibility(View.GONE);
-        }
-        else
-        {
-            if (headlineLabel == R.id.lbl_same_author) {
-                String a = lblHeadlineLabel.getText().toString();
-                if (!TextUtils.isEmpty(mApp.author))
-                    a += " (" + mApp.author + ")";
-                lblHeadlineLabel.setText(a);
-            }
-        }
-
-        if (TextUtils.isEmpty(mApp.author) && headlineLabel == R.id.lbl_same_author)
-        {
-            lblHeadlineLabel.setVisibility(View.GONE);
-            viewSameCat.setVisibility(View.GONE);
-        }
-        adapter.notifyDataSetChanged();
     }
 
     private void repairMissingData() {
