@@ -23,11 +23,16 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.util.Log;
+import android.util.Pair;
 
+import org.gdroid.gdroid.MapUtil;
 import org.gdroid.gdroid.Util;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
 
 /**
  * wraps a name of a collection and a list of apps to be contained in the collection, to be shown in the UI
@@ -205,6 +210,57 @@ public class AppCollectionDescriptor {
                 }
             }
             db.close();
+        }
+        else if (collectionName.equals("similar_to_myapps"))
+        {
+            final List<ApplicationBean> installedApps = Util.getInstalledApps(mContext);
+            final List<ApplicationBean> appsUserMightLike = new ArrayList<>();
+            Map<String,Integer> simMap = new HashMap<>();
+
+            // collect similar apps to installed apps with their similarity
+            for (ApplicationBean ab:installedApps) {
+                final List<Pair<String, Integer>> neighboursWithSimilarity = ab.getNeighboursWithSimilarity();
+                for (Pair<String, Integer> p:neighboursWithSimilarity) {
+                    final String papp = p.first;
+                    final Integer psim = p.second;
+                    if (simMap.containsKey(papp))
+                    {
+                        int i = simMap.get(papp);
+                        i += psim;
+                        simMap.put(papp, i);
+                    }
+                    else
+                    {
+                        simMap.put(papp, psim);
+                    }
+                }
+            }
+
+            // get data out of simmap, oder by int value and remove apps that are already installed
+
+            // TODO unreactive, must be loaded in backgroud
+            // TODO mLimit is ignored, all are loaded into preview
+            // TODO all headlines of app collection cards are not localized
+
+            final List<Map.Entry<String, Integer>> sortedSimList = MapUtil.sortByValueToList(simMap,true);
+            applicationBeanList.clear();
+            AppDatabase db = AppDatabase.get(mContext);
+            int i = 0;
+            for (Map.Entry<String, Integer> e :sortedSimList) {
+                // check if app is not already installed
+                if (Util.isAppInstalled(mContext, e.getKey()))
+                {
+                    continue;
+                }
+                if (e.getValue() <2)
+                    continue;
+                ApplicationBean ab = db.appDao().getApplicationBean(e.getKey());
+                if (ab == null)
+                    continue;
+                applicationBeanList.add(ab);
+                if (i>mLimit)
+                    break;
+            }
         }
         else if (collectionName.startsWith("cat:"))
         {
