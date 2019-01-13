@@ -1,5 +1,6 @@
 0.6.3
   * added list view (can be activated in preferences)
+  * show similar apps ordered by similarity
 
 0.6.2
   * added similar apps on the app-detail view correctly implemented, special thanks to Frieder Ferlemann
