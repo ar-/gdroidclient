@@ -29,8 +29,8 @@
         android:defaultValue="false"
         android:enabled="true"
         android:key="use_list_view"
-        android:title="Enable list view"
-        android:summary="show apps in a list if possible" />
+        android:title="@string/pref_title_use_list_view"
+        android:summary="@string/pref_description_use_list_view" />
 
     <SwitchPreference
         android:defaultValue="false"
