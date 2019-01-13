@@ -27,6 +27,9 @@ import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.content.res.AppCompatResources;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
@@ -59,7 +62,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public String appId;
-        public TextView title, count;
+        public TextView title, count, desc ;
         public ImageView thumbnail, overflow;
         private final ImageView starOnCard;
 
@@ -67,6 +70,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
             super(view);
             title = (TextView) view.findViewById(R.id.title);
             count = (TextView) view.findViewById(R.id.count);
+            desc = (TextView) view.findViewById(R.id.lbl_desc);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
             overflow = (ImageView) view.findViewById(R.id.overflow);
             starOnCard = (ImageView) view.findViewById(R.id.img_star_on_card);
@@ -93,8 +97,9 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        final int layout = true ? R.layout.app_list_card : R.layout.app_card;
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.app_card, parent, false);
+                .inflate(layout, parent, false);
 
         return new MyViewHolder(itemView);
     }
@@ -108,6 +113,14 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         holder.title.setText(applicationBean.name);
         DecimalFormat df = new DecimalFormat("0.0");
         holder.count.setText(df.format(applicationBean.stars) + " ★");
+
+        if (holder.desc != null)
+        {
+            String plain = Html.fromHtml( applicationBean.desc).toString();
+            SpannableStringBuilder str = new SpannableStringBuilder(applicationBean.summary + " - " + plain);
+            str.setSpan(new android.text.style.StyleSpan(android.graphics.Typeface.BOLD), 0, applicationBean.summary.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            holder.desc.setText(str);
+        }
 
         CircularProgressDrawable circularProgressDrawable = new CircularProgressDrawable(mContext);
         circularProgressDrawable.setStrokeWidth(5f);
