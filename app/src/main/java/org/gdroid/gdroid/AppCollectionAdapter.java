@@ -66,7 +66,7 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
             inner_recycler_view = (RecyclerView) view.findViewById(R.id.inner_recycler_view);
 
             applicationBeanList = new ArrayList<>();
-            adapter = new AppBeanAdapter(mContext, applicationBeanList);
+            adapter = new AppBeanAdapter(mContext, applicationBeanList, true);
 
             inner_recycler_view.setItemAnimator(new DefaultItemAnimator());
 

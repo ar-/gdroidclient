@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
 
-        if (true)
+        if (Util.isListViewPreferred(this))
             columns = 1;
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, columns);

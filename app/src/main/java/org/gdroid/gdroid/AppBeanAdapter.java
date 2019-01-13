@@ -30,6 +30,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
@@ -38,8 +39,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
 
 import org.gdroid.gdroid.beans.ApplicationBean;
 
@@ -50,14 +49,26 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
 
     private Context mContext;
     private Activity mActivity;
-    private List<ApplicationBean> applicationBeanList;
+    private List<ApplicationBean> mApplicationBeanList;
+    private final boolean mEnforceSmallCard;
+
+    public AppBeanAdapter(Context context, List<ApplicationBean> applicationBeanList, boolean enforceSmallCard) {
+        this.mContext = context;
+        this.mApplicationBeanList = applicationBeanList;
+        this.mEnforceSmallCard = enforceSmallCard;
+    }
+
+    public AppBeanAdapter(Context context, List<ApplicationBean> applicationBeanList) {
+        this(context, applicationBeanList, false);
+    }
+
 
     public int getCount() {
-        return applicationBeanList.size();
+        return mApplicationBeanList.size();
     }
 
     public List<ApplicationBean> getAppBeanList() {
-        return applicationBeanList;
+        return mApplicationBeanList;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -90,14 +101,9 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         }
     }
 
-    public AppBeanAdapter(Context mContext, List<ApplicationBean> applicationBeanList) {
-        this.mContext = mContext;
-        this.applicationBeanList = applicationBeanList;
-    }
-
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        final int layout = true ? R.layout.app_list_card : R.layout.app_card;
+        final int layout = !mEnforceSmallCard && Util.isListViewPreferred(mContext) ? R.layout.app_list_card : R.layout.app_card;
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(layout, parent, false);
 
@@ -106,7 +112,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        final ApplicationBean applicationBean = applicationBeanList.get(position);
+        final ApplicationBean applicationBean = mApplicationBeanList.get(position);
         if (applicationBean == null)
             return;
         holder.appId = applicationBean.id;
@@ -116,9 +122,16 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
 
         if (holder.desc != null)
         {
-            String plain = Html.fromHtml( applicationBean.desc).toString();
-            SpannableStringBuilder str = new SpannableStringBuilder(applicationBean.summary + " - " + plain);
-            str.setSpan(new android.text.style.StyleSpan(android.graphics.Typeface.BOLD), 0, applicationBean.summary.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            String plain = "";
+            if (!TextUtils.isEmpty(applicationBean.desc))
+                plain = Html.fromHtml( applicationBean.desc).toString();
+
+            String summary = "";
+            if (!TextUtils.isEmpty(applicationBean.summary))
+                summary = applicationBean.summary;
+
+            SpannableStringBuilder str = new SpannableStringBuilder(summary + " - " + plain);
+            str.setSpan(new android.text.style.StyleSpan(android.graphics.Typeface.BOLD), 0, summary.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             holder.desc.setText(str);
         }
 
@@ -248,7 +261,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
 
     @Override
     public int getItemCount() {
-        return applicationBeanList.size();
+        return mApplicationBeanList.size();
     }
 
     public void setActivity(Activity mActivity) {

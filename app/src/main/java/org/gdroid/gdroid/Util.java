@@ -57,6 +57,7 @@ public class Util {
 
     public static final String NOTIFICATION_CHANEL_ID = "30009";
     public static final int NOTIFICATION_ID = 14099;
+    public static final String TAG = "Util";
 
     public static Activity getActivity(Context context)
     {
@@ -506,6 +507,11 @@ public class Util {
         return new DefaultInstaller();
     }
 
+    public static boolean isListViewPreferred(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean("use_list_view",false);
+    }
+
+
     public static void waitForAllDownloadsToFinish(final Context context) {
         AppDownloader.getFetch(context).awaitFinishOrTimeout(120000L);
     }
@@ -514,7 +520,7 @@ public class Util {
         long fileSize = file.length();
         while (true)
         {
-            Log.d("ARAIT", "waiting for download "+file.getName()+" to settle. Got now "+fileSize+" bytes");
+            Log.d(TAG, "waiting for download "+file.getName()+" to settle. Got now "+fileSize+" bytes");
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {

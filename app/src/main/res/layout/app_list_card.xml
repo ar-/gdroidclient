@@ -55,12 +55,11 @@
                     android:layout_margin="2dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
-                    app:srcCompat="@drawable/ic_author_black_24dp"
                     />
 
                 <ImageView
                     android:id="@+id/img_star_on_card"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/ic_star_yellow_24dp"
@@ -134,27 +133,7 @@
                         android:paddingBottom="@dimen/songs_count_padding_bottom"
                         android:maxLines="3"
                         android:ellipsize="end"
-                        android:text="short description goes here
-                                        ddddd
-                                        ddddd
-                                        ddddd
-                                        ddddd
-                                        ddddd
-                                        ddddd
-                                        ddd
-                                        ddddd
-                                        ddd
-                                        ddddd
-                                        ddd
-                                        ddddd
-                                        ddd
-                                        ddddd
-                                        ddd
-                                        ddddd
-                                        ddd
-                                        ddddd
-                                        ddddd
-                                        ffffff"
+                        android:text="summary and description go here"
                         android:textSize="@dimen/card_subtitle_size" />
 
                 </LinearLayout>

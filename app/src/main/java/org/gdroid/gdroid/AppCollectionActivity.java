@@ -89,6 +89,9 @@ public class AppCollectionActivity extends AppCompatActivity {
         viewAppCollection.setItemAnimator(new DefaultItemAnimator());
         viewAppCollection.setAdapter(adapter);
 
+        if (Util.isListViewPreferred(this))
+            columns = 1;
+
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, columns);
         viewAppCollection.setLayoutManager(mLayoutManager);
 
