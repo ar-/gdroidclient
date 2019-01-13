@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -88,6 +88,9 @@ public class AppCollectionActivity extends AppCompatActivity {
         adapter.setActivity(this); // make this Activity the calling context
         viewAppCollection.setItemAnimator(new DefaultItemAnimator());
         viewAppCollection.setAdapter(adapter);
+
+        if (Util.isListViewPreferred(this))
+            columns = 1;
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, columns);
         viewAppCollection.setLayoutManager(mLayoutManager);

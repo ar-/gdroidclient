@@ -468,7 +468,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         List<ApplicationBean> applicationBeanList;
         RecyclerView viewSameCat = (RecyclerView) findViewById(recViewToFill);
         applicationBeanList = new ArrayList<>();
-        AppBeanAdapter adapter = new AppBeanAdapter(mContext, applicationBeanList);
+        AppBeanAdapter adapter = new AppBeanAdapter(mContext, applicationBeanList, true);
         adapter.setActivity(this); // make this Activity the calling context
         viewSameCat.setItemAnimator(new DefaultItemAnimator());
         viewSameCat.setAdapter(adapter);
