@@ -16,7 +16,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 
 * star ratings of apps (up to 5 stars) - machine generated metrics
 * shows the star upstream star ratings (github, gitlab, sourceforge)
-* implements more metrics bases on open source data (like average release cycle time) to generate a star-rating
+* implements more metrics based on open source data (like average release cycle time) to generate a star-ratings
 * let the users choose which metrics are important to them, so there is no 'best app' in the repo - there is only a 'best app' from the point of view of the current user
 * shows 'similar apps' and 'apps of the same category' when watching an app
 * shows 'apps of the same author' when watching an app
@@ -24,7 +24,9 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * shows web-site of the app - even if it is 'only a README file on github'. F-Droid has recently removed many websites to punish open source developers who can't effort their own domain.
 * shows newest apps and recently updated apps separated
 * shows cards in same size for better overview
+* provides a list-view as alternative for the cards (as in older F-Droid versions) for people who don't like cards
 * ability to 'star' apps to mark them
+* ability to hide apps to remove them framm all views
 * shows categories in correct translation (if available) after changing language on the device
 * shows screenshots in correct translation
 * makes use of larger screens: show actually more apps on tablets
@@ -47,7 +49,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * show or install an older version of an app
 * create a local repo, share apps with 'near' people or share apps via bluetooth
 * add other repositories than the F-Droid repo
-* use the privileged extension (done, but extension is not adjusted yet)
+* use the privileged extension (done, but extension is not adjusted yet), G-Droid can use root permissions on rooted phones though, to provide unattended installs
 * update automatically
 * http proxy settings
 * G-Droid helps you in different ways to find better apps: but in some cases you might still need the 'share' button, to open that app in F-Droid to install it. G-Droid right now is not yet a complete replacement for the F-Droid app.
@@ -61,13 +63,13 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 # Explanation of permissions
 
 * INTERNET: to download the app-metadata and the apps
-* WRITE_EXTERNAL_STORAGE: To store the downloaded apps temporarily (permission only on older Android version enforced)
+* WRITE_EXTERNAL_STORAGE: To store the downloaded apps temporarily (permission only on older Android versions enforced)
 
 # Translating
 
 The app is translated using [Weblate](https://hosted.weblate.org/projects/g-droid/translations/). Follow [these instructions](https://hosted.weblate.org/engage/g-droid/) if you would like to contribute.
 
-While you can also send merge requests or patches modifying the translations, Weblate is a much better way to go. Use Weblate instead - it applies a series of fixes and suggestions, plus it keeps track of modifications and fuzzy translations. Applying translations manually skips all of the fixes and checks, and overrides the fuzzy state of strings.
+While you can also send merge requests or patches modifying the translations, Weblate is a much better way to go. Use Weblate - it applies a series of fixes and suggestions, plus it keeps track of modifications and fuzzy translations. Applying translations manually skips all of the fixes and checks, and overrides the fuzzy state of strings.
 
 [![Translation status](https://hosted.weblate.org/widgets/g-droid/-/translations/287x66-grey.png)](https://hosted.weblate.org/engage/g-droid/?utm_source=widget)
 
@@ -79,7 +81,7 @@ While you can also send merge requests or patches modifying the translations, We
 
 The implementation of the star ratings is not finalised yet. 
 
-For now all that users can do is read the code. It is all open source. You can read on https://gitlab.com/gdroid/gdroiddata/blob/master/env/process_meta_metric.py how to extract metrics out of the f-droid repository. 
+For now all that users can do is read the code. It is all open source. You can read on https://gitlab.com/gdroid/gdroiddata/blob/master/env/process_meta_metric.py how to extract metrics out of the F-Droid repository. 
 
 Essentially if you look at the F-Droid data you can extract and extrapolate things like:
 *  time between software updates
