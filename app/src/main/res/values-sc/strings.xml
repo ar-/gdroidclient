@@ -48,5 +48,6 @@
     <string name="action_add_favourite">Annanghe a sos preferidos</string>
     <string name="title_activity_settings">Impostatziones</string>
     <string name="pref_header_general">Generales</string>
+    <string name="app_name">G-Droid</string>
     <string name="more">De prus</string>
 </resources>
