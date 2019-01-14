@@ -92,4 +92,27 @@
     <string name="download_all_updates">Deskargatu eguneraketa guztiak</string>
     <string name="downloading">Deskargatzen…</string>
     <string name="download_pending">Deskarga hastearen zain…</string>
+    <string name="action_hide">Ezkutatu</string>
+    <string name="action_unhide">Ez ezkutatu</string>
+    <string name="pref_header_ratings">Izarrak</string>
+    <string name="pref_title_upstream_ratings">GitHub, GitLab eta SourceForge-ko balorazioak</string>
+    <string name="pref_title_ratings_headline">Ezarri neurketa bakoitzak zuretzat duen garrantzia</string>
+    <string name="pref_title_ratings_summary">Ezarri 0 eta 10 bitarteko zenbaki bat neurketa bakoitzari. Zenbakia zenbat eta handiagoa, garrantzi gehiago.</string>
+    <string name="pref_title_updated_in_2_years">azken eguneraketa azken bi urteetan</string>
+    <string name="pref_title_release_cycle_time">Kaleratze zikloaren epea</string>
+    <string name="search_harder">bilatu sakonago</string>
+    <string name="search_even_harder">bilatu are sakonago</string>
+    <string name="menu_my_apps">Nire aplikazioak</string>
+    <string name="menu_hidden_apps">Ezkutatutako aplikazioak</string>
+    <string name="similar_apps">Antzeko aplikazioak</string>
+    <string name="by_same_author">Egile berberarenak</string>
+    <string name="menu_app_authors">Aplikazioen egileak</string>
+    <string name="installing" formatted="false">%s instalatzen</string>
+    <string name="installing_details" formatted="false">%d / %d instalatzen</string>
+    <string name="installation_finished">Instalazioa amaituta</string>
+    <string name="installed_details">%d aplikazio instalatu dira</string>
+    <string name="confirmation">Berrespena</string>
+    <string name="use_root">Erabiltzailearen interakziorik gabe, root baimenak erabiliz, instalatu nahi dituzu aplikazioak gailu honetan\?</string>
+    <string name="pref_description_use_root">instalatu eta desinstalatu aplikazioak automatikoki gailuak root baimena eskaintzen badu</string>
+    <string name="pref_title_use_root">Erabili root baimena</string>
 </resources>
