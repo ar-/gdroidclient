@@ -41,9 +41,9 @@
     <string name="action_launch">Pornește</string>
     <string name="yes">Da</string>
     <string name="no">Nu</string>
-    <string name="download_all_updates">Descarca toate actualizările</string>
+    <string name="download_all_updates">Descarcă toate actualizările</string>
     <string name="downloading">Descărcare…</string>
-    <string name="download_pending">Așteptare pornire descărcare…</string>
+    <string name="download_pending">Așteptând sa incepe descărcarea…</string>
     <string name="nav_header_subtitle">client pentru catalogul F-Droid</string>
     <string name="action_settings">Setări</string>
     <string name="pref_title_social_recommendations">"Activează recomandări "</string>
@@ -88,5 +88,16 @@
     <string name="by_same_author">"De la același autor "</string>
     <string name="menu_app_authors">"Autorii aplicației "</string>
     <string name="installing" formatted="false">Instalând %s</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">"Deschide meniul de navigație "</string>
+    <string name="navigation_drawer_close">"Închide meniul de navigație "</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="installing_details" formatted="false">Instalând %d / %d</string>
+    <string name="installation_finished">"Instalare finalizată "</string>
+    <string name="installed_details">%d apps instalate</string>
+    <string name="confirmation">Confirmare</string>
+    <string name="use_root">Vrei sa instalezi apps fara interacțiunea ta utilizând permisiunile root disponibile in acest dispozitiv\?</string>
+    <string name="pref_description_use_root">instalează si dezinstalează apps automaticamente daca device-ul are capabilități root</string>
+    <string name="pref_title_use_root">Utilizează root</string>
     <string name="more">Mai mult</string>
 </resources>
