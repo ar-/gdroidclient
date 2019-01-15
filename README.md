@@ -26,12 +26,13 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * shows cards in same size for better overview
 * provides a list-view as alternative for the cards (as in older F-Droid versions) for people who don't like cards
 * ability to 'star' apps to mark them
-* ability to hide apps to remove them framm all views
+* ability to hide apps to remove them from all views
 * shows categories in correct translation (if available) after changing language on the device
 * shows screenshots in correct translation
-* makes use of larger screens: show actually more apps on tablets
+* makes use of larger screens: shows actually more apps on tablets
 * tags to find apps for standard-tasks easily (email clients, file browsers, text editors), since the F-Droid categories are too broad
 * view for 'random apps' to discover apps you usually wouldn't find
+* shows apps the user might like (without stealing the users data for analysis)
 * aims to provide many different views to the app repository in order to assist the user to find what she wants to find and encourage to use more open source apps from the repository
 * 'share' apps so it can still be opened with another store (F-Droid, Yalp, Aurora, ...), to get more information about the app.
 * different search algorithm, can 'search harder' to continue a search if the results are insufficient
