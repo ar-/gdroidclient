@@ -159,7 +159,7 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
         }
         else
         {
-            headline = collectionName;
+            headline =  Util.getStringResourceByName(context, collectionName);
         }
         return headline;
 

@@ -43,4 +43,5 @@
     <string name="download_all_updates">すべての更新をダウンロード</string>
     <string name="downloading">ダウンロード中</string>
     <string name="download_pending">ダウンロードの開始を待っています</string>
+    <string name="more">詳細を表示</string>
 </resources>

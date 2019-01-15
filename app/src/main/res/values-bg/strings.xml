@@ -40,4 +40,5 @@
     <string name="download_all_updates">Изтегляне на всички обновления</string>
     <string name="downloading">Сваляне…</string>
     <string name="download_pending">Изчакване…</string>
+    <string name="more">Повече</string>
 </resources>

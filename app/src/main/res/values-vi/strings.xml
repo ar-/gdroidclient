@@ -42,4 +42,5 @@
     <string name="download_all_updates">Tải về tất cả các bản cập nhật</string>
     <string name="downloading">Đang tải về…</string>
     <string name="download_pending">Đang chờ tải về…</string>
+    <string name="more">Thêm</string>
 </resources>

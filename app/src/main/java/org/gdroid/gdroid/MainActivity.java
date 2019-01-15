@@ -271,11 +271,11 @@ public class MainActivity extends AppCompatActivity
                     appCollectionAdapter.notifyDataSetChanged();
                 }
             });
-            AppCollectionDescriptor a = new AppCollectionDescriptor(context, "Newest apps");
+            AppCollectionDescriptor a = new AppCollectionDescriptor(context, "newest_apps");
             appCollectionDescriptorList.add(a);
-            AppCollectionDescriptor a2 = new AppCollectionDescriptor(context, "Recently updated");
+            AppCollectionDescriptor a2 = new AppCollectionDescriptor(context, "recently_updated");
             appCollectionDescriptorList.add(a2);
-            AppCollectionDescriptor a3 = new AppCollectionDescriptor(context, "High rated");
+            AppCollectionDescriptor a3 = new AppCollectionDescriptor(context, "highly_rated");
             appCollectionDescriptorList.add(a3);
 
             // trigger an update here, because the next collection is a bit slow
@@ -285,9 +285,9 @@ public class MainActivity extends AppCompatActivity
                     appCollectionAdapter.notifyDataSetChanged();
                 }
             });
-            AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "similar_to_myapps");
+            AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "similar_to_my_apps");
             appCollectionDescriptorList.add(a5);
-            AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "Random apps");
+            AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "random_apps");
             appCollectionDescriptorList.add(a4);
 //            AppCollectionDescriptor a7 = new AppCollectionDescriptor(context, "popular apps");
 //            appCollectionDescriptorList.add(a7);

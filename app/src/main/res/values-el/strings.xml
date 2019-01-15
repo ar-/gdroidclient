@@ -43,4 +43,5 @@
     <string name="download_all_updates">Λήψη όλων των ενημερώσεων</string>
     <string name="downloading">Λήψη…</string>
     <string name="download_pending">Περιμένετε να αρχίσει η λήψη…</string>
+    <string name="more">Περισσότερα</string>
 </resources>

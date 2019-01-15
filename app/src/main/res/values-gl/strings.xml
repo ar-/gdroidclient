@@ -42,4 +42,5 @@
     <string name="download_all_updates">Descargar todas as anovacións</string>
     <string name="downloading">Descargando…</string>
     <string name="download_pending">Agardando para iniciar a descarga…</string>
+    <string name="more">Máis</string>
 </resources>

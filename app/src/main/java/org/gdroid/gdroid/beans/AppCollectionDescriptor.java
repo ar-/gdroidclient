@@ -76,7 +76,7 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
 
     public void updateAppsInCollection() {
         String collectionName = name;
-        if (collectionName.equals("Newest apps"))
+        if (collectionName.equals("newest_apps"))
         {
             AppDatabase db = AppDatabase.get(mContext);
 
@@ -88,7 +88,7 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
             }
             db.close();
         }
-        else if (collectionName.equals("Recently updated"))
+        else if (collectionName.equals("recently_updated"))
         {
             AppDatabase db = AppDatabase.get(mContext);
             ApplicationBean[] appsInDb = db.appDao().getLastUpdated(mLimit,mOffset);
@@ -99,7 +99,7 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
             }
             db.close();
         }
-        else if (collectionName.equals("High rated"))
+        else if (collectionName.equals("highly_rated"))
         {
             AppDatabase db = AppDatabase.get(mContext);
             ApplicationBean[] appsInDb = db.appDao().getHighRated(mLimit,mOffset);
@@ -110,7 +110,7 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
             }
             db.close();
         }
-        else if (collectionName.equals("Random apps"))
+        else if (collectionName.equals("random_apps"))
         {
             AppDatabase db = AppDatabase.get(mContext);
             ApplicationBean[] appsInDb = db.appDao().getRandom(mLimit,mOffset);
@@ -216,7 +216,7 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
             }
             db.close();
         }
-        else if (collectionName.equals("similar_to_myapps"))
+        else if (collectionName.equals("similar_to_my_apps"))
         {
             final List<ApplicationBean> installedApps = Util.getInstalledApps(mContext);
             final List<ApplicationBean> appsUserMightLike = new ArrayList<>();
@@ -293,25 +293,6 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
     public List<ApplicationBean> getApplicationBeanList() {
         return applicationBeanList;
     }
-
-//    private String getLocalisedHeadlineForCatOrTag(String collectionName) {
-//        final String headline;
-//        if (collectionName.startsWith("cat:"))
-//        {
-//            String catName = collectionName.replace("cat:","");
-//            headline = Util.getLocalisedCategoryName(mContext, catName);
-//        }
-//        else if (collectionName.startsWith("tag:"))
-//        {
-//            String tagName = collectionName.replace("tag:","");
-//            headline = Util.getStringResourceByName(mContext, tagName);
-//        }
-//        else
-//        {
-//            headline = collectionName;
-//        }
-//        return headline;
-//    }
 
     public String getLocalisedHeadline() {
         return localisedHeadline;

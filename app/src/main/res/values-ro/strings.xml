@@ -43,4 +43,5 @@
     <string name="download_all_updates">Descarca toate actualizările</string>
     <string name="downloading">Descărcare…</string>
     <string name="download_pending">Așteptare pornire descărcare…</string>
+    <string name="more">Mai mult</string>
 </resources>

@@ -40,4 +40,5 @@
     <string name="download_all_updates">Baxar tolos anovamientos</string>
     <string name="downloading">Baxando…</string>
     <string name="download_pending">Esperando p\'aniciar al descarga…</string>
+    <string name="more">Más</string>
 </resources>

@@ -43,4 +43,5 @@
     <string name="download_all_updates">Összes frissítés letöltése</string>
     <string name="downloading">Letöltés…</string>
     <string name="download_pending">Várakozás a letöltés elkezdésére…</string>
+    <string name="more">Több</string>
 </resources>

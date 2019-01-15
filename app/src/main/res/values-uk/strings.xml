@@ -43,4 +43,5 @@
     <string name="download_all_updates">Завантажити всі оновлення</string>
     <string name="downloading">Завантаження…</string>
     <string name="download_pending">Очікування початку завантаження…</string>
+    <string name="more">Більше</string>
 </resources>

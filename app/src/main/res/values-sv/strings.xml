@@ -43,4 +43,5 @@
     <string name="download_all_updates">Hämta alla uppdateringar</string>
     <string name="downloading">Hämtar…</string>
     <string name="download_pending">Väntar på att påbörja hämtning…</string>
+    <string name="more">Mer</string>
 </resources>

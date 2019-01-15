@@ -43,4 +43,5 @@
     <string name="download_all_updates">Sækja allar uppfærslur</string>
     <string name="downloading">Sæki…</string>
     <string name="download_pending">Bíð eftir að niðurhal hefjist…</string>
+    <string name="more">Meira</string>
 </resources>
