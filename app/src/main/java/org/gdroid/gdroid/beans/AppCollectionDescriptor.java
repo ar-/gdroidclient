@@ -25,6 +25,8 @@ import android.content.pm.PackageManager;
 import android.util.Log;
 import android.util.Pair;
 
+import org.gdroid.gdroid.AppBeanAdapter;
+import org.gdroid.gdroid.AppCollectionAdapter;
 import org.gdroid.gdroid.MapUtil;
 import org.gdroid.gdroid.Util;
 
@@ -37,10 +39,12 @@ import java.util.PriorityQueue;
 /**
  * wraps a name of a collection and a list of apps to be contained in the collection, to be shown in the UI
  */
-public class AppCollectionDescriptor {
+public class AppCollectionDescriptor implements Comparable<AppCollectionDescriptor>{
     private final int mLimit;
     private final int mOffset;
+    private final String localisedHeadline;
     private Context mContext;
+
     private String name;
     private List<ApplicationBean> applicationBeanList;
 
@@ -58,6 +62,7 @@ public class AppCollectionDescriptor {
         this.mLimit = limit;
         applicationBeanList = new ArrayList<>();
         setName(name);
+        this.localisedHeadline = AppCollectionAdapter.getHeadlineForCatOrTag(mContext, name);
     }
 
     public String getName() {
@@ -236,12 +241,9 @@ public class AppCollectionDescriptor {
                 }
             }
 
-            // get data out of simmap, oder by int value and remove apps that are already installed
-
-            // TODO unreactive, must be loaded in backgroud
-            // TODO mLimit is ignored, all are loaded into preview
             // TODO all headlines of app collection cards are not localized
 
+            // get data out of simmap, order by int value and remove apps that are already installed
             final List<Map.Entry<String, Integer>> sortedSimList = MapUtil.sortByValueToList(simMap,true);
             applicationBeanList.clear();
             AppDatabase db = AppDatabase.get(mContext);
@@ -258,7 +260,7 @@ public class AppCollectionDescriptor {
                 if (ab == null)
                     continue;
                 applicationBeanList.add(ab);
-                if (i>mLimit)
+                if (i++>mLimit)
                     break;
             }
         }
@@ -290,5 +292,36 @@ public class AppCollectionDescriptor {
 
     public List<ApplicationBean> getApplicationBeanList() {
         return applicationBeanList;
+    }
+
+//    private String getLocalisedHeadlineForCatOrTag(String collectionName) {
+//        final String headline;
+//        if (collectionName.startsWith("cat:"))
+//        {
+//            String catName = collectionName.replace("cat:","");
+//            headline = Util.getLocalisedCategoryName(mContext, catName);
+//        }
+//        else if (collectionName.startsWith("tag:"))
+//        {
+//            String tagName = collectionName.replace("tag:","");
+//            headline = Util.getStringResourceByName(mContext, tagName);
+//        }
+//        else
+//        {
+//            headline = collectionName;
+//        }
+//        return headline;
+//    }
+
+    public String getLocalisedHeadline() {
+        return localisedHeadline;
+    }
+
+    @Override
+    /**
+     * this method enabled the cards to be ordered by localised name
+     */
+    public int compareTo(AppCollectionDescriptor o) {
+        return this.localisedHeadline.compareTo(o.localisedHeadline);
     }
 }

@@ -113,7 +113,7 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         AppCollectionDescriptor appCollectionDescriptor = appCollectionDescriptorList.get(position);
         final String collectionName = appCollectionDescriptor.getName();
-        final String headline = getHeadlineForCatOrTag(mContext, collectionName);
+        final String headline = appCollectionDescriptor.getLocalisedHeadline();
         final View.OnClickListener clickListener = getOnClickListenerForCatOrTag(collectionName, headline, (Activity)mContext);
 
         holder.title.setText(headline);
@@ -125,25 +125,6 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
         holder.headlineContainer.setOnClickListener(clickListener);
         holder.title.setOnClickListener(clickListener);
 
-    }
-
-    public static String getHeadlineForCatOrTag(Context mContext, String collectionName) {
-        final String headline;
-        if (collectionName.startsWith("cat:"))
-        {
-            String catName = collectionName.replace("cat:","");
-            headline = Util.getLocalisedCategoryName(mContext, catName);
-        }
-        else if (collectionName.startsWith("tag:"))
-        {
-            String tagName = collectionName.replace("tag:","");
-            headline = Util.getStringResourceByName(mContext, tagName);
-        }
-        else
-        {
-            headline = collectionName;
-        }
-        return headline;
     }
 
     @NonNull
@@ -163,4 +144,25 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
     public int getItemCount() {
         return appCollectionDescriptorList.size();
     }
+
+    public static String getHeadlineForCatOrTag(Context context, String collectionName) {
+        final String headline;
+        if (collectionName.startsWith("cat:"))
+        {
+            String catName = collectionName.replace("cat:","");
+            headline = Util.getLocalisedCategoryName(context, catName);
+        }
+        else if (collectionName.startsWith("tag:"))
+        {
+            String tagName = collectionName.replace("tag:","");
+            headline = Util.getStringResourceByName(context, tagName);
+        }
+        else
+        {
+            headline = collectionName;
+        }
+        return headline;
+
+    }
+
 }
