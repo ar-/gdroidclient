@@ -115,4 +115,5 @@
     <string name="use_root">Bu Kök İzinli Bir Cihazdır. Kök Ayrıcalığını kullanarak uygulamaları kullanıcı etkileşimi olmadan yüklemek ister misiniz\?</string>
     <string name="pref_description_use_root">cihaz kök izinli ise uygulamaları otomatik olarak kur ve kaldır</string>
     <string name="pref_title_use_root">Kök İzni Ayrıcalığını Kullan</string>
+    <string name="more">Dahası</string>
 </resources>

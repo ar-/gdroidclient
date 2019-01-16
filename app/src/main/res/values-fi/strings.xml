@@ -43,4 +43,5 @@
     <string name="download_all_updates">Lataa kaikki päivitykset</string>
     <string name="downloading">Ladataan…</string>
     <string name="download_pending">Odotetaan latauksen alkamista…</string>
+    <string name="more">Lisää</string>
 </resources>

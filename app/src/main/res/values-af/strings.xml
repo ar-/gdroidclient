@@ -40,4 +40,5 @@
     <string name="download_all_updates">Laai alle opdaterings af</string>
     <string name="downloading">Laai tans af…</string>
     <string name="download_pending">Wag om aflaai te begin …</string>
+    <string name="more">Meer</string>
 </resources>

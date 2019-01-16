@@ -31,4 +31,5 @@
     <string name="no">Ոչ</string>
     <string name="downloading">Ներբեռնում եմ…</string>
     <string name="download_pending">Սպասում եմ ներբեռնումը սկսելուն…</string>
+    <string name="more">Ավել</string>
 </resources>

@@ -95,4 +95,12 @@
     <string name="confirmation">Bestaetigung</string>
     <string name="use_root">Dies ist ein gerootetes Geraet. Willst Du das benutzen um Apps automatisch zu installieren?</string>
 
+    <string name="more">Mehr</string>
+    <string name="newest_apps">Neuste Apps</string>
+    <string name="recently_updated">Kürzlich aktualisierte Apps</string>
+    <string name="highly_rated">Gut bewerted</string>
+    <string name="similar_to_my_apps">Ähnlich zu meinen Apps</string>
+    <string name="you_might_also_like">Könnte dir auch gefallen</string>
+    <string name="random_apps">Zufällige Apps</string>
+
 </resources>

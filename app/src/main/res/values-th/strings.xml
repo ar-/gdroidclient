@@ -38,4 +38,5 @@
     <string name="no">ไม่</string>
     <string name="downloading">กำลังดาวน์โหลด…</string>
     <string name="download_pending">เตรียมพร้อมจะเริ่มการดาวน์โหลด…</string>
+    <string name="more">เพิ่มเติม</string>
 </resources>

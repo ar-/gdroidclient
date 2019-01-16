@@ -115,4 +115,5 @@
     <string name="use_root">您想要使用在此裝置上可用的 root 權限以在沒有使用者介入的情況下安裝應用程式嗎？</string>
     <string name="pref_description_use_root">如果裝置已 root 則自動安裝與解除安裝應用程式</string>
     <string name="pref_title_use_root">使用 Root 權限</string>
+    <string name="more">展開</string>
 </resources>

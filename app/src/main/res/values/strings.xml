@@ -205,4 +205,13 @@
     <string name="in_same_category">Same category</string>
     <string name="pref_title_use_list_view">Enable list view</string>
     <string name="pref_description_use_list_view">show apps in a list if possible</string>
+
+    <string name="more">More</string>
+    <string name="newest_apps">Newest apps</string>
+    <string name="recently_updated">Recently updated</string>
+    <string name="highly_rated">Highly rated</string>
+    <string name="similar_to_my_apps">Similar to my apps</string>
+    <string name="you_might_also_like">You might also like</string>
+    <string name="random_apps">Random apps</string>
+
 </resources>
