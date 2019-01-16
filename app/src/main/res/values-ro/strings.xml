@@ -99,5 +99,16 @@
     <string name="use_root">Vrei sa instalezi apps fara interacțiunea ta utilizând permisiunile root disponibile in acest dispozitiv\?</string>
     <string name="pref_description_use_root">instalează si dezinstalează apps automaticamente daca device-ul are capabilități root</string>
     <string name="pref_title_use_root">Utilizează root</string>
+    <string name="nav_header_desc">"Antet de navigație "</string>
+    <string name="action_add_favourite">Adaugă la favorite</string>
+    <string name="title_activity_settings">"Setări "</string>
+    <string name="pref_header_general">"General "</string>
+    <string name="title_categories">"categorii "</string>
+    <string name="camera">Cameră foto</string>
+    <string name="launcher">Lansator</string>
+    <string name="music_player">"Reproductor de muzică "</string>
+    <string name="todo_list">"Lista de activități "</string>
+    <string name="torrent_downloader">Descărcări torrent</string>
+    <string name="youtube_player">"YouTube "</string>
     <string name="more">Mai mult</string>
 </resources>
