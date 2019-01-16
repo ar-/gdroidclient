@@ -130,4 +130,13 @@
     <string name="pref_description_use_root">Installer og avinstaller programmer automatisk hvis enheten har root-privilegier</string>
     <string name="pref_title_use_root">Bruk root-privilegie</string>
     <string name="more">Mer</string>
+    <string name="in_same_category">Samme kategori</string>
+    <string name="pref_title_use_list_view">Skru på listevisning</string>
+    <string name="pref_description_use_list_view">vis programmer i en liste hvis mulig</string>
+    <string name="newest_apps">Nyeste programmer</string>
+    <string name="recently_updated">Nylig oppdatert</string>
+    <string name="highly_rated">Høyt vurdert</string>
+    <string name="similar_to_my_apps">Ligner mine programmer</string>
+    <string name="you_might_also_like">Det kan hende du også liker</string>
+    <string name="random_apps">Tilfeldige programmer</string>
 </resources>
