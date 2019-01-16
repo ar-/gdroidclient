@@ -87,6 +87,19 @@
     <string name="pref_title_updated_in_2_years">"última actualitzación en los 2 años recientes. "</string>
     <string name="search_harder">"encabezados de búsqueda "</string>
     <string name="more">Más</string>
+    <string name="menu_my_apps">Mis apps</string>
+    <string name="menu_hidden_apps">Apps escondidas</string>
+    <string name="similar_apps">Apps similares</string>
+    <string name="by_same_author">Del mismo autor</string>
+    <string name="menu_app_authors">Autores</string>
+    <string name="installing" formatted="false">Instalando %s</string>
+    <string name="installing_details" formatted="false">Instalando %d/%d</string>
+    <string name="installation_finished">Instalación finalizada</string>
+    <string name="installed_details">%d apps instaladas</string>
+    <string name="confirmation">"Confirmación "</string>
+    <string name="use_root">¿Quieres que se instalen las apps sin interacción del usuario utilizando privilegios root\?</string>
+    <string name="pref_description_use_root">instala y desinstala apps automáticamente si el dispositivo está rooteado</string>
+    <string name="pref_title_use_root">Usar privilegios root</string>
     <string name="last_update">Última actualización</string>
     <string name="added_on">Agregado el %s</string>
     <string name="name">Nombre</string>
