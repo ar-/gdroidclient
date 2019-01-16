@@ -182,6 +182,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
+        // seems to be not needed any more after 'update all' there is a page refresh happening (for root and non-root)
 //        updateCurrentView();
     }
 
@@ -345,7 +346,6 @@ public class MainActivity extends AppCompatActivity
                     AsyncTask.execute(new Runnable() {
                         @Override
                         public void run() {
-//                            AppCollectionDescriptor myAppsCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(), screenName);
                             prepareAppCollections(screenName);
                             if (Util.getLastMenuItem(getApplicationContext()).equals(screenName)) // only if selected tab still the same
                             {

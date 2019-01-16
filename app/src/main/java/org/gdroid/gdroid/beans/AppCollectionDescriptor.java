@@ -267,7 +267,6 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
             // displays apps with a high rating that are not similar to everything the user has installed
             final List<ApplicationBean> installedApps = Util.getInstalledApps(mContext);
             final List<ApplicationBean> appsUserMightLike = new ArrayList<>();
-//            Map<String,Integer> simMap = new HashMap<>();
 
             AppDatabase db = AppDatabase.get(mContext);
             ApplicationBean[] appsInDb = db.appDao().getHighRated(2000,0);
