@@ -39,6 +39,7 @@ import com.tonyodev.fetch2core.Func;
 import org.gdroid.gdroid.beans.AppBeanNameComparator;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.beans.OrderByCol;
 import org.gdroid.gdroid.installer.DefaultInstaller;
 import org.gdroid.gdroid.installer.Installer;
 import org.gdroid.gdroid.installer.RootInstaller;
@@ -201,16 +202,15 @@ public class Util {
     {
         final PackageManager pm = context.getPackageManager();
         List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
-        List<ApplicationBean> ret = new ArrayList<>();
+        List<String> packageNames = new ArrayList<>(packages.size());
         AppDatabase db = AppDatabase.get(context);
         for (ApplicationInfo packageInfo : packages) {
-            final ApplicationBean app = db.appDao().getApplicationBean(packageInfo.packageName);
-
-            // only apps in the repo
-            if (app!=null)
-                ret.add(app);
+            packageNames.add(packageInfo.packageName);
         }
-        Collections.sort(ret, new AppBeanNameComparator(context));
+
+//        List<ApplicationBean> ret = db.appDao().getSomeApplicationBeans2(packageNames, getOrderByColumn(context));
+        List<ApplicationBean> ret = db.appDao().getSomeApplicationBeans3(packageNames);
+        Collections.sort(ret, new AppBeanNameComparator(context, OrderByCol.name, true, true));
         return ret;
     }
 
@@ -511,6 +511,18 @@ public class Util {
         return PreferenceManager.getDefaultSharedPreferences(context).getBoolean("use_list_view",false);
     }
 
+    public static String getOrderByColumn(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context).getString("order_by_column","lastupdated DESC");
+    }
+
+    public static void setOrderByColumn (Context context, String orderByColumn)
+    {
+        String key = "order_by_column";
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(key, orderByColumn);
+        editor.apply();
+    }
 
     public static void waitForAllDownloadsToFinish(final Context context) {
         AppDownloader.getFetch(context).awaitFinishOrTimeout(120000L);

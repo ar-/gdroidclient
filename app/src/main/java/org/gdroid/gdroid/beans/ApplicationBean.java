@@ -161,6 +161,11 @@ public class ApplicationBean {
         return ret;
     }
 
-
-
+    @Override
+    public String toString() {
+        //overridden for better debug output
+        if (name != null)
+            return name + " " +super.toString();
+        return super.toString();
+    }
 }

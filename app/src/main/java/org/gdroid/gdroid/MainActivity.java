@@ -18,7 +18,9 @@
 
 package org.gdroid.gdroid;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Point;
@@ -45,10 +47,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.beans.OrderByCol;
 import org.gdroid.gdroid.installer.baria.BariaInstaller;
 import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
 import org.gdroid.gdroid.widget.BottomNavigationView;
@@ -129,8 +133,48 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fab.setEnabled(false);
-                updateSourceDataFromWeb();
+                AlertDialog.Builder alt_bld = new AlertDialog.Builder(activity);
+                final String orderByColumn = Util.getOrderByColumn(activity);
+                String currentCol = orderByColumn.split(" ")[0];
+                int currentIndex = 0;
+                int i = 0;
+                ArrayList<CharSequence> cs1 = new ArrayList<>(OrderByCol.values().length);
+                for (OrderByCol possibleCol: OrderByCol.values())
+                {
+                    final String name = possibleCol.name();
+                    cs1.add(Util.getLocalisedCategoryName());
+                    if (currentCol.equals(name))
+                        currentIndex = i;
+                    i++;
+                }
+                final CharSequence[] cs = cs1.toArray(new CharSequence[] {});
+                //alt_bld.setIcon(R.drawable.icon);
+                alt_bld.setTitle("Select a Group Name");
+//                final CharSequence[] cs = new CharSequence[]{"a","b"};
+                alt_bld.setSingleChoiceItems(cs, currentIndex, new DialogInterface
+                        .OnClickListener() {
+                    public void onClick(DialogInterface dialog, int item) {
+                        Toast.makeText(getApplicationContext(),
+                                "Group Name = "+cs[item], Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();// dismiss the alertbox after chose option
+
+                    }
+                });
+
+                alt_bld.setNegativeButton("ASC", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                alt_bld.setPositiveButton("DESC", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog alert = alt_bld.create();
+                alert.show();
             }
         });
 
