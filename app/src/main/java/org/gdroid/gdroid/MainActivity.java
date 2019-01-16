@@ -287,6 +287,8 @@ public class MainActivity extends AppCompatActivity
             });
             AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "similar_to_my_apps");
             appCollectionDescriptorList.add(a5);
+            AppCollectionDescriptor a6 = new AppCollectionDescriptor(context, "you_might_also_like");
+            appCollectionDescriptorList.add(a6);
             AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "random_apps");
             appCollectionDescriptorList.add(a4);
 //            AppCollectionDescriptor a7 = new AppCollectionDescriptor(context, "popular apps");

@@ -219,7 +219,6 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
         else if (collectionName.equals("similar_to_my_apps"))
         {
             final List<ApplicationBean> installedApps = Util.getInstalledApps(mContext);
-            final List<ApplicationBean> appsUserMightLike = new ArrayList<>();
             Map<String,Integer> simMap = new HashMap<>();
 
             // collect similar apps to installed apps with their similarity
@@ -241,8 +240,6 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
                 }
             }
 
-            // TODO all headlines of app collection cards are not localized
-
             // get data out of simmap, order by int value and remove apps that are already installed
             final List<Map.Entry<String, Integer>> sortedSimList = MapUtil.sortByValueToList(simMap,true);
             applicationBeanList.clear();
@@ -260,6 +257,56 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
                 if (ab == null)
                     continue;
                 applicationBeanList.add(ab);
+                if (i++>mLimit)
+                    break;
+            }
+            db.close();
+        }
+        else if (collectionName.equals("you_might_also_like"))
+        {
+            // displays apps with a high rating that are not similar to everything the user has installed
+            final List<ApplicationBean> installedApps = Util.getInstalledApps(mContext);
+            final List<ApplicationBean> appsUserMightLike = new ArrayList<>();
+//            Map<String,Integer> simMap = new HashMap<>();
+
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean[] appsInDb = db.appDao().getHighRated(2000,0);
+            for (ApplicationBean ab: appsInDb ) {
+                appsUserMightLike.add(ab);
+            }
+            db.close();
+
+            // collect similar apps to installed apps with their similarity
+            for (ApplicationBean ab:installedApps) {
+                // remove installed apps from result
+                for (ApplicationBean tmpab: appsUserMightLike) {
+                    if (tmpab.id.equals(ab.id))
+                    {
+                        appsUserMightLike.remove(tmpab);
+                        break;
+                    }
+                }
+
+
+                // remove neighbours of installed apps from result
+                final List<Pair<String, Integer>> neighboursWithSimilarity = ab.getNeighboursWithSimilarity();
+                for (Pair<String, Integer> p:neighboursWithSimilarity) {
+                    final String papp = p.first;
+                    for (ApplicationBean tmpab: appsUserMightLike) {
+                        if (tmpab.id.equals(papp))
+                        {
+                            appsUserMightLike.remove(tmpab);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            applicationBeanList.clear();
+            int i = 0;
+
+            for (ApplicationBean tmpab: appsUserMightLike) {
+                applicationBeanList.add(tmpab);
                 if (i++>mLimit)
                     break;
             }

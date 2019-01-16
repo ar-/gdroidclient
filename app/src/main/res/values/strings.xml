@@ -211,7 +211,7 @@
     <string name="recently_updated">Recently updated</string>
     <string name="highly_rated">Highly rated</string>
     <string name="similar_to_my_apps">Similar to my apps</string>
-    <string name="not_similar_to_my_apps">Not similar to my apps</string>
+    <string name="you_might_also_like">You might also like</string>
     <string name="random_apps">Random apps</string>
 
 </resources>
