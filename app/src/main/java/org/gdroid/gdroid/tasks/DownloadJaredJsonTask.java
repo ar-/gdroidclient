@@ -22,6 +22,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.View;
 
@@ -146,12 +147,13 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
 
     @Override
     protected void onPostExecute(List<ApplicationBean> result) {
-        mMainActivity.findViewById(R.id.loadingPanel).setVisibility(View.GONE);
+        SwipeRefreshLayout swipe = (SwipeRefreshLayout) mMainActivity.findViewById(R.id.swiperefresh);
+        swipe.setRefreshing(false);
         mMainActivity.findViewById(R.id.fab).setEnabled(true);
         if (mAppCollectionAdapter != null) {
             mAppCollectionAdapter.notifyDataSetChanged();
         }
-        Log.e(TAG,"download complete");
+        Log.i(TAG,"download complete");
     }
 
     protected List<ApplicationBean> loadJsonFromNetwork(String urlString, String jsonFileInJar, JsonParser parser) throws IOException {

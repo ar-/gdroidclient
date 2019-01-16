@@ -30,6 +30,7 @@ import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity
 
     private RecyclerView recyclerView;
     BottomNavigationView navigation;
+    SwipeRefreshLayout swipe;
     private AppBeanAdapter appBeanAdapter;
     private List<ApplicationBean> appBeanList;
     private List<AppCollectionDescriptor> appCollectionDescriptorList;
@@ -79,7 +81,6 @@ public class MainActivity extends AppCompatActivity
         lastCreatedInstance = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.loadingPanel).setVisibility(View.GONE);
         searchView = findViewById(R.id.search_view);
         btnSearchHarder = findViewById(R.id.btn_search_harder);
         btnSearchEvenHarder = findViewById(R.id.btn_search_even_harder);
@@ -129,15 +130,20 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 fab.setEnabled(false);
-                findViewById(R.id.loadingPanel).setVisibility(View.VISIBLE);
-                Snackbar.make(view, R.string.downloading, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
-
-                new DownloadJaredJsonTask(activity, appCollectionAdapter, "index-v1.json").execute("https://f-droid.org/repo/index-v1.jar");
-
+                updateSourceDataFromWeb();
             }
         });
+
+        swipe = (SwipeRefreshLayout) findViewById(R.id.swiperefresh);
+
+        swipe.setOnRefreshListener(
+            new SwipeRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    updateSourceDataFromWeb();
+                }
+            }
+        );
 
         // download all button
         btnUpdateAll.setOnClickListener(new View.OnClickListener() {
@@ -176,6 +182,13 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+
+    }
+
+    private void updateSourceDataFromWeb() {
+        Snackbar.make(recyclerView, R.string.downloading, Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
+        new DownloadJaredJsonTask(this, appCollectionAdapter, "index-v1.json").execute("https://f-droid.org/repo/index-v1.jar");
 
     }
 
