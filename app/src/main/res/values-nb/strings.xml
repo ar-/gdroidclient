@@ -42,6 +42,7 @@
 <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">Åpne navigasjonsskuff</string>
     <string name="navigation_drawer_close">Lukk navigasjonsskuff</string>
+    <string name="nav_header_title">G-Droid</string>
     <string name="nav_header_subtitle">klient for F-Droid-programmarkedet</string>
     <string name="nav_header_desc">Navigasjonshode</string>
     <string name="action_settings">Innstillinger</string>
@@ -54,17 +55,25 @@
 
     <string name="pref_header_general">Generelt</string>
 
+    <string name="pref_title_social_recommendations">Skru på anbefalinger</string>
+    <string name="pref_description_social_recommendations">virker ikke enda</string>
 
+    <string name="pref_title_display_name">Avskrudd</string>
 
+    <string name="pref_title_add_friends_to_messages">avskrudd</string>
     <string name="pref_header_data_sync">Data og synkronisering</string>
 
     <string name="pref_title_sync_frequency">Synkroniseringshyppighet</string>
+    <string name="pref_title_system_sync_settings">Systemsynkroniseringsinnstillinger</string>
 
     <string name="pref_header_notifications">Merknader</string>
 
     <string name="pref_title_new_message_notifications">Nye meldingsmerknader</string>
 
+    <string name="pref_title_ringtone">Ringetone</string>
+    <string name="pref_ringtone_silent">Stille</string>
 
+    <string name="pref_title_vibrate">Vibrer</string>
     <string name="title_home">Hjem</string>
     <string name="title_dashboard">Oversikt</string>
     <string name="title_notifications">Merknader</string>
@@ -118,6 +127,15 @@
     <string name="pref_description_use_root">Installer og avinstaller programmer automatisk hvis enheten har root-privilegier</string>
     <string name="pref_title_use_root">Bruk root-privilegie</string>
     <string name="more">Mer</string>
+    <string name="in_same_category">Samme kategori</string>
+    <string name="pref_title_use_list_view">Skru på listevisning</string>
+    <string name="pref_description_use_list_view">vis programmer i en liste hvis mulig</string>
+    <string name="newest_apps">Nyeste programmer</string>
+    <string name="recently_updated">Nylig oppdatert</string>
+    <string name="highly_rated">Høyt vurdert</string>
+    <string name="similar_to_my_apps">Ligner mine programmer</string>
+    <string name="you_might_also_like">Det kan hende du også liker</string>
+    <string name="random_apps">Tilfeldige programmer</string>
     <string name="last_update">Siste oppdatering</string>
     <string name="added_on">Lagt til den %s</string>
     <string name="name">Navn</string>
