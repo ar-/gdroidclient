@@ -108,4 +108,6 @@
     <string name="name">Name</string>
     <string name="stars">Sterne</string>
     <string name="sort_search">Suchergebnis sortieren</string>
+    <string name="ascending">aufsteigend</string>
+    <string name="descending">absteigend</string>
 </resources>

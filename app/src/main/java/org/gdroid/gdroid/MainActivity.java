@@ -138,16 +138,18 @@ public class MainActivity extends AppCompatActivity
                 String currentCol = orderByColumn.split(" ")[0];
                 int currentIndex = 0;
                 int i = 0;
-                ArrayList<CharSequence> cs1 = new ArrayList<>(OrderByCol.values().length);
+                final ArrayList<CharSequence> cs1 = new ArrayList<>(OrderByCol.values().length);
+                ArrayList<CharSequence> localisedcs1 = new ArrayList<>(OrderByCol.values().length);
                 for (OrderByCol possibleCol: OrderByCol.values())
                 {
                     final String name = possibleCol.name();
-                    cs1.add(Util.getLocalisedOrderByColumn(activity, possibleCol));
+                    localisedcs1.add(Util.getLocalisedOrderByColumn(activity, possibleCol));
+                    cs1.add(name);
                     if (currentCol.equals(name))
                         currentIndex = i;
                     i++;
                 }
-                final CharSequence[] cs = cs1.toArray(new CharSequence[] {});
+                final CharSequence[] cs = localisedcs1.toArray(new CharSequence[] {});
                 //alt_bld.setIcon(R.drawable.icon);
                 alt_bld.setTitle(activity.getString(R.string.sort_search));
 //                final CharSequence[] cs = new CharSequence[]{"a","b"};
@@ -155,22 +157,27 @@ public class MainActivity extends AppCompatActivity
                         .OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
                         Toast.makeText(getApplicationContext(),
-                                "Group Name = "+cs[item], Toast.LENGTH_SHORT).show();
-                        dialog.dismiss();// dismiss the alertbox after chose option
+                                "Group Name = "+cs1.get(item), Toast.LENGTH_SHORT).show();
+//                        dialog.dismiss();// dismiss the alertbox after chose option
+                        Util.setOrderByColumn(activity,cs1.get(item) + " DESC");
 
                     }
                 });
 
-                alt_bld.setNegativeButton("ASC", new DialogInterface.OnClickListener() {
+                alt_bld.setNegativeButton(getString(R.string.ascending), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        String obc = Util.getOrderByColumn(activity);
+                        obc = obc.replace(" DESC", " ASC");
+                        Util.setOrderByColumn(activity,obc);
                     }
                 });
-                alt_bld.setPositiveButton("DESC", new DialogInterface.OnClickListener() {
+                alt_bld.setPositiveButton(R.string.descending, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        String obc = Util.getOrderByColumn(activity);
+                        obc = obc.replace(" ASC", " DESC");
+                        Util.setOrderByColumn(activity,obc);
                     }
                 });
                 AlertDialog alert = alt_bld.create();

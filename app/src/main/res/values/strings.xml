@@ -218,6 +218,7 @@
     <string name="added_on">Added on %s</string>
     <string name="stars">Stars</string>
     <string name="name">Name</string>
-
     <string name="sort_search">Sort search</string>
+    <string name="ascending">ascending</string>
+    <string name="descending">descending</string>
 </resources>

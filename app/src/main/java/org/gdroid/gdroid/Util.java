@@ -527,7 +527,15 @@ public class Util {
         return PreferenceManager.getDefaultSharedPreferences(context).getBoolean("use_list_view",false);
     }
 
-    public static String getOrderByColumn(Context context) {
+    public static String getOrderByColumnAsSring(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context).getString("order_by_column","lastupdated DESC");
+    }
+
+    public static OrderByCol getOrderByColumn(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context).getString("order_by_column","lastupdated DESC");
+    }
+
+    public static OrderByCol getOrderByDirection(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context).getString("order_by_column","lastupdated DESC");
     }
 
