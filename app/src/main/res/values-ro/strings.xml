@@ -110,4 +110,5 @@
     <string name="todo_list">"Lista de activități "</string>
     <string name="torrent_downloader">Descărcări torrent</string>
     <string name="youtube_player">"YouTube "</string>
+    <string name="more">Mai mult</string>
 </resources>

@@ -115,4 +115,5 @@
     <string name="use_root">Deseja instalar aplicativos sem interação do usuário, usando privilégios de root disponíveis neste dispositivo\?</string>
     <string name="pref_description_use_root">instalar e desinstalar aplicativos automaticamente se o dispositivo estiver enraizado</string>
     <string name="pref_title_use_root">Use o privilégio de raiz</string>
+    <string name="more">Mais</string>
 </resources>

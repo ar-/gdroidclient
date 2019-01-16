@@ -1,0 +1,19 @@
+0.6.2
+  * added similar apps on the app-detail view correctly implemented, special thanks to Frieder Ferlemann
+  * added weblate translations, thanks to all translators
+
+0.6.1
+  * fixed screenshot click bug on Adnroid 5 for good
+  * added more Portuguese, French and Russian translations
+
+0.6.0
+  * added setting to use root, to install automatically
+  * added button to download and install all available updates
+  * increase network timeouts to load more images
+
+0.5.3
+  * added more weblate translations
+  * bugfix: touching screenshots crashed the app on Android 6
+
+0.5.2
+  * added a view to list all authors and their amount of apps

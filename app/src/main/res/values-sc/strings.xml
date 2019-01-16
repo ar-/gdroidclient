@@ -80,4 +80,5 @@
     <string name="use_root">Cheres installare aplicatziones chene interatziones cun s\'impreadore, impreende sos privilègios de root disponìbiles in custu dispositivu\?</string>
     <string name="pref_description_use_root">installa e disinstalla aplicatziones automaticamente si su dispositivu tenet sos privilègios de root</string>
     <string name="pref_title_use_root">Imprea sos privilègios de root</string>
+    <string name="more">De prus</string>
 </resources>

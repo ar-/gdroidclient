@@ -40,4 +40,5 @@
     <string name="download_all_updates">下載所有更新</string>
     <string name="downloading">下載中…</string>
     <string name="download_pending">正等待下載開始…</string>
+    <string name="more">顯示更多</string>
 </resources>

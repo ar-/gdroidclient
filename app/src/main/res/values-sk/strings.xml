@@ -40,4 +40,5 @@
     <string name="download_all_updates">Stiahnuť všetky aktualizácie</string>
     <string name="downloading">Sťahujem…</string>
     <string name="download_pending">Čakanie na spustenie preberania…</string>
+    <string name="more">Viac</string>
 </resources>

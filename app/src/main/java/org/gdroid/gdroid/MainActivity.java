@@ -53,6 +53,7 @@ import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
 import org.gdroid.gdroid.widget.BottomNavigationView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity
 
     private RecyclerView recyclerView;
     BottomNavigationView navigation;
-    private AppBeanAdapter adapter;
+    private AppBeanAdapter appBeanAdapter;
     private List<ApplicationBean> appBeanList;
     private List<AppCollectionDescriptor> appCollectionDescriptorList;
     private AppCollectionAdapter appCollectionAdapter;
@@ -98,17 +99,27 @@ public class MainActivity extends AppCompatActivity
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        AppDatabase db = AppDatabase.get(getApplicationContext());
-        final ApplicationBean[] allApps = db.appDao().getAllApplicationBeans();
-
-        //if db empty
-        if (allApps.length == 0) {
-            navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem("home"));
-            // TODO initial refresh only when DB empty
-            //new DownloadJsonTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
-        } else {
-            navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem(Util.getLastMenuItem(getApplicationContext())));
-        }
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                AppDatabase db = AppDatabase.get(getApplicationContext());
+                final ApplicationBean[] allApps = db.appDao().getAllApplicationBeans();
+                db.close();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        //if db empty
+                        if (allApps.length == 0) {
+                            navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem("home"));
+                            // TODO initial refresh only when DB empty
+                            //new DownloadJsonTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
+                        } else {
+                            navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem(Util.getLastMenuItem(getApplicationContext())));
+                        }
+                    }
+                });
+            }
+        });
 
 
         final MainActivity activity = this;
@@ -171,7 +182,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        updateCurrentView();
+        // seems to be not needed any more after 'update all' there is a page refresh happening (for root and non-root)
+//        updateCurrentView();
     }
 
     private int getItemIdForHomeScreenMenuItem(String lastMenuItem) {
@@ -199,6 +211,8 @@ public class MainActivity extends AppCompatActivity
      */
     private void setUpCollectionCards() {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        appBeanList = new ArrayList<>();
+        appBeanAdapter = new AppBeanAdapter(this, appBeanList);
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
         recyclerView.setLayoutManager(mLayoutManager);
         removeAllitemDecorations();
@@ -223,12 +237,14 @@ public class MainActivity extends AppCompatActivity
         int columns = screenWidth / imgWidth;
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-
         appBeanList = new ArrayList<>();
-        adapter = new AppBeanAdapter(this, appBeanList);
+        appBeanAdapter = new AppBeanAdapter(this, appBeanList);
 
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(appBeanAdapter);
+
+        if (Util.isListViewPreferred(this))
+            columns = 1;
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, columns);
         removeAllitemDecorations();
@@ -249,16 +265,33 @@ public class MainActivity extends AppCompatActivity
         final Context context = getApplicationContext();
         if (screen.equals("home")) {
             appCollectionDescriptorList.clear();
-            AppCollectionDescriptor a = new AppCollectionDescriptor(context, "Newest apps");
+            // trigger an update here, because the app must be reactive, the swich to the new screen happes right away
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    appCollectionAdapter.notifyDataSetChanged();
+                }
+            });
+            AppCollectionDescriptor a = new AppCollectionDescriptor(context, "newest_apps");
             appCollectionDescriptorList.add(a);
-            AppCollectionDescriptor a2 = new AppCollectionDescriptor(context, "Recently updated");
+            AppCollectionDescriptor a2 = new AppCollectionDescriptor(context, "recently_updated");
             appCollectionDescriptorList.add(a2);
-            AppCollectionDescriptor a3 = new AppCollectionDescriptor(context, "High rated");
+            AppCollectionDescriptor a3 = new AppCollectionDescriptor(context, "highly_rated");
             appCollectionDescriptorList.add(a3);
-            AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "Random apps");
+
+            // trigger an update here, because the next collection is a bit slow
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    appCollectionAdapter.notifyDataSetChanged();
+                }
+            });
+            AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "similar_to_my_apps");
+            appCollectionDescriptorList.add(a5);
+            AppCollectionDescriptor a6 = new AppCollectionDescriptor(context, "you_might_also_like");
+            appCollectionDescriptorList.add(a6);
+            AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "random_apps");
             appCollectionDescriptorList.add(a4);
-//            AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "you might also like");
-//            appCollectionDescriptorList.add(a5);
 //            AppCollectionDescriptor a7 = new AppCollectionDescriptor(context, "popular apps");
 //            appCollectionDescriptorList.add(a7);
 //            AppCollectionDescriptor a8 = new AppCollectionDescriptor(context, "app of the day");
@@ -272,6 +305,7 @@ public class MainActivity extends AppCompatActivity
             for (String cn : categoryNames) {
                 AppCollectionDescriptor ad = new AppCollectionDescriptor(context, "cat:" + cn);
                 appCollectionDescriptorList.add(ad);
+                Collections.sort(appCollectionDescriptorList);
             }
             db.close();
         } else if (screen.equals("tags")) {
@@ -281,11 +315,17 @@ public class MainActivity extends AppCompatActivity
             for (String tn : tagNames) {
                 AppCollectionDescriptor ad = new AppCollectionDescriptor(context, "tag:" + tn);
                 appCollectionDescriptorList.add(ad);
+                Collections.sort(appCollectionDescriptorList);
             }
             db.close();
         }
 
-        appCollectionAdapter.notifyDataSetChanged();
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                appCollectionAdapter.notifyDataSetChanged();
+            }
+        });
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -303,7 +343,21 @@ public class MainActivity extends AppCompatActivity
                     final String screenName = "home";
                     Util.setLastMenuItem(getApplicationContext(), screenName);
                     setUpCollectionCards();
-                    prepareAppCollections(screenName);
+                    AsyncTask.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            prepareAppCollections(screenName);
+                            if (Util.getLastMenuItem(getApplicationContext()).equals(screenName)) // only if selected tab still the same
+                            {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        appBeanAdapter.notifyDataSetChanged();
+                                    }
+                                });
+                            }
+                        }
+                    });
                     return true;
                 }
                 case R.id.navigation_categories:
@@ -328,7 +382,7 @@ public class MainActivity extends AppCompatActivity
                     AppCollectionDescriptor appCollectionDescriptor = new AppCollectionDescriptor(getApplicationContext(), screenName);
                     appBeanList.clear();
                     appBeanList.addAll(appCollectionDescriptor.getApplicationBeanList());
-                    adapter.notifyDataSetChanged();
+                    appBeanAdapter.notifyDataSetChanged();
                     return true;
                 }
                 case R.id.navigation_myapps:
@@ -349,7 +403,7 @@ public class MainActivity extends AppCompatActivity
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        adapter.notifyDataSetChanged();
+                                        appBeanAdapter.notifyDataSetChanged();
                                         btnUpdateAll.setVisibility(View.VISIBLE);
                                     }
                                 });
@@ -382,7 +436,7 @@ public class MainActivity extends AppCompatActivity
                             AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search:" + query, 2000);
                             appBeanList.clear();
                             appBeanList.addAll(acd.getApplicationBeanList());
-                            adapter.notifyDataSetChanged();
+                            appBeanAdapter.notifyDataSetChanged();
                             return false;
                         }
 
@@ -401,7 +455,7 @@ public class MainActivity extends AppCompatActivity
                             AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search:" + query, limit);
                             appBeanList.clear();
                             appBeanList.addAll(acd.getApplicationBeanList());
-                            adapter.notifyDataSetChanged();
+                            appBeanAdapter.notifyDataSetChanged();
                             return false;
                         }
                     });
@@ -417,7 +471,7 @@ public class MainActivity extends AppCompatActivity
                             AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search2:" + query, limit);
                             appBeanList.clear();
                             appBeanList.addAll(acd.getApplicationBeanList());
-                            adapter.notifyDataSetChanged();
+                            appBeanAdapter.notifyDataSetChanged();
                         }
                     });
                     btnSearchEvenHarder.setOnClickListener(new View.OnClickListener() {
@@ -431,7 +485,7 @@ public class MainActivity extends AppCompatActivity
                             AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search3:" + query, limit);
                             appBeanList.clear();
                             appBeanList.addAll(acd.getApplicationBeanList());
-                            adapter.notifyDataSetChanged();
+                            appBeanAdapter.notifyDataSetChanged();
                         }
                     });
                     return true;

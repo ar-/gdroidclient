@@ -230,6 +230,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // updated to reflect the new value, per the Android Design
             // guidelines.
             bindPreferenceSummaryToValue(findPreference("use_root"));
+            bindPreferenceSummaryToValue(findPreference("use_list_view"));
         }
 
         @Override

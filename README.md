@@ -1,3 +1,5 @@
+[![Translation status](https://hosted.weblate.org/widgets/g-droid/-/translations/svg-badge.svg)](https://hosted.weblate.org/engage/g-droid/?utm_source=widget)
+
 # What is this app
 
 G-Droid can browse the free F-Droid app-repository. It is an alternative client to the F-Droid client.
@@ -14,20 +16,23 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 
 * star ratings of apps (up to 5 stars) - machine generated metrics
 * shows the star upstream star ratings (github, gitlab, sourceforge)
-* implements more metrics bases on open source data (like average release cycle time) to generate a star-rating
+* implements more metrics based on open source data (like average release cycle time) to generate a star-ratings
 * let the users choose which metrics are important to them, so there is no 'best app' in the repo - there is only a 'best app' from the point of view of the current user
-* shows 'similar apps' when watching an app
+* shows 'similar apps' and 'apps of the same category' when watching an app
 * shows 'apps of the same author' when watching an app
 * shows a list of all authors, with their apps and average star rating
 * shows web-site of the app - even if it is 'only a README file on github'. F-Droid has recently removed many websites to punish open source developers who can't effort their own domain.
 * shows newest apps and recently updated apps separated
 * shows cards in same size for better overview
+* provides a list-view as alternative for the cards (as in older F-Droid versions) for people who don't like cards
 * ability to 'star' apps to mark them
+* ability to hide apps to remove them from all views
 * shows categories in correct translation (if available) after changing language on the device
 * shows screenshots in correct translation
-* makes use of larger screens: show actually more apps on tablets
+* makes use of larger screens: shows actually more apps on tablets
 * tags to find apps for standard-tasks easily (email clients, file browsers, text editors), since the F-Droid categories are too broad
 * view for 'random apps' to discover apps you usually wouldn't find
+* shows apps the user might like (without stealing the users data for analysis)
 * aims to provide many different views to the app repository in order to assist the user to find what she wants to find and encourage to use more open source apps from the repository
 * 'share' apps so it can still be opened with another store (F-Droid, Yalp, Aurora, ...), to get more information about the app.
 * different search algorithm, can 'search harder' to continue a search if the results are insufficient
@@ -45,7 +50,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * show or install an older version of an app
 * create a local repo, share apps with 'near' people or share apps via bluetooth
 * add other repositories than the F-Droid repo
-* use the privileged extension (done, but extension is not adjusted yet)
+* use the privileged extension (done, but extension is not adjusted yet), G-Droid can use root permissions on rooted phones though, to provide unattended installs
 * update automatically
 * http proxy settings
 * G-Droid helps you in different ways to find better apps: but in some cases you might still need the 'share' button, to open that app in F-Droid to install it. G-Droid right now is not yet a complete replacement for the F-Droid app.
@@ -59,7 +64,17 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 # Explanation of permissions
 
 * INTERNET: to download the app-metadata and the apps
-* WRITE_EXTERNAL_STORAGE: To store the downloaded apps temporarily (permission only on older Android version enforced)
+* WRITE_EXTERNAL_STORAGE: To store the downloaded apps temporarily (permission only on older Android versions enforced)
+
+# Translating
+
+The app is translated using [Weblate](https://hosted.weblate.org/projects/g-droid/translations/). Follow [these instructions](https://hosted.weblate.org/engage/g-droid/) if you would like to contribute.
+
+While you can also send merge requests or patches modifying the translations, Weblate is a much better way to go. Use Weblate - it applies a series of fixes and suggestions, plus it keeps track of modifications and fuzzy translations. Applying translations manually skips all of the fixes and checks, and overrides the fuzzy state of strings.
+
+[![Translation status](https://hosted.weblate.org/widgets/g-droid/-/translations/287x66-grey.png)](https://hosted.weblate.org/engage/g-droid/?utm_source=widget)
+
+[![Translation status](https://hosted.weblate.org/widgets/g-droid/-/translations/multi-auto.svg)](https://hosted.weblate.org/engage/g-droid/?utm_source=widget)
 
 # FAQ
 
@@ -67,7 +82,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 
 The implementation of the star ratings is not finalised yet. 
 
-For now all that users can do is read the code. It is all open source. You can read on https://gitlab.com/gdroid/gdroiddata/blob/master/env/process_meta_metric.py how to extract metrics out of the f-droid repository. 
+For now all that users can do is read the code. It is all open source. You can read on https://gitlab.com/gdroid/gdroiddata/blob/master/env/process_meta_metric.py how to extract metrics out of the F-Droid repository. 
 
 Essentially if you look at the F-Droid data you can extract and extrapolate things like:
 *  time between software updates
@@ -99,3 +114,7 @@ If you are technically experienced you can look at this file: https://gitlab.com
 * The normal search is searching only in the app names in your language (yes, apps can have different names in different languages).
 * 'search harder' includes the app-summary into the search, which is a short description of the app in one or 2 sentences.
 * 'search even harder' includes also the app description in the search result. This is similar to the search in the F-Droid client. The result will contain a maximum of results but many of them might be irrelevant.
+
+## Where do the similar apps come from?
+
+They are calculated by this R script https://gitlab.com/frief/app_match.r made by Frieder Ferlemann. Please check it out and feel free to contribute to it, if you'd like to improve the similar apps.

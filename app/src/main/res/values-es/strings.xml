@@ -95,4 +95,5 @@
     <string name="pref_title_ratings_summary">Asigna un número del 1 al 10 para cada métrica. Un número más alto indica mayor importancia.</string>
     <string name="pref_title_updated_in_2_years">"última actualitzación en los 2 años recientes. "</string>
     <string name="search_harder">"encabezados de búsqueda "</string>
+    <string name="more">Más</string>
 </resources>

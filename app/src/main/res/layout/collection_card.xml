@@ -57,7 +57,7 @@
                 android:layout_alignParentRight="true"
                 android:clickable="true"
                 android:padding="16dp"
-                android:text="more"
+                android:text="@string/more"
                 android:textAllCaps="true"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp"

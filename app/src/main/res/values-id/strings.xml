@@ -43,4 +43,5 @@
     <string name="download_all_updates">Unduh semua pembaruan</string>
     <string name="downloading">Mengunduh…</string>
     <string name="download_pending">Menunggu untuk mulai unduhan…</string>
+    <string name="more">Lebih banyak</string>
 </resources>
