@@ -44,4 +44,7 @@
     <string name="downloading">S\'està baixant…</string>
     <string name="download_pending">S\'està esperant que comenci la baixada…</string>
     <string name="more">Més</string>
+    <string name="last_update">Darrera actualització</string>
+    <string name="added_on">S\'ha afegit a %s</string>
+    <string name="name">Nom</string>
 </resources>

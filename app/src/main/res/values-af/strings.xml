@@ -41,4 +41,7 @@
     <string name="downloading">Laai tans af…</string>
     <string name="download_pending">Wag om aflaai te begin …</string>
     <string name="more">Meer</string>
+    <string name="last_update">Laaste opdatering</string>
+    <string name="added_on">Toegevoeg op %s</string>
+    <string name="name">Naam</string>
 </resources>

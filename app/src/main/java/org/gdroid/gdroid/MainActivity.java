@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity
                 for (OrderByCol possibleCol: OrderByCol.values())
                 {
                     final String name = possibleCol.name();
-                    cs1.add(Util.getLocalisedCategoryName());
+                    cs1.add(Util.getLocalisedOrderByColumn(activity, possibleCol));
                     if (currentCol.equals(name))
                         currentIndex = i;
                     i++;

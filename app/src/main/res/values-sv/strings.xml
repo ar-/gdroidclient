@@ -44,4 +44,7 @@
     <string name="downloading">Hämtar…</string>
     <string name="download_pending">Väntar på att påbörja hämtning…</string>
     <string name="more">Mer</string>
+    <string name="last_update">Senaste uppdatering</string>
+    <string name="added_on">Lades till %s</string>
+    <string name="name">Namn</string>
 </resources>

@@ -39,4 +39,7 @@
     <string name="downloading">กำลังดาวน์โหลด…</string>
     <string name="download_pending">เตรียมพร้อมจะเริ่มการดาวน์โหลด…</string>
     <string name="more">เพิ่มเติม</string>
+    <string name="last_update">อัพเดตครั้งล่าสุดเมื่อ</string>
+    <string name="added_on">เพิ่มมาเมื่อ %s</string>
+    <string name="name">ชื่อ</string>
 </resources>

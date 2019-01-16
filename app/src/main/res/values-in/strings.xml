@@ -44,4 +44,7 @@
     <string name="downloading">Mengunduh…</string>
     <string name="download_pending">Menunggu untuk mulai unduhan…</string>
     <string name="more">Lebih banyak</string>
+    <string name="last_update">Terakhir diperbarui</string>
+    <string name="added_on">Ditambahkan pada %s</string>
+    <string name="name">Nama</string>
 </resources>

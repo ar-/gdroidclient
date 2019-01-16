@@ -115,4 +115,7 @@
     <string name="pref_description_use_root">instalar e desinstalar aplicativos automaticamente se o dispositivo estiver enraizado</string>
     <string name="pref_title_use_root">Use o privilégio de raiz</string>
     <string name="more">Mais</string>
+    <string name="last_update">Última atualização</string>
+    <string name="added_on">Adicionado em %s</string>
+    <string name="name">Nome</string>
 </resources>

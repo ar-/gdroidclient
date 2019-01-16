@@ -28,4 +28,7 @@
     <string name="download_all_updates">Shkarko të gjitha freskimet</string>
     <string name="downloading">Duke shkarkuar…</string>
     <string name="more">Më shumë</string>
+    <string name="last_update">Përditësimi i fundit</string>
+    <string name="added_on">Shtuar me %s</string>
+    <string name="name">Emri</string>
 </resources>

@@ -214,4 +214,9 @@
     <string name="you_might_also_like">You might also like</string>
     <string name="random_apps">Random apps</string>
 
+    <string name="last_update">Last update</string>
+    <string name="added_on">Added on %s</string>
+    <string name="stars">Stars</string>
+    <string name="name">Name</string>
+
 </resources>

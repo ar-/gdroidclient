@@ -339,6 +339,22 @@ public class Util {
         return getStringResourceByName(c, "category_"+cn);
     }
 
+    public static String getLocalisedOrderByColumn(Context c, OrderByCol obc)
+    {
+        switch (obc)
+        {
+            case added:
+                return c.getString(R.string.added_on).replace("%s","");
+            case lastupdated:
+                return c.getString(R.string.last_update);
+            case stars:
+                return c.getString(R.string.stars);
+            case name:
+                return c.getString(R.string.name);
+        }
+        return getStringResourceByName(c, "unset_col");
+    }
+
     /**
      * references to all string IDs so they don't get removed by the "remove unused" function
      */

@@ -28,4 +28,7 @@
     <string name="no">Ala</string>
     <string name="downloading">Azdam…</string>
     <string name="more">Ugar</string>
+    <string name="last_update">Aleqqem aneggaru</string>
+    <string name="added_on">Yettwarna ar %s</string>
+    <string name="name">Isem</string>
 </resources>

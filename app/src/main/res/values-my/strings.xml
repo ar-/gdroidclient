@@ -40,4 +40,7 @@
     <string name="downloading">ေဒါင္းလုတ္ဆြဲေနသည္…</string>
     <string name="download_pending">ေဒါင္းလုတ္စရန္ေစာင့္ဆိုင္းေနသည္…</string>
     <string name="more">ေနာက္ထပ္</string>
+    <string name="last_update">ေနာက္ဆံုးအသစ္မြမ္းမံျခင္း</string>
+    <string name="added_on">%s တြင္ေပါင္းထည့္ခ့ဲသည္</string>
+    <string name="name">အမည္</string>
 </resources>

@@ -32,4 +32,7 @@
     <string name="downloading">Ներբեռնում եմ…</string>
     <string name="download_pending">Սպասում եմ ներբեռնումը սկսելուն…</string>
     <string name="more">Ավել</string>
+    <string name="last_update">Վերջին թարմացում</string>
+    <string name="added_on">Ավելացվել է %sին</string>
+    <string name="name">Անուն</string>
 </resources>

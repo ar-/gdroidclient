@@ -36,4 +36,7 @@
     <string name="no">Ne</string>
     <string name="download_all_updates">Atsiųsti visus atnaujinimus</string>
     <string name="more">Daugiau</string>
+    <string name="last_update">Paskiausias atnaujinimas</string>
+    <string name="added_on">Išleista %s</string>
+    <string name="name">Pavadinimas</string>
 </resources>

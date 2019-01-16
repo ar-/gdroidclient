@@ -43,4 +43,7 @@
     <string name="downloading">V prenosu…</string>
     <string name="download_pending">Čakam na prenos…</string>
     <string name="more">Več</string>
+    <string name="last_update">Najnovejša posodobitev</string>
+    <string name="added_on">Dodano dne %s</string>
+    <string name="name">Ime</string>
 </resources>

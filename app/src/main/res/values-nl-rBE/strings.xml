@@ -116,4 +116,7 @@
     <string name="pref_description_use_root">apps automatisch installeren en verwijderen als het apparaat geroot is</string>
     <string name="pref_title_use_root">Rootprivileges gebruiken</string>
     <string name="more">Meer</string>
+    <string name="last_update">Meest recente update</string>
+    <string name="added_on">Toegevoegd op %s</string>
+    <string name="name">Naam</string>
 </resources>

@@ -41,4 +41,7 @@
     <string name="downloading">Baxando…</string>
     <string name="download_pending">Esperando p\'aniciar al descarga…</string>
     <string name="more">Más</string>
+    <string name="last_update">Anovamientu caberu</string>
+    <string name="added_on">Amestáu\'l %s</string>
+    <string name="name">Nome</string>
 </resources>

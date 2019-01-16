@@ -103,4 +103,8 @@
     <string name="you_might_also_like">Könnte dir auch gefallen</string>
     <string name="random_apps">Zufällige Apps</string>
 
+    <string name="last_update">Letzte Aktualisierung</string>
+    <string name="added_on">Hinzugefügt am %s</string>
+    <string name="name">Name</string>
+    <string name="stars">Sterne</string>
 </resources>

@@ -44,4 +44,7 @@
     <string name="downloading">Allalaadimine…</string>
     <string name="download_pending">Oodatakse allalaadimise algamist…</string>
     <string name="more">Rohkem</string>
+    <string name="last_update">Viimane värskendus</string>
+    <string name="added_on">Lisatud %s</string>
+    <string name="name">Nimi</string>
 </resources>

@@ -96,4 +96,7 @@
     <string name="pref_title_updated_in_2_years">"última actualitzación en los 2 años recientes. "</string>
     <string name="search_harder">"encabezados de búsqueda "</string>
     <string name="more">Más</string>
+    <string name="last_update">Última actualización</string>
+    <string name="added_on">Agregado el %s</string>
+    <string name="name">Nombre</string>
 </resources>

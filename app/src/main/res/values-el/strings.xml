@@ -44,4 +44,7 @@
     <string name="downloading">Λήψη…</string>
     <string name="download_pending">Περιμένετε να αρχίσει η λήψη…</string>
     <string name="more">Περισσότερα</string>
+    <string name="last_update">Τελευταία ενημέρωση</string>
+    <string name="added_on">Προστέθηκε στις %s</string>
+    <string name="name">Όνομα</string>
 </resources>

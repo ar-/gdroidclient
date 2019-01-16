@@ -64,4 +64,7 @@
     <string name="downloading">Pobieranie…</string>
     <string name="download_pending">Oczekiwanie na pobieranie…</string>
     <string name="more">Więcej</string>
+    <string name="last_update">Najnowsza aktualizacja</string>
+    <string name="added_on">Dodano %s</string>
+    <string name="name">Nazwa</string>
 </resources>

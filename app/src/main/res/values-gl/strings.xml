@@ -43,4 +43,7 @@
     <string name="downloading">Descargando…</string>
     <string name="download_pending">Agardando para iniciar a descarga…</string>
     <string name="more">Máis</string>
+    <string name="last_update">Última actualización</string>
+    <string name="added_on">Engadida a %s</string>
+    <string name="name">Nome</string>
 </resources>

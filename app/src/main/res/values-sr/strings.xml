@@ -41,4 +41,7 @@
     <string name="downloading">Преузимам…</string>
     <string name="download_pending">Чекам на почетак преузимања…</string>
     <string name="more">Више</string>
+    <string name="last_update">Последње освежавање</string>
+    <string name="added_on">Додат %s</string>
+    <string name="name">Назив</string>
 </resources>
