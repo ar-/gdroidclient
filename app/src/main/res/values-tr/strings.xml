@@ -116,4 +116,13 @@
     <string name="pref_description_use_root">cihaz kök izinli ise uygulamaları otomatik olarak kur ve kaldır</string>
     <string name="pref_title_use_root">Kök İzni Ayrıcalığını Kullan</string>
     <string name="more">Dahası</string>
+    <string name="in_same_category">Aynı kategori</string>
+    <string name="pref_title_use_list_view">"Liste görünümü etkinleştir "</string>
+    <string name="pref_description_use_list_view">mümkünse uygulamaları bir listede göster</string>
+    <string name="newest_apps">En yeni uygulamalar</string>
+    <string name="recently_updated">Son güncellenen</string>
+    <string name="highly_rated">Yüksek puanlı</string>
+    <string name="similar_to_my_apps">Uygulamalarıma benzer</string>
+    <string name="you_might_also_like">Bunları da beğenebilirsin</string>
+    <string name="random_apps">Rastgele uygulamalar</string>
 </resources>
