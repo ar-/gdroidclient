@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">Conectividad</string>
@@ -43,5 +44,56 @@
     <string name="download_all_updates">Descargar todas las actualizaciones</string>
     <string name="downloading">Descargando…</string>
     <string name="download_pending">Esperando a que empiece la descarga…</string>
+    <string name="app_name">"G-Droid "</string>
+    <string name="navigation_drawer_open">"Abre la caja de navegación "</string>
+    <string name="navigation_drawer_close">"Cierra la caja de navegación "</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="nav_header_subtitle">"cliente para el repositorio F-Droid "</string>
+    <string name="nav_header_desc">"Encabezado de navegación "</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="action_add_favourite">"Añade a favoritos "</string>
+    <string name="title_activity_settings">Ajustes</string>
+    <string name="pref_header_general">"General "</string>
+    <string name="pref_title_social_recommendations">"Habilita recomendaciones "</string>
+    <string name="pref_description_social_recommendations">"no funciona todavía "</string>
+    <string name="pref_title_display_name">"Desactivado "</string>
+    <string name="pref_title_add_friends_to_messages">"desactivado "</string>
+    <string name="pref_header_data_sync">"Datos y sincronización "</string>
+    <string name="pref_title_sync_frequency">"Frecuencia de sincronización "</string>
+    <string name="pref_title_system_sync_settings">"Ajustes de sincronización del. sistema "</string>
+    <string name="pref_header_notifications">"Notificaciones "</string>
+    <string name="pref_title_new_message_notifications">Notificaciones de nuevo mensaje</string>
+    <string name="pref_title_ringtone">"Tono de llamada "</string>
+    <string name="pref_ringtone_silent">"Silencio "</string>
+    <string name="pref_title_vibrate">"Vibración "</string>
+    <string name="title_home">"Inicio "</string>
+    <string name="title_dashboard">Tablero</string>
+    <string name="title_notifications">"Notificaciones "</string>
+    <string name="title_categories">"categorías "</string>
+    <string name="title_tags">etiquetas</string>
+    <string name="title_starred">marcado con estrella</string>
+    <string name="title_myapps">mis apps</string>
+    <string name="title_search">busca</string>
+    <string name="app_store">"Tienda de apps "</string>
+    <string name="calendar">Calendario</string>
+    <string name="camera">Camera</string>
+    <string name="contacts">Contactos</string>
+    <string name="email_client">Cliente email</string>
+    <string name="file_browser">"Explorador de ficheros "</string>
+    <string name="gallery">"Galería "</string>
+    <string name="launcher">Lanzador</string>
+    <string name="music_player">"Reproductor de música "</string>
+    <string name="shopping_list">"Lista de la compra "</string>
+    <string name="text_editor">"Editor de texto "</string>
+    <string name="torrent_downloader">"Descarga por torrent "</string>
+    <string name="web_browser">Navegador web</string>
+    <string name="youtube_player">"Reproductor YouTube "</string>
+    <string name="action_hide">"Esconde "</string>
+    <string name="action_unhide">Muestra</string>
+    <string name="pref_title_upstream_ratings">Valoraciones de GitHub, GitLab y SourceForge</string>
+    <string name="pref_title_ratings_headline">Ajusta tu importancia para cada métrica</string>
+    <string name="pref_title_ratings_summary">Asigna un número del 1 al 10 para cada métrica. Un número más alto indica mayor importancia.</string>
+    <string name="pref_title_updated_in_2_years">"última actualitzación en los 2 años recientes. "</string>
+    <string name="search_harder">"encabezados de búsqueda "</string>
     <string name="more">Más</string>
 </resources>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">Connetividade</string>
@@ -43,5 +44,41 @@
     <string name="download_all_updates">Iscàrriga totu sos agiornamentos</string>
     <string name="downloading">Iscarrighende…</string>
     <string name="download_pending">Isetende pro incumintzare s\'iscarrigamentu…</string>
+    <string name="action_settings">Impostatziones</string>
+    <string name="action_add_favourite">Annanghe a sos preferidos</string>
+    <string name="title_activity_settings">Impostatziones</string>
+    <string name="pref_header_general">Generales</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">Aberi su pannellu de nàvigu</string>
+    <string name="navigation_drawer_close">Serra su pannellu de nàvigu</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="pref_title_social_recommendations">Abìlita sos impòsitos</string>
+    <string name="pref_header_data_sync">Datos e sincronizatzione</string>
+    <string name="pref_title_sync_frequency">Frecuèntzia de sincronizatzione</string>
+    <string name="pref_header_notifications">Notìficas</string>
+    <string name="pref_title_new_message_notifications">Notìficas pro sos messàgios noos</string>
+    <string name="pref_title_ringtone">Soneria</string>
+    <string name="title_home">Domo</string>
+    <string name="title_dashboard">Pannellu de controllu</string>
+    <string name="title_notifications">Notìficas</string>
+    <string name="title_categories">Categorias</string>
+    <string name="title_tags">Etichetas</string>
+    <string name="title_myapps">aplicatziones meas</string>
+    <string name="title_search">Chirca</string>
+    <string name="app_store">Butega de aplicatziones</string>
+    <string name="calendar">Calendàriu</string>
+    <string name="camera">Fotocàmera</string>
+    <string name="contacts">Cuntatos</string>
+    <string name="file_browser">Esploradore de documentos</string>
+    <string name="gallery">Galleria</string>
+    <string name="launcher">Allughidore</string>
+    <string name="text_editor">Editore de testu</string>
+    <string name="torrent_downloader">Iscarrigadore de torrents</string>
+    <string name="action_hide">Cua</string>
+    <string name="installed_details">%d aplicatziones installadas</string>
+    <string name="confirmation">Cunfirma</string>
+    <string name="use_root">Cheres installare aplicatziones chene interatziones cun s\'impreadore, impreende sos privilègios de root disponìbiles in custu dispositivu\?</string>
+    <string name="pref_description_use_root">installa e disinstalla aplicatziones automaticamente si su dispositivu tenet sos privilègios de root</string>
+    <string name="pref_title_use_root">Imprea sos privilègios de root</string>
     <string name="more">De prus</string>
 </resources>
