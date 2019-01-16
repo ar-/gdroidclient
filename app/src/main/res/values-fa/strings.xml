@@ -47,4 +47,5 @@
     <string name="last_update">آخرین به‌روز رسانی</string>
     <string name="added_on">در %s افزوده شد</string>
     <string name="name">نام</string>
+    <string name="sort_search">چینش جست‌وجو</string>
 </resources>

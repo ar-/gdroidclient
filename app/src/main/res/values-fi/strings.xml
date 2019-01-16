@@ -47,4 +47,5 @@
     <string name="last_update">Viimeisin päivitys</string>
     <string name="added_on">Lisätty %s</string>
     <string name="name">Nimi</string>
+    <string name="sort_search">Lajittele haku</string>
 </resources>

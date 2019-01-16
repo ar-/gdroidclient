@@ -39,4 +39,5 @@
     <string name="last_update">Paskiausias atnaujinimas</string>
     <string name="added_on">Išleista %s</string>
     <string name="name">Pavadinimas</string>
+    <string name="sort_search">Sugrupuoti paiešką</string>
 </resources>

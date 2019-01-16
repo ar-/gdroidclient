@@ -47,4 +47,5 @@
     <string name="last_update">Darrera actualització</string>
     <string name="added_on">S\'ha afegit a %s</string>
     <string name="name">Nom</string>
+<string name="sort_search">Ordena els resultats de la cerca</string>
 </resources>

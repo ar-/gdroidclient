@@ -117,4 +117,5 @@
     <string name="last_update">Última atualização</string>
     <string name="added_on">Adicionada em %s</string>
     <string name="name">Nome</string>
+    <string name="sort_search">Ordenar pesquisa</string>
 </resources>

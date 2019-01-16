@@ -47,4 +47,5 @@
     <string name="last_update">Апошняе абнаўленне</string>
     <string name="added_on">Дададзеная %s</string>
     <string name="name">Назва</string>
+    <string name="sort_search">Сартаваць знойдзенае</string>
 </resources>

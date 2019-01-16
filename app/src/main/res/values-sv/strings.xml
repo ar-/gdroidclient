@@ -47,4 +47,5 @@
     <string name="last_update">Senaste uppdatering</string>
     <string name="added_on">Lades till %s</string>
     <string name="name">Namn</string>
+    <string name="sort_search">Sortera sökning</string>
 </resources>

@@ -107,4 +107,5 @@
     <string name="added_on">Hinzugefügt am %s</string>
     <string name="name">Name</string>
     <string name="stars">Sterne</string>
+    <string name="sort_search">Suchergebnis sortieren</string>
 </resources>

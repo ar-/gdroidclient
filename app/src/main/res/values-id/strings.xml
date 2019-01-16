@@ -47,4 +47,5 @@
     <string name="last_update">Terakhir diperbarui</string>
     <string name="added_on">Ditambahkan pada %s</string>
     <string name="name">Nama</string>
+    <string name="sort_search">Atur pencarian</string>
 </resources>

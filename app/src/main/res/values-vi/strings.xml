@@ -46,4 +46,5 @@
     <string name="last_update">Cập nhật lần cuối vào</string>
     <string name="added_on">Đã thêm vào %s</string>
     <string name="name">Tên</string>
+    <string name="sort_search">Sắp xếp kết quả tìm kiếm</string>
 </resources>

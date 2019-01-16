@@ -47,4 +47,5 @@
     <string name="last_update">最近更新</string>
     <string name="added_on">于%s添加</string>
     <string name="name">名称</string>
+    <string name="sort_search">搜索排序</string>
 </resources>

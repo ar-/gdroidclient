@@ -84,4 +84,5 @@
     <string name="last_update">Ùrtimu agiornamentu</string>
     <string name="added_on">Annanta su %s</string>
     <string name="name">Nùmene</string>
+    <string name="sort_search">Òrdina sa chirca</string>
 </resources>

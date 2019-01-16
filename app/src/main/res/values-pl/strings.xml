@@ -67,4 +67,5 @@
     <string name="last_update">Najnowsza aktualizacja</string>
     <string name="added_on">Dodano %s</string>
     <string name="name">Nazwa</string>
+    <string name="sort_search">Sortuj wyszukiwanie</string>
 </resources>

@@ -133,4 +133,5 @@
     <string name="last_update">Siste oppdatering</string>
     <string name="added_on">Lagt til den %s</string>
     <string name="name">Navn</string>
+<string name="sort_search">Sorter søk</string>
 </resources>

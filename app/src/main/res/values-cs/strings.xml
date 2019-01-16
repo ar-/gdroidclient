@@ -47,4 +47,5 @@
     <string name="last_update">Minulá aktualizace</string>
     <string name="added_on">Přidáno %s</string>
     <string name="name">Název</string>
+    <string name="sort_search">Setřídit hledání</string>
 </resources>

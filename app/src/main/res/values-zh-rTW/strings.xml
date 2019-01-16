@@ -119,4 +119,5 @@
     <string name="last_update">最近更新</string>
     <string name="added_on">於 %s 新增</string>
     <string name="name">名稱</string>
+    <string name="sort_search">搜尋排序</string>
 </resources>

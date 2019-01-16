@@ -99,4 +99,5 @@
     <string name="last_update">Última actualización</string>
     <string name="added_on">Agregado el %s</string>
     <string name="name">Nombre</string>
+<string name="sort_search">Ordenar resultados</string>
 </resources>

@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity
                 }
                 final CharSequence[] cs = cs1.toArray(new CharSequence[] {});
                 //alt_bld.setIcon(R.drawable.icon);
-                alt_bld.setTitle("Select a Group Name");
+                alt_bld.setTitle(activity.getString(R.string.sort_search));
 //                final CharSequence[] cs = new CharSequence[]{"a","b"};
                 alt_bld.setSingleChoiceItems(cs, currentIndex, new DialogInterface
                         .OnClickListener() {

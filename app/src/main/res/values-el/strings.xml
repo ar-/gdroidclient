@@ -47,4 +47,5 @@
     <string name="last_update">Τελευταία ενημέρωση</string>
     <string name="added_on">Προστέθηκε στις %s</string>
     <string name="name">Όνομα</string>
+    <string name="sort_search">Ταξινόμηση αναζήτησης</string>
 </resources>
