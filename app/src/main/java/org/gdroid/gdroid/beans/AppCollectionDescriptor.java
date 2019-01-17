@@ -31,6 +31,7 @@ import org.gdroid.gdroid.MapUtil;
 import org.gdroid.gdroid.Util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -147,6 +148,9 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            Collections.sort(applicationBeanList, new AppBeanNameComparator(mContext,
+                    Util.getOrderByColumn(mContext),
+                    Util.getOrderByDirection(mContext).equals("ASC")));
             db.close();
         }
         else if (collectionName.startsWith("search2:")) // level 2 search
@@ -160,6 +164,9 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            Collections.sort(applicationBeanList, new AppBeanNameComparator(mContext,
+                    Util.getOrderByColumn(mContext),
+                    Util.getOrderByDirection(mContext).equals("ASC")));
             db.close();
         }
         else if (collectionName.startsWith("search3:")) // level 3 search
@@ -173,6 +180,9 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            Collections.sort(applicationBeanList, new AppBeanNameComparator(mContext,
+                    Util.getOrderByColumn(mContext),
+                    Util.getOrderByDirection(mContext).equals("ASC")));
             db.close();
         }
         else if (collectionName.startsWith("author:"))

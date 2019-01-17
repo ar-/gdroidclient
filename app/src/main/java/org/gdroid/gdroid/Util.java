@@ -153,7 +153,8 @@ public class Util {
             final ApplicationBean app = db.appDao().getApplicationBean(starredAppId);
             ret.add(app);
         }
-        Collections.sort(ret, new AppBeanNameComparator(context));
+        Collections.sort(ret, new AppBeanNameComparator(context,
+                Util.getOrderByColumn(context), Util.getOrderByDirection(context).equals("ASC")));
         return ret;
     }
 
@@ -180,7 +181,8 @@ public class Util {
         for (ApplicationBean app: hiddenApps) {
             ret.add(app);
         }
-        Collections.sort(ret, new AppBeanNameComparator(context));
+        Collections.sort(ret, new AppBeanNameComparator(context,
+                Util.getOrderByColumn(context), Util.getOrderByDirection(context).equals("ASC")));
         return ret;
     }
 
@@ -210,7 +212,10 @@ public class Util {
 
 //        List<ApplicationBean> ret = db.appDao().getSomeApplicationBeans2(packageNames, getOrderByColumn(context));
         List<ApplicationBean> ret = db.appDao().getSomeApplicationBeans3(packageNames);
-        Collections.sort(ret, new AppBeanNameComparator(context, OrderByCol.name, true, true));
+        Collections.sort(ret, new AppBeanNameComparator(context,
+                Util.getOrderByColumn(context),
+                Util.getOrderByDirection(context).equals("ASC"),
+                true));
         return ret;
     }
 
@@ -527,19 +532,23 @@ public class Util {
         return PreferenceManager.getDefaultSharedPreferences(context).getBoolean("use_list_view",false);
     }
 
-    public static String getOrderByColumnAsSring(Context context) {
+    public static String getOrderByColumnPreference(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context).getString("order_by_column","lastupdated DESC");
+    }
+
+    public static String getOrderByColumnAsSring(Context context) {
+        return getOrderByColumnPreference(context).split(" ")[0];
     }
 
     public static OrderByCol getOrderByColumn(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getString("order_by_column","lastupdated DESC");
+        return Enum.valueOf(OrderByCol.class, getOrderByColumnAsSring(context));
     }
 
-    public static OrderByCol getOrderByDirection(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getString("order_by_column","lastupdated DESC");
+    public static String getOrderByDirection(Context context) {
+        return getOrderByColumnPreference(context).split(" ")[1];
     }
 
-    public static void setOrderByColumn (Context context, String orderByColumn)
+    public static void setOrderByColumnPreference(Context context, String orderByColumn)
     {
         String key = "order_by_column";
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);

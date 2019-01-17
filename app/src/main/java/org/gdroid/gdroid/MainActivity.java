@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity
     private RecyclerView recyclerView;
     BottomNavigationView navigation;
     SwipeRefreshLayout swipe;
+    FloatingActionButton fab;
     private AppBeanAdapter appBeanAdapter;
     private List<ApplicationBean> appBeanList;
     private List<AppCollectionDescriptor> appCollectionDescriptorList;
@@ -129,13 +130,13 @@ public class MainActivity extends AppCompatActivity
 
         final MainActivity activity = this;
 
-        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder alt_bld = new AlertDialog.Builder(activity);
-                final String orderByColumn = Util.getOrderByColumn(activity);
-                String currentCol = orderByColumn.split(" ")[0];
+//                final String orderByColumn = Util.getOrderByColumnAsSring(activity);
+                String currentCol = Util.getOrderByColumnAsSring(activity);
                 int currentIndex = 0;
                 int i = 0;
                 final ArrayList<CharSequence> cs1 = new ArrayList<>(OrderByCol.values().length);
@@ -159,7 +160,7 @@ public class MainActivity extends AppCompatActivity
                         Toast.makeText(getApplicationContext(),
                                 "Group Name = "+cs1.get(item), Toast.LENGTH_SHORT).show();
 //                        dialog.dismiss();// dismiss the alertbox after chose option
-                        Util.setOrderByColumn(activity,cs1.get(item) + " DESC");
+                        Util.setOrderByColumnPreference(activity,cs1.get(item) + " DESC");
 
                     }
                 });
@@ -167,17 +168,19 @@ public class MainActivity extends AppCompatActivity
                 alt_bld.setNegativeButton(getString(R.string.ascending), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String obc = Util.getOrderByColumn(activity);
+                        String obc = Util.getOrderByColumnPreference(activity);
                         obc = obc.replace(" DESC", " ASC");
-                        Util.setOrderByColumn(activity,obc);
+                        Util.setOrderByColumnPreference(activity,obc);
+                        updateCurrentView();
                     }
                 });
                 alt_bld.setPositiveButton(R.string.descending, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String obc = Util.getOrderByColumn(activity);
+                        String obc = Util.getOrderByColumnPreference(activity);
                         obc = obc.replace(" ASC", " DESC");
-                        Util.setOrderByColumn(activity,obc);
+                        Util.setOrderByColumnPreference(activity,obc);
+                        updateCurrentView();
                     }
                 });
                 AlertDialog alert = alt_bld.create();
@@ -196,7 +199,7 @@ public class MainActivity extends AppCompatActivity
             }
         );
 
-        // download all button
+        // "download all"-button
         btnUpdateAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
@@ -274,6 +277,7 @@ public class MainActivity extends AppCompatActivity
      * These are cards that ontain on row of cards of apps.
      */
     private void setUpCollectionCards() {
+        fab.hide();
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         appBeanList = new ArrayList<>();
         appBeanAdapter = new AppBeanAdapter(this, appBeanList);
@@ -290,6 +294,7 @@ public class MainActivity extends AppCompatActivity
      * call this to set up the main view to show a bunch of apps on a grid with 3 columns
      */
     private void setUpAppCards() {
+        fab.show();
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
@@ -643,6 +648,11 @@ public class MainActivity extends AppCompatActivity
     public void updateCurrentView()
     {
         navigation.setSelectedItemId(navigation.getSelectedItemId());
+        if (Util.getLastMenuItem(this).equals("search"))
+        {
+            btnSearchHarder.performClick();
+            searchView.change // TODO call function to run the first first (call text change on drearch viw)
+        }
     }
 
     /**
