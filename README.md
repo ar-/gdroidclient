@@ -25,6 +25,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * shows newest apps and recently updated apps separated
 * shows cards in same size for better overview
 * provides a list-view as alternative for the cards (as in older F-Droid versions) for people who don't like cards
+* has more possibilities to order and sort apps
 * ability to 'star' apps to mark them
 * ability to hide apps to remove them from all views
 * shows categories in correct translation (if available) after changing language on the device
