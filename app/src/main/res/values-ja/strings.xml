@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">通信</string>
@@ -44,6 +45,28 @@
     <string name="downloading">ダウンロード中</string>
     <string name="download_pending">ダウンロードの開始を待っています</string>
     <string name="more">詳細を表示</string>
+    <string name="app_name">G-Droid</string>
+    <string name="nav_header_title">G-Droid</string>
+    <string name="action_settings">設定</string>
+    <string name="title_activity_settings">設定</string>
+    <string name="pref_header_data_sync">データと同期</string>
+    <string name="title_home">ホーム</string>
+    <string name="title_notifications">通知</string>
+    <string name="app_store">アプリストア</string>
+    <string name="calendar">カレンダー</string>
+    <string name="camera">カメラ</string>
+    <string name="contacts">連絡先</string>
+    <string name="file_browser">ファイルマネージャー</string>
+    <string name="gallery">ギャラリー</string>
+    <string name="search_harder">もっと探索</string>
+    <string name="search_even_harder">めっちゃ探すぞ</string>
+    <string name="menu_my_apps">インストールしたアプリ</string>
+    <string name="installing" formatted="false">%s インストール中</string>
+    <string name="installing_details" formatted="false">インストール中 %d / %d</string>
+    <string name="installation_finished">インストールした</string>
+    <string name="installed_details">%d アプリインストールした</string>
+    <string name="confirmation">確認</string>
+    <string name="you_might_also_like">おすすめアプリ</string>
     <string name="last_update">最終更新</string>
     <string name="added_on">%sに追加しました</string>
     <string name="name">名前</string>
