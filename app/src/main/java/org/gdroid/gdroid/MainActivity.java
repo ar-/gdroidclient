@@ -522,7 +522,7 @@ public class MainActivity extends AppCompatActivity
         final CharSequence query = searchView.getQuery();
         if (query.length()<1)
             return false;
-        
+
         final boolean shortQuery = query.length() < 2;
         switch (searchType)
         {
