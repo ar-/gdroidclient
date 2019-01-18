@@ -32,10 +32,6 @@ import android.support.v4.os.LocaleListCompat;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.tonyodev.fetch2.Download;
-import com.tonyodev.fetch2.Status;
-import com.tonyodev.fetch2core.Func;
-
 import org.gdroid.gdroid.beans.AppBeanNameComparator;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
@@ -43,7 +39,6 @@ import org.gdroid.gdroid.beans.OrderByCol;
 import org.gdroid.gdroid.installer.DefaultInstaller;
 import org.gdroid.gdroid.installer.Installer;
 import org.gdroid.gdroid.installer.RootInstaller;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -211,7 +206,7 @@ public class Util {
         }
 
 //        List<ApplicationBean> ret = db.appDao().getSomeApplicationBeans2(packageNames, getOrderByColumn(context));
-        List<ApplicationBean> ret = db.appDao().getSomeApplicationBeans3(packageNames);
+        List<ApplicationBean> ret = db.appDao().getSomeApplicationBeansList(packageNames);
         Collections.sort(ret, new AppBeanNameComparator(context,
                 Util.getOrderByColumn(context),
                 Util.getOrderByDirection(context).equals("ASC"),

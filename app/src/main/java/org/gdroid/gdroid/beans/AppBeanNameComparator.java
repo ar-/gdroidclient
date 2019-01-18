@@ -32,13 +32,6 @@ public class AppBeanNameComparator implements Comparator<ApplicationBean> {
     private final boolean mAscending;
     private final boolean mUpdatableFirst;
 
-//    public AppBeanNameComparator (Context context)
-//    {
-//        this.mContext = context;
-//        this.mOrderByCol = OrderByCol.name;
-//        this.mAscending = true;
-//        this.mUpdatableFirst = false;
-//    }
     public AppBeanNameComparator(Context context, OrderByCol orderByCol, boolean ascending) {
         this(context,orderByCol,ascending,false);
     }
