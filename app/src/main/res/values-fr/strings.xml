@@ -90,4 +90,8 @@
     <string name="downloading">Téléchargement…</string>
     <string name="download_pending">Téléchargement en attente…</string>
     <string name="more">Plus</string>
+    <string name="last_update">Dernière mise à jour</string>
+    <string name="added_on">Ajoutée le %s</string>
+    <string name="name">Nom</string>
+    <string name="sort_search">Trier la recherche</string>
 </resources>

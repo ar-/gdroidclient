@@ -116,4 +116,8 @@
     <string name="pref_description_use_root">instalatu eta desinstalatu aplikazioak automatikoki gailuak root baimena eskaintzen badu</string>
     <string name="pref_title_use_root">Erabili root baimena</string>
     <string name="more">Gehiago</string>
+    <string name="last_update">Azken eguneraketa</string>
+    <string name="added_on">%s(e)an gehitua</string>
+    <string name="name">Izena</string>
+    <string name="sort_search">Ordenatu bilaketa</string>
 </resources>

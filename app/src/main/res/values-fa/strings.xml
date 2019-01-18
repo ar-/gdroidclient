@@ -44,4 +44,8 @@
     <string name="downloading">در حال بارگیری…</string>
     <string name="download_pending">در انتظار شروع بارگیری…</string>
     <string name="more">بیشتر</string>
+    <string name="last_update">آخرین به‌روز رسانی</string>
+    <string name="added_on">در %s افزوده شد</string>
+    <string name="name">نام</string>
+    <string name="sort_search">چینش جست‌وجو</string>
 </resources>

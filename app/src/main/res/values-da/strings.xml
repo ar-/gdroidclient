@@ -43,4 +43,8 @@
     <string name="downloading">Henter…</string>
     <string name="download_pending">Venter på at kunne begynde hentning…</string>
     <string name="more">Mere</string>
+    <string name="last_update">Sidste opdatering</string>
+    <string name="added_on">Tilføjet den %s</string>
+    <string name="name">Navn</string>
+    <string name="sort_search">Sorter søgning</string>
 </resources>

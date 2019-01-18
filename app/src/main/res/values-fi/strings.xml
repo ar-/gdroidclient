@@ -44,4 +44,8 @@
     <string name="downloading">Ladataan…</string>
     <string name="download_pending">Odotetaan latauksen alkamista…</string>
     <string name="more">Lisää</string>
+    <string name="last_update">Viimeisin päivitys</string>
+    <string name="added_on">Lisätty %s</string>
+    <string name="name">Nimi</string>
+    <string name="sort_search">Lajittele haku</string>
 </resources>

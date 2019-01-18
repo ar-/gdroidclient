@@ -44,4 +44,8 @@
     <string name="downloading">Elŝutado…</string>
     <string name="download_pending">Atendado je instalado…</string>
     <string name="more">Pli</string>
+    <string name="last_update">Lasta ĝisdatigo</string>
+    <string name="added_on">Aldonita je %s</string>
+    <string name="name">Nomo</string>
+    <string name="sort_search">Ordigi serĉon</string>
 </resources>

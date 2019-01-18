@@ -44,4 +44,8 @@
     <string name="downloading">Sæki…</string>
     <string name="download_pending">Bíð eftir að niðurhal hefjist…</string>
     <string name="more">Meira</string>
+    <string name="last_update">Síðast uppfært</string>
+    <string name="added_on">Bætti við %s</string>
+    <string name="name">Heiti</string>
+    <string name="sort_search">Raða leit</string>
 </resources>

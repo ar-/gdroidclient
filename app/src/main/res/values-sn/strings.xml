@@ -40,4 +40,7 @@
     <string name="downloading">Kututunura…</string>
     <string name="download_pending">Takamirira kutanga kututunura…</string>
     <string name="more">Zvimwe</string>
+    <string name="last_update">Chapedzisira kunatsa</string>
+    <string name="added_on">Chawedzerwa pa %s</string>
+    <string name="name">Zita</string>
 </resources>

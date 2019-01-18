@@ -130,4 +130,8 @@
     <string name="pref_description_use_root">Installer og avinstaller programmer automatisk hvis enheten har root-privilegier</string>
     <string name="pref_title_use_root">Bruk root-privilegie</string>
     <string name="more">Mer</string>
+    <string name="last_update">Siste oppdatering</string>
+    <string name="added_on">Lagt til den %s</string>
+    <string name="name">Navn</string>
+<string name="sort_search">Sorter søk</string>
 </resources>

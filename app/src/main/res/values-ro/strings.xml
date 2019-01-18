@@ -111,4 +111,8 @@
     <string name="torrent_downloader">Descărcări torrent</string>
     <string name="youtube_player">"YouTube "</string>
     <string name="more">Mai mult</string>
+    <string name="last_update">Ultima actualizare</string>
+    <string name="added_on">Adăugat pe %s</string>
+    <string name="name">Nume</string>
+    <string name="sort_search">Sortare căutare</string>
 </resources>

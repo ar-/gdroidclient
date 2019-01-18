@@ -44,4 +44,8 @@
     <string name="downloading">Завантаження…</string>
     <string name="download_pending">Очікування початку завантаження…</string>
     <string name="more">Більше</string>
+    <string name="last_update">Останнє оновлення</string>
+    <string name="added_on">Додано %s</string>
+    <string name="name">Назва</string>
+<string name="sort_search">Розсортувати за пошуком</string>
 </resources>

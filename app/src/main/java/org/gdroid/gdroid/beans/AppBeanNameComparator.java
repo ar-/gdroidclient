@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,10 +28,19 @@ public class AppBeanNameComparator implements Comparator<ApplicationBean> {
 
 
     private final Context mContext;
+    private final OrderByCol mOrderByCol;
+    private final boolean mAscending;
+    private final boolean mUpdatableFirst;
 
-    public AppBeanNameComparator (Context context)
-    {
+    public AppBeanNameComparator(Context context, OrderByCol orderByCol, boolean ascending) {
+        this(context,orderByCol,ascending,false);
+    }
+
+    public AppBeanNameComparator(Context context, OrderByCol orderByCol, boolean ascending, boolean updatableFirst) {
         this.mContext = context;
+        this.mOrderByCol = orderByCol;
+        this.mAscending = ascending;
+        this.mUpdatableFirst = updatableFirst;
     }
 
     @Override
@@ -42,13 +51,44 @@ public class AppBeanNameComparator implements Comparator<ApplicationBean> {
             return 0;
 
         // this makes the comparator very slow, it must only be used on the myapps tab
-        final boolean ud1 = Util.isAppUpdateable(mContext, o1);
-        final boolean ud2 = Util.isAppUpdateable(mContext, o2);
+        if (mUpdatableFirst) {
+            final boolean ud1 = Util.isAppUpdateable(mContext, o1);
+            final boolean ud2 = Util.isAppUpdateable(mContext, o2);
 
-        if (ud1 != ud2)
-            // compare in inverese order since true comes before false for this case
-            return new Boolean(ud2).compareTo(new Boolean(ud1));
-
-        return o1.name.toLowerCase().compareTo(o2.name.toLowerCase());
+            if (ud1 != ud2)
+                // compare in inverese order since true comes before false for this case
+                return new Boolean(ud2).compareTo(new Boolean(ud1));
+        }
+        switch (mOrderByCol)
+        {
+            case name:
+                if (mAscending)
+                    return o1.name.toLowerCase().compareTo(o2.name.toLowerCase());
+                else
+                    return o2.name.toLowerCase().compareTo(o1.name.toLowerCase());
+            case stars:
+                if (mAscending)
+                    return Float.compare(o1.stars,o2.stars);
+                else
+                    return Float.compare(o2.stars,o1.stars);
+            case lastupdated:
+                if (mAscending)
+                    return compareLong(o1.lastupdated,o2.lastupdated);
+                else
+                    return compareLong(o2.lastupdated,o1.lastupdated);
+            case added:
+                if (mAscending)
+                    return compareLong(o1.added,o2.added);
+                else
+                    return compareLong(o2.added,o1.added);
+                default:
+                    return 0; // can't happen
+        }
     }
+
+    // stolen from Long.java because this highly sophisticated function requires API level 19 - no way you can do that in 14 !!
+    public static int compareLong(long x, long y) {
+        return (x < y) ? -1 : ((x == y) ? 0 : 1);
+    }
+
 }

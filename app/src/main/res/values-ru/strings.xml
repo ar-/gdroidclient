@@ -57,4 +57,8 @@
     <string name="downloading">Загрузка…</string>
     <string name="download_pending">Ожидание начала загрузки…</string>
     <string name="more">Детали</string>
+    <string name="last_update">Последнее обновление</string>
+    <string name="added_on">Добавлено %s</string>
+    <string name="name">Название</string>
+    <string name="sort_search">Сортировка поиска</string>
 </resources>

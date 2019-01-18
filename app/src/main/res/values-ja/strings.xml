@@ -44,4 +44,8 @@
     <string name="downloading">ダウンロード中</string>
     <string name="download_pending">ダウンロードの開始を待っています</string>
     <string name="more">詳細を表示</string>
+    <string name="last_update">最終更新</string>
+    <string name="added_on">%sに追加しました</string>
+    <string name="name">名前</string>
+    <string name="sort_search">検索の並び替え</string>
 </resources>
