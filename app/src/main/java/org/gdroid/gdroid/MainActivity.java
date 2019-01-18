@@ -134,8 +134,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder alt_bld = new AlertDialog.Builder(activity);
-//                final String orderByColumn = Util.getOrderByColumnAsSring(activity);
+                AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 String currentCol = Util.getOrderByColumnAsSring(activity);
                 int currentIndex = 0;
                 int i = 0;
@@ -151,21 +150,16 @@ public class MainActivity extends AppCompatActivity
                     i++;
                 }
                 final CharSequence[] cs = localisedcs1.toArray(new CharSequence[] {});
-                //alt_bld.setIcon(R.drawable.icon);
-                alt_bld.setTitle(activity.getString(R.string.sort_search));
-//                final CharSequence[] cs = new CharSequence[]{"a","b"};
-                alt_bld.setSingleChoiceItems(cs, currentIndex, new DialogInterface
+                builder.setTitle(activity.getString(R.string.sort_search));
+                builder.setSingleChoiceItems(cs, currentIndex, new DialogInterface
                         .OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
-                        Toast.makeText(getApplicationContext(),
-                                "Group Name = "+cs1.get(item), Toast.LENGTH_SHORT).show();
-//                        dialog.dismiss();// dismiss the alertbox after chose option
                         Util.setOrderByColumnPreference(activity,cs1.get(item) + " DESC");
 
                     }
                 });
 
-                alt_bld.setNegativeButton(getString(R.string.ascending), new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(getString(R.string.ascending), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String obc = Util.getOrderByColumnPreference(activity);
@@ -174,7 +168,7 @@ public class MainActivity extends AppCompatActivity
                         updateCurrentView();
                     }
                 });
-                alt_bld.setPositiveButton(R.string.descending, new DialogInterface.OnClickListener() {
+                builder.setPositiveButton(R.string.descending, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String obc = Util.getOrderByColumnPreference(activity);
@@ -183,7 +177,7 @@ public class MainActivity extends AppCompatActivity
                         updateCurrentView();
                     }
                 });
-                AlertDialog alert = alt_bld.create();
+                AlertDialog alert = builder.create();
                 alert.show();
             }
         });
@@ -493,76 +487,88 @@ public class MainActivity extends AppCompatActivity
                     searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                         @Override
                         public boolean onQueryTextSubmit(String s) {
-                            final CharSequence query = searchView.getQuery();
-                            final boolean shortQuery = query.length() < 2;
-                            if (shortQuery) {
-                                btnSearchHarder.setVisibility(View.GONE);
-                                btnSearchEvenHarder.setVisibility(View.GONE);
-                            } else {
-                                btnSearchHarder.setVisibility(View.VISIBLE);
-                                btnSearchEvenHarder.setVisibility(View.GONE);
-                            }
-                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search:" + query, 2000);
-                            appBeanList.clear();
-                            appBeanList.addAll(acd.getApplicationBeanList());
-                            appBeanAdapter.notifyDataSetChanged();
-                            return false;
+                            return executeQuery(false, "search");
                         }
 
                         @Override
                         public boolean onQueryTextChange(String s) {
-                            final CharSequence query = searchView.getQuery();
-                            final boolean shortQuery = query.length() < 2;
-                            if (shortQuery) {
-                                btnSearchHarder.setVisibility(View.GONE);
-                                btnSearchEvenHarder.setVisibility(View.GONE);
-                            } else {
-                                btnSearchHarder.setVisibility(View.VISIBLE);
-                                btnSearchEvenHarder.setVisibility(View.GONE);
-                            }
-                            final int limit = shortQuery ? 20 : 2000;
-                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search:" + query, limit);
-                            appBeanList.clear();
-                            appBeanList.addAll(acd.getApplicationBeanList());
-                            appBeanAdapter.notifyDataSetChanged();
-                            return false;
+                            return executeQuery(true, "search");
                         }
                     });
 
                     btnSearchHarder.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            btnSearchHarder.setVisibility(View.GONE);
-                            btnSearchEvenHarder.setVisibility(View.VISIBLE);
-                            hideSoftKeyboard(btnSearchHarder);
-                            final CharSequence query = searchView.getQuery();
-                            int limit = query.length() < 2 ? 20 : 2000;
-                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search2:" + query, limit);
-                            appBeanList.clear();
-                            appBeanList.addAll(acd.getApplicationBeanList());
-                            appBeanAdapter.notifyDataSetChanged();
+                            executeQuery(true, "search2");
                         }
                     });
                     btnSearchEvenHarder.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            btnSearchHarder.setVisibility(View.GONE);
-                            btnSearchEvenHarder.setVisibility(View.GONE);
-                            hideSoftKeyboard(btnSearchHarder);
-                            final CharSequence query = searchView.getQuery();
-                            int limit = query.length() < 2 ? 20 : 2000;
-                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search3:" + query, limit);
-                            appBeanList.clear();
-                            appBeanList.addAll(acd.getApplicationBeanList());
-                            appBeanAdapter.notifyDataSetChanged();
+                            executeQuery(true, "search3");
                         }
                     });
+
+                    // also execute it once, as there might be text in the search field, so search can go on right away:
+                    executeQuery(false, "search");
                     return true;
                 }
             }
             return false;
         }
     };
+
+    public boolean executeQuery(boolean speedup, final String searchType) {
+        final CharSequence query = searchView.getQuery();
+        if (query.length()<1)
+            return false;
+        
+        final boolean shortQuery = query.length() < 2;
+        switch (searchType)
+        {
+            case "search":
+            {
+                if (shortQuery) {
+                    btnSearchHarder.setVisibility(View.GONE);
+                    btnSearchEvenHarder.setVisibility(View.GONE);
+                } else {
+                    btnSearchHarder.setVisibility(View.VISIBLE);
+                    btnSearchEvenHarder.setVisibility(View.GONE);
+                }
+            }
+            break;
+            case "search2":
+            {
+                btnSearchHarder.setVisibility(View.GONE);
+                btnSearchEvenHarder.setVisibility(View.VISIBLE);
+            }
+            break;
+            case "search3":
+            {
+                btnSearchHarder.setVisibility(View.GONE);
+                btnSearchEvenHarder.setVisibility(View.GONE);
+            }
+            break;
+            default:
+                throw new RuntimeException("Unknown search type: " + searchType);
+        }
+        final int limit = speedup && shortQuery ? 20 : 2000;
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                final AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), searchType+":" + query, limit);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        appBeanList.clear();
+                        appBeanList.addAll(acd.getApplicationBeanList());
+                        appBeanAdapter.notifyDataSetChanged();
+                    }
+                });
+            }
+        });
+        return false;
+    }
 
     public void showSoftKeyboard(View view) {
 //        if (view.requestFocus()) {
@@ -648,11 +654,11 @@ public class MainActivity extends AppCompatActivity
     public void updateCurrentView()
     {
         navigation.setSelectedItemId(navigation.getSelectedItemId());
-        if (Util.getLastMenuItem(this).equals("search"))
-        {
-            btnSearchHarder.performClick();
-            searchView.change // TODO call function to run the first first (call text change on drearch viw)
-        }
+//        if (Util.getLastMenuItem(this).equals("search"))
+//        {
+//            executeQuery(false, "search");
+////            searchView.change // TODO call function to run the first first (call text change on drearch viw)
+//        }
     }
 
     /**

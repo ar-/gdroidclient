@@ -112,6 +112,8 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
+        if (position >= mApplicationBeanList.size())
+            return; // this can happen since list gets filled async, if next fill happens too quick
         final ApplicationBean applicationBean = mApplicationBeanList.get(position);
         if (applicationBean == null)
             return;
