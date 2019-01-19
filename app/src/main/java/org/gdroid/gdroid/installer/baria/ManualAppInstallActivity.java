@@ -51,6 +51,7 @@ public class ManualAppInstallActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         Intent intent = getIntent();
         try {
+            //noinspection unchecked
             apps = (ArrayList<String>) intent.getSerializableExtra("apps");
             total = apps.size();
 
