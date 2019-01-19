@@ -45,7 +45,7 @@ public class AuthorListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_author_list);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         authorsList = findViewById(R.id.listview_authors);
         setSupportActionBar(toolbar);
 

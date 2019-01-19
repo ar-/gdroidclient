@@ -147,7 +147,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
 
     @Override
     protected void onPostExecute(List<ApplicationBean> result) {
-        SwipeRefreshLayout swipe = (SwipeRefreshLayout) mMainActivity.findViewById(R.id.swiperefresh);
+        SwipeRefreshLayout swipe = mMainActivity.findViewById(R.id.swiperefresh);
         swipe.setRefreshing(false);
         mMainActivity.findViewById(R.id.fab).setEnabled(true);
         if (mAppCollectionAdapter != null) {

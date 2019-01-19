@@ -79,12 +79,12 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
 
         public MyViewHolder(View view) {
             super(view);
-            title = (TextView) view.findViewById(R.id.title);
-            count = (TextView) view.findViewById(R.id.count);
-            desc = (TextView) view.findViewById(R.id.lbl_desc);
-            thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
-            overflow = (ImageView) view.findViewById(R.id.overflow);
-            starOnCard = (ImageView) view.findViewById(R.id.img_star_on_card);
+            title = view.findViewById(R.id.title);
+            count = view.findViewById(R.id.count);
+            desc = view.findViewById(R.id.lbl_desc);
+            thumbnail = view.findViewById(R.id.thumbnail);
+            overflow = view.findViewById(R.id.overflow);
+            starOnCard = view.findViewById(R.id.img_star_on_card);
 
             mActivity = getActivity();
             thumbnail.setOnClickListener(new View.OnClickListener() {

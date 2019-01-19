@@ -90,19 +90,19 @@ public class MainActivity extends AppCompatActivity
         btnSearchHarder = findViewById(R.id.btn_search_harder);
         btnSearchEvenHarder = findViewById(R.id.btn_search_even_harder);
         btnUpdateAll = findViewById(R.id.btn_update_all);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         AsyncTask.execute(new Runnable() {
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity
 
         final MainActivity activity = this;
 
-        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        swipe = (SwipeRefreshLayout) findViewById(R.id.swiperefresh);
+        swipe = findViewById(R.id.swiperefresh);
 
         swipe.setOnRefreshListener(
             new SwipeRefreshLayout.OnRefreshListener() {
@@ -272,7 +272,7 @@ public class MainActivity extends AppCompatActivity
      */
     private void setUpCollectionCards() {
         fab.hide();
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
         appBeanList = new ArrayList<>();
         appBeanAdapter = new AppBeanAdapter(this, appBeanList);
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
@@ -299,7 +299,7 @@ public class MainActivity extends AppCompatActivity
         final int imgWidth = dpToPx(cardWidth+topup + gapDp);
         int columns = screenWidth / imgWidth;
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
         appBeanList = new ArrayList<>();
         appBeanAdapter = new AppBeanAdapter(this, appBeanList);
 
@@ -589,7 +589,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -627,7 +627,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         if (id == R.id.nav_my_apps) {
             navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem("myapps"));
         } else if (id == R.id.nav_hidden_apps) {
@@ -646,7 +646,7 @@ public class MainActivity extends AppCompatActivity
 //        } else if (id == R.id.nav_send) {
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

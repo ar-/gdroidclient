@@ -90,7 +90,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_detail);
         mContext = getApplicationContext();
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         CollapsingToolbarLayout toolbarLayout = findViewById(R.id.toolbar_layout);
         setSupportActionBar(toolbar);
 
@@ -124,7 +124,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
 
         // fill categories in
         final CategoryBean[] categories = db.appDao().getAllCategoriesForApp(mApp.id);
-        final LinearLayout categoryView = (LinearLayout) findViewById(R.id.grp_categories);
+        final LinearLayout categoryView = findViewById(R.id.grp_categories);
         categoryView.removeAllViews();
         for (CategoryBean cb:categories) {
             TextView tv = new TextView(mContext);
@@ -241,7 +241,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         }
 
         // load screenshots
-        final LinearLayout grpScreenshots = (LinearLayout) findViewById(R.id.grp_screenshots);
+        final LinearLayout grpScreenshots = findViewById(R.id.grp_screenshots);
         if (!TextUtils.isEmpty(mApp.screenshots)) {
             grpScreenshots.removeAllViews();
             for (String ss : mApp.getScreenshotList()) {
@@ -295,7 +295,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         // TODO show changelog from fastlane
 
         // make the star button useful
-        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -304,7 +304,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             }
         });
 
-        fabShare = (FloatingActionButton) findViewById(R.id.fab_share);
+        fabShare = findViewById(R.id.fab_share);
         fabShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -476,7 +476,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             @Override
             public void run() {
                 List<ApplicationBean> applicationBeanList;
-                RecyclerView viewSimilarApps = (RecyclerView) findViewById(recViewToFill);
+                RecyclerView viewSimilarApps = findViewById(recViewToFill);
                 applicationBeanList = new ArrayList<>();
                 final AppBeanAdapter adapter = new AppBeanAdapter(mContext, applicationBeanList, true);
                 adapter.setActivity(caller); // make this Activity the calling context

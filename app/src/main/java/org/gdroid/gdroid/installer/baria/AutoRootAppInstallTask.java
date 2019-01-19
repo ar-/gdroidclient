@@ -134,7 +134,7 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
 
         for(ApplicationBean packageInfo: packages){
             current++;
-            publishProgress(new ApplicationBean[]{packageInfo});
+            publishProgress(packageInfo);
             try {
                 if (Util.isRooted()) {
                     final String downloadTarget = AppDownloader.getAbsoluteFilenameOfDownloadTarget(context, packageInfo);

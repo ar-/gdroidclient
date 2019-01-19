@@ -46,9 +46,9 @@ public class AuthorArrayAdapter extends ArrayAdapter<AuthorBean> {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.author_line, parent, false);
-        TextView line1 = (TextView) rowView.findViewById(R.id.lbl_firstLine);
-        TextView line2 = (TextView) rowView.findViewById(R.id.lbl_secondLine);
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
+        TextView line1 = rowView.findViewById(R.id.lbl_firstLine);
+        TextView line2 = rowView.findViewById(R.id.lbl_secondLine);
+        ImageView imageView = rowView.findViewById(R.id.icon);
         line1.setText(values[position].author);
         DecimalFormat df = new DecimalFormat("0.0");
         line2.setText(values[position].apps + " apps ("+df.format(values[position].stars) + " ★)");

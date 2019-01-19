@@ -448,10 +448,7 @@ public class Util {
         if (!TextUtils.isEmpty(applicationBean.marketvercode) && installedVersionCodeOfApp > 0 )
         {
             final int marketvercode = Integer.parseInt(applicationBean.marketvercode);
-            if (marketvercode > installedVersionCodeOfApp)
-            {
-                return true;
-            }
+            return marketvercode > installedVersionCodeOfApp;
         }
         return false;
     }

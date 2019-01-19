@@ -58,7 +58,7 @@ public class AppCollectionActivity extends AppCompatActivity {
         itemsToShow=loadSetpSize;
         isLoading = false;
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -80,7 +80,7 @@ public class AppCollectionActivity extends AppCompatActivity {
         final int imgWidth = dpToPx(cardWidth+topup + gapDp);
         int columns = screenWidth / imgWidth;
 
-        RecyclerView viewAppCollection = (RecyclerView) findViewById(R.id.view_app_collection);
+        RecyclerView viewAppCollection = findViewById(R.id.view_app_collection);
 
         applicationBeanList = new ArrayList<>();
         adapter = new AppBeanAdapter(this, applicationBeanList);

@@ -67,7 +67,7 @@ public class BottomNavigationView extends FrameLayout {
     private BottomNavigationView.OnNavigationItemReselectedListener reselectedListener;
 
     public BottomNavigationView(Context context) {
-        this(context, (AttributeSet)null);
+        this(context, null);
     }
 
     public BottomNavigationView(Context context, AttributeSet attrs) {
@@ -312,7 +312,7 @@ public class BottomNavigationView extends FrameLayout {
             }
 
             public BottomNavigationView.SavedState createFromParcel(Parcel in) {
-                return new BottomNavigationView.SavedState(in, (ClassLoader)null);
+                return new BottomNavigationView.SavedState(in, null);
             }
 
             public BottomNavigationView.SavedState[] newArray(int size) {

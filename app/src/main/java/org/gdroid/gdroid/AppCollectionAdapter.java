@@ -60,10 +60,10 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
 
         public MyViewHolder(View view) {
             super(view);
-            headlineContainer = (RelativeLayout) view.findViewById(R.id.collection_headline_container);
-            title = (TextView) view.findViewById(R.id.collection_headline);
-            moreButton = (TextView) view.findViewById(R.id.more_button);
-            inner_recycler_view = (RecyclerView) view.findViewById(R.id.inner_recycler_view);
+            headlineContainer = view.findViewById(R.id.collection_headline_container);
+            title = view.findViewById(R.id.collection_headline);
+            moreButton = view.findViewById(R.id.more_button);
+            inner_recycler_view = view.findViewById(R.id.inner_recycler_view);
 
             applicationBeanList = new ArrayList<>();
             adapter = new AppBeanAdapter(mContext, applicationBeanList, true);
