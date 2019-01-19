@@ -173,8 +173,7 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
                             {
                                 to = ab.source.length();
                             }
-                            String a = ab.source.substring(from, to);
-                            ab.author = a;
+                            ab.author = ab.source.substring(from, to);
                             break;
                         }
                     } catch (Throwable t)

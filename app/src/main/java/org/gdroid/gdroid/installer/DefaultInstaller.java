@@ -25,8 +25,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.StrictMode;
 
-import org.gdroid.gdroid.beans.ApplicationBean;
-
 import java.io.File;
 import java.lang.reflect.Method;
 

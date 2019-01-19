@@ -18,14 +18,9 @@
 
 package org.gdroid.gdroid.beans;
 
-import android.arch.persistence.room.Room;
 import android.content.Context;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.util.Log;
 import android.util.Pair;
 
-import org.gdroid.gdroid.AppBeanAdapter;
 import org.gdroid.gdroid.AppCollectionAdapter;
 import org.gdroid.gdroid.MapUtil;
 import org.gdroid.gdroid.Util;
@@ -35,7 +30,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.PriorityQueue;
 
 /**
  * wraps a name of a collection and a list of apps to be contained in the collection, to be shown in the UI

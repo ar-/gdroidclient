@@ -42,7 +42,6 @@ import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.installer.Installer;
 import org.jetbrains.annotations.NotNull;
 
-import java.security.acl.Owner;
 import java.util.List;
 
 import okhttp3.OkHttpClient;

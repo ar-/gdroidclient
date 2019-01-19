@@ -57,7 +57,7 @@ public class AppBeanNameComparator implements Comparator<ApplicationBean> {
 
             if (ud1 != ud2)
                 // compare in inverese order since true comes before false for this case
-                return new Boolean(ud2).compareTo(new Boolean(ud1));
+                return Boolean.valueOf(ud2).compareTo(ud1);
         }
         switch (mOrderByCol)
         {

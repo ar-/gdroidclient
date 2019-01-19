@@ -20,7 +20,6 @@ package org.gdroid.gdroid.tasks;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 import android.util.Pair;
 
 import org.gdroid.gdroid.MetaMetric;

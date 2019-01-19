@@ -18,7 +18,6 @@
 
 package org.gdroid.gdroid.tasks;
 
-import org.gdroid.gdroid.AppCollectionAdapter;
 import org.gdroid.gdroid.MainActivity;
 import org.gdroid.gdroid.beans.ApplicationBean;
 

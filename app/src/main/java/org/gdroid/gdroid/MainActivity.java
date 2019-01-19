@@ -47,7 +47,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-import android.widget.Toast;
 
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
@@ -238,13 +237,6 @@ public class MainActivity extends AppCompatActivity
                 .setAction("Action", null).show();
         new DownloadJaredJsonTask(this, appCollectionAdapter, "index-v1.json").execute("https://f-droid.org/repo/index-v1.jar");
 
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        // seems to be not needed any more after 'update all' there is a page refresh happening (for root and non-root)
-//        updateCurrentView();
     }
 
     private int getItemIdForHomeScreenMenuItem(String lastMenuItem) {

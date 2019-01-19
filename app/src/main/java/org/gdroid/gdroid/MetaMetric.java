@@ -18,8 +18,6 @@
 
 package org.gdroid.gdroid;
 
-import android.util.Pair;
-
 import java.util.ArrayList;
 import java.util.List;
 

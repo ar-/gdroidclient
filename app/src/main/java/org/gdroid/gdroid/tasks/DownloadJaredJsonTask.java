@@ -24,7 +24,6 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
-import android.view.View;
 
 import org.gdroid.gdroid.AppCollectionAdapter;
 import org.gdroid.gdroid.MainActivity;
@@ -159,8 +158,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
     protected List<ApplicationBean> loadJsonFromNetwork(String urlString, String jsonFileInJar, JsonParser parser) throws IOException {
         String jsonString = getJsonStringFromFileInJar(urlString, jsonFileInJar);
 
-        List<ApplicationBean> entries = parser.getApplicationBeansFromJson(jsonString);
-        return entries;
+        return parser.getApplicationBeansFromJson(jsonString);
     }
 
 //    @Nullable

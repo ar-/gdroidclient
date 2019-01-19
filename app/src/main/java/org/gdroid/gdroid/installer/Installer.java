@@ -20,8 +20,6 @@ package org.gdroid.gdroid.installer;
 
 import android.content.Context;
 
-import org.gdroid.gdroid.beans.ApplicationBean;
-
 public interface Installer {
     void installApp(final Context context, String file, Runnable postInstall);
 }
