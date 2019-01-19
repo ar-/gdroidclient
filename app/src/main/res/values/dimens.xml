@@ -33,15 +33,12 @@
     <dimen name="album_cover_height">160dp</dimen>
     <dimen name="album_title_padding">10dp</dimen>
     <dimen name="songs_count_padding_bottom">5dp</dimen>
-    <!--<dimen name="ic_album_overflow_width">30dp</dimen>-->
-    <!--<dimen name="ic_album_overflow_height">30dp</dimen>-->
-    <!--<dimen name="ic_album_overflow_margin_top">10dp</dimen>-->
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="my_cardview_margin">10dp</dimen>
     <dimen name="card_width">90dp</dimen>
     <dimen name="card_dots_btn_size">20dp</dimen>
-    <dimen name="card_title_size">10dp</dimen>
-    <dimen name="card_subtitle_size">8dp</dimen>
+    <dimen name="card_title_size">12dp</dimen>
+    <dimen name="card_subtitle_size">10dp</dimen>
 
 </resources>
