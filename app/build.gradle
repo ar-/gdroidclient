@@ -60,12 +60,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-//    androidTestCompile "android.arch.persistence.room:testing"
-//    androidTestImplementation "android.arch.persistence.room:testing"
     implementation "com.tonyodev.fetch2:fetch2:2.3.6"
     implementation "com.tonyodev.fetch2okhttp:fetch2okhttp:2.3.6"
-
-
 
     // Glide
     implementation "com.squareup.okhttp3:okhttp:3.12.0"
