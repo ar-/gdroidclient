@@ -1,6 +1,6 @@
 #!/bin/bash
 #-------------------------------------------------------------------------------
-# Copyright (C) 2017-2018 Andreas Redmer <ar-gdroid@abga.be>
+# Copyright (C) 2017-2019 Andreas Redmer <ar-gdroid@abga.be>
 # 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -34,7 +34,11 @@ mkdir tmp/android-sdk-linux/licenses
 printf "8933bad161af4178b1185d1a37fbf41ea5269c55\nd56f5187479451eabf01fb78af6dfcb131a6481e" > tmp/android-sdk-linux/licenses/android-sdk-license
 printf "84831b9409646a918e30573bab4c9c91346d8abd" > tmp/android-sdk-linux/licenses/android-sdk-preview-license
 
-echo y | tmp/android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter android-${ANDROID_TARGET_SDK},platform-tools,build-tools-${ANDROID_BUILD_TOOLS},extra-android-m2repository
+pwd
+find tmp/android-sdk-linux/licenses
+cat tmp/android-sdk-linux/licenses/android-sdk-license
+
+(while sleep 3; do echo "y"; done) | tmp/android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter android-${ANDROID_TARGET_SDK},platform-tools,build-tools-${ANDROID_BUILD_TOOLS},extra-android-m2repository || echo a
 
 echo Finished setting up Android SDK
 
