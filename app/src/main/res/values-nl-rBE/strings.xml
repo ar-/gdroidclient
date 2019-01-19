@@ -108,4 +108,16 @@
     <string name="added_on">Toegevoegd op %s</string>
     <string name="name">Naam</string>
     <string name="sort_search">Zoekresultaten sorteren</string>
+    <string name="in_same_category">Zelfste categorie</string>
+    <string name="pref_title_use_list_view">Lijstweergave inschakelen</string>
+    <string name="pref_description_use_list_view">toont apps indien mogelijk in ne lijst</string>
+    <string name="newest_apps">Nieuwste apps</string>
+    <string name="recently_updated">Recent bijgewerkt</string>
+    <string name="highly_rated">Hoog gewaardeerd</string>
+    <string name="similar_to_my_apps">Gelijkaardig aan mijn apps</string>
+    <string name="you_might_also_like">Deze vindt ge misschien ook tof</string>
+    <string name="random_apps">Willekeurige apps</string>
+    <string name="stars">Sterren</string>
+    <string name="ascending">oplopend</string>
+    <string name="descending">aflopend</string>
 </resources>
