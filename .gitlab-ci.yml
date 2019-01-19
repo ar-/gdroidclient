@@ -23,7 +23,7 @@ licensecheck:
 build_debug:
   script:
     - . ./scripts/setup-android-sdk.sh
-    - ./gradlew assembleDebug
+#    - ./gradlew assembleDebug
   stage: build
   artifacts:
     paths:
@@ -32,7 +32,7 @@ build_debug:
 build_release:
   script:
     - . ./scripts/setup-android-sdk.sh
-    - ./gradlew assembleRelease
+#    - ./gradlew assembleRelease
   stage: build
   artifacts:
     paths:
