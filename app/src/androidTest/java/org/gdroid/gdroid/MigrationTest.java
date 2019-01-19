@@ -22,6 +22,7 @@ package org.gdroid.gdroid;
 import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.db.framework.FrameworkSQLiteOpenHelperFactory;
 import android.arch.persistence.room.testing.MigrationTestHelper;
+import android.database.sqlite.SQLiteException;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -46,21 +47,33 @@ public class MigrationTest {
     }
 
     @Test
-    public void migrate1To2() throws IOException {
-        SupportSQLiteDatabase db = helper.createDatabase(TEST_DB, 1);
+    public void migrate16To17() throws IOException {
+        SupportSQLiteDatabase db = helper.createDatabase(TEST_DB, 16);
 
         // db has schema version 1. insert some data using SQL queries.
         // You cannot use DAO classes because they expect the latest schema.
-        db.execSQL("Select 1");
+        db.execSQL("Select id from Applicationbean limit 1;");
+        try
+        {
+            db.execSQL("Select hash from Applicationbean limit 1;");
+            throw new RuntimeException("expected exception not thrown");
+        }
+        catch (SQLiteException e)
+        {
+            // ignore exprected exception
+        }
 
         // Prepare for the next version.
         db.close();
 
         // Re-open the database with version 2 and provide
         // MIGRATION_1_2 as the migration process.
-        db = helper.runMigrationsAndValidate(TEST_DB, 2, true, AppDatabase.MIGRATION_16_17);
+        db = helper.runMigrationsAndValidate(TEST_DB, 17, true, AppDatabase.MIGRATION_16_17);
 
         // MigrationTestHelper automatically verifies the schema changes,
         // but you need to validate that the data was migrated properly.
+
+        db.execSQL("Select hash from Applicationbean limit 1;");
+        db.close();
     }
 }
