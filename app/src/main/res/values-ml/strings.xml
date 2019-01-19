@@ -41,4 +41,7 @@
     <string name="downloading">ഡൗൺലോഡ് ചെയ്യുന്നു…</string>
     <string name="download_pending">ഡൗൺലോഡ് ആരംഭിക്കാൻ കാത്തിരിക്കുന്നു…</string>
     <string name="more">കൂടുതല്‍</string>
+    <string name="last_update">അവസാനം പുതുക്കിയത്</string>
+    <string name="added_on">%s ന് ചേർത്തത്</string>
+    <string name="name">പേര്</string>
 </resources>

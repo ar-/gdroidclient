@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018-2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,19 +18,9 @@
 
 package org.gdroid.gdroid.tasks;
 
-import android.util.Pair;
-
-import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.beans.ApplicationBean;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 interface JsonParser {
     List<ApplicationBean> getApplicationBeansFromJson(String jsonString);

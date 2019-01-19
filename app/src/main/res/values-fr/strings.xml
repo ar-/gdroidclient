@@ -42,25 +42,16 @@
     <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">Ouvrir le volet de navigation</string>
     <string name="navigation_drawer_close">Fermer le volet de navigation</string>
-    <string name="nav_header_title">G-Droid</string>
     <string name="nav_header_subtitle">client pour le magasin F-Droid</string>
     <string name="nav_header_desc">Entête de navigation</string>
     <string name="action_settings">Réglages</string>
     <string name="action_add_favourite">Ajouter aux favoris</string>
     <string name="title_activity_settings">Réglages</string>
     <string name="pref_header_general">Général</string>
-    <string name="pref_title_social_recommendations">Activer les suggestions</string>
-    <string name="pref_description_social_recommendations">ne marche pas déjà</string>
-    <string name="pref_title_display_name">Désactivé</string>
-    <string name="pref_title_add_friends_to_messages">désactivé</string>
     <string name="pref_header_data_sync">Données et synchronisation</string>
     <string name="pref_title_sync_frequency">Fréquence de synchronisation</string>
-    <string name="pref_title_system_sync_settings">Réglages de synchronisation système</string>
     <string name="pref_header_notifications">Notifications</string>
     <string name="pref_title_new_message_notifications">Notifications des nouveaux messages</string>
-    <string name="pref_title_ringtone">Sonner</string>
-    <string name="pref_ringtone_silent">Taire</string>
-    <string name="pref_title_vibrate">Vibrer</string>
     <string name="title_home">Page principale</string>
     <string name="title_dashboard">Tableaux de bord</string>
     <string name="title_notifications">Notifications</string>
@@ -90,4 +81,8 @@
     <string name="downloading">Téléchargement…</string>
     <string name="download_pending">Téléchargement en attente…</string>
     <string name="more">Plus</string>
+    <string name="last_update">Dernière mise à jour</string>
+    <string name="added_on">Ajoutée le %s</string>
+    <string name="name">Nom</string>
+    <string name="sort_search">Trier la recherche</string>
 </resources>

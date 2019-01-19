@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018-2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -173,8 +173,7 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
                             {
                                 to = ab.source.length();
                             }
-                            String a = ab.source.substring(from, to);
-                            ab.author = a;
+                            ab.author = ab.source.substring(from, to);
                             break;
                         }
                     } catch (Throwable t)

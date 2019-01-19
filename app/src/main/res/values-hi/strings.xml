@@ -17,4 +17,6 @@
     <string name="no">नहीं</string>
     <string name="downloading">डोव्न्लोअदिन्ग…</string>
     <string name="more">ज्यादा</string>
+    <string name="last_update">अंतिम अद्यतन</string>
+    <string name="added_on">%s पर जोड़ा</string>
 </resources>

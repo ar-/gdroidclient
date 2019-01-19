@@ -32,17 +32,13 @@ import android.support.v4.os.LocaleListCompat;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.tonyodev.fetch2.Download;
-import com.tonyodev.fetch2.Status;
-import com.tonyodev.fetch2core.Func;
-
 import org.gdroid.gdroid.beans.AppBeanNameComparator;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.beans.OrderByCol;
 import org.gdroid.gdroid.installer.DefaultInstaller;
 import org.gdroid.gdroid.installer.Installer;
 import org.gdroid.gdroid.installer.RootInstaller;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -93,8 +89,7 @@ public class Util {
     {
         String key = "lastmenuitem";
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        final String setting = sharedPref.getString(key, "home");
-        return setting;
+        return sharedPref.getString(key, "home");
     }
 
     public static void starApp (Context context, String appId)
@@ -127,6 +122,7 @@ public class Util {
         String key = "starred";
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
         final Set<String> starred = sharedPref.getStringSet(key, new HashSet<String>());
+        //noinspection ConstantConditions
         return starred.contains(appId);
     }
 
@@ -152,7 +148,8 @@ public class Util {
             final ApplicationBean app = db.appDao().getApplicationBean(starredAppId);
             ret.add(app);
         }
-        Collections.sort(ret, new AppBeanNameComparator(context));
+        Collections.sort(ret, new AppBeanNameComparator(context,
+                Util.getOrderByColumn(context), Util.getOrderByDirection(context).equals("ASC")));
         return ret;
     }
 
@@ -176,10 +173,9 @@ public class Util {
         AppDatabase db = AppDatabase.get(context);
         final ApplicationBean[] hiddenApps = db.appDao().getAllHiddenApps();
         db.close();
-        for (ApplicationBean app: hiddenApps) {
-            ret.add(app);
-        }
-        Collections.sort(ret, new AppBeanNameComparator(context));
+        Collections.addAll(ret, hiddenApps);
+        Collections.sort(ret, new AppBeanNameComparator(context,
+                Util.getOrderByColumn(context), Util.getOrderByDirection(context).equals("ASC")));
         return ret;
     }
 
@@ -201,16 +197,18 @@ public class Util {
     {
         final PackageManager pm = context.getPackageManager();
         List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
-        List<ApplicationBean> ret = new ArrayList<>();
+        List<String> packageNames = new ArrayList<>(packages.size());
         AppDatabase db = AppDatabase.get(context);
         for (ApplicationInfo packageInfo : packages) {
-            final ApplicationBean app = db.appDao().getApplicationBean(packageInfo.packageName);
-
-            // only apps in the repo
-            if (app!=null)
-                ret.add(app);
+            packageNames.add(packageInfo.packageName);
         }
-        Collections.sort(ret, new AppBeanNameComparator(context));
+
+//        List<ApplicationBean> ret = db.appDao().getSomeApplicationBeans2(packageNames, getOrderByColumn(context));
+        List<ApplicationBean> ret = db.appDao().getSomeApplicationBeansList(packageNames);
+        Collections.sort(ret, new AppBeanNameComparator(context,
+                Util.getOrderByColumn(context),
+                Util.getOrderByDirection(context).equals("ASC"),
+                true));
         return ret;
     }
 
@@ -339,6 +337,22 @@ public class Util {
         return getStringResourceByName(c, "category_"+cn);
     }
 
+    public static String getLocalisedOrderByColumn(Context c, OrderByCol obc)
+    {
+        switch (obc)
+        {
+            case added:
+                return c.getString(R.string.added_on).replace("%s","");
+            case lastupdated:
+                return c.getString(R.string.last_update);
+            case stars:
+                return c.getString(R.string.stars);
+            case name:
+                return c.getString(R.string.name);
+        }
+        return getStringResourceByName(c, "unset_col");
+    }
+
     /**
      * references to all string IDs so they don't get removed by the "remove unused" function
      */
@@ -432,10 +446,7 @@ public class Util {
         if (!TextUtils.isEmpty(applicationBean.marketvercode) && installedVersionCodeOfApp > 0 )
         {
             final int marketvercode = Integer.parseInt(applicationBean.marketvercode);
-            if (marketvercode > installedVersionCodeOfApp)
-            {
-                return true;
-            }
+            return marketvercode > installedVersionCodeOfApp;
         }
         return false;
     }
@@ -447,11 +458,8 @@ public class Util {
     }
 
     private static boolean deleteFile( String filename){
-
         File folder1 = new File(filename);
         return folder1.delete();
-
-
     }
 
     public static void deleteFileIfExist(String filename){
@@ -511,6 +519,30 @@ public class Util {
         return PreferenceManager.getDefaultSharedPreferences(context).getBoolean("use_list_view",false);
     }
 
+    public static String getOrderByColumnPreference(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context).getString("order_by_column","lastupdated DESC");
+    }
+
+    public static String getOrderByColumnAsSring(Context context) {
+        return getOrderByColumnPreference(context).split(" ")[0];
+    }
+
+    public static OrderByCol getOrderByColumn(Context context) {
+        return Enum.valueOf(OrderByCol.class, getOrderByColumnAsSring(context));
+    }
+
+    public static String getOrderByDirection(Context context) {
+        return getOrderByColumnPreference(context).split(" ")[1];
+    }
+
+    public static void setOrderByColumnPreference(Context context, String orderByColumn)
+    {
+        String key = "order_by_column";
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(key, orderByColumn);
+        editor.apply();
+    }
 
     public static void waitForAllDownloadsToFinish(final Context context) {
         AppDownloader.getFetch(context).awaitFinishOrTimeout(120000L);

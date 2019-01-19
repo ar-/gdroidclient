@@ -39,4 +39,7 @@
     <string name="downloading">Preuzimanje…</string>
     <string name="download_pending">Čekanje na početak preuzimanja…</string>
     <string name="more">Više</string>
+    <string name="last_update">Posljednje ažuriranje</string>
+    <string name="added_on">Dodano %s</string>
+    <string name="name">Ime</string>
 </resources>

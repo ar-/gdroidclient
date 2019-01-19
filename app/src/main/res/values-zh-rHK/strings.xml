@@ -41,4 +41,7 @@
     <string name="downloading">下載中…</string>
     <string name="download_pending">正等待下載開始…</string>
     <string name="more">顯示更多</string>
+    <string name="last_update">最近更新</string>
+    <string name="added_on">於 %s 添置</string>
+    <string name="name">名稱</string>
 </resources>

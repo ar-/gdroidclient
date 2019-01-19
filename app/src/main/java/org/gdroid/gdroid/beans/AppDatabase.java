@@ -18,18 +18,32 @@
 
 package org.gdroid.gdroid.beans;
 
+import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
+import android.arch.persistence.room.migration.Migration;
 import android.content.Context;
 
-@Database(entities = {ApplicationBean.class,CategoryBean.class,TagBean.class}, version = 16)
+@Database(entities = {ApplicationBean.class,CategoryBean.class,TagBean.class}, version = 17)
 public abstract class AppDatabase extends RoomDatabase {
     public static final String db="gdroiddb";
     public abstract SimpleApplicationDao appDao();
 
     public static final AppDatabase get(Context context)
     {
-        return Room.databaseBuilder(context, AppDatabase.class, AppDatabase.db).fallbackToDestructiveMigration().allowMainThreadQueries().build();
+        return Room.databaseBuilder(context, AppDatabase.class, AppDatabase.db)
+                .addMigrations(MIGRATION_16_17)
+                .fallbackToDestructiveMigration()
+                .allowMainThreadQueries()
+                .build();
     }
+
+    public static final Migration MIGRATION_16_17 = new Migration(16, 17) {
+        @Override
+        public void migrate(SupportSQLiteDatabase database) {
+            database.execSQL("ALTER TABLE ApplicationBean ADD COLUMN hash TEXT");
+        }
+    };
+
 }

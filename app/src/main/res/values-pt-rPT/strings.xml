@@ -47,25 +47,16 @@
     <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">Abrir menu de navegação</string>
     <string name="navigation_drawer_close">Fechar menu de navegação</string>
-    <string name="nav_header_title">G-Droid</string>
     <string name="nav_header_subtitle">Cliente para o repositório F-Droid</string>
     <string name="nav_header_desc">Cabeçalho de navegação</string>
     <string name="action_settings">Definições</string>
     <string name="action_add_favourite">Adicionar aos favoritos</string>
     <string name="title_activity_settings">Definições</string>
     <string name="pref_header_general">Geral</string>
-    <string name="pref_title_social_recommendations">Ativar recomendações</string>
-    <string name="pref_description_social_recommendations">Ainda não funcional</string>
-    <string name="pref_title_display_name">Desativada</string>
-    <string name="pref_title_add_friends_to_messages">Desativada</string>
-    <string name="pref_header_data_sync">Dados e sincronização</string>
+    <string name="pref_header_data_sync">Exemplo de definições para dados e sincronização</string>
     <string name="pref_title_sync_frequency">Frequência de sincronização</string>
-    <string name="pref_title_system_sync_settings">Definições de sincronização</string>
     <string name="pref_header_notifications">Notificações</string>
     <string name="pref_title_new_message_notifications">Notificações para novas mensagens</string>
-    <string name="pref_title_ringtone">Toque</string>
-    <string name="pref_ringtone_silent">Silêncio</string>
-    <string name="pref_title_vibrate">Vibrar</string>
     <string name="title_home">Início</string>
     <string name="title_dashboard">Painel de navegação</string>
     <string name="title_notifications">Notificações</string>
@@ -113,4 +104,8 @@
     <string name="pref_description_use_root">Instalar e desinstalar aplicações automaticamente se o dispositivo tiver acesso root</string>
     <string name="pref_title_use_root">Utilizar privilégio root</string>
     <string name="more">Mais</string>
+    <string name="last_update">Última atualização</string>
+    <string name="added_on">Adicionada em %s</string>
+    <string name="name">Nome</string>
+    <string name="sort_search">Ordenar pesquisa</string>
 </resources>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018-2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,8 +24,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.StrictMode;
-
-import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.io.File;
 import java.lang.reflect.Method;

@@ -27,4 +27,7 @@
     <string name="yes">Jā</string>
     <string name="no">Nē</string>
     <string name="more">Vairāk</string>
+    <string name="last_update">Pēdējais atjauninājums</string>
+    <string name="added_on">Pievienotas pie %s</string>
+    <string name="name">Vārds</string>
 </resources>

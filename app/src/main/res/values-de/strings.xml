@@ -40,26 +40,16 @@
     <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">Navigationsordner öffnen</string>
     <string name="navigation_drawer_close">Navigationsordner schließen</string>
-    <string name="nav_header_title">G-Droid</string>
     <string name="nav_header_subtitle">Client für das F-Droid-Repository</string>
     <string name="nav_header_desc">Navigationskopf</string>
     <string name="action_settings">Einstellungen</string>
     <string name="action_add_favourite">Zu den Favoriten hinzufügen</string>
     <string name="title_activity_settings">Einstellungen</string>
     <string name="pref_header_general">Allgemeines</string>
-    <string name="pref_title_social_recommendations">Empfehlungen aktivieren</string>
-    <string name="pref_description_social_recommendations">funktioniert noch nicht</string>
-    <string name="pref_title_display_name">Deaktiviert</string>
-    <string name="pref_title_add_friends_to_messages">deaktiviert</string>
     <string name="pref_header_data_sync">Daten &amp; Synchronisation</string>
     <string name="pref_title_sync_frequency">Synchronisationsfrequenz</string>
-    <string name="pref_title_system_sync_settings">Systemsynchronisierungseinstellungen</string>
     <string name="pref_header_notifications">Benachrichtigungen</string>
     <string name="pref_title_new_message_notifications">Benachrichtigungen über neue Nachrichten</string>
-    <string name="pref_title_ringtone">Klingelton</string>
-    <string name="pref_ringtone_silent">Leise</string>
-    <string name="pref_title_vibrate">Vibrieren</string>
-    <string name="title_activity_temp_tab">TempTabActivity</string>
     <string name="title_home">Startseite</string>
     <string name="title_dashboard">Übersichtsseite</string>
     <string name="title_notifications">Benachrichtigungen</string>
@@ -68,8 +58,6 @@
     <string name="title_starred">favorisiert</string>
     <string name="title_myapps">meine Apps</string>
     <string name="title_search">Suche</string>
-    <string name="title_activity_app_collection">AppCollectionActivity</string>
-    <string name="title_activity_search">SearchActivity</string>
     <string name="app_store">App Store</string>
     <string name="calendar">Kalender</string>
     <string name="camera">Kamera</string>
@@ -103,4 +91,11 @@
     <string name="you_might_also_like">Könnte dir auch gefallen</string>
     <string name="random_apps">Zufällige Apps</string>
 
+    <string name="last_update">Letzte Aktualisierung</string>
+    <string name="added_on">Hinzugefügt am %s</string>
+    <string name="name">Name</string>
+    <string name="stars">Sterne</string>
+    <string name="sort_search">Suchergebnis sortieren</string>
+    <string name="ascending">aufsteigend</string>
+    <string name="descending">absteigend</string>
 </resources>

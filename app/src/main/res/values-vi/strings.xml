@@ -43,4 +43,8 @@
     <string name="downloading">Đang tải về…</string>
     <string name="download_pending">Đang chờ tải về…</string>
     <string name="more">Thêm</string>
+    <string name="last_update">Cập nhật lần cuối vào</string>
+    <string name="added_on">Đã thêm vào %s</string>
+    <string name="name">Tên</string>
+    <string name="sort_search">Sắp xếp kết quả tìm kiếm</string>
 </resources>

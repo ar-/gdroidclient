@@ -44,4 +44,8 @@
     <string name="downloading">Letöltés…</string>
     <string name="download_pending">Várakozás a letöltés elkezdésére…</string>
     <string name="more">Több</string>
+    <string name="last_update">Utolsó frissítés</string>
+    <string name="added_on">Hozzáadva: %s</string>
+    <string name="name">Név</string>
+    <string name="sort_search">Keresési eredmények sorba rendezése</string>
 </resources>

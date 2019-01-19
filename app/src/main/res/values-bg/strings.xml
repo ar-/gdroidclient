@@ -41,4 +41,7 @@
     <string name="downloading">Сваляне…</string>
     <string name="download_pending">Изчакване…</string>
     <string name="more">Повече</string>
+    <string name="last_update">Последна актуализация</string>
+    <string name="added_on">Добавена на %s</string>
+    <string name="name">Име</string>
 </resources>

@@ -29,7 +29,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="3dp"
+        android:layout_marginVertical="1dp"
         android:elevation="3dp"
         android:clickable="true"
         card_view:cardCornerRadius="@dimen/card_album_radius">
@@ -55,6 +55,7 @@
                     android:layout_margin="2dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
+                    android:foregroundGravity="center_vertical"
                     />
 
                 <ImageView
@@ -97,7 +98,7 @@
                         android:singleLine="true"
                         android:textColor="@color/album_title"
                         android:text="name of the app goes here"
-                        android:textSize="@dimen/card_title_size" />
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/count"
@@ -110,7 +111,7 @@
                         android:paddingBottom="@dimen/songs_count_padding_bottom"
                         android:gravity="right|top"
                         android:text="counter"
-                        android:textSize="@dimen/card_title_size" />
+                        android:textSize="14dp" />
                     <!--android:layout_marginRight="@dimen/card_dots_btn_size"-->
 
                 </LinearLayout>
@@ -131,10 +132,10 @@
                         android:paddingLeft="@dimen/album_title_padding"
                         android:paddingRight="@dimen/album_title_padding"
                         android:paddingBottom="@dimen/songs_count_padding_bottom"
-                        android:maxLines="3"
+                        android:maxLines="2"
                         android:ellipsize="end"
                         android:text="summary and description go here"
-                        android:textSize="@dimen/card_subtitle_size" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 

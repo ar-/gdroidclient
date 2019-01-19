@@ -47,26 +47,16 @@
     <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">Navigatiebalk openen</string>
     <string name="navigation_drawer_close">Navigatiebalk sluiten</string>
-    <string name="nav_header_title">G-Droid</string>
     <string name="nav_header_subtitle">cliënt voor de F-Droid-pakketbron</string>
     <string name="nav_header_desc">Navigatiehoofding</string>
     <string name="action_settings">Instellingen</string>
     <string name="action_add_favourite">Toevoegen aan favorieten</string>
     <string name="title_activity_settings">Instellingen</string>
     <string name="pref_header_general">Algemeen</string>
-    <string name="pref_title_social_recommendations">Aanbevelingen inschakelen</string>
-    <string name="pref_description_social_recommendations">werkt nog niet</string>
-    <string name="pref_title_display_name">Uitgeschakeld</string>
-    <string name="pref_title_add_friends_to_messages">uitgeschakeld</string>
     <string name="pref_header_data_sync">Gegevens &amp; synchronisatie</string>
     <string name="pref_title_sync_frequency">Synchroniseerfrequentie</string>
-    <string name="pref_title_system_sync_settings">Systeemsynchronisatieinstellingen</string>
     <string name="pref_header_notifications">Meldingen</string>
     <string name="pref_title_new_message_notifications">Nieuwe meldingen</string>
-    <string name="pref_title_ringtone">Beltoon</string>
-    <string name="pref_ringtone_silent">Stil</string>
-    <string name="pref_title_vibrate">Trillen</string>
-    <string name="title_activity_temp_tab">TempTabActivity</string>
     <string name="title_home">Start</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Meldingen</string>
@@ -75,8 +65,6 @@
     <string name="title_starred">favorieten</string>
     <string name="title_myapps">mijn apps</string>
     <string name="title_search">zoeken</string>
-    <string name="title_activity_app_collection">AppCollectionActivity</string>
-    <string name="title_activity_search">SearchActivity</string>
     <string name="app_store">Appwinkel</string>
     <string name="calendar">Agenda</string>
     <string name="camera">Camera</string>
@@ -116,4 +104,8 @@
     <string name="pref_description_use_root">apps automatisch installeren en verwijderen als het apparaat geroot is</string>
     <string name="pref_title_use_root">Rootprivileges gebruiken</string>
     <string name="more">Meer</string>
+    <string name="last_update">Meest recente update</string>
+    <string name="added_on">Toegevoegd op %s</string>
+    <string name="name">Naam</string>
+    <string name="sort_search">Zoekresultaten sorteren</string>
 </resources>

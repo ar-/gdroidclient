@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="category_Connectivity">Conectividade</string>
@@ -40,18 +39,12 @@
     <string name="action_upgrade">Atualizar</string>
     <string name="action_launch">Executar</string>
     <string name="app_name">G-Droid</string>
-    <string name="nav_header_title">G-Droid</string>
     <string name="action_settings">Configurações</string>
     <string name="action_add_favourite">Adicionar aos Favoritos</string>
     <string name="title_activity_settings">Configurações</string>
-    <string name="pref_title_display_name">Desativado</string>
-    <string name="pref_title_add_friends_to_messages">desativado</string>
     <string name="pref_header_data_sync">Dados e sincronização</string>
     <string name="pref_title_sync_frequency">Frequência de sincronização</string>
     <string name="pref_header_notifications">Notificações</string>
-    <string name="pref_title_ringtone">Toque</string>
-    <string name="pref_ringtone_silent">Silencioso</string>
-    <string name="pref_title_vibrate">Vibração</string>
     <string name="title_notifications">Notificações</string>
     <string name="title_categories">categorias</string>
     <string name="title_myapps">meus aplicativos</string>
@@ -72,17 +65,11 @@
     <string name="nav_header_subtitle">cliente para o repositório F-Droid</string>
     <string name="nav_header_desc">Cabeçalho de navegação</string>
     <string name="pref_header_general">Geral</string>
-    <string name="pref_title_social_recommendations">Ativar recomendações</string>
-    <string name="pref_description_social_recommendations">não está funcionando ainda</string>
-    <string name="pref_title_system_sync_settings">Configurações de sincronização do sistema</string>
     <string name="pref_title_new_message_notifications">Novas notificações de mensagem</string>
-    <string name="title_activity_temp_tab">TempTabActivity</string>
     <string name="title_home">Casa</string>
     <string name="title_dashboard">Painel de controle</string>
     <string name="title_tags">tags</string>
     <string name="title_starred">estrelou</string>
-    <string name="title_activity_app_collection">AppCollectionActivity</string>
-    <string name="title_activity_search">SearchActivity</string>
     <string name="app_store">Loja de aplicativo</string>
     <string name="file_browser">Gerenciador de arquivos</string>
     <string name="launcher">Lançador</string>
@@ -116,4 +103,8 @@
     <string name="pref_description_use_root">instalar e desinstalar aplicativos automaticamente se o dispositivo estiver enraizado</string>
     <string name="pref_title_use_root">Use o privilégio de raiz</string>
     <string name="more">Mais</string>
+    <string name="last_update">Última atualização</string>
+    <string name="added_on">Adicionado em %s</string>
+    <string name="name">Nome</string>
+<string name="sort_search">Classificação da pesquisa</string>
 </resources>

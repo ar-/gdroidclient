@@ -42,7 +42,6 @@
 <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">Åpne navigasjonsskuff</string>
     <string name="navigation_drawer_close">Lukk navigasjonsskuff</string>
-    <string name="nav_header_title">G-Droid</string>
     <string name="nav_header_subtitle">klient for F-Droid-programmarkedet</string>
     <string name="nav_header_desc">Navigasjonshode</string>
     <string name="action_settings">Innstillinger</string>
@@ -55,25 +54,17 @@
 
     <string name="pref_header_general">Generelt</string>
 
-    <string name="pref_title_social_recommendations">Skru på anbefalinger</string>
-    <string name="pref_description_social_recommendations">virker ikke enda</string>
 
-    <string name="pref_title_display_name">Avskrudd</string>
 
-    <string name="pref_title_add_friends_to_messages">avskrudd</string>
     <string name="pref_header_data_sync">Data og synkronisering</string>
 
     <string name="pref_title_sync_frequency">Synkroniseringshyppighet</string>
-    <string name="pref_title_system_sync_settings">Systemsynkroniseringsinnstillinger</string>
 
     <string name="pref_header_notifications">Merknader</string>
 
     <string name="pref_title_new_message_notifications">Nye meldingsmerknader</string>
 
-    <string name="pref_title_ringtone">Ringetone</string>
-    <string name="pref_ringtone_silent">Stille</string>
 
-    <string name="pref_title_vibrate">Vibrer</string>
     <string name="title_home">Hjem</string>
     <string name="title_dashboard">Oversikt</string>
     <string name="title_notifications">Merknader</string>
@@ -103,9 +94,6 @@
     <string name="download_all_updates">Last ned alle oppdateringer</string>
     <string name="downloading">Laster ned…</string>
     <string name="download_pending">Venter på at nedlastingen skal starte…</string>
-    <string name="title_activity_temp_tab">TempTabActivity</string>
-    <string name="title_activity_app_collection">AppCollectionActivity</string>
-    <string name="title_activity_search">SearchActivity</string>
     <string name="action_hide">Skjul</string>
     <string name="action_unhide">Vis</string>
     <string name="pref_header_ratings">Stjernevurderinger</string>
@@ -139,4 +127,8 @@
     <string name="similar_to_my_apps">Ligner mine programmer</string>
     <string name="you_might_also_like">Det kan hende du også liker</string>
     <string name="random_apps">Tilfeldige programmer</string>
+    <string name="last_update">Siste oppdatering</string>
+    <string name="added_on">Lagt til den %s</string>
+    <string name="name">Navn</string>
+<string name="sort_search">Sorter søk</string>
 </resources>

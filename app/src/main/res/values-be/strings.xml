@@ -44,4 +44,8 @@
     <string name="downloading">Спампоўка…</string>
     <string name="download_pending">Чаканне пачатку спампоўкі…</string>
     <string name="more">Больш</string>
+    <string name="last_update">Апошняе абнаўленне</string>
+    <string name="added_on">Дададзеная %s</string>
+    <string name="name">Назва</string>
+    <string name="sort_search">Сартаваць знойдзенае</string>
 </resources>

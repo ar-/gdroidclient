@@ -19,14 +19,11 @@
 package org.gdroid.gdroid;
 
 import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.content.res.AppCompatResources;
 import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
 
 public class ImageActivity extends AppCompatActivity {
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,6 +19,7 @@
 package org.gdroid.gdroid.beans;
 
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.Index;
 import android.support.annotation.NonNull;
 
@@ -36,6 +37,7 @@ public class CategoryBean {
     public CategoryBean() {
     }
 
+    @Ignore
     public CategoryBean(@NonNull String catName, @NonNull String appId) {
         this.catName = catName;
         this.appId = appId;

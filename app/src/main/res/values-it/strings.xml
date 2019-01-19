@@ -44,4 +44,8 @@
     <string name="downloading">Scaricamento…</string>
     <string name="download_pending">In attesa di avviare lo scaricamento…</string>
     <string name="more">Altro</string>
+    <string name="last_update">Ultimo aggiornamento</string>
+    <string name="added_on">Aggiunto il %s</string>
+    <string name="name">Nome</string>
+    <string name="sort_search">Ordina ricerca</string>
 </resources>

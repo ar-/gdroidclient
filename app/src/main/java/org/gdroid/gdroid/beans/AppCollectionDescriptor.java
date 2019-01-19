@@ -18,23 +18,18 @@
 
 package org.gdroid.gdroid.beans;
 
-import android.arch.persistence.room.Room;
 import android.content.Context;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.util.Log;
 import android.util.Pair;
 
-import org.gdroid.gdroid.AppBeanAdapter;
 import org.gdroid.gdroid.AppCollectionAdapter;
 import org.gdroid.gdroid.MapUtil;
 import org.gdroid.gdroid.Util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.PriorityQueue;
 
 /**
  * wraps a name of a collection and a list of apps to be contained in the collection, to be shown in the UI
@@ -147,6 +142,9 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            Collections.sort(applicationBeanList, new AppBeanNameComparator(mContext,
+                    Util.getOrderByColumn(mContext),
+                    Util.getOrderByDirection(mContext).equals("ASC")));
             db.close();
         }
         else if (collectionName.startsWith("search2:")) // level 2 search
@@ -160,6 +158,9 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            Collections.sort(applicationBeanList, new AppBeanNameComparator(mContext,
+                    Util.getOrderByColumn(mContext),
+                    Util.getOrderByDirection(mContext).equals("ASC")));
             db.close();
         }
         else if (collectionName.startsWith("search3:")) // level 3 search
@@ -173,6 +174,9 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
             for (ApplicationBean ab: appsInDb ) {
                 applicationBeanList.add(ab);
             }
+            Collections.sort(applicationBeanList, new AppBeanNameComparator(mContext,
+                    Util.getOrderByColumn(mContext),
+                    Util.getOrderByDirection(mContext).equals("ASC")));
             db.close();
         }
         else if (collectionName.startsWith("author:"))

@@ -26,7 +26,6 @@ import android.support.annotation.NonNull;
 import android.util.Pair;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Entity(indices = {@Index("name")
@@ -84,9 +83,14 @@ public class ApplicationBean {
     public String neighbours;
 
 
+    public String hash;
+
+
+
     public ApplicationBean() {
     }
 
+    @Ignore
     public ApplicationBean(String id) {
         this.id = id;
     }
@@ -161,6 +165,11 @@ public class ApplicationBean {
         return ret;
     }
 
-
-
+    @Override
+    public String toString() {
+        //overridden for better debug output
+        if (name != null)
+            return name + " " +super.toString();
+        return super.toString();
+    }
 }

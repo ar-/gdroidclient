@@ -18,7 +18,9 @@
 
 package org.gdroid.gdroid;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Point;
@@ -30,6 +32,7 @@ import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -48,6 +51,7 @@ import android.widget.Button;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.beans.OrderByCol;
 import org.gdroid.gdroid.installer.baria.BariaInstaller;
 import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
 import org.gdroid.gdroid.widget.BottomNavigationView;
@@ -64,6 +68,8 @@ public class MainActivity extends AppCompatActivity
 
     private RecyclerView recyclerView;
     BottomNavigationView navigation;
+    SwipeRefreshLayout swipe;
+    FloatingActionButton fab;
     private AppBeanAdapter appBeanAdapter;
     private List<ApplicationBean> appBeanList;
     private List<AppCollectionDescriptor> appCollectionDescriptorList;
@@ -79,24 +85,23 @@ public class MainActivity extends AppCompatActivity
         lastCreatedInstance = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.loadingPanel).setVisibility(View.GONE);
         searchView = findViewById(R.id.search_view);
         btnSearchHarder = findViewById(R.id.btn_search_harder);
         btnSearchEvenHarder = findViewById(R.id.btn_search_even_harder);
         btnUpdateAll = findViewById(R.id.btn_update_all);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         AsyncTask.execute(new Runnable() {
@@ -124,22 +129,70 @@ public class MainActivity extends AppCompatActivity
 
         final MainActivity activity = this;
 
-        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fab.setEnabled(false);
-                findViewById(R.id.loadingPanel).setVisibility(View.VISIBLE);
-                Snackbar.make(view, R.string.downloading, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+                String currentCol = Util.getOrderByColumnAsSring(activity);
+                int currentIndex = 0;
+                int i = 0;
+                final ArrayList<CharSequence> cs1 = new ArrayList<>(OrderByCol.values().length);
+                ArrayList<CharSequence> localisedcs1 = new ArrayList<>(OrderByCol.values().length);
+                for (OrderByCol possibleCol: OrderByCol.values())
+                {
+                    final String name = possibleCol.name();
+                    localisedcs1.add(Util.getLocalisedOrderByColumn(activity, possibleCol));
+                    cs1.add(name);
+                    if (currentCol.equals(name))
+                        currentIndex = i;
+                    i++;
+                }
+                final CharSequence[] cs = localisedcs1.toArray(new CharSequence[] {});
+                builder.setTitle(activity.getString(R.string.sort_search));
+                builder.setSingleChoiceItems(cs, currentIndex, new DialogInterface
+                        .OnClickListener() {
+                    public void onClick(DialogInterface dialog, int item) {
+                        Util.setOrderByColumnPreference(activity,cs1.get(item) + " DESC");
 
+                    }
+                });
 
-                new DownloadJaredJsonTask(activity, appCollectionAdapter, "index-v1.json").execute("https://f-droid.org/repo/index-v1.jar");
-
+                builder.setNegativeButton(getString(R.string.ascending), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String obc = Util.getOrderByColumnPreference(activity);
+                        obc = obc.replace(" DESC", " ASC");
+                        Util.setOrderByColumnPreference(activity,obc);
+                        updateCurrentView();
+                    }
+                });
+                builder.setPositiveButton(R.string.descending, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String obc = Util.getOrderByColumnPreference(activity);
+                        obc = obc.replace(" ASC", " DESC");
+                        Util.setOrderByColumnPreference(activity,obc);
+                        updateCurrentView();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
 
-        // download all button
+        swipe = findViewById(R.id.swiperefresh);
+
+        swipe.setOnRefreshListener(
+            new SwipeRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    updateSourceDataFromWeb();
+                }
+            }
+        );
+
+        // "download all"-button
         btnUpdateAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
@@ -179,11 +232,11 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        // seems to be not needed any more after 'update all' there is a page refresh happening (for root and non-root)
-//        updateCurrentView();
+    private void updateSourceDataFromWeb() {
+        Snackbar.make(recyclerView, R.string.downloading, Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
+        new DownloadJaredJsonTask(this, appCollectionAdapter, "index-v1.json").execute("https://f-droid.org/repo/index-v1.jar");
+
     }
 
     private int getItemIdForHomeScreenMenuItem(String lastMenuItem) {
@@ -210,7 +263,8 @@ public class MainActivity extends AppCompatActivity
      * These are cards that ontain on row of cards of apps.
      */
     private void setUpCollectionCards() {
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        fab.hide();
+        recyclerView = findViewById(R.id.recycler_view);
         appBeanList = new ArrayList<>();
         appBeanAdapter = new AppBeanAdapter(this, appBeanList);
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
@@ -226,6 +280,7 @@ public class MainActivity extends AppCompatActivity
      * call this to set up the main view to show a bunch of apps on a grid with 3 columns
      */
     private void setUpAppCards() {
+        fab.show();
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
@@ -236,7 +291,7 @@ public class MainActivity extends AppCompatActivity
         final int imgWidth = dpToPx(cardWidth+topup + gapDp);
         int columns = screenWidth / imgWidth;
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
         appBeanList = new ArrayList<>();
         appBeanAdapter = new AppBeanAdapter(this, appBeanList);
 
@@ -424,76 +479,88 @@ public class MainActivity extends AppCompatActivity
                     searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                         @Override
                         public boolean onQueryTextSubmit(String s) {
-                            final CharSequence query = searchView.getQuery();
-                            final boolean shortQuery = query.length() < 2;
-                            if (shortQuery) {
-                                btnSearchHarder.setVisibility(View.GONE);
-                                btnSearchEvenHarder.setVisibility(View.GONE);
-                            } else {
-                                btnSearchHarder.setVisibility(View.VISIBLE);
-                                btnSearchEvenHarder.setVisibility(View.GONE);
-                            }
-                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search:" + query, 2000);
-                            appBeanList.clear();
-                            appBeanList.addAll(acd.getApplicationBeanList());
-                            appBeanAdapter.notifyDataSetChanged();
-                            return false;
+                            return executeQuery(false, "search");
                         }
 
                         @Override
                         public boolean onQueryTextChange(String s) {
-                            final CharSequence query = searchView.getQuery();
-                            final boolean shortQuery = query.length() < 2;
-                            if (shortQuery) {
-                                btnSearchHarder.setVisibility(View.GONE);
-                                btnSearchEvenHarder.setVisibility(View.GONE);
-                            } else {
-                                btnSearchHarder.setVisibility(View.VISIBLE);
-                                btnSearchEvenHarder.setVisibility(View.GONE);
-                            }
-                            final int limit = shortQuery ? 20 : 2000;
-                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search:" + query, limit);
-                            appBeanList.clear();
-                            appBeanList.addAll(acd.getApplicationBeanList());
-                            appBeanAdapter.notifyDataSetChanged();
-                            return false;
+                            return executeQuery(true, "search");
                         }
                     });
 
                     btnSearchHarder.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            btnSearchHarder.setVisibility(View.GONE);
-                            btnSearchEvenHarder.setVisibility(View.VISIBLE);
-                            hideSoftKeyboard(btnSearchHarder);
-                            final CharSequence query = searchView.getQuery();
-                            int limit = query.length() < 2 ? 20 : 2000;
-                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search2:" + query, limit);
-                            appBeanList.clear();
-                            appBeanList.addAll(acd.getApplicationBeanList());
-                            appBeanAdapter.notifyDataSetChanged();
+                            executeQuery(true, "search2");
                         }
                     });
                     btnSearchEvenHarder.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            btnSearchHarder.setVisibility(View.GONE);
-                            btnSearchEvenHarder.setVisibility(View.GONE);
-                            hideSoftKeyboard(btnSearchHarder);
-                            final CharSequence query = searchView.getQuery();
-                            int limit = query.length() < 2 ? 20 : 2000;
-                            AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), "search3:" + query, limit);
-                            appBeanList.clear();
-                            appBeanList.addAll(acd.getApplicationBeanList());
-                            appBeanAdapter.notifyDataSetChanged();
+                            executeQuery(true, "search3");
                         }
                     });
+
+                    // also execute it once, as there might be text in the search field, so search can go on right away:
+                    executeQuery(false, "search");
                     return true;
                 }
             }
             return false;
         }
     };
+
+    public boolean executeQuery(boolean speedup, final String searchType) {
+        final CharSequence query = searchView.getQuery();
+        if (query.length()<1)
+            return false;
+
+        final boolean shortQuery = query.length() < 2;
+        switch (searchType)
+        {
+            case "search":
+            {
+                if (shortQuery) {
+                    btnSearchHarder.setVisibility(View.GONE);
+                    btnSearchEvenHarder.setVisibility(View.GONE);
+                } else {
+                    btnSearchHarder.setVisibility(View.VISIBLE);
+                    btnSearchEvenHarder.setVisibility(View.GONE);
+                }
+            }
+            break;
+            case "search2":
+            {
+                btnSearchHarder.setVisibility(View.GONE);
+                btnSearchEvenHarder.setVisibility(View.VISIBLE);
+            }
+            break;
+            case "search3":
+            {
+                btnSearchHarder.setVisibility(View.GONE);
+                btnSearchEvenHarder.setVisibility(View.GONE);
+            }
+            break;
+            default:
+                throw new RuntimeException("Unknown search type: " + searchType);
+        }
+        final int limit = speedup && shortQuery ? 20 : 2000;
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                final AppCollectionDescriptor acd = new AppCollectionDescriptor(getApplicationContext(), searchType+":" + query, limit);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        appBeanList.clear();
+                        appBeanList.addAll(acd.getApplicationBeanList());
+                        appBeanAdapter.notifyDataSetChanged();
+                    }
+                });
+            }
+        });
+        return false;
+    }
 
     public void showSoftKeyboard(View view) {
 //        if (view.requestFocus()) {
@@ -514,7 +581,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -552,7 +619,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         if (id == R.id.nav_my_apps) {
             navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem("myapps"));
         } else if (id == R.id.nav_hidden_apps) {
@@ -571,7 +638,7 @@ public class MainActivity extends AppCompatActivity
 //        } else if (id == R.id.nav_send) {
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -579,6 +646,11 @@ public class MainActivity extends AppCompatActivity
     public void updateCurrentView()
     {
         navigation.setSelectedItemId(navigation.getSelectedItemId());
+//        if (Util.getLastMenuItem(this).equals("search"))
+//        {
+//            executeQuery(false, "search");
+////            searchView.change // TODO call function to run the first first (call text change on drearch viw)
+//        }
     }
 
     /**
