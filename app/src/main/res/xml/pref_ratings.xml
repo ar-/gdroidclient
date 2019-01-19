@@ -18,14 +18,14 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <org.gdroid.gdroid.WeightEditTextPreference
+    <org.gdroid.gdroid.pref.WeightEditTextPreference
         android:capitalize="words"
         android:enabled="false"
         android:title="@string/pref_title_ratings_headline"
         android:summary="@string/pref_title_ratings_summary"
         />
 
-    <org.gdroid.gdroid.WeightEditTextPreference
+    <org.gdroid.gdroid.pref.WeightNumberPickerPreference
         android:capitalize="words"
         android:enabled="true"
         android:defaultValue="1"
@@ -40,7 +40,7 @@
         android:summary="1"
         />
 
-    <org.gdroid.gdroid.WeightEditTextPreference
+    <org.gdroid.gdroid.pref.WeightNumberPickerPreference
         android:capitalize="words"
         android:enabled="true"
         android:defaultValue="1"
@@ -55,7 +55,7 @@
         android:summary="1"
         />
 
-    <org.gdroid.gdroid.WeightEditTextPreference
+    <org.gdroid.gdroid.pref.WeightNumberPickerPreference
         android:capitalize="words"
         android:enabled="true"
         android:defaultValue="1"
@@ -69,6 +69,5 @@
         android:title="@string/pref_title_release_cycle_time"
         android:summary="1"
         />
-
 
 </PreferenceScreen>
