@@ -1,3 +1,7 @@
+[![Translation status](https://gitlab.com/gdroid/gdroidclient/badges/master/build.svg)](https://gitlab.com/gdroid/gdroidclient/builds)
+[![Translation status](https://img.shields.io/badge/android-%3E%3D2.3-blue.svg)](https://gitlab.com/gdroid/gdroidclient/blob/master/README.md)
+[![Translation status](https://img.shields.io/badge/license-GPL3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+[![Translation status](https://img.shields.io/f-droid/v/org.gdroid.gdroid.svg)](https://f-droid.org/en/packages/org.gdroid.gdroid/)
 [![Translation status](https://hosted.weblate.org/widgets/g-droid/-/translations/svg-badge.svg)](https://hosted.weblate.org/engage/g-droid/?utm_source=widget)
 
 # What is this app
