@@ -35,7 +35,6 @@ import okhttp3.OkHttpClient;
 @GlideModule
 public final class MyAppGlideModule extends AppGlideModule {
 
-
     @Override
     public void registerComponents(Context context, Glide glide, Registry registry) {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();

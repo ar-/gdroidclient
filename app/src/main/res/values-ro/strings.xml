@@ -46,18 +46,10 @@
     <string name="download_pending">Așteptând sa incepe descărcarea…</string>
     <string name="nav_header_subtitle">client pentru catalogul F-Droid</string>
     <string name="action_settings">Setări</string>
-    <string name="pref_title_social_recommendations">"Activează recomandări "</string>
-    <string name="pref_description_social_recommendations">"nu funcționează deocamdată "</string>
-    <string name="pref_title_display_name">Dezactivat</string>
-    <string name="pref_title_add_friends_to_messages">dezactivat</string>
     <string name="pref_header_data_sync">Date și sincronizare</string>
     <string name="pref_title_sync_frequency">Frecvența sincronizarii</string>
-    <string name="pref_title_system_sync_settings">Setările sincronizării sistemului</string>
     <string name="pref_header_notifications">"Notificări "</string>
     <string name="pref_title_new_message_notifications">Notificări pentru mesaje noi</string>
-    <string name="pref_title_ringtone">Ton de apel</string>
-    <string name="pref_ringtone_silent">"Silențios "</string>
-    <string name="pref_title_vibrate">Vibrare</string>
     <string name="title_home">"Acasă "</string>
     <string name="title_notifications">"Notificări "</string>
     <string name="title_tags">etichete</string>
@@ -91,7 +83,6 @@
     <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">"Deschide meniul de navigație "</string>
     <string name="navigation_drawer_close">"Închide meniul de navigație "</string>
-    <string name="nav_header_title">G-Droid</string>
     <string name="installing_details" formatted="false">Instalând %d / %d</string>
     <string name="installation_finished">"Instalare finalizată "</string>
     <string name="installed_details">%d apps instalate</string>

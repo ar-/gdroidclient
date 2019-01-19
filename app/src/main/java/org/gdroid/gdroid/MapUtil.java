@@ -42,7 +42,7 @@ public class MapUtil
 
         Map<K, V> result = new LinkedHashMap<>();
         for (Iterator<Map.Entry<K, V>> it = list.iterator(); it.hasNext();) {
-            Map.Entry<K, V> entry = (Map.Entry<K, V>) it.next();
+            Map.Entry<K, V> entry = it.next();
             result.put(entry.getKey(), entry.getValue());
         }
 

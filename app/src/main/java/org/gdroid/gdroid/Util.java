@@ -89,8 +89,7 @@ public class Util {
     {
         String key = "lastmenuitem";
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        final String setting = sharedPref.getString(key, "home");
-        return setting;
+        return sharedPref.getString(key, "home");
     }
 
     public static void starApp (Context context, String appId)
@@ -123,6 +122,7 @@ public class Util {
         String key = "starred";
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
         final Set<String> starred = sharedPref.getStringSet(key, new HashSet<String>());
+        //noinspection ConstantConditions
         return starred.contains(appId);
     }
 
@@ -173,9 +173,7 @@ public class Util {
         AppDatabase db = AppDatabase.get(context);
         final ApplicationBean[] hiddenApps = db.appDao().getAllHiddenApps();
         db.close();
-        for (ApplicationBean app: hiddenApps) {
-            ret.add(app);
-        }
+        Collections.addAll(ret, hiddenApps);
         Collections.sort(ret, new AppBeanNameComparator(context,
                 Util.getOrderByColumn(context), Util.getOrderByDirection(context).equals("ASC")));
         return ret;
@@ -448,10 +446,7 @@ public class Util {
         if (!TextUtils.isEmpty(applicationBean.marketvercode) && installedVersionCodeOfApp > 0 )
         {
             final int marketvercode = Integer.parseInt(applicationBean.marketvercode);
-            if (marketvercode > installedVersionCodeOfApp)
-            {
-                return true;
-            }
+            return marketvercode > installedVersionCodeOfApp;
         }
         return false;
     }
@@ -463,11 +458,8 @@ public class Util {
     }
 
     private static boolean deleteFile( String filename){
-
         File folder1 = new File(filename);
         return folder1.delete();
-
-
     }
 
     public static void deleteFileIfExist(String filename){

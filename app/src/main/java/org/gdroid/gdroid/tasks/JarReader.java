@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018-2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -56,7 +56,7 @@ public final class JarReader
      */
     public byte[] getResource(String name)
     {
-        return (byte[])htJarContents.get(name);
+        return htJarContents.get(name);
     }
 
     /** initializes internal hash tables with Jar file resources.  */
@@ -102,15 +102,15 @@ public final class JarReader
                 // -1 means unknown size.
                 if (size==-1)
                 {
-                    size=((Integer)htSizes.get(ze.getName())).intValue();
+                    size= htSizes.get(ze.getName()).intValue();
                 }
 
-                byte[] b=new byte[(int)size];
+                byte[] b=new byte[size];
                 int rb=0;
                 int chunk=0;
-                while (((int)size - rb) > 0)
+                while ((size - rb) > 0)
                 {
-                    chunk=zis.read(b,rb,(int)size - rb);
+                    chunk=zis.read(b,rb, size - rb);
                     if (chunk==-1)
                     {
                         break;
@@ -197,8 +197,7 @@ public final class JarReader
      *     ...
      * </pre>
      */
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) {
         if (args.length!=2)
         {
             System.err.println(

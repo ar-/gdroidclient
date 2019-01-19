@@ -25,17 +25,13 @@ import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.ApplicationBean;
@@ -60,10 +56,10 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
 
         public MyViewHolder(View view) {
             super(view);
-            headlineContainer = (RelativeLayout) view.findViewById(R.id.collection_headline_container);
-            title = (TextView) view.findViewById(R.id.collection_headline);
-            moreButton = (TextView) view.findViewById(R.id.more_button);
-            inner_recycler_view = (RecyclerView) view.findViewById(R.id.inner_recycler_view);
+            headlineContainer = view.findViewById(R.id.collection_headline_container);
+            title = view.findViewById(R.id.collection_headline);
+            moreButton = view.findViewById(R.id.more_button);
+            inner_recycler_view = view.findViewById(R.id.inner_recycler_view);
 
             applicationBeanList = new ArrayList<>();
             adapter = new AppBeanAdapter(mContext, applicationBeanList, true);

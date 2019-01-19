@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018-2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,8 +19,6 @@
 package org.gdroid.gdroid.installer;
 
 import android.content.Context;
-
-import org.gdroid.gdroid.beans.ApplicationBean;
 
 public interface Installer {
     void installApp(final Context context, String file, Runnable postInstall);

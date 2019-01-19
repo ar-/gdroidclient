@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2018-2019 Andreas Redmer <ar-gdroid@abga.be>
   ~
   ~ This program is free software: you can redistribute it and/or modify
   ~ it under the terms of the GNU General Public License as published by
@@ -16,6 +17,7 @@
   ~
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="org.gdroid.gdroid">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -25,12 +27,13 @@
         android:maxSdkVersion="23" />
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:allowBackup="false"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|screenSize"
@@ -53,7 +56,6 @@
         </activity>
         <activity
             android:name=".AppCollectionActivity"
-            android:label="@string/title_activity_app_collection"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

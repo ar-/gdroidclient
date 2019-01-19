@@ -21,7 +21,6 @@ import android.app.Activity;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -134,7 +133,7 @@ public class AutoRootAppInstallTask extends AsyncTask<Void, ApplicationBean, Voi
 
         for(ApplicationBean packageInfo: packages){
             current++;
-            publishProgress(new ApplicationBean[]{packageInfo});
+            publishProgress(packageInfo);
             try {
                 if (Util.isRooted()) {
                     final String downloadTarget = AppDownloader.getAbsoluteFilenameOfDownloadTarget(context, packageInfo);

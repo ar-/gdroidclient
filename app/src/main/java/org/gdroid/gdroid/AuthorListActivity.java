@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018-2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,26 +18,19 @@
 
 package org.gdroid.gdroid;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import org.gdroid.gdroid.authors.AuthorArrayAdapter;
 import org.gdroid.gdroid.beans.AppDatabase;
-import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.AuthorBean;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 public class AuthorListActivity extends AppCompatActivity {
     ListView authorsList;
@@ -45,7 +38,7 @@ public class AuthorListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_author_list);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         authorsList = findViewById(R.id.listview_authors);
         setSupportActionBar(toolbar);
 
@@ -58,19 +51,6 @@ public class AuthorListActivity extends AppCompatActivity {
 //            }
 //        });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-        // fill list
-        String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-                "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
-                "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
-                "Android", "iPhone", "WindowsMobile" };
-
-        final ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i < values.length; ++i) {
-            list.add(values[i]);
-        }
 
         AppDatabase db = AppDatabase.get(getApplicationContext());
         final AuthorBean[] allAuthors = db.appDao().getAllAuthors();

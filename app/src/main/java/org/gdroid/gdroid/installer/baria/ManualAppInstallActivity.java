@@ -17,10 +17,8 @@
  */
  package org.gdroid.gdroid.installer.baria;
 
-import android.app.Activity;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -76,11 +74,6 @@ public class ManualAppInstallActivity extends AppCompatActivity {
         DefaultInstaller installer = new DefaultInstaller();
         installer.installApp(this, file, null);
 
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
     }
 
     @Override

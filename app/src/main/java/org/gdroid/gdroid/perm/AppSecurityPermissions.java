@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2018-2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -44,6 +44,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import org.gdroid.gdroid.R;
 
 import java.text.Collator;
@@ -55,7 +56,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.prefs.Preferences;
 
 /**
  * This class contains the SecurityPermissions view implementation.
@@ -167,8 +167,8 @@ public class AppSecurityPermissions {
             group = grp;
             this.perm = perm;
 
-            ImageView permGrpIcon = (ImageView) findViewById(R.id.perm_icon);
-            TextView permNameView = (TextView) findViewById(R.id.perm_name);
+            ImageView permGrpIcon = findViewById(R.id.perm_icon);
+            TextView permNameView = findViewById(R.id.perm_name);
 
             PackageManager pm = getContext().getPackageManager();
             Drawable icon = null;
@@ -375,7 +375,7 @@ public class AppSecurityPermissions {
 
     public View getPermissionsView(int which) {
         LinearLayout permsView = (LinearLayout) inflater.inflate(R.layout.app_perms_summary, null);
-        LinearLayout displayList = (LinearLayout) permsView.findViewById(R.id.perms_list);
+        LinearLayout displayList = permsView.findViewById(R.id.perms_list);
         View noPermsView = permsView.findViewById(R.id.no_permissions);
 
         displayPermissions(permGroupsList, displayList, which);
