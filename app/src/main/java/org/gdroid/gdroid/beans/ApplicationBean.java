@@ -84,9 +84,14 @@ public class ApplicationBean {
     public String neighbours;
 
 
+    public String hash;
+
+
+
     public ApplicationBean() {
     }
 
+    @Ignore
     public ApplicationBean(String id) {
         this.id = id;
     }

@@ -19,6 +19,7 @@
 package org.gdroid.gdroid.beans;
 
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.Index;
 import android.support.annotation.NonNull;
 
@@ -36,6 +37,7 @@ public class CategoryBean {
     public CategoryBean() {
     }
 
+    @Ignore
     public CategoryBean(@NonNull String catName, @NonNull String appId) {
         this.catName = catName;
         this.appId = appId;
