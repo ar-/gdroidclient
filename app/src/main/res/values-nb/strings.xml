@@ -131,4 +131,7 @@
     <string name="added_on">Lagt til den %s</string>
     <string name="name">Navn</string>
 <string name="sort_search">Sorter søk</string>
+    <string name="stars">Stjerner</string>
+    <string name="ascending">stigende</string>
+    <string name="descending">synkende</string>
 </resources>
