@@ -46,7 +46,6 @@
     <string name="download_pending">ダウンロードの開始を待っています</string>
     <string name="more">詳細を表示</string>
     <string name="app_name">G-Droid</string>
-    <string name="nav_header_title">G-Droid</string>
     <string name="action_settings">設定</string>
     <string name="title_activity_settings">設定</string>
     <string name="pref_header_data_sync">データと同期</string>

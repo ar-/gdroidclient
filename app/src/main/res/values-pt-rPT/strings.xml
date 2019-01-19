@@ -53,10 +53,6 @@
     <string name="action_add_favourite">Adicionar aos favoritos</string>
     <string name="title_activity_settings">Definições</string>
     <string name="pref_header_general">Geral</string>
-    <string name="pref_title_social_recommendations">Ativar recomendações</string>
-    <string name="pref_description_social_recommendations">Ainda não funcional</string>
-    <string name="pref_title_display_name">Desativada</string>
-    <string name="pref_title_add_friends_to_messages">Desativada</string>
     <string name="pref_header_data_sync">Exemplo de definições para dados e sincronização</string>
     <string name="pref_title_sync_frequency">Frequência de sincronização</string>
     <string name="pref_header_notifications">Exemplo de definições para notificações</string>
