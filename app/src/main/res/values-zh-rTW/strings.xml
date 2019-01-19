@@ -117,4 +117,7 @@
     <string name="added_on">於 %s 新增</string>
     <string name="name">名稱</string>
     <string name="sort_search">搜尋排序</string>
+    <string name="stars">星號</string>
+    <string name="ascending">遞增</string>
+    <string name="descending">遞減</string>
 </resources>
