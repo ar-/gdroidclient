@@ -98,4 +98,25 @@
     <string name="sort_search">Suchergebnis sortieren</string>
     <string name="ascending">aufsteigend</string>
     <string name="descending">absteigend</string>
+    <string name="action_hide">Verbergen</string>
+    <string name="action_unhide">Anzeigen</string>
+    <string name="pref_header_ratings">Bewertung mit Sternen</string>
+    <string name="pref_title_upstream_ratings">Bewertungen von GitHub, GitLab und Sourceforge</string>
+    <string name="pref_title_ratings_headline">Einfluss der jeweiligen Metrik</string>
+    <string name="pref_title_ratings_summary">Eine Zahl von 0 bis 10 der Metrik zuweisen. 10 bedeutet höchste Wichtung.</string>
+    <string name="pref_title_updated_in_2_years">neue Version innerhalb der letzten 2 Jahre</string>
+    <string name="pref_title_release_cycle_time">Typische Zeit zwischen Updates</string>
+    <string name="search_harder">weiter suchen</string>
+    <string name="search_even_harder">noch weiter suchen</string>
+    <string name="menu_my_apps">Meine Apps</string>
+    <string name="menu_hidden_apps">Verborgene Apps</string>
+    <string name="similar_apps">Ähnliche Apps</string>
+    <string name="by_same_author">Vom gleichen Author</string>
+    <string name="installing" formatted="false">Installiere %s</string>
+    <string name="installing_details" formatted="false">Installiere %d / %d</string>
+    <string name="installation_finished">Installation beendet</string>
+    <string name="installed_details">%d Apps installiert</string>
+    <string name="in_same_category">Gleiche Kategorie</string>
+    <string name="pref_title_use_list_view">Anzeige als Liste</string>
+    <string name="pref_description_use_list_view">falls möglich Apps in Liste anzeigen</string>
 </resources>
