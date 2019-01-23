@@ -1,0 +1,31 @@
+0.7.1
+  * added number-picker in the settings to set the weight of the metrics
+  * added uninstall button and functionality (root and non-root)
+  * bugfix: don't offer to install installed apps
+  * bugfix: don't offer to star starred apps
+  * updated fetch2 to 2.3.6
+  * bugfix: don't clear user database when updating the app to a new version
+  * removed redundant strings from xml file
+  * bugfix: text size on apll list view was too small
+  * added more translation from weblate (thanks guys!)
+
+0.7.0
+  * added scroll-down-to-update
+  * added different sortings for lists of apps
+  * show apps similar to installed apps
+  * show apps the user might also like
+  * made search results responsive
+  * updated weblate translations (thanks mates)
+
+0.6.3
+  * added list view (can be activated in preferences)
+  * show similar apps ordered by similarity
+
+0.6.2
+  * added similar apps on the app-detail view correctly implemented, special thanks to Frieder Ferlemann
+  * added weblate translations, thanks to all translators
+
+0.6.1
+  * fixed screenshot click bug on Adnroid 5 for good
+  * added more Portuguese, French and Russian translations
+
