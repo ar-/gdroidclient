@@ -31,7 +31,7 @@ export ANDROID_HOME=$PWD/tmp/android-sdk-linux
 
 # a machine cannot agree to a licence, but for the idiots @ google we do it anyway
 mkdir tmp/android-sdk-linux/licenses
-printf "8933bad161af4178b1185d1a37fbf41ea5269c55\nd56f5187479451eabf01fb78af6dfcb131a6481e" > tmp/android-sdk-linux/licenses/android-sdk-license
+printf "8933bad161af4178b1185d1a37fbf41ea5269c55\nd56f5187479451eabf01fb78af6dfcb131a6481e\n24333f8a63b6825ea9c5514f83c2829b004d1fee" > tmp/android-sdk-linux/licenses/android-sdk-license
 printf "84831b9409646a918e30573bab4c9c91346d8abd" > tmp/android-sdk-linux/licenses/android-sdk-preview-license
 
 pwd
