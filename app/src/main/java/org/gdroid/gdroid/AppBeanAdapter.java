@@ -223,6 +223,14 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
             popup.getMenu().removeItem(R.id.action_hide);
         else
             popup.getMenu().removeItem(R.id.action_unhide);
+
+        // show/hide install/uninstall #44 , #86
+        if (Util.isAppInstalled(mContext, app.id))
+            popup.getMenu().removeItem(R.id.action_install);
+        else
+            popup.getMenu().removeItem(R.id.action_uninstall);
+
+
         popup.show();
     }
 
@@ -250,10 +258,16 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
                     Util.unhideApp(mContext,holder.appId);
                     return true;
                 case R.id.action_install:
-                    Intent myIntent = new Intent(mContext, AppDetailActivity.class);
-                    myIntent.putExtra("appId", holder.appId);
-                    myIntent.putExtra("action", "install");
-                    mContext.startActivity(myIntent);
+                    Intent openAndInstallApp = new Intent(mContext, AppDetailActivity.class);
+                    openAndInstallApp.putExtra("appId", holder.appId);
+                    openAndInstallApp.putExtra("action", "install");
+                    mContext.startActivity(openAndInstallApp);
+                    return true;
+                case R.id.action_uninstall:
+                    Intent openAndUninstallApp = new Intent(mContext, AppDetailActivity.class);
+                    openAndUninstallApp.putExtra("appId", holder.appId);
+                    openAndUninstallApp.putExtra("action", "uninstall");
+                    mContext.startActivity(openAndUninstallApp);
                     return true;
                 default:
             }

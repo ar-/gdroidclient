@@ -480,6 +480,10 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             {
                 btnInstall.performClick();
             }
+            if (action.equals("uninstall"))
+            {
+                btnUninstall.performClick();
+            }
         }
 
         db.close();
