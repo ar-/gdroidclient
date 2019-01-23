@@ -48,4 +48,5 @@
     <string name="added_on">S\'ha afegit a %s</string>
     <string name="name">Nom</string>
 <string name="sort_search">Ordena els resultats de la cerca</string>
+    <string name="action_uninstall">Desinstal·la</string>
 </resources>

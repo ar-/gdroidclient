@@ -45,4 +45,5 @@
     <string name="added_on">Додат %s</string>
     <string name="name">Назив</string>
     <string name="sort_search">Сортирај претрагу</string>
+    <string name="action_uninstall">Уклони</string>
 </resources>

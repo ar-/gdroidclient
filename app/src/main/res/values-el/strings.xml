@@ -48,4 +48,5 @@
     <string name="added_on">Προστέθηκε στις %s</string>
     <string name="name">Όνομα</string>
     <string name="sort_search">Ταξινόμηση αναζήτησης</string>
+    <string name="action_uninstall">Απεγκατάσταση</string>
 </resources>

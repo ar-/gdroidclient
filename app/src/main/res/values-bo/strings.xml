@@ -44,4 +44,5 @@
     <string name="last_update">ཐ་མའི་གསར་བསྒྱུར།</string>
     <string name="added_on">%sའདིའི་སྒང་ལ་ཁ་སྣོན།</string>
     <string name="name">མིང་།</string>
+    <string name="action_uninstall">འགྲིག་བཅུག་ཕྱིར་འཐེན།</string>
 </resources>

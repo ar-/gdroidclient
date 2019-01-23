@@ -22,4 +22,5 @@ import android.content.Context;
 
 public interface Installer {
     void installApp(final Context context, String file, Runnable postInstall);
+    void uninstallApp(final Context context, String pkgName);
 }

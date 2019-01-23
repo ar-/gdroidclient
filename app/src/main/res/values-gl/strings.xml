@@ -47,4 +47,5 @@
     <string name="added_on">Engadida a %s</string>
     <string name="name">Nome</string>
     <string name="sort_search">Ordear busca</string>
+    <string name="action_uninstall">Desinstalar</string>
 </resources>

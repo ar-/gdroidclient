@@ -48,4 +48,5 @@
     <string name="added_on">در %s افزوده شد</string>
     <string name="name">نام</string>
     <string name="sort_search">چینش جست‌وجو</string>
+    <string name="action_uninstall">حذف نصب</string>
 </resources>

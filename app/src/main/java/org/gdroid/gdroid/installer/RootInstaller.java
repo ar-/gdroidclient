@@ -74,4 +74,41 @@ public class RootInstaller implements Installer {
             postInstall.run();
         }
     }
+
+    @Override
+    public void uninstallApp(final Context context, String pkgName) {
+        try {
+            String command;
+            command = "pm uninstall " + pkgName;
+            Process proc = Runtime.getRuntime().exec(new String[] { "su", "-c", command });
+            proc.waitFor();
+            if(proc.exitValue() != 0) {
+                BufferedReader stdError = new BufferedReader(
+                        new InputStreamReader(proc.getErrorStream()));
+                String s = null;
+                String error = "";
+                while ((s = stdError.readLine()) != null)
+                {
+                    error = s + "\n";
+                }
+                final String finalError = error;
+                ((Activity)context).runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(context, finalError, Toast.LENGTH_LONG).show();
+
+                    }
+                });
+
+            }
+        } catch (final Exception e) {
+            ((Activity)context).runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+
+                }
+            });
+        }
+    }
 }

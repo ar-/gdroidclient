@@ -42,4 +42,5 @@
     <string name="added_on">%sలో జోడించబడింది</string>
     <string name="name">పేరు</string>
     <string name="sort_search">శోధనను క్రమీకరించు</string>
+    <string name="action_uninstall">నివర్తించు</string>
 </resources>

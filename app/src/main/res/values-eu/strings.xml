@@ -117,4 +117,5 @@
     <string name="added_on">%s(e)an gehitua</string>
     <string name="name">Izena</string>
     <string name="sort_search">Ordenatu bilaketa</string>
+    <string name="action_uninstall">Desinstalatu</string>
 </resources>

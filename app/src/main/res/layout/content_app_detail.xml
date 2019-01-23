@@ -135,6 +135,17 @@
 
 
             <Button
+                android:id="@+id/btn_uninstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_uninstall"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="#ffffffff"
+                />
+
+            <Button
                 android:id="@+id/btn_launch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

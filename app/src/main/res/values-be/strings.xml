@@ -48,4 +48,5 @@
     <string name="added_on">Дададзеная %s</string>
     <string name="name">Назва</string>
     <string name="sort_search">Сартаваць знойдзенае</string>
+    <string name="action_uninstall">Выдаліць</string>
 </resources>

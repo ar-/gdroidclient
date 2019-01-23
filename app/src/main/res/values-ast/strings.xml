@@ -44,4 +44,5 @@
     <string name="last_update">Anovamientu caberu</string>
     <string name="added_on">Amestáu\'l %s</string>
     <string name="name">Nome</string>
+    <string name="action_uninstall">Desinstalar</string>
 </resources>

@@ -29,13 +29,18 @@
         android:title="@string/action_install" />
 
     <item
-        android:id="@+id/action_hide"
+        android:id="@+id/action_uninstall"
         android:orderInCategory="102"
+        android:title="@string/action_uninstall" />
+
+    <item
+        android:id="@+id/action_hide"
+        android:orderInCategory="103"
         android:title="@string/action_hide" />
 
     <item
         android:id="@+id/action_unhide"
-        android:orderInCategory="103"
+        android:orderInCategory="104"
         android:title="@string/action_unhide" />
 
 </menu>

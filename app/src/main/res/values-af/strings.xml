@@ -44,4 +44,5 @@
     <string name="last_update">Laaste opdatering</string>
     <string name="added_on">Toegevoeg op %s</string>
     <string name="name">Naam</string>
+    <string name="action_uninstall">Deïnstalleer</string>
 </resources>

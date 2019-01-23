@@ -48,4 +48,5 @@
     <string name="added_on">Lisätty %s</string>
     <string name="name">Nimi</string>
     <string name="sort_search">Lajittele haku</string>
+    <string name="action_uninstall">Poista</string>
 </resources>
