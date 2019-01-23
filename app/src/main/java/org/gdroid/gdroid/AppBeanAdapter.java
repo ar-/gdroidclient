@@ -230,6 +230,9 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         else
             popup.getMenu().removeItem(R.id.action_uninstall);
 
+        // hide star option
+        if (Util.isAppstarred(mContext, app.id))
+            popup.getMenu().removeItem(R.id.action_add_favourite);
 
         popup.show();
     }
