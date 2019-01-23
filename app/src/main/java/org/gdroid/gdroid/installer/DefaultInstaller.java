@@ -92,7 +92,6 @@ public class DefaultInstaller implements Installer {
         Uri packageURI = Uri.parse("package:"+pkgName);
         Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageURI);
         ((Activity)context).startActivityForResult(uninstallIntent, Util.UNINSTALL_FINISHED);
-        //context.startActivity(uninstallIntent);
     }
 
 }
