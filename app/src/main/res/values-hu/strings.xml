@@ -48,4 +48,5 @@
     <string name="added_on">Hozzáadva: %s</string>
     <string name="name">Név</string>
     <string name="sort_search">Keresési eredmények sorba rendezése</string>
+    <string name="action_uninstall">Eltávolítás</string>
 </resources>

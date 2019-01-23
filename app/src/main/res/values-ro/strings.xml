@@ -106,4 +106,5 @@
     <string name="added_on">Adăugat pe %s</string>
     <string name="name">Nume</string>
     <string name="sort_search">Sortare căutare</string>
+    <string name="action_uninstall">Dezinstalează</string>
 </resources>

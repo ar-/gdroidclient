@@ -108,4 +108,5 @@
     <string name="added_on">Adicionada em %s</string>
     <string name="name">Nome</string>
     <string name="sort_search">Ordenar pesquisa</string>
+    <string name="action_uninstall">Desinstalar</string>
 </resources>

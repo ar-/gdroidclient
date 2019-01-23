@@ -48,4 +48,5 @@
     <string name="added_on">Aldonita je %s</string>
     <string name="name">Nomo</string>
     <string name="sort_search">Ordigi serĉon</string>
+    <string name="action_uninstall">Malinstali</string>
 </resources>

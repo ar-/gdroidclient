@@ -117,4 +117,5 @@
     <string name="added_on">%s tarihinde eklendi</string>
     <string name="name">Ad</string>
     <string name="sort_search">Aramayı sırala</string>
+    <string name="action_uninstall">Kaldır</string>
 </resources>

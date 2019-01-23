@@ -35,4 +35,5 @@
     <string name="last_update">Վերջին թարմացում</string>
     <string name="added_on">Ավելացվել է %sին</string>
     <string name="name">Անուն</string>
+    <string name="action_uninstall">Ապատեղադրել</string>
 </resources>

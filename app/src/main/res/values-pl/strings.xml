@@ -63,4 +63,5 @@
     <string name="added_on">Dodano %s</string>
     <string name="name">Nazwa</string>
     <string name="sort_search">Sortuj wyszukiwanie</string>
+    <string name="action_uninstall">Odinstaluj</string>
 </resources>

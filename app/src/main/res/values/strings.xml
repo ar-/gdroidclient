@@ -193,4 +193,5 @@
     <string name="sort_search">Sort search</string>
     <string name="ascending">ascending</string>
     <string name="descending">descending</string>
+    <string name="action_uninstall">Uninstall</string>
 </resources>

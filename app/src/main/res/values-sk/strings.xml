@@ -44,4 +44,5 @@
     <string name="last_update">Posledná aktualizácia</string>
     <string name="added_on">Pridané %s</string>
     <string name="name">Názov</string>
+    <string name="action_uninstall">Odinštalovať</string>
 </resources>

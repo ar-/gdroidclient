@@ -44,4 +44,5 @@
     <string name="last_update">അവസാനം പുതുക്കിയത്</string>
     <string name="added_on">%s ന് ചേർത്തത്</string>
     <string name="name">പേര്</string>
+    <string name="action_uninstall">ഒഴിവാക്കുക</string>
 </resources>

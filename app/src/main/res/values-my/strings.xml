@@ -43,4 +43,5 @@
     <string name="last_update">ေနာက္ဆံုးအသစ္မြမ္းမံျခင္း</string>
     <string name="added_on">%s တြင္ေပါင္းထည့္ခ့ဲသည္</string>
     <string name="name">အမည္</string>
+    <string name="action_uninstall">ျဖဳတ္မည္</string>
 </resources>

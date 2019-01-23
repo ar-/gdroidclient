@@ -48,4 +48,5 @@
     <string name="added_on">Lades till %s</string>
     <string name="name">Namn</string>
     <string name="sort_search">Sortera sökning</string>
+    <string name="action_uninstall">Avinstallera</string>
 </resources>

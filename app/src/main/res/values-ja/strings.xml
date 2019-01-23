@@ -70,4 +70,5 @@
     <string name="added_on">%sに追加しました</string>
     <string name="name">名前</string>
     <string name="sort_search">検索の並び替え</string>
+    <string name="action_uninstall">アンインストール</string>
 </resources>

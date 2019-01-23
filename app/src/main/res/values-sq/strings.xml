@@ -32,4 +32,5 @@
     <string name="added_on">Shtuar me %s</string>
     <string name="name">Emri</string>
     <string name="sort_search">Rendite kërkimin</string>
+    <string name="action_uninstall">Çinstalo</string>
 </resources>

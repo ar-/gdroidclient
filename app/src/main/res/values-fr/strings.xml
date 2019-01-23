@@ -85,4 +85,5 @@
     <string name="added_on">Ajoutée le %s</string>
     <string name="name">Nom</string>
     <string name="sort_search">Trier la recherche</string>
+    <string name="action_uninstall">Désinstaller</string>
 </resources>

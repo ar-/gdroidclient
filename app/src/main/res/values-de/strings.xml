@@ -98,4 +98,5 @@
     <string name="sort_search">Suchergebnis sortieren</string>
     <string name="ascending">aufsteigend</string>
     <string name="descending">absteigend</string>
+    <string name="action_uninstall">Entfernen</string>
 </resources>

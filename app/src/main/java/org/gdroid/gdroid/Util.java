@@ -31,6 +31,7 @@ import android.support.v4.os.ConfigurationCompat;
 import android.support.v4.os.LocaleListCompat;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.gdroid.gdroid.beans.AppBeanNameComparator;
 import org.gdroid.gdroid.beans.AppDatabase;
@@ -40,7 +41,9 @@ import org.gdroid.gdroid.installer.DefaultInstaller;
 import org.gdroid.gdroid.installer.Installer;
 import org.gdroid.gdroid.installer.RootInstaller;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -54,6 +57,7 @@ public class Util {
     public static final String NOTIFICATION_CHANEL_ID = "30009";
     public static final int NOTIFICATION_ID = 14099;
     public static final String TAG = "Util";
+    public static final int UNINSTALL_FINISHED = 1;
 
     public static Activity getActivity(Context context)
     {
@@ -566,7 +570,5 @@ public class Util {
             fileSize = newFileSize;
         }
     }
-
-
 
 }

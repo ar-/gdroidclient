@@ -24,8 +24,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.StrictMode;
+import android.widget.Toast;
 
+import org.gdroid.gdroid.Util;
+
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
 import java.lang.reflect.Method;
 
 public class DefaultInstaller implements Installer {
@@ -81,4 +86,13 @@ public class DefaultInstaller implements Installer {
             postInstall.run();
         }
     }
+
+    @Override
+    public void uninstallApp(final Context context, String pkgName) {
+        Uri packageURI = Uri.parse("package:"+pkgName);
+        Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageURI);
+        ((Activity)context).startActivityForResult(uninstallIntent, Util.UNINSTALL_FINISHED);
+        //context.startActivity(uninstallIntent);
+    }
+
 }

@@ -48,4 +48,5 @@
     <string name="added_on">Přidáno %s</string>
     <string name="name">Název</string>
     <string name="sort_search">Setřídit hledání</string>
+    <string name="action_uninstall">Odinstalovat</string>
 </resources>

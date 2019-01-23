@@ -26,6 +26,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.CircularProgressDrawable;
@@ -57,6 +58,7 @@ import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
 import org.gdroid.gdroid.beans.TagBean;
+import org.gdroid.gdroid.installer.Installer;
 import org.gdroid.gdroid.perm.AppDiff;
 import org.gdroid.gdroid.perm.AppSecurityPermissions;
 import org.jetbrains.annotations.NotNull;
@@ -331,6 +333,27 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             }
         });
 
+        final Button btnUninstall = findViewById(R.id.btn_uninstall);
+        btnUninstall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                AsyncTask.execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        final Installer installer = Util.getAppInstaller(v.getContext());
+                        installer.uninstallApp(v.getContext(), mApp.id);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                updateInstallStatus(Status.NONE);
+                            }
+                        });
+                    }
+                });
+
+            }
+        });
+
         final Button btnCancelDownload = findViewById(R.id.btn_cancel_download);
         btnCancelDownload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -593,9 +616,11 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
     public void updateInstallStatus(Status status)
     {
         final Button btnInstall = findViewById(R.id.btn_install);
+        final Button btnUninstall = findViewById(R.id.btn_uninstall);
         final Button btnLaunch = findViewById(R.id.btn_launch);
         final LinearLayout pbh = findViewById(R.id.progress_bar_holder);
         btnInstall.setVisibility(View.GONE);
+        btnUninstall.setVisibility(View.GONE);
         btnLaunch.setVisibility(View.GONE);
         pbh.setVisibility(View.GONE);
 
@@ -615,6 +640,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 if (Util.isAppInstalled(mContext, mApp.id))
                 {
                     btnLaunch.setVisibility(View.VISIBLE);
+                    btnUninstall.setVisibility(View.VISIBLE);
                     if (Util.isAppUpdateable(mContext, mApp))
                     {
                         btnInstall.setText(getString(R.string.action_upgrade));
@@ -627,6 +653,18 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                     btnInstall.setVisibility(View.VISIBLE);
                 }
             }
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch(requestCode) {
+            case Util.UNINSTALL_FINISHED:
+                //you just got back from activity B - deal with resultCode
+                //use data.getExtra(...) to retrieve the returned data
+                updateInstallStatus(Status.NONE);
+                break;
         }
     }
 

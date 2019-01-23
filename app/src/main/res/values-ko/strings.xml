@@ -48,4 +48,5 @@
     <string name="added_on">%s에 추가됨</string>
     <string name="name">이름</string>
     <string name="sort_search">검색 정렬</string>
+    <string name="action_uninstall">제거</string>
 </resources>
