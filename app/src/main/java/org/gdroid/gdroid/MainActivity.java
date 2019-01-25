@@ -632,6 +632,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_app_authors) {
             Intent myIntent = new Intent(this, AuthorListActivity.class);
             this.startActivity(myIntent);
+        } else if (id == R.id.nav_top_authors) {
+            Intent myIntent = new Intent(this, AuthorListActivity.class);
+            myIntent.putExtra("type", "top");
+            this.startActivity(myIntent);
 
 //        } else if (id == R.id.nav_manage) {
 //        } else if (id == R.id.nav_share) {

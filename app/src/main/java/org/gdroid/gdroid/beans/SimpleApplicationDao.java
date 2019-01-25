@@ -133,7 +133,17 @@ public interface SimpleApplicationDao {
     // authors
 
     @SuppressWarnings("AndroidUnresolvedRoomSqlReference")
-    @Query("SELECT author, count(id) apps, avg(stars) stars FROM ApplicationBean WHERE author IS NOT NULL and author <> '' GROUP BY author ORDER by apps DESC, stars DESC ")
-    AuthorBean[] getAllAuthors();
+    @Query("SELECT author, count(id) apps, max(stars) stars FROM ApplicationBean WHERE author IS NOT NULL and author <> '' GROUP BY author ORDER by apps DESC, stars DESC ")
+    List<AuthorBean> getAllAuthors();
+
+    @SuppressWarnings("AndroidUnresolvedRoomSqlReference")
+    /**
+     * fetches top authors, a top author is someone who has at least 2 top apps.
+     * a top app is an app with a star rating in the top 20% of all apps
+     */
+    @Query("SELECT author, count(id) apps, max(stars) stars FROM ApplicationBean WHERE author IS NOT NULL and author <> '' " +
+            "AND stars > (SELECT min(st) FROM (SELECT stars st FROM ApplicationBean ORDER BY stars DESC LIMIT (SELECT count(*)/5 FROM ApplicationBean) ) ) " +
+            "GROUP BY author  HAVING count(id) >1 ORDER by apps DESC, stars DESC ")
+    List<AuthorBean> getTopAuthors();
 
 }

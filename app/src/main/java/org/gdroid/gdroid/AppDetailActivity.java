@@ -26,6 +26,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -56,6 +57,7 @@ import com.tonyodev.fetch2core.DownloadBlock;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.beans.AuthorBean;
 import org.gdroid.gdroid.beans.CategoryBean;
 import org.gdroid.gdroid.beans.TagBean;
 import org.gdroid.gdroid.installer.Installer;
@@ -122,46 +124,48 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         final LinearLayout categoryView = findViewById(R.id.grp_categories);
         categoryView.removeAllViews();
         for (CategoryBean cb:categories) {
-            TextView tv = new TextView(mContext);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            params.setMargins(2,2,2,2);
-            tv.setLayoutParams(params);
-            tv.setBackgroundResource(R.drawable.rounded_corner);
-            tv.setPadding(10,10,10,10);
-            tv.setTextColor(getResources().getColor(R.color.album_title));
-            tv.setTextSize(14);
             final String lcn = Util.getLocalisedCategoryName(this, cb.catName);
-            tv.setText(lcn);
-            categoryView.addView(tv);
-
-            // make it clickable
             final String collectionName = "cat:" + cb.catName;
-            final String headline = AppCollectionAdapter.getHeadlineForCatOrTag(mContext, collectionName);
-            final View.OnClickListener clickListener = AppCollectionAdapter.getOnClickListenerForCatOrTag(collectionName, headline, this);
-            tv.setOnClickListener(clickListener);
+            final int backgroudDrawable = R.drawable.rounded_corner;
+            TextView tv = getTagTextView(lcn, collectionName, backgroudDrawable);
+            categoryView.addView(tv);
         }
 
         // fill tags - the same way as categories
         final TagBean[] tags = db.appDao().getAllTagsForApp(mApp.id);
         for (TagBean tb:tags) {
-            TextView tv = new TextView(mContext);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            params.setMargins(2,2,2,2);
-            tv.setLayoutParams(params);
-            tv.setBackgroundResource(R.drawable.rounded_corner_tag);
-            tv.setPadding(10,10,10,10);
-            tv.setTextColor(getResources().getColor(R.color.album_title));
-            tv.setTextSize(14);
-            String tagname = Util.getStringResourceByName(mContext,tb.tagName);
-            tv.setText(tagname);
-            categoryView.addView(tv);
-
-            // make it clickable
+            final String ltn = Util.getStringResourceByName(this, tb.tagName);
             final String collectionName = "tag:" + tb.tagName;
-            final String headline = AppCollectionAdapter.getHeadlineForCatOrTag(mContext, collectionName);
-            final View.OnClickListener clickListener = AppCollectionAdapter.getOnClickListenerForCatOrTag(collectionName, headline, this);
-            tv.setOnClickListener(clickListener);
+            final int backgroudDrawable = R.drawable.rounded_corner_tag;
+            TextView tv = getTagTextView(ltn, collectionName, backgroudDrawable);
+            categoryView.addView(tv);
         }
+
+        final AppDetailActivity caller = this;
+        // mark top author
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                AppDatabase db = AppDatabase.get(getApplicationContext());
+                List <AuthorBean> auths = db.appDao().getTopAuthors();
+                for (AuthorBean aub : auths) {
+                    if (mApp.author.equals(aub.author))
+                    {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                final String lrn = "\uD83D\uDC4D " + Util.getStringResourceByName(caller, "top_author") + " \uD83D\uDC4D" ;
+                                final String collectionName = "author:" +mApp.author;
+                                final int backgroudDrawable = R.drawable.rounded_corner_tag;
+                                TextView tv = getTagTextView(lrn, collectionName, backgroudDrawable);
+                                categoryView.addView(tv,0);
+                            }
+                        });
+                    }
+                }
+            }
+        });
+
 
         // fill anti-features
         final TextView lblAntiFeatures = findViewById(R.id.lbl_antifeatures);
@@ -487,6 +491,28 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         }
 
         db.close();
+    }
+
+    @NonNull
+    /**
+     * draws the rounded textviews for tags, categories and top authors
+     */
+    private TextView getTagTextView(String lcn, String collectionName, int backgroudDrawable) {
+        TextView tv = new TextView(mContext);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        params.setMargins(2,2,2,2);
+        tv.setLayoutParams(params);
+        tv.setBackgroundResource(backgroudDrawable);
+        tv.setPadding(10,10,10,10);
+        tv.setTextColor(getResources().getColor(R.color.album_title));
+        tv.setTextSize(14);
+        tv.setText(lcn);
+
+        // make it clickable
+        final String headline = AppCollectionAdapter.getHeadlineForCatOrTag(mContext, collectionName);
+        final View.OnClickListener clickListener = AppCollectionAdapter.getOnClickListenerForCatOrTag(collectionName, headline, this);
+        tv.setOnClickListener(clickListener);
+        return tv;
     }
 
     private void populateSimilarAppsView(final AppCollectionDescriptor appCollectionDescriptor, final int headlineLabel, final int recViewToFill) {
