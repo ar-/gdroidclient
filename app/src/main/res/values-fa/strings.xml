@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">کد مبدأ دیگر در دسترس نیست، به‌روز رسانی ناممکن است.</string>
     <string name="no_permissions">دسترسی ای استفاده نشده است.</string>
     <string name="perm_costs_money">ممکن است این کار برایتان خرج داشته باشد</string>
-    <string name="perms_description_app">فراهم شده توسّط: %1$s.</string>
+    <string name="perms_description_app">فراهم شده توسّط: .</string>
     <string name="perms_new_perm_prefix">جدید:</string>
     <string name="permissions">دسترسی ها</string>
     <string name="links">پیوندها</string>
@@ -45,10 +45,10 @@
     <string name="download_pending">در انتظار شروع بارگیری…</string>
     <string name="more">بیشتر</string>
     <string name="last_update">آخرین به‌روز رسانی</string>
-    <string name="added_on">در %s افزوده شد</string>
+    <string name="added_on">در  افزوده شد</string>
     <string name="name">نام</string>
     <string name="sort_search">چینش جست‌وجو</string>
     <string name="action_uninstall">حذف نصب</string>
     <string name="license">پروانه</string>
-    <string name="app_size">اندازه: %1$s</string>
+    <string name="app_size">اندازه: </string>
 </resources>

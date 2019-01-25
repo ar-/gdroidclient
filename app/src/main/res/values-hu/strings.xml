@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">A forráskód többé nem érhető el, a frissítések nem lehetségesek.</string>
     <string name="no_permissions">Nincsenek engedélyei.</string>
     <string name="perm_costs_money">Ez pénzbe kerülhet Önnek</string>
-    <string name="perms_description_app">A(z) %1$s által biztosítva.</string>
+    <string name="perms_description_app">A(z)  által biztosítva.</string>
     <string name="perms_new_perm_prefix">Új:</string>
     <string name="permissions">Engedélyek</string>
     <string name="links">Hivatkozások</string>
@@ -45,10 +45,10 @@
     <string name="download_pending">Várakozás a letöltés elkezdésére…</string>
     <string name="more">Több</string>
     <string name="last_update">Utolsó frissítés</string>
-    <string name="added_on">Hozzáadva: %s</string>
+    <string name="added_on">Hozzáadva: </string>
     <string name="name">Név</string>
     <string name="sort_search">Keresési eredmények sorba rendezése</string>
     <string name="action_uninstall">Eltávolítás</string>
     <string name="license">Licenc</string>
-    <string name="app_size">Méret: %1$s</string>
+    <string name="app_size">Méret: </string>
 </resources>

@@ -10,7 +10,7 @@
     <string name="yes">ಹೌದು</string>
     <string name="no">ಇಲ್ಲ</string>
     <string name="more">ಹೆಚ್ಚು</string>
-    <string name="added_on">%s ನಂದು ಸೇರಿಸಲಾಯಿತು</string>
+    <string name="added_on"> ನಂದು ಸೇರಿಸಲಾಯಿತು</string>
     <string name="name">ಹೆಸರು</string>
     <string name="license">ಪರವಾನಿಗೆ</string>
 </resources>

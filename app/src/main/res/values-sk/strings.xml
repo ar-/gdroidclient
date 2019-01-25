@@ -28,7 +28,7 @@
     <string name="anti_nonfreeassets">Táto aplikácia obsahuje proprietárne časti</string>
     <string name="no_permissions">Nepoužívajú sa žiadne povolenia.</string>
     <string name="perm_costs_money">Môže stáť peniaze</string>
-    <string name="perms_description_app">Poskytované %1$s.</string>
+    <string name="perms_description_app">Poskytované .</string>
     <string name="perms_new_perm_prefix">Nové:</string>
     <string name="permissions">Povolenia aplikácie</string>
     <string name="links">Linky</string>
@@ -42,7 +42,7 @@
     <string name="download_pending">Čakanie na spustenie preberania…</string>
     <string name="more">Viac</string>
     <string name="last_update">Posledná aktualizácia</string>
-    <string name="added_on">Pridané %s</string>
+    <string name="added_on">Pridané </string>
     <string name="name">Názov</string>
     <string name="action_uninstall">Odinštalovať</string>
     <string name="license">Licencia</string>

@@ -27,7 +27,7 @@
     <string name="anti_nonfreeassets">Ova aplikacija sadrži neslobodne resurse</string>
     <string name="no_permissions">Ne koriste se dozvole.</string>
     <string name="perm_costs_money">Ovo se može naplaćivati</string>
-    <string name="perms_description_app">Pruža %1$s.</string>
+    <string name="perms_description_app">Pruža .</string>
     <string name="perms_new_perm_prefix">Novo:</string>
     <string name="permissions">Dozvole</string>
     <string name="links">Poveznice</string>
@@ -40,7 +40,7 @@
     <string name="download_pending">Čekanje na početak preuzimanja…</string>
     <string name="more">Više</string>
     <string name="last_update">Posljednje ažuriranje</string>
-    <string name="added_on">Dodano %s</string>
+    <string name="added_on">Dodano </string>
     <string name="name">Ime</string>
     <string name="action_uninstall">Ukloni</string>
     <string name="license">Licenca</string>

@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Källkoden är inte längre tillgänglig, inga uppdateringar möjliga.</string>
     <string name="no_permissions">Inga behörigheter används.</string>
     <string name="perm_costs_money">Detta kan kosta pengar</string>
-    <string name="perms_description_app">Tillhandahålls av %1$s.</string>
+    <string name="perms_description_app">Tillhandahålls av .</string>
     <string name="perms_new_perm_prefix">Ny:</string>
     <string name="permissions">Tillstånd</string>
     <string name="links">Länkar</string>
@@ -45,10 +45,10 @@
     <string name="download_pending">Väntar på att påbörja hämtning…</string>
     <string name="more">Mer</string>
     <string name="last_update">Senaste uppdatering</string>
-    <string name="added_on">Lades till %s</string>
+    <string name="added_on">Lades till </string>
     <string name="name">Namn</string>
     <string name="sort_search">Sortera sökning</string>
     <string name="action_uninstall">Avinstallera</string>
     <string name="license">Licens</string>
-    <string name="app_size">Storlek: %1$s</string>
+    <string name="app_size">Storlek: </string>
 </resources>

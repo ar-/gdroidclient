@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Não é possível atualizar, o código fonte não está mais disponivel.</string>
     <string name="no_permissions">Nenhuma permissão utilizada.</string>
     <string name="perm_costs_money">Isto pode custar-lhe dinheiro</string>
-    <string name="perms_description_app">Fornecido por %1$s.</string>
+    <string name="perms_description_app">Fornecido por .</string>
     <string name="perms_new_perm_prefix">Novo:</string>
     <string name="permissions">Permissões</string>
     <string name="links">Links</string>
@@ -94,7 +94,7 @@
     <string name="similar_apps">Aplicativos semelhantes</string>
     <string name="by_same_author">Pelo mesmo autor</string>
     <string name="menu_app_authors">Autores de aplicativos</string>
-    <string name="installing" formatted="false">Instalando %s</string>
+    <string name="installing" formatted="false">Instalando </string>
     <string name="installing_details" formatted="false">Instalando %d / %d</string>
     <string name="installation_finished">Instalação concluída</string>
     <string name="installed_details">Instalou %d de apps</string>
@@ -104,10 +104,10 @@
     <string name="pref_title_use_root">Use o privilégio de raiz</string>
     <string name="more">Mais</string>
     <string name="last_update">Última atualização</string>
-    <string name="added_on">Adicionado em %s</string>
+    <string name="added_on">Adicionado em </string>
     <string name="name">Nome</string>
 <string name="sort_search">Classificação da pesquisa</string>
     <string name="action_uninstall">Desinstalar</string>
     <string name="license">Licença</string>
-    <string name="app_size">Tamanho: %1$s</string>
+    <string name="app_size">Tamanho: </string>
 </resources>

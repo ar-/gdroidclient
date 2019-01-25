@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">El codi font ja no està disponible, no és possible actualitzar.</string>
     <string name="no_permissions">No es fa servir cap permís.</string>
     <string name="perm_costs_money">Això us pot costar diners</string>
-    <string name="perms_description_app">Proporcionat per %1$s.</string>
+    <string name="perms_description_app">Proporcionat per .</string>
     <string name="perms_new_perm_prefix">Nou:</string>
     <string name="permissions">Permisos</string>
     <string name="links">Enllaços</string>
@@ -45,10 +45,10 @@
     <string name="download_pending">S\'està esperant que comenci la baixada…</string>
     <string name="more">Més</string>
     <string name="last_update">Darrera actualització</string>
-    <string name="added_on">S\'ha afegit a %s</string>
+    <string name="added_on">S\'ha afegit a </string>
     <string name="name">Nom</string>
 <string name="sort_search">Ordena els resultats de la cerca</string>
     <string name="action_uninstall">Desinstal·la</string>
     <string name="license">Llicència</string>
-    <string name="app_size">Mida: %1$s</string>
+    <string name="app_size">Mida: </string>
 </resources>

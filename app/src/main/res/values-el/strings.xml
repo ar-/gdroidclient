@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Ο πηγαίος κώδικας δεν είναι πλέον διαθέσιμος, η ενημέρωση δεν είναι πλέον δυνατή.</string>
     <string name="no_permissions">Δεν χρησιμοποιείται καμία άδεια.</string>
     <string name="perm_costs_money">Αυτό μπορεί να σας κοστίσει χρήματα</string>
-    <string name="perms_description_app">Παρέχεται από %1$s.</string>
+    <string name="perms_description_app">Παρέχεται από .</string>
     <string name="perms_new_perm_prefix">Νέα:</string>
     <string name="permissions">Άδειες</string>
     <string name="links">Σύνδεσμοι</string>
@@ -45,10 +45,10 @@
     <string name="download_pending">Περιμένετε να αρχίσει η λήψη…</string>
     <string name="more">Περισσότερα</string>
     <string name="last_update">Τελευταία ενημέρωση</string>
-    <string name="added_on">Προστέθηκε στις %s</string>
+    <string name="added_on">Προστέθηκε στις </string>
     <string name="name">Όνομα</string>
     <string name="sort_search">Ταξινόμηση αναζήτησης</string>
     <string name="action_uninstall">Απεγκατάσταση</string>
     <string name="license">Άδεια</string>
-    <string name="app_size">Μέγεθος: %1$s</string>
+    <string name="app_size">Μέγεθος: </string>
 </resources>

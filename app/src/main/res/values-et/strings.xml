@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Lähtekood ei ole enam saadaval, uuendused ei ole enam võimalikud.</string>
     <string name="no_permissions">Eriõiguseid ei kasutata.</string>
     <string name="perm_costs_money">See võib olla tasuline</string>
-    <string name="perms_description_app">Tagas %1$s.</string>
+    <string name="perms_description_app">Tagas .</string>
     <string name="perms_new_perm_prefix">Uus:</string>
     <string name="permissions">Volitused</string>
     <string name="links">Lingid</string>
@@ -45,10 +45,10 @@
     <string name="download_pending">Oodatakse allalaadimise algamist…</string>
     <string name="more">Rohkem</string>
     <string name="last_update">Viimane värskendus</string>
-    <string name="added_on">Lisatud %s</string>
+    <string name="added_on">Lisatud </string>
     <string name="name">Nimi</string>
     <string name="sort_search">Otsingu sortimine</string>
     <string name="action_uninstall">Eemalda</string>
     <string name="license">Litsents</string>
-    <string name="app_size">Suurus: %1$s</string>
+    <string name="app_size">Suurus: </string>
 </resources>

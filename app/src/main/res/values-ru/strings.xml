@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Исходный код больше недоступен, обновления невозможны.</string>
     <string name="no_permissions">Разрешений не требуется.</string>
     <string name="perm_costs_money">Это может стоить вам денег</string>
-    <string name="perms_description_app">Предоставлено %1$s.</string>
+    <string name="perms_description_app">Предоставлено .</string>
     <string name="perms_new_perm_prefix">Новые:</string>
     <string name="permissions">Разрешения</string>
     <string name="links">Ссылки</string>
@@ -54,10 +54,10 @@
     <string name="download_pending">Ожидание начала загрузки…</string>
     <string name="more">Детали</string>
     <string name="last_update">Последнее обновление</string>
-    <string name="added_on">Добавлено %s</string>
+    <string name="added_on">Добавлено </string>
     <string name="name">Название</string>
     <string name="sort_search">Сортировка поиска</string>
     <string name="action_uninstall">Удалить</string>
     <string name="license">Лицензия</string>
-    <string name="app_size">Размер: %1$s</string>
+    <string name="app_size">Размер: </string>
 </resources>

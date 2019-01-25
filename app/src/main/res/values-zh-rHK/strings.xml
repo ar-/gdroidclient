@@ -28,7 +28,7 @@
     <string name="anti_nonfreeassets">此應用程式含有非自由的資源</string>
     <string name="no_permissions">沒有使用任何存取權。</string>
     <string name="perm_costs_money">此權限可能需要您花費</string>
-    <string name="perms_description_app">由 %1$s 提供。</string>
+    <string name="perms_description_app">由  提供。</string>
     <string name="perms_new_perm_prefix">新的存取權：</string>
     <string name="permissions">存取權</string>
     <string name="links">連結</string>
@@ -42,7 +42,7 @@
     <string name="download_pending">正等待下載開始…</string>
     <string name="more">顯示更多</string>
     <string name="last_update">最近更新</string>
-    <string name="added_on">於 %s 添置</string>
+    <string name="added_on">於  添置</string>
     <string name="name">名稱</string>
     <string name="action_uninstall">卸載</string>
     <string name="license">特許條款</string>

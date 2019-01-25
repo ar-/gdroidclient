@@ -35,7 +35,7 @@
     <string name="download_all_updates">بارلىق يېڭىلانمىلارنى چۈشۈرۈش</string>
     <string name="more">جىقراق</string>
     <string name="last_update">ئاخىرقى يېڭىلانما</string>
-    <string name="added_on">%s گە قوشۇلدى</string>
+    <string name="added_on"> گە قوشۇلدى</string>
     <string name="name">ئاتى</string>
     <string name="sort_search">ئىزدەشلەرنى رەتلە</string>
     <string name="action_uninstall">ئۆچۈر</string>

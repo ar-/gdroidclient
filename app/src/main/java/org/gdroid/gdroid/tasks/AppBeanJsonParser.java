@@ -114,7 +114,7 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
         // or just an empty string. let's redefine it, and use the latest version as market version.
         ab.marketversion = latestPackage.getString("versionName");
         ab.marketvercode = latestPackage.getString("versionCode");
-
+        ab.size = latestPackage.getInt("size");
 
         // permissions from packages (optional)
         final JSONArray permissionsArray = latestPackage.optJSONArray("uses-permission");

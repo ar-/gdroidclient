@@ -32,7 +32,7 @@
     <string name="anti_nosourcesince">原始碼不再能取得，無法更新。</string>
     <string name="no_permissions">不需要任何權限。</string>
     <string name="perm_costs_money">這或許會有資金消耗</string>
-    <string name="perms_description_app">由 %1$s 提供。</string>
+    <string name="perms_description_app">由  提供。</string>
     <string name="perms_new_perm_prefix">新的：</string>
     <string name="permissions">存取權</string>
     <string name="links">連結</string>
@@ -95,7 +95,7 @@
     <string name="similar_apps">類似的應用程式</string>
     <string name="by_same_author">相同作者</string>
     <string name="menu_app_authors">應用程式作者</string>
-    <string name="installing" formatted="false">正在安裝 %s</string>
+    <string name="installing" formatted="false">正在安裝 </string>
     <string name="installing_details" formatted="false">正在安裝 %d / %d</string>
     <string name="installation_finished">安裝完成</string>
     <string name="installed_details">已安裝 %d 應用程式</string>
@@ -114,10 +114,10 @@
     <string name="you_might_also_like">您可能也喜歡</string>
     <string name="random_apps">隨機應用程式</string>
     <string name="last_update">最近更新</string>
-    <string name="added_on">於 %s 新增</string>
+    <string name="added_on">於  新增</string>
     <string name="name">名稱</string>
     <string name="sort_search">搜尋排序</string>
     <string name="action_uninstall">解除安裝</string>
     <string name="license">授權條款</string>
-    <string name="app_size">大小：%1$s</string>
+    <string name="app_size">大小：</string>
 </resources>

@@ -32,7 +32,7 @@
     <string name="anti_nosourcesince">Kaynak kodu artık mevcut değil, güncelleme mümkün değil.</string>
     <string name="no_permissions">Hiçbir izin kullanılmıyor.</string>
     <string name="perm_costs_money">Bu size paraya mal olabilir</string>
-    <string name="perms_description_app">%1$s tarafından sağlanmıştır.</string>
+    <string name="perms_description_app"> tarafından sağlanmıştır.</string>
     <string name="perms_new_perm_prefix">Yeni:</string>
     <string name="permissions">İzinler</string>
     <string name="links">Bağlantılar</string>
@@ -95,7 +95,7 @@
     <string name="similar_apps">Benzer uygulamalar</string>
     <string name="by_same_author">"Aynı Yazar tarafından "</string>
     <string name="menu_app_authors">Uygulama Yazarları</string>
-    <string name="installing" formatted="false">%s yükleniyor</string>
+    <string name="installing" formatted="false"> yükleniyor</string>
     <string name="installing_details" formatted="false">%d/%d yükleniyor</string>
     <string name="installation_finished">Yükleme Tamamlandı</string>
     <string name="installed_details">%d uygulama yüklendi</string>
@@ -114,10 +114,10 @@
     <string name="you_might_also_like">Bunları da beğenebilirsin</string>
     <string name="random_apps">Rastgele uygulamalar</string>
     <string name="last_update">Son güncelleme</string>
-    <string name="added_on">%s tarihinde eklendi</string>
+    <string name="added_on"> tarihinde eklendi</string>
     <string name="name">Ad</string>
     <string name="sort_search">Aramayı sırala</string>
     <string name="action_uninstall">Kaldır</string>
     <string name="license">Lisans</string>
-    <string name="app_size">Boyut: %1$s</string>
+    <string name="app_size">Boyut: </string>
 </resources>

@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Zdrojový kód už není k dispozici, aktualizace nejsou možné.</string>
     <string name="no_permissions">Žádná oprávnění nejsou použita.</string>
     <string name="perm_costs_money">Toto může stát peníze</string>
-    <string name="perms_description_app">Poskytováno %1$s.</string>
+    <string name="perms_description_app">Poskytováno .</string>
     <string name="perms_new_perm_prefix">Nová:</string>
     <string name="permissions">Oprávnění</string>
     <string name="links">Odkazy</string>
@@ -45,10 +45,10 @@
     <string name="download_pending">Čekání na spuštění stahování…</string>
     <string name="more">Více</string>
     <string name="last_update">Minulá aktualizace</string>
-    <string name="added_on">Přidáno %s</string>
+    <string name="added_on">Přidáno </string>
     <string name="name">Název</string>
     <string name="sort_search">Setřídit hledání</string>
     <string name="action_uninstall">Odinstalovat</string>
     <string name="license">Licence</string>
-    <string name="app_size">Velikost: %1$s</string>
+    <string name="app_size">Velikost: </string>
 </resources>

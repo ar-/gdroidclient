@@ -82,8 +82,8 @@ public class ApplicationBean {
      */
     public String neighbours;
 
-
     public String hash;
+    public int size;
 
 
 

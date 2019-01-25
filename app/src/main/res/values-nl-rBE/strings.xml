@@ -31,7 +31,7 @@
     <string name="anti_knownvuln">Dezen app bevat een bekend probleem in de beveiliging</string>
     <string name="no_permissions">Geen machtigingen in gebruik.</string>
     <string name="perm_costs_money">Dit kan geld kosten</string>
-    <string name="perms_description_app">Aangeboden door %1$s.</string>
+    <string name="perms_description_app">Aangeboden door .</string>
     <string name="perms_new_perm_prefix">Nieuw:</string>
     <string name="permissions">Machtigingen</string>
     <string name="links">Links</string>
@@ -95,7 +95,7 @@
     <string name="similar_apps">Gelijkaardige apps</string>
     <string name="by_same_author">Van dezelfsten ontwikkelaar</string>
     <string name="menu_app_authors">Appontwikkelaars</string>
-    <string name="installing" formatted="false">%s wordt geïnstalleerd</string>
+    <string name="installing" formatted="false"> wordt geïnstalleerd</string>
     <string name="installing_details" formatted="false">Bezig met installeren %d / %d</string>
     <string name="installation_finished">Installatie voltooid</string>
     <string name="installed_details">%d apps geïnstalleerd</string>
@@ -105,7 +105,7 @@
     <string name="pref_title_use_root">Rootprivileges gebruiken</string>
     <string name="more">Meer</string>
     <string name="last_update">Meest recente update</string>
-    <string name="added_on">Toegevoegd op %s</string>
+    <string name="added_on">Toegevoegd op </string>
     <string name="name">Naam</string>
     <string name="sort_search">Zoekresultaten sorteren</string>
     <string name="action_uninstall">Verwijderen</string>

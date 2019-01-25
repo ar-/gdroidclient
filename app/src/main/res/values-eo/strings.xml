@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">La fontkodo ne estas plu disponebla, neniuj eblaj ĝisdatigoj.</string>
     <string name="no_permissions">Neniu permeso estas uzata.</string>
     <string name="perm_costs_money">Tio ĉi povas elspezi vian monon</string>
-    <string name="perms_description_app">Liverita per %1$s.</string>
+    <string name="perms_description_app">Liverita per .</string>
     <string name="perms_new_perm_prefix">nova:</string>
     <string name="permissions">Permesoj</string>
     <string name="links">Ligiloj</string>
@@ -45,10 +45,10 @@
     <string name="download_pending">Atendado je instalado…</string>
     <string name="more">Pli</string>
     <string name="last_update">Lasta ĝisdatigo</string>
-    <string name="added_on">Aldonita je %s</string>
+    <string name="added_on">Aldonita je </string>
     <string name="name">Nomo</string>
     <string name="sort_search">Ordigi serĉon</string>
     <string name="action_uninstall">Malinstali</string>
     <string name="license">Permesilo</string>
-    <string name="app_size">Grando: %1$s</string>
+    <string name="app_size">Grando: </string>
 </resources>

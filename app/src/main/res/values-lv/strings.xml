@@ -28,9 +28,9 @@
     <string name="no">Nē</string>
     <string name="more">Vairāk</string>
     <string name="last_update">Pēdējais atjauninājums</string>
-    <string name="added_on">Pievienotas pie %s</string>
+    <string name="added_on">Pievienotas pie </string>
     <string name="name">Vārds</string>
     <string name="action_uninstall">Izdzēst</string>
     <string name="license">Licence</string>
-    <string name="app_size">Izmērs: %1$s</string>
+    <string name="app_size">Izmērs: </string>
 </resources>

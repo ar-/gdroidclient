@@ -28,7 +28,7 @@
     <string name="anti_nonfreeassets">Това приложение съдържа несвободни елементи</string>
     <string name="no_permissions">Не изисква разрешения.</string>
     <string name="perm_costs_money">Може да ви струва пари</string>
-    <string name="perms_description_app">Предоставено от %1$s.</string>
+    <string name="perms_description_app">Предоставено от .</string>
     <string name="perms_new_perm_prefix">Ново:</string>
     <string name="permissions">Разрешения</string>
     <string name="links">Връзки</string>
@@ -42,7 +42,7 @@
     <string name="download_pending">Изчакване…</string>
     <string name="more">Повече</string>
     <string name="last_update">Последна актуализация</string>
-    <string name="added_on">Добавена на %s</string>
+    <string name="added_on">Добавена на </string>
     <string name="name">Име</string>
     <string name="action_uninstall">Деинсталиране</string>
     <string name="license">Лиценз</string>

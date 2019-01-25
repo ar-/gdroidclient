@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Grunnkóðinn er ekki lengur tiltækur, engar uppfærslur eru mögulegar.</string>
     <string name="no_permissions">Engar aðgangsheimildir eru í notkun.</string>
     <string name="perm_costs_money">Þetta gæti kostað þig peninga</string>
-    <string name="perms_description_app">Útgefið af %1$s.</string>
+    <string name="perms_description_app">Útgefið af .</string>
     <string name="perms_new_perm_prefix">Nýtt:</string>
     <string name="permissions">Aðgangsheimildir</string>
     <string name="links">Tenglar</string>
@@ -45,10 +45,10 @@
     <string name="download_pending">Bíð eftir að niðurhal hefjist…</string>
     <string name="more">Meira</string>
     <string name="last_update">Síðast uppfært</string>
-    <string name="added_on">Bætti við %s</string>
+    <string name="added_on">Bætti við </string>
     <string name="name">Heiti</string>
     <string name="sort_search">Raða leit</string>
     <string name="action_uninstall">Fjarlægja</string>
     <string name="license">Notkunarleyfi</string>
-    <string name="app_size">Stærð: %1$s</string>
+    <string name="app_size">Stærð: </string>
 </resources>
