@@ -128,9 +128,10 @@ public class AppCollectionAdapter extends RecyclerView.Adapter<AppCollectionAdap
         return new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // this function is also useed for the 'top author'-tag, so remove the author from the headline
                     Intent myIntent = new Intent(activity, AppCollectionActivity.class);
                     myIntent.putExtra("collectionName", collectionName);
-                    myIntent.putExtra("headline", headline);
+                    myIntent.putExtra("headline", headline.replace("author:",""));
                     activity.startActivity(myIntent);
                 }
             };
