@@ -154,7 +154,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                final String lrn = Util.getStringResourceByName(caller, "top_author");
+                                final String lrn = "\uD83D\uDC4D " + Util.getStringResourceByName(caller, "top_author") + " \uD83D\uDC4D" ;
                                 final String collectionName = "author:" +mApp.author;
                                 final int backgroudDrawable = R.drawable.rounded_corner_tag;
                                 TextView tv = getTagTextView(lrn, collectionName, backgroudDrawable);

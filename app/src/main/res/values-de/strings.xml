@@ -99,4 +99,8 @@
     <string name="ascending">aufsteigend</string>
     <string name="descending">absteigend</string>
     <string name="action_uninstall">Entfernen</string>
+
+    <string name="menu_top_authors">Top Autoren</string>
+    <string name="top_author">Top Autor</string>
+
 </resources>
