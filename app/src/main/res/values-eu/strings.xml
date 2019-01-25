@@ -118,4 +118,6 @@
     <string name="name">Izena</string>
     <string name="sort_search">Ordenatu bilaketa</string>
     <string name="action_uninstall">Desinstalatu</string>
+    <string name="license">Lizentzia</string>
+    <string name="app_size">Neurria: %1$s</string>
 </resources>

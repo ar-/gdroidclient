@@ -49,4 +49,6 @@
     <string name="name">이름</string>
     <string name="sort_search">검색 정렬</string>
     <string name="action_uninstall">제거</string>
+    <string name="license">라이선스</string>
+    <string name="app_size">크기: %1$s</string>
 </resources>

@@ -45,4 +45,5 @@
     <string name="added_on">Amestáu\'l %s</string>
     <string name="name">Nome</string>
     <string name="action_uninstall">Desinstalar</string>
+    <string name="license">Llicencia</string>
 </resources>

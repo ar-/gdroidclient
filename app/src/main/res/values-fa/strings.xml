@@ -49,4 +49,6 @@
     <string name="name">نام</string>
     <string name="sort_search">چینش جست‌وجو</string>
     <string name="action_uninstall">حذف نصب</string>
+    <string name="license">پروانه</string>
+    <string name="app_size">اندازه: %1$s</string>
 </resources>

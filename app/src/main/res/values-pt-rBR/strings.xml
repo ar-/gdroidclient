@@ -108,4 +108,6 @@
     <string name="name">Nome</string>
 <string name="sort_search">Classificação da pesquisa</string>
     <string name="action_uninstall">Desinstalar</string>
+    <string name="license">Licença</string>
+    <string name="app_size">Tamanho: %1$s</string>
 </resources>

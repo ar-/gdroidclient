@@ -447,8 +447,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp"
-                    android:text="last update"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/last_update"
                     android:layout_gravity="center_vertical"
                     android:textStyle="bold"
                     />
@@ -457,7 +458,8 @@
                     android:id="@+id/lbl_lastupdated"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:text="2018-10-02" />
 
 
@@ -466,8 +468,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp"
-                    android:text="License"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/license"
                     android:layout_gravity="center_vertical"
                     android:textStyle="bold" />
 
@@ -475,9 +478,51 @@
                     android:id="@+id/lbl_license"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:text="MIT" />
             </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/added_on"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/lbl_added"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="2018-10-02" />
+
+
+                <Space android:minWidth="50dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/app_size"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lbl_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="MIT" />
+            </TableRow>
+
         </TableLayout>
 
 

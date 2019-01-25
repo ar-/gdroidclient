@@ -83,4 +83,6 @@
     <string name="name">Nùmene</string>
     <string name="sort_search">Òrdina sa chirca</string>
     <string name="action_uninstall">Disinstalla</string>
+    <string name="license">Litzèntzia</string>
+    <string name="app_size">Mannària: %1$s</string>
 </resources>

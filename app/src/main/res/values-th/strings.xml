@@ -43,4 +43,5 @@
     <string name="added_on">เพิ่มมาเมื่อ %s</string>
     <string name="name">ชื่อ</string>
     <string name="action_uninstall">ถอนการติดตั้ง</string>
+    <string name="license">สัญญาอนุญาต</string>
 </resources>

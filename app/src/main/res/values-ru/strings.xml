@@ -58,4 +58,6 @@
     <string name="name">Название</string>
     <string name="sort_search">Сортировка поиска</string>
     <string name="action_uninstall">Удалить</string>
+    <string name="license">Лицензия</string>
+    <string name="app_size">Размер: %1$s</string>
 </resources>

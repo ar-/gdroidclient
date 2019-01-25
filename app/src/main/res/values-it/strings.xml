@@ -49,4 +49,6 @@
     <string name="name">Nome</string>
     <string name="sort_search">Ordina ricerca</string>
     <string name="action_uninstall">Disinstalla</string>
+    <string name="license">Licenza</string>
+    <string name="app_size">Dimensione: %1$s</string>
 </resources>

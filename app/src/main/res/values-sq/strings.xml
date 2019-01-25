@@ -33,4 +33,5 @@
     <string name="name">Emri</string>
     <string name="sort_search">Rendite kërkimin</string>
     <string name="action_uninstall">Çinstalo</string>
+    <string name="license">Licenca</string>
 </resources>

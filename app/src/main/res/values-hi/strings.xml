@@ -19,4 +19,5 @@
     <string name="more">ज्यादा</string>
     <string name="last_update">अंतिम अद्यतन</string>
     <string name="added_on">%s पर जोड़ा</string>
+    <string name="license">लाइसेंस</string>
 </resources>

@@ -49,4 +49,6 @@
     <string name="name">Heiti</string>
     <string name="sort_search">Raða leit</string>
     <string name="action_uninstall">Fjarlægja</string>
+    <string name="license">Notkunarleyfi</string>
+    <string name="app_size">Stærð: %1$s</string>
 </resources>

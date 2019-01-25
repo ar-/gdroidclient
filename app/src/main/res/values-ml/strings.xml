@@ -45,4 +45,5 @@
     <string name="added_on">%s ന് ചേർത്തത്</string>
     <string name="name">പേര്</string>
     <string name="action_uninstall">ഒഴിവാക്കുക</string>
+    <string name="license">അനുമതി</string>
 </resources>

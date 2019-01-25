@@ -49,4 +49,6 @@
     <string name="name">Nom</string>
 <string name="sort_search">Ordena els resultats de la cerca</string>
     <string name="action_uninstall">Desinstal·la</string>
+    <string name="license">Llicència</string>
+    <string name="app_size">Mida: %1$s</string>
 </resources>

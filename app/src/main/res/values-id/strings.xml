@@ -49,4 +49,6 @@
     <string name="name">Nama</string>
     <string name="sort_search">Atur pencarian</string>
     <string name="action_uninstall">Copot</string>
+    <string name="license">Lisensi</string>
+    <string name="app_size">Ukuran: %1$s</string>
 </resources>

@@ -49,4 +49,6 @@
     <string name="name">Název</string>
     <string name="sort_search">Setřídit hledání</string>
     <string name="action_uninstall">Odinstalovat</string>
+    <string name="license">Licence</string>
+    <string name="app_size">Velikost: %1$s</string>
 </resources>

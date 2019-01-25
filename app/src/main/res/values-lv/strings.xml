@@ -31,4 +31,6 @@
     <string name="added_on">Pievienotas pie %s</string>
     <string name="name">Vārds</string>
     <string name="action_uninstall">Izdzēst</string>
+    <string name="license">Licence</string>
+    <string name="app_size">Izmērs: %1$s</string>
 </resources>

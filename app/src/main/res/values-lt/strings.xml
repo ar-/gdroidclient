@@ -41,4 +41,6 @@
     <string name="name">Pavadinimas</string>
     <string name="sort_search">Sugrupuoti paiešką</string>
     <string name="action_uninstall">Pašalinti</string>
+    <string name="license">Licenzija</string>
+    <string name="app_size">Dydis: %1$s</string>
 </resources>

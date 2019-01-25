@@ -49,4 +49,6 @@
     <string name="name">名称</string>
     <string name="sort_search">搜索排序</string>
     <string name="action_uninstall">卸载</string>
+    <string name="license">许可协议</string>
+    <string name="app_size">大小：%1$s</string>
 </resources>

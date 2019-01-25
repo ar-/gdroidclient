@@ -49,4 +49,6 @@
     <string name="name">Назва</string>
     <string name="sort_search">Сартаваць знойдзенае</string>
     <string name="action_uninstall">Выдаліць</string>
+    <string name="license">Ліцэнзія</string>
+    <string name="app_size">Памер: %1$s</string>
 </resources>

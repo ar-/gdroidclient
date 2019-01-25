@@ -118,4 +118,6 @@
     <string name="name">Ad</string>
     <string name="sort_search">Aramayı sırala</string>
     <string name="action_uninstall">Kaldır</string>
+    <string name="license">Lisans</string>
+    <string name="app_size">Boyut: %1$s</string>
 </resources>

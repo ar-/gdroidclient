@@ -49,4 +49,6 @@
     <string name="name">Nomo</string>
     <string name="sort_search">Ordigi serĉon</string>
     <string name="action_uninstall">Malinstali</string>
+    <string name="license">Permesilo</string>
+    <string name="app_size">Grando: %1$s</string>
 </resources>

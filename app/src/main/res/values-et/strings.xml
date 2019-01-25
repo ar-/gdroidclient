@@ -49,4 +49,6 @@
     <string name="name">Nimi</string>
     <string name="sort_search">Otsingu sortimine</string>
     <string name="action_uninstall">Eemalda</string>
+    <string name="license">Litsents</string>
+    <string name="app_size">Suurus: %1$s</string>
 </resources>

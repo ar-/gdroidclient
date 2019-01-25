@@ -49,4 +49,6 @@
     <string name="name">Όνομα</string>
     <string name="sort_search">Ταξινόμηση αναζήτησης</string>
     <string name="action_uninstall">Απεγκατάσταση</string>
+    <string name="license">Άδεια</string>
+    <string name="app_size">Μέγεθος: %1$s</string>
 </resources>

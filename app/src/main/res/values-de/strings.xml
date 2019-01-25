@@ -103,4 +103,6 @@
     <string name="menu_top_authors">Top Autoren</string>
     <string name="top_author">Top Autor</string>
 
+    <string name="license">Lizenz</string>
+    <string name="app_size">Größe: %1$s</string>
 </resources>

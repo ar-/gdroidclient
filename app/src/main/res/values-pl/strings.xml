@@ -64,4 +64,6 @@
     <string name="name">Nazwa</string>
     <string name="sort_search">Sortuj wyszukiwanie</string>
     <string name="action_uninstall">Odinstaluj</string>
+    <string name="license">Licencja</string>
+    <string name="app_size">Rozmiar: %1$s</string>
 </resources>

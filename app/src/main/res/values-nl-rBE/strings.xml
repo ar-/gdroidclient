@@ -109,4 +109,5 @@
     <string name="name">Naam</string>
     <string name="sort_search">Zoekresultaten sorteren</string>
     <string name="action_uninstall">Verwijderen</string>
+    <string name="license">Licentie</string>
 </resources>

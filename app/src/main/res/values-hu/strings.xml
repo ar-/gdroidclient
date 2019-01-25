@@ -49,4 +49,6 @@
     <string name="name">Név</string>
     <string name="sort_search">Keresési eredmények sorba rendezése</string>
     <string name="action_uninstall">Eltávolítás</string>
+    <string name="license">Licenc</string>
+    <string name="app_size">Méret: %1$s</string>
 </resources>

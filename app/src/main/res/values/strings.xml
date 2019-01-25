@@ -196,4 +196,6 @@
     <string name="ascending">ascending</string>
     <string name="descending">descending</string>
     <string name="action_uninstall">Uninstall</string>
+    <string name="license">License</string>
+    <string name="app_size">Size: %1$s</string>
 </resources>

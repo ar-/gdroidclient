@@ -43,4 +43,5 @@
     <string name="added_on">Dodano %s</string>
     <string name="name">Ime</string>
     <string name="action_uninstall">Ukloni</string>
+    <string name="license">Licenca</string>
 </resources>

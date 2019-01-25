@@ -71,4 +71,6 @@
     <string name="name">名前</string>
     <string name="sort_search">検索の並び替え</string>
     <string name="action_uninstall">アンインストール</string>
+    <string name="license">ライセンス</string>
+    <string name="app_size">サイズ: %1$s</string>
 </resources>

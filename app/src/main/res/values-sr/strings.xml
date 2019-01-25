@@ -46,4 +46,6 @@
     <string name="name">Назив</string>
     <string name="sort_search">Сортирај претрагу</string>
     <string name="action_uninstall">Уклони</string>
+    <string name="license">Лиценца</string>
+    <string name="app_size">Величина: %1$s</string>
 </resources>

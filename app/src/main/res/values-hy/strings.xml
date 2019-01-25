@@ -36,4 +36,5 @@
     <string name="added_on">Ավելացվել է %sին</string>
     <string name="name">Անուն</string>
     <string name="action_uninstall">Ապատեղադրել</string>
+    <string name="license">Արտոնագիր</string>
 </resources>

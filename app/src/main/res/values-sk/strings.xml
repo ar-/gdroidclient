@@ -45,4 +45,5 @@
     <string name="added_on">Pridané %s</string>
     <string name="name">Názov</string>
     <string name="action_uninstall">Odinštalovať</string>
+    <string name="license">Licencia</string>
 </resources>

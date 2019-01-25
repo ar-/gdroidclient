@@ -107,4 +107,6 @@
     <string name="name">Nume</string>
     <string name="sort_search">Sortare căutare</string>
     <string name="action_uninstall">Dezinstalează</string>
+    <string name="license">Licență</string>
+    <string name="app_size">Mărime: %1$s</string>
 </resources>
