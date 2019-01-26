@@ -51,7 +51,6 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 
 # Things that G-Droid can NOT do (yet) compared to F-Droid
 
-* uninstall apps
 * show or install an older version of an app
 * create a local repo, share apps with 'near' people or share apps via bluetooth
 * add other repositories than the F-Droid repo
