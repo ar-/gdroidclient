@@ -32,7 +32,7 @@
     <string name="anti_nosourcesince">O código fonte já não está disponível e não é possível a atualização.</string>
     <string name="no_permissions">Não utiliza permissões.</string>
     <string name="perm_costs_money">Pode implicar gastos</string>
-    <string name="perms_description_app">Disponibilizada por %1$s.</string>
+    <string name="perms_description_app">Disponibilizada por .</string>
     <string name="perms_new_perm_prefix">Nova:</string>
     <string name="permissions">Permissões</string>
     <string name="links">Ligações</string>
@@ -95,7 +95,7 @@
     <string name="similar_apps">Aplicações semelhantes</string>
     <string name="by_same_author">Do mesmo autor</string>
     <string name="menu_app_authors">Autores</string>
-    <string name="installing" formatted="false">A instalar %s</string>
+    <string name="installing" formatted="false">A instalar </string>
     <string name="installing_details" formatted="false">A instalar %d de %d</string>
     <string name="installation_finished">Instalação terminada</string>
     <string name="installed_details">%d aplicações instaladas</string>
@@ -105,8 +105,10 @@
     <string name="pref_title_use_root">Utilizar privilégio root</string>
     <string name="more">Mais</string>
     <string name="last_update">Última atualização</string>
-    <string name="added_on">Adicionada em %s</string>
+    <string name="added_on">Adicionada em </string>
     <string name="name">Nome</string>
     <string name="sort_search">Ordenar pesquisa</string>
     <string name="action_uninstall">Desinstalar</string>
+    <string name="license">Licença</string>
+    <string name="app_size">Tamanho: </string>
 </resources>

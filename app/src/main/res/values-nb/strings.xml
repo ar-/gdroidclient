@@ -32,7 +32,7 @@
     <string name="anti_nosourcesince">Kildekoden er ikke lenger tilgengelig, ingen oppgraderinger mulig.</string>
     <string name="no_permissions">Krever ingen tillatelser.</string>
     <string name="perm_costs_money">Dette kan koste penger</string>
-    <string name="perms_description_app">Tilbudt av %1$s.</string>
+    <string name="perms_description_app">Tilbudt av .</string>
     <string name="perms_new_perm_prefix">Ny:</string>
     <string name="permissions">Rettigheter</string>
     <string name="links">Lenker</string>
@@ -109,7 +109,7 @@
     <string name="similar_apps">Lignende programmer</string>
     <string name="by_same_author">Av samme utvikler</string>
     <string name="menu_app_authors">Programutviklere</string>
-    <string name="installing" formatted="false">Installerer %s</string>
+    <string name="installing" formatted="false">Installerer </string>
     <string name="installing_details" formatted="false">Installerer %d / %d</string>
     <string name="installation_finished">Installasjon fullført</string>
     <string name="installed_details">Installerte %d programmer</string>
@@ -128,8 +128,10 @@
     <string name="you_might_also_like">Det kan hende du også liker</string>
     <string name="random_apps">Tilfeldige programmer</string>
     <string name="last_update">Siste oppdatering</string>
-    <string name="added_on">Lagt til den %s</string>
+    <string name="added_on">Lagt til den </string>
     <string name="name">Navn</string>
 <string name="sort_search">Sorter søk</string>
     <string name="action_uninstall">Avinstaller</string>
+    <string name="license">Lisens</string>
+    <string name="app_size">Størrelse: </string>
 </resources>

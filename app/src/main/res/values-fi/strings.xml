@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Lähdekoodi ei ole enää käytettävissä, päivitykset eivät mahdollisia.</string>
     <string name="no_permissions">Käyttöoikeuksia ei tarvita.</string>
     <string name="perm_costs_money">Tämä voi olla maksullista</string>
-    <string name="perms_description_app">Toimittaja: %1$s.</string>
+    <string name="perms_description_app">Toimittaja: .</string>
     <string name="perms_new_perm_prefix">Uutta:</string>
     <string name="permissions">Käyttöoikeudet</string>
     <string name="links">Linkit</string>
@@ -45,8 +45,10 @@
     <string name="download_pending">Odotetaan latauksen alkamista…</string>
     <string name="more">Lisää</string>
     <string name="last_update">Viimeisin päivitys</string>
-    <string name="added_on">Lisätty %s</string>
+    <string name="added_on">Lisätty </string>
     <string name="name">Nimi</string>
     <string name="sort_search">Lajittele haku</string>
     <string name="action_uninstall">Poista</string>
+    <string name="license">Lisenssi</string>
+    <string name="app_size">Koko: </string>
 </resources>

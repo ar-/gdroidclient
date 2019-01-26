@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Il codice sorgente non è più disponibile, aggiornamenti non possibili.</string>
     <string name="no_permissions">Non viene usata alcuna autorizzazione.</string>
     <string name="perm_costs_money">Questo potrebbe essere a pagamento</string>
-    <string name="perms_description_app">Fornito da %1$s.</string>
+    <string name="perms_description_app">Fornito da .</string>
     <string name="perms_new_perm_prefix">Nuovo:</string>
     <string name="permissions">Autorizzazioni</string>
     <string name="links">Collegamenti</string>
@@ -45,8 +45,10 @@
     <string name="download_pending">In attesa di avviare lo scaricamento…</string>
     <string name="more">Altro</string>
     <string name="last_update">Ultimo aggiornamento</string>
-    <string name="added_on">Aggiunto il %s</string>
+    <string name="added_on">Aggiunto il </string>
     <string name="name">Nome</string>
     <string name="sort_search">Ordina ricerca</string>
     <string name="action_uninstall">Disinstalla</string>
+    <string name="license">Licenza</string>
+    <string name="app_size">Dimensione: </string>
 </resources>

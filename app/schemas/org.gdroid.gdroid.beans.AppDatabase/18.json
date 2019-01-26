@@ -1,0 +1,334 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 18,
+    "identityHash": "912363a15c413a8451d71c2dec4b4463",
+    "entities": [
+      {
+        "tableName": "ApplicationBean",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `added` INTEGER NOT NULL, `lastupdated` INTEGER NOT NULL, `name` TEXT, `summary` TEXT, `icon` TEXT, `stars` REAL NOT NULL, `desc` TEXT, `license` TEXT, `web` TEXT, `source` TEXT, `tracker` TEXT, `changelog` TEXT, `bitcoin` TEXT, `liberapay` TEXT, `marketversion` TEXT, `marketvercode` TEXT, `antifeatures` TEXT, `author` TEXT, `email` TEXT, `permissions` TEXT, `apkname` TEXT, `whatsNew` TEXT, `featureGraphic` TEXT, `screenshots` TEXT, `metricsJson` TEXT, `metriccount` INTEGER NOT NULL, `isHidden` INTEGER NOT NULL, `neighbours` TEXT, `hash` TEXT, `size` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "added",
+            "columnName": "added",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastupdated",
+            "columnName": "lastupdated",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "summary",
+            "columnName": "summary",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "icon",
+            "columnName": "icon",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "stars",
+            "columnName": "stars",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "desc",
+            "columnName": "desc",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "license",
+            "columnName": "license",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "web",
+            "columnName": "web",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tracker",
+            "columnName": "tracker",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "changelog",
+            "columnName": "changelog",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bitcoin",
+            "columnName": "bitcoin",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "liberapay",
+            "columnName": "liberapay",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "marketversion",
+            "columnName": "marketversion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "marketvercode",
+            "columnName": "marketvercode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "antifeatures",
+            "columnName": "antifeatures",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "author",
+            "columnName": "author",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "permissions",
+            "columnName": "permissions",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "apkname",
+            "columnName": "apkname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "whatsNew",
+            "columnName": "whatsNew",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "featureGraphic",
+            "columnName": "featureGraphic",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "screenshots",
+            "columnName": "screenshots",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "metricsJson",
+            "columnName": "metricsJson",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "metriccount",
+            "columnName": "metriccount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isHidden",
+            "columnName": "isHidden",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "neighbours",
+            "columnName": "neighbours",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hash",
+            "columnName": "hash",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "size",
+            "columnName": "size",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_ApplicationBean_name",
+            "unique": false,
+            "columnNames": [
+              "name"
+            ],
+            "createSql": "CREATE  INDEX `index_ApplicationBean_name` ON `${TABLE_NAME}` (`name`)"
+          },
+          {
+            "name": "index_ApplicationBean_lastupdated",
+            "unique": false,
+            "columnNames": [
+              "lastupdated"
+            ],
+            "createSql": "CREATE  INDEX `index_ApplicationBean_lastupdated` ON `${TABLE_NAME}` (`lastupdated`)"
+          },
+          {
+            "name": "index_ApplicationBean_added",
+            "unique": false,
+            "columnNames": [
+              "added"
+            ],
+            "createSql": "CREATE  INDEX `index_ApplicationBean_added` ON `${TABLE_NAME}` (`added`)"
+          },
+          {
+            "name": "index_ApplicationBean_author",
+            "unique": false,
+            "columnNames": [
+              "author"
+            ],
+            "createSql": "CREATE  INDEX `index_ApplicationBean_author` ON `${TABLE_NAME}` (`author`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "CategoryBean",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`catName` TEXT NOT NULL, `appId` TEXT NOT NULL, PRIMARY KEY(`catName`, `appId`))",
+        "fields": [
+          {
+            "fieldPath": "catName",
+            "columnName": "catName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "appId",
+            "columnName": "appId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "catName",
+            "appId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_CategoryBean_catName",
+            "unique": false,
+            "columnNames": [
+              "catName"
+            ],
+            "createSql": "CREATE  INDEX `index_CategoryBean_catName` ON `${TABLE_NAME}` (`catName`)"
+          },
+          {
+            "name": "index_CategoryBean_appId",
+            "unique": false,
+            "columnNames": [
+              "appId"
+            ],
+            "createSql": "CREATE  INDEX `index_CategoryBean_appId` ON `${TABLE_NAME}` (`appId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "TagBean",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`tagName` TEXT NOT NULL, `appId` TEXT NOT NULL, PRIMARY KEY(`tagName`, `appId`))",
+        "fields": [
+          {
+            "fieldPath": "tagName",
+            "columnName": "tagName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "appId",
+            "columnName": "appId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "tagName",
+            "appId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_TagBean_tagName",
+            "unique": false,
+            "columnNames": [
+              "tagName"
+            ],
+            "createSql": "CREATE  INDEX `index_TagBean_tagName` ON `${TABLE_NAME}` (`tagName`)"
+          },
+          {
+            "name": "index_TagBean_appId",
+            "unique": false,
+            "columnNames": [
+              "appId"
+            ],
+            "createSql": "CREATE  INDEX `index_TagBean_appId` ON `${TABLE_NAME}` (`appId`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"912363a15c413a8451d71c2dec4b4463\")"
+    ]
+  }
+}

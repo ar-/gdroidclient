@@ -28,7 +28,7 @@
     <string name="anti_nonfreeassets">མཉེན་ཆས་འདིའི་ནང་རིན་མེད་མ་ཡིན་པའི་རྒྱུ་ཆ་ཡོད།</string>
     <string name="no_permissions">ཆོག་མཆན་བེད་སྤྱོད་བྱེད་མེད།</string>
     <string name="perm_costs_money">དངུལ་སྤྲད་དགོས་སྲིད།</string>
-    <string name="perms_description_app">སྤྲད་མཁན་%1$s.</string>
+    <string name="perms_description_app">སྤྲད་མཁན་.</string>
     <string name="perms_new_perm_prefix">གསར་པ།:</string>
     <string name="permissions">ཆོག་མཆན།</string>
     <string name="links">སྦྲེལ་མཐུད་ཁག</string>
@@ -42,7 +42,8 @@
     <string name="download_pending">ཕབ་ལེན་འགོ་བཙུགས་རེ་སྒུག་བྱེད་བཞིན་པ།…</string>
     <string name="more">མང་པོ།</string>
     <string name="last_update">ཐ་མའི་གསར་བསྒྱུར།</string>
-    <string name="added_on">%sའདིའི་སྒང་ལ་ཁ་སྣོན།</string>
+    <string name="added_on">འདིའི་སྒང་ལ་ཁ་སྣོན།</string>
     <string name="name">མིང་།</string>
     <string name="action_uninstall">འགྲིག་བཅུག་ཕྱིར་འཐེན།</string>
+    <string name="license">ཆོག་མཆན་ལག་ཁྱེར།</string>
 </resources>

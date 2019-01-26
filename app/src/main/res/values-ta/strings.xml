@@ -12,6 +12,7 @@
     <string name="yes">ஆம்</string>
     <string name="no">இல்லை</string>
     <string name="more">மேலும்</string>
-    <string name="added_on">சேர்க்கப்பட்ட தேதி %s</string>
+    <string name="added_on">சேர்க்கப்பட்ட தேதி </string>
     <string name="action_uninstall">அகற்று</string>
+    <string name="license">உரிமம்</string>
 </resources>
