@@ -106,10 +106,14 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         ((TextView)findViewById(R.id.lbl_app_name)).setText(mApp.name);
         ((TextView)findViewById(R.id.lbl_app_summary)).setText(mApp.summary);
         Date lastUpdateDate = new Date(mApp.lastupdated );
+        Date adddedDate = new Date(mApp.added );
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         ((TextView)findViewById(R.id.lbl_lastupdated)).setText(sdf.format(lastUpdateDate));
+        ((TextView)findViewById(R.id.lbl_added)).setText(sdf.format(adddedDate));
         ((TextView)findViewById(R.id.lbl_app_author)).setText(mApp.author);
         ((TextView)findViewById(R.id.lbl_license)).setText(mApp.license);
+        DecimalFormat dfSize = new DecimalFormat("#.#");
+        ((TextView)findViewById(R.id.lbl_size)).setText(dfSize.format(mApp.size/1024f/1024f) + " MB");
         ((TextView)findViewById(R.id.lbl_website)).setText(mApp.web);
         ((TextView)findViewById(R.id.lbl_email)).setText(mApp.email);
 

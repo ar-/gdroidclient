@@ -30,7 +30,7 @@
     <string name="anti_nosourcesince">Der Quelltext ist nicht mehr verfügbar, keine Aktualisierungen möglich.</string>
     <string name="no_permissions">Es werden keine Berechtigungen verwendet.</string>
     <string name="perm_costs_money">Das könnte Sie Geld kosten</string>
-    <string name="perms_description_app">Bereitgestellt von %1$s.</string>
+    <string name="perms_description_app">Bereitgestellt von .</string>
     <string name="perms_new_perm_prefix">Neu:</string>
     <string name="permissions">Berechtigungen</string>
     <string name="links">Verweise</string>
@@ -92,7 +92,7 @@
     <string name="random_apps">Zufällige Apps</string>
 
     <string name="last_update">Letzte Aktualisierung</string>
-    <string name="added_on">Hinzugefügt am %s</string>
+    <string name="added_on">Hinzugefügt am </string>
     <string name="name">Name</string>
     <string name="stars">Sterne</string>
     <string name="sort_search">Suchergebnis sortieren</string>
@@ -103,4 +103,6 @@
     <string name="menu_top_authors">Top Autoren</string>
     <string name="top_author">Top Autor</string>
 
+    <string name="license">Lizenz</string>
+    <string name="app_size">Größe</string>
 </resources>

@@ -32,7 +32,7 @@
     <string name="anti_nosourcesince">ソースコードはもう利用できません。更新できません。</string>
     <string name="no_permissions">使用される権限はありません。</string>
     <string name="perm_costs_money">通信料金が発生する場合があります</string>
-    <string name="perms_description_app">%1$sによって提供されます。</string>
+    <string name="perms_description_app">によって提供されます。</string>
     <string name="perms_new_perm_prefix">新規:</string>
     <string name="permissions">権限</string>
     <string name="links">リンク</string>
@@ -60,15 +60,17 @@
     <string name="search_harder">もっと探索</string>
     <string name="search_even_harder">めっちゃ探すぞ</string>
     <string name="menu_my_apps">インストールしたアプリ</string>
-    <string name="installing" formatted="false">%s インストール中</string>
+    <string name="installing" formatted="false"> インストール中</string>
     <string name="installing_details" formatted="false">インストール中 %d / %d</string>
     <string name="installation_finished">インストールした</string>
     <string name="installed_details">%d アプリインストールした</string>
     <string name="confirmation">確認</string>
     <string name="you_might_also_like">おすすめアプリ</string>
     <string name="last_update">最終更新</string>
-    <string name="added_on">%sに追加しました</string>
+    <string name="added_on">に追加しました</string>
     <string name="name">名前</string>
     <string name="sort_search">検索の並び替え</string>
     <string name="action_uninstall">アンインストール</string>
+    <string name="license">ライセンス</string>
+    <string name="app_size">サイズ: </string>
 </resources>

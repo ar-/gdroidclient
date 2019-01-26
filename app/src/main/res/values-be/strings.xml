@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Зыходны код больш недаступны — абноўленні немагчымыя.</string>
     <string name="no_permissions">Не патрабуе дазволаў.</string>
     <string name="perm_costs_money">Гэта можа каштаваць грошай</string>
-    <string name="perms_description_app">Прадастаўлена %1$s.</string>
+    <string name="perms_description_app">Прадастаўлена .</string>
     <string name="perms_new_perm_prefix">Новыя:</string>
     <string name="permissions">Прывілеі</string>
     <string name="links">Спасылкі</string>
@@ -45,8 +45,10 @@
     <string name="download_pending">Чаканне пачатку спампоўкі…</string>
     <string name="more">Больш</string>
     <string name="last_update">Апошняе абнаўленне</string>
-    <string name="added_on">Дададзеная %s</string>
+    <string name="added_on">Дададзеная </string>
     <string name="name">Назва</string>
     <string name="sort_search">Сартаваць знойдзенае</string>
     <string name="action_uninstall">Выдаліць</string>
+    <string name="license">Ліцэнзія</string>
+    <string name="app_size">Памер: </string>
 </resources>

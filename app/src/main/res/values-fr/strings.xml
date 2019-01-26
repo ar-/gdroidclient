@@ -32,7 +32,7 @@
 
     <string name="no_permissions">Aucune autorisation n\'est utilisée.</string>
     <string name="perm_costs_money">Peut vous coûter de l\'argent</string>
-    <string name="perms_description_app">Fourni par %1$s.</string>
+    <string name="perms_description_app">Fourni par .</string>
     <string name="perms_new_perm_prefix">Nouveauté :</string>
     <string name="permissions">Autorisations</string>
     <string name="links">Liens</string>
@@ -82,8 +82,10 @@
     <string name="download_pending">Téléchargement en attente…</string>
     <string name="more">Plus</string>
     <string name="last_update">Dernière mise à jour</string>
-    <string name="added_on">Ajoutée le %s</string>
+    <string name="added_on">Ajoutée le </string>
     <string name="name">Nom</string>
     <string name="sort_search">Trier la recherche</string>
     <string name="action_uninstall">Désinstaller</string>
+    <string name="license">Licence</string>
+    <string name="app_size">Taille : </string>
 </resources>

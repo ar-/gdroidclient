@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Sumber kode ini sudah tidak tersedia, tidak akan ada pembaharuan.</string>
     <string name="no_permissions">Tidak memerlukan izin apapun.</string>
     <string name="perm_costs_money">Ini mungkin akan memakan biaya</string>
-    <string name="perms_description_app">Disediakan oleh %1$s.</string>
+    <string name="perms_description_app">Disediakan oleh .</string>
     <string name="perms_new_perm_prefix">Baru:</string>
     <string name="permissions">Perizinan</string>
     <string name="links">Tautan</string>
@@ -45,8 +45,10 @@
     <string name="download_pending">Menunggu untuk mulai unduhan…</string>
     <string name="more">Lebih banyak</string>
     <string name="last_update">Terakhir diperbarui</string>
-    <string name="added_on">Ditambahkan pada %s</string>
+    <string name="added_on">Ditambahkan pada </string>
     <string name="name">Nama</string>
     <string name="sort_search">Atur pencarian</string>
     <string name="action_uninstall">Copot</string>
+    <string name="license">Lisensi</string>
+    <string name="app_size">Ukuran: </string>
 </resources>

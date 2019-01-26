@@ -32,7 +32,7 @@
     <string name="anti_nosourcesince">Kod źródłowy nie jest już dostępny, nie są możliwe aktualizacje.</string>
     <string name="no_permissions">Brak wymaganych uprawnień.</string>
     <string name="perm_costs_money">To może Cię kosztować</string>
-    <string name="perms_description_app">Dostarczone przez %1$s.</string>
+    <string name="perms_description_app">Dostarczone przez .</string>
     <string name="perms_new_perm_prefix">Nowe:</string>
     <string name="permissions">Uprawnienia</string>
     <string name="links">Linki</string>
@@ -60,8 +60,10 @@
     <string name="download_pending">Oczekiwanie na pobieranie…</string>
     <string name="more">Więcej</string>
     <string name="last_update">Najnowsza aktualizacja</string>
-    <string name="added_on">Dodano %s</string>
+    <string name="added_on">Dodano </string>
     <string name="name">Nazwa</string>
     <string name="sort_search">Sortuj wyszukiwanie</string>
     <string name="action_uninstall">Odinstaluj</string>
+    <string name="license">Licencja</string>
+    <string name="app_size">Rozmiar: </string>
 </resources>

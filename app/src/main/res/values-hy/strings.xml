@@ -21,7 +21,7 @@
     <string name="anti_ads">Այս ափփը պարունակում է գովազդ</string>
     <string name="no_permissions">Թույլատվություններ օգտագործված չեն</string>
     <string name="perm_costs_money">Սա կարող է քեզ գումար արժենալ</string>
-    <string name="perms_description_app">Տրամադրված է %1$s։</string>
+    <string name="perms_description_app">Տրամադրված է ։</string>
     <string name="perms_new_perm_prefix">Նոր.</string>
     <string name="permissions">Թույլատվություններ</string>
     <string name="links">Հղումներ</string>
@@ -33,7 +33,8 @@
     <string name="download_pending">Սպասում եմ ներբեռնումը սկսելուն…</string>
     <string name="more">Ավել</string>
     <string name="last_update">Վերջին թարմացում</string>
-    <string name="added_on">Ավելացվել է %sին</string>
+    <string name="added_on">Ավելացվել է ին</string>
     <string name="name">Անուն</string>
     <string name="action_uninstall">Ապատեղադրել</string>
+    <string name="license">Արտոնագիր</string>
 </resources>

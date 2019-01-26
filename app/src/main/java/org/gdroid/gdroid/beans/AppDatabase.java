@@ -25,7 +25,7 @@ import android.arch.persistence.room.RoomDatabase;
 import android.arch.persistence.room.migration.Migration;
 import android.content.Context;
 
-@Database(entities = {ApplicationBean.class,CategoryBean.class,TagBean.class}, version = 17)
+@Database(entities = {ApplicationBean.class,CategoryBean.class,TagBean.class}, version = 18)
 public abstract class AppDatabase extends RoomDatabase {
     public static final String db="gdroiddb";
     public abstract SimpleApplicationDao appDao();
@@ -33,7 +33,7 @@ public abstract class AppDatabase extends RoomDatabase {
     public static final AppDatabase get(Context context)
     {
         return Room.databaseBuilder(context, AppDatabase.class, AppDatabase.db)
-                .addMigrations(MIGRATION_16_17)
+                .addMigrations(MIGRATION_16_17, MIGRATION_17_18)
                 .fallbackToDestructiveMigration()
                 .allowMainThreadQueries()
                 .build();
@@ -43,6 +43,13 @@ public abstract class AppDatabase extends RoomDatabase {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
             database.execSQL("ALTER TABLE ApplicationBean ADD COLUMN hash TEXT");
+        }
+    };
+
+    public static final Migration MIGRATION_17_18 = new Migration(17, 18) {
+        @Override
+        public void migrate(SupportSQLiteDatabase database) {
+            database.execSQL("ALTER TABLE ApplicationBean ADD COLUMN `size` INTEGER NOT NULL DEFAULT 0");
         }
     };
 
