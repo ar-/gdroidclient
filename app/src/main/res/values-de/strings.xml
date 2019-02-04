@@ -55,8 +55,8 @@
     <string name="title_notifications">Benachrichtigungen</string>
     <string name="title_categories">Kategorien</string>
     <string name="title_tags">Tags</string>
-    <string name="title_starred">favorisiert</string>
-    <string name="title_myapps">meine Apps</string>
+    <string name="title_starred">Favoriten</string>
+    <string name="title_myapps">Meine Apps</string>
     <string name="title_search">Suche</string>
     <string name="app_store">App Store</string>
     <string name="calendar">Kalender</string>
@@ -78,15 +78,15 @@
     <string name="download_all_updates">Alle Aktualisierungen herunterladen</string>
     <string name="downloading">Wird heruntergeladen …</string>
     <string name="download_pending">Auf den Start der Übertragung wird gewartet …</string>
-    <string name="pref_description_use_root">Apps automatisch installieren wenn das Geraet gerootet ist.</string>
+    <string name="pref_description_use_root">Apps automatisch installieren, wenn das Gerät gerootet ist</string>
     <string name="pref_title_use_root">Root benutzen</string>
     <string name="confirmation">Bestaetigung</string>
-    <string name="use_root">Dies ist ein gerootetes Geraet. Willst Du das benutzen um Apps automatisch zu installieren?</string>
+    <string name="use_root">"Möchtest du Apps ohne Benutzerinteraktion mit den verfügbaren Root-Rechten auf diesem Gerät  installieren\?"</string>
 
     <string name="more">Mehr</string>
     <string name="newest_apps">Neuste Apps</string>
     <string name="recently_updated">Kürzlich aktualisierte Apps</string>
-    <string name="highly_rated">Gut bewerted</string>
+    <string name="highly_rated">Gut bewertet</string>
     <string name="similar_to_my_apps">Ähnlich zu meinen Apps</string>
     <string name="you_might_also_like">Könnte dir auch gefallen</string>
     <string name="random_apps">Zufällige Apps</string>
@@ -98,6 +98,28 @@
     <string name="sort_search">Suchergebnis sortieren</string>
     <string name="ascending">aufsteigend</string>
     <string name="descending">absteigend</string>
+    <string name="action_hide">Verbergen</string>
+    <string name="action_unhide">Anzeigen</string>
+    <string name="pref_header_ratings">Bewertung mit Sternen</string>
+    <string name="pref_title_upstream_ratings">Bewertungen von GitHub, GitLab und Sourceforge</string>
+    <string name="pref_title_ratings_headline">Einfluss der jeweiligen Metrik</string>
+    <string name="pref_title_ratings_summary">Eine Zahl von 0 bis 10 der Metrik zuweisen. 10 bedeutet höchste Wichtung.</string>
+    <string name="pref_title_updated_in_2_years">neue Version innerhalb der letzten 2 Jahre</string>
+    <string name="pref_title_release_cycle_time">Typische Zeit zwischen Updates</string>
+    <string name="search_harder">weiter suchen</string>
+    <string name="search_even_harder">noch weiter suchen</string>
+    <string name="menu_my_apps">Meine Apps</string>
+    <string name="menu_hidden_apps">Verborgene Apps</string>
+    <string name="similar_apps">Ähnliche Apps</string>
+    <string name="by_same_author">Vom gleichen Author</string>
+    <string name="installing" formatted="false">Installiere %s</string>
+    <string name="installing_details" formatted="false">Installiere %d / %d</string>
+    <string name="installation_finished">Installation beendet</string>
+    <string name="installed_details">%d Apps installiert</string>
+    <string name="in_same_category">Gleiche Kategorie</string>
+    <string name="pref_title_use_list_view">Anzeige als Liste</string>
+    <string name="pref_description_use_list_view">falls möglich Apps in Liste anzeigen</string>
+    <string name="menu_app_authors">Autoren der App</string>
     <string name="action_uninstall">Entfernen</string>
 
     <string name="menu_top_authors">Top Autoren</string>

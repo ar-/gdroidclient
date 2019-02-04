@@ -117,6 +117,9 @@
     <string name="added_on">於  新增</string>
     <string name="name">名稱</string>
     <string name="sort_search">搜尋排序</string>
+    <string name="stars">星號</string>
+    <string name="ascending">遞增</string>
+    <string name="descending">遞減</string>
     <string name="action_uninstall">解除安裝</string>
     <string name="license">授權條款</string>
     <string name="app_size">大小：</string>

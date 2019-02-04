@@ -82,6 +82,9 @@
     <string name="added_on">Annanta su </string>
     <string name="name">Nùmene</string>
     <string name="sort_search">Òrdina sa chirca</string>
+    <string name="music_player">Riproduidore de mùsica</string>
+    <string name="shopping_list">Listas de sas còmporas</string>
+    <string name="todo_list">Lista de cosas de fàghere</string>
     <string name="action_uninstall">Disinstalla</string>
     <string name="license">Litzèntzia</string>
     <string name="app_size">Mannària: </string>

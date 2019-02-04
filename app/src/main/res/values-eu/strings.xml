@@ -117,6 +117,9 @@
     <string name="added_on">(e)an gehitua</string>
     <string name="name">Izena</string>
     <string name="sort_search">Ordenatu bilaketa</string>
+    <string name="stars">Izarrak</string>
+    <string name="ascending">gorantz</string>
+    <string name="descending">beherantz</string>
     <string name="action_uninstall">Desinstalatu</string>
     <string name="license">Lizentzia</string>
     <string name="app_size">Neurria: </string>
