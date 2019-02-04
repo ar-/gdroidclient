@@ -106,6 +106,17 @@
     <string name="added_on">Adăugat pe </string>
     <string name="name">Nume</string>
     <string name="sort_search">Sortare căutare</string>
+    <string name="title_dashboard">Tablou de bord</string>
+    <string name="in_same_category">Aceeași categorie</string>
+    <string name="newest_apps">Cele mai noi aplicații</string>
+    <string name="recently_updated">Actualizate recent</string>
+    <string name="highly_rated">Foarte apreciate</string>
+    <string name="similar_to_my_apps">Similare aplicațiilor mele</string>
+    <string name="you_might_also_like">S-ar putea să-ți placă</string>
+    <string name="random_apps">Aplicații aleatoare</string>
+    <string name="stars">Stele</string>
+    <string name="ascending">crescător</string>
+    <string name="descending">descrescător</string>
     <string name="action_uninstall">Dezinstalează</string>
     <string name="license">Licență</string>
     <string name="app_size">Mărime: </string>

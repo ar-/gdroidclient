@@ -117,6 +117,9 @@
     <string name="added_on"> tarihinde eklendi</string>
     <string name="name">Ad</string>
     <string name="sort_search">Aramayı sırala</string>
+    <string name="stars">Yıldızlar</string>
+    <string name="ascending">artan</string>
+    <string name="descending">azalan</string>
     <string name="action_uninstall">Kaldır</string>
     <string name="license">Lisans</string>
     <string name="app_size">Boyut: </string>
