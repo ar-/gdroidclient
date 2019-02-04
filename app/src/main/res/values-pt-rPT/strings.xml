@@ -108,4 +108,16 @@
     <string name="added_on">Adicionada em %s</string>
     <string name="name">Nome</string>
     <string name="sort_search">Ordenar pesquisa</string>
+    <string name="in_same_category">Mesma categoria</string>
+    <string name="pref_title_use_list_view">Ativar exibição em lista</string>
+    <string name="pref_description_use_list_view">Se possível, mostrar aplicações em lista</string>
+    <string name="newest_apps">Aplicações recentes</string>
+    <string name="recently_updated">Atualizadas recentemente</string>
+    <string name="highly_rated">Bem classificada</string>
+    <string name="similar_to_my_apps">Aplicações similares</string>
+    <string name="you_might_also_like">Também pode gostar</string>
+    <string name="random_apps">Aplicações aleatórias</string>
+    <string name="stars">Estrelas</string>
+    <string name="ascending">ascendente</string>
+    <string name="descending">descendente</string>
 </resources>

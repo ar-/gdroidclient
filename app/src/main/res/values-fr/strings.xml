@@ -85,4 +85,35 @@
     <string name="added_on">Ajoutée le %s</string>
     <string name="name">Nom</string>
     <string name="sort_search">Trier la recherche</string>
+    <string name="action_hide">Masquer</string>
+    <string name="action_unhide">Ne pas cacher</string>
+    <string name="pref_header_ratings">Nombre d’étoiles</string>
+    <string name="pref_title_ratings_headline">Définissez votre importance pour chaque métrique</string>
+    <string name="pref_title_ratings_summary">Attribuer un nombre de 0 à 10 à chaque métrique. Plus le nombre est élevé, plus l’importance est grande.</string>
+    <string name="pref_title_updated_in_2_years">dernière mise à jour au cours des dernières 2 années</string>
+    <string name="pref_title_release_cycle_time">Cycle de sortie</string>
+    <string name="menu_my_apps">Mes applications</string>
+    <string name="menu_hidden_apps">Applications cachées</string>
+    <string name="similar_apps">Applications similaires</string>
+    <string name="by_same_author">Par le même auteur</string>
+    <string name="menu_app_authors">Auteurs de l’application</string>
+    <string name="installing" formatted="false">Installation de %s</string>
+    <string name="installing_details" formatted="false">Installation de %d / %d</string>
+    <string name="installation_finished">Installation terminée</string>
+    <string name="confirmation">Confirmer</string>
+    <string name="use_root">Voulez-vous installer des applications sans interaction de l’utilisateur, en utilisant les privilèges root disponibles sur ce périphérique \?</string>
+    <string name="pref_description_use_root">installer et désinstaller automatiquement les applications si le périphérique est rooté</string>
+    <string name="pref_title_use_root">Utiliser les privilèges Root</string>
+    <string name="in_same_category">Même catégorie</string>
+    <string name="pref_title_use_list_view">Activer la vue en liste</string>
+    <string name="pref_description_use_list_view">afficher les applications dans une liste si possible</string>
+    <string name="newest_apps">Dernières applications</string>
+    <string name="recently_updated">Récemment mis à jour</string>
+    <string name="highly_rated">Très bien notées</string>
+    <string name="similar_to_my_apps">Similaire à mes applications</string>
+    <string name="you_might_also_like">Vous aimerez peut-être aussi</string>
+    <string name="random_apps">Applications aléatoires</string>
+    <string name="stars">Étoiles</string>
+    <string name="ascending">croissant</string>
+    <string name="descending">décroissant</string>
 </resources>

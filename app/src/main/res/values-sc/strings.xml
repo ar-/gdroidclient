@@ -82,4 +82,7 @@
     <string name="added_on">Annanta su %s</string>
     <string name="name">Nùmene</string>
     <string name="sort_search">Òrdina sa chirca</string>
+    <string name="music_player">Riproduidore de mùsica</string>
+    <string name="shopping_list">Listas de sas còmporas</string>
+    <string name="todo_list">Lista de cosas de fàghere</string>
 </resources>

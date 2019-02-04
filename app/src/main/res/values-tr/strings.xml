@@ -117,4 +117,7 @@
     <string name="added_on">%s tarihinde eklendi</string>
     <string name="name">Ad</string>
     <string name="sort_search">Aramayı sırala</string>
+    <string name="stars">Yıldızlar</string>
+    <string name="ascending">artan</string>
+    <string name="descending">azalan</string>
 </resources>
