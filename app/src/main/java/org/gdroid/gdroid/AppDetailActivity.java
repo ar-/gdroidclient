@@ -43,6 +43,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -54,15 +55,18 @@ import com.tonyodev.fetch2.Request;
 import com.tonyodev.fetch2.Status;
 import com.tonyodev.fetch2core.DownloadBlock;
 
+import org.gdroid.gdroid.Adapters.CommentAdapter;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.AuthorBean;
 import org.gdroid.gdroid.beans.CategoryBean;
+import org.gdroid.gdroid.beans.CommentBean;
 import org.gdroid.gdroid.beans.TagBean;
 import org.gdroid.gdroid.installer.Installer;
 import org.gdroid.gdroid.perm.AppDiff;
 import org.gdroid.gdroid.perm.AppSecurityPermissions;
+import org.gdroid.gdroid.tasks.DownloadCommentsTask;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -479,6 +483,30 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         {
             findViewById(R.id.grp_ratings).setVisibility(View.GONE);
         }
+
+        // fetch comments and init adapter
+        findViewById(R.id.lbl_no_comments).setVisibility(View.GONE);
+        ListView commentsListView = findViewById(R.id.listview_comments);
+        final List<CommentBean> commentBeans = new ArrayList<>();
+        final CommentAdapter commentAdapter = new CommentAdapter(this, commentBeans);
+        commentsListView.setAdapter(commentAdapter);
+        (new DownloadCommentsTask(commentBeans, new Runnable(){
+            @Override
+            public void run() {
+                commentAdapter.notifyDataSetChanged();
+                findViewById(R.id.lbl_fetching_comments).setVisibility(View.GONE);
+                findViewById(R.id.circle_fetching_comments).setVisibility(View.GONE);
+                if (commentBeans.isEmpty())
+                {
+                    findViewById(R.id.lbl_no_comments).setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    findViewById(R.id.lbl_no_comments).setVisibility(View.GONE);
+                }
+
+            }
+        })).execute("https://mastodon.technology/api/v1/timelines/tag/gdroid"+"?limit=3");
 
         // was there any action on this view in the intent?
         String action = getIntent().getStringExtra("action");

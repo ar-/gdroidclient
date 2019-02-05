@@ -198,4 +198,6 @@
     <string name="action_uninstall">Uninstall</string>
     <string name="license">License</string>
     <string name="app_size">Size</string>
+    <string name="developer">Developer</string>
+    <string name="comments">Comments</string>
 </resources>

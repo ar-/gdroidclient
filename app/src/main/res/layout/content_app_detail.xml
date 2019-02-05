@@ -525,7 +525,68 @@
 
         </TableLayout>
 
+    <LinearLayout
+        android:id="@+id/view_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/comments"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_ladd_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="write comment"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="#ffffffff"
+            />
+
+        <TextView
+            android:id="@+id/lbl_no_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="no comments available for this app" />
+
+        <TextView
+            android:id="@+id/lbl_fetching_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="fetching comments ..." />
+
+        <ProgressBar
+            android:id="@+id/circle_fetching_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:indeterminate="true" />
+
+        <org.gdroid.gdroid.widget.WrappingListView
+            android:id="@+id/listview_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        </org.gdroid.gdroid.widget.WrappingListView>
+
+    </LinearLayout>
 
         <LinearLayout
             android:id="@+id/view_developer"
@@ -542,7 +603,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/text_margin"
-                android:text="Developer"
+                android:text="@string/developer"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
