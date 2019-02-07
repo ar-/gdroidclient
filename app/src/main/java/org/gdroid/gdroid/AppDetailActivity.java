@@ -541,7 +541,6 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                                 sharingIntent.setType("text/plain");
                                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareText);
-//                                startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
                                 startActivity(sharingIntent);
                             }
                         });

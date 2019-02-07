@@ -31,7 +31,6 @@ import android.widget.TextView;
 import org.gdroid.gdroid.GlideApp;
 import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.Util;
-import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CommentBean;
 
 import java.util.List;
@@ -57,7 +56,6 @@ public class CommentAdapter extends ArrayAdapter<CommentBean> {
         TextView line2 = rowView.findViewById(R.id.lbl_secondLine);
         ImageView imageView = rowView.findViewById(R.id.icon);
         line1.setText(values.get(position).author);
-//        line2.setText(values.get(position).content);
         String content = values.get(position).content;
 
         // remove marking tags from review text

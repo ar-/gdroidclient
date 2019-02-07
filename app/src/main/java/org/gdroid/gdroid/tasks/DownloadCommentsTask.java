@@ -32,12 +32,6 @@ import java.util.List;
 public class DownloadCommentsTask extends AsyncTask<String, Void, List<CommentBean>> {
     private final Runnable runnableOnPostExecute;
     private final List<CommentBean> mCommentBeansInActivity;
-//    private final CommentAdapter mAdapter;
-
-//    public DownloadCommentsTask(List<CommentBean> commentBeansInActivity, CommentAdapter adapter) {
-////        this.mCommentBeansInActivity = commentBeansInActivity;
-////        this.mAdapter = adapter;
-//    }
 
     public DownloadCommentsTask(List<CommentBean> commentBeansInActivity, Runnable runnableOnPostExecute) {
         this.mCommentBeansInActivity = commentBeansInActivity;
@@ -63,7 +57,6 @@ public class DownloadCommentsTask extends AsyncTask<String, Void, List<CommentBe
         mCommentBeansInActivity.clear();
         mCommentBeansInActivity.addAll(result);
         runnableOnPostExecute.run();
-//        mAdapter.notifyDataSetChanged();
     }
 
     private static String getStreamContent(
@@ -77,7 +70,6 @@ public class DownloadCommentsTask extends AsyncTask<String, Void, List<CommentBe
             String line;
             while(( line = br.readLine()) != null ) {
                 sb.append( line );
-                //sb.append( '\n' );
             }
             return sb.toString();
         }
