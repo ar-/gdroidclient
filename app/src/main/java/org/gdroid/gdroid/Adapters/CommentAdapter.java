@@ -30,6 +30,8 @@ import android.widget.TextView;
 
 import org.gdroid.gdroid.GlideApp;
 import org.gdroid.gdroid.R;
+import org.gdroid.gdroid.Util;
+import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CommentBean;
 
 import java.util.List;
@@ -37,11 +39,13 @@ import java.util.List;
 public class CommentAdapter extends ArrayAdapter<CommentBean> {
     private final Context context;
     private final List<CommentBean> values;
+    private final ApplicationBean mApp;
 
-    public CommentAdapter(Context context, List<CommentBean> values) {
+    public CommentAdapter(Context context, List<CommentBean> values, ApplicationBean app) {
         super(context, -1, values);
         this.context = context;
         this.values = values;
+        this.mApp = app;
     }
 
     @Override
@@ -54,13 +58,21 @@ public class CommentAdapter extends ArrayAdapter<CommentBean> {
         ImageView imageView = rowView.findViewById(R.id.icon);
         line1.setText(values.get(position).author);
 //        line2.setText(values.get(position).content);
+        String content = values.get(position).content;
+
+        // remove marking tags from review text
+        content = content.replace("@<span>gdroid</span>","");
+        content = content.replace("@<span>gdroid@mastodon.technology</span>","");
+        content = content.replace("#<span>"+ Util.convertPackageNameToHashtag(mApp.id)+"</span>","");
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            line2.setText(Html.fromHtml(values.get(position).content, Html.FROM_HTML_MODE_COMPACT));
+            line2.setText(Html.fromHtml(content, Html.FROM_HTML_MODE_COMPACT));
         } else {
-            line2.setText(Html.fromHtml(values.get(position).content));
+            line2.setText(Html.fromHtml(content));
         }
 
-        GlideApp.with(context).load(values.get(position).avatar).override(192, 192).into(imageView);
+//        GlideApp.with(context).load(values.get(position).avatar).override(192, 192).into(imageView);
+        GlideApp.with(context).load(values.get(position).avatar).into(imageView);
 
 
 //        imageView.setImageResource(R.drawable.ic_update_green_24dp);

@@ -58,6 +58,8 @@ public class CommentsJsonParser {
     private CommentBean jsonObjToCommentBean(JSONObject toot) throws JSONException {
         CommentBean cb = new CommentBean();
         cb.author = toot.getJSONObject("account").optString("display_name","");
+        if (TextUtils.isEmpty(cb.author))
+            cb.author = toot.getJSONObject("account").optString("username","");
         cb.avatar = toot.getJSONObject("account").optString("avatar_static","");
         cb.content = toot.optString("content","");
         return cb;

@@ -488,7 +488,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         findViewById(R.id.lbl_no_comments).setVisibility(View.GONE);
         ListView commentsListView = findViewById(R.id.listview_comments);
         final List<CommentBean> commentBeans = new ArrayList<>();
-        final CommentAdapter commentAdapter = new CommentAdapter(this, commentBeans);
+        final CommentAdapter commentAdapter = new CommentAdapter(this, commentBeans,mApp);
         commentsListView.setAdapter(commentAdapter);
         (new DownloadCommentsTask(commentBeans, new Runnable(){
             @Override
@@ -506,7 +506,8 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 }
 
             }
-        })).execute("https://mastodon.technology/api/v1/timelines/tag/gdroid"+"?limit=3");
+        })).execute("https://mastodon.technology/api/v1/timelines/tag/"+Util.convertPackageNameToHashtag(mApp.id)+"?limit=3");
+            //})).execute("https://mastodon.technology/api/v1/timelines/tag/gdroid"+"?limit=3");
 
         // was there any action on this view in the intent?
         String action = getIntent().getStringExtra("action");
