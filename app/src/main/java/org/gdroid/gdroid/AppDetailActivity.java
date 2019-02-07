@@ -19,7 +19,9 @@
 package org.gdroid.gdroid;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -510,6 +512,31 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             }
         })).execute("https://mastodon.technology/api/v1/timelines/tag/"+Util.convertPackageNameToHashtag(mApp.id)+"?limit=3");
             //})).execute("https://mastodon.technology/api/v1/timelines/tag/gdroid"+"?limit=3");
+
+        // button to leave a new comment
+        final Button btnAddComment = findViewById(R.id.btn_add_comment);
+        btnAddComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog alertDialog = new AlertDialog.Builder(AppDetailActivity.this).create();
+                alertDialog.setMessage(getResources().getString(R.string.how_to_rate));
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getResources().getString(R.string.ok),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                String shareText = "@gdroid@mastodon.technology ";
+                                shareText+= "#"+Util.convertPackageNameToHashtag(mApp.id);
+                                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                                sharingIntent.setType("text/plain");
+                                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareText);
+//                                startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
+                                startActivity(sharingIntent);
+                            }
+                        });
+                alertDialog.show();
+
+            }
+        });
 
         // was there any action on this view in the intent?
         String action = getIntent().getStringExtra("action");

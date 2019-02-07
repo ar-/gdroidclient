@@ -123,4 +123,5 @@
     <string name="action_uninstall">解除安裝</string>
     <string name="license">授權條款</string>
     <string name="app_size">大小：</string>
+    <string name="ok">確定</string>
 </resources>

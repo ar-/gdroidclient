@@ -203,4 +203,6 @@
     <string name="write_comment">write comment</string>
     <string name="no_comments_available">no comments available for this app</string>
     <string name="fetching_comments">fetching comments …</string>
+    <string name="ok">OK</string>
+    <string name="how_to_rate">Please share this with a Mastodon app, add your comment but don\'t change the hashtag.</string>
 </resources>

@@ -51,4 +51,5 @@
     <string name="action_uninstall">卸载</string>
     <string name="license">许可协议</string>
     <string name="app_size">大小：</string>
+    <string name="ok">确定</string>
 </resources>

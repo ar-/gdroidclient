@@ -60,4 +60,5 @@
     <string name="action_uninstall">Удалить</string>
     <string name="license">Лицензия</string>
     <string name="app_size">Размер: </string>
+    <string name="ok">ОК</string>
 </resources>

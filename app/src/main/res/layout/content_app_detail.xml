@@ -563,7 +563,7 @@
                 />
 
             <Button
-                android:id="@+id/btn_ladd_comment"
+                android:id="@+id/btn_add_comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/write_comment"

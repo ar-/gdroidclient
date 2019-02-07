@@ -37,4 +37,5 @@
     <string name="name">Անուն</string>
     <string name="action_uninstall">Ապատեղադրել</string>
     <string name="license">Արտոնագիր</string>
+    <string name="ok">Լավ</string>
 </resources>

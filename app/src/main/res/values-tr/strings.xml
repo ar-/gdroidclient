@@ -123,4 +123,5 @@
     <string name="action_uninstall">Kaldır</string>
     <string name="license">Lisans</string>
     <string name="app_size">Boyut: </string>
+    <string name="ok">Tamam</string>
 </resources>

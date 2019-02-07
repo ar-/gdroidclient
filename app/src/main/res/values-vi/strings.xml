@@ -49,4 +49,5 @@
     <string name="sort_search">Sắp xếp kết quả tìm kiếm</string>
     <string name="action_uninstall">Gỡ bỏ</string>
     <string name="license">Giấy phép</string>
+    <string name="ok">OK</string>
 </resources>

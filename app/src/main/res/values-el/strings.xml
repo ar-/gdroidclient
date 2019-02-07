@@ -123,4 +123,5 @@
     <string name="action_uninstall">Απεγκατάσταση</string>
     <string name="license">Άδεια</string>
     <string name="app_size">Μέγεθος: </string>
+    <string name="ok">Εντάξει</string>
 </resources>

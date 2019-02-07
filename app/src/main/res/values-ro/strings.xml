@@ -120,4 +120,5 @@
     <string name="action_uninstall">Dezinstalează</string>
     <string name="license">Licență</string>
     <string name="app_size">Mărime: </string>
+    <string name="ok">Aplică</string>
 </resources>

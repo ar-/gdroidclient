@@ -43,4 +43,5 @@
     <string name="action_uninstall">Pašalinti</string>
     <string name="license">Licenzija</string>
     <string name="app_size">Dydis: </string>
+    <string name="ok">Gerai</string>
 </resources>

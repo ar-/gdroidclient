@@ -122,4 +122,5 @@
     <string name="descending">aflopend</string>
     <string name="action_uninstall">Verwijderen</string>
     <string name="license">Licentie</string>
+    <string name="ok">Oké</string>
 </resources>

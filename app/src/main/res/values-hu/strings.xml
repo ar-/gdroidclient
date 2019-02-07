@@ -51,4 +51,5 @@
     <string name="action_uninstall">Eltávolítás</string>
     <string name="license">Licenc</string>
     <string name="app_size">Méret: </string>
+    <string name="ok">OK</string>
 </resources>
