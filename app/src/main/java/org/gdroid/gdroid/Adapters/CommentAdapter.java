@@ -39,13 +39,13 @@ import java.util.List;
 public class CommentAdapter extends ArrayAdapter<CommentBean> {
     private final Context context;
     private final List<CommentBean> values;
-    private final ApplicationBean mApp;
+    private final String appId;
 
-    public CommentAdapter(Context context, List<CommentBean> values, ApplicationBean app) {
+    public CommentAdapter(Context context, List<CommentBean> values, String appId) {
         super(context, -1, values);
         this.context = context;
         this.values = values;
-        this.mApp = app;
+        this.appId = appId;
     }
 
     @Override
@@ -63,7 +63,7 @@ public class CommentAdapter extends ArrayAdapter<CommentBean> {
         // remove marking tags from review text
         content = content.replace("@<span>gdroid</span>","");
         content = content.replace("@<span>gdroid@mastodon.technology</span>","");
-        content = content.replace("#<span>"+ Util.convertPackageNameToHashtag(mApp.id)+"</span>","");
+        content = content.replace("#<span>"+ Util.convertPackageNameToHashtag(appId)+"</span>","");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             line2.setText(Html.fromHtml(content, Html.FROM_HTML_MODE_COMPACT));

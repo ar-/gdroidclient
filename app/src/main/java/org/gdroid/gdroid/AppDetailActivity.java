@@ -491,7 +491,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         findViewById(R.id.btn_more_comments).setVisibility(View.GONE);
         ListView commentsListView = findViewById(R.id.listview_comments);
         final List<CommentBean> commentBeans = new ArrayList<>();
-        final CommentAdapter commentAdapter = new CommentAdapter(this, commentBeans,mApp);
+        final CommentAdapter commentAdapter = new CommentAdapter(this, commentBeans,mApp.id);
         commentsListView.setAdapter(commentAdapter);
         (new DownloadCommentsTask(commentBeans, new Runnable(){
             @Override
@@ -506,12 +506,24 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 else
                 {
                     findViewById(R.id.lbl_no_comments).setVisibility(View.GONE);
-                    findViewById(R.id.btn_more_comments).setVisibility(View.VISIBLE);
+                    if (commentBeans.size()>=3)
+                        findViewById(R.id.btn_more_comments).setVisibility(View.VISIBLE);
                 }
 
             }
         })).execute("https://mastodon.technology/api/v1/timelines/tag/"+Util.convertPackageNameToHashtag(mApp.id)+"?limit=3");
             //})).execute("https://mastodon.technology/api/v1/timelines/tag/gdroid"+"?limit=3");
+
+        // button to load more comments
+        final Button btnMoreComments = findViewById(R.id.btn_more_comments);
+        btnMoreComments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(caller, CommentListActivity.class);
+                myIntent.putExtra("appId", mApp.id);
+                caller.startActivity(myIntent);
+            }
+        });
 
         // button to leave a new comment
         final Button btnAddComment = findViewById(R.id.btn_add_comment);
