@@ -545,30 +545,49 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btn_ladd_comment"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="write comment"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="right"
-            android:backgroundTint="@color/colorPrimary"
-            android:textColor="#ffffffff"
-            />
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/btn_more_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#ffffffff"
+                />
+
+            <Button
+                android:id="@+id/btn_ladd_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/write_comment"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#ffffffff"
+                />
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/lbl_no_comments"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="no comments available for this app" />
+            android:text="@string/no_comments_available" />
 
         <TextView
             android:id="@+id/lbl_fetching_comments"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="fetching comments ..." />
+            android:text="@string/fetching_comments" />
 
         <ProgressBar
             android:id="@+id/circle_fetching_comments"

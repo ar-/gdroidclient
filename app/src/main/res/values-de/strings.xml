@@ -127,4 +127,10 @@
 
     <string name="license">Lizenz</string>
     <string name="app_size">Größe</string>
+    <string name="developer">Entwickler</string>
+    <string name="comments">Kommentare</string>
+    <string name="write_comment">Kommentar schreiben</string>
+    <string name="no_comments_available">Keine Kommentare für diese App vorhanden</string>
+    <string name="fetching_comments">Lade Kommentare …</string>
+
 </resources>

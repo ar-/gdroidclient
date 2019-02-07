@@ -486,6 +486,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
 
         // fetch comments and init adapter
         findViewById(R.id.lbl_no_comments).setVisibility(View.GONE);
+        findViewById(R.id.btn_more_comments).setVisibility(View.GONE);
         ListView commentsListView = findViewById(R.id.listview_comments);
         final List<CommentBean> commentBeans = new ArrayList<>();
         final CommentAdapter commentAdapter = new CommentAdapter(this, commentBeans,mApp);
@@ -503,6 +504,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 else
                 {
                     findViewById(R.id.lbl_no_comments).setVisibility(View.GONE);
+                    findViewById(R.id.btn_more_comments).setVisibility(View.VISIBLE);
                 }
 
             }

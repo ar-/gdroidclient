@@ -200,4 +200,7 @@
     <string name="app_size">Size</string>
     <string name="developer">Developer</string>
     <string name="comments">Comments</string>
+    <string name="write_comment">write comment</string>
+    <string name="no_comments_available">no comments available for this app</string>
+    <string name="fetching_comments">fetching comments …</string>
 </resources>
