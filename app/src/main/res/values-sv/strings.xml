@@ -51,4 +51,5 @@
     <string name="action_uninstall">Avinstallera</string>
     <string name="license">Licens</string>
     <string name="app_size">Storlek: </string>
+    <string name="ok">OK</string>
 </resources>

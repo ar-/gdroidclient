@@ -18,6 +18,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 
 # Additional features compared to F-Droid
 
+* shows reviews and comments for apps
 * star ratings of apps (up to 5 stars) - machine generated metrics
 * shows the star upstream star ratings (github, gitlab, sourceforge)
 * implements more metrics based on open source data (like average release cycle time) to generate a star-ratings
@@ -122,3 +123,8 @@ If you are technically experienced you can look at this file: https://gitlab.com
 ## Where do the similar apps come from?
 
 They are calculated by this R script https://gitlab.com/frief/app_match.r made by Frieder Ferlemann. Please check it out and feel free to contribute to it, if you'd like to improve the similar apps.
+
+## Where do the comments for each app come from?
+
+They are mastodon toots, mentioning the G-Droid account and using a special hashtag for each app. The hashtag is the package name of the app where dots are being replaced by underscores. In G-Droid you can simply use the button 'write comment' to create a comment-toot for an app.
+

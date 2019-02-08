@@ -46,4 +46,5 @@
     <string name="name">Име</string>
     <string name="action_uninstall">Деинсталиране</string>
     <string name="license">Лиценз</string>
+    <string name="ok">Добре</string>
 </resources>

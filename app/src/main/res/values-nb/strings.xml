@@ -137,4 +137,5 @@
     <string name="action_uninstall">Avinstaller</string>
     <string name="license">Lisens</string>
     <string name="app_size">Størrelse: </string>
+    <string name="ok">OK</string>
 </resources>

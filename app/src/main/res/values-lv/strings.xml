@@ -33,4 +33,5 @@
     <string name="action_uninstall">Izdzēst</string>
     <string name="license">Licence</string>
     <string name="app_size">Izmērs: </string>
+    <string name="ok">OK</string>
 </resources>

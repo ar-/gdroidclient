@@ -525,7 +525,89 @@
 
         </TableLayout>
 
+    <LinearLayout
+        android:id="@+id/view_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/comments"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/btn_more_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#ffffffff"
+                />
+
+            <Button
+                android:id="@+id/btn_add_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/write_comment"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#ffffffff"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/lbl_no_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/no_comments_available" />
+
+        <TextView
+            android:id="@+id/lbl_fetching_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/fetching_comments" />
+
+        <ProgressBar
+            android:id="@+id/circle_fetching_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:indeterminate="true" />
+
+        <org.gdroid.gdroid.widget.WrappingListView
+            android:id="@+id/listview_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            >
+
+        </org.gdroid.gdroid.widget.WrappingListView>
+
+    </LinearLayout>
 
         <LinearLayout
             android:id="@+id/view_developer"
@@ -542,7 +624,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/text_margin"
-                android:text="Developer"
+                android:text="@string/developer"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 

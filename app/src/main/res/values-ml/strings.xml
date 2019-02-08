@@ -46,4 +46,5 @@
     <string name="name">പേര്</string>
     <string name="action_uninstall">ഒഴിവാക്കുക</string>
     <string name="license">അനുമതി</string>
+    <string name="ok">ശരി</string>
 </resources>

@@ -44,4 +44,5 @@
     <string name="name">Ime</string>
     <string name="action_uninstall">Ukloni</string>
     <string name="license">Licenca</string>
+    <string name="ok">OK</string>
 </resources>

@@ -51,4 +51,5 @@
     <string name="action_uninstall">제거</string>
     <string name="license">라이선스</string>
     <string name="app_size">크기: </string>
+    <string name="ok">확인</string>
 </resources>

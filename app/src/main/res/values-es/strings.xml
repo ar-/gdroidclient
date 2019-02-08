@@ -107,4 +107,5 @@
     <string name="action_uninstall">Desinstalar</string>
     <string name="license">Licencia</string>
     <string name="app_size">Tamaño: </string>
+    <string name="ok">Aceptar</string>
 </resources>

@@ -80,6 +80,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.gdroid.gdroid.MainActivity" />
         </activity>
+        <activity
+            android:name=".CommentListActivity"
+            android:label="@string/comments"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.gdroid.gdroid.MainActivity" />
+        </activity>
         <activity android:name=".installer.baria.ManualAppInstallActivity" />
     </application>
 

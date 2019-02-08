@@ -73,4 +73,5 @@
     <string name="action_uninstall">アンインストール</string>
     <string name="license">ライセンス</string>
     <string name="app_size">サイズ: </string>
+    <string name="ok">OK</string>
 </resources>

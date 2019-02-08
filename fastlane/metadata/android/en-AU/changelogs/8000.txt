@@ -1,0 +1,29 @@
+0.8.0
+  * added ability to add reviews and comments to an app using Mastodon toots with a hashtag for each app
+
+0.7.3
+  * translation updates (thanks to all weblate contributors)
+
+0.7.2
+  * added top authors to the app detail view and to the main menu on the left
+  * added APK size to app detail view
+
+0.7.1
+  * added number-picker in the settings to set the weight of the metrics
+  * added uninstall button and functionality (root and non-root)
+  * bugfix: don't offer to install installed apps
+  * bugfix: don't offer to star starred apps
+  * updated fetch2 to 2.3.6
+  * bugfix: don't clear user database when updating the app to a new version
+  * removed redundant strings from xml file
+  * bugfix: text size on apll list view was too small
+  * added more translation from weblate (thanks guys!)
+
+0.7.0
+  * added scroll-down-to-update
+  * added different sortings for lists of apps
+  * show apps similar to installed apps
+  * show apps the user might also like
+  * made search results responsive
+  * updated weblate translations (thanks mates)
+

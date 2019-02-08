@@ -51,4 +51,5 @@
     <string name="action_uninstall">Disinstalla</string>
     <string name="license">Licenza</string>
     <string name="app_size">Dimensione: </string>
+    <string name="ok">OK</string>
 </resources>

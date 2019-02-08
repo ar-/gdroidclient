@@ -46,4 +46,5 @@
     <string name="name">Nome</string>
     <string name="action_uninstall">Desinstalar</string>
     <string name="license">Llicencia</string>
+    <string name="ok">Aceutar</string>
 </resources>

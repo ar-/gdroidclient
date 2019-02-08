@@ -49,4 +49,5 @@
     <string name="sort_search">Sorter søgning</string>
     <string name="action_uninstall">Afinstaller</string>
     <string name="license">Licens</string>
+    <string name="ok">OK</string>
 </resources>

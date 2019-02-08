@@ -571,4 +571,9 @@ public class Util {
         }
     }
 
+    public static String convertPackageNameToHashtag(String pkgName)
+    {
+        return pkgName.replace('.', '_');
+    }
+
 }
