@@ -81,6 +81,27 @@ While you can also send merge requests or patches modifying the translations, We
 
 [![Translation status](https://hosted.weblate.org/widgets/g-droid/-/translations/multi-auto.svg)](https://hosted.weblate.org/engage/g-droid/?utm_source=widget)
 
+# Explanation of metrics
+
+## Stars on Github/Gitlab/Sourceforge:
+
+The stars are being counted for all apps from the same source and then normalised twice. The day of the first release (on F-Droid) will be taken as creation date of the app.
+The number of stars will be divided by the number of days the app exists. So the new metric is 'stars per day'.
+The stars per day are being compared to all other apps. The top 20% of all app will receive 100% for this metric. All apps below that will get a smaller percentage.
+
+All apps in the top 20% of the list will receive 100% for this metric. All other apps will scale down from there on.
+
+## Up-To-Date Percentage:
+
+Indicates the up-to-date-ness in percent. An Update just 1 day ago is 100% and the last update over a year ago is 0%. This is being calculated
+by the timestamp that F-Droid picks the update up, which can sometimes be a few days after the actual release.
+
+## Release Cycle:
+
+The release cycle is only shown for apps with at least 3 releases. It will show the average time between these releases to supply an indication on how active the app is being developed.
+
+The app had a release on 27/11/18, then on 17/12/18 (20 days later) and then on 29/01/19 (43 days). The average release cycle is 31.5 (=(20+43)/2) days so it will be shown as 32 days.
+
 # FAQ
 
 ## Where do the ratings come from?
