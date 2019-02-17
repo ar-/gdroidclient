@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Sareak</string>
-
     <string name="category_Development">Garapena</string>
     <string name="category_Games">Jolasak</string>
     <string name="category_Graphics">Grafikoak</string>
@@ -114,7 +112,7 @@
     <string name="you_might_also_like">Agian gustuko duzu ere</string>
     <string name="random_apps">Ausazko aplikazioak</string>
     <string name="last_update">Azken eguneraketa</string>
-    <string name="added_on">%s(e)an gehitua</string>
+    <string name="added_on">Gehitze data %s</string>
     <string name="name">Izena</string>
     <string name="sort_search">Ordenatu bilaketa</string>
     <string name="stars">Izarrak</string>
