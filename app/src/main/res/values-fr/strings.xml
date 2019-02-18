@@ -116,6 +116,10 @@
     <string name="stars">Étoiles</string>
     <string name="ascending">croissant</string>
     <string name="descending">décroissant</string>
+    <string name="pref_title_upstream_ratings">Évaluations provenant de GitHub, GitLab et SourceForge</string>
+    <string name="search_harder">Chercher encore</string>
+    <string name="search_even_harder">Chercher plus encore</string>
+    <string name="installed_details">%d applications installées</string>
     <string name="action_uninstall">Désinstaller</string>
     <string name="license">Licence</string>
     <string name="app_size">Taille : </string>
