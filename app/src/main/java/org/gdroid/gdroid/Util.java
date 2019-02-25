@@ -18,6 +18,7 @@
 
 package org.gdroid.gdroid;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -26,6 +27,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.v4.os.ConfigurationCompat;
 import android.support.v4.os.LocaleListCompat;
@@ -574,6 +576,19 @@ public class Util {
     public static String convertPackageNameToHashtag(String pkgName)
     {
         return pkgName.replace('.', '_');
+    }
+
+
+    /**
+     * The most preferred ABI is the first element in the list.
+     */
+    @TargetApi(21)
+    @SuppressWarnings("deprecation")
+    public static String[] getAbis() {
+        if (Build.VERSION.SDK_INT >= 21) {
+            return Build.SUPPORTED_ABIS;
+        }
+        return new String[]{Build.CPU_ABI, Build.CPU_ABI2};
     }
 
 }
