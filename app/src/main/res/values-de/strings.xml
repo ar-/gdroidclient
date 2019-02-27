@@ -137,4 +137,6 @@
 
     <string name="download_error">Herunterladen fehlgeschlagen!</string>
     <string name="saving_app_details">Anwendungsdetails werden gespeichert</string>
+    <string name="could_not_download_gdroid_metadata">G-Droid Metadaten konnten nicht geladen werden</string>
+
 </resources>

@@ -49,7 +49,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
     public static final String TAG = "DownloadJaredJsonTask";
 
     protected Context mContext;
-    private final MainActivity mMainActivity;
+    protected final MainActivity mMainActivity;
     private final AppCollectionAdapter mAppCollectionAdapter;
     protected final String mJsonFileInJar;
 
@@ -80,7 +80,6 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                                 .setAction("Action", null).show();
                     }
                 });
-
 
                 // update the local DB
                 AppDatabase db = AppDatabase.get(mContext);
@@ -116,7 +115,6 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                 }
                 db.appDao().insertTags(allTagMappings);
 
-
                 db.close();
 
                 // update the UI after DB has been updated (on the first 2 tabs)
@@ -128,6 +126,14 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
 
                 return abl;
             } catch (IOException e) {
+                // error downloading fdroid repo
+                mMainActivity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Snackbar.make(mMainActivity.findViewById(R.id.fab), R.string.download_error, Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                });
                 return abl;
             }
         }

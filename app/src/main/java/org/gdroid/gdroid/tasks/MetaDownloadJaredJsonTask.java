@@ -18,7 +18,11 @@
 
 package org.gdroid.gdroid.tasks;
 
+import android.app.Activity;
+import android.widget.Toast;
+
 import org.gdroid.gdroid.MainActivity;
+import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
 import java.io.IOException;
@@ -42,6 +46,19 @@ public class MetaDownloadJaredJsonTask extends DownloadJaredJsonTask {
 
         } catch (IOException e) {
             e.printStackTrace();
+            try {
+                mMainActivity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(mContext, R.string.could_not_download_gdroid_metadata,
+                                Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
+            catch (Throwable t)
+            {
+                t.printStackTrace();
+            }
         }
 
         return abl;
