@@ -122,4 +122,5 @@
     <string name="license">Lisans</string>
     <string name="app_size">Boyut: </string>
     <string name="ok">Tamam</string>
+    <string name="download_error">İndirme başarısız!</string>
 </resources>

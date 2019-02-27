@@ -52,4 +52,5 @@
     <string name="license">پروانه</string>
     <string name="app_size">اندازه: </string>
     <string name="ok">قبول</string>
+    <string name="download_error">بارگیری ناموفق!</string>
 </resources>

@@ -52,4 +52,5 @@
     <string name="license">Notkunarleyfi</string>
     <string name="app_size">Stærð: </string>
     <string name="ok">Í lagi</string>
+    <string name="download_error">Niðurhal tókst ekki!</string>
 </resources>

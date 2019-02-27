@@ -45,4 +45,5 @@
     <string name="action_uninstall">ถอนการติดตั้ง</string>
     <string name="license">สัญญาอนุญาต</string>
     <string name="ok">ตกลง</string>
+    <string name="download_error">การดาวน์โหลดล้มเหลว</string>
 </resources>

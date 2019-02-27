@@ -135,4 +135,5 @@
     <string name="ok">OK</string>
     <string name="how_to_rate">Bitte mit einer Mastodon app teilen, das Kommentar schreiben und den Hashtag nicht ändern.</string>
 
+    <string name="download_error">Herunterladen fehlgeschlagen!</string>
 </resources>

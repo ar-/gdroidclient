@@ -47,4 +47,5 @@
     <string name="action_uninstall">卸載</string>
     <string name="license">特許條款</string>
     <string name="ok">明白</string>
+    <string name="download_error">下載失敗！</string>
 </resources>

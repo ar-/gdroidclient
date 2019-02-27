@@ -46,7 +46,7 @@ android {
     sourceSets {
         androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
     }
-
+    useLibrary 'org.apache.http.legacy'
 }
 
 dependencies {

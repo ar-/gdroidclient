@@ -50,4 +50,5 @@
     <string name="action_uninstall">Gỡ bỏ</string>
     <string name="license">Giấy phép</string>
     <string name="ok">OK</string>
+    <string name="download_error">Tải về thất bại!</string>
 </resources>

@@ -52,4 +52,5 @@
     <string name="license">Lisensi</string>
     <string name="app_size">Ukuran: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Unduhan gagal!</string>
 </resources>

@@ -46,4 +46,5 @@
     <string name="action_uninstall">ျဖဳတ္မည္</string>
     <string name="license">လိုင္စင္</string>
     <string name="ok">အိုေက</string>
+    <string name="download_error">ေဒါင္းလုတ္မေအာင္ျမင္ပါ</string>
 </resources>

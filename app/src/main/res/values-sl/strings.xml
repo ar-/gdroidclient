@@ -50,4 +50,5 @@
     <string name="action_uninstall">Odstrani</string>
     <string name="license">Licenca</string>
     <string name="ok">V redu</string>
+    <string name="download_error">Prenos ni uspel!</string>
 </resources>

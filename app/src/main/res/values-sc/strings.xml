@@ -89,4 +89,5 @@
     <string name="license">Litzèntzia</string>
     <string name="app_size">Mannària: </string>
     <string name="ok">AB</string>
+    <string name="download_error">Iscarrigamentu fallidu!</string>
 </resources>

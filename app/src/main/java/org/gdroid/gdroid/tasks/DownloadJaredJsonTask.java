@@ -68,7 +68,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
             try {
                 abl = loadJsonFromNetwork(urls[0], mJsonFileInJar, new AppBeanJsonParser());
 
-                // TODO doesnt work. one asyc task can't call annother async task; solution: move the other task to onPostUpdate or simpler: move all functionality out of task classes!!
+                // doesnt work correctly. one asyc task can't call annother async task; solution: moved all functionality out of task classes
                 final MetaDownloadJaredJsonTask task = new MetaDownloadJaredJsonTask(mMainActivity, "metadata/gdroid.json", abl);
                 task.doInBackground("https://gitlab.com/gdroid/gdroiddata/raw/master/metadata/gdroid.jar");
 

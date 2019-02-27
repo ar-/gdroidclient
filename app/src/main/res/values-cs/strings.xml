@@ -52,4 +52,5 @@
     <string name="license">Licence</string>
     <string name="app_size">Velikost: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Stahování se nezdařilo!</string>
 </resources>

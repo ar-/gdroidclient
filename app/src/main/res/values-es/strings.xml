@@ -108,4 +108,5 @@
     <string name="license">Licencia</string>
     <string name="app_size">Tamaño: </string>
     <string name="ok">Aceptar</string>
+    <string name="download_error">¡Descarga fallida!</string>
 </resources>

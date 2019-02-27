@@ -47,4 +47,5 @@
     <string name="action_uninstall">འགྲིག་བཅུག་ཕྱིར་འཐེན།</string>
     <string name="license">ཆོག་མཆན་ལག་ཁྱེར།</string>
     <string name="ok">འགྲིག</string>
+    <string name="download_error">ཕབ་ལེན་བྱེད་ཐུབ་མ་སོང་།!</string>
 </resources>

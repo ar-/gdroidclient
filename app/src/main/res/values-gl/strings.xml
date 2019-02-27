@@ -50,4 +50,5 @@
     <string name="action_uninstall">Desinstalar</string>
     <string name="license">Licenza</string>
     <string name="ok">Aceptar</string>
+    <string name="download_error">Descarga falida!</string>
 </resources>

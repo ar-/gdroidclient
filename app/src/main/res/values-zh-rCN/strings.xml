@@ -52,4 +52,5 @@
     <string name="license">许可协议</string>
     <string name="app_size">大小：</string>
     <string name="ok">确定</string>
+    <string name="download_error">下载失败！</string>
 </resources>

@@ -122,4 +122,5 @@
     <string name="license">Lizentzia</string>
     <string name="app_size">Neurria: </string>
     <string name="ok">Ados</string>
+    <string name="download_error">Deskargak huts egin du!</string>
 </resources>

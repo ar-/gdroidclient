@@ -47,4 +47,5 @@
     <string name="action_uninstall">Desinstalar</string>
     <string name="license">Llicencia</string>
     <string name="ok">Aceutar</string>
+    <string name="download_error">¡Falló la descarga!</string>
 </resources>

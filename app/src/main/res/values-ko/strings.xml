@@ -52,4 +52,5 @@
     <string name="license">라이선스</string>
     <string name="app_size">크기: </string>
     <string name="ok">확인</string>
+    <string name="download_error">다운로드 실패됨!</string>
 </resources>

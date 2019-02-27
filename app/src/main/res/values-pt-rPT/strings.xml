@@ -124,4 +124,5 @@
     <string name="license">Licença</string>
     <string name="app_size">Tamanho: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Falha ao descarregar!</string>
 </resources>

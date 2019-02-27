@@ -205,4 +205,5 @@
     <string name="fetching_comments">fetching comments …</string>
     <string name="ok">OK</string>
     <string name="how_to_rate">Please share this with a Mastodon app, add your comment but don\'t change the hashtag.</string>
+    <string name="download_error">Download failed!</string>
 </resources>

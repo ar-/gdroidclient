@@ -52,4 +52,5 @@
     <string name="license">Ліцензія</string>
     <string name="app_size">Розмір: </string>
     <string name="ok">ОК</string>
+    <string name="download_error">Помилка завантаження!</string>
 </resources>

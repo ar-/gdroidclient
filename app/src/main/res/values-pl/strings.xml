@@ -80,4 +80,5 @@
     <string name="license">Licencja</string>
     <string name="app_size">Rozmiar: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Pobieranie nie powiodło się!</string>
 </resources>

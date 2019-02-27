@@ -138,4 +138,5 @@
     <string name="license">Lisens</string>
     <string name="app_size">Størrelse: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Nedlasting mislyktes!</string>
 </resources>

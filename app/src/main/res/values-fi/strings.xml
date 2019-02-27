@@ -52,4 +52,5 @@
     <string name="license">Lisenssi</string>
     <string name="app_size">Koko: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Lataaminen epäonnistui!</string>
 </resources>

@@ -52,4 +52,5 @@
     <string name="license">Licens</string>
     <string name="app_size">Storlek: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Hämtning misslyckades!</string>
 </resources>

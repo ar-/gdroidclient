@@ -18,9 +18,12 @@
 
 package org.gdroid.gdroid;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.util.Log;
+import android.widget.TableRow;
 
 import com.tonyodev.fetch2.Download;
 import com.tonyodev.fetch2.EnqueueAction;
@@ -49,7 +52,10 @@ import okhttp3.OkHttpClient;
 public class AppDownloader {
 
     public static final String TAG = "AppDownloader";
-    public static final String repoBaseUrl = "https://f-droid.org/repo/";
+//    public static final String repoBaseUrl = "https://f-droid.org/repo/";
+    public static final String repoBaseUrl = "https://fdroid.tetaneutral.net/fdroid/repo/";
+//    public static final String repoBaseUrl = "https://bubu1.eu/fdroid/repo/";
+
 
     public static Request download(final Context context, ApplicationBean mApp, final boolean install) {
         final Fetch fetch = getFetch(context);
@@ -133,6 +139,16 @@ public class AppDownloader {
 
             @Override
             public void onError(Download download, Error error, Throwable throwable) {
+                try
+                {
+                    Snackbar.make(((Activity)context).findViewById(R.id.img_icon), R.string.download_error,
+                            Snackbar.LENGTH_LONG)
+                            .show();
+                }
+                catch (Throwable t)
+                {
+                    // nothing. likely user is on another activity already
+                }
 
             }
 

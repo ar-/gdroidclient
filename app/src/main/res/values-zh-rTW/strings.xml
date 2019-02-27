@@ -124,4 +124,5 @@
     <string name="license">授權條款</string>
     <string name="app_size">大小：</string>
     <string name="ok">確定</string>
+    <string name="download_error">下載失敗！</string>
 </resources>

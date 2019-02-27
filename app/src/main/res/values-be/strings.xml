@@ -52,4 +52,5 @@
     <string name="license">Ліцэнзія</string>
     <string name="app_size">Памер: </string>
     <string name="ok">Добра</string>
+    <string name="download_error">Не атрымалася спампаваць!</string>
 </resources>

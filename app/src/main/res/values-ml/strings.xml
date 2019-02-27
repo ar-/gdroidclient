@@ -47,4 +47,5 @@
     <string name="action_uninstall">ഒഴിവാക്കുക</string>
     <string name="license">അനുമതി</string>
     <string name="ok">ശരി</string>
+    <string name="download_error">ഡൗൺലോഡ് പരാജയപ്പെട്ടു!</string>
 </resources>
