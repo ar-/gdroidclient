@@ -53,4 +53,5 @@
     <string name="app_size">大小：</string>
     <string name="ok">确定</string>
     <string name="download_error">下载失败！</string>
+    <string name="saving_app_details">正在保存应用详细信息</string>
 </resources>

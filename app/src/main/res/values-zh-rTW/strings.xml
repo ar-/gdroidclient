@@ -125,4 +125,5 @@
     <string name="app_size">大小：</string>
     <string name="ok">確定</string>
     <string name="download_error">下載失敗！</string>
+    <string name="saving_app_details">正在儲存應用程式的詳細資料</string>
 </resources>

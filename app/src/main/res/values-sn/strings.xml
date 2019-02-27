@@ -47,4 +47,5 @@
     <string name="license">Rezenisi</string>
     <string name="ok">OK</string>
     <string name="download_error">Kututunura hakuna kubudirira</string>
+    <string name="saving_app_details">Kuchengeta zvizere zveapplication</string>
 </resources>

@@ -125,4 +125,5 @@
     <string name="app_size">Μέγεθος: </string>
     <string name="ok">Εντάξει</string>
     <string name="download_error">Ανεπιτυχής λήψη!</string>
+    <string name="saving_app_details">Αποθήκευση λεπτομερειών εφαρμογής</string>
 </resources>

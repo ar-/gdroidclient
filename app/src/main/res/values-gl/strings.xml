@@ -51,4 +51,5 @@
     <string name="license">Licenza</string>
     <string name="ok">Aceptar</string>
     <string name="download_error">Descarga falida!</string>
+    <string name="saving_app_details">Gardando os detalles das apps</string>
 </resources>

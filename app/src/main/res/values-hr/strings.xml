@@ -46,4 +46,5 @@
     <string name="license">Licenca</string>
     <string name="ok">OK</string>
     <string name="download_error">Preuzimanje neuspješno</string>
+    <string name="saving_app_details">Spremam detalje aplikacija</string>
 </resources>

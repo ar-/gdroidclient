@@ -53,4 +53,5 @@
     <string name="app_size">Storlek: </string>
     <string name="ok">OK</string>
     <string name="download_error">Hämtning misslyckades!</string>
+    <string name="saving_app_details">Sparar app-detaljer</string>
 </resources>

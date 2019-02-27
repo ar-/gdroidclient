@@ -119,7 +119,7 @@
     <string name="in_same_category">Gleiche Kategorie</string>
     <string name="pref_title_use_list_view">Anzeige als Liste</string>
     <string name="pref_description_use_list_view">falls möglich Apps in Liste anzeigen</string>
-    <string name="menu_app_authors">Autoren der App</string>
+    <string name="menu_app_authors">Autoren der Apps</string>
     <string name="action_uninstall">Entfernen</string>
 
     <string name="menu_top_authors">Top Autoren</string>
@@ -136,4 +136,5 @@
     <string name="how_to_rate">Bitte mit einer Mastodon app teilen, das Kommentar schreiben und den Hashtag nicht ändern.</string>
 
     <string name="download_error">Herunterladen fehlgeschlagen!</string>
+    <string name="saving_app_details">Anwendungsdetails werden gespeichert</string>
 </resources>

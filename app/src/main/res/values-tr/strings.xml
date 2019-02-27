@@ -123,4 +123,5 @@
     <string name="app_size">Boyut: </string>
     <string name="ok">Tamam</string>
     <string name="download_error">İndirme başarısız!</string>
+    <string name="saving_app_details">Uygulama ayrıntıları kaydediliyor</string>
 </resources>

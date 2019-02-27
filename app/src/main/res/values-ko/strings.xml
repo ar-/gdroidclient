@@ -53,4 +53,5 @@
     <string name="app_size">크기: </string>
     <string name="ok">확인</string>
     <string name="download_error">다운로드 실패됨!</string>
+    <string name="saving_app_details">앱 자세한 사항 저장 중</string>
 </resources>

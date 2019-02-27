@@ -81,4 +81,5 @@
     <string name="app_size">Rozmiar: </string>
     <string name="ok">OK</string>
     <string name="download_error">Pobieranie nie powiodło się!</string>
+    <string name="saving_app_details">Zapisywanie danych aplikacji</string>
 </resources>

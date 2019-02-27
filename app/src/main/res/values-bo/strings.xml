@@ -48,4 +48,5 @@
     <string name="license">ཆོག་མཆན་ལག་ཁྱེར།</string>
     <string name="ok">འགྲིག</string>
     <string name="download_error">ཕབ་ལེན་བྱེད་ཐུབ་མ་སོང་།!</string>
+    <string name="saving_app_details">མཉེས་ཆས་ཞིབ་ཕྲ་ཉར་ཚགས་བྱེད་བཞིན་པ།</string>
 </resources>

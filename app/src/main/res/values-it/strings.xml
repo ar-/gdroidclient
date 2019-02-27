@@ -53,4 +53,5 @@
     <string name="app_size">Dimensione: </string>
     <string name="ok">OK</string>
     <string name="download_error">Scaricamento fallito!</string>
+    <string name="saving_app_details">Salvataggio dettagli applicazione</string>
 </resources>

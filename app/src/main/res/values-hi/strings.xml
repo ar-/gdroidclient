@@ -22,4 +22,5 @@
     <string name="license">लाइसेंस</string>
     <string name="ok">ठीक</string>
     <string name="download_error">डाउनलोड असफल</string>
+    <string name="saving_app_details">आवेदन विवरण सम्हाल रखना</string>
 </resources>

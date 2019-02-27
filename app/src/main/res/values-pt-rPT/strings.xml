@@ -125,4 +125,5 @@
     <string name="app_size">Tamanho: </string>
     <string name="ok">OK</string>
     <string name="download_error">Falha ao descarregar!</string>
+    <string name="saving_app_details">A guardar detalhes das aplicações</string>
 </resources>

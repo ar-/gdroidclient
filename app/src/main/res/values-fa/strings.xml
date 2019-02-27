@@ -53,4 +53,5 @@
     <string name="app_size">اندازه: </string>
     <string name="ok">قبول</string>
     <string name="download_error">بارگیری ناموفق!</string>
+    <string name="saving_app_details">در حال ذخیرهٔ جزییات برنامه</string>
 </resources>

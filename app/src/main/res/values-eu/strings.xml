@@ -123,4 +123,5 @@
     <string name="app_size">Neurria: </string>
     <string name="ok">Ados</string>
     <string name="download_error">Deskargak huts egin du!</string>
+    <string name="saving_app_details">Aplikazioaren xehetasunak gordetzen</string>
 </resources>

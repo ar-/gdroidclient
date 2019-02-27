@@ -48,4 +48,5 @@
     <string name="license">Лиценз</string>
     <string name="ok">Добре</string>
     <string name="download_error">Грешка при изтегляне!</string>
+    <string name="saving_app_details">Записване на данните за приложенията</string>
 </resources>

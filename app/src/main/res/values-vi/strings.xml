@@ -51,4 +51,5 @@
     <string name="license">Giấy phép</string>
     <string name="ok">OK</string>
     <string name="download_error">Tải về thất bại!</string>
+    <string name="saving_app_details">Đang lưu thông tin ứng dụng</string>
 </resources>

@@ -68,7 +68,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
             try {
                 abl = loadJsonFromNetwork(urls[0], mJsonFileInJar, new AppBeanJsonParser());
 
-                // doesnt work correctly. one asyc task can't call annother async task; solution: moved all functionality out of task classes
+                // doesn't work correctly. one asyc task can't call annother async task; solution: moved all functionality out of task classes
                 final MetaDownloadJaredJsonTask task = new MetaDownloadJaredJsonTask(mMainActivity, "metadata/gdroid.json", abl);
                 task.doInBackground("https://gitlab.com/gdroid/gdroiddata/raw/master/metadata/gdroid.jar");
 
@@ -76,7 +76,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                 mMainActivity.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Snackbar.make(mMainActivity.findViewById(R.id.fab), "Storing data locally...", Snackbar.LENGTH_LONG)
+                        Snackbar.make(mMainActivity.findViewById(R.id.fab), R.string.saving_app_details, Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     }
                 });
@@ -87,17 +87,6 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
 
                 // insert all apps at once
                 db.appDao().insertApplicationBeans(abl);
-
-//                for (ApplicationBean ab :
-//                        abl) {
-//                    try {
-//                        db.appDao().insertApplicationBeans(abl);
-//                    }
-//                    catch (Throwable t)
-//                    {
-//                        Log.e("Parser","error inserting "+ab.id , t);
-//                    }
-//                }
 
                 // categories
                 final List<CategoryBean> allCategoryMappings = new ArrayList<>();
@@ -140,7 +129,6 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                 return abl;
             } catch (IOException e) {
                 return abl;
-//            return getResources().getString(R.string.connection_error);
             }
         }
 
