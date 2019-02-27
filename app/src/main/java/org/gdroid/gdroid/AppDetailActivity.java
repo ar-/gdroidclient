@@ -454,9 +454,11 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 }
 
                 // update-cycle
-                final double norm_ac = metrics.optDouble("avg_update_frequency");
+                double norm_ac = metrics.optDouble("avg_update_frequency");
                 if (! Double.isNaN(norm_ac))
                 {
+                    if (norm_ac<1.0)
+                        norm_ac=1.0;
                     ((TextView)findViewById(R.id.lbl_rating_releasecycle_1)).setText(df.format(norm_ac) + " days");
                 }
                 else
