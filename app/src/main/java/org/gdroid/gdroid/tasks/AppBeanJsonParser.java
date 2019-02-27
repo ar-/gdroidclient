@@ -22,6 +22,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
 
+import org.gdroid.gdroid.CompatibilityChecker;
 import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.json.JSONArray;
@@ -36,9 +37,13 @@ import java.util.Map;
 import java.util.Set;
 
 class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
+
+    private CompatibilityChecker compatibilityChecker;
+
     @Override
     public List<ApplicationBean> getApplicationBeansFromJson(String jsonString) {
         List<ApplicationBean> entries = null;
+        compatibilityChecker = new CompatibilityChecker();
         try {
             JSONObject jo=new JSONObject(jsonString);
             final JSONArray apps = jo.getJSONArray("apps");
@@ -57,6 +62,8 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
                     Log.e("Parser","ignoring "+app.optString("name", "unknown app"));
                     e.printStackTrace();
                     //skip
+                } catch (IncompatibleAppException e) {
+                    Log.e("Parser","ignoring "+app.optString("name", "unknown app") + " as incompatible");
                 }
             }
 
@@ -67,7 +74,7 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
     }
 
 
-    private ApplicationBean jSonObjToAppBean(JSONObject app, JSONObject packages) throws JSONException {
+    private ApplicationBean jSonObjToAppBean(JSONObject app, JSONObject packages) throws JSONException, IncompatibleAppException {
         ApplicationBean ab = new ApplicationBean();
         ab.id = app.getString("packageName");
         ab.added = app.getLong("added");
@@ -107,7 +114,9 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
         // apk name from packages
         // package must be found, otherwise app is useless, as it wont have an APK
         final JSONArray appPackages = packages.getJSONArray(ab.id);
-        final JSONObject latestPackage = appPackages.getJSONObject(0);
+        final JSONObject latestPackage = getLatestPackage(appPackages);
+        if (latestPackage == null)
+            throw new IncompatibleAppException();
         ab.apkname = latestPackage.getString("apkName");
 
         // marketversion and marketvercode are sometimes wrong in the json, like a higher version that doesn't exist yet
@@ -155,7 +164,7 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
 
         }
 
-        //repair missing data
+        //repair missing data (author is being repaired here, since it is a searchable field)
         if (TextUtils.isEmpty(ab.author))
         {
             if (! TextUtils.isEmpty(ab.source))
@@ -186,6 +195,31 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
         }
 
         return ab;
+    }
+
+    private JSONObject getLatestPackage(JSONArray appPackages) throws JSONException {
+        // in most cases the first package is fine
+        // if there are different build for different architectures (Firefox, Document reader, ...) we have to find the correct one
+        for (int j=0 ; j<appPackages.length() ; j++)
+        {
+            JSONObject lp = appPackages.getJSONObject(j);
+            int minsdk = lp.optInt("minSdkVersion",Integer.MIN_VALUE);
+            int maxsdk = lp.optInt("maxSdkVersion",Integer.MAX_VALUE);
+            JSONArray nativecode = lp.optJSONArray("nativecode");
+            ArrayList<String> availableNativeCodes=null;
+            if (nativecode != null)
+            {
+                availableNativeCodes = new ArrayList<>(nativecode.length());
+                for (int i = 0; i < nativecode.length(); i++)
+                    availableNativeCodes.add(nativecode.getString(i));
+            }
+            final boolean isCompatible = compatibilityChecker.isCompatible(minsdk, maxsdk, availableNativeCodes);
+            if (isCompatible)
+            {
+                return lp;
+            }
+        }
+        return null;
     }
 
     /**
@@ -251,5 +285,6 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
     }
 
 
-
+    private class IncompatibleAppException extends Throwable {
+    }
 }

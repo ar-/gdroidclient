@@ -21,8 +21,6 @@ package org.gdroid.gdroid;
 import android.os.Build;
 import android.support.annotation.Nullable;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 // Call getIncompatibleReasons(apk) on an instance of this class to
@@ -35,7 +33,7 @@ public class CompatibilityChecker {
         cpuAbis = Util.getAbis();
     }
 
-    private boolean compatibleApi(@Nullable String[] nativecode) {
+    private boolean compatibleApi(@Nullable List<String> nativecode) {
         if (nativecode == null) {
             return true;
         }
@@ -50,20 +48,13 @@ public class CompatibilityChecker {
         return false;
     }
 
-    public List<String> getIncompatibleReasons(int minSdkVersion2, int maxSdkVersion, String[] nativecode) {
-
-        List<String> incompatibleReasons = new ArrayList<>();
-
-        if (Build.VERSION.SDK_INT < minSdkVersion2) {
-            incompatibleReasons.add("minsdk_or_later");
+    public boolean isCompatible(int minSdkVersion, int maxSdkVersion, List<String> nativecode) {
+        if (Build.VERSION.SDK_INT < minSdkVersion) {
+            return false;
         } else if (Build.VERSION.SDK_INT > maxSdkVersion) {
-            incompatibleReasons.add("up_to_maxsdk");
+            return false;
         }
 
-        if (!compatibleApi(nativecode)) {
-            Collections.addAll(incompatibleReasons, nativecode);
-        }
-
-        return incompatibleReasons;
+        return compatibleApi(nativecode);
     }
 }
