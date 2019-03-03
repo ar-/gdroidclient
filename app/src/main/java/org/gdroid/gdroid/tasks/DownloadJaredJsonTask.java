@@ -121,6 +121,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                     // load all app beans from DB to attach metadata to it
                     AppDatabase db = AppDatabase.get(mContext);
                     abl = db.appDao().getAllApplicationBeansList();
+                    db.close();
                 }
             }
 
