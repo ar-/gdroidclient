@@ -80,4 +80,6 @@
     <string name="crash_dialog_title">G-Droidがクラッシュしました</string>
     <string name="crash_dialog_text">アプリを強制的に停止させる予期しないエラーが発生しました。問題を修正するために、詳細をメールで送信してもよろしいですか？</string>
     <string name="crash_dialog_comment_prompt">ここに追加の情報やコメントを追加できます:</string>
+    <string name="pref_title_send_crash_reports">クラッシュレポート送信の確認</string>
+    <string name="pref_summary_send_crash_reports_summary">クラッシュに関するデータを収集して開発者に送信します</string>
 </resources>

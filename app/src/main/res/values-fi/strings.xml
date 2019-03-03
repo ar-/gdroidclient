@@ -58,4 +58,6 @@
     <string name="crash_dialog_title">G-Droid on kaatunut</string>
     <string name="crash_dialog_text">Tapahtui odottamaton virhe ja sovellus kaatui. Haluatko lähettää tapahtuneen yksityiskohdat sähköpostilla ja auttaa kehittäjiä korjaamaan ongelman?</string>
     <string name="crash_dialog_comment_prompt">Voit lisätä lisätietoja ja kommentteja tähän:</string>
+    <string name="pref_title_send_crash_reports">Pyydä lähettämään kaatumisraportteja</string>
+    <string name="pref_summary_send_crash_reports_summary">Kerää tietoja kaatumisista ja pyydä lähettämään ne kehittäjälle</string>
 </resources>

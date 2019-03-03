@@ -37,4 +37,6 @@
     <string name="cancel">Atcelt</string>
     <string name="crash_dialog_title">G-Droid beidza strādāt</string>
     <string name="crash_dialog_text">Nezināma kļūme lika aplikācijai beigt strādāt. Vai jūs vēlētos nosūtīt e-pastu ar informāciju, lai palīdzētu salabot šo problēmu?</string>
+    <string name="pref_title_send_crash_reports">Pavēlēt, lai nosūta avārijas pārskatus</string>
+    <string name="pref_summary_send_crash_reports_summary">Apkopot datus par avārijām un paprasīt, lai tos nosūta izstrādātājam</string>
 </resources>

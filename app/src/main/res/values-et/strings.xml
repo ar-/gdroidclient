@@ -58,4 +58,6 @@
     <string name="crash_dialog_title">G-Droidi tabas krahh</string>
     <string name="crash_dialog_text">Ootamatu viga põhjustas rakenduse krahhi.</string>
     <string name="crash_dialog_comment_prompt">Sa saad lisada täiendavat informatsiooni ja kommentaare siia:</string>
+    <string name="pref_title_send_crash_reports">Küsi luba krahhiraportite saatmiseks</string>
+    <string name="pref_summary_send_crash_reports_summary">Kogu krahhide andmeid  ja küsi luba nende saatmiseks arendajale</string>
 </resources>

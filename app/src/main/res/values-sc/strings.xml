@@ -95,4 +95,6 @@
     <string name="crash_dialog_title">G-Droid s\'est serradu</string>
     <string name="crash_dialog_text">Un’errore imprevistu</string>
     <string name="crash_dialog_comment_prompt">Podes annanghere àteras informatziones e cummentos inoghe:</string>
+    <string name="pref_title_send_crash_reports">Pedi de imbiare raportos a pitzu de sos arrestos anòmalos</string>
+    <string name="pref_summary_send_crash_reports_summary">Boddi datos a pitzu de sos arrestos anòmalos e imbia·los a sos isvilupadores</string>
 </resources>

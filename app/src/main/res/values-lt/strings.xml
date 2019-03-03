@@ -47,4 +47,5 @@
     <string name="cancel">Atsisakyti</string>
     <string name="crash_dialog_title">G-Droid sugriuvo</string>
     <string name="crash_dialog_text">Įvyko netikėta klaida, dėl kurios sustojo programėlė. Ar norėtumėte el. paštu atsiųsti klaidos detales, kad padėtumėme išsprestį tai?</string>
+    <string name="pref_summary_send_crash_reports_summary">Rinkti info apie klaidas ir siųsti jas kūrėjui</string>
 </resources>

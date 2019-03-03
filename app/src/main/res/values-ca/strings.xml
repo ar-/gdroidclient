@@ -58,4 +58,6 @@
     <string name="crash_dialog_title">L\'G-Droid ha fallat</string>
     <string name="crash_dialog_text">L\'aplicació s\'ha aturat degut a un error inesperat. Voleu enviar els detalls per correu-e per ajudar a resoldre la incidència?</string>
     <string name="crash_dialog_comment_prompt">Podeu afegir informació addicional i comentaris aquí:</string>
+    <string name="pref_title_send_crash_reports">Enviar informes de fallida</string>
+    <string name="pref_summary_send_crash_reports_summary">Recopil·lar informació de les fallides i preguntar per enviar-la al desenvolupador</string>
 </resources>

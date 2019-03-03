@@ -129,4 +129,6 @@
     <string name="crash_dialog_title">O G-Droid travou</string>
     <string name="crash_dialog_text">Ocorreu um erro inesperado,</string>
     <string name="crash_dialog_comment_prompt">Você pode adicionar informações extras e comentários aqui:</string>
+    <string name="pref_title_send_crash_reports">Perguntar antes de enviar relatórios de falhas</string>
+    <string name="pref_summary_send_crash_reports_summary">Reunir dados sobre falhas e enviar pro desenvolvedor</string>
 </resources>

@@ -130,4 +130,6 @@
     <string name="crash_dialog_title">G-Droid s\'est arrêté de manière inattendue</string>
     <string name="crash_dialog_text">Une erreur inattendue s’est produite</string>
     <string name="crash_dialog_comment_prompt">Vous pouvez ajouter des informations supplémentaires :</string>
+    <string name="pref_title_send_crash_reports">Demander avant d\'envoyer les rapports de plantage</string>
+    <string name="pref_summary_send_crash_reports_summary">Recueillir des informations de débogage et proposer de les envoyer à l\'équipe de développement</string>
 </resources>

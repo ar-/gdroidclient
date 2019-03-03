@@ -29,8 +29,15 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 
 
+/**
+ * Handles shared preferences for G-Droid, looking after the names of
+ * preferences, default values and caching. Needs to be setup in the GDroidApp
+ * (using {@link Pref#setup(android.content.Context)} before it gets
+ * accessed via the {@link org.gdroid.gdroid.Pref#get()}
+ * singleton method.
+ */
 public class Pref {
-    private static final String TAG = "Preferences";
+    private static final String TAG = "Pref";
 
     private final SharedPreferences preferences;
     private static Pref instance;
@@ -41,13 +48,13 @@ public class Pref {
     }
 
     public static final String PREF_AUTO_DOWNLOAD_INSTALL_UPDATES = "updateAutoDownload";
-    public static final String PREF_PROMPT_TO_SEND_CRASH_REPORTS = "promptToSendCrashReports";
+    public static final String PREF_SEND_CRASH_REPORTS = "send_crash_reports";
     private static final String PREF_LAST_UPDATE_CHECK = "lastUpdateCheck";
 
     private static final int DEFAULT_LAST_UPDATE_CHECK = -1;
 
-    public boolean promptToSendCrashReports() {
-        return preferences.getBoolean(PREF_PROMPT_TO_SEND_CRASH_REPORTS, true);
+    public boolean sendCrashReports() {
+        return preferences.getBoolean(PREF_SEND_CRASH_REPORTS, true);
     }
 
     public long getLastUpdateCheck() {

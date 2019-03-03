@@ -58,4 +58,6 @@
     <string name="crash_dialog_title">G-Droid разбіўся</string>
     <string name="crash_dialog_text">Неспадзяваная памылка прывяла да аварыйнага спынення праграмы.</string>
     <string name="crash_dialog_comment_prompt">Можаце ўвясці дадатковую інфармацыю і каментары тут:</string>
+    <string name="pref_title_send_crash_reports">Запыт на адпраўку справаздач аб хібах</string>
+    <string name="pref_summary_send_crash_reports_summary">Збор інфармацыі ад падзеннях і запыт на адпраўку яе распрацоўшчыку</string>
 </resources>

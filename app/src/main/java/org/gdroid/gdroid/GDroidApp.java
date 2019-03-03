@@ -63,12 +63,12 @@ public class GDroidApp extends Application {
         Pref.setup(this);
         Pref preferences = Pref.get();
 
-//        if (preferences.promptToSendCrashReports()) {
+        if (preferences.sendCrashReports()) {
             ACRA.init(this);
             if (isAcraProcess()) {
                 return;
             }
-//        }
+        }
 
 //        UpdateService.schedule(getApplicationContext());
 

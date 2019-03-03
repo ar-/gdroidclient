@@ -144,4 +144,6 @@
     <string name="crash_dialog_title">G-Droid har kræsjet</string>
     <string name="crash_dialog_text">Uventet feil forårsaket</string>
     <string name="crash_dialog_comment_prompt">Du kan legge til ekstra informasjon og kommentarer her:</string>
+    <string name="pref_title_send_crash_reports">Forespør krasjrapportinnsending.</string>
+    <string name="pref_summary_send_crash_reports_summary">Henter data om krasj, og sender dem til utvikleren</string>
 </resources>

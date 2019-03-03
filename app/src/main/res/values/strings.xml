@@ -215,4 +215,6 @@
         details to help fix the issue?
     </string>
     <string name="crash_dialog_comment_prompt">You can add extra information and comments here:</string>
+    <string name="pref_title_send_crash_reports">Prompt to send crash reports</string>
+    <string name="pref_summary_send_crash_reports_summary">Gather data about crashes and ask to send them to the developer</string>
 </resources>

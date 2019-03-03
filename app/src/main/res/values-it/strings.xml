@@ -58,4 +58,6 @@
     <string name="crash_dialog_title">G-Droid si è bloccato</string>
     <string name="crash_dialog_text">Un errore inaspettato ha provocato il blocco dell\'applicazione. Vuoi inviare una e-mail con i dettagli per aiutarci a risolvere il problema?</string>
     <string name="crash_dialog_comment_prompt">Puoi aggiungere altre informazioni e commenti qui:</string>
+    <string name="pref_title_send_crash_reports">Chiedi per inviare segnalazioni di errori</string>
+    <string name="pref_summary_send_crash_reports_summary">Raccogli dati sugli errori e chiedi di inviarli allo sviluppatore</string>
 </resources>
