@@ -206,16 +206,16 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         Log.i(TAG,"download complete");
 
         // run another async task to update the etags
-//        AsyncTask.execute(new Runnable() {
-//            @Override
-//            public void run() {
-//                String etagFDroid = HttpHeadChecker.getEtag(mUrl);
-//                String etagGDroid = HttpHeadChecker.getEtag(GDROID_JAR_URL);
-//                Log.e(TAG,"etag fdroid : "+etagFDroid + " etag gdroid : "+etagGDroid  );
-//                Pref.get().setLastFDroidEtag(etagFDroid);
-//                Pref.get().setLastGDroidEtag(etagGDroid);
-//            }
-//        });
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                String etagFDroid = HttpHeadChecker.getEtag(mUrl);
+                String etagGDroid = HttpHeadChecker.getEtag(GDROID_JAR_URL);
+                Log.e(TAG,"etag fdroid : "+etagFDroid + " etag gdroid : "+etagGDroid  );
+                Pref.get().setLastFDroidEtag(etagFDroid);
+                Pref.get().setLastGDroidEtag(etagGDroid);
+            }
+        });
     }
 
     protected List<ApplicationBean> loadJsonFromNetwork(String urlString, String jsonFileInJar, JsonParser parser) throws IOException {
@@ -271,14 +271,14 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
     private boolean isRepoDataCurrent() {
         String etagOnline = HttpHeadChecker.getEtag(mUrl);
         String etagLocal = Pref.get().getLastFDroidEtag();
-        Pref.get().setLastFDroidEtag(etagOnline);
+//        Pref.get().setLastFDroidEtag(etagOnline); // don't update here, becasue download can still fail (or be aborted0 later
         return etagLocal.equals(etagOnline);
     }
 
     private boolean isMetaDataCurrent() {
         String etagOnline = HttpHeadChecker.getEtag(GDROID_JAR_URL);
         String etagLocal = Pref.get().getLastGDroidEtag();
-        Pref.get().setLastGDroidEtag(etagOnline);
+//        Pref.get().setLastGDroidEtag(etagOnline); // don't update here, becasue download can still fail (or be aborted0 later
         return etagLocal.equals(etagOnline);
     }
 }
