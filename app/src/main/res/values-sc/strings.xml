@@ -92,7 +92,7 @@
     <string name="download_error">Iscarrigamentu fallidu!</string>
     <string name="saving_app_details">Sarvende sas minujas de sas aplicatziones</string>
     <string name="cancel">Annudda</string>
-    <string name="crash_dialog_title">F-Droid s\'est serradu</string>
+    <string name="crash_dialog_title">G-Droid s\'est serradu</string>
     <string name="crash_dialog_text">Un’errore imprevistu</string>
     <string name="crash_dialog_comment_prompt">Podes annanghere àteras informatziones e cummentos inoghe:</string>
 </resources>

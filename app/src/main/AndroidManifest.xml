@@ -91,6 +91,12 @@
                 android:value="org.gdroid.gdroid.MainActivity" />
         </activity>
         <activity android:name=".installer.baria.ManualAppInstallActivity" />
+        <activity
+            android:name=".acra.CrashReportActivity"
+            android:process=":error_report"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"/>
     </application>
 
 </manifest>

@@ -127,7 +127,7 @@
     <string name="download_error">Falha ao descarregar!</string>
     <string name="saving_app_details">A guardar detalhes das aplicações</string>
     <string name="cancel">Cancelar</string>
-    <string name="crash_dialog_title">O F-Droid terminou abruptamente</string>
+    <string name="crash_dialog_title">O G-Droid terminou abruptamente</string>
     <string name="crash_dialog_text">Ocorreu um erro inesperado e a aplicação foi encerrada. Gostaria de nos enviar um e-mail com os detalhes do erro?</string>
     <string name="crash_dialog_comment_prompt">Pode adicionar algumas informações e comentários aqui:</string>
 </resources>

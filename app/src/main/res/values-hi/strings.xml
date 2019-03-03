@@ -24,7 +24,7 @@
     <string name="download_error">डाउनलोड असफल</string>
     <string name="saving_app_details">आवेदन विवरण सम्हाल रखना</string>
     <string name="cancel">रद्द करे</string>
-    <string name="crash_dialog_title">F-Droid दुर्घटनाग्रस्त हुआ है</string>
+    <string name="crash_dialog_title">G-Droid दुर्घटनाग्रस्त हुआ है</string>
     <string name="crash_dialog_text">अप्रत्याशित भूल के कारन एप्लीकेशन बंद हो गयी है| क्या ईमेल भेज कर इस समाधान को</string>
     <string name="crash_dialog_comment_prompt">आप अन्य जानकारी और टिप्पणियाँ यहाँ लिख सकते हैं:</string>
 </resources>

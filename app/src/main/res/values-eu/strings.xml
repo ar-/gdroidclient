@@ -125,7 +125,7 @@
     <string name="download_error">Deskargak huts egin du!</string>
     <string name="saving_app_details">Aplikazioaren xehetasunak gordetzen</string>
     <string name="cancel">Utzi</string>
-    <string name="crash_dialog_title">F-droid kraskatu da</string>
+    <string name="crash_dialog_title">G-Droid kraskatu da</string>
     <string name="crash_dialog_text">Ustekabeko errorea gertatu da aplikazioa geldiaraztean.</string>
     <string name="crash_dialog_comment_prompt">Informazio gehigarria eta iruzkinak sartu ditzakezu hemen:</string>
 </resources>

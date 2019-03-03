@@ -115,7 +115,7 @@
     <string name="download_error">Загрузка не удалась!</string>
     <string name="saving_app_details">Сохранение информации о приложениях</string>
     <string name="cancel">Отменить</string>
-    <string name="crash_dialog_title">Произошел сбой F-Droid</string>
+    <string name="crash_dialog_title">Произошел сбой G-Droid</string>
     <string name="crash_dialog_text">Непредвиденная ошибка привела к остановке приложения. Хотите отправить письмо с</string>
     <string name="crash_dialog_comment_prompt">Можете добавить дополнительную информацию и комментарии:</string>
 </resources>

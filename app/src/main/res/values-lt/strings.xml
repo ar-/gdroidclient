@@ -45,6 +45,6 @@
     <string name="app_size">Dydis: </string>
     <string name="ok">Gerai</string>
     <string name="cancel">Atsisakyti</string>
-    <string name="crash_dialog_title">F-Droid sugriuvo</string>
+    <string name="crash_dialog_title">G-Droid sugriuvo</string>
     <string name="crash_dialog_text">Įvyko netikėta klaida, dėl kurios sustojo programėlė. Ar norėtumėte el. paštu atsiųsti klaidos detales, kad padėtumėme išsprestį tai?</string>
 </resources>

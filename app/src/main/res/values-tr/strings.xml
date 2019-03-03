@@ -125,7 +125,7 @@
     <string name="download_error">İndirme başarısız!</string>
     <string name="saving_app_details">Uygulama ayrıntıları kaydediliyor</string>
     <string name="cancel">İptal</string>
-    <string name="crash_dialog_title">F-Droid çöktü</string>
+    <string name="crash_dialog_title">G-Droid çöktü</string>
     <string name="crash_dialog_text">Uygulamanın durmasına neden olan beklenmedik bir hata oluştu. Sorunun giderilmesine yardım etmek için ayrıntıları e-posta ile yollamak ister misiniz?</string>
     <string name="crash_dialog_comment_prompt">Ek bilgi ve yorumları buraya ekleyebilirsiniz:</string>
 </resources>

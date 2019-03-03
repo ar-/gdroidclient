@@ -141,7 +141,7 @@
     <string name="download_error">Nedlasting mislyktes!</string>
     <string name="saving_app_details">Lagrer programdetaljer</string>
     <string name="cancel">Avbryt</string>
-    <string name="crash_dialog_title">F-Droid har kræsjet</string>
+    <string name="crash_dialog_title">G-Droid har kræsjet</string>
     <string name="crash_dialog_text">Uventet feil forårsaket</string>
     <string name="crash_dialog_comment_prompt">Du kan legge til ekstra informasjon og kommentarer her:</string>
 </resources>

@@ -55,7 +55,7 @@
     <string name="download_error">Niðurhal tókst ekki!</string>
     <string name="saving_app_details">Vista ítarupplýsingar um forrit</string>
     <string name="cancel">Hætta við</string>
-    <string name="crash_dialog_title">F-Droid hrundi</string>
+    <string name="crash_dialog_title">G-Droid hrundi</string>
     <string name="crash_dialog_text">Upp kom óvænt villa sem þvingaði fram lokun</string>
     <string name="crash_dialog_comment_prompt">Þú getur bætt hér við aukaupplýsingum og athugasemdum:</string>
 </resources>

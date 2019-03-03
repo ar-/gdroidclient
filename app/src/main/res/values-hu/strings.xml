@@ -55,7 +55,7 @@
     <string name="download_error">Letöltés sikertelen!</string>
     <string name="saving_app_details">Alkalmazásadatok részleteinek mentése</string>
     <string name="cancel">Mégse</string>
-    <string name="crash_dialog_title">Az F-Droid összeomlott</string>
+    <string name="crash_dialog_title">Az G-Droid összeomlott</string>
     <string name="crash_dialog_text">Egy váratlan hiba következtében az alkalmazásnak le kellett állnia. Szeretné</string>
     <string name="crash_dialog_comment_prompt">Itt adhat meg további adatokat és megjegyzéseket:</string>
 </resources>

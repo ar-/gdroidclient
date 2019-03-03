@@ -55,7 +55,7 @@
     <string name="download_error">Stahování se nezdařilo!</string>
     <string name="saving_app_details">Ukládání podrobností o aplikaci</string>
     <string name="cancel">Storno</string>
-    <string name="crash_dialog_title">F-Droid neočekávaně skončil</string>
+    <string name="crash_dialog_title">G-Droid neočekávaně skončil</string>
     <string name="crash_dialog_text">Neočekávaná chyba vynutila ukončení aplikace. Odeslat vývojářům podrobnosti e-mailem a pomoci tak s nápravou?</string>
     <string name="crash_dialog_comment_prompt">Zde můžete přidat další informace a komentáře:</string>
 </resources>

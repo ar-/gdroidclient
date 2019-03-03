@@ -53,7 +53,7 @@
     <string name="download_error">Tải về thất bại!</string>
     <string name="saving_app_details">Đang lưu thông tin ứng dụng</string>
     <string name="cancel">Huỷ</string>
-    <string name="crash_dialog_title">F-Droid đã bị dừng đột ngột</string>
+    <string name="crash_dialog_title">G-Droid đã bị dừng đột ngột</string>
     <string name="crash_dialog_text">Ứng dụng buộc phải dừng vì có lỗi đột ngột xảy ra. Bạn có muốn gửi thông tin qua e-mail để giúp khắc phục vấn đề này không?</string>
     <string name="crash_dialog_comment_prompt">Bạn có thể đưa thêm thông tin và bình luận ở đây:</string>
 </resources>

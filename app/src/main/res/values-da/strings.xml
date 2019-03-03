@@ -53,7 +53,7 @@
     <string name="download_error">Hentning mislykkedes!</string>
     <string name="saving_app_details">Gemmer app-detaljer</string>
     <string name="cancel">Annuller</string>
-    <string name="crash_dialog_title">F-Droid er gået ned</string>
+    <string name="crash_dialog_title">G-Droid er gået ned</string>
     <string name="crash_dialog_text">En uventet fejl har tvunget applikationen til at stoppe. Vil du sende en e-mail med detaljer som hjælper med at ordne problemet?</string>
     <string name="crash_dialog_comment_prompt">Du kan tilføje ekstra information og kommentarer her:</string>
 </resources>

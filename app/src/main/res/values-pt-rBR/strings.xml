@@ -126,7 +126,7 @@
     <string name="download_error">Falha no download!</string>
     <string name="saving_app_details">Salvando detalhes dos aplicativos</string>
     <string name="cancel">Cancelar</string>
-    <string name="crash_dialog_title">O F-Droid travou</string>
+    <string name="crash_dialog_title">O G-Droid travou</string>
     <string name="crash_dialog_text">Ocorreu um erro inesperado,</string>
     <string name="crash_dialog_comment_prompt">Você pode adicionar informações extras e comentários aqui:</string>
 </resources>

@@ -111,7 +111,7 @@
     <string name="download_error">¡Descarga fallida!</string>
     <string name="saving_app_details">Guardando los detalles de la aplicación</string>
     <string name="cancel">Cancelar</string>
-    <string name="crash_dialog_title">F-Droid se ha detenido</string>
+    <string name="crash_dialog_title">G-Droid se ha detenido</string>
     <string name="crash_dialog_text">La aplicación se ha cerrado</string>
     <string name="crash_dialog_comment_prompt">Puede añadir información extra y comentarios aquí:</string>
 </resources>
