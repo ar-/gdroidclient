@@ -45,7 +45,7 @@ public class MetaDownloadJaredJsonTask extends DownloadJaredJsonTask {
             parser.initMetricWeightsFromPreferences(mContext);
             abl = loadJsonFromNetwork(urls[0], mJsonFileInJar, parser);
 
-            // arriving here without error means a complete update has ben successfully done
+            // arriving here without error means a complete update has been successfully done
             Pref.get().setLastUpdateCheck(System.currentTimeMillis());
         } catch (IOException e) {
             e.printStackTrace();

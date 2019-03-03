@@ -105,6 +105,8 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                 {
                     // everything is up-to-date, we can jump out here
                     Log.i(TAG, "Not downloading anything, since fdroid's and gdroid's etags didn't change");
+                    // arriving here without error means a complete update has been successfully done
+                    Pref.get().setLastUpdateCheck(System.currentTimeMillis());
                     mMainActivity.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
