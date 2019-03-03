@@ -40,6 +40,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Display;
 import android.view.Menu;
@@ -253,9 +254,9 @@ public class MainActivity extends AppCompatActivity
         try {
             Snackbar.make(recyclerView, R.string.downloading, Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
-        }catch (NullPointerException npe)
+        } catch (NullPointerException npe)
         {
-
+            Log.w(TAG,"scould not show snackbar");
         }
         new DownloadJaredJsonTask(this, appCollectionAdapter, "index-v1.json").execute("https://f-droid.org/repo/index-v1.jar");
 

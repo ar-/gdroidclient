@@ -23,6 +23,7 @@ import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.text.format.DateUtils;
 import android.util.Log;
 
 import org.gdroid.gdroid.AppCollectionAdapter;
@@ -33,6 +34,7 @@ import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.CategoryBean;
 import org.gdroid.gdroid.beans.TagBean;
+import org.gdroid.gdroid.pref.Pref;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -65,6 +67,14 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
     @Override
     protected List<ApplicationBean> doInBackground(String... urls) {
         List<ApplicationBean> abl = new ArrayList<>();
+        long lastUpdateCheck = Pref.get().getLastUpdateCheck();
+        long now = System.currentTimeMillis();
+        if (now - lastUpdateCheck < DateUtils.MINUTE_IN_MILLIS * 5 )
+        {
+            Log.i(TAG, "Not downloading anything, since another download was successful recently");
+            return abl;
+        }
+
             try {
                 abl = loadJsonFromNetwork(urls[0], mJsonFileInJar, new AppBeanJsonParser());
 
