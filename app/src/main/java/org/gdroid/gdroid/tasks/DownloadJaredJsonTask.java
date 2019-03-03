@@ -23,6 +23,7 @@ import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.util.Log;
 
@@ -271,15 +272,19 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
     }
 
     private boolean isRepoDataCurrent() {
-        String etagOnline = HttpHeadChecker.getEtag(mUrl);
         String etagLocal = Pref.get().getLastFDroidEtag();
+        if (TextUtils.isEmpty(etagLocal))
+            return false; // makes the first run faster and prevents from comparing the empty string or null
+        String etagOnline = HttpHeadChecker.getEtag(mUrl);
 //        Pref.get().setLastFDroidEtag(etagOnline); // don't update here, becasue download can still fail (or be aborted0 later
         return etagLocal.equals(etagOnline);
     }
 
     private boolean isMetaDataCurrent() {
-        String etagOnline = HttpHeadChecker.getEtag(GDROID_JAR_URL);
         String etagLocal = Pref.get().getLastGDroidEtag();
+        if (TextUtils.isEmpty(etagLocal))
+            return false; // makes the first run faster and prevents from comparing the empty string or null
+        String etagOnline = HttpHeadChecker.getEtag(GDROID_JAR_URL);
 //        Pref.get().setLastGDroidEtag(etagOnline); // don't update here, becasue download can still fail (or be aborted0 later
         return etagLocal.equals(etagOnline);
     }
