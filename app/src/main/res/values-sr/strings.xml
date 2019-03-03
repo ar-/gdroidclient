@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Повезивање</string>
-
     <string name="category_Development">Развој</string>
     <string name="category_Games">Игре</string>
     <string name="category_Graphics">Графика</string>
@@ -45,4 +44,5 @@
     <string name="added_on">Додат %s</string>
     <string name="name">Назив</string>
     <string name="sort_search">Сортирај претрагу</string>
+    <string name="action_unhide">Otkrij</string>
 </resources>
