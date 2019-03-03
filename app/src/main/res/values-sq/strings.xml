@@ -36,4 +36,6 @@
     <string name="license">Licenca</string>
     <string name="ok">OK</string>
     <string name="download_error">Shkarkimi dështoi</string>
+    <string name="cancel">Anulo</string>
+    <string name="crash_dialog_comment_prompt">Këtu mundë të shtosh detaje dhe komente shtesë:</string>
 </resources>

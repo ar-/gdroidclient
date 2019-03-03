@@ -47,4 +47,8 @@
     <string name="ok">ตกลง</string>
     <string name="download_error">การดาวน์โหลดล้มเหลว</string>
     <string name="saving_app_details">กำลังบันทึกรายละเอียดโปรแกรม</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="crash_dialog_title">F-Droid เกิดข้อผิดพลาด</string>
+    <string name="crash_dialog_text">มีข้อผิดพลาดที่ทำให้โปรแกรมหยุดทำงานกะทันหัน,</string>
+    <string name="crash_dialog_comment_prompt">ระบุรายละเอียดและหมายเหตุเพิ่มเติมที่นี่:</string>
 </resources>

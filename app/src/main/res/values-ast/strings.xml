@@ -49,4 +49,9 @@
     <string name="ok">Aceutar</string>
     <string name="download_error">¡Falló la descarga!</string>
     <string name="saving_app_details">Guardando detalles de la app</string>
+    <string name="cancel">Encaboxar</string>
+    <string name="crash_dialog_title">F-Droid cascó</string>
+    <string name="crash_dialog_text">Asocedió un fallu inesperáu forciando\'l paru de la app. ¿Prestaríate unviar un corréu colos detalles p\'ayudar a iguar esti problema?</string>
+    <string name="crash_dialog_comment_prompt">Equí pues amestar información y comentarios estra:</string>
+
 </resources>

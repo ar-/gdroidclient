@@ -16,4 +16,5 @@
     <string name="action_uninstall">அகற்று</string>
     <string name="license">உரிமம்</string>
     <string name="ok">சரி</string>
+    <string name="cancel">ரத்து செய்</string>
 </resources>

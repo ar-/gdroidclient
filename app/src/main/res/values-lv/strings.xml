@@ -34,4 +34,7 @@
     <string name="license">Licence</string>
     <string name="app_size">Izmērs: </string>
     <string name="ok">OK</string>
+    <string name="cancel">Atcelt</string>
+    <string name="crash_dialog_title">F-Droid beidza strādāt</string>
+    <string name="crash_dialog_text">Nezināma kļūme lika aplikācijai beigt strādāt. Vai jūs vēlētos nosūtīt e-pastu ar informāciju, lai palīdzētu salabot šo problēmu?</string>
 </resources>

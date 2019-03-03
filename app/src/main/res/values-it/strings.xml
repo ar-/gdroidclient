@@ -54,4 +54,8 @@
     <string name="ok">OK</string>
     <string name="download_error">Scaricamento fallito!</string>
     <string name="saving_app_details">Salvataggio dettagli applicazione</string>
+    <string name="cancel">Annulla</string>
+    <string name="crash_dialog_title">F-Droid si è bloccato</string>
+    <string name="crash_dialog_text">Un errore inaspettato ha provocato il blocco dell\'applicazione. Vuoi inviare una e-mail con i dettagli per aiutarci a risolvere il problema?</string>
+    <string name="crash_dialog_comment_prompt">Puoi aggiungere altre informazioni e commenti qui:</string>
 </resources>

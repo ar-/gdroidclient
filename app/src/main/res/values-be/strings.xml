@@ -54,4 +54,8 @@
     <string name="ok">Добра</string>
     <string name="download_error">Не атрымалася спампаваць!</string>
     <string name="saving_app_details">Захоўванне даных праграм</string>
+    <string name="cancel">Скасаваць</string>
+    <string name="crash_dialog_title">F-Droid разбіўся</string>
+    <string name="crash_dialog_text">Неспадзяваная памылка прывяла да аварыйнага спынення праграмы.</string>
+    <string name="crash_dialog_comment_prompt">Можаце ўвясці дадатковую інфармацыю і каментары тут:</string>
 </resources>

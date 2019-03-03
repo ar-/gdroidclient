@@ -126,4 +126,8 @@
     <string name="ok">確定</string>
     <string name="download_error">下載失敗！</string>
     <string name="saving_app_details">正在儲存應用程式的詳細資料</string>
+    <string name="cancel">取消</string>
+    <string name="crash_dialog_title">F-Droid 已當掉</string>
+    <string name="crash_dialog_text">應用程式因意外問題而迫使停止。您願意用電子郵件向我們提供詳細資訊，以協助修復此問題嗎？</string>
+    <string name="crash_dialog_comment_prompt">您可以在此加入額外的資訊及評論：</string>
 </resources>

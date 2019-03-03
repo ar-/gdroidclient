@@ -48,4 +48,7 @@
     <string name="ok">အိုေက</string>
     <string name="download_error">ေဒါင္းလုတ္မေအာင္ျမင္ပါ</string>
     <string name="saving_app_details">Application အခ်က္အလက္မ်ားကိုသိမ္းဆည္းေနသည္</string>
+    <string name="cancel">ပယ္ဖ်က္မည္</string>
+    <string name="crash_dialog_title">F-Droid ခဏရပ္သြားပါသည္</string>
+    <string name="crash_dialog_comment_prompt">သင္သည္ ေနာက္ထပ္ အခ်က္အလက္မ်ားႏွင့္မွတ္ခ်က္မ်ားကို</string>
 </resources>

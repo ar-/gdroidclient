@@ -126,4 +126,8 @@
     <string name="ok">Εντάξει</string>
     <string name="download_error">Ανεπιτυχής λήψη!</string>
     <string name="saving_app_details">Αποθήκευση λεπτομερειών εφαρμογής</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="crash_dialog_title">Το F-Droid σταμάτησε να λειτουργεί</string>
+    <string name="crash_dialog_text">Μη αναμενόμενο σφάλμα ανάγκασε την εφαρμογή να σταματήσει. Θα θέλατε να στείλετε e-mail με τις λεπτομέρειες για να βοηθήσετε να διορθωθεί το πρόβλημα;</string>
+    <string name="crash_dialog_comment_prompt">Μπορείτε να προσθέσετε περισσότερες πληροφορίες και σχόλια εδώ:</string>
 </resources>

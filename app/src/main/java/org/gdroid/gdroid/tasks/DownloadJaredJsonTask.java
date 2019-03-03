@@ -72,6 +72,11 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                 final MetaDownloadJaredJsonTask task = new MetaDownloadJaredJsonTask(mMainActivity, "metadata/gdroid.json", abl);
                 task.doInBackground("https://gitlab.com/gdroid/gdroiddata/raw/master/metadata/gdroid.jar");
 
+                String etag1 = HttpHeadChecker.getEtag(urls[0]);
+                String etag2 = HttpHeadChecker.getEtag("https://gitlab.com/gdroid/gdroiddata/raw/master/metadata/gdroid.jar");
+                Log.i(TAG,"etag 1 : "+etag1);
+                Log.i(TAG,"etag 2 : "+etag2);
+
                 // report back to the UI, that downloading is over and processing has begun
                 mMainActivity.runOnUiThread(new Runnable() {
                     @Override

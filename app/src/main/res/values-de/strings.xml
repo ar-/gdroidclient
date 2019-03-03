@@ -139,4 +139,10 @@
     <string name="saving_app_details">Anwendungsdetails werden gespeichert</string>
     <string name="could_not_download_gdroid_metadata">G-Droid Metadaten konnten nicht geladen werden</string>
 
+    <string name="cancel">Abbrechen</string>
+    <string name="crash_dialog_title">F-Droid ist abgestürzt</string>
+    <string name="crash_dialog_text">Die Anwendung wurde durch einen unerwarteten Fehler beendet. Möchten Sie die
+        Details als E-Mail versenden, um eine Fehlerbehebung zu unterstützen?
+    </string>
+    <string name="crash_dialog_comment_prompt">Sie können zusätzliche Informationen und Kommentare hier einfügen:</string>
 </resources>

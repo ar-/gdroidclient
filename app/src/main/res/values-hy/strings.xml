@@ -40,4 +40,7 @@
     <string name="ok">Լավ</string>
     <string name="download_error">Ներբեռնումը չհաջողվեց</string>
     <string name="saving_app_details">Պահում եմ ափփի մանրամասները</string>
+    <string name="cancel">Չեղարկել</string>
+    <string name="crash_dialog_title">F-Droidը կործանվեց</string>
+    <string name="crash_dialog_comment_prompt">Այստեղ կարող ես ավելացնել հավելյալ տեղեկատվություն և</string>
 </resources>

@@ -52,4 +52,8 @@
     <string name="ok">V redu</string>
     <string name="download_error">Prenos ni uspel!</string>
     <string name="saving_app_details">Shranjujem podrobnosti aplikacije</string>
+    <string name="cancel">Prekliči</string>
+    <string name="crash_dialog_title">F-Droid se je zrušil</string>
+    <string name="crash_dialog_text">Zaradi nepričakovane napake se je aplikacija prisilno ustavila. Nam želite v e-pošti posredovati podrobnosti in s tem pomagati odpraviti napako?</string>
+    <string name="crash_dialog_comment_prompt">Dodatne informacije in komentarje lahko dodate tukaj:</string>
 </resources>

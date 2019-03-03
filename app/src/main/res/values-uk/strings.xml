@@ -54,4 +54,8 @@
     <string name="ok">ОК</string>
     <string name="download_error">Помилка завантаження!</string>
     <string name="saving_app_details">Збереження деталей застосунку</string>
+    <string name="cancel">Скасувати</string>
+    <string name="crash_dialog_title">F-Droid зазнав збою</string>
+    <string name="crash_dialog_text">Сталася неочікувана помилка, змусивши застосунок зупинитися. Хочете надіслати листа з подробицями, які допоможуть нам усунути цю ваду?</string>
+    <string name="crash_dialog_comment_prompt">Можете ввести додаткову інформацію та коментарі тут:</string>
 </resources>

@@ -54,4 +54,8 @@
     <string name="ok">D\'acord</string>
     <string name="download_error">Error en la baixada!</string>
     <string name="saving_app_details">S\'està desant els detalls de l\'aplicació</string>
+    <string name="cancel">Anul·la</string>
+    <string name="crash_dialog_title">L\'F-Droid ha fallat</string>
+    <string name="crash_dialog_text">L\'aplicació s\'ha aturat degut a un error inesperat. Voleu enviar els detalls per correu-e per ajudar a resoldre la incidència?</string>
+    <string name="crash_dialog_comment_prompt">Podeu afegir informació addicional i comentaris aquí:</string>
 </resources>

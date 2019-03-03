@@ -42,4 +42,7 @@
     <string name="license">ئىجازەتنامە</string>
     <string name="ok">جەزىملە</string>
     <string name="saving_app_details">ئۇيغۇلىما تەپسىلاتىنى ساقلاۋاتىدۇ</string>
+    <string name="cancel">ۋاز كەچ</string>
+    <string name="crash_dialog_title">ف-درويد موللاق ئاتتى</string>
+    <string name="crash_dialog_text">كۈتۈلمىگەن بىر خاتالىق ئۇيغۇلىمىنى توختاشقا زورلاۋاتىدۇ. تەپسىلاتىنى ئېلخەت بىلەن يوللاپ مەسىلىنى ھەل قىلىشنى خالامسىز؟</string>
 </resources>
