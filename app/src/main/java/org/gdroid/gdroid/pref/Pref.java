@@ -49,7 +49,11 @@ public class Pref {
 
     public static final String PREF_AUTO_DOWNLOAD_INSTALL_UPDATES = "updateAutoDownload";
     public static final String PREF_SEND_CRASH_REPORTS = "send_crash_reports";
+
+    // private properties are non-user visible settings
     private static final String PREF_LAST_UPDATE_CHECK = "lastUpdateCheck";
+    private static final String PREF_LAST_FDROID_ETAG = "last_fdroid_etag";
+    private static final String PREF_LAST_GDROID_ETAG = "last_gdroid_etag";
 
     private static final int DEFAULT_LAST_UPDATE_CHECK = -1;
 
@@ -75,6 +79,22 @@ public class Pref {
 
     public boolean isAutoDownloadEnabled() {
         return preferences.getBoolean(PREF_AUTO_DOWNLOAD_INSTALL_UPDATES, false);
+    }
+
+    public String getLastFDroidEtag() {
+        return preferences.getString(PREF_LAST_FDROID_ETAG, "");
+    }
+
+    public void setLastFDroidEtag(String lastFDroidEtag) {
+        preferences.edit().putString(PREF_LAST_FDROID_ETAG, lastFDroidEtag).apply();
+    }
+
+    public String getLastGDroidEtag() {
+        return preferences.getString(PREF_LAST_GDROID_ETAG, "");
+    }
+
+    public void setLastGDroidEtag(String lastGDroidEtag) {
+        preferences.edit().putString(PREF_LAST_GDROID_ETAG, lastGDroidEtag).apply();
     }
 
     /**

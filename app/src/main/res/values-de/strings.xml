@@ -106,8 +106,8 @@
     <string name="pref_title_ratings_summary">Eine Zahl von 0 bis 10 der Metrik zuweisen. 10 bedeutet höchste Wichtung.</string>
     <string name="pref_title_updated_in_2_years">neue Version innerhalb der letzten 2 Jahre</string>
     <string name="pref_title_release_cycle_time">Typische Zeit zwischen Updates</string>
-    <string name="search_harder">weiter suchen</string>
-    <string name="search_even_harder">noch weiter suchen</string>
+    <string name="search_harder">genauer suchen</string>
+    <string name="search_even_harder">noch genauer suchen</string>
     <string name="menu_my_apps">Meine Apps</string>
     <string name="menu_hidden_apps">Verborgene Apps</string>
     <string name="similar_apps">Ähnliche Apps</string>
@@ -147,4 +147,5 @@
     <string name="crash_dialog_comment_prompt">Sie können zusätzliche Informationen und Kommentare hier einfügen:</string>
     <string name="pref_title_send_crash_reports">Auf Nachfrage Absturzbericht senden</string>
     <string name="pref_summary_send_crash_reports_summary">Daten zu Abstürzen sammeln und vor ihrem Versand an den Entwickler nachfragen</string>
+    <string name="data_is_up_to_date">Daten sind aktuell</string>
 </resources>
