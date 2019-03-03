@@ -24,6 +24,7 @@ import android.widget.Toast;
 import org.gdroid.gdroid.MainActivity;
 import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.pref.Pref;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,6 +45,8 @@ public class MetaDownloadJaredJsonTask extends DownloadJaredJsonTask {
             parser.initMetricWeightsFromPreferences(mContext);
             abl = loadJsonFromNetwork(urls[0], mJsonFileInJar, parser);
 
+            // arriving here without error means a complete update has ben successfully done
+            Pref.get().setLastUpdateCheck(System.currentTimeMillis());
         } catch (IOException e) {
             e.printStackTrace();
             try {

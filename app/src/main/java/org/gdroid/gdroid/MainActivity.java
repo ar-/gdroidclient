@@ -53,6 +53,7 @@ import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.OrderByCol;
 import org.gdroid.gdroid.installer.baria.BariaInstaller;
+import org.gdroid.gdroid.pref.Pref;
 import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
 import org.gdroid.gdroid.widget.BottomNavigationView;
 
@@ -192,6 +193,22 @@ public class MainActivity extends AppCompatActivity
             }
         );
 
+        if (Pref.get().isIndexNeverUpdated())
+        {
+            swipe.setRefreshing(true);
+            AsyncTask.execute(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    updateSourceDataFromWeb();
+                }
+            });
+        }
+
         // "download all"-button
         btnUpdateAll.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -233,8 +250,13 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void updateSourceDataFromWeb() {
-        Snackbar.make(recyclerView, R.string.downloading, Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
+        try {
+            Snackbar.make(recyclerView, R.string.downloading, Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }catch (NullPointerException npe)
+        {
+
+        }
         new DownloadJaredJsonTask(this, appCollectionAdapter, "index-v1.json").execute("https://f-droid.org/repo/index-v1.jar");
 
     }
