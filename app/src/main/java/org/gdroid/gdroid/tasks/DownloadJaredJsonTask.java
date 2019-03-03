@@ -74,18 +74,18 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         mUrl = urls[0];
 
         // bomb out if there was a successful update in the last 5 minutes
-//        if (now - lastUpdateCheck < DateUtils.MINUTE_IN_MILLIS * 5 )
-//        {
-//            Log.i(TAG, "Not downloading anything, since another download was successful recently");
-//            mMainActivity.runOnUiThread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    Snackbar.make(mMainActivity.findViewById(R.id.fab), R.string.data_is_up_to_date, Snackbar.LENGTH_LONG)
-//                            .setAction("Action", null).show();
-//                }
-//            });
-//            return abl;
-//        }
+        if (now - lastUpdateCheck < DateUtils.MINUTE_IN_MILLIS * 5 )
+        {
+            Log.i(TAG, "Not downloading anything, since another download was successful recently");
+            mMainActivity.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Snackbar.make(mMainActivity.findViewById(R.id.fab), R.string.data_is_up_to_date, Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+            });
+            return abl;
+        }
 
         try {
 
