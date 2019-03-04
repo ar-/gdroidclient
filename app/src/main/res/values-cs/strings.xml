@@ -59,5 +59,5 @@
     <string name="crash_dialog_text">Neočekávaná chyba vynutila ukončení aplikace. Odeslat vývojářům podrobnosti e-mailem a pomoci tak s nápravou?</string>
     <string name="crash_dialog_comment_prompt">Zde můžete přidat další informace a komentáře:</string>
     <string name="pref_title_send_crash_reports">Dotázat se na odeslání hlášení o pádu</string>
-    <string name="pref_summary_send_crash_reports_summary">Shromáždí důležitá data o pádu aplikace a před odesláním vývojářúm se dotáže</string>
+    <string name="pref_description_send_crash_reports">Shromáždí důležitá data o pádu aplikace a před odesláním vývojářúm se dotáže</string>
 </resources>

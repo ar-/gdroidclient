@@ -128,5 +128,5 @@
     <string name="crash_dialog_text">O eroare neașteptată s-a produs forțând oprirea aplicației. Doriți să trimite-ți un e-mail cu detalii pentru a putea ajuta la rezolvarea acestei probleme?</string>
     <string name="crash_dialog_comment_prompt">Puteți adăuga informații și comentarii aici:</string>
     <string name="pref_title_send_crash_reports">Notifică la trimiterea raportelor de eroare</string>
-    <string name="pref_summary_send_crash_reports_summary">Se strâng date despre erori și se întreabă dacă se pot trimite dezvoltatorului</string>
+    <string name="pref_description_send_crash_reports">Se strâng date despre erori și se întreabă dacă se pot trimite dezvoltatorului</string>
 </resources>

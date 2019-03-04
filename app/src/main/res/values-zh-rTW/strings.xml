@@ -131,5 +131,5 @@
     <string name="crash_dialog_text">應用程式因意外問題而迫使停止。您願意用電子郵件向我們提供詳細資訊，以協助修復此問題嗎？</string>
     <string name="crash_dialog_comment_prompt">您可以在此加入額外的資訊及評論：</string>
     <string name="pref_title_send_crash_reports">提示發送崩潰報告</string>
-    <string name="pref_summary_send_crash_reports_summary">收集有關崩潰的資料和要求將它們發送給開發人員</string>
+    <string name="pref_description_send_crash_reports">收集有關崩潰的資料和要求將它們發送給開發人員</string>
 </resources>

@@ -146,6 +146,6 @@
     </string>
     <string name="crash_dialog_comment_prompt">Sie können zusätzliche Informationen und Kommentare hier einfügen:</string>
     <string name="pref_title_send_crash_reports">Auf Nachfrage Absturzbericht senden</string>
-    <string name="pref_summary_send_crash_reports_summary">Daten zu Abstürzen sammeln und vor ihrem Versand an den Entwickler nachfragen</string>
+    <string name="pref_description_send_crash_reports">Daten zu Abstürzen sammeln und vor ihrem Versand an den Entwickler nachfragen</string>
     <string name="data_is_up_to_date">Daten sind aktuell</string>
 </resources>

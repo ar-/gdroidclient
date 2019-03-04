@@ -1,5 +1,5 @@
 <!--
-  ~ Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+  ~ Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
   ~
   ~ This program is free software: you can redistribute it and/or modify
   ~ it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@
         android:enabled="true"
         android:key="send_crash_reports"
         android:title="@string/pref_title_send_crash_reports"
-        android:summary="@string/pref_summary_send_crash_reports_summary"
+        android:summary="@string/pref_description_send_crash_reports"
         />
 
 </PreferenceScreen>

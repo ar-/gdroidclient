@@ -206,7 +206,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 populateSimilarAppsView(similarAppsCollectionDescriptor,   R.id.lbl_similar_apps,  R.id.rec_view_similar_apps);
 
                 // apps in same category
-                if (categories.length>0) // bugfix: #109 sometime ategories are empty due to an error, then this crashes the app
+                if (categories.length>0) // bugfix: #109 sometimes categories are empty due to an error, then this crashes the app
                 {
                     AppCollectionDescriptor sameCatCollectionDescriptor = new AppCollectionDescriptor(mContext, "cat:" + categories[0].catName);
                     populateSimilarAppsView(sameCatCollectionDescriptor, R.id.lbl_same_category, R.id.rec_view_same_category);

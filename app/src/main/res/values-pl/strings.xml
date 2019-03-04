@@ -87,5 +87,5 @@
     <string name="crash_dialog_text">Nieoczekiwany błąd spowodował zamknięcie aplikacji. Czy chciałbyś przesłać e-mailem szczegóły, aby pomóc naprawić błąd?</string>
     <string name="crash_dialog_comment_prompt">Możesz dodać dodatkowe informacje i komentarze tutaj:</string>
     <string name="pref_title_send_crash_reports">Proponuj wysyłanie raportów o awariach</string>
-    <string name="pref_summary_send_crash_reports_summary">Zbieraj dane o awariach i proponuj wysyłanie ich do programistów</string>
+    <string name="pref_description_send_crash_reports">Zbieraj dane o awariach i proponuj wysyłanie ich do programistów</string>
 </resources>

@@ -1,15 +1,3 @@
-
-package org.gdroid.gdroid.acra;
-
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.support.annotation.NonNull;
-import org.acra.ReportField;
-import org.acra.collections.ImmutableSet;
-import org.acra.collector.CrashReportData;
-import org.acra.config.ACRAConfiguration;
-import org.acra.sender.ReportSender;
 /*
  * Copyright (C) 2019 Andreas Redmer <ar-gdroid@abga.be>
  *
@@ -27,7 +15,17 @@ import org.acra.sender.ReportSender;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
+package org.gdroid.gdroid.acra;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.support.annotation.NonNull;
+import org.acra.ReportField;
+import org.acra.collections.ImmutableSet;
+import org.acra.collector.CrashReportData;
+import org.acra.config.ACRAConfiguration;
+import org.acra.sender.ReportSender;
 public class CrashReportSender implements ReportSender {
 
     private final ACRAConfiguration config;

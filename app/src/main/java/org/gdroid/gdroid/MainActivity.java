@@ -201,6 +201,7 @@ public class MainActivity extends AppCompatActivity
                 @Override
                 public void run() {
                     try {
+                        // make sure all UI is properly setup and then do the refresh procedure
                         Thread.sleep(2000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -256,7 +257,7 @@ public class MainActivity extends AppCompatActivity
                     .setAction("Action", null).show();
         } catch (NullPointerException npe)
         {
-            Log.w(TAG,"scould not show snackbar");
+            Log.w(TAG,"could not show snackbar");
         }
         new DownloadJaredJsonTask(this, appCollectionAdapter, "index-v1.json").execute("https://f-droid.org/repo/index-v1.jar");
 

@@ -129,5 +129,5 @@
     <string name="crash_dialog_text">Ustekabeko errorea gertatu da aplikazioa geldiaraztean.</string>
     <string name="crash_dialog_comment_prompt">Informazio gehigarria eta iruzkinak sartu ditzakezu hemen:</string>
     <string name="pref_title_send_crash_reports">Galdetu kraskatze txostenak bidaltzeko</string>
-    <string name="pref_summary_send_crash_reports_summary">Jaso kraskatzeei buruzko datuak eta galdetu garatzaileari bidaltzeko</string>
+    <string name="pref_description_send_crash_reports">Jaso kraskatzeei buruzko datuak eta galdetu garatzaileari bidaltzeko</string>
 </resources>

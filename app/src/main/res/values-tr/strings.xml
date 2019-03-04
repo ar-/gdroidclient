@@ -129,5 +129,5 @@
     <string name="crash_dialog_text">Uygulamanın durmasına neden olan beklenmedik bir hata oluştu. Sorunun giderilmesine yardım etmek için ayrıntıları e-posta ile yollamak ister misiniz?</string>
     <string name="crash_dialog_comment_prompt">Ek bilgi ve yorumları buraya ekleyebilirsiniz:</string>
     <string name="pref_title_send_crash_reports">Çökme bildirimlerini göndermek için sor</string>
-    <string name="pref_summary_send_crash_reports_summary">Çökmelerle ilgili verileri topla ve bunları geliştiriciye göndermek için sor</string>
+    <string name="pref_description_send_crash_reports">Çökmelerle ilgili verileri topla ve bunları geliştiriciye göndermek için sor</string>
 </resources>
