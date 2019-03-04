@@ -128,8 +128,8 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                 }
             }
 
-            // executing the taskdoesn't work correctly. one async task can't call another async task
-            // solution: moved all functionality out of task classes, all doinbackground directly
+            // executing the task doesn't work correctly. one async task can't call another async task
+            // solution: moved all functionality out of task classes, all doInBackground() directly
             final MetaDownloadJaredJsonTask task = new MetaDownloadJaredJsonTask(mMainActivity, "metadata/gdroid.json", abl);
             task.doInBackground(GDROID_JAR_URL);
 
