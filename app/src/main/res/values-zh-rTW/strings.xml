@@ -95,7 +95,7 @@
     <string name="similar_apps">類似的應用程式</string>
     <string name="by_same_author">相同作者</string>
     <string name="menu_app_authors">應用程式作者</string>
-    <string name="installing" formatted="false">正在安裝 </string>
+    <string name="installing" formatted="false">正在安裝 %s</string>
     <string name="installing_details" formatted="false">正在安裝 %d / %d</string>
     <string name="installation_finished">安裝完成</string>
     <string name="installed_details">已安裝 %d 應用程式</string>

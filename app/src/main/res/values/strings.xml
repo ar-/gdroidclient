@@ -159,10 +159,8 @@
     <string name="similar_apps">Similar apps</string>
     <string name="by_same_author">By same Author</string>
     <string name="menu_app_authors">App Authors</string>
-    <string name="menu_top_authors">Top Authors</string>
-    <string name="top_author">Top Author</string>
 
-    <string name="installing" formatted="false">Installing </string>
+    <string name="installing" formatted="false">Installing %s</string>
     <string name="installing_details" formatted="false">Installing %d / %d </string>
     <string name="installation_finished">Installation Finished</string>
     <string name="installed_details">Installed %d apps</string>
