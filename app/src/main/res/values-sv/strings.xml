@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Källkoden är inte längre tillgänglig, inga uppdateringar möjliga.</string>
     <string name="no_permissions">Inga behörigheter används.</string>
     <string name="perm_costs_money">Detta kan kosta pengar</string>
-    <string name="perms_description_app">Tillhandahålls av %1$s.</string>
+    <string name="perms_description_app">Tillhandahålls av .</string>
     <string name="perms_new_perm_prefix">Ny:</string>
     <string name="permissions">Tillstånd</string>
     <string name="links">Länkar</string>
@@ -45,7 +45,19 @@
     <string name="download_pending">Väntar på att påbörja hämtning…</string>
     <string name="more">Mer</string>
     <string name="last_update">Senaste uppdatering</string>
-    <string name="added_on">Lades till %s</string>
+    <string name="added_on">Lades till </string>
     <string name="name">Namn</string>
     <string name="sort_search">Sortera sökning</string>
+    <string name="action_uninstall">Avinstallera</string>
+    <string name="license">Licens</string>
+    <string name="app_size">Storlek: </string>
+    <string name="ok">OK</string>
+    <string name="download_error">Hämtning misslyckades!</string>
+    <string name="saving_app_details">Sparar app-detaljer</string>
+    <string name="cancel">Avbryt</string>
+    <string name="crash_dialog_title">G-Droid har kraschat</string>
+    <string name="crash_dialog_text">Ett oväntat fel tvingade appen att avslutas. Vill du skicka detaljer med e-post för att hjälpa till att åtgärda problemet?</string>
+    <string name="crash_dialog_comment_prompt">Du kan lägga till ytterligare information och kommentarer här:</string>
+    <string name="pref_title_send_crash_reports">Fråga om att skicka kraschrapporter</string>
+    <string name="pref_description_send_crash_reports">Samla data om krascher och be att få skicka den till utvecklaren</string>
 </resources>

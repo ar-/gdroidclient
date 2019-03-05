@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">源代码不再可用，无法更新。</string>
     <string name="no_permissions">未使用任何权限。</string>
     <string name="perm_costs_money">这可能会产生费用</string>
-    <string name="perms_description_app">由 %1$s 提供。</string>
+    <string name="perms_description_app">由  提供。</string>
     <string name="perms_new_perm_prefix">新的：</string>
     <string name="permissions">权限</string>
     <string name="links">链接</string>
@@ -45,7 +45,19 @@
     <string name="download_pending">正在等待开始下载…</string>
     <string name="more">显示更多</string>
     <string name="last_update">最近更新</string>
-    <string name="added_on">于%s添加</string>
+    <string name="added_on">于添加</string>
     <string name="name">名称</string>
     <string name="sort_search">搜索排序</string>
+    <string name="action_uninstall">卸载</string>
+    <string name="license">许可协议</string>
+    <string name="app_size">大小：</string>
+    <string name="ok">确定</string>
+    <string name="download_error">下载失败！</string>
+    <string name="saving_app_details">正在保存应用详细信息</string>
+    <string name="cancel">取消</string>
+    <string name="crash_dialog_title">G-Droid 已停止运行</string>
+    <string name="crash_dialog_text">本应用因意外问题而停止运行。您愿意通过电子邮件向我们提供细节信息，以协助修复此问题吗？</string>
+    <string name="crash_dialog_comment_prompt">你可以在此添加额外的信息或者评论:</string>
+    <string name="pref_title_send_crash_reports">提示发送崩溃报告</string>
+    <string name="pref_description_send_crash_reports">收集有关崩溃的数据并询问是否发送给本应用的开发者</string>
 </resources>

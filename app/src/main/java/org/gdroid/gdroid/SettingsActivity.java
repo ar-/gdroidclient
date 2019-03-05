@@ -34,6 +34,10 @@ import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
 
+import org.gdroid.gdroid.pref.Pref;
+import org.gdroid.gdroid.pref.WeightEditTextPreference;
+import org.gdroid.gdroid.pref.WeightNumberPickerPreference;
+
 import java.util.List;
 
 /**
@@ -115,6 +119,12 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                             .getBoolean(preference.getKey(), false));
 
         } else if (preference instanceof WeightEditTextPreference) {
+            // Trigger the listener immediately with the preference's current value.
+            sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
+                    PreferenceManager
+                            .getDefaultSharedPreferences(preference.getContext())
+                            .getInt(preference.getKey(), 1));
+        } else if (preference instanceof WeightNumberPickerPreference) {
             // Trigger the listener immediately with the preference's current value.
             sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
                     PreferenceManager
@@ -205,6 +215,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // guidelines.
             bindPreferenceSummaryToValue(findPreference("use_root"));
             bindPreferenceSummaryToValue(findPreference("use_list_view"));
+            bindPreferenceSummaryToValue(findPreference(Pref.PREF_SEND_CRASH_REPORTS));
         }
 
         @Override

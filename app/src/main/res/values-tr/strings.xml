@@ -94,7 +94,7 @@
     <string name="by_same_author">Aynı yazara ait</string>
     <string name="menu_app_authors">Uygulama yazarları</string>
     <string name="installing" formatted="false">%s yükleniyor</string>
-    <string name="installing_details" formatted="false">%d / %d yükleniyor</string>
+    <string name="installing_details" formatted="false">%d/%d yükleniyor</string>
     <string name="installation_finished">Yükleme tamamlandı</string>
     <string name="installed_details">%d uygulama yüklendi</string>
     <string name="confirmation">Doğrulama</string>
@@ -118,4 +118,16 @@
     <string name="stars">Yıldızlar</string>
     <string name="ascending">artan</string>
     <string name="descending">azalan</string>
+    <string name="action_uninstall">Kaldır</string>
+    <string name="license">Lisans</string>
+    <string name="app_size">Boyut: </string>
+    <string name="ok">Tamam</string>
+    <string name="download_error">İndirme başarısız!</string>
+    <string name="saving_app_details">Uygulama ayrıntıları kaydediliyor</string>
+    <string name="cancel">İptal</string>
+    <string name="crash_dialog_title">G-Droid çöktü</string>
+    <string name="crash_dialog_text">Uygulamanın durmasına neden olan beklenmedik bir hata oluştu. Sorunun giderilmesine yardım etmek için ayrıntıları e-posta ile yollamak ister misiniz?</string>
+    <string name="crash_dialog_comment_prompt">Ek bilgi ve yorumları buraya ekleyebilirsiniz:</string>
+    <string name="pref_title_send_crash_reports">Çökme bildirimlerini göndermek için sor</string>
+    <string name="pref_description_send_crash_reports">Çökmelerle ilgili verileri topla ve bunları geliştiriciye göndermek için sor</string>
 </resources>

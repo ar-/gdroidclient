@@ -135,7 +135,7 @@
     <string name="no_permissions">No permissions are used.</string>
 
     <string name="perm_costs_money">This may cost you money</string>
-    <string name="perms_description_app">Provided by %1$s.</string>
+    <string name="perms_description_app">Provided by .</string>
     <string name="perms_new_perm_prefix">New:</string>
     <string name="permissions">Permissions</string>
     <string name="links">Links</string>
@@ -187,10 +187,34 @@
     <string name="random_apps">Random apps</string>
 
     <string name="last_update">Last update</string>
-    <string name="added_on">Added on %s</string>
+    <string name="added_on">Added on </string>
     <string name="stars">Stars</string>
     <string name="name">Name</string>
     <string name="sort_search">Sort search</string>
     <string name="ascending">ascending</string>
     <string name="descending">descending</string>
+    <string name="action_uninstall">Uninstall</string>
+    <string name="license">License</string>
+    <string name="app_size">Size</string>
+    <string name="developer">Developer</string>
+    <string name="comments">Comments</string>
+    <string name="write_comment">write comment</string>
+    <string name="no_comments_available">no comments available for this app</string>
+    <string name="fetching_comments">fetching comments …</string>
+    <string name="ok">OK</string>
+    <string name="how_to_rate">Please share this with a Mastodon app, add your comment but don\'t change the hashtag.</string>
+    <string name="download_error">Download failed!</string>
+    <string name="saving_app_details">Saving app details</string>
+    <string name="could_not_download_gdroid_metadata">could not download G-Droid metadata</string>
+    <string name="cancel">Cancel</string>
+    <string name="crash_dialog_title">G-Droid has crashed</string>
+    <string name="crash_dialog_text">An unexpected error occurred
+        forcing the app to stop. Would you like to e-mail the
+        details to help fix the issue?
+    </string>
+    <string name="crash_dialog_comment_prompt">You can add extra information and comments here:</string>
+    <string name="pref_title_send_crash_reports">Prompt to send crash reports</string>
+    <string name="pref_description_send_crash_reports">Gather data about crashes and ask to send them to the developer</string>
+    <string name="data_is_up_to_date">data is up-to-date</string>
+
 </resources>

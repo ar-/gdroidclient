@@ -32,7 +32,7 @@
     <string name="anti_nosourcesince">O código fonte já não está disponível e não é possível a atualização.</string>
     <string name="no_permissions">Não utiliza permissões.</string>
     <string name="perm_costs_money">Pode implicar gastos</string>
-    <string name="perms_description_app">Disponibilizada por %1$s.</string>
+    <string name="perms_description_app">Disponibilizada por .</string>
     <string name="perms_new_perm_prefix">Nova:</string>
     <string name="permissions">Permissões</string>
     <string name="links">Ligações</string>
@@ -95,7 +95,7 @@
     <string name="similar_apps">Aplicações semelhantes</string>
     <string name="by_same_author">Do mesmo autor</string>
     <string name="menu_app_authors">Autores</string>
-    <string name="installing" formatted="false">A instalar %s</string>
+    <string name="installing" formatted="false">A instalar </string>
     <string name="installing_details" formatted="false">A instalar %d de %d</string>
     <string name="installation_finished">Instalação terminada</string>
     <string name="installed_details">%d aplicações instaladas</string>
@@ -105,7 +105,7 @@
     <string name="pref_title_use_root">Utilizar privilégio root</string>
     <string name="more">Mais</string>
     <string name="last_update">Última atualização</string>
-    <string name="added_on">Adicionada em %s</string>
+    <string name="added_on">Adicionada em </string>
     <string name="name">Nome</string>
     <string name="sort_search">Ordenar pesquisa</string>
     <string name="in_same_category">Mesma categoria</string>
@@ -120,4 +120,16 @@
     <string name="stars">Estrelas</string>
     <string name="ascending">ascendente</string>
     <string name="descending">descendente</string>
+    <string name="action_uninstall">Desinstalar</string>
+    <string name="license">Licença</string>
+    <string name="app_size">Tamanho: </string>
+    <string name="ok">OK</string>
+    <string name="download_error">Falha ao descarregar!</string>
+    <string name="saving_app_details">A guardar detalhes das aplicações</string>
+    <string name="cancel">Cancelar</string>
+    <string name="crash_dialog_title">O G-Droid terminou abruptamente</string>
+    <string name="crash_dialog_text">Ocorreu um erro inesperado e a aplicação foi encerrada. Gostaria de nos enviar um e-mail com os detalhes do erro?</string>
+    <string name="crash_dialog_comment_prompt">Pode adicionar algumas informações e comentários aqui:</string>
+    <string name="pref_title_send_crash_reports">Pedir para enviar relatórios de erros</string>
+    <string name="pref_description_send_crash_reports">Recolher dados sobre os erros e pedir para os enviar ao programador</string>
 </resources>

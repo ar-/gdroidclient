@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -31,6 +32,7 @@ import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.AuthorBean;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AuthorListActivity extends AppCompatActivity {
     ListView authorsList;
@@ -53,9 +55,19 @@ public class AuthorListActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         AppDatabase db = AppDatabase.get(getApplicationContext());
-        final AuthorBean[] allAuthors = db.appDao().getAllAuthors();
 
-        final AuthorArrayAdapter adapter = new AuthorArrayAdapter(this, allAuthors);
+        String type = getIntent().getStringExtra("type");
+        final List<AuthorBean> authors;
+        final boolean showTopAuthors = ! TextUtils.isEmpty(type) && type.equals("top");
+        if (showTopAuthors) {
+            authors = db.appDao().getTopAuthors();
+        }
+        else
+        {
+            authors = db.appDao().getAllAuthors();
+        }
+
+        final AuthorArrayAdapter adapter = new AuthorArrayAdapter(this, authors, showTopAuthors ? " top" : "");
         authorsList.setAdapter(adapter);
 
         final AuthorListActivity caller = this;

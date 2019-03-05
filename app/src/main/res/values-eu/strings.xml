@@ -30,7 +30,7 @@
     <string name="anti_nosourcesince">Iturburu kodea ez dago jada eskuragarri, ezin izango dira eguneraketak egin.</string>
     <string name="no_permissions">Ez da baimenik erabiltzen.</string>
     <string name="perm_costs_money">Honek dirua kosta dakizuke</string>
-    <string name="perms_description_app">%1$sk hornitua.</string>
+    <string name="perms_description_app">k hornitua.</string>
     <string name="perms_new_perm_prefix">Berria:</string>
     <string name="permissions">Baimenak</string>
     <string name="links">Loturak</string>
@@ -93,7 +93,7 @@
     <string name="similar_apps">Antzeko aplikazioak</string>
     <string name="by_same_author">Egile berberarenak</string>
     <string name="menu_app_authors">Aplikazioen egileak</string>
-    <string name="installing" formatted="false">%s instalatzen</string>
+    <string name="installing" formatted="false"> instalatzen</string>
     <string name="installing_details" formatted="false">%d / %d instalatzen</string>
     <string name="installation_finished">Instalazioa amaituta</string>
     <string name="installed_details">%d aplikazio instalatu dira</string>
@@ -112,10 +112,22 @@
     <string name="you_might_also_like">Agian gustuko duzu ere</string>
     <string name="random_apps">Ausazko aplikazioak</string>
     <string name="last_update">Azken eguneraketa</string>
-    <string name="added_on">Gehitze data %s</string>
+    <string name="added_on">Gehitze data</string>
     <string name="name">Izena</string>
     <string name="sort_search">Ordenatu bilaketa</string>
     <string name="stars">Izarrak</string>
     <string name="ascending">gorantz</string>
     <string name="descending">beherantz</string>
+    <string name="action_uninstall">Desinstalatu</string>
+    <string name="license">Lizentzia</string>
+    <string name="app_size">Neurria: </string>
+    <string name="ok">Ados</string>
+    <string name="download_error">Deskargak huts egin du!</string>
+    <string name="saving_app_details">Aplikazioaren xehetasunak gordetzen</string>
+    <string name="cancel">Utzi</string>
+    <string name="crash_dialog_title">G-Droid kraskatu da</string>
+    <string name="crash_dialog_text">Ustekabeko errorea gertatu da aplikazioa geldiaraztean.</string>
+    <string name="crash_dialog_comment_prompt">Informazio gehigarria eta iruzkinak sartu ditzakezu hemen:</string>
+    <string name="pref_title_send_crash_reports">Galdetu kraskatze txostenak bidaltzeko</string>
+    <string name="pref_description_send_crash_reports">Jaso kraskatzeei buruzko datuak eta galdetu garatzaileari bidaltzeko</string>
 </resources>

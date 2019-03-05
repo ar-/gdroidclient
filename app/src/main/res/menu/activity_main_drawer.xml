@@ -46,12 +46,20 @@
             <!--android:title="Tools" />-->
     </group>
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_app_authors"
-            android:icon="@drawable/ic_author_group_black_24dp"
-            android:title="@string/menu_app_authors" />
-    </group>
+    <item android:title="@string/menu_app_authors">
+        <group android:checkableBehavior="single">
+            <menu>
+            <item
+                android:id="@+id/nav_app_authors"
+                android:icon="@drawable/ic_author_group_black_24dp"
+                android:title="@string/menu_app_authors" />
+            <item
+                android:id="@+id/nav_top_authors"
+                android:icon="@drawable/ic_author_group_black_24dp"
+                android:title="@string/menu_top_authors" />
+            </menu>
+        </group>
+    </item>
 
     <!--<item android:title="Communicate">-->
         <!--<menu>-->

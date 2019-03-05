@@ -32,7 +32,7 @@
     <string name="anti_nosourcesince">El código fuente ya no está disponible, no se puede actualizar.</string>
     <string name="no_permissions">No se usan permisos.</string>
     <string name="perm_costs_money">Esto puede costar dinero</string>
-    <string name="perms_description_app">Proporcionado por %1$s.</string>
+    <string name="perms_description_app">Proporcionado por .</string>
     <string name="perms_new_perm_prefix">Nuevos:</string>
     <string name="permissions">Permisos</string>
     <string name="links">Enlaces</string>
@@ -92,7 +92,7 @@
     <string name="similar_apps">Apps similares</string>
     <string name="by_same_author">Del mismo autor</string>
     <string name="menu_app_authors">Autores</string>
-    <string name="installing" formatted="false">Instalando %s</string>
+    <string name="installing" formatted="false">Instalando </string>
     <string name="installing_details" formatted="false">Instalando %d/%d</string>
     <string name="installation_finished">Instalación finalizada</string>
     <string name="installed_details">%d apps instaladas</string>
@@ -101,7 +101,19 @@
     <string name="pref_description_use_root">instala y desinstala apps automáticamente si el dispositivo está rooteado</string>
     <string name="pref_title_use_root">Usar privilegios root</string>
     <string name="last_update">Última actualización</string>
-    <string name="added_on">Agregado el %s</string>
+    <string name="added_on">Agregado el </string>
     <string name="name">Nombre</string>
 <string name="sort_search">Ordenar resultados</string>
+    <string name="action_uninstall">Desinstalar</string>
+    <string name="license">Licencia</string>
+    <string name="app_size">Tamaño: </string>
+    <string name="ok">Aceptar</string>
+    <string name="download_error">¡Descarga fallida!</string>
+    <string name="saving_app_details">Guardando los detalles de la aplicación</string>
+    <string name="cancel">Cancelar</string>
+    <string name="crash_dialog_title">G-Droid se ha detenido</string>
+    <string name="crash_dialog_text">La aplicación se ha cerrado</string>
+    <string name="crash_dialog_comment_prompt">Puede añadir información extra y comentarios aquí:</string>
+    <string name="pref_title_send_crash_reports">Preguntar si mandar informes de fallo</string>
+    <string name="pref_description_send_crash_reports">Recopilar datos sobre fallos y pedir que se los envíen al desarrollador</string>
 </resources>

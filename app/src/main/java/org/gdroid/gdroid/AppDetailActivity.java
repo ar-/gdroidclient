@@ -19,13 +19,17 @@
 package org.gdroid.gdroid;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.CircularProgressDrawable;
@@ -41,6 +45,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -52,13 +57,18 @@ import com.tonyodev.fetch2.Request;
 import com.tonyodev.fetch2.Status;
 import com.tonyodev.fetch2core.DownloadBlock;
 
+import org.gdroid.gdroid.Adapters.CommentAdapter;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.beans.AuthorBean;
 import org.gdroid.gdroid.beans.CategoryBean;
+import org.gdroid.gdroid.beans.CommentBean;
 import org.gdroid.gdroid.beans.TagBean;
+import org.gdroid.gdroid.installer.Installer;
 import org.gdroid.gdroid.perm.AppDiff;
 import org.gdroid.gdroid.perm.AppSecurityPermissions;
+import org.gdroid.gdroid.tasks.DownloadCommentsTask;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -102,10 +112,14 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         ((TextView)findViewById(R.id.lbl_app_name)).setText(mApp.name);
         ((TextView)findViewById(R.id.lbl_app_summary)).setText(mApp.summary);
         Date lastUpdateDate = new Date(mApp.lastupdated );
+        Date adddedDate = new Date(mApp.added );
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         ((TextView)findViewById(R.id.lbl_lastupdated)).setText(sdf.format(lastUpdateDate));
+        ((TextView)findViewById(R.id.lbl_added)).setText(sdf.format(adddedDate));
         ((TextView)findViewById(R.id.lbl_app_author)).setText(mApp.author);
         ((TextView)findViewById(R.id.lbl_license)).setText(mApp.license);
+        DecimalFormat dfSize = new DecimalFormat("#.#");
+        ((TextView)findViewById(R.id.lbl_size)).setText(dfSize.format(mApp.size/1024f/1024f) + " MB");
         ((TextView)findViewById(R.id.lbl_website)).setText(mApp.web);
         ((TextView)findViewById(R.id.lbl_email)).setText(mApp.email);
 
@@ -120,46 +134,48 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         final LinearLayout categoryView = findViewById(R.id.grp_categories);
         categoryView.removeAllViews();
         for (CategoryBean cb:categories) {
-            TextView tv = new TextView(mContext);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            params.setMargins(2,2,2,2);
-            tv.setLayoutParams(params);
-            tv.setBackgroundResource(R.drawable.rounded_corner);
-            tv.setPadding(10,10,10,10);
-            tv.setTextColor(getResources().getColor(R.color.album_title));
-            tv.setTextSize(14);
             final String lcn = Util.getLocalisedCategoryName(this, cb.catName);
-            tv.setText(lcn);
-            categoryView.addView(tv);
-
-            // make it clickable
             final String collectionName = "cat:" + cb.catName;
-            final String headline = AppCollectionAdapter.getHeadlineForCatOrTag(mContext, collectionName);
-            final View.OnClickListener clickListener = AppCollectionAdapter.getOnClickListenerForCatOrTag(collectionName, headline, this);
-            tv.setOnClickListener(clickListener);
+            final int backgroudDrawable = R.drawable.rounded_corner;
+            TextView tv = getTagTextView(lcn, collectionName, backgroudDrawable);
+            categoryView.addView(tv);
         }
 
         // fill tags - the same way as categories
         final TagBean[] tags = db.appDao().getAllTagsForApp(mApp.id);
         for (TagBean tb:tags) {
-            TextView tv = new TextView(mContext);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            params.setMargins(2,2,2,2);
-            tv.setLayoutParams(params);
-            tv.setBackgroundResource(R.drawable.rounded_corner_tag);
-            tv.setPadding(10,10,10,10);
-            tv.setTextColor(getResources().getColor(R.color.album_title));
-            tv.setTextSize(14);
-            String tagname = Util.getStringResourceByName(mContext,tb.tagName);
-            tv.setText(tagname);
-            categoryView.addView(tv);
-
-            // make it clickable
+            final String ltn = Util.getStringResourceByName(this, tb.tagName);
             final String collectionName = "tag:" + tb.tagName;
-            final String headline = AppCollectionAdapter.getHeadlineForCatOrTag(mContext, collectionName);
-            final View.OnClickListener clickListener = AppCollectionAdapter.getOnClickListenerForCatOrTag(collectionName, headline, this);
-            tv.setOnClickListener(clickListener);
+            final int backgroudDrawable = R.drawable.rounded_corner_tag;
+            TextView tv = getTagTextView(ltn, collectionName, backgroudDrawable);
+            categoryView.addView(tv);
         }
+
+        final AppDetailActivity caller = this;
+        // mark top author
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                AppDatabase db = AppDatabase.get(getApplicationContext());
+                List <AuthorBean> auths = db.appDao().getTopAuthors();
+                for (AuthorBean aub : auths) {
+                    if (mApp.author.equals(aub.author))
+                    {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                final String lrn = "\uD83D\uDC4D " + Util.getStringResourceByName(caller, "top_author") + " \uD83D\uDC4D" ;
+                                final String collectionName = "author:" +mApp.author;
+                                final int backgroudDrawable = R.drawable.rounded_corner_tag;
+                                TextView tv = getTagTextView(lrn, collectionName, backgroudDrawable);
+                                categoryView.addView(tv,0);
+                            }
+                        });
+                    }
+                }
+            }
+        });
+
 
         // fill anti-features
         final TextView lblAntiFeatures = findViewById(R.id.lbl_antifeatures);
@@ -190,9 +206,11 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 populateSimilarAppsView(similarAppsCollectionDescriptor,   R.id.lbl_similar_apps,  R.id.rec_view_similar_apps);
 
                 // apps in same category
-                AppCollectionDescriptor sameCatCollectionDescriptor = new AppCollectionDescriptor(mContext,"cat:" + categories[0].catName);
-                populateSimilarAppsView(sameCatCollectionDescriptor,   R.id.lbl_same_category,  R.id.rec_view_same_category);
-
+                if (categories.length>0) // bugfix: #109 sometimes categories are empty due to an error, then this crashes the app
+                {
+                    AppCollectionDescriptor sameCatCollectionDescriptor = new AppCollectionDescriptor(mContext, "cat:" + categories[0].catName);
+                    populateSimilarAppsView(sameCatCollectionDescriptor, R.id.lbl_same_category, R.id.rec_view_same_category);
+                }
                 // apps by same author
                 AppCollectionDescriptor sameAuthorCollectionDescriptor = new AppCollectionDescriptor(mContext,"author:" + mApp.author);
                 populateSimilarAppsView(sameAuthorCollectionDescriptor,  R.id.lbl_same_author,  R.id.rec_view_same_author);
@@ -331,6 +349,27 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             }
         });
 
+        final Button btnUninstall = findViewById(R.id.btn_uninstall);
+        btnUninstall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                AsyncTask.execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        final Installer installer = Util.getAppInstaller(v.getContext());
+                        installer.uninstallApp(v.getContext(), mApp.id);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                updateInstallStatus(Status.NONE);
+                            }
+                        });
+                    }
+                });
+
+            }
+        });
+
         final Button btnCancelDownload = findViewById(R.id.btn_cancel_download);
         btnCancelDownload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -417,9 +456,11 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 }
 
                 // update-cycle
-                final double norm_ac = metrics.optDouble("avg_update_frequency");
+                double norm_ac = metrics.optDouble("avg_update_frequency");
                 if (! Double.isNaN(norm_ac))
                 {
+                    if (norm_ac<1.0)
+                        norm_ac=1.0;
                     ((TextView)findViewById(R.id.lbl_rating_releasecycle_1)).setText(df.format(norm_ac) + " days");
                 }
                 else
@@ -449,6 +490,69 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             findViewById(R.id.grp_ratings).setVisibility(View.GONE);
         }
 
+        // fetch comments and init adapter
+        findViewById(R.id.lbl_no_comments).setVisibility(View.GONE);
+        findViewById(R.id.btn_more_comments).setVisibility(View.GONE);
+        ListView commentsListView = findViewById(R.id.listview_comments);
+        final List<CommentBean> commentBeans = new ArrayList<>();
+        final CommentAdapter commentAdapter = new CommentAdapter(this, commentBeans,mApp.id);
+        commentsListView.setAdapter(commentAdapter);
+        (new DownloadCommentsTask(commentBeans, new Runnable(){
+            @Override
+            public void run() {
+                commentAdapter.notifyDataSetChanged();
+                findViewById(R.id.lbl_fetching_comments).setVisibility(View.GONE);
+                findViewById(R.id.circle_fetching_comments).setVisibility(View.GONE);
+                if (commentBeans.isEmpty())
+                {
+                    findViewById(R.id.lbl_no_comments).setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    findViewById(R.id.lbl_no_comments).setVisibility(View.GONE);
+                    if (commentBeans.size()>=3)
+                        findViewById(R.id.btn_more_comments).setVisibility(View.VISIBLE);
+                }
+
+            }
+        })).execute("https://mastodon.technology/api/v1/timelines/tag/"+Util.convertPackageNameToHashtag(mApp.id)+"?limit=3");
+            //})).execute("https://mastodon.technology/api/v1/timelines/tag/gdroid"+"?limit=3");
+
+        // button to load more comments
+        final Button btnMoreComments = findViewById(R.id.btn_more_comments);
+        btnMoreComments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(caller, CommentListActivity.class);
+                myIntent.putExtra("appId", mApp.id);
+                caller.startActivity(myIntent);
+            }
+        });
+
+        // button to leave a new comment
+        final Button btnAddComment = findViewById(R.id.btn_add_comment);
+        btnAddComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog alertDialog = new AlertDialog.Builder(AppDetailActivity.this).create();
+                alertDialog.setMessage(getResources().getString(R.string.how_to_rate));
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getResources().getString(R.string.ok),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                String shareText = "@gdroid@mastodon.technology ";
+                                shareText+= "#"+Util.convertPackageNameToHashtag(mApp.id);
+                                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                                sharingIntent.setType("text/plain");
+                                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareText);
+                                startActivity(sharingIntent);
+                            }
+                        });
+                alertDialog.show();
+
+            }
+        });
+
         // was there any action on this view in the intent?
         String action = getIntent().getStringExtra("action");
         if (!TextUtils.isEmpty(action))
@@ -457,9 +561,35 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             {
                 btnInstall.performClick();
             }
+            if (action.equals("uninstall"))
+            {
+                btnUninstall.performClick();
+            }
         }
 
         db.close();
+    }
+
+    @NonNull
+    /**
+     * draws the rounded textviews for tags, categories and top authors
+     */
+    private TextView getTagTextView(String lcn, String collectionName, int backgroudDrawable) {
+        TextView tv = new TextView(mContext);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        params.setMargins(2,2,2,2);
+        tv.setLayoutParams(params);
+        tv.setBackgroundResource(backgroudDrawable);
+        tv.setPadding(10,10,10,10);
+        tv.setTextColor(getResources().getColor(R.color.album_title));
+        tv.setTextSize(14);
+        tv.setText(lcn);
+
+        // make it clickable
+        final String headline = AppCollectionAdapter.getHeadlineForCatOrTag(mContext, collectionName);
+        final View.OnClickListener clickListener = AppCollectionAdapter.getOnClickListenerForCatOrTag(collectionName, headline, this);
+        tv.setOnClickListener(clickListener);
+        return tv;
     }
 
     private void populateSimilarAppsView(final AppCollectionDescriptor appCollectionDescriptor, final int headlineLabel, final int recViewToFill) {
@@ -593,9 +723,11 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
     public void updateInstallStatus(Status status)
     {
         final Button btnInstall = findViewById(R.id.btn_install);
+        final Button btnUninstall = findViewById(R.id.btn_uninstall);
         final Button btnLaunch = findViewById(R.id.btn_launch);
         final LinearLayout pbh = findViewById(R.id.progress_bar_holder);
         btnInstall.setVisibility(View.GONE);
+        btnUninstall.setVisibility(View.GONE);
         btnLaunch.setVisibility(View.GONE);
         pbh.setVisibility(View.GONE);
 
@@ -615,6 +747,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 if (Util.isAppInstalled(mContext, mApp.id))
                 {
                     btnLaunch.setVisibility(View.VISIBLE);
+                    btnUninstall.setVisibility(View.VISIBLE);
                     if (Util.isAppUpdateable(mContext, mApp))
                     {
                         btnInstall.setText(getString(R.string.action_upgrade));
@@ -627,6 +760,18 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                     btnInstall.setVisibility(View.VISIBLE);
                 }
             }
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch(requestCode) {
+            case Util.UNINSTALL_FINISHED:
+                //you just got back from activity B - deal with resultCode
+                //use data.getExtra(...) to retrieve the returned data
+                updateInstallStatus(Status.NONE);
+                break;
         }
     }
 

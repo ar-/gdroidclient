@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">کد مبدأ دیگر در دسترس نیست، به‌روز رسانی ناممکن است.</string>
     <string name="no_permissions">دسترسی ای استفاده نشده است.</string>
     <string name="perm_costs_money">ممکن است این کار برایتان خرج داشته باشد</string>
-    <string name="perms_description_app">فراهم شده توسّط: %1$s.</string>
+    <string name="perms_description_app">فراهم شده توسّط: .</string>
     <string name="perms_new_perm_prefix">جدید:</string>
     <string name="permissions">دسترسی ها</string>
     <string name="links">پیوندها</string>
@@ -45,7 +45,19 @@
     <string name="download_pending">در انتظار شروع بارگیری…</string>
     <string name="more">بیشتر</string>
     <string name="last_update">آخرین به‌روز رسانی</string>
-    <string name="added_on">در %s افزوده شد</string>
+    <string name="added_on">در  افزوده شد</string>
     <string name="name">نام</string>
     <string name="sort_search">چینش جست‌وجو</string>
+    <string name="action_uninstall">حذف نصب</string>
+    <string name="license">پروانه</string>
+    <string name="app_size">اندازه: </string>
+    <string name="ok">قبول</string>
+    <string name="download_error">بارگیری ناموفق!</string>
+    <string name="saving_app_details">در حال ذخیرهٔ جزییات برنامه</string>
+    <string name="cancel">لغو</string>
+    <string name="crash_dialog_title">اف‌دروید از کار افتاد</string>
+    <string name="crash_dialog_text">خطایی پیش‌بینی نشده رخ داد که برنامه را وادار به توقّف کرد. می‌خواهید جزئیات را برای کمک به حل کردن مشکل، ایمیل کنید؟</string>
+    <string name="crash_dialog_comment_prompt">در این‌جا می‌توانید اطّلاعات اضافی و نظرها را بیفزایید:</string>
+    <string name="pref_title_send_crash_reports">اعلان فرستادن گزارش‌های خرابی</string>
+    <string name="pref_description_send_crash_reports">جمع‌آوری داده دربارهٔ خرابی‌ها و پرسش برای فرستادنشان به توسعه‌دهنده</string>
 </resources>

@@ -32,7 +32,7 @@
     <string name="anti_nosourcesince">原始碼不再能取得，無法更新。</string>
     <string name="no_permissions">不需要任何權限。</string>
     <string name="perm_costs_money">這或許會有資金消耗</string>
-    <string name="perms_description_app">由 %1$s 提供。</string>
+    <string name="perms_description_app">由  提供。</string>
     <string name="perms_new_perm_prefix">新的：</string>
     <string name="permissions">存取權</string>
     <string name="links">連結</string>
@@ -114,10 +114,22 @@
     <string name="you_might_also_like">您可能也喜歡</string>
     <string name="random_apps">隨機應用程式</string>
     <string name="last_update">最近更新</string>
-    <string name="added_on">於 %s 新增</string>
+    <string name="added_on">於  新增</string>
     <string name="name">名稱</string>
     <string name="sort_search">搜尋排序</string>
     <string name="stars">星號</string>
     <string name="ascending">遞增</string>
     <string name="descending">遞減</string>
+    <string name="action_uninstall">解除安裝</string>
+    <string name="license">授權條款</string>
+    <string name="app_size">大小：</string>
+    <string name="ok">確定</string>
+    <string name="download_error">下載失敗！</string>
+    <string name="saving_app_details">正在儲存應用程式的詳細資料</string>
+    <string name="cancel">取消</string>
+    <string name="crash_dialog_title">G-Droid 已當掉</string>
+    <string name="crash_dialog_text">應用程式因意外問題而迫使停止。您願意用電子郵件向我們提供詳細資訊，以協助修復此問題嗎？</string>
+    <string name="crash_dialog_comment_prompt">您可以在此加入額外的資訊及評論：</string>
+    <string name="pref_title_send_crash_reports">提示發送崩潰報告</string>
+    <string name="pref_description_send_crash_reports">收集有關崩潰的資料和要求將它們發送給開發人員</string>
 </resources>

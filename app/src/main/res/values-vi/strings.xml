@@ -30,7 +30,7 @@
     <string name="anti_knownvuln">Ứng dụng này có lỗ hổng bảo mật đã bị phát hiện</string>
     <string name="no_permissions">Không sử dụng quyền nào.</string>
     <string name="perm_costs_money">Việc này có thể mất phí</string>
-    <string name="perms_description_app">Được cung cấp bởi %1$s.</string>
+    <string name="perms_description_app">Được cung cấp bởi .</string>
     <string name="perms_new_perm_prefix">Mới:</string>
     <string name="permissions">Quyền</string>
     <string name="links">Liên kết</string>
@@ -44,7 +44,16 @@
     <string name="download_pending">Đang chờ tải về…</string>
     <string name="more">Thêm</string>
     <string name="last_update">Cập nhật lần cuối vào</string>
-    <string name="added_on">Đã thêm vào %s</string>
+    <string name="added_on">Đã thêm vào </string>
     <string name="name">Tên</string>
     <string name="sort_search">Sắp xếp kết quả tìm kiếm</string>
+    <string name="action_uninstall">Gỡ bỏ</string>
+    <string name="license">Giấy phép</string>
+    <string name="ok">OK</string>
+    <string name="download_error">Tải về thất bại!</string>
+    <string name="saving_app_details">Đang lưu thông tin ứng dụng</string>
+    <string name="cancel">Huỷ</string>
+    <string name="crash_dialog_title">G-Droid đã bị dừng đột ngột</string>
+    <string name="crash_dialog_text">Ứng dụng buộc phải dừng vì có lỗi đột ngột xảy ra. Bạn có muốn gửi thông tin qua e-mail để giúp khắc phục vấn đề này không?</string>
+    <string name="crash_dialog_comment_prompt">Bạn có thể đưa thêm thông tin và bình luận ở đây:</string>
 </resources>

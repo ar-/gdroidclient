@@ -28,7 +28,7 @@
     <string name="anti_nonfreeassets">Hierdie program bevat nie-vrye bates</string>
     <string name="no_permissions">Geen magtigings in gebruik.</string>
     <string name="perm_costs_money">Dit kan jy dalk geld kos</string>
-    <string name="perms_description_app">Verskaf deur %1$s.</string>
+    <string name="perms_description_app">Verskaf deur .</string>
     <string name="perms_new_perm_prefix">Nuwe:</string>
     <string name="permissions">Magtigings</string>
     <string name="links">Skakels</string>
@@ -42,6 +42,15 @@
     <string name="download_pending">Wag om aflaai te begin …</string>
     <string name="more">Meer</string>
     <string name="last_update">Laaste opdatering</string>
-    <string name="added_on">Toegevoeg op %s</string>
+    <string name="added_on">Toegevoeg op </string>
     <string name="name">Naam</string>
+    <string name="action_uninstall">Deïnstalleer</string>
+    <string name="license">Lisensie</string>
+    <string name="ok">OK</string>
+    <string name="download_error">Aflaai het misluk!</string>
+    <string name="saving_app_details">Stoor program besonderhede</string>
+    <string name="cancel">Kanselleer</string>
+    <string name="crash_dialog_title">G-Droid het ineengestort</string>
+    <string name="crash_dialog_text">\'N Onverwagse fout het voorgekom wat die program laat stop het.</string>
+    <string name="crash_dialog_comment_prompt">Jy kan ekstra inligting en kommentaar hier laat:</string>
 </resources>

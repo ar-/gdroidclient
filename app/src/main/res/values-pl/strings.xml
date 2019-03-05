@@ -32,7 +32,7 @@
     <string name="anti_nosourcesince">Kod źródłowy nie jest już dostępny, nie są możliwe aktualizacje.</string>
     <string name="no_permissions">Brak wymaganych uprawnień.</string>
     <string name="perm_costs_money">To może Cię kosztować</string>
-    <string name="perms_description_app">Dostarczone przez %1$s.</string>
+    <string name="perms_description_app">Dostarczone przez .</string>
     <string name="perms_new_perm_prefix">Nowe:</string>
     <string name="permissions">Uprawnienia</string>
     <string name="links">Linki</string>
@@ -60,7 +60,7 @@
     <string name="download_pending">Oczekiwanie na pobieranie…</string>
     <string name="more">Więcej</string>
     <string name="last_update">Najnowsza aktualizacja</string>
-    <string name="added_on">Dodano %s</string>
+    <string name="added_on">Dodano </string>
     <string name="name">Nazwa</string>
     <string name="sort_search">Sortuj wyszukiwanie</string>
     <string name="nav_header_subtitle">klient dla repozytorium F-Droid</string>
@@ -76,4 +76,16 @@
     <string name="title_search">szukaj</string>
     <string name="app_store">Sklep z aplikacjami</string>
     <string name="email_client">Klient poczty e-mail</string>
+    <string name="action_uninstall">Odinstaluj</string>
+    <string name="license">Licencja</string>
+    <string name="app_size">Rozmiar: </string>
+    <string name="ok">OK</string>
+    <string name="download_error">Pobieranie nie powiodło się!</string>
+    <string name="saving_app_details">Zapisywanie danych aplikacji</string>
+    <string name="cancel">Anuluj</string>
+    <string name="crash_dialog_title">G-Droid zawiesił się</string>
+    <string name="crash_dialog_text">Nieoczekiwany błąd spowodował zamknięcie aplikacji. Czy chciałbyś przesłać e-mailem szczegóły, aby pomóc naprawić błąd?</string>
+    <string name="crash_dialog_comment_prompt">Możesz dodać dodatkowe informacje i komentarze tutaj:</string>
+    <string name="pref_title_send_crash_reports">Proponuj wysyłanie raportów o awariach</string>
+    <string name="pref_description_send_crash_reports">Zbieraj dane o awariach i proponuj wysyłanie ich do programistów</string>
 </resources>

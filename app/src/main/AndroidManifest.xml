@@ -27,6 +27,7 @@
         android:maxSdkVersion="23" />
 
     <application
+        android:name=".GDroidApp"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
@@ -80,7 +81,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.gdroid.gdroid.MainActivity" />
         </activity>
+        <activity
+            android:name=".CommentListActivity"
+            android:label="@string/comments"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.gdroid.gdroid.MainActivity" />
+        </activity>
         <activity android:name=".installer.baria.ManualAppInstallActivity" />
+        <activity
+            android:name=".acra.CrashReportActivity"
+            android:process=":error_report"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"/>
     </application>
 
 </manifest>

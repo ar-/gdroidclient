@@ -32,7 +32,7 @@
 
     <string name="no_permissions">Aucune autorisation n\'est utilisée.</string>
     <string name="perm_costs_money">Peut vous coûter de l\'argent</string>
-    <string name="perms_description_app">Fourni par %1$s.</string>
+    <string name="perms_description_app">Fourni par .</string>
     <string name="perms_new_perm_prefix">Nouveauté :</string>
     <string name="permissions">Autorisations</string>
     <string name="links">Liens</string>
@@ -82,7 +82,7 @@
     <string name="download_pending">Téléchargement en attente…</string>
     <string name="more">Plus</string>
     <string name="last_update">Dernière mise à jour</string>
-    <string name="added_on">Ajoutée le %s</string>
+    <string name="added_on">Ajoutée le </string>
     <string name="name">Nom</string>
     <string name="sort_search">Trier la recherche</string>
     <string name="action_hide">Masquer</string>
@@ -120,4 +120,16 @@
     <string name="search_harder">Chercher encore</string>
     <string name="search_even_harder">Chercher plus encore</string>
     <string name="installed_details">%d applications installées</string>
+    <string name="action_uninstall">Désinstaller</string>
+    <string name="license">Licence</string>
+    <string name="app_size">Taille : </string>
+    <string name="ok">Ok</string>
+    <string name="download_error">Téléchargement échoué !</string>
+    <string name="saving_app_details">Enregistrement des détails de l\'appli</string>
+    <string name="cancel">Annuler</string>
+    <string name="crash_dialog_title">G-Droid s\'est arrêté de manière inattendue</string>
+    <string name="crash_dialog_text">Une erreur inattendue s’est produite</string>
+    <string name="crash_dialog_comment_prompt">Vous pouvez ajouter des informations supplémentaires :</string>
+    <string name="pref_title_send_crash_reports">Demander avant d\'envoyer les rapports de plantage</string>
+    <string name="pref_description_send_crash_reports">Recueillir des informations de débogage et proposer de les envoyer à l\'équipe de développement</string>
 </resources>

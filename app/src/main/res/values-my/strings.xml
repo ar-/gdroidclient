@@ -27,7 +27,7 @@
     <string name="anti_nonfreeassets">ဒီ app သည္ အခမဲ့မဟုတ္ေသာ ပံုမ်ားပါဝင္သည္</string>
     <string name="no_permissions">မည္သည့္ခြင့္ျပဳခ်က္ကိုမွမသံုးခဲ့ပါ.</string>
     <string name="perm_costs_money">၄င္းသည္ ေငြေၾကးကုန္က်ႏိုင္သည္</string>
-    <string name="perms_description_app">%1$s မွေထာက္ပံ့ထားသည္.</string>
+    <string name="perms_description_app"> မွေထာက္ပံ့ထားသည္.</string>
     <string name="perms_new_perm_prefix">အသစ္ -</string>
     <string name="permissions">ခြင့္ျပဳခ်က္မ်ား</string>
     <string name="links">လင့္ခ္</string>
@@ -41,6 +41,14 @@
     <string name="download_pending">ေဒါင္းလုတ္စရန္ေစာင့္ဆိုင္းေနသည္…</string>
     <string name="more">ေနာက္ထပ္</string>
     <string name="last_update">ေနာက္ဆံုးအသစ္မြမ္းမံျခင္း</string>
-    <string name="added_on">%s တြင္ေပါင္းထည့္ခ့ဲသည္</string>
+    <string name="added_on"> တြင္ေပါင္းထည့္ခ့ဲသည္</string>
     <string name="name">အမည္</string>
+    <string name="action_uninstall">ျဖဳတ္မည္</string>
+    <string name="license">လိုင္စင္</string>
+    <string name="ok">အိုေက</string>
+    <string name="download_error">ေဒါင္းလုတ္မေအာင္ျမင္ပါ</string>
+    <string name="saving_app_details">Application အခ်က္အလက္မ်ားကိုသိမ္းဆည္းေနသည္</string>
+    <string name="cancel">ပယ္ဖ်က္မည္</string>
+    <string name="crash_dialog_title">G-Droid ခဏရပ္သြားပါသည္</string>
+    <string name="crash_dialog_comment_prompt">သင္သည္ ေနာက္ထပ္ အခ်က္အလက္မ်ားႏွင့္မွတ္ခ်က္မ်ားကို</string>
 </resources>

@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Zdrojový kód už není k dispozici, aktualizace nejsou možné.</string>
     <string name="no_permissions">Žádná oprávnění nejsou použita.</string>
     <string name="perm_costs_money">Toto může stát peníze</string>
-    <string name="perms_description_app">Poskytováno %1$s.</string>
+    <string name="perms_description_app">Poskytováno .</string>
     <string name="perms_new_perm_prefix">Nová:</string>
     <string name="permissions">Oprávnění</string>
     <string name="links">Odkazy</string>
@@ -45,7 +45,19 @@
     <string name="download_pending">Čekání na spuštění stahování…</string>
     <string name="more">Více</string>
     <string name="last_update">Minulá aktualizace</string>
-    <string name="added_on">Přidáno %s</string>
+    <string name="added_on">Přidáno </string>
     <string name="name">Název</string>
     <string name="sort_search">Setřídit hledání</string>
+    <string name="action_uninstall">Odinstalovat</string>
+    <string name="license">Licence</string>
+    <string name="app_size">Velikost: </string>
+    <string name="ok">OK</string>
+    <string name="download_error">Stahování se nezdařilo!</string>
+    <string name="saving_app_details">Ukládání podrobností o aplikaci</string>
+    <string name="cancel">Storno</string>
+    <string name="crash_dialog_title">G-Droid neočekávaně skončil</string>
+    <string name="crash_dialog_text">Neočekávaná chyba vynutila ukončení aplikace. Odeslat vývojářům podrobnosti e-mailem a pomoci tak s nápravou?</string>
+    <string name="crash_dialog_comment_prompt">Zde můžete přidat další informace a komentáře:</string>
+    <string name="pref_title_send_crash_reports">Dotázat se na odeslání hlášení o pádu</string>
+    <string name="pref_description_send_crash_reports">Shromáždí důležitá data o pádu aplikace a před odesláním vývojářúm se dotáže</string>
 </resources>

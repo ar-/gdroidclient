@@ -27,7 +27,7 @@
     <string name="anti_nonfreeassets">App ino inenhumbi dzinobhadharwa</string>
     <string name="no_permissions">Hapana mibvumo yakashandiswa.</string>
     <string name="perm_costs_money">Izvi zvichada mari</string>
-    <string name="perms_description_app">Kuyananiswa na %1$s.</string>
+    <string name="perms_description_app">Kuyananiswa na .</string>
     <string name="perms_new_perm_prefix">Chitsva:</string>
     <string name="permissions">Mibvumo</string>
     <string name="links">Kochekero</string>
@@ -41,6 +41,15 @@
     <string name="download_pending">Takamirira kutanga kututunura…</string>
     <string name="more">Zvimwe</string>
     <string name="last_update">Chapedzisira kunatsa</string>
-    <string name="added_on">Chawedzerwa pa %s</string>
+    <string name="added_on">Chawedzerwa pa </string>
     <string name="name">Zita</string>
+    <string name="action_uninstall">Bvisa chivakirira</string>
+    <string name="license">Rezenisi</string>
+    <string name="ok">OK</string>
+    <string name="download_error">Kututunura hakuna kubudirira</string>
+    <string name="saving_app_details">Kuchengeta zvizere zveapplication</string>
+    <string name="cancel">Kanzura</string>
+    <string name="crash_dialog_title">G-Droid yabondera</string>
+    <string name="crash_dialog_text">Pane kanganiso isina kutarisirwa yaitika</string>
+    <string name="crash_dialog_comment_prompt">Unokwanisa kuwedzera mashoko mamwe ne mawonero ako panapa:</string>
 </resources>

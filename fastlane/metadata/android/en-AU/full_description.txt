@@ -4,6 +4,7 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 
 # Additional features compared to F-Droid
 
+* shows reviews and comments for apps
 * star ratings of apps (up to 5 stars) - machine generated metrics
 * shows the star upstream star ratings (github, gitlab, sourceforge)
 * implements more metrics based on open source data (like average release cycle time) to generate a star-ratings
@@ -37,7 +38,6 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 
 # Things that G-Droid can NOT do (yet) compared to F-Droid
 
-* uninstall apps
 * show or install an older version of an app
 * create a local repo, share apps with 'near' people or share apps via bluetooth
 * add other repositories than the F-Droid repo

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+  ~ Copyright (C) 2018-2019 Andreas Redmer <ar-gdroid@abga.be>
   ~
   ~ This program is free software: you can redistribute it and/or modify
   ~ it under the terms of the GNU General Public License as published by
@@ -25,7 +25,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".AppDetailActivity"
     tools:showIn="@layout/activity_app_detail"
-    android:focusableInTouchMode="true"
     >
 
     <LinearLayout
@@ -33,12 +32,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="15dp"
+        android:focusableInTouchMode="true"
         >
 
         <LinearLayout
             android:visibility="visible"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            >
 
             <ImageView
                 android:id="@+id/img_icon"
@@ -133,6 +135,17 @@
             android:gravity="right"
             >
 
+
+            <Button
+                android:id="@+id/btn_uninstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_uninstall"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="#ffffffff"
+                />
 
             <Button
                 android:id="@+id/btn_launch"
@@ -436,8 +449,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp"
-                    android:text="last update"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/last_update"
                     android:layout_gravity="center_vertical"
                     android:textStyle="bold"
                     />
@@ -446,7 +460,8 @@
                     android:id="@+id/lbl_lastupdated"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:text="2018-10-02" />
 
 
@@ -455,8 +470,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp"
-                    android:text="License"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/license"
                     android:layout_gravity="center_vertical"
                     android:textStyle="bold" />
 
@@ -464,12 +480,136 @@
                     android:id="@+id/lbl_license"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:text="MIT" />
             </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/added_on"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/lbl_added"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="2018-10-02" />
+
+
+                <Space android:minWidth="50dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/app_size"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lbl_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="0" />
+            </TableRow>
+
         </TableLayout>
 
+    <LinearLayout
+        android:id="@+id/view_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/comments"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/btn_more_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#ffffffff"
+                />
+
+            <Button
+                android:id="@+id/btn_add_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/write_comment"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#ffffffff"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/lbl_no_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/no_comments_available" />
+
+        <TextView
+            android:id="@+id/lbl_fetching_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/fetching_comments" />
+
+        <ProgressBar
+            android:id="@+id/circle_fetching_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:indeterminate="true" />
+
+        <org.gdroid.gdroid.widget.WrappingListView
+            android:id="@+id/listview_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            >
+
+        </org.gdroid.gdroid.widget.WrappingListView>
+
+    </LinearLayout>
 
         <LinearLayout
             android:id="@+id/view_developer"
@@ -486,7 +626,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/text_margin"
-                android:text="Developer"
+                android:text="@string/developer"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 

@@ -30,7 +30,7 @@
     <string name="anti_knownvuln">Denne app indeholder en kendt sårbarhed</string>
     <string name="no_permissions">Ingen tilladelser bliver brugt.</string>
     <string name="perm_costs_money">Dette koster dig muligvis penge</string>
-    <string name="perms_description_app">Udbudt af %1$s.</string>
+    <string name="perms_description_app">Udbudt af .</string>
     <string name="perms_new_perm_prefix">Nye:</string>
     <string name="permissions">Tilladelser</string>
     <string name="links">Links</string>
@@ -44,7 +44,16 @@
     <string name="download_pending">Venter på at kunne begynde hentning…</string>
     <string name="more">Mere</string>
     <string name="last_update">Sidste opdatering</string>
-    <string name="added_on">Tilføjet den %s</string>
+    <string name="added_on">Tilføjet den </string>
     <string name="name">Navn</string>
     <string name="sort_search">Sorter søgning</string>
+    <string name="action_uninstall">Afinstaller</string>
+    <string name="license">Licens</string>
+    <string name="ok">OK</string>
+    <string name="download_error">Hentning mislykkedes!</string>
+    <string name="saving_app_details">Gemmer app-detaljer</string>
+    <string name="cancel">Annuller</string>
+    <string name="crash_dialog_title">G-Droid er gået ned</string>
+    <string name="crash_dialog_text">En uventet fejl har tvunget applikationen til at stoppe. Vil du sende en e-mail med detaljer som hjælper med at ordne problemet?</string>
+    <string name="crash_dialog_comment_prompt">Du kan tilføje ekstra information og kommentarer her:</string>
 </resources>

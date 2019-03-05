@@ -30,15 +30,18 @@ import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.beans.AuthorBean;
 
 import java.text.DecimalFormat;
+import java.util.List;
 
 public class AuthorArrayAdapter extends ArrayAdapter<AuthorBean> {
     private final Context context;
-    private final AuthorBean[] values;
+    private final List<AuthorBean> values;
+    private final String prefix;
 
-    public AuthorArrayAdapter(Context context, AuthorBean[] values) {
+    public AuthorArrayAdapter(Context context, List<AuthorBean> values, String prefix) {
         super(context, -1, values);
         this.context = context;
         this.values = values;
+        this.prefix = prefix;
     }
 
     @Override
@@ -48,10 +51,10 @@ public class AuthorArrayAdapter extends ArrayAdapter<AuthorBean> {
         View rowView = inflater.inflate(R.layout.author_line, parent, false);
         TextView line1 = rowView.findViewById(R.id.lbl_firstLine);
         TextView line2 = rowView.findViewById(R.id.lbl_secondLine);
-        ImageView imageView = rowView.findViewById(R.id.icon);
-        line1.setText(values[position].author);
+//        ImageView imageView = rowView.findViewById(R.id.icon);
+        line1.setText(values.get(position).author);
         DecimalFormat df = new DecimalFormat("0.0");
-        line2.setText(values[position].apps + " apps ("+df.format(values[position].stars) + " ★)");
+        line2.setText(values.get(position).apps + prefix +" apps ("+df.format(values.get(position).stars) + " ★)");
 //        imageView.setImageResource(R.drawable.ic_update_green_24dp);
         return rowView;
     }

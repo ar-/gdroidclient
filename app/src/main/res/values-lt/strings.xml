@@ -37,7 +37,15 @@
     <string name="download_all_updates">Atsiųsti visus atnaujinimus</string>
     <string name="more">Daugiau</string>
     <string name="last_update">Paskiausias atnaujinimas</string>
-    <string name="added_on">Išleista %s</string>
+    <string name="added_on">Išleista </string>
     <string name="name">Pavadinimas</string>
     <string name="sort_search">Sugrupuoti paiešką</string>
+    <string name="action_uninstall">Pašalinti</string>
+    <string name="license">Licenzija</string>
+    <string name="app_size">Dydis: </string>
+    <string name="ok">Gerai</string>
+    <string name="cancel">Atsisakyti</string>
+    <string name="crash_dialog_title">G-Droid sugriuvo</string>
+    <string name="crash_dialog_text">Įvyko netikėta klaida, dėl kurios sustojo programėlė. Ar norėtumėte el. paštu atsiųsti klaidos detales, kad padėtumėme išsprestį tai?</string>
+    <string name="pref_description_send_crash_reports">Rinkti info apie klaidas ir siųsti jas kūrėjui</string>
 </resources>

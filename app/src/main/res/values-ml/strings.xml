@@ -28,7 +28,7 @@
     <string name="anti_nonfreeassets">ഈ പ്രയോഹം സ്വതന്ത്രമല്ലാത്ത ആസ്തികള്‍ ഉപയോഗിക്കുന്നു</string>
     <string name="no_permissions">ഒരു അനുമതികളും ഉപയോഗിക്കുന്നില്ല.</string>
     <string name="perm_costs_money">ഇത് പണം ഈടാക്കിയേക്കാം</string>
-    <string name="perms_description_app">%1$s നൽകിയത്.</string>
+    <string name="perms_description_app"> നൽകിയത്.</string>
     <string name="perms_new_perm_prefix">പുതിയ:</string>
     <string name="permissions">അനുമതികൾ</string>
     <string name="links">കണ്ണികള്‍</string>
@@ -42,6 +42,15 @@
     <string name="download_pending">ഡൗൺലോഡ് ആരംഭിക്കാൻ കാത്തിരിക്കുന്നു…</string>
     <string name="more">കൂടുതല്‍</string>
     <string name="last_update">അവസാനം പുതുക്കിയത്</string>
-    <string name="added_on">%s ന് ചേർത്തത്</string>
+    <string name="added_on"> ന് ചേർത്തത്</string>
     <string name="name">പേര്</string>
+    <string name="action_uninstall">ഒഴിവാക്കുക</string>
+    <string name="license">അനുമതി</string>
+    <string name="ok">ശരി</string>
+    <string name="download_error">ഡൗൺലോഡ് പരാജയപ്പെട്ടു!</string>
+<string name="saving_app_details">പ്രയോഗ വിവരങ്ങള്‍ സൂക്ഷിക്കുന്നു</string>
+    <string name="cancel">റദ്ദാക്കുക</string>
+    <string name="crash_dialog_title">എഫ്-ഡ്രോയ്ഡ് തകര്‍ന്നു</string>
+    <string name="crash_dialog_text">പ്രയോഗം നിർത്തുന്നതില്‍ ഒരു അപ്രതീക്ഷിത പിശക് സംഭവിച്ചു. പ്രശ്നം പരിഹരിക്കാൻ സഹായിക്കുന്നതിന് വിശദാംശങ്ങൾ ഇ-മെയിൽ ചെയ്യാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?</string>
+    <string name="crash_dialog_comment_prompt">നിങ്ങൾക്ക് അധിക വിവരങ്ങളും അഭിപ്രായങ്ങളും ഇവിടെ ചേർക്കാം:</string>
 </resources>

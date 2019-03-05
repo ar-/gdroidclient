@@ -27,7 +27,7 @@
     <string name="anti_nonfreeassets">โปรแกรมนี้มีส่วนประกอบภาพเสียงที่ไม่เสรี</string>
     <string name="no_permissions">ไม่มีการขออนุญาตใดๆ เป็นพิเศษ</string>
     <string name="perm_costs_money">อาจจะัทำให้คุณเสียค่าใช้จ่าย</string>
-    <string name="perms_description_app">จัดให้โดย %1$s</string>
+    <string name="perms_description_app">จัดให้โดย </string>
     <string name="perms_new_perm_prefix">ใหม่:</string>
     <string name="permissions">การขออนุญาตพิเศษ</string>
     <string name="links">ลิงค์</string>
@@ -40,6 +40,15 @@
     <string name="download_pending">เตรียมพร้อมจะเริ่มการดาวน์โหลด…</string>
     <string name="more">เพิ่มเติม</string>
     <string name="last_update">อัพเดตครั้งล่าสุดเมื่อ</string>
-    <string name="added_on">เพิ่มมาเมื่อ %s</string>
+    <string name="added_on">เพิ่มมาเมื่อ </string>
     <string name="name">ชื่อ</string>
+    <string name="action_uninstall">ถอนการติดตั้ง</string>
+    <string name="license">สัญญาอนุญาต</string>
+    <string name="ok">ตกลง</string>
+    <string name="download_error">การดาวน์โหลดล้มเหลว</string>
+    <string name="saving_app_details">กำลังบันทึกรายละเอียดโปรแกรม</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="crash_dialog_title">G-Droid เกิดข้อผิดพลาด</string>
+    <string name="crash_dialog_text">มีข้อผิดพลาดที่ทำให้โปรแกรมหยุดทำงานกะทันหัน,</string>
+    <string name="crash_dialog_comment_prompt">ระบุรายละเอียดและหมายเหตุเพิ่มเติมที่นี่:</string>
 </resources>

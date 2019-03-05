@@ -35,7 +35,14 @@
     <string name="download_all_updates">بارلىق يېڭىلانمىلارنى چۈشۈرۈش</string>
     <string name="more">جىقراق</string>
     <string name="last_update">ئاخىرقى يېڭىلانما</string>
-    <string name="added_on">%s گە قوشۇلدى</string>
+    <string name="added_on"> گە قوشۇلدى</string>
     <string name="name">ئاتى</string>
     <string name="sort_search">ئىزدەشلەرنى رەتلە</string>
+    <string name="action_uninstall">ئۆچۈر</string>
+    <string name="license">ئىجازەتنامە</string>
+    <string name="ok">جەزىملە</string>
+    <string name="saving_app_details">ئۇيغۇلىما تەپسىلاتىنى ساقلاۋاتىدۇ</string>
+    <string name="cancel">ۋاز كەچ</string>
+    <string name="crash_dialog_title">ف-درويد موللاق ئاتتى</string>
+    <string name="crash_dialog_text">كۈتۈلمىگەن بىر خاتالىق ئۇيغۇلىمىنى توختاشقا زورلاۋاتىدۇ. تەپسىلاتىنى ئېلخەت بىلەن يوللاپ مەسىلىنى ھەل قىلىشنى خالامسىز؟</string>
 </resources>

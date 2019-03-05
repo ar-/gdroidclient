@@ -32,7 +32,7 @@
     <string name="anti_nosourcesince">Codul sursă nu mai este disponibil, nu mai există posibilitatea de a actualiza.</string>
     <string name="no_permissions">Nu folosește nici-o permisiune.</string>
     <string name="perm_costs_money">Asta ar putea să coste bani</string>
-    <string name="perms_description_app">Facut valabil de către %1$s.</string>
+    <string name="perms_description_app">Facut valabil de către .</string>
     <string name="perms_new_perm_prefix">Nou:</string>
     <string name="permissions">Permisiuni</string>
     <string name="links">Legături</string>
@@ -79,7 +79,7 @@
     <string name="similar_apps">Aplicații similare</string>
     <string name="by_same_author">"De la același autor "</string>
     <string name="menu_app_authors">"Autorii aplicației "</string>
-    <string name="installing" formatted="false">Instalând %s</string>
+    <string name="installing" formatted="false">Instalând </string>
     <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">"Deschide meniul de navigație "</string>
     <string name="navigation_drawer_close">"Închide meniul de navigație "</string>
@@ -103,7 +103,7 @@
     <string name="youtube_player">"YouTube "</string>
     <string name="more">Mai mult</string>
     <string name="last_update">Ultima actualizare</string>
-    <string name="added_on">Adăugat pe %s</string>
+    <string name="added_on">Adăugat pe </string>
     <string name="name">Nume</string>
     <string name="sort_search">Sortare căutare</string>
     <string name="title_dashboard">Tablou de bord</string>
@@ -117,4 +117,16 @@
     <string name="stars">Stele</string>
     <string name="ascending">crescător</string>
     <string name="descending">descrescător</string>
+    <string name="action_uninstall">Dezinstalează</string>
+    <string name="license">Licență</string>
+    <string name="app_size">Mărime: </string>
+    <string name="ok">Aplică</string>
+    <string name="download_error">Descărcare eșuată!</string>
+    <string name="saving_app_details">Salvare detalii aplicație</string>
+    <string name="cancel">Anulează</string>
+    <string name="crash_dialog_title">G-Droid s-a oprit</string>
+    <string name="crash_dialog_text">O eroare neașteptată s-a produs forțând oprirea aplicației. Doriți să trimite-ți un e-mail cu detalii pentru a putea ajuta la rezolvarea acestei probleme?</string>
+    <string name="crash_dialog_comment_prompt">Puteți adăuga informații și comentarii aici:</string>
+    <string name="pref_title_send_crash_reports">Notifică la trimiterea raportelor de eroare</string>
+    <string name="pref_description_send_crash_reports">Se strâng date despre erori și se întreabă dacă se pot trimite dezvoltatorului</string>
 </resources>

@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">소스 코드는 더 이상 사용 가능하지 않으며, 업데이트 가능성은 없습니다.</string>
     <string name="no_permissions">사용된 권한이 없습니다.</string>
     <string name="perm_costs_money">금전을 요구할 수 있습니다</string>
-    <string name="perms_description_app">%1$s 제공.</string>
+    <string name="perms_description_app"> 제공.</string>
     <string name="perms_new_perm_prefix">새 권한:</string>
     <string name="permissions">권한</string>
     <string name="links">링크</string>
@@ -45,7 +45,19 @@
     <string name="download_pending">다운로드 시작을 기다리는 중…</string>
     <string name="more">더 보기</string>
     <string name="last_update">마지막 업데이트</string>
-    <string name="added_on">%s에 추가됨</string>
+    <string name="added_on">에 추가됨</string>
     <string name="name">이름</string>
     <string name="sort_search">검색 정렬</string>
+    <string name="action_uninstall">제거</string>
+    <string name="license">라이선스</string>
+    <string name="app_size">크기: </string>
+    <string name="ok">확인</string>
+    <string name="download_error">다운로드 실패됨!</string>
+    <string name="saving_app_details">앱 자세한 사항 저장 중</string>
+    <string name="cancel">취소</string>
+    <string name="crash_dialog_title">G-Droid가 중지됨</string>
+    <string name="crash_dialog_text">예기치 못한 오류로 인해 앱이 강제로 중지되었습니다. 자세한 사항을 이메일로 보내 이슈를 해결하도록 도와주시겠습니까?</string>
+    <string name="crash_dialog_comment_prompt">여기에 추가적인 정보와 댓글을 추가할 수 있습니다:</string>
+    <string name="pref_title_send_crash_reports">충돌 보고서를 보낼지를 확인</string>
+    <string name="pref_description_send_crash_reports">충돌에 대한 데이터를 수집하여 개발자에게 그것들을 보내도록 요청합니다</string>
 </resources>

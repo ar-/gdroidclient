@@ -17,7 +17,7 @@
     <string name="anti_upstreamnonfree">Kodi burimor nuk është plotësisht Falas</string>
     <string name="anti_nonfreeassets">Ky aplikacion përmban pronë jo-falas</string>
     <string name="perm_costs_money">Kjo mund t\'ju kushtojë para</string>
-    <string name="perms_description_app">Mundësuar nga %1$s.</string>
+    <string name="perms_description_app">Mundësuar nga .</string>
     <string name="perms_new_perm_prefix">Risi:</string>
     <string name="permissions">Autorizimet</string>
     <string name="links">Lidhje</string>
@@ -29,7 +29,13 @@
     <string name="downloading">Duke shkarkuar…</string>
     <string name="more">Më shumë</string>
     <string name="last_update">Përditësimi i fundit</string>
-    <string name="added_on">Shtuar me %s</string>
+    <string name="added_on">Shtuar me </string>
     <string name="name">Emri</string>
     <string name="sort_search">Rendite kërkimin</string>
+    <string name="action_uninstall">Çinstalo</string>
+    <string name="license">Licenca</string>
+    <string name="ok">OK</string>
+    <string name="download_error">Shkarkimi dështoi</string>
+    <string name="cancel">Anulo</string>
+    <string name="crash_dialog_comment_prompt">Këtu mundë të shtosh detaje dhe komente shtesë:</string>
 </resources>

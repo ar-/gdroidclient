@@ -10,7 +10,7 @@
     <string name="category_Sports_Health">खेल एवं स्वास्थ्य</string>
     <string name="category_Writing">लेख</string>
     <string name="perm_costs_money">यह तुम्हारे पैसे खर्च कर सकते हैं</string>
-    <string name="perms_description_app">%1$s द्वारा उपलब्ध कराया गया|</string>
+    <string name="perms_description_app"> द्वारा उपलब्ध कराया गया|</string>
     <string name="perms_new_perm_prefix">नया:</string>
     <string name="links">संधियां</string>
     <string name="yes">हाँ</string>
@@ -18,5 +18,13 @@
     <string name="downloading">डोव्न्लोअदिन्ग…</string>
     <string name="more">ज्यादा</string>
     <string name="last_update">अंतिम अद्यतन</string>
-    <string name="added_on">%s पर जोड़ा</string>
+    <string name="added_on"> पर जोड़ा</string>
+    <string name="license">लाइसेंस</string>
+    <string name="ok">ठीक</string>
+    <string name="download_error">डाउनलोड असफल</string>
+    <string name="saving_app_details">आवेदन विवरण सम्हाल रखना</string>
+    <string name="cancel">रद्द करे</string>
+    <string name="crash_dialog_title">G-Droid दुर्घटनाग्रस्त हुआ है</string>
+    <string name="crash_dialog_text">अप्रत्याशित भूल के कारन एप्लीकेशन बंद हो गयी है| क्या ईमेल भेज कर इस समाधान को</string>
+    <string name="crash_dialog_comment_prompt">आप अन्य जानकारी और टिप्पणियाँ यहाँ लिख सकते हैं:</string>
 </resources>

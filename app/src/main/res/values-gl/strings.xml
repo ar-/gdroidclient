@@ -30,7 +30,7 @@
     <string name="anti_knownvuln">Esta aplicación contén unha vulnerabilidade de seguridade coñecida</string>
     <string name="no_permissions">Non se usan permisos.</string>
     <string name="perm_costs_money">Esto pode costarlle cartos</string>
-    <string name="perms_description_app">Ofertado por %1$s.</string>
+    <string name="perms_description_app">Ofertado por .</string>
     <string name="perms_new_perm_prefix">Novo:</string>
     <string name="permissions">Permisos</string>
     <string name="links">Ligazóns</string>
@@ -44,7 +44,16 @@
     <string name="download_pending">Agardando para iniciar a descarga…</string>
     <string name="more">Máis</string>
     <string name="last_update">Última actualización</string>
-    <string name="added_on">Engadida a %s</string>
+    <string name="added_on">Engadida a </string>
     <string name="name">Nome</string>
     <string name="sort_search">Ordear busca</string>
+    <string name="action_uninstall">Desinstalar</string>
+    <string name="license">Licenza</string>
+    <string name="ok">Aceptar</string>
+    <string name="download_error">Descarga falida!</string>
+    <string name="saving_app_details">Gardando os detalles das apps</string>
+    <string name="cancel">Cancelar</string>
+    <string name="crash_dialog_title">G-Droid quebrou</string>
+    <string name="crash_dialog_text">Ocorreu un erro inesperado, forzando a parada do aplicativo. Gostaria de enviar un e-mail cos detalles para axudar a correxir o problema?</string>
+    <string name="crash_dialog_comment_prompt">Pode engadir información adicional e comentarios aquí:</string>
 </resources>

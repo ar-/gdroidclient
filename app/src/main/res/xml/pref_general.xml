@@ -1,5 +1,5 @@
 <!--
-  ~ Copyright (C) 2018 Andreas Redmer <ar-gdroid@abga.be>
+  ~ Copyright (C) 2018,2019 Andreas Redmer <ar-gdroid@abga.be>
   ~
   ~ This program is free software: you can redistribute it and/or modify
   ~ it under the terms of the GNU General Public License as published by
@@ -22,14 +22,24 @@
         android:defaultValue="false"
         android:enabled="true"
         android:key="use_root"
+        android:title="@string/pref_title_use_root"
         android:summary="@string/pref_description_use_root"
-        android:title="@string/pref_title_use_root" />
+        />
 
     <SwitchPreference
         android:defaultValue="false"
         android:enabled="true"
         android:key="use_list_view"
         android:title="@string/pref_title_use_list_view"
-        android:summary="@string/pref_description_use_list_view" />
+        android:summary="@string/pref_description_use_list_view"
+        />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:enabled="true"
+        android:key="send_crash_reports"
+        android:title="@string/pref_title_send_crash_reports"
+        android:summary="@string/pref_description_send_crash_reports"
+        />
 
 </PreferenceScreen>

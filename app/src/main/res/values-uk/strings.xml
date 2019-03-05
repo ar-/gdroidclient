@@ -31,7 +31,7 @@
     <string name="anti_nosourcesince">Джерельний код вже не є доступним, оновлення не є можливими.</string>
     <string name="no_permissions">Не потребує дозволів.</string>
     <string name="perm_costs_money">Це може вам коштувати грошей</string>
-    <string name="perms_description_app">Надано %1$s.</string>
+    <string name="perms_description_app">Надано .</string>
     <string name="perms_new_perm_prefix">Нові:</string>
     <string name="permissions">Привілеї</string>
     <string name="links">Посилання</string>
@@ -45,7 +45,19 @@
     <string name="download_pending">Очікування початку завантаження…</string>
     <string name="more">Більше</string>
     <string name="last_update">Останнє оновлення</string>
-    <string name="added_on">Додано %s</string>
+    <string name="added_on">Додано </string>
     <string name="name">Назва</string>
 <string name="sort_search">Розсортувати за пошуком</string>
+    <string name="action_uninstall">Видалити</string>
+    <string name="license">Ліцензія</string>
+    <string name="app_size">Розмір: </string>
+    <string name="ok">ОК</string>
+    <string name="download_error">Помилка завантаження!</string>
+    <string name="saving_app_details">Збереження деталей застосунку</string>
+    <string name="cancel">Скасувати</string>
+    <string name="crash_dialog_title">G-Droid зазнав збою</string>
+    <string name="crash_dialog_text">Сталася неочікувана помилка, змусивши застосунок зупинитися. Хочете надіслати листа з подробицями, які допоможуть нам усунути цю ваду?</string>
+    <string name="crash_dialog_comment_prompt">Можете ввести додаткову інформацію та коментарі тут:</string>
+    <string name="pref_title_send_crash_reports">Запит на надсилання звітів про неполадки</string>
+    <string name="pref_description_send_crash_reports">Збір інформації про неполадки та запит на надсилання її розробнику</string>
 </resources>
