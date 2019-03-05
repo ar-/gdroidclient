@@ -52,4 +52,12 @@
     <string name="license">Licenza</string>
     <string name="app_size">Dimensione: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Scaricamento fallito!</string>
+    <string name="saving_app_details">Salvataggio dettagli applicazione</string>
+    <string name="cancel">Annulla</string>
+    <string name="crash_dialog_title">G-Droid si è bloccato</string>
+    <string name="crash_dialog_text">Un errore inaspettato ha provocato il blocco dell\'applicazione. Vuoi inviare una e-mail con i dettagli per aiutarci a risolvere il problema?</string>
+    <string name="crash_dialog_comment_prompt">Puoi aggiungere altre informazioni e commenti qui:</string>
+    <string name="pref_title_send_crash_reports">Chiedi per inviare segnalazioni di errori</string>
+    <string name="pref_description_send_crash_reports">Raccogli dati sugli errori e chiedi di inviarli allo sviluppatore</string>
 </resources>

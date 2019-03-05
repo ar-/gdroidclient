@@ -49,4 +49,12 @@
     <string name="license">Лиценца</string>
     <string name="app_size">Величина: </string>
     <string name="ok">У реду</string>
+    <string name="download_error">Преузимање није успело!</string>
+    <string name="saving_app_details">Уписујем детаље апликација</string>
+    <string name="cancel">Одустани</string>
+    <string name="crash_dialog_title">Ф-дроид се срушио</string>
+    <string name="crash_dialog_text">Неочекивана грешка је присилила</string>
+    <string name="crash_dialog_comment_prompt">Можете да унесете додатне податке и коментаре овде:</string>
+    <string name="pref_title_send_crash_reports">Питај да шаљеш извештај о рушењу</string>
+    <string name="pref_description_send_crash_reports">Скупљај податке у рушењима и питај да се пошаљу програмерима</string>
 </resources>

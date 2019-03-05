@@ -33,6 +33,9 @@ public interface SimpleApplicationDao {
     @Query("SELECT * FROM ApplicationBean")
     ApplicationBean[] getAllApplicationBeans();
 
+    @Query("SELECT * FROM ApplicationBean")
+    List<ApplicationBean> getAllApplicationBeansList();
+
     @Query("SELECT * FROM ApplicationBean WHERE NOT isHidden AND id IN (:ids)")
     ApplicationBean[] getSomeApplicationBeans(List<String> ids);
 

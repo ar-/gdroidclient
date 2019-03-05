@@ -52,4 +52,12 @@
     <string name="license">Ліцэнзія</string>
     <string name="app_size">Памер: </string>
     <string name="ok">Добра</string>
+    <string name="download_error">Не атрымалася спампаваць!</string>
+    <string name="saving_app_details">Захоўванне даных праграм</string>
+    <string name="cancel">Скасаваць</string>
+    <string name="crash_dialog_title">G-Droid разбіўся</string>
+    <string name="crash_dialog_text">Неспадзяваная памылка прывяла да аварыйнага спынення праграмы.</string>
+    <string name="crash_dialog_comment_prompt">Можаце ўвясці дадатковую інфармацыю і каментары тут:</string>
+    <string name="pref_title_send_crash_reports">Запыт на адпраўку справаздач аб хібах</string>
+    <string name="pref_description_send_crash_reports">Збор інфармацыі ад падзеннях і запыт на адпраўку яе распрацоўшчыку</string>
 </resources>

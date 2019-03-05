@@ -52,4 +52,12 @@
     <string name="license">Licens</string>
     <string name="app_size">Storlek: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Hämtning misslyckades!</string>
+    <string name="saving_app_details">Sparar app-detaljer</string>
+    <string name="cancel">Avbryt</string>
+    <string name="crash_dialog_title">G-Droid har kraschat</string>
+    <string name="crash_dialog_text">Ett oväntat fel tvingade appen att avslutas. Vill du skicka detaljer med e-post för att hjälpa till att åtgärda problemet?</string>
+    <string name="crash_dialog_comment_prompt">Du kan lägga till ytterligare information och kommentarer här:</string>
+    <string name="pref_title_send_crash_reports">Fråga om att skicka kraschrapporter</string>
+    <string name="pref_description_send_crash_reports">Samla data om krascher och be att få skicka den till utvecklaren</string>
 </resources>

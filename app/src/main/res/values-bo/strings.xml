@@ -47,4 +47,10 @@
     <string name="action_uninstall">འགྲིག་བཅུག་ཕྱིར་འཐེན།</string>
     <string name="license">ཆོག་མཆན་ལག་ཁྱེར།</string>
     <string name="ok">འགྲིག</string>
+    <string name="download_error">ཕབ་ལེན་བྱེད་ཐུབ་མ་སོང་།!</string>
+    <string name="saving_app_details">མཉེས་ཆས་ཞིབ་ཕྲ་ཉར་ཚགས་བྱེད་བཞིན་པ།</string>
+    <string name="cancel">བརྩི་མེད།</string>
+    <string name="crash_dialog_title">ཨེཕ་རོཌ་ལ་གཏོར་སྐྱོན་ཤོར་འདུག</string>
+    <string name="crash_dialog_text">གློ་བུར་དུ་སྐྱོན་ཆ་ཞིག་ཤོར་སོང་བས་མཉེན་ཆས་འདི་སྒོ་མ་རྒྱབ་ཀ་མེད་ཐུག་སོང་། ཁྱེད་རང་གིས་གློག་འཕྲིན་གཏོང་ནས་གནད་དོན་འདི་སེལ་འདོད་དམ།?</string>
+    <string name="crash_dialog_comment_prompt">ཁྱེད་རང་གིས་གནས་ཚུལ་འཕར་མ་དང་མཆན་འདིར་བཀོད་ཐུབ།:</string>
 </resources>

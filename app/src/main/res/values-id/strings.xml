@@ -52,4 +52,12 @@
     <string name="license">Lisensi</string>
     <string name="app_size">Ukuran: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Unduhan gagal!</string>
+    <string name="saving_app_details">Menyimpan detail apl</string>
+    <string name="cancel">Batal</string>
+    <string name="crash_dialog_title">G-Droid telah gagal</string>
+    <string name="crash_dialog_text">Galat yang tidak diduga terjadi memaksa apl untuk berhenti. Apakah Anda ingin mengirim surel untuk membantu memperbaiki masalah ini?</string>
+    <string name="crash_dialog_comment_prompt">Anda dapat menambahkan informasi ekstra dan komentar disini:</string>
+    <string name="pref_title_send_crash_reports">Minta mengirim laporan kerusakan</string>
+    <string name="pref_description_send_crash_reports">Kumpulkan data tentang mogok dan minta untuk mengirimnya ke pengembang</string>
 </resources>

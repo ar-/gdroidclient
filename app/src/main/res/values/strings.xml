@@ -205,4 +205,18 @@
     <string name="fetching_comments">fetching comments …</string>
     <string name="ok">OK</string>
     <string name="how_to_rate">Please share this with a Mastodon app, add your comment but don\'t change the hashtag.</string>
+    <string name="download_error">Download failed!</string>
+    <string name="saving_app_details">Saving app details</string>
+    <string name="could_not_download_gdroid_metadata">could not download G-Droid metadata</string>
+    <string name="cancel">Cancel</string>
+    <string name="crash_dialog_title">G-Droid has crashed</string>
+    <string name="crash_dialog_text">An unexpected error occurred
+        forcing the app to stop. Would you like to e-mail the
+        details to help fix the issue?
+    </string>
+    <string name="crash_dialog_comment_prompt">You can add extra information and comments here:</string>
+    <string name="pref_title_send_crash_reports">Prompt to send crash reports</string>
+    <string name="pref_description_send_crash_reports">Gather data about crashes and ask to send them to the developer</string>
+    <string name="data_is_up_to_date">data is up-to-date</string>
+
 </resources>

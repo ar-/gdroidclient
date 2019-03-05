@@ -124,4 +124,12 @@
     <string name="license">Licence</string>
     <string name="app_size">Taille : </string>
     <string name="ok">Ok</string>
+    <string name="download_error">Téléchargement échoué !</string>
+    <string name="saving_app_details">Enregistrement des détails de l\'appli</string>
+    <string name="cancel">Annuler</string>
+    <string name="crash_dialog_title">G-Droid s\'est arrêté de manière inattendue</string>
+    <string name="crash_dialog_text">Une erreur inattendue s’est produite</string>
+    <string name="crash_dialog_comment_prompt">Vous pouvez ajouter des informations supplémentaires :</string>
+    <string name="pref_title_send_crash_reports">Demander avant d\'envoyer les rapports de plantage</string>
+    <string name="pref_description_send_crash_reports">Recueillir des informations de débogage et proposer de les envoyer à l\'équipe de développement</string>
 </resources>

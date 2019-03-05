@@ -123,4 +123,12 @@
     <string name="license">Licença</string>
     <string name="app_size">Tamanho: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Falha no download!</string>
+    <string name="saving_app_details">Salvando detalhes dos aplicativos</string>
+    <string name="cancel">Cancelar</string>
+    <string name="crash_dialog_title">O G-Droid travou</string>
+    <string name="crash_dialog_text">Ocorreu um erro inesperado,</string>
+    <string name="crash_dialog_comment_prompt">Você pode adicionar informações extras e comentários aqui:</string>
+    <string name="pref_title_send_crash_reports">Perguntar antes de enviar relatórios de falhas</string>
+    <string name="pref_description_send_crash_reports">Reunir dados sobre falhas e enviar pro desenvolvedor</string>
 </resources>

@@ -45,4 +45,8 @@
     <string name="action_uninstall">నివర్తించు</string>
     <string name="license">లైసెన్సు</string>
     <string name="ok">సరే</string>
+    <string name="saving_app_details">అనువర్తన వివరాలను భద్రపరుస్తోంది</string>
+    <string name="cancel">రద్దుచేయి</string>
+    <string name="crash_dialog_title">ఎఫ్-డ్రాయిడ్ ఇబ్బంది ఎదుర్కొంది</string>
+    <string name="crash_dialog_comment_prompt">మీరు ఇక్కడ అదనపు సమాచారం మరియు వ్యాఖ్యలను జోడించవచ్చు:</string>
 </resources>

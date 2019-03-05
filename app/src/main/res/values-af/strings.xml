@@ -47,4 +47,10 @@
     <string name="action_uninstall">Deïnstalleer</string>
     <string name="license">Lisensie</string>
     <string name="ok">OK</string>
+    <string name="download_error">Aflaai het misluk!</string>
+    <string name="saving_app_details">Stoor program besonderhede</string>
+    <string name="cancel">Kanselleer</string>
+    <string name="crash_dialog_title">G-Droid het ineengestort</string>
+    <string name="crash_dialog_text">\'N Onverwagse fout het voorgekom wat die program laat stop het.</string>
+    <string name="crash_dialog_comment_prompt">Jy kan ekstra inligting en kommentaar hier laat:</string>
 </resources>

@@ -47,4 +47,13 @@
     <string name="action_uninstall">Desinstalar</string>
     <string name="license">Llicencia</string>
     <string name="ok">Aceutar</string>
+    <string name="download_error">¡Falló la descarga!</string>
+    <string name="saving_app_details">Guardando detalles de la app</string>
+    <string name="cancel">Encaboxar</string>
+    <string name="crash_dialog_title">G-Droid cascó</string>
+    <string name="crash_dialog_text">Asocedió un fallu inesperáu forciando\'l paru de la app. ¿Prestaríate unviar un corréu colos detalles p\'ayudar a iguar esti problema?</string>
+    <string name="crash_dialog_comment_prompt">Equí pues amestar información y comentarios estra:</string>
+
+    <string name="pref_title_send_crash_reports">Entrugar si mandar informes de fallu</string>
+    <string name="pref_description_send_crash_reports">Collechar datos de los fallos y entrugar pa unvialos al desendolcador</string>
 </resources>

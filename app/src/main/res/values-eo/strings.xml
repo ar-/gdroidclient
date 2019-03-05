@@ -52,4 +52,12 @@
     <string name="license">Permesilo</string>
     <string name="app_size">Grando: </string>
     <string name="ok">Bone</string>
+    <string name="download_error">Elŝuto fiaskis!</string>
+    <string name="saving_app_details">Konservado de aplikaĵaj detaloj</string>
+    <string name="cancel">Nuligi</string>
+    <string name="crash_dialog_title">G-Droid kolapsis</string>
+    <string name="crash_dialog_text">Senatenda eraro okazis kaj devigis aplikaĵon halti. Ĉu vi volas retmesaĝi detalojn</string>
+    <string name="crash_dialog_comment_prompt">Vi povas aldoni ekstrajn informojn kaj komentojn tien ĉi:</string>
+    <string name="pref_title_send_crash_reports">Proponi sendi raportojn pri paneoj</string>
+    <string name="pref_description_send_crash_reports">Kolekti datumojn pri misfunkcioj kaj peti pri sendi ilin al programistoj</string>
 </resources>

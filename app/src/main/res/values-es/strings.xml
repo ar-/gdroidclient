@@ -108,4 +108,12 @@
     <string name="license">Licencia</string>
     <string name="app_size">Tamaño: </string>
     <string name="ok">Aceptar</string>
+    <string name="download_error">¡Descarga fallida!</string>
+    <string name="saving_app_details">Guardando los detalles de la aplicación</string>
+    <string name="cancel">Cancelar</string>
+    <string name="crash_dialog_title">G-Droid se ha detenido</string>
+    <string name="crash_dialog_text">La aplicación se ha cerrado</string>
+    <string name="crash_dialog_comment_prompt">Puede añadir información extra y comentarios aquí:</string>
+    <string name="pref_title_send_crash_reports">Preguntar si mandar informes de fallo</string>
+    <string name="pref_description_send_crash_reports">Recopilar datos sobre fallos y pedir que se los envíen al desarrollador</string>
 </resources>

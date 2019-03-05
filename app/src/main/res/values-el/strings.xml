@@ -124,4 +124,12 @@
     <string name="license">Άδεια</string>
     <string name="app_size">Μέγεθος: </string>
     <string name="ok">Εντάξει</string>
+    <string name="download_error">Ανεπιτυχής λήψη!</string>
+    <string name="saving_app_details">Αποθήκευση λεπτομερειών εφαρμογής</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="crash_dialog_title">Το G-Droid σταμάτησε να λειτουργεί</string>
+    <string name="crash_dialog_text">Μη αναμενόμενο σφάλμα ανάγκασε την εφαρμογή να σταματήσει. Θα θέλατε να στείλετε e-mail με τις λεπτομέρειες για να βοηθήσετε να διορθωθεί το πρόβλημα;</string>
+    <string name="crash_dialog_comment_prompt">Μπορείτε να προσθέσετε περισσότερες πληροφορίες και σχόλια εδώ:</string>
+<string name="pref_title_send_crash_reports">Ερώτηση πριν την αποστολή αναφοράς σφαλμάτων</string>
+    <string name="pref_description_send_crash_reports">Να γίνεται συλλογή δεδομένων για κρασαρίσματα και να μου γίνεται ερώτηση για αποστολή αυτών στους προγραμματιστές</string>
 </resources>

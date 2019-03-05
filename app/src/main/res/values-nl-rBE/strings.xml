@@ -123,4 +123,10 @@
     <string name="action_uninstall">Verwijderen</string>
     <string name="license">Licentie</string>
     <string name="ok">Oké</string>
+    <string name="download_error">Download mislukt!</string>
+    <string name="saving_app_details">Appgegevens opslaan</string>
+    <string name="cancel">Annuleren</string>
+    <string name="crash_dialog_title">G-Droid is gecrasht</string>
+    <string name="crash_dialog_text">Een onverwachte fout is opgetreden waardoor de app is gestopt. Wil je de details over deze fout e-mailen om zo het probleem te helpen oplossen?</string>
+    <string name="crash_dialog_comment_prompt">Ge kunt extra informatie en commentaar hier toevoegen:</string>
 </resources>

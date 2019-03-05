@@ -106,8 +106,8 @@
     <string name="pref_title_ratings_summary">Eine Zahl von 0 bis 10 der Metrik zuweisen. 10 bedeutet höchste Wichtung.</string>
     <string name="pref_title_updated_in_2_years">neue Version innerhalb der letzten 2 Jahre</string>
     <string name="pref_title_release_cycle_time">Typische Zeit zwischen Updates</string>
-    <string name="search_harder">weiter suchen</string>
-    <string name="search_even_harder">noch weiter suchen</string>
+    <string name="search_harder">genauer suchen</string>
+    <string name="search_even_harder">noch genauer suchen</string>
     <string name="menu_my_apps">Meine Apps</string>
     <string name="menu_hidden_apps">Verborgene Apps</string>
     <string name="similar_apps">Ähnliche Apps</string>
@@ -119,7 +119,7 @@
     <string name="in_same_category">Gleiche Kategorie</string>
     <string name="pref_title_use_list_view">Anzeige als Liste</string>
     <string name="pref_description_use_list_view">falls möglich Apps in Liste anzeigen</string>
-    <string name="menu_app_authors">Autoren der App</string>
+    <string name="menu_app_authors">Autoren der Apps</string>
     <string name="action_uninstall">Entfernen</string>
 
     <string name="menu_top_authors">Top Autoren</string>
@@ -135,4 +135,17 @@
     <string name="ok">OK</string>
     <string name="how_to_rate">Bitte mit einer Mastodon app teilen, das Kommentar schreiben und den Hashtag nicht ändern.</string>
 
+    <string name="download_error">Herunterladen fehlgeschlagen!</string>
+    <string name="saving_app_details">Anwendungsdetails werden gespeichert</string>
+    <string name="could_not_download_gdroid_metadata">G-Droid Metadaten konnten nicht geladen werden</string>
+
+    <string name="cancel">Abbrechen</string>
+    <string name="crash_dialog_title">G-Droid ist abgestürzt</string>
+    <string name="crash_dialog_text">Die Anwendung wurde durch einen unerwarteten Fehler beendet. Möchten Sie die
+        Details als E-Mail versenden, um eine Fehlerbehebung zu unterstützen?
+    </string>
+    <string name="crash_dialog_comment_prompt">Sie können zusätzliche Informationen und Kommentare hier einfügen:</string>
+    <string name="pref_title_send_crash_reports">Auf Nachfrage Absturzbericht senden</string>
+    <string name="pref_description_send_crash_reports">Daten zu Abstürzen sammeln und vor ihrem Versand an den Entwickler nachfragen</string>
+    <string name="data_is_up_to_date">Daten sind aktuell</string>
 </resources>

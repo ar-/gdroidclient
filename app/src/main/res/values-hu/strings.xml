@@ -52,4 +52,12 @@
     <string name="license">Licenc</string>
     <string name="app_size">Méret: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Letöltés sikertelen!</string>
+    <string name="saving_app_details">Alkalmazásadatok részleteinek mentése</string>
+    <string name="cancel">Mégse</string>
+    <string name="crash_dialog_title">Az G-Droid összeomlott</string>
+    <string name="crash_dialog_text">Egy váratlan hiba következtében az alkalmazásnak le kellett állnia. Szeretné</string>
+    <string name="crash_dialog_comment_prompt">Itt adhat meg további adatokat és megjegyzéseket:</string>
+    <string name="pref_title_send_crash_reports">Kérdezzen az összeomlási jelentések küldésekor</string>
+    <string name="pref_description_send_crash_reports">Adatok begyűjtése az összeomlásokról, és annak megkérdezése, hogy elküldje azokat a fejlesztőnek</string>
 </resources>

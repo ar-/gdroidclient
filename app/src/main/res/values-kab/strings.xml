@@ -34,4 +34,8 @@
     <string name="action_uninstall">Kkes</string>
     <string name="license">Turagt</string>
     <string name="ok">IH</string>
+    <string name="download_error">Asider yecceḍ!</string>
+    <string name="saving_app_details">Rnu tazmilt i usnas</string>
+    <string name="cancel">Sefsex</string>
+    <string name="crash_dialog_title">G-Droid yeγli</string>
 </resources>

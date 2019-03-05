@@ -52,4 +52,12 @@
     <string name="license">پروانه</string>
     <string name="app_size">اندازه: </string>
     <string name="ok">قبول</string>
+    <string name="download_error">بارگیری ناموفق!</string>
+    <string name="saving_app_details">در حال ذخیرهٔ جزییات برنامه</string>
+    <string name="cancel">لغو</string>
+    <string name="crash_dialog_title">اف‌دروید از کار افتاد</string>
+    <string name="crash_dialog_text">خطایی پیش‌بینی نشده رخ داد که برنامه را وادار به توقّف کرد. می‌خواهید جزئیات را برای کمک به حل کردن مشکل، ایمیل کنید؟</string>
+    <string name="crash_dialog_comment_prompt">در این‌جا می‌توانید اطّلاعات اضافی و نظرها را بیفزایید:</string>
+    <string name="pref_title_send_crash_reports">اعلان فرستادن گزارش‌های خرابی</string>
+    <string name="pref_description_send_crash_reports">جمع‌آوری داده دربارهٔ خرابی‌ها و پرسش برای فرستادنشان به توسعه‌دهنده</string>
 </resources>

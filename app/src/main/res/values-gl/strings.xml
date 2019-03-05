@@ -50,4 +50,10 @@
     <string name="action_uninstall">Desinstalar</string>
     <string name="license">Licenza</string>
     <string name="ok">Aceptar</string>
+    <string name="download_error">Descarga falida!</string>
+    <string name="saving_app_details">Gardando os detalles das apps</string>
+    <string name="cancel">Cancelar</string>
+    <string name="crash_dialog_title">G-Droid quebrou</string>
+    <string name="crash_dialog_text">Ocorreu un erro inesperado, forzando a parada do aplicativo. Gostaria de enviar un e-mail cos detalles para axudar a correxir o problema?</string>
+    <string name="crash_dialog_comment_prompt">Pode engadir información adicional e comentarios aquí:</string>
 </resources>

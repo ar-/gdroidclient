@@ -52,4 +52,12 @@
     <string name="license">Lisenssi</string>
     <string name="app_size">Koko: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Lataaminen epäonnistui!</string>
+    <string name="saving_app_details">Tallennetaan sovelluksen tietoja</string>
+    <string name="cancel">Peruuta</string>
+    <string name="crash_dialog_title">G-Droid on kaatunut</string>
+    <string name="crash_dialog_text">Tapahtui odottamaton virhe ja sovellus kaatui. Haluatko lähettää tapahtuneen yksityiskohdat sähköpostilla ja auttaa kehittäjiä korjaamaan ongelman?</string>
+    <string name="crash_dialog_comment_prompt">Voit lisätä lisätietoja ja kommentteja tähän:</string>
+    <string name="pref_title_send_crash_reports">Pyydä lähettämään kaatumisraportteja</string>
+    <string name="pref_description_send_crash_reports">Kerää tietoja kaatumisista ja pyydä lähettämään ne kehittäjälle</string>
 </resources>

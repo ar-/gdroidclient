@@ -47,4 +47,10 @@
     <string name="action_uninstall">Odinštalovať</string>
     <string name="license">Licencia</string>
     <string name="ok">OK</string>
+    <string name="download_error">Sťahovanie zlyhalo!</string>
+    <string name="saving_app_details">Ukladanie detailov aplikácie</string>
+    <string name="cancel">Zrušiť</string>
+    <string name="crash_dialog_title">G-Droid spadol</string>
+    <string name="crash_dialog_text">Neočakávaná chyba spôsobila násilné ukončenie aplikácie. Chcete poslať e-mail s detailami a pomôcť tak vyriešiť problém?</string>
+    <string name="crash_dialog_comment_prompt">Sem môžete poskytnúť extra informácie a pripomienky:</string>
 </resources>

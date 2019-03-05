@@ -112,4 +112,12 @@
     <string name="license">Лицензия</string>
     <string name="app_size">Размер: </string>
     <string name="ok">ОК</string>
+    <string name="download_error">Загрузка не удалась!</string>
+    <string name="saving_app_details">Сохранение информации о приложениях</string>
+    <string name="cancel">Отменить</string>
+    <string name="crash_dialog_title">Произошел сбой G-Droid</string>
+    <string name="crash_dialog_text">Непредвиденная ошибка привела к остановке приложения. Хотите отправить письмо с</string>
+    <string name="crash_dialog_comment_prompt">Можете добавить дополнительную информацию и комментарии:</string>
+    <string name="pref_title_send_crash_reports">Запрос на отправку отчетов о сбоях</string>
+    <string name="pref_description_send_crash_reports">Сбор информации о сбоях и запрос на отправку ее разработчику</string>
 </resources>

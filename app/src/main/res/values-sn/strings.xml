@@ -46,4 +46,10 @@
     <string name="action_uninstall">Bvisa chivakirira</string>
     <string name="license">Rezenisi</string>
     <string name="ok">OK</string>
+    <string name="download_error">Kututunura hakuna kubudirira</string>
+    <string name="saving_app_details">Kuchengeta zvizere zveapplication</string>
+    <string name="cancel">Kanzura</string>
+    <string name="crash_dialog_title">G-Droid yabondera</string>
+    <string name="crash_dialog_text">Pane kanganiso isina kutarisirwa yaitika</string>
+    <string name="crash_dialog_comment_prompt">Unokwanisa kuwedzera mashoko mamwe ne mawonero ako panapa:</string>
 </resources>

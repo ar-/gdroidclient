@@ -124,4 +124,12 @@
     <string name="license">Licentie</string>
     <string name="app_size">Grootte: </string>
     <string name="ok">OK</string>
+    <string name="download_error">Download mislukt!</string>
+    <string name="saving_app_details">App-details opslaan</string>
+    <string name="cancel">Annuleren</string>
+    <string name="crash_dialog_title">G-Droid is gecrasht</string>
+    <string name="crash_dialog_text">Een onverwachte fout is opgetreden waardoor de app is gestopt.</string>
+    <string name="crash_dialog_comment_prompt">Je kan extra informatie en commentaar hier toevoegen:</string>
+    <string name="pref_title_send_crash_reports">Vraag om crashrapporten te versturen</string>
+    <string name="pref_description_send_crash_reports">Verzamel gegevens over crashes en vraag om ze naar de ontwikkelaar te sturen</string>
 </resources>
