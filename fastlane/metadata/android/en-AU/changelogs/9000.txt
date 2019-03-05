@@ -1,4 +1,4 @@
-0.8.3
+0.9.0
   * G-Droid doesn't download all repository data any more when the remote file has not changed
   * added crash-reporting for users who with to send crashes to the G-Droid developer
   * added error message when app download or repo download fails
