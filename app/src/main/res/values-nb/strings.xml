@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Tilkobling</string>
-
     <string name="category_Development">Utvikling</string>
     <string name="category_Games">Spill</string>
     <string name="category_Graphics">Grafikk</string>
@@ -39,32 +37,19 @@
     <string name="action_install">Installer</string>
     <string name="action_upgrade">Oppgrader</string>
     <string name="action_launch">Kjør</string>
-<string name="app_name">G-Droid</string>
+    <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">Åpne navigasjonsskuff</string>
     <string name="navigation_drawer_close">Lukk navigasjonsskuff</string>
     <string name="nav_header_subtitle">klient for F-Droid-programmarkedet</string>
     <string name="nav_header_desc">Navigasjonshode</string>
     <string name="action_settings">Innstillinger</string>
-
-
     <string name="action_add_favourite">Legg til i favoritter</string>
-
-
     <string name="title_activity_settings">Innstillinger</string>
-
     <string name="pref_header_general">Generelt</string>
-
-
-
     <string name="pref_header_data_sync">Data og synkronisering</string>
-
     <string name="pref_title_sync_frequency">Synkroniseringshyppighet</string>
-
     <string name="pref_header_notifications">Merknader</string>
-
     <string name="pref_title_new_message_notifications">Nye meldingsmerknader</string>
-
-
     <string name="title_home">Hjem</string>
     <string name="title_dashboard">Oversikt</string>
     <string name="title_notifications">Merknader</string>
@@ -88,7 +73,6 @@
     <string name="torrent_downloader">Torrent-nedlaster</string>
     <string name="web_browser">Nettleser</string>
     <string name="youtube_player">YouTube-spiller</string>
-
     <string name="yes">Ja</string>
     <string name="no">Nei</string>
     <string name="download_all_updates">Last ned alle oppdateringer</string>
@@ -97,7 +81,7 @@
     <string name="action_hide">Skjul</string>
     <string name="action_unhide">Vis</string>
     <string name="pref_header_ratings">Stjernevurderinger</string>
-    <string name="pref_title_upstream_ratings">Vurderinger fra GitHub, GitLab og Sourceforge</string>
+    <string name="pref_title_upstream_ratings">Vurderinger fra GitHub, GitLab og SourceForge</string>
     <string name="pref_title_ratings_headline">Vekt hver bestanddel</string>
     <string name="pref_title_ratings_summary">Tildel et tall fra 0 til 10 for hver bestanddel. Høyere nummer er viktigere.</string>
     <string name="pref_title_updated_in_2_years">siste oppdatering seneste to år</string>
@@ -130,7 +114,7 @@
     <string name="last_update">Siste oppdatering</string>
     <string name="added_on">Lagt til den </string>
     <string name="name">Navn</string>
-<string name="sort_search">Sorter søk</string>
+    <string name="sort_search">Sorter søk</string>
     <string name="stars">Stjerner</string>
     <string name="ascending">stigende</string>
     <string name="descending">synkende</string>
@@ -146,4 +130,12 @@
     <string name="crash_dialog_comment_prompt">Du kan legge til ekstra informasjon og kommentarer her:</string>
     <string name="pref_title_send_crash_reports">Forespør krasjrapportinnsending.</string>
     <string name="pref_description_send_crash_reports">Henter data om krasj, og sender dem til utvikleren</string>
+    <string name="developer">Utvikler</string>
+    <string name="comments">Kommentarer</string>
+    <string name="write_comment">skriv kommentar</string>
+    <string name="no_comments_available">ingen kommentarer for dette programmet</string>
+    <string name="fetching_comments">henter kommenterer …</string>
+    <string name="how_to_rate">Del dette med et Mastodon-program, legg til kommentaren din, men ikke endre emneknaggen.</string>
+    <string name="could_not_download_gdroid_metadata">kunne ikke laste ned G-Droid-metadata</string>
+    <string name="data_is_up_to_date">data oppdatert</string>
 </resources>
