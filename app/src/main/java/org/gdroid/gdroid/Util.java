@@ -209,7 +209,13 @@ public class Util {
             packageNames.add(packageInfo.packageName);
         }
 
-//        List<ApplicationBean> ret = db.appDao().getSomeApplicationBeans2(packageNames, getOrderByColumn(context));
+        // bugfix #115: if someone has more than 999 apps installed: prevent crash here
+        if (packageNames.size()>989)
+        {
+            List<String> choppedList = new ArrayList<>(packageNames.subList(0, 990));
+            packageNames = choppedList;
+        }
+
         List<ApplicationBean> ret = db.appDao().getSomeApplicationBeansList(packageNames);
         Collections.sort(ret, new AppBeanNameComparator(context,
                 Util.getOrderByColumn(context),
