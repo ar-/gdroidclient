@@ -24,6 +24,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 
 import org.gdroid.gdroid.AppDownloader;
 import org.gdroid.gdroid.R;
@@ -67,7 +68,13 @@ public class BariaInstaller {
                     }
                 });
 
-                questionDialog.create().show();
+                // bugfix #113 : if the activity is not running any more it can crash here
+                try {
+                    questionDialog.create().show();
+                }catch (Throwable t)
+                {
+                    Log.w("BariaInstaller", "Activity not running any more. Not showing a dialog.");
+                }
             }
             else
             {
