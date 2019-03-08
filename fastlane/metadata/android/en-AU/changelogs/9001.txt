@@ -1,0 +1,18 @@
+0.9.1
+  * bugfix: G-Droid crashed when too many apps where installed
+  * bugfix: G-Droid crashed when the app was closed while updating all apps on some devices
+  * bugfix: G-Droid crashed on devices with low memory
+
+0.9.0
+  * G-Droid doesn't download all repository data any more when the remote file has not changed
+  * added crash-reporting for users who with to send crashes to the G-Droid developer
+  * added error message when app download or repo download fails
+  * G-Droid updates automatically, when the local DB is still empty (eg on first start)
+  * bugfix: release cycle of an app cannot be negative any more
+
+0.8.2
+  * bugfix: G-Droid was showing wrong updates and was not able to install some apps, since it was picking the wrong architecture
+  * bugfix: screen scrolled down, after loading the details of some apps
+
+0.8.1
+  * added weblate translations mostly for new features
