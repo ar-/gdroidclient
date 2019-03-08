@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Connectiviteit</string>
-
     <string name="category_Development">Ontwikkeling</string>
     <string name="category_Games">Spellen</string>
     <string name="category_Graphics">Grafisch</string>
@@ -69,7 +67,7 @@
     <string name="camera">Camera</string>
     <string name="contacts">Contacten</string>
     <string name="email_client">E-mailcliënt</string>
-    <string name="file_browser">Bestandbeheerder</string>
+    <string name="file_browser">Bestandsbeheerder</string>
     <string name="gallery">Galerij</string>
     <string name="launcher">Appstarter</string>
     <string name="music_player">Muziekspeler</string>
@@ -79,7 +77,7 @@
     <string name="torrent_downloader">Torrentdownloader</string>
     <string name="web_browser">Webbrowser</string>
     <string name="youtube_player">YouTube-speler</string>
-    <string name="anti_nosourcesince">De broncode is niet langer beschikbaar, geen updates mogelijk.</string>
+    <string name="anti_nosourcesince">De broncode is niet meer beschikbaar, geen updates mogelijk.</string>
     <string name="action_hide">Verbergen</string>
     <string name="action_unhide">Weergeven</string>
     <string name="pref_header_ratings">Sterwaarderingen</string>
@@ -127,6 +125,17 @@
     <string name="saving_app_details">Appgegevens opslaan</string>
     <string name="cancel">Annuleren</string>
     <string name="crash_dialog_title">G-Droid is gecrasht</string>
-    <string name="crash_dialog_text">Een onverwachte fout is opgetreden waardoor de app is gestopt. Wil je de details over deze fout e-mailen om zo het probleem te helpen oplossen?</string>
+    <string name="crash_dialog_text">Der is een onverwachte fout opgetreden waardoor dat den app is gestopt. Wilt ge de details over deze fout e-mailen voor zo het probleem te helpen oplossen\?</string>
     <string name="crash_dialog_comment_prompt">Ge kunt extra informatie en commentaar hier toevoegen:</string>
+    <string name="app_size">Grootte</string>
+    <string name="developer">Ontwikkelaar</string>
+    <string name="comments">Commentaren</string>
+    <string name="write_comment">schrijft ne commentaar</string>
+    <string name="no_comments_available">geen commentaren beschikbaar voor dezen app</string>
+    <string name="fetching_comments">commentaren ophalen …</string>
+    <string name="how_to_rate">Deelt dit met ne Mastodon-app en voegt uwe commentaar toe, maar wijzigt den hashtag niet.</string>
+    <string name="could_not_download_gdroid_metadata">kon G-Droid-metadata niet downloaden</string>
+    <string name="pref_title_send_crash_reports">Vraagt om crashrapporten te versturen</string>
+    <string name="pref_description_send_crash_reports">Verzamelt gegevens over crashes en vraagt om ze naar de(n) ontwikkelaar te sturen</string>
+    <string name="data_is_up_to_date">gegevens zijn up-to-date</string>
 </resources>
