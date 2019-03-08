@@ -248,6 +248,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
             outputStream.close();
             JarReader jr = new JarReader(mContext.getCacheDir()+"/"+fileName);
             final byte[] bytes = jr.getResource(jsonFileInJar);
+            System.gc(); // bugfix #120 : possible OOM kill in next line.
             jsonString = new String(bytes);
 
         } finally {
