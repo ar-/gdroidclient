@@ -65,7 +65,9 @@ public class ManualAppInstallActivity extends AppCompatActivity {
     private void installAppManually(String file) {
         PackageManager pm = getPackageManager();
         PackageInfo p = pm.getPackageArchiveInfo(file, 0);
-        String appname = p.applicationInfo.loadLabel(getPackageManager()).toString();
+        String appname = "broken APK"; // error will be shown by DefaultInstaller
+        if (p != null)
+            appname = p.applicationInfo.loadLabel(getPackageManager()).toString();
         showNotification(getResources().getString(R.string.installing_details, index, total),
                 getResources().getString(R.string.installing, appname));
 

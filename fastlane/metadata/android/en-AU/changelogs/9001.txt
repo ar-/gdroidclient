@@ -2,6 +2,7 @@
   * bugfix: G-Droid crashed when too many apps where installed
   * bugfix: G-Droid crashed when the app was closed while updating all apps on some devices
   * bugfix: G-Droid crashed on devices with low memory
+  * bugfix: G-Droid crashed when attempting to install a broken APK
 
 0.9.0
   * G-Droid doesn't download all repository data any more when the remote file has not changed
