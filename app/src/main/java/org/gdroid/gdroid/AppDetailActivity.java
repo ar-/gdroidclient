@@ -143,6 +143,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
 
         // fill tags - the same way as categories
         final TagBean[] tags = db.appDao().getAllTagsForApp(mApp.id);
+        db.close();
         for (TagBean tb:tags) {
             final String ltn = Util.getStringResourceByName(this, tb.tagName);
             final String collectionName = "tag:" + tb.tagName;
@@ -158,6 +159,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             public void run() {
                 AppDatabase db = AppDatabase.get(getApplicationContext());
                 List <AuthorBean> auths = db.appDao().getTopAuthors();
+                db.close();
                 for (AuthorBean aub : auths) {
                     if (mApp.author.equals(aub.author))
                     {

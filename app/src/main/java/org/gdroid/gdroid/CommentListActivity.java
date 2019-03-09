@@ -42,7 +42,7 @@ public class CommentListActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        AppDatabase db = AppDatabase.get(getApplicationContext());
+//        AppDatabase db = AppDatabase.get(getApplicationContext());
 
         String appId = getIntent().getStringExtra("appId");
 

@@ -251,6 +251,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
             System.gc(); // bugfix #120 : possible OOM kill in next line.
             jsonString = new String(bytes);
 
+
         } finally {
             if (stream != null) {
                 stream.close();
@@ -262,6 +263,23 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
     // Given a string representation of a URL, sets up a connection and gets
     // an input stream.
     private InputStream downloadUrl(String urlString) throws IOException {
+
+//        OkHttpClient client = new OkHttpClient();
+//
+//            Request request = new Request.Builder()
+//                    .url(urlString)
+//                    .build();
+//
+//        Response response = null;
+//            try {
+//                response = client.newCall(request).execute();
+//                return response.body().byteStream();
+//            }
+//            finally {
+//                if (response != null)
+//                    response.close();
+//            }
+
         URL url = new URL(urlString);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setReadTimeout(10000 /* milliseconds */);
