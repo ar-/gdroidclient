@@ -154,6 +154,7 @@ public class Util {
             final ApplicationBean app = db.appDao().getApplicationBean(starredAppId);
             ret.add(app);
         }
+        db.close();
         Collections.sort(ret, new AppBeanNameComparator(context,
                 Util.getOrderByColumn(context), Util.getOrderByDirection(context).equals("ASC")));
         return ret;
@@ -204,7 +205,6 @@ public class Util {
         final PackageManager pm = context.getPackageManager();
         List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
         List<String> packageNames = new ArrayList<>(packages.size());
-        AppDatabase db = AppDatabase.get(context);
         for (ApplicationInfo packageInfo : packages) {
             packageNames.add(packageInfo.packageName);
         }
@@ -216,7 +216,9 @@ public class Util {
             packageNames = choppedList;
         }
 
+        AppDatabase db = AppDatabase.get(context);
         List<ApplicationBean> ret = db.appDao().getSomeApplicationBeansList(packageNames);
+        db.close();
         Collections.sort(ret, new AppBeanNameComparator(context,
                 Util.getOrderByColumn(context),
                 Util.getOrderByDirection(context).equals("ASC"),

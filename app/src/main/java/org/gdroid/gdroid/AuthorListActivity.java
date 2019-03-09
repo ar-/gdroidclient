@@ -66,6 +66,7 @@ public class AuthorListActivity extends AppCompatActivity {
         {
             authors = db.appDao().getAllAuthors();
         }
+        db.close();
 
         final AuthorArrayAdapter adapter = new AuthorArrayAdapter(this, authors, showTopAuthors ? " top" : "");
         authorsList.setAdapter(adapter);
