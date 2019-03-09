@@ -120,14 +120,22 @@
     <string name="descending">beherantz</string>
     <string name="action_uninstall">Desinstalatu</string>
     <string name="license">Lizentzia</string>
-    <string name="app_size">Neurria: </string>
+    <string name="app_size">Neurria</string>
     <string name="ok">Ados</string>
     <string name="download_error">Deskargak huts egin du!</string>
     <string name="saving_app_details">Aplikazioaren xehetasunak gordetzen</string>
     <string name="cancel">Utzi</string>
     <string name="crash_dialog_title">G-Droid kraskatu da</string>
-    <string name="crash_dialog_text">Ustekabeko errorea gertatu da aplikazioa geldiaraztean.</string>
+    <string name="crash_dialog_text">Ustekabeko errorea gertatu da aplikazioa geldiarazten. Arazoa konpontzen laguntzeko xehetasunak e-mail bidez bidali nahi dituzu\?</string>
     <string name="crash_dialog_comment_prompt">Informazio gehigarria eta iruzkinak sartu ditzakezu hemen:</string>
     <string name="pref_title_send_crash_reports">Galdetu kraskatze txostenak bidaltzeko</string>
     <string name="pref_description_send_crash_reports">Jaso kraskatzeei buruzko datuak eta galdetu garatzaileari bidaltzeko</string>
+    <string name="developer">Garatzailea</string>
+    <string name="comments">Iruzkinak</string>
+    <string name="write_comment">idatzi iruzkina</string>
+    <string name="no_comments_available">ez dago iruzkinik aplikazio honentzat</string>
+    <string name="fetching_comments">iruzkinak eskuratzen …</string>
+    <string name="how_to_rate">Partekatu hau Mastodon aplikazio batekin, gehitu zure iruzkina baina ez aldatu traolak.</string>
+    <string name="could_not_download_gdroid_metadata">ezin izan dira G-Droid metadatuak deskargatu</string>
+    <string name="data_is_up_to_date">datuak egunean daude</string>
 </resources>
