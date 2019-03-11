@@ -126,7 +126,7 @@
     <string name="saving_app_details">Lagrer programdetaljer</string>
     <string name="cancel">Avbryt</string>
     <string name="crash_dialog_title">G-Droid har kræsjet</string>
-    <string name="crash_dialog_text">Uventet feil forårsaket</string>
+    <string name="crash_dialog_text">Uventet feil forårsaket at programmet stoppet. Ønsker du å sende en e-post med detaljer for å hjelpe til å fikse problemet\?</string>
     <string name="crash_dialog_comment_prompt">Du kan legge til ekstra informasjon og kommentarer her:</string>
     <string name="pref_title_send_crash_reports">Forespør krasjrapportinnsending.</string>
     <string name="pref_description_send_crash_reports">Henter data om krasj, og sender dem til utvikleren</string>
