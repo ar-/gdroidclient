@@ -214,7 +214,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
      */
     private void showPopupMenu(MyViewHolder holder, ApplicationBean app) {
         // inflate menu
-        PopupMenu popup = new PopupMenu(mContext, holder.overflow);
+        PopupMenu popup = new PopupMenu(mActivity, holder.overflow);
         MenuInflater inflater = popup.getMenuInflater();
         inflater.inflate(R.menu.menu_on_card, popup.getMenu());
         popup.setOnMenuItemClickListener(new AppCardPopupMenuItemClickListener(holder));
