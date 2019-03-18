@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Povezivanje</string>
-
     <string name="category_Development">Razvoj</string>
     <string name="category_Games">Igre</string>
     <string name="category_Graphics">Grafika</string>
@@ -51,4 +50,46 @@
     <string name="crash_dialog_title">G-Droid se srušio</string>
     <string name="crash_dialog_text">Dogodila se neočekivana greša,</string>
     <string name="crash_dialog_comment_prompt">Možete dodati dodatne informacije i komentare ovdje:</string>
+    <string name="app_name">G-Droid</string>
+    <string name="nav_header_subtitle">Klijent za F-Droid repozitorij</string>
+    <string name="nav_header_desc">Navigacijsko zaglavlje</string>
+    <string name="action_settings">Postavke</string>
+    <string name="action_add_favourite">Dodaj u favorite</string>
+    <string name="title_activity_settings">Postavke</string>
+    <string name="pref_header_general">Općenito</string>
+    <string name="pref_header_data_sync">Podaci i sinkronizacija</string>
+    <string name="pref_title_sync_frequency">Učestalost sinkronizacije</string>
+    <string name="pref_header_notifications">Obavijesti</string>
+    <string name="pref_title_new_message_notifications">Obavijesti o novim porukama</string>
+    <string name="title_home">Početno</string>
+    <string name="title_dashboard">Upravljačka ploča</string>
+    <string name="title_notifications">Obavijesti</string>
+    <string name="title_categories">kategorije</string>
+    <string name="title_tags">oznake</string>
+    <string name="title_myapps">moje aplikacije</string>
+    <string name="title_search">pretraži</string>
+    <string name="app_store">Trgovina Aplikacijama</string>
+    <string name="calendar">Kalendar</string>
+    <string name="camera">Kamera</string>
+    <string name="contacts">Kontakti</string>
+    <string name="email_client">Email klijent</string>
+    <string name="file_browser">Preglednik datoteka</string>
+    <string name="gallery">Galerija</string>
+    <string name="launcher">Pokretač</string>
+    <string name="music_player">Glazbeni preglednik</string>
+    <string name="shopping_list">Popis za kupnju</string>
+    <string name="text_editor">Uređivač teksta</string>
+    <string name="todo_list">Lista zadataka</string>
+    <string name="torrent_downloader">Torrent preuzimatelj</string>
+    <string name="web_browser">Web preglednik</string>
+    <string name="youtube_player">YouTube preglednik</string>
+    <string name="anti_disabledalgorithm">Ova aplikacija ima slab sigurnosni potpis</string>
+    <string name="anti_knownvuln">Ova aplikacija sadrži poznatu sigurnosnu ranjivost</string>
+    <string name="anti_nosourcesince">Izvorni kôd više nije dostupan, nije moguće ažuriranje.</string>
+    <string name="action_hide">Sakrij</string>
+    <string name="action_unhide">Pokaži</string>
+    <string name="pref_header_ratings">Oznake zvjezdica</string>
+    <string name="pref_title_upstream_ratings">Ocijene sa GitHub, GitLab i SourceForge stranica</string>
+    <string name="pref_title_ratings_headline">Postavite vašu važnost za svaki parametar</string>
+    <string name="pref_title_ratings_summary">Svakom parametru dodijelite broj od 0 do 10. Veći broj znači veću važnost.</string>
 </resources>
