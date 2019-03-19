@@ -92,4 +92,6 @@
     <string name="pref_title_upstream_ratings">Ocijene sa GitHub, GitLab i SourceForge stranica</string>
     <string name="pref_title_ratings_headline">Postavite vašu važnost za svaki parametar</string>
     <string name="pref_title_ratings_summary">Svakom parametru dodijelite broj od 0 do 10. Veći broj znači veću važnost.</string>
+    <string name="navigation_drawer_open">Otvori navigacijski panel</string>
+    <string name="navigation_drawer_close">Zatvori navigacijski panel</string>
 </resources>
