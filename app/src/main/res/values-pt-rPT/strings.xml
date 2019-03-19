@@ -131,4 +131,11 @@
     <string name="pref_title_send_crash_reports">Pedir para enviar relatórios de erros</string>
     <string name="pref_description_send_crash_reports">Recolher dados sobre os erros e pedir para os enviar ao programador</string>
     <string name="comments">comentários</string>
+    <string name="developer">Programador</string>
+    <string name="write_comment">escrever um comentário</string>
+    <string name="no_comments_available">sem comentários para esta app</string>
+    <string name="fetching_comments">a obter comentários…</string>
+    <string name="how_to_rate">Por favor partilhe isto com uma app Mastodon, adicione o seu comentário mas não altere a hashtag.</string>
+    <string name="could_not_download_gdroid_metadata">não foi possível descarregar os metadados G-Droid</string>
+    <string name="data_is_up_to_date">os dados são atuais</string>
 </resources>
