@@ -31,7 +31,7 @@ import java.util.List;
 @Entity(indices = {@Index("name")
         ,@Index("lastupdated")
         ,@Index("added")
-        ,@Index("author")
+        ,@Index("author") // should be "lower(trim(author))" , which is not supported by room :-(
 })
 
 public class ApplicationBean {

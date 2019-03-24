@@ -1,0 +1,22 @@
+0.9.4
+  * bugfix: ignore uppercase/lowercase for authors when showing apps of same author
+
+0.9.3
+  * bugfix: G-Droid crashed when updating on Android 6.0 and lower on some devices
+
+0.9.2
+  * bugfix: G-Droid crashed when clicking the 3 dots of a similar app in the app detail view
+  * bugfix: closing open database connections faster
+
+0.9.1
+  * bugfix: G-Droid crashed when too many apps where installed
+  * bugfix: G-Droid crashed when the app was closed while updating all apps on some devices
+  * bugfix: G-Droid crashed on devices with low memory
+  * bugfix: G-Droid crashed when attempting to install a broken APK
+
+0.9.0
+  * G-Droid doesn't download all repository data any more when the remote file has not changed
+  * added crash-reporting for users who with to send crashes to the G-Droid developer
+  * added error message when app download or repo download fails
+  * G-Droid updates automatically, when the local DB is still empty (eg on first start)
+  * bugfix: release cycle of an app cannot be negative any more
