@@ -149,3 +149,12 @@ They are calculated by this R script https://gitlab.com/frief/app_match.r made b
 
 They are mastodon toots, mentioning the G-Droid account and using a special hashtag for each app. The hashtag is the package name of the app where dots are being replaced by underscores. In G-Droid you can simply use the button 'write comment' to create a comment-toot for an app.
 
+## Loading app icons takes a long time. Can they be cached?
+
+The F-Droid server has sporadic performance issues. This causes the load of icons, but also the update of the repository and the download of the APKs to be very slow.
+The problem is being investigated. It might be resolved by using mirrors in future.
+
+The app icons and all other images (like screenshots) are being cached. There have been reports, where all images are being reloaded all the time. 
+If you have this error, please check if you have an 'optimizer' app running in the background that deletes the cache of some apps all the time. If so: disable this behaviour.
+Apart from that, the Android OS will use free space on your device to cache the app icons in G-Droid. This happens automatically with the Glide library.
+
