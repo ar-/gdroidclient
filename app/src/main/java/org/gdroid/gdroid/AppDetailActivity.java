@@ -239,12 +239,12 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
 
         final Repo r = new Repo();
         // load icon image (alternatively feature graphic)
-        GlideApp.with(mContext).load(r.getBaseUrl()+"/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
+        GlideApp.with(mContext).load(r.getAppIconUrlIfValid(mApp)).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
         if (mApp.icon != null) {
             if (TextUtils.isEmpty(mApp.featureGraphic))
             {
                 GlideApp.with(mContext)
-                        .load(r.getBaseUrl()+"/icons-640/"+ mApp.icon).override(192, 192)
+                        .load(r.getAppIconUrlIfValid(mApp)).override(192, 192)
                         .into((ImageView) findViewById(R.id.img_header_icon));
             }
             else

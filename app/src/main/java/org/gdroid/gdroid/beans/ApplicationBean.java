@@ -165,6 +165,19 @@ public class ApplicationBean {
         return ret;
     }
 
+    /**
+     * can be used to remove all unneeded attempts to load XML files into image views
+     * @return the URL of the icon if it is a renderable image
+     */
+    public String getAppIconIfValid()
+    {
+        final String ls = icon.toLowerCase();
+        if (ls.endsWith("png") ||ls.endsWith("jpg") ||ls.endsWith("jpeg"))
+            return icon;
+        return "";
+
+    }
+
     @Override
     public String toString() {
         //overridden for better debug output

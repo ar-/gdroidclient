@@ -18,10 +18,24 @@
 
 package org.gdroid.gdroid.repos;
 
+import android.text.TextUtils;
+
+import org.gdroid.gdroid.beans.ApplicationBean;
+
 public class Repo {
     public String getBaseUrl()
     {
 //        return "https://f-droid.org/repo";
         return "https://fdroid.tetaneutral.net/fdroid/repo";
+    }
+
+    public String getAppIconUrlIfValid(ApplicationBean ab)
+    {
+        final String iu = ab.getAppIconIfValid();
+        if (TextUtils.isEmpty(iu))
+        {
+            return "http://"; // this will make the http request invalid and fail fast, to load the error image quickly
+        }
+        return getBaseUrl()+"/icons-640/"+ iu;
     }
 }

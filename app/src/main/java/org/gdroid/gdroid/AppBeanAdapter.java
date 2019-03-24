@@ -149,7 +149,7 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
                 Repo r = new Repo();
                 final Drawable errorImg = AppCompatResources.getDrawable(mContext, R.drawable.ic_android_black_24dp);
                 GlideApp.with(mContext)
-                        .load(r.getBaseUrl()+"/icons-640/"+applicationBean.icon)
+                        .load(r.getAppIconUrlIfValid(applicationBean))
                         .override(192, 192)
                         .placeholder(circularProgressDrawable)
                         .error(errorImg)
