@@ -221,8 +221,17 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
                 String etagFDroid = HttpHeadChecker.getEtag(mUrl);
                 String etagGDroid = HttpHeadChecker.getEtag(GDROID_JAR_URL);
                 Log.e(TAG,"etag fdroid : "+etagFDroid + " etag gdroid : "+etagGDroid  );
-                Pref.get().setLastFDroidEtag(etagFDroid);
-                Pref.get().setLastGDroidEtag(etagGDroid);
+                AppDatabase db = AppDatabase.get(mContext);
+                final boolean isFDBOkay = db.appDao().isFDroidDataOkay();
+                final boolean isGDBOkay = db.appDao().isGDroidDataOkay();
+                db.close();
+                if (isFDBOkay)
+                    Pref.get().setLastFDroidEtag(etagFDroid);
+                if (isGDBOkay)
+                    Pref.get().setLastGDroidEtag(etagGDroid);
+
+                if (isFDBOkay && isGDBOkay)
+                    Pref.get().setLastUpdateCheck(System.currentTimeMillis());
             }
         });
     }
@@ -318,8 +327,16 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         String etagLocal = Pref.get().getLastFDroidEtag();
         if (TextUtils.isEmpty(etagLocal))
             return false; // makes the first run faster and prevents from comparing the empty string or null
+
+        // before checking the URL, check the local DB, since it can be checked faster
+        AppDatabase db = AppDatabase.get(mContext);
+        final boolean isDBOkay = db.appDao().isFDroidDataOkay();
+        db.close();
+        if (!isDBOkay)
+            return false;
+
         String etagOnline = HttpHeadChecker.getEtag(mUrl);
-//        Pref.get().setLastFDroidEtag(etagOnline); // don't update here, becasue download can still fail (or be aborted0 later
+//        Pref.get().setLastFDroidEtag(etagOnline); // don't update here, becasue download can still fail (or be aborted) later
         return etagLocal.equals(etagOnline);
     }
 
@@ -327,8 +344,16 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
         String etagLocal = Pref.get().getLastGDroidEtag();
         if (TextUtils.isEmpty(etagLocal))
             return false; // makes the first run faster and prevents from comparing the empty string or null
+
+        // before checking the URL, check the local DB, since it can be checked faster
+        AppDatabase db = AppDatabase.get(mContext);
+        final boolean isDBOkay = db.appDao().isGDroidDataOkay();
+        db.close();
+        if (!isDBOkay)
+            return false;
+
         String etagOnline = HttpHeadChecker.getEtag(GDROID_JAR_URL);
-//        Pref.get().setLastGDroidEtag(etagOnline); // don't update here, becasue download can still fail (or be aborted0 later
+//        Pref.get().setLastGDroidEtag(etagOnline); // don't update here, becasue download can still fail (or be aborted) later
         return etagLocal.equals(etagOnline);
     }
 }
