@@ -254,8 +254,8 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
             JarReader jr = new JarReader(mContext.getCacheDir()+"/"+fileName);
             final byte[] bytes = jr.getResource(jsonFileInJar);
             System.gc(); // bugfix #120 : possible OOM kill in next line.
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-                //this code will be executed on devices running L or later
+            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
+                //this code will be executed on devices running N (7.0 / 24) or later
                 jsonString = new String(bytes);
             }
             else
