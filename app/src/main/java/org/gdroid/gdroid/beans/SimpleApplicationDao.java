@@ -81,7 +81,7 @@ public interface SimpleApplicationDao {
             " ORDER BY lastupdated DESC, added ASC LIMIT :limit OFFSET :offset")
     ApplicationBean[] getAllAppsForSearch3String(String ss, int limit, int offset);
 
-    @Query("SELECT * FROM ApplicationBean WHERE author = :author ORDER BY lastupdated DESC LIMIT :limit OFFSET :offset")
+    @Query("SELECT * FROM ApplicationBean WHERE lower(trim(author)) = lower(trim(:author)) ORDER BY lastupdated DESC LIMIT :limit OFFSET :offset")
     ApplicationBean[] getAppsByAuthor(String author, int limit, int offset);
 
     // hidden apps
@@ -136,7 +136,7 @@ public interface SimpleApplicationDao {
     // authors
 
     @SuppressWarnings("AndroidUnresolvedRoomSqlReference")
-    @Query("SELECT author, count(id) apps, max(stars) stars FROM ApplicationBean WHERE author IS NOT NULL and author <> '' GROUP BY author ORDER by apps DESC, stars DESC ")
+    @Query("SELECT author, count(id) apps, max(stars) stars FROM ApplicationBean WHERE author IS NOT NULL and author <> '' GROUP BY lower(trim(author)) ORDER by apps DESC, stars DESC ")
     List<AuthorBean> getAllAuthors();
 
     @SuppressWarnings("AndroidUnresolvedRoomSqlReference")
@@ -146,7 +146,7 @@ public interface SimpleApplicationDao {
      */
     @Query("SELECT author, count(id) apps, max(stars) stars FROM ApplicationBean WHERE author IS NOT NULL and author <> '' " +
             "AND stars > (SELECT min(st) FROM (SELECT stars st FROM ApplicationBean ORDER BY stars DESC LIMIT (SELECT count(*)/5 FROM ApplicationBean) ) ) " +
-            "GROUP BY author  HAVING count(id) >1 ORDER by apps DESC, stars DESC ")
+            "GROUP BY lower(trim(author))  HAVING count(id) >1 ORDER by apps DESC, stars DESC ")
     List<AuthorBean> getTopAuthors();
 
 }
