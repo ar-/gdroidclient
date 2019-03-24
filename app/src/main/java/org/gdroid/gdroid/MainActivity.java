@@ -55,6 +55,7 @@ import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.beans.OrderByCol;
 import org.gdroid.gdroid.installer.baria.BariaInstaller;
 import org.gdroid.gdroid.pref.Pref;
+import org.gdroid.gdroid.repos.Repo;
 import org.gdroid.gdroid.tasks.DownloadJaredJsonTask;
 import org.gdroid.gdroid.widget.BottomNavigationView;
 
@@ -118,8 +119,6 @@ public class MainActivity extends AppCompatActivity
                         //if db empty
                         if (allApps.length == 0) {
                             navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem("home"));
-                            // TODO initial refresh only when DB empty
-                            //new DownloadJsonTask(activity, appCollectionAdapter).execute("https://f-droid.org/repo/index.xml");
                         } else {
                             navigation.setSelectedItemId(getItemIdForHomeScreenMenuItem(Util.getLastMenuItem(getApplicationContext())));
                         }
@@ -259,7 +258,8 @@ public class MainActivity extends AppCompatActivity
         {
             Log.w(TAG,"could not show snackbar");
         }
-        new DownloadJaredJsonTask(this, appCollectionAdapter, "index-v1.json").execute("https://f-droid.org/repo/index-v1.jar");
+        Repo r = new Repo();
+        new DownloadJaredJsonTask(this, appCollectionAdapter, "index-v1.json").execute(r.getBaseUrl()+"/index-v1.jar");
 
     }
 

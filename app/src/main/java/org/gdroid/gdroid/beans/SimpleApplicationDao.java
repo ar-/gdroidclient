@@ -149,4 +149,12 @@ public interface SimpleApplicationDao {
             "GROUP BY lower(trim(author))  HAVING count(id) >1 ORDER by apps DESC, stars DESC ")
     List<AuthorBean> getTopAuthors();
 
+    // sanity checks
+
+    @Query("select (SELECT count(*) > 0  from categorybean) AND (SELECT count(*) > 0  from applicationbean )")
+    boolean isFDroidDataOkay();
+
+    @Query("select (SELECT count(*) > 0  from tagbean) AND (SELECT max(stars) > 0  from applicationbean )")
+    boolean isGDroidDataOkay();
+
 }

@@ -41,6 +41,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.repos.Repo;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -145,9 +146,10 @@ public class AppBeanAdapter extends RecyclerView.Adapter<AppBeanAdapter.MyViewHo
         if (applicationBean.icon != null) {
             try
             {
+                Repo r = new Repo();
                 final Drawable errorImg = AppCompatResources.getDrawable(mContext, R.drawable.ic_android_black_24dp);
                 GlideApp.with(mContext)
-                        .load("https://f-droid.org/repo/icons-640/"+applicationBean.icon)
+                        .load(r.getBaseUrl()+"/icons-640/"+applicationBean.icon)
                         .override(192, 192)
                         .placeholder(circularProgressDrawable)
                         .error(errorImg)
