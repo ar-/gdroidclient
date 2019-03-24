@@ -20,6 +20,7 @@ package org.gdroid.gdroid.tasks;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -44,6 +45,10 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetDecoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -249,8 +254,26 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
             JarReader jr = new JarReader(mContext.getCacheDir()+"/"+fileName);
             final byte[] bytes = jr.getResource(jsonFileInJar);
             System.gc(); // bugfix #120 : possible OOM kill in next line.
-            jsonString = new String(bytes);
+            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+                //this code will be executed on devices running L or later
+                jsonString = new String(bytes);
+            }
+            else
+            {
+                // for old devices the native C implementation of the String(byte[]) constructor runs OOM
+                Charset charset = Charset.defaultCharset();
+                CharsetDecoder decoder = charset.newDecoder();
 
+                //ByteBuffer.wrap simply wraps the byte array, it does not allocate new memory for it
+                ByteBuffer srcBuffer = ByteBuffer.wrap(bytes);
+                //Now, we decode our srcBuffer into a new CharBuffer (yes, new memory allocated here, no can do)
+                CharBuffer resBuffer = decoder.decode(srcBuffer);
+
+                //CharBuffer implements CharSequence interface, which StringBuilder fully support in it's methods
+                StringBuilder stringBuilder = new StringBuilder(resBuffer);
+
+                jsonString = stringBuilder.toString();
+            }
 
         } finally {
             if (stream != null) {
