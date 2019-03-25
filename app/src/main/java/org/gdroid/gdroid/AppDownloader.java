@@ -53,17 +53,12 @@ import okhttp3.OkHttpClient;
 public class AppDownloader {
 
     public static final String TAG = "AppDownloader";
-//    public static final String repoBaseUrl = "https://f-droid.org/repo/";
-//public static final String repoBaseUrl = "https://fdroid.tetaneutral.net/fdroid/repo/";
-//    public static final String repoBaseUrl = "https://bubu1.eu/fdroid/repo/";
-    public static final String repoBaseUrl = (new Repo()).getBaseUrl();
-
 
     public static Request download(final Context context, ApplicationBean mApp, final boolean install) {
         final Fetch fetch = getFetch(context);
         final Installer installer = Util.getAppInstaller(context);
 
-        String url = repoBaseUrl+mApp.apkname;
+        String url = (new Repo()).getBaseUrl()+"/"+mApp.apkname;
         final String file = getAbsoluteFilenameOfDownloadTarget(context, mApp);
 
 

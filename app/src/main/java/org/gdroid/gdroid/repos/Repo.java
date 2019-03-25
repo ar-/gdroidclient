@@ -23,6 +23,10 @@ import android.text.TextUtils;
 import org.gdroid.gdroid.beans.ApplicationBean;
 
 public class Repo {
+    /**
+     *
+     * @return base url without trailling slash
+     */
     public String getBaseUrl()
     {
 //        return "https://f-droid.org/repo";
