@@ -68,6 +68,7 @@ import org.gdroid.gdroid.beans.TagBean;
 import org.gdroid.gdroid.installer.Installer;
 import org.gdroid.gdroid.perm.AppDiff;
 import org.gdroid.gdroid.perm.AppSecurityPermissions;
+import org.gdroid.gdroid.repos.Repo;
 import org.gdroid.gdroid.tasks.DownloadCommentsTask;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -236,19 +237,20 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         circularProgressDrawable2.setCenterRadius(30f);
         circularProgressDrawable2.start();
 
+        final Repo r = new Repo();
         // load icon image (alternatively feature graphic)
-        GlideApp.with(mContext).load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
+        GlideApp.with(mContext).load(r.getAppIconUrlIfValid(mApp)).override(192, 192).into((ImageView) findViewById(R.id.img_icon));
         if (mApp.icon != null) {
             if (TextUtils.isEmpty(mApp.featureGraphic))
             {
                 GlideApp.with(mContext)
-                        .load("https://f-droid.org/repo/icons-640/"+ mApp.icon).override(192, 192)
+                        .load(r.getAppIconUrlIfValid(mApp)).override(192, 192)
                         .into((ImageView) findViewById(R.id.img_header_icon));
             }
             else
             {
                 GlideApp.with(mContext)
-                        .load("https://f-droid.org/repo/"+mApp.id+"/"+ mApp.featureGraphic)
+                        .load(r.getBaseUrl()+"/"+mApp.id+"/"+ mApp.featureGraphic)
                         .into((ImageView) findViewById(R.id.img_header_icon));
             }
         }
@@ -278,7 +280,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                 }
                 else
                 {
-                    ssUrl = "https://f-droid.org/repo/" + mApp.id + "/" + ss;
+                    ssUrl = r.getBaseUrl()+"/" + mApp.id + "/" + ss;
                 }
                 final Drawable errorImg = AppCompatResources.getDrawable(mContext, R.drawable.ic_android_black_24dp);
                 GlideApp.with(mContext)

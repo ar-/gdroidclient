@@ -43,6 +43,7 @@ import com.tonyodev.fetch2okhttp.OkHttpDownloader;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
 import org.gdroid.gdroid.installer.Installer;
+import org.gdroid.gdroid.repos.Repo;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -53,8 +54,9 @@ public class AppDownloader {
 
     public static final String TAG = "AppDownloader";
 //    public static final String repoBaseUrl = "https://f-droid.org/repo/";
-    public static final String repoBaseUrl = "https://fdroid.tetaneutral.net/fdroid/repo/";
+//public static final String repoBaseUrl = "https://fdroid.tetaneutral.net/fdroid/repo/";
 //    public static final String repoBaseUrl = "https://bubu1.eu/fdroid/repo/";
+    public static final String repoBaseUrl = (new Repo()).getBaseUrl();
 
 
     public static Request download(final Context context, ApplicationBean mApp, final boolean install) {

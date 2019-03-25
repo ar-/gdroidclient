@@ -1,5 +1,7 @@
 0.9.4
+  * performance improvement and caching update to load app images faster
   * bugfix: ignore uppercase/lowercase for authors when showing apps of same author
+  * bugfix: repository updates where sometimes narked incorrectly successful
 
 0.9.3
   * bugfix: G-Droid crashed when updating on Android 6.0 and lower on some devices
