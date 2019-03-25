@@ -336,7 +336,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
             return false;
 
         String etagOnline = HttpHeadChecker.getEtag(mUrl);
-//        Pref.get().setLastFDroidEtag(etagOnline); // don't update here, becasue download can still fail (or be aborted) later
+//        Pref.get().setLastFDroidEtag(etagOnline); // don't update here, because download can still fail (or be aborted) later
         return etagLocal.equals(etagOnline);
     }
 
@@ -353,7 +353,7 @@ public class DownloadJaredJsonTask extends AsyncTask<String, Void, List<Applicat
             return false;
 
         String etagOnline = HttpHeadChecker.getEtag(GDROID_JAR_URL);
-//        Pref.get().setLastGDroidEtag(etagOnline); // don't update here, becasue download can still fail (or be aborted) later
+//        Pref.get().setLastGDroidEtag(etagOnline); // don't update here, because download can still fail (or be aborted) later
         return etagLocal.equals(etagOnline);
     }
 }
