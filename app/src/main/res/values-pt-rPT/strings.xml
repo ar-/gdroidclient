@@ -17,7 +17,7 @@
     <string name="category_Theming">Personalização</string>
     <string name="category_Time">Data/hora</string>
     <string name="category_Writing">Escrita</string>
-    <string name="antifeatures">Características indesejadas</string>
+    <string name="antifeatures">Anti-funcionalidades</string>
     <string name="anti_ads">Esta aplicação contém publicidade</string>
     <string name="anti_tracking">Esta aplicação monitoriza e reporta a sua atividade</string>
     <string name="anti_nonfreeadd">Esta aplicação promove complementos não livres</string>
@@ -132,10 +132,10 @@
     <string name="pref_description_send_crash_reports">Recolher dados sobre os erros e perguntar-me se quero enviar o relatório ao programador</string>
     <string name="comments">Comentários</string>
     <string name="developer">Programador</string>
-    <string name="write_comment">comentar</string>
-    <string name="no_comments_available">ainda sem comentários</string>
-    <string name="fetching_comments">A obter os comentários…</string>
+    <string name="write_comment">Comentar</string>
+    <string name="no_comments_available">Ainda sem comentários</string>
+    <string name="fetching_comments">A obter comentários…</string>
     <string name="how_to_rate">Por favor partilhe isto com uma aplicação Mastodon, adicione o seu comentário mas não altere a hashtag.</string>
-    <string name="could_not_download_gdroid_metadata">não foi possível descarregar os metadados G-Droid</string>
-    <string name="data_is_up_to_date">os dados são atuais</string>
+    <string name="could_not_download_gdroid_metadata">Não foi possível descarregar os meta-dados G-Droid</string>
+    <string name="data_is_up_to_date">Os dados estão atualizados</string>
 </resources>
