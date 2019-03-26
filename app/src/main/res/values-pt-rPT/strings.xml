@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="category_Connectivity">Conectividade</string>
-    <string name="category_Development">Desenvolvimento</string>
+    <string name="category_Development">Programação</string>
     <string name="category_Games">Jogos</string>
     <string name="category_Graphics">Gráficos</string>
     <string name="category_Internet">Internet</string>
@@ -14,20 +14,20 @@
     <string name="category_Security">Segurança</string>
     <string name="category_Sports_Health">Desporto e saúde</string>
     <string name="category_System">Sistema</string>
-    <string name="category_Theming">Temas</string>
+    <string name="category_Theming">Personalização</string>
     <string name="category_Time">Data/hora</string>
     <string name="category_Writing">Escrita</string>
-    <string name="antifeatures">Anti-funcionalidades</string>
+    <string name="antifeatures">Características indesejadas</string>
     <string name="anti_ads">Esta aplicação contém publicidade</string>
     <string name="anti_tracking">Esta aplicação monitoriza e reporta a sua atividade</string>
-    <string name="anti_nonfreeadd">Esta aplicação promove extras não livres</string>
+    <string name="anti_nonfreeadd">Esta aplicação promove complementos não livres</string>
     <string name="anti_nonfreenet">Esta aplicação promove serviços de rede não livres</string>
     <string name="anti_nonfreedep">Esta aplicação depende de aplicações não livres</string>
     <string name="anti_upstreamnonfree">O código-fonte não é integralmente livre</string>
     <string name="anti_nonfreeassets">Esta aplicação contém recursos não livres</string>
     <string name="anti_disabledalgorithm">Esta aplicação tem uma assinatura de segurança fraca</string>
-    <string name="anti_knownvuln">Esta aplicação contém uma vulnerabilidade conhecida</string>
-    <string name="anti_nosourcesince">O código fonte já não está disponível e não é possível a atualização.</string>
+    <string name="anti_knownvuln">Esta aplicação contém uma vulnerabilidade de segurança conhecida</string>
+    <string name="anti_nosourcesince">O código-fonte já não está disponível e já não é possível atualizar.</string>
     <string name="no_permissions">Não utiliza permissões.</string>
     <string name="perm_costs_money">Pode implicar gastos</string>
     <string name="perms_description_app">Disponibilizada por .</string>
@@ -41,7 +41,7 @@
     <string name="no">Não</string>
     <string name="download_all_updates">Descarregar todas as atualizações</string>
     <string name="downloading">A descarregar…</string>
-    <string name="download_pending">À espera da descarga…</string>
+    <string name="download_pending">A esperar para descarregar…</string>
     <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">Abrir menu de navegação</string>
     <string name="navigation_drawer_close">Fechar menu de navegação</string>
@@ -51,8 +51,8 @@
     <string name="action_add_favourite">Adicionar aos favoritos</string>
     <string name="title_activity_settings">Definições</string>
     <string name="pref_header_general">Geral</string>
-    <string name="pref_header_data_sync">Exemplo de definições para dados e sincronização</string>
-    <string name="pref_title_sync_frequency">Frequência de sincronização</string>
+    <string name="pref_header_data_sync">Dados e sincronização</string>
+    <string name="pref_title_sync_frequency">Frequência da sincronização</string>
     <string name="pref_header_notifications">Notificações</string>
     <string name="pref_title_new_message_notifications">Notificações para novas mensagens</string>
     <string name="title_home">Início</string>
@@ -61,8 +61,8 @@
     <string name="title_categories">Categorias</string>
     <string name="title_tags">Etiquetas</string>
     <string name="title_starred">Estrela</string>
-    <string name="title_myapps">Minhas aplicações</string>
-    <string name="title_search">Pesquisar</string>
+    <string name="title_myapps">Minhas</string>
+    <string name="title_search">Procurar</string>
     <string name="app_store">Loja de aplicações</string>
     <string name="calendar">Calendário</string>
     <string name="camera">Câmara</string>
@@ -70,35 +70,35 @@
     <string name="email_client">E-mail</string>
     <string name="file_browser">Explorador de ficheiros</string>
     <string name="gallery">Galeria</string>
-    <string name="launcher">Launcher</string>
+    <string name="launcher">Lançador</string>
     <string name="music_player">Reprodutor de música</string>
     <string name="shopping_list">Lista de compras</string>
     <string name="text_editor">Editor de texto</string>
     <string name="todo_list">Lista de tarefas</string>
     <string name="torrent_downloader">Torrents</string>
     <string name="web_browser">Navegador web</string>
-    <string name="youtube_player">Reprodutor Youtube</string>
+    <string name="youtube_player">Reprodutor YouTube</string>
     <string name="action_hide">Ocultar</string>
     <string name="action_unhide">Mostrar</string>
     <string name="pref_header_ratings">Avaliações</string>
-    <string name="pref_title_upstream_ratings">Avaliações de GitHub, GitLab e SourceForge</string>
+    <string name="pref_title_upstream_ratings">Avaliações no GitHub, GitLab e SourceForge</string>
     <string name="pref_title_ratings_headline">Definir a importância de cada métrica</string>
     <string name="pref_title_ratings_summary">Atribua um número de 0 a 10 para cada métrica. Números mais altos implicam maior importância.</string>
     <string name="pref_title_updated_in_2_years">Última atualização nos últimos 2 anos</string>
     <string name="pref_title_release_cycle_time">Ciclo de novas versões</string>
     <string name="search_harder">Pesquisar melhor</string>
-    <string name="search_even_harder">Pesquisar muito melhor</string>
+    <string name="search_even_harder">Pesquisar ainda mais</string>
     <string name="menu_my_apps">Minhas aplicações</string>
     <string name="menu_hidden_apps">Aplicações ocultas</string>
     <string name="similar_apps">Aplicações semelhantes</string>
     <string name="by_same_author">Do mesmo autor</string>
     <string name="menu_app_authors">Autores</string>
-    <string name="installing" formatted="false">A instalar </string>
+    <string name="installing" formatted="false">A instalar %s</string>
     <string name="installing_details" formatted="false">A instalar %d de %d</string>
     <string name="installation_finished">Instalação terminada</string>
     <string name="installed_details">%d aplicações instaladas</string>
     <string name="confirmation">Confirmação</string>
-    <string name="use_root">Deseja instalar as aplicações sem qualquer ação do utilizador, utilizando os privilégios root do dispositivo\?</string>
+    <string name="use_root">Quer instalar as aplicações sem qualquer ação do utilizador, utilizando os privilégios root do dispositivo\?</string>
     <string name="pref_description_use_root">Instalar e desinstalar aplicações automaticamente se o dispositivo tiver acesso root</string>
     <string name="pref_title_use_root">Utilizar privilégio root</string>
     <string name="more">Mais</string>
@@ -107,11 +107,11 @@
     <string name="name">Nome</string>
     <string name="sort_search">Ordenar pesquisa</string>
     <string name="in_same_category">Mesma categoria</string>
-    <string name="pref_title_use_list_view">Ativar exibição em lista</string>
-    <string name="pref_description_use_list_view">Se possível, mostrar aplicações em lista</string>
+    <string name="pref_title_use_list_view">Ativar visualização em lista</string>
+    <string name="pref_description_use_list_view">Mostrar aplicações em lista, se possível</string>
     <string name="newest_apps">Aplicações recentes</string>
-    <string name="recently_updated">Atualizadas recentemente</string>
-    <string name="highly_rated">Bem classificada</string>
+    <string name="recently_updated">Atualizações recentes</string>
+    <string name="highly_rated">Melhor avaliadas</string>
     <string name="similar_to_my_apps">Aplicações similares</string>
     <string name="you_might_also_like">Também pode gostar</string>
     <string name="random_apps">Aplicações aleatórias</string>
@@ -120,7 +120,7 @@
     <string name="descending">descendente</string>
     <string name="action_uninstall">Desinstalar</string>
     <string name="license">Licença</string>
-    <string name="app_size">Tamanho: </string>
+    <string name="app_size">Tamanho</string>
     <string name="ok">OK</string>
     <string name="download_error">Falha ao descarregar!</string>
     <string name="saving_app_details">A guardar detalhes das aplicações</string>
@@ -129,13 +129,13 @@
     <string name="crash_dialog_text">Ocorreu um erro inesperado e a aplicação foi encerrada. Gostaria de nos enviar um e-mail com os detalhes do erro?</string>
     <string name="crash_dialog_comment_prompt">Pode adicionar algumas informações e comentários aqui:</string>
     <string name="pref_title_send_crash_reports">Pedir para enviar relatórios de erros</string>
-    <string name="pref_description_send_crash_reports">Recolher dados sobre os erros e pedir para os enviar ao programador</string>
-    <string name="comments">comentários</string>
+    <string name="pref_description_send_crash_reports">Recolher dados sobre os erros e perguntar-me se quero enviar o relatório ao programador</string>
+    <string name="comments">Comentários</string>
     <string name="developer">Programador</string>
-    <string name="write_comment">escrever um comentário</string>
-    <string name="no_comments_available">sem comentários para esta app</string>
-    <string name="fetching_comments">a obter comentários…</string>
-    <string name="how_to_rate">Por favor partilhe isto com uma app Mastodon, adicione o seu comentário mas não altere a hashtag.</string>
+    <string name="write_comment">comentar</string>
+    <string name="no_comments_available">ainda sem comentários</string>
+    <string name="fetching_comments">A obter os comentários…</string>
+    <string name="how_to_rate">Por favor partilhe isto com uma aplicação Mastodon, adicione o seu comentário mas não altere a hashtag.</string>
     <string name="could_not_download_gdroid_metadata">não foi possível descarregar os metadados G-Droid</string>
     <string name="data_is_up_to_date">os dados são atuais</string>
 </resources>
