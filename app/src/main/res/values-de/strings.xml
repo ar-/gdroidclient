@@ -46,7 +46,7 @@
     <string name="action_add_favourite">Zu den Favoriten hinzufügen</string>
     <string name="title_activity_settings">Einstellungen</string>
     <string name="pref_header_general">Allgemeines</string>
-    <string name="pref_header_data_sync">Daten / Synchronisation</string>
+    <string name="pref_header_data_sync">Daten und Synchronisation</string>
     <string name="pref_title_sync_frequency">Synchronisationsfrequenz</string>
     <string name="pref_header_notifications">Benachrichtigungen</string>
     <string name="pref_title_new_message_notifications">Benachrichtigungen über neue Nachrichten</string>
