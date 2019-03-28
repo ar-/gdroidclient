@@ -8,11 +8,11 @@
     <string name="category_Money">Geld</string>
     <string name="category_Multimedia">Multimedia</string>
     <string name="category_Navigation">Navigation</string>
-    <string name="category_Phone_SMS">Telefon &amp; SMS</string>
+    <string name="category_Phone_SMS">Telefon / SMS</string>
     <string name="category_Reading">Lesen</string>
-    <string name="category_Science_Education">Wissenschaft &amp; Bildung</string>
+    <string name="category_Science_Education">Wissenschaft / Bildung</string>
     <string name="category_Security">Sicherheit</string>
-    <string name="category_Sports_Health">Sport &amp; Gesundheit</string>
+    <string name="category_Sports_Health">Sport / Gesundheit</string>
     <string name="category_System">System</string>
     <string name="category_Theming">Aussehen</string>
     <string name="category_Time">Zeit</string>
@@ -46,7 +46,7 @@
     <string name="action_add_favourite">Zu den Favoriten hinzufügen</string>
     <string name="title_activity_settings">Einstellungen</string>
     <string name="pref_header_general">Allgemeines</string>
-    <string name="pref_header_data_sync">Daten &amp; Synchronisation</string>
+    <string name="pref_header_data_sync">Daten / Synchronisation</string>
     <string name="pref_title_sync_frequency">Synchronisationsfrequenz</string>
     <string name="pref_header_notifications">Benachrichtigungen</string>
     <string name="pref_title_new_message_notifications">Benachrichtigungen über neue Nachrichten</string>
@@ -80,17 +80,15 @@
     <string name="download_pending">Auf den Start der Übertragung wird gewartet …</string>
     <string name="pref_description_use_root">Apps automatisch installieren, wenn das Gerät gerootet ist</string>
     <string name="pref_title_use_root">Root benutzen</string>
-    <string name="confirmation">Bestaetigung</string>
+    <string name="confirmation">Bestätigung</string>
     <string name="use_root">"Möchtest du Apps ohne Benutzerinteraktion mit den verfügbaren Root-Rechten auf diesem Gerät installieren\?"</string>
-
     <string name="more">Mehr</string>
-    <string name="newest_apps">Neuste Apps</string>
+    <string name="newest_apps">Neueste Apps</string>
     <string name="recently_updated">Kürzlich aktualisierte Apps</string>
     <string name="highly_rated">Gut bewertet</string>
     <string name="similar_to_my_apps">Ähnlich zu meinen Apps</string>
     <string name="you_might_also_like">Könnte dir auch gefallen</string>
     <string name="random_apps">Zufällige Apps</string>
-
     <string name="last_update">Letzte Aktualisierung</string>
     <string name="added_on">Hinzugefügt am </string>
     <string name="name">Name</string>
@@ -112,8 +110,8 @@
     <string name="menu_hidden_apps">Verborgene Apps</string>
     <string name="similar_apps">Ähnliche Apps</string>
     <string name="by_same_author">Vom gleichen Author</string>
-    <string name="installing" formatted="false">Installiere %s</string>
-    <string name="installing_details" formatted="false">Installiere %d / %d</string>
+    <string name="installing" formatted="false">%s wird installiert</string>
+    <string name="installing_details" formatted="false">%d / %d wird installiert</string>
     <string name="installation_finished">Installation beendet</string>
     <string name="installed_details">%d Apps installiert</string>
     <string name="in_same_category">Gleiche Kategorie</string>
@@ -121,24 +119,20 @@
     <string name="pref_description_use_list_view">falls möglich Apps in Liste anzeigen</string>
     <string name="menu_app_authors">Autoren der Apps</string>
     <string name="action_uninstall">Entfernen</string>
-
     <string name="menu_top_authors">Top Autoren</string>
     <string name="top_author">Top Autor</string>
-
     <string name="license">Lizenz</string>
     <string name="app_size">Größe</string>
     <string name="developer">Entwickler</string>
     <string name="comments">Kommentare</string>
     <string name="write_comment">Kommentar schreiben</string>
     <string name="no_comments_available">Keine Kommentare für diese App vorhanden</string>
-    <string name="fetching_comments">Lade Kommentare …</string>
+    <string name="fetching_comments">Kommentare werden geladen …</string>
     <string name="ok">OK</string>
-    <string name="how_to_rate">Bitte mit einer Mastodon app teilen, das Kommentar schreiben und den Hashtag nicht ändern.</string>
-
+    <string name="how_to_rate">Bitte mit einer Mastodon-App teilen, einen Kommentar schreiben, aber den Hashtag nicht ändern.</string>
     <string name="download_error">Herunterladen fehlgeschlagen!</string>
     <string name="saving_app_details">Anwendungsdetails werden gespeichert</string>
-    <string name="could_not_download_gdroid_metadata">G-Droid Metadaten konnten nicht geladen werden</string>
-
+    <string name="could_not_download_gdroid_metadata">G-Droid-Metadaten konnten nicht geladen werden</string>
     <string name="cancel">Abbrechen</string>
     <string name="crash_dialog_title">G-Droid ist abgestürzt</string>
     <string name="crash_dialog_text">Die Anwendung wurde durch einen unerwarteten Fehler beendet. Möchten Sie die
@@ -146,6 +140,6 @@
     </string>
     <string name="crash_dialog_comment_prompt">Sie können zusätzliche Informationen und Kommentare hier einfügen:</string>
     <string name="pref_title_send_crash_reports">Auf Nachfrage Absturzbericht senden</string>
-    <string name="pref_description_send_crash_reports">Daten zu Abstürzen sammeln und vor ihrem Versand an den Entwickler nachfragen</string>
+    <string name="pref_description_send_crash_reports">Daten zu Abstürzen sammeln und vor deren Versand an den Entwickler nachfragen</string>
     <string name="data_is_up_to_date">Daten sind aktuell</string>
 </resources>
