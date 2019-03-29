@@ -109,7 +109,7 @@
     <string name="menu_my_apps">Meine Apps</string>
     <string name="menu_hidden_apps">Verborgene Apps</string>
     <string name="similar_apps">Ähnliche Apps</string>
-    <string name="by_same_author">Vom gleichen Author</string>
+    <string name="by_same_author">Vom gleichen Autor</string>
     <string name="installing" formatted="false">%s wird installiert</string>
     <string name="installing_details" formatted="false">%d / %d wird installiert</string>
     <string name="installation_finished">Installation beendet</string>
