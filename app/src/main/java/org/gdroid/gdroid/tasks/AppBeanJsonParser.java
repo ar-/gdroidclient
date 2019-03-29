@@ -194,6 +194,13 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
             }
         }
 
+        //repair errors in data
+        // fix for #167 : remove HTML &apos; from title and descriptions
+        if (!TextUtils.isEmpty(ab.name))
+            ab.name = ab.name.replace("&apos;","'");
+        if (!TextUtils.isEmpty(ab.desc))
+            ab.desc = ab.desc.replace("&amp;apos;","'");
+
         return ab;
     }
 
