@@ -25,7 +25,7 @@ import android.arch.persistence.room.RoomDatabase;
 import android.arch.persistence.room.migration.Migration;
 import android.content.Context;
 
-@Database(entities = {ApplicationBean.class,CategoryBean.class,TagBean.class}, version = 18)
+@Database(entities = {ApplicationBean.class,CategoryBean.class,TagBean.class}, version = 19)
 public abstract class AppDatabase extends RoomDatabase {
     public static final String db="gdroiddb";
     public abstract SimpleApplicationDao appDao();
@@ -33,8 +33,8 @@ public abstract class AppDatabase extends RoomDatabase {
     public static final AppDatabase get(Context context)
     {
         return Room.databaseBuilder(context, AppDatabase.class, AppDatabase.db)
-                .addMigrations(MIGRATION_16_17, MIGRATION_17_18)
-                .fallbackToDestructiveMigration()
+                .addMigrations(MIGRATION_16_17, MIGRATION_17_18, MIGRATION_18_19)
+//                .fallbackToDestructiveMigration()
                 .allowMainThreadQueries()
                 .build();
     }
@@ -50,6 +50,13 @@ public abstract class AppDatabase extends RoomDatabase {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
             database.execSQL("ALTER TABLE ApplicationBean ADD COLUMN `size` INTEGER NOT NULL DEFAULT 0");
+        }
+    };
+
+    public static final Migration MIGRATION_18_19 = new Migration(18, 19) {
+        @Override
+        public void migrate(SupportSQLiteDatabase database) {
+            database.execSQL("ALTER TABLE ApplicationBean ADD COLUMN `versionsJson` TEXT");
         }
     };
 

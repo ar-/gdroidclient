@@ -85,6 +85,10 @@ public class ApplicationBean {
     public String hash;
     public int size;
 
+    /**
+     * the complete Json representation of tha package from the repo json file
+     */
+    public String versionsJson;
 
 
     public ApplicationBean() {
