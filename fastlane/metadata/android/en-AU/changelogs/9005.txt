@@ -1,0 +1,21 @@
+0.9.5
+  * show small label from/to which version an app can be updated
+  * bugfix: show apostrophes in names correctly
+
+0.9.4
+  * performance improvement and caching update to load app images faster
+  * bugfix: ignore uppercase/lowercase for authors when showing apps of same author
+  * bugfix: repository updates where sometimes narked incorrectly successful
+
+0.9.3
+  * bugfix: G-Droid crashed when updating on Android 6.0 and lower on some devices
+
+0.9.2
+  * bugfix: G-Droid crashed when clicking the 3 dots of a similar app in the app detail view
+  * bugfix: closing open database connections faster
+
+0.9.1
+  * bugfix: G-Droid crashed when too many apps where installed
+  * bugfix: G-Droid crashed when the app was closed while updating all apps on some devices
+  * bugfix: G-Droid crashed on devices with low memory
+  * bugfix: G-Droid crashed when attempting to install a broken APK

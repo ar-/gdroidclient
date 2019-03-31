@@ -730,10 +730,12 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         final Button btnUninstall = findViewById(R.id.btn_uninstall);
         final Button btnLaunch = findViewById(R.id.btn_launch);
         final LinearLayout pbh = findViewById(R.id.progress_bar_holder);
+        final TextView lblAvailableUpdate = findViewById(R.id.lbl_available_update);
         btnInstall.setVisibility(View.GONE);
         btnUninstall.setVisibility(View.GONE);
         btnLaunch.setVisibility(View.GONE);
         pbh.setVisibility(View.GONE);
+        lblAvailableUpdate.setVisibility(View.GONE);
 
         switch (status)
         {
@@ -756,6 +758,14 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                     {
                         btnInstall.setText(getString(R.string.action_upgrade));
                         btnInstall.setVisibility(View.VISIBLE);
+                        final String iver = Util.getInstalledVersionOfApp(this,mApp.id);
+                        final String mver = mApp.marketversion;
+                        String updateText = getResources().getText(R.string.app_can_be_updated).toString();
+                        if (updateText.split("%s").length != 3)
+                            updateText = "%s -> %s";
+                        updateText = String.format(updateText, iver, mver);
+                        lblAvailableUpdate.setText(updateText);
+                        lblAvailableUpdate.setVisibility(View.VISIBLE);
                     }
                 }
                 else

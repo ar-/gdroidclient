@@ -148,4 +148,5 @@
     <string name="pref_title_send_crash_reports">Auf Nachfrage Absturzbericht senden</string>
     <string name="pref_description_send_crash_reports">Daten zu Abstürzen sammeln und vor ihrem Versand an den Entwickler nachfragen</string>
     <string name="data_is_up_to_date">Daten sind aktuell</string>
+    <string name="app_can_be_updated">Diese Anwendung kann von Version %s auf %s aktualisiert werden</string>
 </resources>
