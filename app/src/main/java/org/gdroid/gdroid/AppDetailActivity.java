@@ -58,6 +58,7 @@ import com.tonyodev.fetch2.Status;
 import com.tonyodev.fetch2core.DownloadBlock;
 
 import org.gdroid.gdroid.Adapters.CommentAdapter;
+import org.gdroid.gdroid.Adapters.VersionAdapter;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
@@ -65,12 +66,14 @@ import org.gdroid.gdroid.beans.AuthorBean;
 import org.gdroid.gdroid.beans.CategoryBean;
 import org.gdroid.gdroid.beans.CommentBean;
 import org.gdroid.gdroid.beans.TagBean;
+import org.gdroid.gdroid.beans.VersionBean;
 import org.gdroid.gdroid.installer.Installer;
 import org.gdroid.gdroid.perm.AppDiff;
 import org.gdroid.gdroid.perm.AppSecurityPermissions;
 import org.gdroid.gdroid.repos.Repo;
 import org.gdroid.gdroid.tasks.DownloadCommentsTask;
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -120,7 +123,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         ((TextView)findViewById(R.id.lbl_app_author)).setText(mApp.author);
         ((TextView)findViewById(R.id.lbl_license)).setText(mApp.license);
         DecimalFormat dfSize = new DecimalFormat("#.#");
-        ((TextView)findViewById(R.id.lbl_size)).setText(dfSize.format(mApp.size/1024f/1024f) + " MB");
+        ((TextView)findViewById(R.id.lbl_size)).setText(dfSize.format(Math.max(mApp.size/1024f/1024f,0.1f)) + " MB");
         ((TextView)findViewById(R.id.lbl_website)).setText(mApp.web);
         ((TextView)findViewById(R.id.lbl_email)).setText(mApp.email);
 
@@ -307,8 +310,6 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             grpScreenshots.setVisibility(View.GONE);
         }
 
-        // TODO show changelog from fastlane
-
         // make the star button useful
         fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -493,6 +494,37 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         {
             findViewById(R.id.grp_ratings).setVisibility(View.GONE);
         }
+
+        // fill in the versions
+        if (!TextUtils.isEmpty(mApp.versionsJson)) {
+            ListView commentsListView = findViewById(R.id.listview_versions);
+            final List<VersionBean> versionBeans = new ArrayList<>();
+            final VersionAdapter commentAdapter = new VersionAdapter(this, versionBeans,mApp);
+            commentsListView.setAdapter(commentAdapter);
+
+            try {
+                JSONArray versions = new JSONArray(mApp.versionsJson);
+
+                for (int i = 0 ; i< versions.length(); i++)
+                {
+                    JSONObject version  = versions.getJSONObject(i);
+                    VersionBean vb = new VersionBean();
+                    vb.versionName = version.getString("versionName");
+                    vb.added = version.getLong("added");
+                    vb.size = version.getLong("size");
+                    vb.apkName = version.getString("apkName");
+
+                    versionBeans.add(vb);
+                }
+            }
+            catch (JSONException e)
+            {
+                e.printStackTrace();
+            }
+
+            commentAdapter.notifyDataSetChanged();
+        }
+
 
         // fetch comments and init adapter
         findViewById(R.id.lbl_no_comments).setVisibility(View.GONE);

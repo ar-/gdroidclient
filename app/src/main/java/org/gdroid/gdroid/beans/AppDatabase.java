@@ -34,7 +34,7 @@ public abstract class AppDatabase extends RoomDatabase {
     {
         return Room.databaseBuilder(context, AppDatabase.class, AppDatabase.db)
                 .addMigrations(MIGRATION_16_17, MIGRATION_17_18, MIGRATION_18_19)
-//                .fallbackToDestructiveMigration()
+                .fallbackToDestructiveMigration()
                 .allowMainThreadQueries()
                 .build();
     }

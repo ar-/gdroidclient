@@ -19,6 +19,7 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -31,6 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginRight="6dip"
+        android:paddingLeft="12dp"
         app:srcCompat="@drawable/ic_update_black_24dp"
         />
 
@@ -40,15 +42,41 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-        <TextView
-            android:id="@+id/lbl_firstLine"
-            android:layout_width="fill_parent"
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="X.X.X"
-            android:maxLines="1"
-            android:padding="3dp"
-            android:textSize="16sp" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lbl_firstLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="3dp"
+                android:text="X.X.X"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <Button
+                android:id="@+id/btn_install"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/action_install"
+                android:textColor="#ffffffff"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+        </android.support.constraint.ConstraintLayout>
 
         <TextView
             android:id="@+id/lbl_whats_new"
@@ -79,6 +107,7 @@
             android:textSize="12sp"
             android:padding="3dp"
             />
+
 
     </LinearLayout>
 
