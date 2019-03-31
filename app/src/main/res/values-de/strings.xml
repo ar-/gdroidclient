@@ -82,6 +82,7 @@
     <string name="pref_title_use_root">Root benutzen</string>
     <string name="confirmation">Bestätigung</string>
     <string name="use_root">"Möchtest du Apps ohne Benutzerinteraktion mit den verfügbaren Root-Rechten auf diesem Gerät installieren\?"</string>
+
     <string name="more">Mehr</string>
     <string name="newest_apps">Neueste Apps</string>
     <string name="recently_updated">Kürzlich aktualisierte Apps</string>
@@ -89,6 +90,7 @@
     <string name="similar_to_my_apps">Ähnlich zu meinen Apps</string>
     <string name="you_might_also_like">Könnte dir auch gefallen</string>
     <string name="random_apps">Zufällige Apps</string>
+
     <string name="last_update">Letzte Aktualisierung</string>
     <string name="added_on">Hinzugefügt am </string>
     <string name="name">Name</string>
@@ -109,9 +111,9 @@
     <string name="menu_my_apps">Meine Apps</string>
     <string name="menu_hidden_apps">Verborgene Apps</string>
     <string name="similar_apps">Ähnliche Apps</string>
-    <string name="by_same_author">Vom gleichen Autor</string>
-    <string name="installing" formatted="false">%s wird installiert</string>
-    <string name="installing_details" formatted="false">%d / %d wird installiert</string>
+    <string name="by_same_author">Vom gleichen Author</string>
+    <string name="installing" formatted="false">Installiere %s</string>
+    <string name="installing_details" formatted="false">Installiere %d / %d</string>
     <string name="installation_finished">Installation beendet</string>
     <string name="installed_details">%d Apps installiert</string>
     <string name="in_same_category">Gleiche Kategorie</string>
@@ -119,8 +121,10 @@
     <string name="pref_description_use_list_view">falls möglich Apps in Liste anzeigen</string>
     <string name="menu_app_authors">Autoren der Apps</string>
     <string name="action_uninstall">Entfernen</string>
+
     <string name="menu_top_authors">Top Autoren</string>
     <string name="top_author">Top Autor</string>
+
     <string name="license">Lizenz</string>
     <string name="app_size">Größe</string>
     <string name="developer">Entwickler</string>
@@ -142,4 +146,5 @@
     <string name="pref_title_send_crash_reports">Auf Nachfrage Absturzbericht senden</string>
     <string name="pref_description_send_crash_reports">Daten zu Abstürzen sammeln und vor deren Versand an den Entwickler nachfragen</string>
     <string name="data_is_up_to_date">Daten sind aktuell</string>
+    <string name="app_can_be_updated">Diese Anwendung kann von Version %s auf %s aktualisiert werden</string>
 </resources>
