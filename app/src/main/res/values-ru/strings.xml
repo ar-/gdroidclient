@@ -120,4 +120,5 @@
     <string name="crash_dialog_comment_prompt">Можете добавить дополнительную информацию и комментарии:</string>
     <string name="pref_title_send_crash_reports">Запрос на отправку отчетов о сбоях</string>
     <string name="pref_description_send_crash_reports">Сбор информации о сбоях и запрос на отправку ее разработчику</string>
+    <string name="versions">Версии</string>
 </resources>

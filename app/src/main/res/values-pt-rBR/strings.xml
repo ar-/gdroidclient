@@ -138,4 +138,5 @@
     <string name="how_to_rate">Por favor compartilhe esta app Mastodom, adicione seu comentário mas não mude a hashtag.</string>
     <string name="could_not_download_gdroid_metadata">falha ao baixar dados do G-Droid</string>
     <string name="data_is_up_to_date">dados estão atualizados</string>
+    <string name="versions">Versões</string>
 </resources>

@@ -60,4 +60,5 @@
     <string name="crash_dialog_comment_prompt">Anda dapat menambahkan informasi ekstra dan komentar disini:</string>
     <string name="pref_title_send_crash_reports">Minta mengirim laporan kerusakan</string>
     <string name="pref_description_send_crash_reports">Kumpulkan data tentang mogok dan minta untuk mengirimnya ke pengembang</string>
+    <string name="versions">Versi</string>
 </resources>

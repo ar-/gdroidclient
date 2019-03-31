@@ -56,4 +56,5 @@
 
     <string name="pref_title_send_crash_reports">Entrugar si mandar informes de fallu</string>
     <string name="pref_description_send_crash_reports">Collechar datos de los fallos y entrugar pa unvialos al desendolcador</string>
+    <string name="versions">Versiones</string>
 </resources>

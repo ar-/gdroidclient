@@ -52,4 +52,5 @@
     <string name="crash_dialog_title">G-Droid yabondera</string>
     <string name="crash_dialog_text">Pane kanganiso isina kutarisirwa yaitika</string>
     <string name="crash_dialog_comment_prompt">Unokwanisa kuwedzera mashoko mamwe ne mawonero ako panapa:</string>
+    <string name="versions">Mavhezheni</string>
 </resources>

@@ -53,4 +53,5 @@
     <string name="crash_dialog_title">G-Droid spadol</string>
     <string name="crash_dialog_text">Neočakávaná chyba spôsobila násilné ukončenie aplikácie. Chcete poslať e-mail s detailami a pomôcť tak vyriešiť problém?</string>
     <string name="crash_dialog_comment_prompt">Sem môžete poskytnúť extra informácie a pripomienky:</string>
+    <string name="versions">Verzie</string>
 </resources>

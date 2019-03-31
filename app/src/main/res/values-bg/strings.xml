@@ -53,4 +53,5 @@
     <string name="crash_dialog_title">Програмата се срина</string>
     <string name="crash_dialog_text">Непредвидена грешка накара приложението да се затвори. Желаете ли да пратите имейл</string>
     <string name="crash_dialog_comment_prompt">Тук можете да добавяте допълнителна информация и коментари:</string>
+    <string name="versions">Версии</string>
 </resources>

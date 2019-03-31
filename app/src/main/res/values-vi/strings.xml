@@ -56,4 +56,5 @@
     <string name="crash_dialog_title">G-Droid đã bị dừng đột ngột</string>
     <string name="crash_dialog_text">Ứng dụng buộc phải dừng vì có lỗi đột ngột xảy ra. Bạn có muốn gửi thông tin qua e-mail để giúp khắc phục vấn đề này không?</string>
     <string name="crash_dialog_comment_prompt">Bạn có thể đưa thêm thông tin và bình luận ở đây:</string>
+    <string name="versions">Các phiên bản</string>
 </resources>
