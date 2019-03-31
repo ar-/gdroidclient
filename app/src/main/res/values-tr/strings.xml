@@ -30,7 +30,7 @@
     <string name="anti_nosourcesince">Kaynak kodu artık mevcut değil, güncelleme mümkün değil.</string>
     <string name="no_permissions">Hiçbir izin kullanılmıyor.</string>
     <string name="perm_costs_money">Bu size paraya mal olabilir</string>
-    <string name="perms_description_app">%1$s tarafından sağlanmıştır.</string>
+    <string name="perms_description_app">Tarafından sunulan .</string>
     <string name="perms_new_perm_prefix">Yeni:</string>
     <string name="permissions">İzinler</string>
     <string name="links">Bağlantılar</string>
@@ -112,7 +112,7 @@
     <string name="you_might_also_like">Bunları da beğenebilirsin</string>
     <string name="random_apps">Rastgele uygulamalar</string>
     <string name="last_update">Son güncelleme</string>
-    <string name="added_on">%s tarihinde eklendi</string>
+    <string name="added_on">Eklendi</string>
     <string name="name">Ad</string>
     <string name="sort_search">Aramayı sırala</string>
     <string name="stars">Yıldızlar</string>
@@ -120,7 +120,7 @@
     <string name="descending">azalan</string>
     <string name="action_uninstall">Kaldır</string>
     <string name="license">Lisans</string>
-    <string name="app_size">Boyut: </string>
+    <string name="app_size">Boyut</string>
     <string name="ok">Tamam</string>
     <string name="download_error">İndirme başarısız!</string>
     <string name="saving_app_details">Uygulama ayrıntıları kaydediliyor</string>
@@ -130,4 +130,12 @@
     <string name="crash_dialog_comment_prompt">Ek bilgi ve yorumları buraya ekleyebilirsiniz:</string>
     <string name="pref_title_send_crash_reports">Çökme bildirimlerini göndermek için sor</string>
     <string name="pref_description_send_crash_reports">Çökmelerle ilgili verileri topla ve bunları geliştiriciye göndermek için sor</string>
+    <string name="developer">Geliştirici</string>
+    <string name="comments">Yorumlar</string>
+    <string name="write_comment">yorum yaz</string>
+    <string name="no_comments_available">bu uygulama için yorum yapılmamış</string>
+    <string name="fetching_comments">yorumlar getiriliyor …</string>
+    <string name="how_to_rate">Lütfen bunu bir Mastodon uygulamasıyla paylaşın, yorumunuzu ekleyin, ancak etiketi değiştirmeyin.</string>
+    <string name="could_not_download_gdroid_metadata">G-Droid meta verileri indirilemedi</string>
+    <string name="data_is_up_to_date">veriler güncel</string>
 </resources>

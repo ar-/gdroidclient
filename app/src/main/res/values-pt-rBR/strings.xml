@@ -23,11 +23,11 @@
     <string name="anti_nonfreeadd">Este aplicativo promove complementos não livres</string>
     <string name="anti_nonfreenet">Este aplicativo promove serviços de rede não livres</string>
     <string name="anti_nonfreedep">Este aplicativo depende de aplicativos não livres</string>
-    <string name="anti_upstreamnonfree">O código fonte original não é totalmente livre</string>
+    <string name="anti_upstreamnonfree">O código-fonte original não é totalmente livre</string>
     <string name="anti_nonfreeassets">Este aplicativo contém conteúdo não-livre</string>
     <string name="anti_disabledalgorithm">Este aplicativo tem um assinatura de segurança fraca</string>
     <string name="anti_knownvuln">Este aplicativo contém uma falha de segurança já conhecida</string>
-    <string name="anti_nosourcesince">Não é possível atualizar, o código fonte não está mais disponivel.</string>
+    <string name="anti_nosourcesince">Não é possível atualizar, o código-fonte não está mais disponível.</string>
     <string name="no_permissions">Nenhuma permissão utilizada.</string>
     <string name="perm_costs_money">Isto pode custar-lhe dinheiro</string>
     <string name="perms_description_app">Fornecido por .</string>
@@ -75,9 +75,9 @@
     <string name="music_player">Reprodutor de Música</string>
     <string name="shopping_list">Lista de compras</string>
     <string name="todo_list">lista de tarefas</string>
-    <string name="torrent_downloader">Torrent Downloader</string>
+    <string name="torrent_downloader">Baixar torrents</string>
     <string name="web_browser">navegador da web</string>
-    <string name="youtube_player">YouTube Player</string>
+    <string name="youtube_player">Reprodutor YouTube</string>
     <string name="action_hide">Ocultar</string>
     <string name="action_unhide">Mostrar</string>
     <string name="pref_header_ratings">Classificações por estrelas</string>
@@ -93,7 +93,7 @@
     <string name="similar_apps">Aplicativos semelhantes</string>
     <string name="by_same_author">Pelo mesmo autor</string>
     <string name="menu_app_authors">Autores de aplicativos</string>
-    <string name="installing" formatted="false">Instalando </string>
+    <string name="installing" formatted="false">Instalando %s</string>
     <string name="installing_details" formatted="false">Instalando %d / %d</string>
     <string name="installation_finished">Instalação concluída</string>
     <string name="installed_details">Instalou %d de apps</string>
@@ -120,15 +120,22 @@
     <string name="descending">descendente</string>
     <string name="action_uninstall">Desinstalar</string>
     <string name="license">Licença</string>
-    <string name="app_size">Tamanho: </string>
+    <string name="app_size">Tamanho</string>
     <string name="ok">OK</string>
-    <string name="download_error">Falha no download!</string>
-    <string name="saving_app_details">Salvando detalhes dos aplicativos</string>
+    <string name="download_error">Falha ao baixar!</string>
+    <string name="saving_app_details">Salvando detalhes do aplicativo</string>
     <string name="cancel">Cancelar</string>
     <string name="crash_dialog_title">O G-Droid travou</string>
-    <string name="crash_dialog_text">Ocorreu um erro inesperado,</string>
+    <string name="crash_dialog_text">Ocorreu um erro inesperado forçando o aplicativo a parar. Desejaria enviar um email para os desenvolvedores com os detalhes para ajudar a solucionar o problema\?</string>
     <string name="crash_dialog_comment_prompt">Você pode adicionar informações extras e comentários aqui:</string>
     <string name="pref_title_send_crash_reports">Perguntar antes de enviar relatórios de falhas</string>
-    <string name="pref_description_send_crash_reports">Reunir dados sobre falhas e enviar pro desenvolvedor</string>
-    <string name="comments">comentário</string>
+    <string name="pref_description_send_crash_reports">Reunir dados sobre falhas e enviar para o desenvolvedor</string>
+    <string name="comments">Comentários</string>
+    <string name="developer">Desenvolvedor</string>
+    <string name="write_comment">comentar</string>
+    <string name="no_comments_available">sem comentários ainda</string>
+    <string name="fetching_comments">obtendo comentários…</string>
+    <string name="how_to_rate">Por favor compartilhe esta app Mastodom, adicione seu comentário mas não mude a hashtag.</string>
+    <string name="could_not_download_gdroid_metadata">falha ao baixar dados do G-Droid</string>
+    <string name="data_is_up_to_date">dados estão atualizados</string>
 </resources>
