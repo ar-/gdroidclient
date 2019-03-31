@@ -127,4 +127,5 @@
     <string name="comments">comentarios</string>
     <string name="write_comment">escribir comentario</string>
     <string name="data_is_up_to_date">los datos ser actual</string>
+    <string name="recently_updated">Actualizadas recientemente</string>
 </resources>

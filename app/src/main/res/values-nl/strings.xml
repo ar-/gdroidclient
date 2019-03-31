@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Connectiviteit</string>
-
     <string name="category_Development">Ontwikkeling</string>
     <string name="category_Games">Spellen</string>
     <string name="category_Graphics">Grafisch</string>
@@ -10,13 +8,13 @@
     <string name="category_Money">Geld</string>
     <string name="category_Multimedia">Multimedia</string>
     <string name="category_Navigation">Navigatie</string>
-    <string name="category_Phone_SMS">Telefoon &amp; SMS</string>
+    <string name="category_Phone_SMS">Telefoon &amp; sms</string>
     <string name="category_Reading">Lezen</string>
     <string name="category_Science_Education">Onderwijs &amp; wetenschap</string>
     <string name="category_Security">Beveiliging</string>
     <string name="category_Sports_Health">Sport &amp; gezondheid</string>
     <string name="category_System">Systeem</string>
-    <string name="category_Theming">Themas</string>
+    <string name="category_Theming">Thema’s</string>
     <string name="category_Time">Tijd</string>
     <string name="category_Writing">Schrijven</string>
     <string name="antifeatures">Anti-functies</string>
@@ -95,7 +93,7 @@
     <string name="similar_apps">Gelijkaardige apps</string>
     <string name="by_same_author">Van dezelfde ontwikkelaar</string>
     <string name="menu_app_authors">Appontwikkelaars</string>
-    <string name="installing" formatted="false"> wordt geïnstalleerd</string>
+    <string name="installing" formatted="false">%s wordt geïnstalleerd</string>
     <string name="installing_details" formatted="false">Bezig met installeren %d / %d</string>
     <string name="installation_finished">Installatie voltooid</string>
     <string name="installed_details">%d apps geïnstalleerd</string>
@@ -122,14 +120,22 @@
     <string name="descending">aflopend</string>
     <string name="action_uninstall">Verwijderen</string>
     <string name="license">Licentie</string>
-    <string name="app_size">Grootte: </string>
-    <string name="ok">OK</string>
+    <string name="app_size">Grootte</string>
+    <string name="ok">Oké</string>
     <string name="download_error">Download mislukt!</string>
     <string name="saving_app_details">App-details opslaan</string>
     <string name="cancel">Annuleren</string>
     <string name="crash_dialog_title">G-Droid is gecrasht</string>
-    <string name="crash_dialog_text">Een onverwachte fout is opgetreden waardoor de app is gestopt.</string>
-    <string name="crash_dialog_comment_prompt">Je kan extra informatie en commentaar hier toevoegen:</string>
+    <string name="crash_dialog_text">Een onverwachte fout is opgetreden waardoor de app is gestopt. Wilt u de details over deze fout e-mailen om zo het probleem te helpen oplossen\?</string>
+    <string name="crash_dialog_comment_prompt">U kunt extra informatie en commentaar hier toevoegen:</string>
     <string name="pref_title_send_crash_reports">Vraag om crashrapporten te versturen</string>
     <string name="pref_description_send_crash_reports">Verzamel gegevens over crashes en vraag om ze naar de ontwikkelaar te sturen</string>
+    <string name="developer">Ontwikkelaar</string>
+    <string name="comments">Reacties</string>
+    <string name="write_comment">schrijf een reactie</string>
+    <string name="no_comments_available">geen reacties beschikbaar voor deze app</string>
+    <string name="fetching_comments">reacties ophalen …</string>
+    <string name="how_to_rate">Deel dit met een Mastodon-app en voeg uw reactie toe, maar wijzig de hashtag niet.</string>
+    <string name="could_not_download_gdroid_metadata">kon G-Droid-metadata niet downloaden</string>
+    <string name="data_is_up_to_date">data zijn up-to-date</string>
 </resources>

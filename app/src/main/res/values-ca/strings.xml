@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Connectivitat</string>
-
     <string name="category_Development">Desenvolupament</string>
     <string name="category_Games">Jocs</string>
     <string name="category_Graphics">Gràfics</string>
@@ -47,10 +46,10 @@
     <string name="last_update">Darrera actualització</string>
     <string name="added_on">S\'ha afegit a </string>
     <string name="name">Nom</string>
-<string name="sort_search">Ordena els resultats de la cerca</string>
+    <string name="sort_search">Ordena els resultats de la cerca</string>
     <string name="action_uninstall">Desinstal·la</string>
     <string name="license">Llicència</string>
-    <string name="app_size">Mida: </string>
+    <string name="app_size">Mida</string>
     <string name="ok">D\'acord</string>
     <string name="download_error">Error en la baixada!</string>
     <string name="saving_app_details">S\'està desant els detalls de l\'aplicació</string>
@@ -60,4 +59,58 @@
     <string name="crash_dialog_comment_prompt">Podeu afegir informació addicional i comentaris aquí:</string>
     <string name="pref_title_send_crash_reports">Enviar informes de fallida</string>
     <string name="pref_description_send_crash_reports">Recopil·lar informació de les fallides i preguntar per enviar-la al desenvolupador</string>
+    <string name="app_name">G-Droid</string>
+    <string name="nav_header_subtitle">client pel repositori F-Droid</string>
+    <string name="action_settings">Configuració</string>
+    <string name="action_add_favourite">Afegir a preferits</string>
+    <string name="title_activity_settings">Configuració</string>
+    <string name="pref_title_sync_frequency">Freqüència de sincronització</string>
+    <string name="pref_header_notifications">Notificacions</string>
+    <string name="title_home">Inici</string>
+    <string name="title_dashboard">Tauler</string>
+    <string name="title_notifications">Notificacions</string>
+    <string name="title_tags">Etiquetes</string>
+    <string name="title_starred">destacat</string>
+    <string name="title_myapps">Les meves aplicacions</string>
+    <string name="title_search">cercar</string>
+    <string name="app_store">Botiga d\'aplicacions</string>
+    <string name="calendar">Calendari</string>
+    <string name="camera">Càmera</string>
+    <string name="contacts">Contactes</string>
+    <string name="email_client">Client de correu electrònic</string>
+    <string name="file_browser">Explorador de fitxers</string>
+    <string name="gallery">Galeria</string>
+    <string name="launcher">Llançador</string>
+    <string name="music_player">Reproductor de música</string>
+    <string name="shopping_list">Llista de compra</string>
+    <string name="text_editor">Editor de text</string>
+    <string name="torrent_downloader">Descarregador de Torrents</string>
+    <string name="web_browser">Navegador Web</string>
+    <string name="action_hide">Oculta</string>
+    <string name="action_unhide">Mostra</string>
+    <string name="pref_title_upstream_ratings">Qualificacions de GitHub, GitLab i SourceForge</string>
+    <string name="menu_my_apps">Les meves aplicacions</string>
+    <string name="menu_hidden_apps">Aplicacions ocultes</string>
+    <string name="similar_apps">Aplicacions similars</string>
+    <string name="by_same_author">Del mateix autor</string>
+    <string name="menu_app_authors">Autors de l\'aplicació</string>
+    <string name="installing" formatted="false">Instal·lant %s</string>
+    <string name="installing_details" formatted="false">Instal·lant %d / %d</string>
+    <string name="installation_finished">Instal·lació finalitzada</string>
+    <string name="installed_details">Instal·lades %d aplicacions</string>
+    <string name="confirmation">Confirmació</string>
+    <string name="in_same_category">Mateixa categoria</string>
+    <string name="pref_description_use_list_view">Mostra les aplicacions en una llista si és possible</string>
+    <string name="newest_apps">Aplicacions més noves</string>
+    <string name="recently_updated">Actualitzades recentment</string>
+    <string name="similar_to_my_apps">Similar a les meves aplicacions</string>
+    <string name="random_apps">Aplicacions aleatòries</string>
+    <string name="stars">Estrelles</string>
+    <string name="ascending">ascendent</string>
+    <string name="descending">descendent</string>
+    <string name="developer">Desenvolupador</string>
+    <string name="comments">Comentaris</string>
+    <string name="write_comment">escriu un comentari</string>
+    <string name="no_comments_available">no hi ha comentaris disponibles per aquesta aplicació</string>
+    <string name="fetching_comments">recuperant comentaris …</string>
 </resources>
