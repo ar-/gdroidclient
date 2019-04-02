@@ -61,4 +61,5 @@
     <string name="pref_title_send_crash_reports">اعلان فرستادن گزارش‌های خرابی</string>
     <string name="pref_description_send_crash_reports">جمع‌آوری داده دربارهٔ خرابی‌ها و پرسش برای فرستادنشان به توسعه‌دهنده</string>
     <string name="versions">نگارش‌ها</string>
+    <string name="app_installed">نصب شده</string>
 </resources>

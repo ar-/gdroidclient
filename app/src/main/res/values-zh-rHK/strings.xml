@@ -54,4 +54,5 @@
     <string name="crash_dialog_text">因發生了未預料到的錯誤，應用程式已停止運作。您願意透過電郵提供更多有關此問題的資料嗎？</string>
     <string name="crash_dialog_comment_prompt">您可以在此加入額外的資料及評論：</string>
     <string name="versions">版本</string>
+    <string name="app_installed">已安裝</string>
 </resources>

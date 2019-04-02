@@ -57,4 +57,5 @@
     <string name="crash_dialog_text">Ocorreu un erro inesperado, forzando a parada do aplicativo. Gostaria de enviar un e-mail cos detalles para axudar a correxir o problema?</string>
     <string name="crash_dialog_comment_prompt">Pode engadir información adicional e comentarios aquí:</string>
     <string name="versions">Versións</string>
+    <string name="app_installed">Instalada</string>
 </resources>

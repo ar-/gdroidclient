@@ -44,4 +44,5 @@
     <string name="crash_dialog_title">G-Droidը կործանվեց</string>
     <string name="crash_dialog_comment_prompt">Այստեղ կարող ես ավելացնել հավելյալ տեղեկատվություն և</string>
     <string name="versions">Տարբերակներ</string>
+    <string name="app_installed">Տեղադրված</string>
 </resources>

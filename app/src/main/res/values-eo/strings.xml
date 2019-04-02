@@ -61,4 +61,5 @@
     <string name="pref_title_send_crash_reports">Proponi sendi raportojn pri paneoj</string>
     <string name="pref_description_send_crash_reports">Kolekti datumojn pri misfunkcioj kaj peti pri sendi ilin al programistoj</string>
     <string name="versions">Versioj</string>
+    <string name="app_installed">Instalita</string>
 </resources>

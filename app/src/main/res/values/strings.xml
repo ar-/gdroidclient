@@ -221,4 +221,5 @@
     <string name="app_can_be_updated">This application can be updated from %s to %s</string>
 
     <string name="versions">Versions</string>
+    <string name="app_installed">Installed</string>
 </resources>

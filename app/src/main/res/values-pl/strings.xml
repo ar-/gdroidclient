@@ -89,4 +89,5 @@
     <string name="pref_title_send_crash_reports">Proponuj wysyłanie raportów o awariach</string>
     <string name="pref_description_send_crash_reports">Zbieraj dane o awariach i proponuj wysyłanie ich do programistów</string>
     <string name="versions">Wersje</string>
+    <string name="app_installed">Zainstalowane</string>
 </resources>

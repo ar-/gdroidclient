@@ -114,4 +114,5 @@
     <string name="no_comments_available">no hi ha comentaris disponibles per aquesta aplicació</string>
     <string name="fetching_comments">recuperant comentaris …</string>
     <string name="versions">Versions</string>
+    <string name="app_installed">Instal·lat</string>
 </resources>

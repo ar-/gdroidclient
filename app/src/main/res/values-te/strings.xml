@@ -50,4 +50,5 @@
     <string name="crash_dialog_title">ఎఫ్-డ్రాయిడ్ ఇబ్బంది ఎదుర్కొంది</string>
     <string name="crash_dialog_comment_prompt">మీరు ఇక్కడ అదనపు సమాచారం మరియు వ్యాఖ్యలను జోడించవచ్చు:</string>
     <string name="versions">వెర్షన్లు</string>
+    <string name="app_installed">స్థాపితమయ్యింది</string>
 </resources>

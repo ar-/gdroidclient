@@ -138,4 +138,5 @@
     <string name="pref_title_send_crash_reports">Pitaj prije slanja izvješća o padu</string>
     <string name="pref_description_send_crash_reports">Prikupi podatke o greškama i zatraži da ih pošaljete razvijatelju</string>
     <string name="data_is_up_to_date">podaci su ažurirani</string>
+    <string name="app_installed">Instalirano</string>
 </resources>

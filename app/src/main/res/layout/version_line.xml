@@ -61,6 +61,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 />
 
+            <TextView
+                android:id="@+id/lbl_installed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="6dp"
+                android:text="@string/app_installed"
+                android:textSize="12sp"
+                android:textColor="#00ff00"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/lbl_firstLine"
+                android:visibility="gone"
+                />
+
             <Button
                 android:id="@+id/btn_install"
                 android:layout_width="wrap_content"

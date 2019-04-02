@@ -98,4 +98,5 @@
     <string name="pref_title_send_crash_reports">Pedi de imbiare raportos a pitzu de sos arrestos anòmalos</string>
     <string name="pref_description_send_crash_reports">Boddi datos a pitzu de sos arrestos anòmalos e imbia·los a sos isvilupadores</string>
     <string name="versions">Versiones</string>
+    <string name="app_installed">Installada</string>
 </resources>

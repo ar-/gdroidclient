@@ -139,4 +139,5 @@
     <string name="could_not_download_gdroid_metadata">kunne ikke laste ned G-Droid-metadata</string>
     <string name="data_is_up_to_date">data oppdatert</string>
     <string name="versions">Versjoner</string>
+    <string name="app_installed">Installert</string>
 </resources>

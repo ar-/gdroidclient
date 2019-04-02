@@ -54,4 +54,5 @@
     <string name="crash_dialog_text">གློ་བུར་དུ་སྐྱོན་ཆ་ཞིག་ཤོར་སོང་བས་མཉེན་ཆས་འདི་སྒོ་མ་རྒྱབ་ཀ་མེད་ཐུག་སོང་། ཁྱེད་རང་གིས་གློག་འཕྲིན་གཏོང་ནས་གནད་དོན་འདི་སེལ་འདོད་དམ།?</string>
     <string name="crash_dialog_comment_prompt">ཁྱེད་རང་གིས་གནས་ཚུལ་འཕར་མ་དང་མཆན་འདིར་བཀོད་ཐུབ།:</string>
     <string name="versions">ཐོན་རིམ་ཁག</string>
+    <string name="app_installed">འགྲིག་བཅུག</string>
 </resources>

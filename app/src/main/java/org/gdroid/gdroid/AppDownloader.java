@@ -55,6 +55,10 @@ public class AppDownloader {
     public static final String TAG = "AppDownloader";
 
     public static Request download(final Context context, ApplicationBean mApp, final boolean install) {
+        return download(context,mApp,null, install);
+    }
+
+    public static Request download(final Context context, ApplicationBean mApp, String apkname, final boolean install) {
         final Fetch fetch = getFetch(context);
         final Installer installer = Util.getAppInstaller(context);
 

@@ -139,4 +139,5 @@
     <string name="pref_description_send_crash_reports">Verzamelt gegevens over crashes en vraagt om ze naar de(n) ontwikkelaar te sturen</string>
     <string name="data_is_up_to_date">gegevens zijn up-to-date</string>
     <string name="versions">Versies</string>
+    <string name="app_installed">Geïnstalleerd</string>
 </resources>

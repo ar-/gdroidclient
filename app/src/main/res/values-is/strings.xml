@@ -61,4 +61,5 @@
     <string name="pref_title_send_crash_reports">Spyrja hvort eigi að senda villuskýrslur</string>
     <string name="pref_description_send_crash_reports">Safna upplýsingum um hrun og senda til forritara</string>
     <string name="versions">Útgáfur</string>
+    <string name="app_installed">Uppsett</string>
 </resources>

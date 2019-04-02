@@ -54,4 +54,5 @@
     <string name="crash_dialog_text">\'N Onverwagse fout het voorgekom wat die program laat stop het.</string>
     <string name="crash_dialog_comment_prompt">Jy kan ekstra inligting en kommentaar hier laat:</string>
     <string name="versions">Weergawes</string>
+    <string name="app_installed">Geinstalleer</string>
 </resources>

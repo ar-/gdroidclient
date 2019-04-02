@@ -61,4 +61,5 @@
     <string name="pref_title_send_crash_reports">Minta mengirim laporan kerusakan</string>
     <string name="pref_description_send_crash_reports">Kumpulkan data tentang mogok dan minta untuk mengirimnya ke pengembang</string>
     <string name="versions">Versi</string>
+    <string name="app_installed">Terpasang</string>
 </resources>
