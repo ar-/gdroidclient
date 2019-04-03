@@ -509,7 +509,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                         JSONArray versions = new JSONArray(mApp.versionsJson);
                         CompatibilityChecker cc = new CompatibilityChecker();
 
-                        String lastListedVersion = ""; // This prevent listing the same version twice if CPU supports more than one architecture
+                        String lastListedVersion = ""; // This prevents listing the same version twice if CPU supports more than one architecture
                         for (int i = 0 ; i< versions.length(); i++)
                         {
                             JSONObject version  = versions.getJSONObject(i);

@@ -86,7 +86,7 @@ public class ApplicationBean {
     public int size;
 
     /**
-     * the complete Json representation of tha package from the repo json file
+     * the complete Json representation of the package from the repo json file
      */
     public String versionsJson;
 
