@@ -22,6 +22,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.TableRow;
 
@@ -55,10 +56,14 @@ public class AppDownloader {
     public static final String TAG = "AppDownloader";
 
     public static Request download(final Context context, ApplicationBean mApp, final boolean install) {
+        return download(context,mApp,null, install);
+    }
+
+    public static Request download(final Context context, ApplicationBean mApp, String apkname, final boolean install) {
         final Fetch fetch = getFetch(context);
         final Installer installer = Util.getAppInstaller(context);
 
-        String url = (new Repo()).getBaseUrl()+"/"+mApp.apkname;
+        String url = (new Repo()).getBaseUrl()+"/"+ (TextUtils.isEmpty(apkname) ? mApp.apkname : apkname);
         final String file = getAbsoluteFilenameOfDownloadTarget(context, mApp);
 
 

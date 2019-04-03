@@ -138,4 +138,6 @@
     <string name="how_to_rate">Παρακαλώ μοιραστείτε αυτή την εφαρμογή στο δίκτυο του Mastodon, προσθέστε το σχόλιό σας αλλά μην αλλάξετε το hashtag.</string>
     <string name="could_not_download_gdroid_metadata">δεν ήταν δυνατό το κατέβασμα μεταδεδομένων του G-Droid</string>
     <string name="data_is_up_to_date">τα δεδομένα είναι επικαιροποιημένα</string>
+    <string name="versions">Εκδόσεις</string>
+    <string name="app_installed">Εγκατεστημένο</string>
 </resources>

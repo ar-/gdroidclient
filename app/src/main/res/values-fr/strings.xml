@@ -132,4 +132,6 @@
     <string name="crash_dialog_comment_prompt">Vous pouvez ajouter des informations supplémentaires :</string>
     <string name="pref_title_send_crash_reports">Demander avant d\'envoyer les rapports de plantage</string>
     <string name="pref_description_send_crash_reports">Recueillir des informations de débogage et proposer de les envoyer à l\'équipe de développement</string>
+    <string name="versions">Versions</string>
+    <string name="app_installed">Installée</string>
 </resources>

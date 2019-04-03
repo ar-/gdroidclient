@@ -138,4 +138,6 @@
     <string name="how_to_rate">請使用 Mastodon 應用程式分享這個，加入您的評論但不要變更主題標籤。</string>
     <string name="could_not_download_gdroid_metadata">無法下載 G-Droid 詮釋資料</string>
     <string name="data_is_up_to_date">資料已為最新</string>
+    <string name="versions">版本</string>
+    <string name="app_installed">已安裝</string>
 </resources>

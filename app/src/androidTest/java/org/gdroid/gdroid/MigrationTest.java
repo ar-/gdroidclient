@@ -107,4 +107,35 @@ public class MigrationTest {
         db.execSQL("Select size from Applicationbean limit 1;");
         db.close();
     }
+
+    @Test
+    public void migrate18To19() throws IOException {
+        SupportSQLiteDatabase db = helper.createDatabase(TEST_DB, 18);
+
+        // db has schema version 1. insert some data using SQL queries.
+        // You cannot use DAO classes because they expect the latest schema.
+        db.execSQL("Select id from Applicationbean limit 1;");
+        try
+        {
+            db.execSQL("Select versionsJson from Applicationbean limit 1;");
+            throw new RuntimeException("expected exception not thrown");
+        }
+        catch (SQLiteException e)
+        {
+            // ignore exprected exception
+        }
+
+        // Prepare for the next version.
+        db.close();
+
+        // Re-open the database with version 2 and provide
+        // MIGRATION_1_2 as the migration process.
+        db = helper.runMigrationsAndValidate(TEST_DB, 19, true, AppDatabase.MIGRATION_18_19);
+
+        // MigrationTestHelper automatically verifies the schema changes,
+        // but you need to validate that the data was migrated properly.
+
+        db.execSQL("Select versionsJson from Applicationbean limit 1;");
+        db.close();
+    }
 }

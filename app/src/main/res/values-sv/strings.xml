@@ -60,4 +60,6 @@
     <string name="crash_dialog_comment_prompt">Du kan lägga till ytterligare information och kommentarer här:</string>
     <string name="pref_title_send_crash_reports">Fråga om att skicka kraschrapporter</string>
     <string name="pref_description_send_crash_reports">Samla data om krascher och be att få skicka den till utvecklaren</string>
+    <string name="versions">Versioner</string>
+    <string name="app_installed">Installerad</string>
 </resources>
