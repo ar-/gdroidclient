@@ -495,36 +495,68 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
             findViewById(R.id.grp_ratings).setVisibility(View.GONE);
         }
 
-        // fill in the versions
-        if (!TextUtils.isEmpty(mApp.versionsJson)) {
-            ListView commentsListView = findViewById(R.id.listview_versions);
-            final List<VersionBean> versionBeans = new ArrayList<>();
-            final VersionAdapter commentAdapter = new VersionAdapter(this, versionBeans,mApp);
-            commentsListView.setAdapter(commentAdapter);
+        // fill in the versions (async)
+        ListView versionsListView = findViewById(R.id.listview_versions);
+        final List<VersionBean> versionBeans = new ArrayList<>();
+        final VersionAdapter versionAdapter = new VersionAdapter(callerActivity, versionBeans,mApp);
+        versionsListView.setAdapter(versionAdapter);
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                if (!TextUtils.isEmpty(mApp.versionsJson)) {
+                    try {
+                        JSONArray versions = new JSONArray(mApp.versionsJson);
+                        CompatibilityChecker cc = new CompatibilityChecker();
 
-            try {
-                JSONArray versions = new JSONArray(mApp.versionsJson);
+                        String lastListedVersion = ""; // This prevent listing the same version twice if CPU supports more than one architecture
+                        for (int i = 0 ; i< versions.length(); i++)
+                        {
+                            JSONObject version  = versions.getJSONObject(i);
+                            VersionBean vb = new VersionBean();
+                            vb.versionName = version.getString("versionName");
+                            vb.added = version.getLong("added");
+                            vb.size = version.getLong("size");
+                            vb.apkName = version.getString("apkName");
 
-                for (int i = 0 ; i< versions.length(); i++)
-                {
-                    JSONObject version  = versions.getJSONObject(i);
-                    VersionBean vb = new VersionBean();
-                    vb.versionName = version.getString("versionName");
-                    vb.added = version.getLong("added");
-                    vb.size = version.getLong("size");
-                    vb.apkName = version.getString("apkName");
 
-                    versionBeans.add(vb);
+
+                            int minsdk = version.optInt("minSdkVersion",Integer.MIN_VALUE);
+                            int maxsdk = version.optInt("maxSdkVersion",Integer.MAX_VALUE);
+                            JSONArray nativecode = version.optJSONArray("nativecode");
+                            ArrayList<String> availableNativeCodes=null;
+                            if (nativecode != null)
+                            {
+                                availableNativeCodes = new ArrayList<>(nativecode.length());
+                                for (int j = 0; j < nativecode.length(); j++)
+                                    availableNativeCodes.add(nativecode.getString(j));
+                            }
+
+                            final boolean isCompatible = cc.isCompatible(minsdk, maxsdk, availableNativeCodes);
+                            if (isCompatible)
+                            {
+                                if (!lastListedVersion.equals(vb.versionName))
+                                {
+                                    lastListedVersion = vb.versionName;
+                                    // now add it to the list
+                                    versionBeans.add(vb);
+                                }
+                            }
+                        }
+                    }
+                    catch (JSONException e)
+                    {
+                        e.printStackTrace();
+                    }
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            versionAdapter.notifyDataSetChanged();
+                        }
+                    });
                 }
             }
-            catch (JSONException e)
-            {
-                e.printStackTrace();
-            }
-
-            commentAdapter.notifyDataSetChanged();
-        }
-
+        });
 
         // fetch comments and init adapter
         findViewById(R.id.lbl_no_comments).setVisibility(View.GONE);

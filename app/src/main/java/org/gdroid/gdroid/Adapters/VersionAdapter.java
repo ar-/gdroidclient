@@ -58,7 +58,7 @@ public class VersionAdapter extends ArrayAdapter<VersionBean> {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.version_line, parent, false);
@@ -95,7 +95,7 @@ public class VersionAdapter extends ArrayAdapter<VersionBean> {
         btnInstall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AppDownloader.download(context, app, true);
+                AppDownloader.download(context, app, values.get(position).apkName,true);
             }
         });
 
