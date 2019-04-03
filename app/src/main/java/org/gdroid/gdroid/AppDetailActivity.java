@@ -82,6 +82,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.MissingFormatArgumentException;
 
 public class AppDetailActivity extends AppCompatActivity implements FetchListener {
 
@@ -826,9 +827,15 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                         final String iver = Util.getInstalledVersionOfApp(this,mApp.id);
                         final String mver = mApp.marketversion;
                         String updateText = getResources().getText(R.string.app_can_be_updated).toString();
-                        if (updateText.split("%s").length != 3)
+                        try
+                        {
+                            updateText = String.format(updateText, iver, mver);
+                        }
+                        catch (MissingFormatArgumentException e)
+                        {
                             updateText = "%s -> %s";
-                        updateText = String.format(updateText, iver, mver);
+                            updateText = String.format(updateText, iver, mver);
+                        }
                         lblAvailableUpdate.setText(updateText);
                         lblAvailableUpdate.setVisibility(View.VISIBLE);
                     }
