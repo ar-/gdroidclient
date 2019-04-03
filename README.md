@@ -26,8 +26,9 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * shows 'similar apps' and 'apps of the same category' when watching an app
 * shows 'apps of the same author' when watching an app
 * shows a list of all authors, with their apps and average star rating
-* shows web-site of the app - even if it is 'only a README file on github'. F-Droid has recently removed many websites to punish open source developers who can't effort their own domain.
+* shows web-site of the app - even if it is 'only a README file on github'. F-Droid has recently removed many websites to punish open source developers who can't effort their own domain. This has been done with dodgy explanations and only for apps that the F-Droid team particularly dislikes (to censor apps they don't like).
 * shows newest apps and recently updated apps separated
+* does not censor the latest apps (F-Droid added [censorship](https://news.f-droid.org/posts/2019-03-26-the-latest-tab-now-highlights-good-descriptions/) on 26/03/2019)
 * shows cards in same size for better overview
 * provides a list-view as alternative for the cards (as in older F-Droid versions) for people who don't like cards
 * has more possibilities to order and sort apps
@@ -48,11 +49,10 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * shows screenshots also when they are not in the fastlane structure
 * has a new and modern codebase and is easy to maintain
 * G-Droid is actively maintained (the F-Droid client is not any more)
-* many more to come (G-Droid is just a few weeks old) ...
+* many more to come (G-Droid is still pretty new and has only one developer [and many translators] right now) ...
 
 # Things that G-Droid can NOT do (yet) compared to F-Droid
 
-* show or install an older version of an app
 * create a local repo, share apps with 'near' people or share apps via bluetooth
 * add other repositories than the F-Droid repo
 * use the privileged extension (done, but extension is not adjusted yet), G-Droid can use root permissions on rooted phones though, to provide unattended installs
