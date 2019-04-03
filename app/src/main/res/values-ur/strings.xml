@@ -1,4 +1,78 @@
-<resources>
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">جی - ڈیرائیڈ</string>
+    <string name="navigation_drawer_open">نیویگیشن کھولیں</string>
+    <string name="navigation_drawer_close">نیویگیشن بند</string>
+    <string name="nav_header_subtitle">ایف - ڈرائیڈ ریپازیٹوری کے لیے ایک کلائنٹ</string>
+    <string name="action_settings">ترتیبات</string>
+    <string name="action_add_favourite">پسندیدہ میں شامل کریں</string>
+    <string name="title_activity_settings">ترتیبات</string>
+    <string name="pref_header_general">عام</string>
+    <string name="pref_header_data_sync">ڈیٹا اور سنک</string>
+    <string name="pref_header_notifications">اطلاعات</string>
+    <string name="pref_title_new_message_notifications">نئے پیغامات کی اطلاع</string>
+    <string name="title_home">گھر</string>
+    <string name="title_dashboard">ڈیش بورڈ</string>
+    <string name="title_notifications">اطلاعات</string>
+    <string name="title_categories">زمرے</string>
+    <string name="title_tags">ٹیگ</string>
+    <string name="title_starred">ستارے کے نشان والے</string>
+    <string name="title_myapps">میری ایپلیکیشنیں</string>
+    <string name="title_search">تلاش</string>
+    <string name="app_store">ایپ سٹور</string>
+    <string name="calendar">کلینڈر</string>
+    <string name="camera">کیمرا</string>
+    <string name="contacts">روابط</string>
+    <string name="email_client">ای میل کلائنٹ</string>
+    <string name="file_browser">فائل براؤزر</string>
+    <string name="gallery">گیلری</string>
+    <string name="launcher">لانچر</string>
+    <string name="music_player">موسیقی چلانے والا</string>
+    <string name="shopping_list">شاپنگ فہرست</string>
+    <string name="text_editor">متن کی تدوین</string>
+    <string name="todo_list">ٹوڈو فہرست</string>
+    <string name="torrent_downloader">ٹارینٹ ڈاؤنلوڈ کرنے والا</string>
+    <string name="web_browser">انٹرنیٹ پھرولنے کے لیے</string>
+    <string name="youtube_player">یوٹیوب چلانے کے لیے</string>
+    <string name="category_Connectivity" tools:ignore="UnusedResources">اتصال و رابطہ</string>
+    <string name="category_Development" tools:ignore="UnusedResources">ڈیولپمنٹ</string>
+    <string name="category_Games" tools:ignore="UnusedResources">کھیل</string>
+    <string name="category_Graphics" tools:ignore="UnusedResources">"گرافکس "</string>
+    <string name="category_Internet" tools:ignore="UnusedResources">انٹرنیٹ</string>
+    <string name="category_Money" tools:ignore="UnusedResources">پیسوں والی ایپلیکیشنیں</string>
+    <string name="category_Multimedia" tools:ignore="UnusedResources">ملٹی میڈیا</string>
+    <string name="category_Navigation" tools:ignore="UnusedResources">نیویگیشن</string>
+    <string name="category_Phone_SMS" tools:ignore="UnusedResources">فون اور ایس ایم ایس</string>
+    <string name="category_Reading" tools:ignore="UnusedResources">پڑھنا</string>
+    <string name="category_Science_Education" tools:ignore="UnusedResources">سائنس و تعلیم</string>
+    <string name="category_Security" tools:ignore="UnusedResources">سیکیورٹی</string>
+    <string name="category_Sports_Health" tools:ignore="UnusedResources">سپورٹس اور صحت</string>
+    <string name="category_System" tools:ignore="UnusedResources">"سسٹم "</string>
+    <string name="category_Theming" tools:ignore="UnusedResources">تھیم</string>
+    <string name="category_Time" tools:ignore="UnusedResources">وقت</string>
+    <string name="category_Writing" tools:ignore="UnusedResources">لکھنا</string>
+    <string name="antifeatures">غلط خصوصیات</string>
+    <string name="anti_ads">اس ایپلیکیشن میں اشتہار ہیں</string>
+    <string name="anti_tracking">یہ ایپلیکیشن آپ کو ٹریک کرے گی اور جو بھی کریں گے اسکی رپورٹ بھیجے گی</string>
+    <string name="perm_costs_money">اس میں آپ کے پیسے خرچ ہو سکتے ہیں</string>
+    <string name="perms_description_app">"منجانب "</string>
+    <string name="perms_new_perm_prefix">نیا:</string>
+    <string name="permissions">اجازتیں</string>
+    <string name="links">لنکس</string>
+    <string name="action_install">انسٹال</string>
+    <string name="action_upgrade">اپگریڈ</string>
+    <string name="action_launch">چلائیں</string>
+    <string name="action_hide">"چھپائیں "</string>
+    <string name="action_unhide">ظاہر کریں</string>
+    <string name="pref_header_ratings">ریٹنگ</string>
+    <string name="menu_my_apps">میری ایپلیکیشنیں</string>
+    <string name="menu_hidden_apps">چھپائی ہوئی ایپلیکیشنین</string>
+    <string name="similar_apps">ملتی جھلتی ایپلیکیشنیں</string>
+    <string name="by_same_author">اسی ڈیولیپر کی اور ایپلیکیشنیں</string>
+    <string name="menu_app_authors">ایپلیکیشنوں کے ڈیولیپر</string>
+    <string name="installing" formatted="false">%s انسٹال کر رہا ہے</string>
+    <string name="installing_details" formatted="false">%d میں سے %d انسٹال ہو رہا</string>
+    <string name="installation_finished">انسٹال مکمل</string>
+    <string name="installed_details">انسٹال کی کل %d ایپلیکیشنیں</string>
+    <string name="confirmation">تصدیق</string>
 </resources>
