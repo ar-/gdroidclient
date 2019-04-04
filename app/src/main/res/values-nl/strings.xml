@@ -138,6 +138,9 @@
     <string name="how_to_rate">Deel dit met een Mastodon-app en voeg uw reactie toe, maar wijzig de hashtag niet.</string>
     <string name="could_not_download_gdroid_metadata">kon G-Droid-metadata niet downloaden</string>
     <string name="data_is_up_to_date">data zijn up-to-date</string>
+    <string name="menu_top_authors">Topontwikkelaars</string>
+    <string name="top_author">Topontwikkelaar</string>
+    <string name="app_can_be_updated">Deze app kan worden bijgewerkt van %s naar %s</string>
     <string name="versions">Versies</string>
     <string name="app_installed">Geïnstalleerd</string>
 </resources>
