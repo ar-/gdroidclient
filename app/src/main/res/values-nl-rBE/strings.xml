@@ -138,4 +138,7 @@
     <string name="pref_title_send_crash_reports">Vraagt om crashrapporten te versturen</string>
     <string name="pref_description_send_crash_reports">Verzamelt gegevens over crashes en vraagt om ze naar de(n) ontwikkelaar te sturen</string>
     <string name="data_is_up_to_date">gegevens zijn up-to-date</string>
+    <string name="menu_top_authors">Topontwikkelaars</string>
+    <string name="top_author">Topontwikkelaar</string>
+    <string name="app_can_be_updated">Dezen app kan bijgewerkt worden van %s naar %s</string>
 </resources>
