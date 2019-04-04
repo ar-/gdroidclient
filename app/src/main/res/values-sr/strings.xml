@@ -57,4 +57,6 @@
     <string name="crash_dialog_comment_prompt">Можете да унесете додатне податке и коментаре овде:</string>
     <string name="pref_title_send_crash_reports">Питај да шаљеш извештај о рушењу</string>
     <string name="pref_description_send_crash_reports">Скупљај податке у рушењима и питај да се пошаљу програмерима</string>
+    <string name="versions">Издања</string>
+    <string name="app_installed">Инсталирана</string>
 </resources>

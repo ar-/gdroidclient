@@ -114,6 +114,7 @@ class AppBeanJsonParser extends AbstractJsonParser implements JsonParser{
         // apk name from packages
         // package must be found, otherwise app is useless, as it wont have an APK
         final JSONArray appPackages = packages.getJSONArray(ab.id);
+        ab.versionsJson = appPackages.toString();
         final JSONObject latestPackage = getLatestPackage(appPackages);
         if (latestPackage == null)
             throw new IncompatibleAppException();

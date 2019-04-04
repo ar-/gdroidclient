@@ -868,9 +868,36 @@
             android:paddingTop="6dp"
             android:background="?android:attr/listDivider" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/versions"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <org.gdroid.gdroid.widget.WrappingListView
+                android:id="@+id/listview_versions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                >
+
+            </org.gdroid.gdroid.widget.WrappingListView>
+
+
+        </LinearLayout>
 
 
     </LinearLayout>
+
 
 
 </android.support.v4.widget.NestedScrollView>

@@ -17,4 +17,5 @@
     <string name="license">உரிமம்</string>
     <string name="ok">சரி</string>
     <string name="cancel">ரத்து செய்</string>
+    <string name="app_installed">நிறுவப்பட்டது</string>
 </resources>

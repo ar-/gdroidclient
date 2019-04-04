@@ -141,4 +141,6 @@
     <string name="menu_top_authors">Topontwikkelaars</string>
     <string name="top_author">Topontwikkelaar</string>
     <string name="app_can_be_updated">Deze app kan worden bijgewerkt van %s naar %s</string>
+    <string name="versions">Versies</string>
+    <string name="app_installed">Geïnstalleerd</string>
 </resources>

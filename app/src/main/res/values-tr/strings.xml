@@ -139,4 +139,6 @@
     <string name="could_not_download_gdroid_metadata">G-Droid meta verileri indirilemedi</string>
     <string name="data_is_up_to_date">veriler güncel</string>
     <string name="app_can_be_updated">Bu uygulama %s ile %s arasında güncellenebilir</string>
+    <string name="versions">Sürümler</string>
+    <string name="app_installed">Kurulu</string>
 </resources>

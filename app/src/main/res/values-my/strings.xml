@@ -51,4 +51,6 @@
     <string name="cancel">ပယ္ဖ်က္မည္</string>
     <string name="crash_dialog_title">G-Droid ခဏရပ္သြားပါသည္</string>
     <string name="crash_dialog_comment_prompt">သင္သည္ ေနာက္ထပ္ အခ်က္အလက္မ်ားႏွင့္မွတ္ခ်က္မ်ားကို</string>
+    <string name="versions">ဗားရှင်းများ</string>
+    <string name="app_installed">သြင္းထားခဲ့သည္</string>
 </resources>

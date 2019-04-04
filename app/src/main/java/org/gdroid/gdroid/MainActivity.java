@@ -677,7 +677,7 @@ public class MainActivity extends AppCompatActivity
 //        if (Util.getLastMenuItem(this).equals("search"))
 //        {
 //            executeQuery(false, "search");
-////            searchView.change // TODO call function to run the first first (call text change on drearch viw)
+////            searchView.change // TODO call function to run the first first (call text change on search view)
 //        }
     }
 

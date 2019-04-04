@@ -14,4 +14,6 @@
     <string name="name">ಹೆಸರು</string>
     <string name="license">ಪರವಾನಿಗೆ</string>
     <string name="ok">ಸರಿ</string>
+    <string name="versions">ಆವೃತ್ತಿಗಳು</string>
+    <string name="app_installed">ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ</string>
 </resources>

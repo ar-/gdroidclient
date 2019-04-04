@@ -141,4 +141,6 @@
     <string name="menu_top_authors">熱門作者</string>
     <string name="top_author">熱門作者</string>
     <string name="app_can_be_updated">這個應用程式可以從 %s 更新到 %s</string>
+    <string name="versions">版本</string>
+    <string name="app_installed">已安裝</string>
 </resources>

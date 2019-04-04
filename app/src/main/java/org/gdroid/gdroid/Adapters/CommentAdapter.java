@@ -62,6 +62,7 @@ public class CommentAdapter extends ArrayAdapter<CommentBean> {
         content = content.replace("@<span>gdroid</span>","");
         content = content.replace("@<span>gdroid@mastodon.technology</span>","");
         content = content.replace("#<span>"+ Util.convertPackageNameToHashtag(appId)+"</span>","");
+        content = content.replace("#<span>fdroid_app_comments</span>","");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             line2.setText(Html.fromHtml(content, Html.FROM_HTML_MODE_COMPACT));

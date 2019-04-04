@@ -129,4 +129,6 @@
     <string name="crash_dialog_comment_prompt">Puteți adăuga informații și comentarii aici:</string>
     <string name="pref_title_send_crash_reports">Notifică la trimiterea raportelor de eroare</string>
     <string name="pref_description_send_crash_reports">Se strâng date despre erori și se întreabă dacă se pot trimite dezvoltatorului</string>
+    <string name="versions">Versiuni</string>
+    <string name="app_installed">Instalată</string>
 </resources>

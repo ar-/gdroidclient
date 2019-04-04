@@ -141,4 +141,6 @@
     <string name="menu_top_authors">Topputviklere</string>
     <string name="top_author">Topputvikler</string>
     <string name="app_can_be_updated">Dette programmet kan oppgraderes fra %s til %s</string>
+    <string name="versions">Versjoner</string>
+    <string name="app_installed">Installert</string>
 </resources>

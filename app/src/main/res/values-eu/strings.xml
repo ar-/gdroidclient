@@ -138,4 +138,6 @@
     <string name="how_to_rate">Partekatu hau Mastodon aplikazio batekin, gehitu zure iruzkina baina ez aldatu traolak.</string>
     <string name="could_not_download_gdroid_metadata">ezin izan dira G-Droid metadatuak deskargatu</string>
     <string name="data_is_up_to_date">datuak egunean daude</string>
+    <string name="versions">Bertsioak</string>
+    <string name="app_installed">Instalatuta</string>
 </resources>
