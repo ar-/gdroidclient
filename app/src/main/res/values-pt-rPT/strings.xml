@@ -138,4 +138,7 @@
     <string name="how_to_rate">Por favor partilhe isto com uma aplicação Mastodon, adicione o seu comentário mas não altere a hashtag.</string>
     <string name="could_not_download_gdroid_metadata">Não foi possível descarregar os meta-dados G-Droid</string>
     <string name="data_is_up_to_date">Os dados estão atualizados</string>
+    <string name="menu_top_authors">Autores em destaque</string>
+    <string name="top_author">Autor em destaque</string>
+    <string name="app_can_be_updated">Pode atualizar esta aplicação da versão %s para a %s</string>
 </resources>
