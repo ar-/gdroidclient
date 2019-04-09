@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Connettività</string>
-
     <string name="category_Development">Sviluppo</string>
     <string name="category_Games">Giochi</string>
     <string name="category_Graphics">Grafica</string>
@@ -50,7 +49,7 @@
     <string name="sort_search">Ordina ricerca</string>
     <string name="action_uninstall">Disinstalla</string>
     <string name="license">Licenza</string>
-    <string name="app_size">Dimensione: </string>
+    <string name="app_size">Dimensione</string>
     <string name="ok">OK</string>
     <string name="download_error">Scaricamento fallito!</string>
     <string name="saving_app_details">Salvataggio dettagli applicazione</string>
@@ -60,4 +59,86 @@
     <string name="crash_dialog_comment_prompt">Puoi aggiungere altre informazioni e commenti qui:</string>
     <string name="pref_title_send_crash_reports">Chiedi per inviare segnalazioni di errori</string>
     <string name="pref_description_send_crash_reports">Raccogli dati sugli errori e chiedi di inviarli allo sviluppatore</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">Apri pannello di navigazione</string>
+    <string name="navigation_drawer_close">Chiudi pannello di navigazione</string>
+    <string name="nav_header_subtitle">client per i repository F-Droid</string>
+    <string name="nav_header_desc">Intestazione di navigazione</string>
+    <string name="action_settings">Impostazioni</string>
+    <string name="action_add_favourite">Aggiungi ai Preferiti</string>
+    <string name="title_activity_settings">Impostazioni</string>
+    <string name="pref_header_general">Generale</string>
+    <string name="pref_header_data_sync">Dati &amp; sincronizzazione</string>
+    <string name="pref_title_sync_frequency">Frequenza di sincronizzazione</string>
+    <string name="pref_header_notifications">Notifiche</string>
+    <string name="pref_title_new_message_notifications">Nuovi messaggi di notifica</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Pannello di controllo</string>
+    <string name="title_notifications">Notifiche</string>
+    <string name="title_categories">categorie</string>
+    <string name="title_tags">etichette</string>
+    <string name="title_starred">valutati</string>
+    <string name="title_myapps">le mie app</string>
+    <string name="title_search">ricerca</string>
+    <string name="app_store">App Store</string>
+    <string name="calendar">Calendario</string>
+    <string name="camera">Fotocamera</string>
+    <string name="contacts">Contatti</string>
+    <string name="email_client">Client Email</string>
+    <string name="file_browser">Esplora File</string>
+    <string name="gallery">Galleria</string>
+    <string name="launcher">Launcher</string>
+    <string name="music_player">Riproduttore Musicale</string>
+    <string name="shopping_list">Lista della Spesa</string>
+    <string name="text_editor">Editor di Testo</string>
+    <string name="todo_list">Elenco delle cose da fare</string>
+    <string name="torrent_downloader">"Scaricatore  Torrent"</string>
+    <string name="web_browser">Browser Web</string>
+    <string name="youtube_player">Riproduttore YouTube</string>
+    <string name="action_hide">Nascondi</string>
+    <string name="action_unhide">Mostra</string>
+    <string name="pref_header_ratings">Valutazioni</string>
+    <string name="pref_title_upstream_ratings">Valutazioni da GitHub, GitLab e SourceForge</string>
+    <string name="pref_title_ratings_headline">Imposta l\'importanza per ogni parametro secondo le tue preferenze</string>
+    <string name="pref_title_ratings_summary">Assegna un numero da 0 a 10 ad ogni parametro. Un numero alto significa grande importanza.</string>
+    <string name="pref_title_updated_in_2_years">ultimo aggiornamento negli ultimi 2 anni</string>
+    <string name="pref_title_release_cycle_time">Tempi di rilascio</string>
+    <string name="search_harder">cerca più a fondo</string>
+    <string name="search_even_harder">cerca ancora più a fondo</string>
+    <string name="menu_my_apps">Le mie app</string>
+    <string name="menu_hidden_apps">App nascoste</string>
+    <string name="similar_apps">App simili</string>
+    <string name="by_same_author">Dallo stesso Autore</string>
+    <string name="menu_app_authors">Autori App</string>
+    <string name="menu_top_authors">Migliori Autori</string>
+    <string name="top_author">Miglior Autore</string>
+    <string name="installing" formatted="false">Installazione %s</string>
+    <string name="installing_details" formatted="false">Installazione %d / %d</string>
+    <string name="installation_finished">Installazione Terminata</string>
+    <string name="installed_details">%d app installate</string>
+    <string name="confirmation">Conferma</string>
+    <string name="use_root">Vuoi installare le app senza interazione utente, utilizzando i permessi di amministratore (root) presenti nel tuo dispositivo\?</string>
+    <string name="pref_description_use_root">installa e disinstalla app automaticamente se il dispositivo è rootato</string>
+    <string name="pref_title_use_root">Usa Privilegi di Root</string>
+    <string name="in_same_category">Stessa categoria</string>
+    <string name="pref_title_use_list_view">Abilita vista ad elenco</string>
+    <string name="pref_description_use_list_view">mostra le app in elenco se possibile</string>
+    <string name="newest_apps">Nuove app</string>
+    <string name="recently_updated">Aggiornate di recente</string>
+    <string name="highly_rated">Le più votate</string>
+    <string name="similar_to_my_apps">Simili alle mie app</string>
+    <string name="you_might_also_like">Ti potrebbero anche piacere</string>
+    <string name="random_apps">App casuali</string>
+    <string name="stars">Stelle</string>
+    <string name="ascending">crescente</string>
+    <string name="descending">decrescente</string>
+    <string name="developer">Sviluppatore</string>
+    <string name="comments">Commenti</string>
+    <string name="write_comment">scrivi commento</string>
+    <string name="no_comments_available">nessun commento disponibile per questa app</string>
+    <string name="fetching_comments">recuperando i commenti …</string>
+    <string name="how_to_rate">Per favore commenta questo con un\'app Mastodon, aggiungi il tuo commento ma non modificare l\'hashtag.</string>
+    <string name="could_not_download_gdroid_metadata">non è stato possibile scaricare i metadati G-Droid</string>
+    <string name="data_is_up_to_date">i dati sono aggiornati</string>
+    <string name="app_can_be_updated">Questa applicazione può essere aggiornata da %s a %s</string>
 </resources>
