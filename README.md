@@ -6,7 +6,7 @@
 
 # What is this app
 
-G-Droid can browse the free F-Droid app-repository. It is an alternative client to the F-Droid client.
+G-Droid can browse the free F-Droid app-repository. It is an alternative client to the F-Droid client. You can follow the project website for some updates on [Mastodon](https://mastodon.technology/invite/DYmzCBER).
 
 # Screenshots
 
