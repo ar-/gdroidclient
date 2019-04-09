@@ -26,13 +26,13 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 * shows 'similar apps' and 'apps of the same category' when watching an app
 * shows 'apps of the same author' when watching an app
 * shows a list of all authors, with their apps and average star rating
-* shows the web-site of the app even if it is 'only a README file on github'. F-Droid has recently removed many websites to punish open source developers who can't effort their own domain. This has been done with dodgy explanations and only for apps that the F-Droid team particularly dislikes (to censor apps they don't like).
+* shows the web-site of the app even if it is 'only a README file on github'. F-Droid has removed many websites (not all though) of apps the team doesn't like. They also don't allow (as of now) to re-add these link to the websites. This has been done with dodgy explanations and only for apps that the F-Droid team particularly dislikes (to censor apps they don't like) and reduce the amount of download and users of these apps. Hint: if your app is affected and shows no website in F-Droid promote and encourage your users to use G-Droid.
 * shows newest apps and recently updated apps separated
 * does not censor the latest apps (F-Droid added [censorship](https://news.f-droid.org/posts/2019-03-26-the-latest-tab-now-highlights-good-descriptions/) on 26/03/2019)
 * shows cards in same size for better overview
 * provides a list-view as alternative for the cards (as in older F-Droid versions) for people who don't like cards
 * has more possibilities to order and sort apps
-* ability to 'star' apps to mark them
+* ability to 'star' apps to mark them locally
 * ability to hide apps to remove them from all views
 * shows categories in correct translation (if available) after changing language on the device
 * shows screenshots in correct translation
