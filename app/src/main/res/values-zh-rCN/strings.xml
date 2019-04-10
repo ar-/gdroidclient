@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">连接</string>
-
     <string name="category_Development">开发</string>
     <string name="category_Games">游戏</string>
     <string name="category_Graphics">图像</string>
@@ -60,4 +59,10 @@
     <string name="crash_dialog_comment_prompt">你可以在此添加额外的信息或者评论:</string>
     <string name="pref_title_send_crash_reports">提示发送崩溃报告</string>
     <string name="pref_description_send_crash_reports">收集有关崩溃的数据并询问是否发送给本应用的开发者</string>
+    <string name="title_activity_settings">设置</string>
+    <string name="pref_header_general">通用</string>
+    <string name="pref_header_data_sync">数据 &amp; 同步</string>
+    <string name="pref_title_sync_frequency">同步频率</string>
+    <string name="pref_header_notifications">通知</string>
+    <string name="pref_title_new_message_notifications">新消息通知</string>
 </resources>
