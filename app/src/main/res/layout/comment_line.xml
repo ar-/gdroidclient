@@ -19,6 +19,7 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_line_container"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -58,6 +59,20 @@
             android:text="text of the comment bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla"
             android:textSize="12sp"
             android:padding="3dp"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/lbl_more"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/more"
+            android:textColor="@color/colorPrimary"
+            android:maxLines="1"
+            android:padding="3dp"
+            android:textSize="16sp"
+            android:visibility="invisible"
             />
 
     </LinearLayout>

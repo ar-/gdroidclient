@@ -62,6 +62,7 @@ public class CommentsJsonParser {
             cb.author = toot.getJSONObject("account").optString("username","");
         cb.avatar = toot.getJSONObject("account").optString("avatar_static","");
         cb.content = toot.optString("content","");
+        cb.url = toot.optString("url","");
         return cb;
     }
 

@@ -16,27 +16,21 @@
  *
  */
 
-package org.gdroid.gdroid.Adapters;
+package org.gdroid.gdroid.adapters;
 
-import android.app.Activity;
 import android.content.Context;
-import android.os.Build;
-import android.text.Html;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.gdroid.gdroid.AppDownloader;
-import org.gdroid.gdroid.GlideApp;
 import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.Util;
 import org.gdroid.gdroid.beans.ApplicationBean;
-import org.gdroid.gdroid.beans.CommentBean;
 import org.gdroid.gdroid.beans.VersionBean;
 
 import java.text.DecimalFormat;
