@@ -55,7 +55,7 @@
             android:id="@+id/lbl_secondLine"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:maxLines="2"
+            android:maxLines="10"
             android:text="text of the comment bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla"
             android:textSize="12sp"
             android:padding="3dp"

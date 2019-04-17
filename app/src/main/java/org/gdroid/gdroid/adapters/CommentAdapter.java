@@ -80,8 +80,7 @@ public class CommentAdapter extends ArrayAdapter<CommentBean> {
 
         if (limitLines)
         {
-            line2.setMaxLines(2);
-//            setListViewHeightBasedOnChildren((ListView) parent);
+            line2.setMaxLines(10);
         }
         else
         {
@@ -140,12 +139,7 @@ public class CommentAdapter extends ArrayAdapter<CommentBean> {
             }
         });
 
-
-//        GlideApp.with(context).load(values.get(position).avatar).override(192, 192).into(imageView);
         GlideApp.with(context).load(values.get(position).avatar).into(imageView);
-
-
-//        imageView.setImageResource(R.drawable.ic_update_green_24dp);
         return rowView;
     }
 
@@ -170,40 +164,4 @@ public class CommentAdapter extends ArrayAdapter<CommentBean> {
         return false;
     }
 
-    private static void setListViewHeightBasedOnChildren(final ListView listView) {
-        listView.post(new Runnable() {
-            @Override
-            public void run() {
-                ListAdapter listAdapter = listView.getAdapter();
-                if (listAdapter == null) {
-                    return;
-                }
-                int totalHeight = listView.getPaddingTop() + listView.getPaddingBottom();
-                int listWidth = listView.getMeasuredWidth();
-                for (int i = 0; i < listAdapter.getCount(); i++) {
-                    View listItem = listAdapter.getView(i, null, listView);
-                    listItem.measure(
-                            View.MeasureSpec.makeMeasureSpec(listWidth, View.MeasureSpec.EXACTLY),
-                            View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
-
-
-                    totalHeight += listItem.getMeasuredHeight();
-                    Log.d("listItemHeight" + listItem.getMeasuredHeight(), "___________");
-                }
-                ViewGroup.LayoutParams params = listView.getLayoutParams();
-                params.height = (int) ((totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1))));
-//                params.height = 5000;
-                listView.setLayoutParams(params);
-                listView.requestLayout();
-//                listView.measure(listWidth,0);
-//                listView.getParent().recomputeViewAttributes(listView);
-//                listView.setVisibility(View.GONE);
-//                listView.getParent().requestLayout();
-//                listView.getParent().getParent().requestLayout();
-//                listView.getParent().getParent().getParent().requestLayout();
-//                listView.getParent().getParent().getParent().getParent().requestLayout();
-//                listView.getParent().getParent().getParent().getParent().getParent().requestLayout();
-            }
-        });
-    }
 }
