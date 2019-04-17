@@ -57,6 +57,8 @@ import com.tonyodev.fetch2.Request;
 import com.tonyodev.fetch2.Status;
 import com.tonyodev.fetch2core.DownloadBlock;
 
+import org.gdroid.gdroid.adapters.AppBeanAdapter;
+import org.gdroid.gdroid.adapters.AppCollectionAdapter;
 import org.gdroid.gdroid.adapters.CommentAdapter;
 import org.gdroid.gdroid.adapters.VersionAdapter;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;

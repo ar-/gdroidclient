@@ -28,7 +28,7 @@ import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.util.Log;
 
-import org.gdroid.gdroid.AppCollectionAdapter;
+import org.gdroid.gdroid.adapters.AppCollectionAdapter;
 import org.gdroid.gdroid.MainActivity;
 import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2019 Andreas Redmer <ar-gdroid@abga.be>
+ * Copyright (C) 2019 Andreas Redmer <ar-gdroid@abga.be>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@
  *
  */
 
-package org.gdroid.gdroid.authors;
+package org.gdroid.gdroid.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
