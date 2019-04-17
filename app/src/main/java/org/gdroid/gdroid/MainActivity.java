@@ -49,6 +49,8 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 
+import org.gdroid.gdroid.adapters.AppBeanAdapter;
+import org.gdroid.gdroid.adapters.AppCollectionAdapter;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;

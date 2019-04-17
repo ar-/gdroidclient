@@ -21,7 +21,7 @@ package org.gdroid.gdroid.beans;
 import android.content.Context;
 import android.util.Pair;
 
-import org.gdroid.gdroid.AppCollectionAdapter;
+import org.gdroid.gdroid.adapters.AppCollectionAdapter;
 import org.gdroid.gdroid.MapUtil;
 import org.gdroid.gdroid.Util;
 

@@ -33,6 +33,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.Display;
 
+import org.gdroid.gdroid.adapters.AppBeanAdapter;
 import org.gdroid.gdroid.beans.AppCollectionDescriptor;
 import org.gdroid.gdroid.beans.ApplicationBean;
 

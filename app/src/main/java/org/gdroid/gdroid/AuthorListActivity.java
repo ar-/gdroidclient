@@ -27,11 +27,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import org.gdroid.gdroid.authors.AuthorArrayAdapter;
+import org.gdroid.gdroid.adapters.AuthorArrayAdapter;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.AuthorBean;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AuthorListActivity extends AppCompatActivity {
