@@ -16,7 +16,7 @@
  *
  */
 
-package org.gdroid.gdroid.Adapters;
+package org.gdroid.gdroid.adapters;
 
 import android.app.Activity;
 import android.content.Context;

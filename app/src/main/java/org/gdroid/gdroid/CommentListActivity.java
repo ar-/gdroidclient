@@ -24,7 +24,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ListView;
 
-import org.gdroid.gdroid.Adapters.CommentAdapter;
+import org.gdroid.gdroid.adapters.CommentAdapter;
 import org.gdroid.gdroid.beans.CommentBean;
 import org.gdroid.gdroid.tasks.DownloadCommentsTask;
 
