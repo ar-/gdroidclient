@@ -22,5 +22,6 @@ public class CommentBean {
     public String avatar;
     public String author;
     public String content;
+    public String url;
 
 }

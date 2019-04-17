@@ -21,6 +21,7 @@ package org.gdroid.gdroid.Adapters;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.text.Html;
@@ -31,6 +32,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -58,10 +60,11 @@ public class CommentAdapter extends ArrayAdapter<CommentBean> {
     }
 
     @Override
-    public View getView(int position, View convertView, final ViewGroup parent) {
+    public View getView(final int position, View convertView, final ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.comment_line, parent, false);
+        LinearLayout commentLineContainer = rowView.findViewById(R.id.comment_line_container);
         TextView line1 = rowView.findViewById(R.id.lbl_firstLine);
         final TextView line2 = rowView.findViewById(R.id.lbl_secondLine);
         final TextView lblMore = rowView.findViewById(R.id.lbl_more);
@@ -84,6 +87,17 @@ public class CommentAdapter extends ArrayAdapter<CommentBean> {
         {
             line2.setMaxLines(200);
         }
+
+        // make the whole comment line clickable (#205)
+        commentLineContainer.setClickable(true);
+        commentLineContainer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(values.get(position).url));
+                context.startActivity(i);
+            }
+        });
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             line2.setText(Html.fromHtml(content, Html.TO_HTML_PARAGRAPH_LINES_INDIVIDUAL));
