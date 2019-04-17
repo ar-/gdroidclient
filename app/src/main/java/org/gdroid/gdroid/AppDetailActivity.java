@@ -564,7 +564,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
         findViewById(R.id.btn_more_comments).setVisibility(View.GONE);
         ListView commentsListView = findViewById(R.id.listview_comments);
         final List<CommentBean> commentBeans = new ArrayList<>();
-        final CommentAdapter commentAdapter = new CommentAdapter(this, commentBeans,mApp.id);
+        final CommentAdapter commentAdapter = new CommentAdapter(this, commentBeans,mApp.id, true);
         commentsListView.setAdapter(commentAdapter);
         (new DownloadCommentsTask(commentBeans, new Runnable(){
             @Override

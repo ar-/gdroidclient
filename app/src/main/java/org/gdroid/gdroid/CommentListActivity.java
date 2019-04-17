@@ -25,7 +25,6 @@ import android.view.View;
 import android.widget.ListView;
 
 import org.gdroid.gdroid.Adapters.CommentAdapter;
-import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.CommentBean;
 import org.gdroid.gdroid.tasks.DownloadCommentsTask;
 
@@ -50,7 +49,7 @@ public class CommentListActivity extends AppCompatActivity {
         ListView commentsListView = findViewById(R.id.listview_comments);
 
         final List<CommentBean> commentBeans = new ArrayList<>();
-        final CommentAdapter commentAdapter = new CommentAdapter(this, commentBeans, appId);
+        final CommentAdapter commentAdapter = new CommentAdapter(this, commentBeans, appId, false);
         commentsListView.setAdapter(commentAdapter);
         (new DownloadCommentsTask(commentBeans, new Runnable(){
             @Override

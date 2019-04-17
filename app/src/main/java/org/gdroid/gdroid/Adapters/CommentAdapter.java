@@ -18,16 +18,24 @@
 
 package org.gdroid.gdroid.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.text.Html;
+import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import org.gdroid.gdroid.CommentListActivity;
 import org.gdroid.gdroid.GlideApp;
 import org.gdroid.gdroid.R;
 import org.gdroid.gdroid.Util;
@@ -39,21 +47,24 @@ public class CommentAdapter extends ArrayAdapter<CommentBean> {
     private final Context context;
     private final List<CommentBean> values;
     private final String appId;
+    private final boolean limitLines;
 
-    public CommentAdapter(Context context, List<CommentBean> values, String appId) {
+    public CommentAdapter(Context context, List<CommentBean> values, String appId, boolean limitLines) {
         super(context, -1, values);
         this.context = context;
         this.values = values;
         this.appId = appId;
+        this.limitLines = limitLines;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, final ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.comment_line, parent, false);
         TextView line1 = rowView.findViewById(R.id.lbl_firstLine);
-        TextView line2 = rowView.findViewById(R.id.lbl_secondLine);
+        final TextView line2 = rowView.findViewById(R.id.lbl_secondLine);
+        final TextView lblMore = rowView.findViewById(R.id.lbl_more);
         ImageView imageView = rowView.findViewById(R.id.icon);
         line1.setText(values.get(position).author);
         String content = values.get(position).content;
@@ -64,11 +75,57 @@ public class CommentAdapter extends ArrayAdapter<CommentBean> {
         content = content.replace("#<span>"+ Util.convertPackageNameToHashtag(appId)+"</span>","");
         content = content.replace("#<span>fdroid_app_comments</span>","");
 
+        if (limitLines)
+        {
+            line2.setMaxLines(2);
+//            setListViewHeightBasedOnChildren((ListView) parent);
+        }
+        else
+        {
+            line2.setMaxLines(200);
+        }
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            line2.setText(Html.fromHtml(content, Html.FROM_HTML_MODE_COMPACT));
+            line2.setText(Html.fromHtml(content, Html.TO_HTML_PARAGRAPH_LINES_INDIVIDUAL));
         } else {
             line2.setText(Html.fromHtml(content));
         }
+
+
+        // checking this right away does not work, so do it a bit later
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                ((Activity)context).runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (isTextTruncated(line2))
+                        {
+                            lblMore.setVisibility(View.VISIBLE);
+                            lblMore.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent myIntent = new Intent(context, CommentListActivity.class);
+                                    myIntent.putExtra("appId", appId);
+                                    context.startActivity(myIntent);
+                                }
+                            });
+                        }
+                        else
+                        {
+                            lblMore.setVisibility(View.GONE);
+                        }
+                    }
+                });
+            }
+        });
+
 
 //        GlideApp.with(context).load(values.get(position).avatar).override(192, 192).into(imageView);
         GlideApp.with(context).load(values.get(position).avatar).into(imageView);
@@ -76,5 +133,63 @@ public class CommentAdapter extends ArrayAdapter<CommentBean> {
 
 //        imageView.setImageResource(R.drawable.ic_update_green_24dp);
         return rowView;
+    }
+
+    private static boolean isTextTruncated( TextView textView )
+    {
+        if ( textView != null )
+        {
+            Layout layout = textView.getLayout();
+            if ( layout != null )
+            {
+                int lines = layout.getLineCount();
+                if ( lines > 0 )
+                {
+                    int ellipsisCount = layout.getEllipsisCount( lines - 1 );
+                    if ( ellipsisCount > 0 )
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    private static void setListViewHeightBasedOnChildren(final ListView listView) {
+        listView.post(new Runnable() {
+            @Override
+            public void run() {
+                ListAdapter listAdapter = listView.getAdapter();
+                if (listAdapter == null) {
+                    return;
+                }
+                int totalHeight = listView.getPaddingTop() + listView.getPaddingBottom();
+                int listWidth = listView.getMeasuredWidth();
+                for (int i = 0; i < listAdapter.getCount(); i++) {
+                    View listItem = listAdapter.getView(i, null, listView);
+                    listItem.measure(
+                            View.MeasureSpec.makeMeasureSpec(listWidth, View.MeasureSpec.EXACTLY),
+                            View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+
+
+                    totalHeight += listItem.getMeasuredHeight();
+                    Log.d("listItemHeight" + listItem.getMeasuredHeight(), "___________");
+                }
+                ViewGroup.LayoutParams params = listView.getLayoutParams();
+                params.height = (int) ((totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1))));
+//                params.height = 5000;
+                listView.setLayoutParams(params);
+                listView.requestLayout();
+//                listView.measure(listWidth,0);
+//                listView.getParent().recomputeViewAttributes(listView);
+//                listView.setVisibility(View.GONE);
+//                listView.getParent().requestLayout();
+//                listView.getParent().getParent().requestLayout();
+//                listView.getParent().getParent().getParent().requestLayout();
+//                listView.getParent().getParent().getParent().getParent().requestLayout();
+//                listView.getParent().getParent().getParent().getParent().getParent().requestLayout();
+            }
+        });
     }
 }
