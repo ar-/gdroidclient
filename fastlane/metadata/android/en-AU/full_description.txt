@@ -1,30 +1,30 @@
 # What is this app
 
-G-Droid can browse the free F-Droid app-repository. It is an alternative client to the F-Droid client.
+G-Droid can browse the libre F-Droid app-repository. It is an alternative to the official client.
 
 # Additional features compared to F-Droid
 
-* shows reviews and comments for apps
-* star ratings of apps (up to 5 stars) - machine generated metrics
-* shows the star upstream star ratings (github, gitlab, sourceforge)
-* implements more metrics based on open source data (like average release cycle time) to generate a star-ratings
-* let the users choose which metrics are important to them, so there is no 'best app' in the repo - there is only a 'best app' from the point of view of the current user
-* shows 'similar apps' and 'apps of the same category' when watching an app
-* shows 'apps of the same author' when watching an app
-* shows a list of all authors, with their apps and average star rating
-* shows web-site of the app - even if it is 'only a README file on github'. F-Droid has recently removed many websites to punish open source developers who can't effort their own domain.
-* shows newest apps and recently updated apps separated
-* shows cards in same size for better overview
-* provides a list-view as alternative for the cards (as in older F-Droid versions) for people who don't like cards
-* has more possibilities to order and sort apps
-* ability to 'star' apps to mark them
-* ability to hide apps to remove them from all views
-* shows categories in correct translation (if available) after changing language on the device
-* shows screenshots in correct translation
-* makes use of larger screens: shows actually more apps on tablets
-* tags to find apps for standard-tasks easily (email clients, file browsers, text editors), since the F-Droid categories are too broad
-* view for 'random apps' to discover apps you usually wouldn't find
-* shows apps the user might like (without stealing the users data for analysis)
+* Shows reviews and comments for apps
+* Star ratings of apps (up to 5 stars) - machine generated metrics
+* Shows the star upstream star ratings (github, gitlab, sourceforge)
+* More metrics, based on libre data (like average release cycle time) to generate a star-ratings
+* Users choose which metrics are important to them, so there is no 'best app' in the repo - there is only a 'best app' from the point of view of the current user
+* Shows 'similar apps' and 'apps of the same category' when watching an app
+* Shows 'apps of the same author' when watching an app
+* Shows a list of all authors, with their apps and average star rating
+* Shows web-site of the app - even if it is 'only a README file on GitHub'. F-Droid has recently removed many websites to punish libre software developers who can't afford their own domain.
+* Shows newest apps and recently updated apps separated
+* Shows cards in same size for better overview
+* Provides a list-view as alternative for the cards (as in older F-Droid versions) for people who don't like cards
+* More possibilities to order and sort apps
+* Ability to 'star' apps to mark them
+* Ability to hide apps to remove them from all views
+* Shows categories in correct translation (if available), after changing device language
+* Shows screenshots in correct translation
+* Makes use of larger screens: More apps shown on tablets
+* Tags to find apps for standard-tasks easily (email clients, file browsers, text editors), since the F-Droid categories are too broad
+* View for 'random apps' to discover apps you usually wouldn't find
+* Shows apps the user might like (without stealing the users data for analysis)
 * aims to provide many different views to the app repository in order to assist the user to find what she wants to find and encourage to use more open source apps from the repository
 * 'share' apps so it can still be opened with another store (F-Droid, Yalp, Aurora, ...), to get more information about the app.
 * different search algorithm, can 'search harder' to continue a search if the results are insufficient
@@ -56,4 +56,3 @@ G-Droid can browse the free F-Droid app-repository. It is an alternative client 
 
 * INTERNET: to download the app-metadata and the apps
 * WRITE_EXTERNAL_STORAGE: To store the downloaded apps temporarily (permission only on older Android versions enforced)
-
