@@ -116,6 +116,11 @@ public class AppCollectionDescriptor implements Comparable<AppCollectionDescript
             }
             db.close();
         }
+        else if (collectionName.equals("recently_commented"))
+        {
+            applicationBeanList.clear();
+            applicationBeanList.addAll(Util.getRecentlyCommentedApps(mContext,mLimit));
+        }
         else if (collectionName.equals("starred"))
         {
             applicationBeanList.clear();

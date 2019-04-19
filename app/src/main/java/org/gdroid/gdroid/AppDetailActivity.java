@@ -613,7 +613,7 @@ public class AppDetailActivity extends AppCompatActivity implements FetchListene
                                 dialog.dismiss();
                                 String shareText = "@gdroid@mastodon.technology ";
                                 shareText+= "#"+Util.convertPackageNameToHashtag(mApp.id);
-                                shareText+= " #fdroid_app_comments";
+                                shareText+= " #" + Const.HASHTAG_APP_COMMENTS;
                                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                                 sharingIntent.setType("text/plain");
                                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareText);

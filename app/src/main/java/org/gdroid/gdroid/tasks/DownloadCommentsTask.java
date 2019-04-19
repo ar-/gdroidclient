@@ -38,7 +38,7 @@ public class DownloadCommentsTask extends AsyncTask<String, Void, List<CommentBe
         this.runnableOnPostExecute = runnableOnPostExecute;
     }
 
-    protected List<CommentBean> doInBackground(String... urls) {
+    public List<CommentBean> doInBackground(String... urls) {
         String urldisplay = urls[0];
         try {
             InputStream in = new java.net.URL(urldisplay).openStream();
@@ -53,7 +53,7 @@ public class DownloadCommentsTask extends AsyncTask<String, Void, List<CommentBe
         return new ArrayList<>();
     }
 
-    protected void onPostExecute(List<CommentBean> result) {
+    public void onPostExecute(List<CommentBean> result) {
         mCommentBeansInActivity.clear();
         mCommentBeansInActivity.addAll(result);
         runnableOnPostExecute.run();

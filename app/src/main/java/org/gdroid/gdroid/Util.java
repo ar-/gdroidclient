@@ -20,6 +20,7 @@ package org.gdroid.gdroid;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.arch.persistence.room.util.StringUtil;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.SharedPreferences;
@@ -28,30 +29,41 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Build;
+import android.os.Looper;
+import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.support.v4.os.ConfigurationCompat;
 import android.support.v4.os.LocaleListCompat;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import org.gdroid.gdroid.beans.AppBeanNameComparator;
 import org.gdroid.gdroid.beans.AppDatabase;
 import org.gdroid.gdroid.beans.ApplicationBean;
+import org.gdroid.gdroid.beans.CommentBean;
 import org.gdroid.gdroid.beans.OrderByCol;
 import org.gdroid.gdroid.installer.DefaultInstaller;
 import org.gdroid.gdroid.installer.Installer;
 import org.gdroid.gdroid.installer.RootInstaller;
+import org.gdroid.gdroid.pref.Pref;
+import org.gdroid.gdroid.tasks.DownloadCommentsTask;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.StringJoiner;
+import java.util.concurrent.ExecutionException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Util {
 
@@ -586,6 +598,11 @@ public class Util {
         return pkgName.replace('.', '_');
     }
 
+    public static String convertHashtagToPackageName(String hashtag)
+    {
+        return hashtag.replace('_', '.');
+    }
+
 
     /**
      * The most preferred ABI is the first element in the list.
@@ -599,4 +616,82 @@ public class Util {
         return new String[]{Build.CPU_ABI, Build.CPU_ABI2};
     }
 
+    private static List<ApplicationBean> cachedRecentlyCommentedApps = new ArrayList<>();
+    public static List<ApplicationBean> getRecentlyCommentedApps(Context mContext, int mLimit) {
+
+        if (isUIThread() && !cachedRecentlyCommentedApps.isEmpty())
+        {
+            return cachedRecentlyCommentedApps;
+        }
+
+        List<ApplicationBean> ret = new ArrayList<>(40);
+        List<String> appIds = new ArrayList<>(40*2);
+        List<CommentBean> comments = new ArrayList<>(40);
+        final DownloadCommentsTask downloadCommentsTask = new DownloadCommentsTask(comments, new Runnable() {
+            @Override
+            public void run() {
+            }
+        });
+
+        try {
+            // fetch
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            comments = downloadCommentsTask.doInBackground("https://mastodon.technology/api/v1/timelines/tag/" + Const.HASHTAG_APP_COMMENTS + "?limit=40");
+
+            // extract app IDs
+            for (CommentBean cb : comments) {
+                Pattern pattern = Pattern.compile("#<span>\\w+</span>", Pattern.CASE_INSENSITIVE);
+                Matcher matcher = pattern.matcher(cb.content);
+                while (matcher.find()) {
+                    String possibleHashtag = matcher.group();
+                    possibleHashtag = possibleHashtag.replace("#<span>", "");
+                    possibleHashtag = possibleHashtag.replace("</span>", "");
+                    if (possibleHashtag.equals(Const.HASHTAG_APP_COMMENTS))
+                        continue;
+
+                    if (!appIds.contains(possibleHashtag))
+                        appIds.add(possibleHashtag);
+
+                    // arrived here we have a match, most likely an app id
+                }
+            }
+
+            // store each successful fetch in Pref
+            if (!appIds.isEmpty()) {
+                Pref.get().setLastCommentedApps(TextUtils.join(";", appIds));
+            }
+        }
+        catch (Throwable t)
+        {
+            // fallback to the cached list from Pref below
+        }
+
+        if (appIds.isEmpty())
+        {
+            final String[] idArray = Pref.get().getLastCommentedApps().split(";");
+            appIds = new ArrayList<>(Arrays.asList(idArray));
+        }
+
+        // we have to get the apps one by one from the DB to retain the order
+        for (String appId : appIds)
+        {
+            AppDatabase db = AppDatabase.get(mContext);
+            ApplicationBean ab = db.appDao().getApplicationBean(convertHashtagToPackageName(appId));
+            if (ab != null)
+            {
+                ret.add(ab);
+            }
+        }
+
+        cachedRecentlyCommentedApps = ret;
+        int limit = Math.min(ret.size()-1,mLimit);
+        limit = Math.max(0,limit);
+        return new ArrayList(ret.subList(0, limit));
+    }
+
+    public static boolean isUIThread()
+    {
+        return Thread.currentThread().equals( Looper.getMainLooper().getThread() );
+    }
 }
