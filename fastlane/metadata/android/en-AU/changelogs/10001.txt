@@ -1,0 +1,4 @@
+* show recently commented apps on home page
+* app comments are now clickable and can be openened in a mastodon app or browser
+* bugfix: incompletely visible comments can now be seen completely (added a more-button)
+* translation updates

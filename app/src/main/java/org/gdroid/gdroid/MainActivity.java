@@ -346,19 +346,16 @@ public class MainActivity extends AppCompatActivity
         final Context context = getApplicationContext();
         if (screen.equals("home")) {
             appCollectionDescriptorList.clear();
-            // trigger an update here, because the app must be reactive, the swich to the new screen happes right away
+            // trigger an update here, because the app must be reactive, the switch to the new screen happens right away
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     appCollectionAdapter.notifyDataSetChanged();
                 }
             });
-            AppCollectionDescriptor a = new AppCollectionDescriptor(context, "newest_apps");
-            appCollectionDescriptorList.add(a);
-            AppCollectionDescriptor a2 = new AppCollectionDescriptor(context, "recently_updated");
-            appCollectionDescriptorList.add(a2);
-            AppCollectionDescriptor a3 = new AppCollectionDescriptor(context, "highly_rated");
-            appCollectionDescriptorList.add(a3);
+            appCollectionDescriptorList.add(new AppCollectionDescriptor(context, "newest_apps"));
+            appCollectionDescriptorList.add(new AppCollectionDescriptor(context, "recently_updated"));
+            appCollectionDescriptorList.add(new AppCollectionDescriptor(context, "highly_rated"));
 
             // trigger an update here, because the next collection is a bit slow
             runOnUiThread(new Runnable() {
@@ -367,12 +364,26 @@ public class MainActivity extends AppCompatActivity
                     appCollectionAdapter.notifyDataSetChanged();
                 }
             });
-            AppCollectionDescriptor a5 = new AppCollectionDescriptor(context, "similar_to_my_apps");
-            appCollectionDescriptorList.add(a5);
-            AppCollectionDescriptor a6 = new AppCollectionDescriptor(context, "you_might_also_like");
-            appCollectionDescriptorList.add(a6);
-            AppCollectionDescriptor a4 = new AppCollectionDescriptor(context, "random_apps");
-            appCollectionDescriptorList.add(a4);
+            appCollectionDescriptorList.add(new AppCollectionDescriptor(context, "similar_to_my_apps"));
+
+            // trigger an update here, because the next collection is a bit slow
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    appCollectionAdapter.notifyDataSetChanged();
+                }
+            });
+            appCollectionDescriptorList.add(new AppCollectionDescriptor(context, "you_might_also_like"));
+
+            // trigger an update here, because the next collection is a bit slow
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    appCollectionAdapter.notifyDataSetChanged();
+                }
+            });
+            appCollectionDescriptorList.add(new AppCollectionDescriptor(context, "recently_commented"));
+            appCollectionDescriptorList.add(new AppCollectionDescriptor(context, "random_apps"));
 //            AppCollectionDescriptor a7 = new AppCollectionDescriptor(context, "popular apps");
 //            appCollectionDescriptorList.add(a7);
 //            AppCollectionDescriptor a8 = new AppCollectionDescriptor(context, "app of the day");

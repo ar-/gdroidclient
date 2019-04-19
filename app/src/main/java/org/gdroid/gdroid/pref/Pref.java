@@ -54,6 +54,7 @@ public class Pref {
     private static final String PREF_LAST_UPDATE_CHECK = "lastUpdateCheck";
     private static final String PREF_LAST_FDROID_ETAG = "last_fdroid_etag";
     private static final String PREF_LAST_GDROID_ETAG = "last_gdroid_etag";
+    private static final String PREF_CACHED_COMMENTED_APPS = "cached_commented_apps";
 
     private static final int DEFAULT_LAST_UPDATE_CHECK = -1;
 
@@ -95,6 +96,14 @@ public class Pref {
 
     public void setLastGDroidEtag(String lastGDroidEtag) {
         preferences.edit().putString(PREF_LAST_GDROID_ETAG, lastGDroidEtag).apply();
+    }
+
+    public String getLastCommentedApps() {
+        return preferences.getString(PREF_CACHED_COMMENTED_APPS, "");
+    }
+
+    public void setLastCommentedApps(String lastCommentedApps) {
+        preferences.edit().putString(PREF_CACHED_COMMENTED_APPS, lastCommentedApps).apply();
     }
 
     /**

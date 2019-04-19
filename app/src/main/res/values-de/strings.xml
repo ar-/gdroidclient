@@ -86,6 +86,7 @@
     <string name="more">Mehr</string>
     <string name="newest_apps">Neueste Apps</string>
     <string name="recently_updated">Kürzlich aktualisierte Apps</string>
+    <string name="recently_commented">Kürzlich kommentierte Apps</string>
     <string name="highly_rated">Gut bewertet</string>
     <string name="similar_to_my_apps">Ähnlich zu meinen Apps</string>
     <string name="you_might_also_like">Könnte dir auch gefallen</string>
