@@ -76,7 +76,7 @@
     <string name="text_editor">"Editor de texto "</string>
     <string name="torrent_downloader">"Descarga por torrent "</string>
     <string name="web_browser">Navegador web</string>
-    <string name="youtube_player">"Reproductor YouTube "</string>
+    <string name="youtube_player">Reproductor de YouTube</string>
     <string name="action_hide">"Esconde "</string>
     <string name="action_unhide">Muestra</string>
     <string name="pref_title_upstream_ratings">Valoraciones de GitHub, GitLab y SourceForge</string>
@@ -130,4 +130,5 @@
     <string name="recently_updated">Actualizadas recientemente</string>
     <string name="versions">Versiones</string>
     <string name="app_installed">Instalado</string>
+    <string name="todo_list">Lista de tareas</string>
 </resources>
