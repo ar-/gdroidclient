@@ -13,46 +13,42 @@
 * Δείχνει "εφαρμογές από τον ίδιο προγραμματιστή" για κάθε εφαρμογή που βλέπετε
 * Δείχνει λίστα με προγραμματιστές, με τις εφαρμογές τους, και τη μέση βαθμολογία
 * Δείχνει την ιστοσελιίδα της εφαρμογής - έστω κι αν αυτή είναι απλά ένα README αρχείο στο GitHub. Το F-Droid πρόσφατα αφαίρεσε πολλές ιστοσελίδες από τις περιγραφές γιατί δεν ήταν σε λειτουργική ιστοσελίδα
-* Shows newest apps and recently updated apps separated
-* Shows cards in same size for better overview
-* Provides a list-view as alternative for the cards (as in older F-Droid versions) for people who don't like cards
-* More possibilities to order and sort apps
-* Ability to 'star' apps to mark them
-* Ability to hide apps to remove them from all views
-* Shows categories in correct translation (if available), after changing device language
-* Shows screenshots in correct translation
-* Makes use of larger screens: More apps shown on tablets
-* Tags to find apps for standard-tasks easily (email clients, file browsers, text editors), since the F-Droid categories are too broad
-* View for 'random apps' to discover apps you usually wouldn't find
-* Shows apps the user might like (without stealing the users data for analysis)
-* aims to provide many different views to the app repository in order to assist the user to find what she wants to find and encourage to use more open source apps from the repository
-* 'share' apps so it can still be opened with another store (F-Droid, Yalp, Aurora, ...), to get more information about the app.
-* different search algorithm, can 'search harder' to continue a search if the results are insufficient
-* shows the logos of apps all the time (if network connection is okay)
-* shows more screenshots
-* shows screenshots, completely, up-to-date and in the correct language
-* shows screenshots also when they are not in the fastlane structure
-* has a new and modern codebase and is easy to maintain
-* G-Droid is actively maintained (the F-Droid client is not any more)
-* many more to come (G-Droid is just a few weeks old) ...
+* Δείχνει τις νέες εφαρμογές και τις πρόσφατα αναβαθμισμένες ξεχωριστά
+* Δείχνει τις καρτέλες των εφαρμογών στο ίδιο μέγεθος για καλύτερη προβολή
+* Παρέχει προβολή σε λίστα (όπως οι παλαιότερες εκδόσεις της εφαρμογής F-Droid)
+* Περισσότερες επιλογές κατάταξης των εφαρμογών 
+* Επιλογή για αγαπημένες εφαρμογές 
+* Επιλογή για απόκρυψη εφαρμογών
+* Δείχνει τις κατηγορίες με σωστές μεταφράσεις 
+* Δείχνει τα screenshots των εφαρμογών στη σωστή γλώσσα
+* Καλύτερο για μεγάλες οθόνες, δείχνει πιο πολλές εφαρμογές στα tablet
+* Tag για να βρίσκετε εφαρμογές για συγκεκριμένες εργασίες, καθώς οι κατηγορίες του F-Droid είναι πολύ γενικές
+* Προβολή "τυχαίων εφαρμογών" για να βρίσκετε εφαρμογές που αλλιώς δε θα βρίσκατε
+* Δείχνει εφαρμογές που μπορεί να αρέσουν στο χρήστη (χωρίς να χρησιμοποιεί τα δεδομένα του για ανάλυση)
+* "Διαμοιρασμός" εφαρμογών έτσι ώστε να μπορούν να ανοίγουν και με άλλες εφαρμογές (F-Droid, Yalp, Aurora, ...), ώστε να βλέπετε περισσότερες πληροφορίες για την εφαρμογή
+* Διαφορετικός αλγόριθμος εύρεσης, ώστε να γίνεται εύρεση πιο συγκεκριμένα και αποτελεσματικά
+* Δείχνει τα εικονίδια των εφαρμογών (εάν η σύνδεση στο ίντερνετ είναι καλή)
+* Δείχνει περισσότερα screenshots
+* Έχει μοντέρνο και νέο κώδικα πλήρως ανανεωμένο
+*  To G-Droid είναι υπό συνεχή εξέλιξη (Η εφαρμογή του F-Droid δεν εξελίσσεται πλέον)
+* Πολλά χαρακτηριστικά θα προστεθούν ακόμη (Το G-Droid είναι απλά λίγων εβδομάδων) ...
 
-# Things that G-Droid can NOT do (yet) compared to F-Droid
+# Πράγματα που το G-Droid δεν μπορεί να κάνει (ακόμα) σε σχέση με το F-Droid 
 
-* show or install an older version of an app
-* create a local repo, share apps with 'near' people or share apps via bluetooth
-* add other repositories than the F-Droid repo
-* use the privileged extension (done, but extension is not adjusted yet), G-Droid can use root permissions on rooted phones though, to provide unattended installs
-* update automatically
-* http proxy settings
-* G-Droid helps you in different ways to find better apps: but in some cases you might still need the 'share' button, to open that app in F-Droid to install it. G-Droid right now is not yet a complete replacement for the F-Droid app.
+* Να δείξει ή εγκαταστήσει παλαιότερες εκδόσεις των εφαρμογών 
+* Να δημιουργήσει τοπικό αποθετήριο, να μοιραστεί εφαρμογές με τρίτους μέσω bluetooth 
+* Να προσθέσει αλλά αποθετήρια εκτός του F-Droid 
+* Να ενημερώνει τις εφαρμογές αυτόματα 
+*Να έχει ρυθμίσεις για htyp proxy
+* Το G-Droid σας βοηθά με διάφορους τρόπους να βρείτε καλύτερες εφαρμογές, αλλά κάποιες φορές μπορεί να χρειαστείτε το κουμπί "διαμοιραμός" για να ανοίξετε το F-Droid για την εγκατάσταση. Το G-droid δεν είναι ακόμα πλήρης αντικαταστάτης της εφαρμογής του F-Droid
 
-# Things that are the same in G-Droid and F-Droid
+# Χαρακτηριστικά που είναι ίδια στο G-Droid και στο F-Droid
 
-* shows the same apps - G-Droid does not add any apps or modify the builds, signatures or download URLs
-* all additional meta-data is provided by F-Droid as well (eg. the link to github)
-* GPL3 license 
+* Δείχνει τις ίδιες εφαρμογές, το G-Droid δεν προσθέτει, αλλάζει τις εφαρμογές ή τα λινκ 
+*Όλα τα μεταδεδομένα παρέχονται από το  F-Droid (π.χ. το link για το github)
+* Είναι άδεια GPL3
 
-# Explanation of permissions
+# Εξήγηση των αδειών
 
-* INTERNET: to download the app-metadata and the apps
-* WRITE_EXTERNAL_STORAGE: To store the downloaded apps temporarily (permission only on older Android versions enforced)
+* INTERNET: για να κατεβαίνουν οι εφαρμογές
+* WRITE_EXTERNAL_STORAGE: Για να αποθηκεύονται προσωρινά τα αρχεία εγκατάστασης των εφαρμογών (υποχρεωτικό για παλιές εκδόσεις Android)
