@@ -1,5 +1,5 @@
 * Show all available old versions.
 * Bugfix: Corrected text for versions of upgradable apps.
-* Added an additional hastag to app-comments, so Mastodon users can search for all app-comments (works only for comments that are being made with this version or higher).
+* Added an additional hashtag to app-comments, so Mastodon users can search for all app-comments (works only for comments that are being made with this version or higher).
 * Translation updates.
 * Added Urdu language.
