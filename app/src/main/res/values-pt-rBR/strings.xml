@@ -140,4 +140,7 @@
     <string name="data_is_up_to_date">dados estão atualizados</string>
     <string name="versions">Versões</string>
     <string name="app_installed">Instalado</string>
+    <string name="menu_top_authors">Top Autores</string>
+    <string name="top_author">Top Autor</string>
+    <string name="app_can_be_updated">Esta aplicação pode ser atualizada de %s para %s</string>
 </resources>
