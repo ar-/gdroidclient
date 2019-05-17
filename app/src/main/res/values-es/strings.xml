@@ -116,9 +116,9 @@
     <string name="pref_description_send_crash_reports">Recopilar datos sobre fallos y pedir que se los envíen al desarrollador</string>
     <string name="pref_header_ratings">valuaciónes</string>
     <string name="search_even_harder">buscar en detalle</string>
-    <string name="in_same_category">categoría misma</string>
-    <string name="newest_apps">aplicaciónes nuevas</string>
-    <string name="highly_rated">evaluados bienes</string>
+    <string name="in_same_category">De la misma categoría</string>
+    <string name="newest_apps">Aplicaciones nuevas</string>
+    <string name="highly_rated">Bien valoradas</string>
     <string name="random_apps">aplicaciónes casuales</string>
     <string name="stars">estrellas</string>
     <string name="ascending">ascendente</string>
@@ -132,7 +132,7 @@
     <string name="app_installed">Instalado</string>
     <string name="todo_list">Lista de tareas</string>
     <string name="pref_description_use_list_view">Muestra las apps como una lista si es posible</string>
-    <string name="fetching_comments">cargando comentarios...</string>
+    <string name="fetching_comments">cargando comentarios …</string>
     <string name="how_to_rate">Por favor, comparte esto con una app Mastodon, añade tu comentario sin cambiar el hashtag.</string>
     <string name="could_not_download_gdroid_metadata">no se pudieron descargar metadatos de G-Droid</string>
     <string name="app_can_be_updated">Esta aplicación puede actualizarse de %s a %s</string>
