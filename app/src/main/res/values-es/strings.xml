@@ -131,4 +131,9 @@
     <string name="versions">Versiones</string>
     <string name="app_installed">Instalado</string>
     <string name="todo_list">Lista de tareas</string>
+    <string name="pref_description_use_list_view">Muestra las apps como una lista si es posible</string>
+    <string name="fetching_comments">cargando comentarios...</string>
+    <string name="how_to_rate">Por favor, comparte esto con una app Mastodon, añade tu comentario sin cambiar el hashtag.</string>
+    <string name="could_not_download_gdroid_metadata">no se pudieron descargar metadatos de G-Droid</string>
+    <string name="app_can_be_updated">Esta aplicación puede actualizarse de %s a %s</string>
 </resources>
