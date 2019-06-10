@@ -42,7 +42,7 @@
     <string name="download_all_updates">Descargar todas las actualizaciones</string>
     <string name="downloading">Descargando…</string>
     <string name="download_pending">Esperando a que empiece la descarga…</string>
-    <string name="app_name">"G-Droid "</string>
+    <string name="app_name">G-Droid</string>
     <string name="navigation_drawer_open">"Abre la caja de navegación "</string>
     <string name="navigation_drawer_close">"Cierra la caja de navegación "</string>
     <string name="nav_header_subtitle">"cliente para el repositorio F-Droid "</string>
@@ -54,25 +54,25 @@
     <string name="pref_header_data_sync">"Datos y sincronización "</string>
     <string name="pref_title_sync_frequency">"Frecuencia de sincronización "</string>
     <string name="pref_header_notifications">"Notificaciones "</string>
-    <string name="pref_title_new_message_notifications">Notificaciones de nuevo mensaje</string>
+    <string name="pref_title_new_message_notifications">Notificaciones de mensajes nuevos</string>
     <string name="title_home">"Inicio "</string>
     <string name="title_dashboard">Tablero</string>
     <string name="title_notifications">"Notificaciones "</string>
     <string name="title_categories">"categorías "</string>
     <string name="title_tags">etiquetas</string>
     <string name="title_starred">favoritos</string>
-    <string name="title_myapps">mis apps</string>
+    <string name="title_myapps">mis aplicaciones</string>
     <string name="title_search">buscar</string>
-    <string name="app_store">"Tienda de apps "</string>
+    <string name="app_store">Tienda de aplicaciones</string>
     <string name="calendar">Calendario</string>
     <string name="camera">Cámara</string>
     <string name="contacts">Contactos</string>
     <string name="email_client">Cliente email</string>
-    <string name="file_browser">"Explorador de ficheros "</string>
+    <string name="file_browser">Explorador de archivos</string>
     <string name="gallery">"Galería "</string>
     <string name="launcher">Lanzador</string>
     <string name="music_player">"Reproductor de música "</string>
-    <string name="shopping_list">"Lista de la compra "</string>
+    <string name="shopping_list">Lista de compras</string>
     <string name="text_editor">"Editor de texto "</string>
     <string name="torrent_downloader">Cliente torrent</string>
     <string name="web_browser">Navegador web</string>
@@ -85,9 +85,9 @@
     <string name="pref_title_updated_in_2_years">"última actualitzación en los 2 años recientes. "</string>
     <string name="search_harder">buscar más</string>
     <string name="more">Más</string>
-    <string name="menu_my_apps">Mis apps</string>
-    <string name="menu_hidden_apps">Apps ocultas</string>
-    <string name="similar_apps">Apps similares</string>
+    <string name="menu_my_apps">Mis aplicaciones</string>
+    <string name="menu_hidden_apps">Aplicaciones ocultas</string>
+    <string name="similar_apps">Aplicaciones similares</string>
     <string name="by_same_author">Del mismo autor</string>
     <string name="menu_app_authors">Autores</string>
     <string name="installing" formatted="false">Instalando %s</string>
@@ -95,10 +95,10 @@
     <string name="installation_finished">Instalación finalizada</string>
     <string name="installed_details">%d apps instaladas</string>
     <string name="confirmation">"Confirmación "</string>
-    <string name="use_root">¿Quieres que se instalen las apps sin interacción del usuario utilizando privilegios root\?</string>
+    <string name="use_root">¿Quieres que se instalen las aplicaciones sin interacción del usuario utilizando privilegios root\?</string>
     <string name="pref_description_use_root">instala y desinstala apps automáticamente si el dispositivo está rooteado</string>
     <string name="pref_title_use_root">Usar privilegios root</string>
-    <string name="last_update">Última actualización</string>
+    <string name="last_update">Ultima actualización</string>
     <string name="added_on">Agregado el </string>
     <string name="name">Nombre</string>
     <string name="sort_search">Ordenar resultados</string>
@@ -138,5 +138,9 @@
     <string name="app_can_be_updated">Esta aplicación puede actualizarse de %s a %s</string>
     <string name="pref_title_use_list_view">Mostrar como lista</string>
     <string name="you_might_also_like">También te podrían gustar</string>
-    <string name="no_comments_available">no hay comentarios para esta app</string>
+    <string name="no_comments_available">no hay comentarios disponibles para esta aplicación</string>
+    <string name="pref_title_release_cycle_time">tiempo de publicación</string>
+    <string name="similar_to_my_apps">Similar a mis aplicaciones</string>
+    <string name="menu_top_authors">Mejores autores</string>
+    <string name="top_author">Mejor autor</string>
 </resources>
