@@ -118,7 +118,7 @@ Essentially if you look at the F-Droid data you can extract and extrapolate thin
 Following the source-link that F-Droid provides one can also access the source repo and get metrics
 *  amount of code changes
 *  code life time
-*  contributors races
+*  contributor activity
 *  half-life of code blocks
 *  ratio of abstract classes to normal classes
 *  many other git, code and java metrics
