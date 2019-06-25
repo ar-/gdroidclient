@@ -138,4 +138,9 @@
     <string name="app_can_be_updated">ניתן לעדכן את היישומון הזה מגרסה %s לגרסה %s</string>
     <string name="versions">גרסאות</string>
     <string name="app_installed">מותקן</string>
+    <string name="how_to_rate">נא לשתף זאת עם היישומון Mastodon, להוסיף את התגובה שלך אבל לא לשנות את התגית.</string>
+    <string name="crash_dialog_text">אירעה שגיאה בלתי צפויה בעת הניסיון לעצור את היישומון. לשלוח את הפרטים בדוא״ל כדי לסייע בתיקון התקלה\?</string>
+    <string name="crash_dialog_comment_prompt">ניתן להוסיף פרטים ותגובות להלן:</string>
+    <string name="pref_title_send_crash_reports">הצגת בקשה לשליחת דוחות קריסה</string>
+    <string name="pref_description_send_crash_reports">לאסוף נתונים על קריסות ולבקש לשלוח אותן למפתח</string>
 </resources>
