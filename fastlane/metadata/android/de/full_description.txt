@@ -1,0 +1,58 @@
+# Was macht diese App
+
+G-Droid kann das freie F-Droid-App-Repository durchsuchen. Es ist eine Alternative zum offiziellen Client.
+
+# Zusätzliche Funktionen verglichen mit F-Droid
+
+* Anzeige von Besprechungen und Kommentaren zu Apps
+* App-Bewertungen mit Sternen (bis zu 5 Sterne) - maschinenerzeugte Kennzahlen
+* Anzeige von Sterne-Bewertungen aus dem Upstream (GitHub, GitLab, SourceForge)
+* Weitere Kennzahlen, die auf frei erhältlichen Daten (wie den durchschnittlichen Update-Intervallen) beruhen, um Sterne-Bewertungen zu erzeugen
+* Anwender wählen die für sie wichtigen Kennzahlen aus, somit gibt es keine 'beste App' im Repo - es gibt nur eine 'beste App' aus Sicht des aktuellen Anwenders
+* Anzeige 'ähnlicher Apps' und von 'Apps aus derselben Kategorie' beim Betrachten einer App
+* Anzeige von 'Apps desselben Autors' beim Betrachten einer App
+* Anzeige einer Liste aller Autoren, deren Apps und durchschnittlicher Bewertung
+* Anzeige der App-Webseite - selbst wenn es 'nur eine README-Datei auf GitHub' ist
+* Getrennte Anzeige der neusten Apps und der kürzlich aktualisierten Apps
+* Anzeige von Karten in einheitlicher Größe zur besseren Übersicht
+* Bietet eine Listenansicht als Alternative zu den Karten (wie in älteren F-Droid-Versionen) für Leute, die Karten nicht mögen
+* Weitere Möglichkeiten, Apps zu ordnen und zu sortieren
+* Möglichkeit, Apps als 'Favorit' zu markieren
+* Möglichkeit, Apps auszublenden, um sie aus allen Ansichten zu entfernen
+* Anzeige der Kategorien in korrekter Übersetzung (falls verfügbar) nach Änderung der Sprache auf dem Gerät
+* Anzeige von Screenshots in korrekter Übersetzung
+* Nutzt größere Bildschirme aus: Anzeige von mehr Apps auf Tablets
+* Tags, um leicht Apps für Standardaufgaben (E-Mail-Clients, Dateibrowser, Texteditoren) zu finden, nachdem die F-Droid-Kategorien zu weit gefasst sind
+* Ansicht für 'zufällige Apps', um Apps zu entdecken, die man normalerweise nicht finden würde
+* Anzeige von Apps, die dem Anwender gefallen könnten (ohne dabei Nutzerdaten zur Analyse zu stehlen)
+* Zielt darauf ab, dem Anwender viele verschiedene Sichten des App-Repositorys anzubieten, um ihn beim Finden geeigneter Apps zu unterstützen und ihn zu ermutigen, weitere Apps aus dem Repository zu verwenden
+* Apps 'teilen', damit sie noch in anderen Stores (F-Droid, Yalp, Aurora, …) geöffnet werden können, um mehr Infos zur App zu erhalten
+* Verschiedene Suchalgorithmen, kann 'intensiver suchen', um eine Suche, deren Ergebnis unbefriedigend war, fortzusetzen
+* Ständige Anzeige der App-Logos (bei funktionierendem Netzwerk)
+* Anzeige von mehr Screenshots
+* Anzeige von Screenshots, vollständig, aktuell und in der richtigen Sprache
+* Screenshot-Anzeige, auch wenn sie nicht in der Fastlane-Struktur sind
+* Neuer, moderner, einfach zu pflegender Code
+* Aktiv gewartet
+* Weiteres in Planung
+
+# Dinge, die G-Droid verglichen mit F-Droid (noch) NICHT kann
+
+* Ältere Versionen einer App anzeigen oder installieren
+* Ein lokales Repo erstellen, Apps mit Leuten 'direkt' oder über Bluetooth teilen
+* Andere Repos als das F-Droid-Repo hinzufügen
+* Die Rechteerweiterung nutzen (erledigt, aber die Erweiterung ist noch nicht eingestellt), G-Droid kann jedoch Root-Rechte für unbeaufsichtigte Installationen nutzen
+* Automatische Updates
+* HTTP-Proxy-Einstellungen
+* G-Droid hilft auf verschiedene Art, bessere Apps zu finden, in bestimmten Fällen ist aber noch der 'Teilen'-Button nötig, um die App in F-Droid zu öffnen und zu installieren. G-Droid ist momentan noch kein kompletter Ersatz für die F-Droid-App.
+
+# Gemeinsamkeiten von G-Droid und F-Droid
+
+* Anzeige derselben Apps - G-Droid ergänzt keine Apps, verändert keine Builds, Signaturen oder Download-URLs
+* F-Droid liefert genauso alle zusätzlichen Metadaten (z. B. der Link zu GitHub)
+* GPLv3+-Lizenz 
+
+# Erklärung der Berechtigungen
+
+* INTERNET: Zum Download von App-Metadaten und Apps
+* WRITE_EXTERNAL_STORAGE: Zum temporären Speichern heruntergeladener Apps (nur in älteren Android-Versionen gefordert)
