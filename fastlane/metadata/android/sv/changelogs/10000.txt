@@ -1,0 +1,5 @@
+* Visa alla tillgängliga gamla versioner.
+* Bugfix: Korrigerad text för versioner av uppgraderbara appar.
+* Har lagt till en ytterligare hashtag till app-kommentarer, så Mastodon-användare kan söka efter alla app-kommentarer (fungerar endast för kommentarer som görs med den här versionen eller högre).
+* Översättningsuppdateringar.
+* Lade till urduspråk.

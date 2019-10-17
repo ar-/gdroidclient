@@ -1,0 +1,9 @@
+0.2.3
+  * bugfix: fast krasch vid uppdatering av arkiverade appar
+
+0.2.2
+  * läggs till statistik och stjärnaindikatorer
+
+0.2.1
+  * lagt till laddningsanimering för att ladda bilder
+  * fasta stora bilder på vissa enheter

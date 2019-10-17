@@ -1,0 +1,8 @@
+0.2.1
+  * lagt till laddningsanimering för att ladda bilder
+  * fasta stora bilder på vissa enheter
+
+0.2.0
+  * fast layout på mycket små och mycket stora skärmar
+  * fast uppdateringsknapp för installerade appar
+  * läggs fastlane
