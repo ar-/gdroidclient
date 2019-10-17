@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">通信</string>
-
     <string name="category_Development">開発</string>
     <string name="category_Games">ゲーム</string>
     <string name="category_Graphics">グラフィック</string>
@@ -42,8 +40,8 @@
     <string name="yes">はい</string>
     <string name="no">いいえ</string>
     <string name="download_all_updates">すべての更新をダウンロード</string>
-    <string name="downloading">ダウンロード中</string>
-    <string name="download_pending">ダウンロードの開始を待っています</string>
+    <string name="downloading">ダウンロード中…</string>
+    <string name="download_pending">ダウンロードの開始を待っています…</string>
     <string name="more">詳細を表示</string>
     <string name="app_name">G-Droid</string>
     <string name="action_settings">設定</string>
