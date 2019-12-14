@@ -19,7 +19,7 @@
     <string name="category_Writing">Schreiben</string>
     <string name="antifeatures">Unerwünschte Merkmale</string>
     <string name="anti_ads">Diese Anwendung enthält Werbung</string>
-    <string name="anti_tracking">Diese Anwendung verfolgt und versendet Ihre Aktivitäten</string>
+    <string name="anti_tracking">Diese Anwendung verfolgt und versendet deine Aktivitäten</string>
     <string name="anti_nonfreeadd">Diese Anwendung bewirbt nicht freie Erweiterungen</string>
     <string name="anti_nonfreenet">Diese Anwendung bewirbt nicht freie Netzwerkdienste</string>
     <string name="anti_nonfreedep">Diese Anwendung hängt von nicht freien Anwendungen ab</string>
@@ -29,7 +29,7 @@
     <string name="anti_knownvuln">Diese Anwendung enthält eine bekannte Sicherheitslücke</string>
     <string name="anti_nosourcesince">Der Quelltext ist nicht mehr verfügbar, keine Aktualisierungen möglich.</string>
     <string name="no_permissions">Es werden keine Berechtigungen verwendet.</string>
-    <string name="perm_costs_money">Das könnte Sie Geld kosten</string>
+    <string name="perm_costs_money">Kann Kosten verursachen</string>
     <string name="perms_description_app">Bereitgestellt von .</string>
     <string name="perms_new_perm_prefix">Neu:</string>
     <string name="permissions">Berechtigungen</string>
@@ -135,8 +135,8 @@
     <string name="could_not_download_gdroid_metadata">G-Droid-Metadaten konnten nicht geladen werden</string>
     <string name="cancel">Abbrechen</string>
     <string name="crash_dialog_title">G-Droid ist abgestürzt</string>
-    <string name="crash_dialog_text">Die Anwendung wurde durch einen unerwarteten Fehler beendet. Möchten Sie die Details als E-Mail versenden, um eine Fehlerbehebung zu unterstützen\?</string>
-    <string name="crash_dialog_comment_prompt">Sie können zusätzliche Informationen und Kommentare hier einfügen:</string>
+    <string name="crash_dialog_text">Die Anwendung wurde durch einen unerwarteten Fehler beendet. Möchtest du die Details als E-Mail versenden, um die Fehlerbehebung zu unterstützen\?</string>
+    <string name="crash_dialog_comment_prompt">Du kannst hier zusätzliche Informationen und Kommentare einfügen:</string>
     <string name="pref_title_send_crash_reports">Auf Nachfrage Absturzbericht senden</string>
     <string name="pref_description_send_crash_reports">Daten zu Abstürzen sammeln und vor deren Versand an den Entwickler nachfragen</string>
     <string name="data_is_up_to_date">Daten sind aktuell</string>
