@@ -44,7 +44,7 @@
     <string name="action_uninstall">Ukloni</string>
     <string name="license">Licenca</string>
     <string name="ok">OK</string>
-    <string name="download_error">Preuzimanje neuspješno</string>
+    <string name="download_error">Preuzimanje nije uspjelo!</string>
     <string name="saving_app_details">Spremanje detalja aplikacija</string>
     <string name="cancel">Otkaži</string>
     <string name="crash_dialog_title">G-Droid se srušio</string>
@@ -92,10 +92,10 @@
     <string name="pref_title_upstream_ratings">Ocijene sa GitHub, GitLab i SourceForge stranica</string>
     <string name="pref_title_ratings_headline">Postavite vašu važnost za svaki parametar</string>
     <string name="pref_title_ratings_summary">Svakom parametru dodijelite broj od 0 do 10. Veći broj znači veću važnost.</string>
-    <string name="navigation_drawer_open">Otvori navigacijski panel</string>
-    <string name="navigation_drawer_close">Zatvori navigacijski panel</string>
+    <string name="navigation_drawer_open">Otvori navigacijsku ladicu</string>
+    <string name="navigation_drawer_close">Zatvori navigacijsku ladicu</string>
     <string name="antifeatures">Protu-funkcionalnosti</string>
-    <string name="title_starred">favoritizirano</string>
+    <string name="title_starred">favorizirano</string>
     <string name="pref_title_updated_in_2_years">zadnje ažuriranje u posljednje 2 godine</string>
     <string name="pref_title_release_cycle_time">Vrijeme ciklusa ažuriranja</string>
     <string name="search_harder">Traži jače</string>
@@ -139,4 +139,8 @@
     <string name="pref_description_send_crash_reports">Prikupi podatke o greškama i zatraži da ih pošaljete razvijatelju</string>
     <string name="data_is_up_to_date">podaci su ažurirani</string>
     <string name="app_installed">Instalirano</string>
+    <string name="menu_top_authors">Top autori</string>
+    <string name="top_author">Top autor</string>
+    <string name="app_can_be_updated">Ovaj se program može aktualizirati s %s na %s</string>
+    <string name="versions">Verzije</string>
 </resources>
