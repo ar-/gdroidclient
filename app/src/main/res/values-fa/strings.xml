@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">اتّصال</string>
-
     <string name="category_Development">توسعه</string>
     <string name="category_Games">بازی</string>
     <string name="category_Graphics">گرافیک</string>
@@ -62,4 +61,9 @@
     <string name="pref_description_send_crash_reports">جمع‌آوری داده دربارهٔ خرابی‌ها و پرسش برای فرستادنشان به توسعه‌دهنده</string>
     <string name="versions">نگارش‌ها</string>
     <string name="app_installed">نصب شده</string>
+    <string name="app_name">G-Droid</string>
+    <string name="action_settings">تنظیمات</string>
+    <string name="action_add_favourite">اضافه کردن به علاقه مندی ها</string>
+    <string name="title_activity_settings">تنظیمات</string>
+    <string name="title_home">خانه</string>
 </resources>
