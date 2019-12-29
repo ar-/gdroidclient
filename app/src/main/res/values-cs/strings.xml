@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Připojení</string>
-
     <string name="category_Development">Vývoj</string>
     <string name="category_Games">Hry</string>
     <string name="category_Graphics">Grafika</string>
@@ -62,4 +61,21 @@
     <string name="pref_description_send_crash_reports">Shromáždí důležitá data o pádu aplikace a před odesláním vývojářúm se dotáže</string>
     <string name="versions">Verze</string>
     <string name="app_installed">Nainstalováno</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">Otevřít boční menu</string>
+    <string name="navigation_drawer_close">Zavřít boční menu</string>
+    <string name="action_settings">Nastavení</string>
+    <string name="action_add_favourite">Přidat do oblíbených</string>
+    <string name="title_activity_settings">Nastavení</string>
+    <string name="pref_header_general">Obecné</string>
+    <string name="pref_header_data_sync">Data a synchronizace</string>
+    <string name="pref_title_sync_frequency">Frekvence synchronizací</string>
+    <string name="pref_header_notifications">Upozornění</string>
+    <string name="pref_title_new_message_notifications">Upozornění na nové zprávy</string>
+    <string name="title_notifications">Upozornění</string>
+    <string name="title_categories">kategorie</string>
+    <string name="title_tags">tagy</string>
+    <string name="title_starred">oblíbené</string>
+    <string name="title_myapps">moje aplikace</string>
+    <string name="title_search">vyhledávání</string>
 </resources>

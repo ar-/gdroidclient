@@ -9,4 +9,3 @@
   * fixed layout on very small and very large screens
   * fixed update button for installed apps
   * added fastlane
-

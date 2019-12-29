@@ -1,59 +1,58 @@
 # What is this app
 
-G-Droid can browse the free F-Droid app-repository. It is an alternative client to the F-Droid client.
+G-Droid can browse the libre F-Droid app-repository. It is an alternative to the official client.
 
 # Additional features compared to F-Droid
 
-* shows reviews and comments for apps
-* star ratings of apps (up to 5 stars) - machine generated metrics
-* shows the star upstream star ratings (github, gitlab, sourceforge)
-* implements more metrics based on open source data (like average release cycle time) to generate a star-ratings
-* let the users choose which metrics are important to them, so there is no 'best app' in the repo - there is only a 'best app' from the point of view of the current user
-* shows 'similar apps' and 'apps of the same category' when watching an app
-* shows 'apps of the same author' when watching an app
-* shows a list of all authors, with their apps and average star rating
-* shows web-site of the app - even if it is 'only a README file on github'. F-Droid has recently removed many websites to punish open source developers who can't effort their own domain.
-* shows newest apps and recently updated apps separated
-* shows cards in same size for better overview
-* provides a list-view as alternative for the cards (as in older F-Droid versions) for people who don't like cards
-* has more possibilities to order and sort apps
-* ability to 'star' apps to mark them
-* ability to hide apps to remove them from all views
-* shows categories in correct translation (if available) after changing language on the device
-* shows screenshots in correct translation
-* makes use of larger screens: shows actually more apps on tablets
-* tags to find apps for standard-tasks easily (email clients, file browsers, text editors), since the F-Droid categories are too broad
-* view for 'random apps' to discover apps you usually wouldn't find
-* shows apps the user might like (without stealing the users data for analysis)
-* aims to provide many different views to the app repository in order to assist the user to find what she wants to find and encourage to use more open source apps from the repository
-* 'share' apps so it can still be opened with another store (F-Droid, Yalp, Aurora, ...), to get more information about the app.
-* different search algorithm, can 'search harder' to continue a search if the results are insufficient
-* shows the logos of apps all the time (if network connection is okay)
-* shows more screenshots
-* shows screenshots, completely, up-to-date and in the correct language
-* shows screenshots also when they are not in the fastlane structure
-* has a new and modern codebase and is easy to maintain
-* G-Droid is actively maintained (the F-Droid client is not any more)
-* many more to come (G-Droid is just a few weeks old) ...
+* Shows reviews and comments for apps
+* Star ratings of apps (up to 5 stars) - machine generated metrics
+* Shows the star upstream star ratings (GitHub, GitLab, SourceForge)
+* More metrics, based on libre data (like average release cycle time) to generate star-ratings
+* Users choose which metrics are important to them, so there is no 'best app' in the repo - there is only a 'best app' from the point of view of the current user
+* Shows 'similar apps' and 'apps of the same category' when watching an app
+* Shows 'apps of the same author' when watching an app
+* Shows a list of all authors, with their apps and average star rating
+* Shows website of the app - even if it is 'only a README file on GitHub'
+* Shows newest apps and recently updated apps separated
+* Shows cards in same size for better overview
+* Provides a list-view as alternative for the cards (as in older F-Droid versions) for people who don't like cards
+* More possibilities to order and sort apps
+* Ability to 'star' apps to mark them
+* Ability to hide apps to remove them from all views
+* Shows categories in correct translation (if available), after changing device language
+* Shows screenshots in correct translation
+* Makes use of larger screens: More apps shown on tablets
+* Tags to find apps for standard-tasks easily (e-mail clients, file browsers, text editors), since the F-Droid categories are too broad
+* View for 'random apps' to discover apps you usually wouldn't find
+* Shows apps the user might like (without stealing user data for analysis)
+* Aims to provide many different views to the app repository in order to assist the user in finding suitable apps, and encourage use of more apps from the repository
+* 'Share' apps so it can still be opened with another store (F-Droid, Yalp, Aurora, …), to get more info about the app.
+* Different search algorithm, can 'search harder' to continue a search if the results are insufficient
+* Shows the logos of apps all the time (if network connection is okay)
+* Shows more screenshots
+* Shows screenshots, completely, up-to-date and in the correct language
+* Shows screenshots, also when they are not in the fastlane structure
+* New and modern easily maintained codebase
+* Actively maintained
+* Many more to come
 
-# Things that G-Droid can NOT do (yet) compared to F-Droid
+# Things G-Droid can NOT do (yet) compared to F-Droid
 
-* show or install an older version of an app
-* create a local repo, share apps with 'near' people or share apps via bluetooth
-* add other repositories than the F-Droid repo
-* use the privileged extension (done, but extension is not adjusted yet), G-Droid can use root permissions on rooted phones though, to provide unattended installs
-* update automatically
-* http proxy settings
-* G-Droid helps you in different ways to find better apps: but in some cases you might still need the 'share' button, to open that app in F-Droid to install it. G-Droid right now is not yet a complete replacement for the F-Droid app.
+* Show or install an older version of an app
+* Create a local repo, share apps with people 'nearby' or share apps via Bluetooth
+* Add other repositories than the F-Droid repo
+* Use the privileged extension (done, but extension is not adjusted yet), G-Droid can however use root permissions on rooted devices to provide unattended installs
+* Automatic updates
+* HTTP proxy settings
+* G-Droid helps you in different ways to find better apps, but in some cases you might still need the 'share' button, to open that app in F-Droid to install it. G-Droid right now is not yet a complete replacement for the F-Droid app.
 
-# Things that are the same in G-Droid and F-Droid
+# Shared aspects of G-Droid and F-Droid
 
-* shows the same apps - G-Droid does not add any apps or modify the builds, signatures or download URLs
-* all additional meta-data is provided by F-Droid as well (eg. the link to github)
-* GPL3 license 
+* Shows the same apps - G-Droid does not add any apps or modify the builds, signatures or download URLs
+* All additional metadata is provided by F-Droid as well (e.g. the link to GitHub)
+* GPLv3+ license 
 
 # Explanation of permissions
 
-* INTERNET: to download the app-metadata and the apps
-* WRITE_EXTERNAL_STORAGE: To store the downloaded apps temporarily (permission only on older Android versions enforced)
-
+* INTERNET: To download the app-metadata and the apps
+* WRITE_EXTERNAL_STORAGE: To store the downloaded apps temporarily (permission only enforced on older Android versions)

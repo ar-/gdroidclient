@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="category_System" tools:ignore="UnusedResources">النظام</string>
+    <string name="pref_description_use_list_view">إظهار التطبيقات في قائمه إذا كان ذلك ممكنا</string>
+    <string name="ascending">تصاعدي</string>
+    <string name="title_starred">المفضلة</string>
+    <string name="app_installed">مثبت</string>
+    <string name="title_dashboard">لوح المراقبة</string>
+    <string name="anti_nosourcesince">لم يعد الكود المصدري متاحا ، ولا توجد تحديثات ممكنة.</string>
+    <string name="pref_title_sync_frequency">فترة المزامنة</string>
+    <string name="installing_details" formatted="false">تثبيت% d/% d</string>
+    <string name="file_browser">متصفح الملفات</string>
+    <string name="torrent_downloader">مُنزّل التورنت</string>
+    <string name="pref_title_ratings_summary">تعيين رقم من 0 إلى 10 لكل مقياس. العدد الأعلى يعني اهميه اعلى.</string>
+    <string name="pref_title_upstream_ratings">تصنيفات من جيثب ، جيلاب و سورس فورج</string>
+    <string name="crash_dialog_title">لقد تعطل G-درويد</string>
+    <string name="email_client">عميل البريد الإلكتروني</string>
+    <string name="developer">المطور</string>
+    <string name="random_apps">تطبيقات عشوائية</string>
+    <string name="how_to_rate">يرجى مشاركته في تطبيق Mastodon ، أضف تعليقك ولكن لا تغيير الوسم.</string>
+    <string name="category_Money" tools:ignore="UnusedResources">المال</string>
+    <string name="newest_apps">أحدث التطبيقات</string>
+    <string name="you_might_also_like">قد تعجبك أيضا</string>
+    <string name="title_tags">العلامات</string>
+    <string name="descending">تنازلي</string>
+    <string name="search_even_harder">البحث أكثر</string>
+    <string name="download_error">فشل التنزيل!</string>
+    <string name="last_update">آخر تحديث</string>
+    <string name="category_Science_Education" tools:ignore="UnusedResources">العلم والتعليم</string>
+    <string name="downloading">تحميل…</string>
+    <string name="search_harder">البحث</string>
+    <string name="permissions">الصلاحيات</string>
+    <string name="no">لا</string>
+    <string name="category_Reading" tools:ignore="UnusedResources">القراءه</string>
+    <string name="data_is_up_to_date">بيانات محدثه</string>
+    <string name="sort_search">فرز البحث</string>
+    <string name="action_add_favourite">أضافه إلى المفضلة</string>
+    <string name="youtube_player">مشغّل اليوتيوب</string>
+    <string name="write_comment">كتابة تعليق</string>
+    <string name="crash_dialog_comment_prompt">يمكنك أضافه المزيد من المعلومات والتعليقات هنا:</string>
+    <string name="todo_list">قائمة المهام</string>
+    <string name="installing" formatted="false">تثبيت %s</string>
+    <string name="category_Connectivity" tools:ignore="UnusedResources">الاتصال</string>
+    <string name="nav_header_subtitle">تطبيق لمستودع F-Droid</string>
+    <string name="anti_upstreamnonfree">شفرة المصدر المنشطة ليست حرة تماماً</string>
+    <string name="by_same_author">من المؤلف نفسه</string>
+    <string name="navigation_drawer_close">إغلاق درج التنقل</string>
+    <string name="saving_app_details">حفظ تفاصيل التطبيق</string>
+    <string name="use_root">هل تريد تثبيت تطبيقات دون تفاعل المستخدم، وذلك باستخدام امتيازات الجذر المتوفرة على هذا الجهاز؟</string>
+    <string name="navigation_drawer_open">فتح درج التنقل</string>
+    <string name="shopping_list">قائمه التسوق</string>
+    <string name="pref_title_release_cycle_time">وقت دورة التحديثات المعتادة</string>
+    <string name="top_author">أفضل كاتب</string>
+    <string name="perms_description_app">المقدمة من قبل.</string>
+    <string name="crash_dialog_text">حدث خطا غير متوقع مما اضطر التطبيق إلى التوقف. هل تريد إرسال التفاصيل إلى البريد الكتروني للمساعدة في إصلاح المشكلة ؟</string>
+    <string name="anti_nonfreedep">هذا التطبيق يعتمد على تطبيقات أخرى غير حرة</string>
+    <string name="menu_my_apps">تطبيقاتي</string>
+    <string name="name">الاسم</string>
+    <string name="anti_nonfreeassets">هذا التطبيق يحتوي على أصول غير الحرة</string>
+    <string name="yes">نعم</string>
+    <string name="category_Multimedia" tools:ignore="UnusedResources">الوسائط المتعددة</string>
+    <string name="category_Security" tools:ignore="UnusedResources">الأمان</string>
+    <string name="in_same_category">نفس الفئة</string>
+    <string name="title_categories">الفئات</string>
+    <string name="contacts">جهات الإتصال</string>
+    <string name="ok">حسنا</string>
+    <string name="pref_header_ratings">تصنيفات النجوم</string>
+    <string name="anti_disabledalgorithm">هذا التطبيق لديه توقيع امني ضعيف</string>
+    <string name="music_player">مشغل الموسيقى</string>
+    <string name="app_can_be_updated">يمكن تحديث هذا التطبيق من% s إلى% s</string>
+    <string name="installation_finished">انتهى التثبيت</string>
+    <string name="installed_details">التطبيقات %d المثبتة</string>
+    <string name="app_store">متجر التطبيقات</string>
+    <string name="action_hide">إخفاء</string>
+    <string name="action_upgrade">تحديث</string>
+    <string name="action_uninstall">الغاء تثبيت</string>
+    <string name="license">الرخصة</string>
+    <string name="pref_description_use_root">تثبيت التطبيقات وإلغاء تثبيتها تلقائيا إذا كان الجهاز يحتوي على روت</string>
+    <string name="category_Writing" tools:ignore="UnusedResources">الكتابة</string>
+    <string name="pref_title_send_crash_reports">المطالبة بإرسال تقارير الأعطال</string>
+    <string name="anti_ads">يحتوي هذا التطبيق على إعلانات</string>
+    <string name="action_launch">تشغيل</string>
+    <string name="recently_updated">تم تحديثه مؤخرا</string>
+    <string name="category_Graphics" tools:ignore="UnusedResources">الرسومات</string>
+    <string name="perm_costs_money">هذا قد يكلفك المال</string>
+    <string name="download_all_updates">تحميل كافة التحديثات</string>
+    <string name="category_Development" tools:ignore="UnusedResources">التطوير</string>
+    <string name="gallery">معرض الوسائط</string>
+    <string name="pref_title_use_list_view">تمكين طريقه عرض القائمة</string>
+    <string name="more">المزيد</string>
+    <string name="highly_rated">تصنيف عالي</string>
+    <string name="pref_header_general">عام</string>
+    <string name="category_Theming" tools:ignore="UnusedResources">السمات</string>
+    <string name="pref_header_notifications">التنبيهات</string>
+    <string name="category_Time" tools:ignore="UnusedResources">الوقت</string>
+    <string name="links">الروابط</string>
+    <string name="pref_title_new_message_notifications">تنبيه برسالة جديدة</string>
+    <string name="cancel">إلغاء</string>
+    <string name="menu_hidden_apps">التطبيقات المخفية</string>
+    <string name="pref_title_updated_in_2_years">اخر تحديث في آخر سنتين</string>
+    <string name="antifeatures">المميزات المضادة</string>
+    <string name="title_activity_settings">الإعدادات</string>
+    <string name="category_Games" tools:ignore="UnusedResources">الألعاب</string>
+    <string name="category_Internet" tools:ignore="UnusedResources">الانترنت</string>
+    <string name="category_Navigation" tools:ignore="UnusedResources">التنقل</string>
+    <string name="action_install">تثبيت</string>
+    <string name="web_browser">متصفح الويب</string>
+    <string name="anti_knownvuln">يحتوي هذا التطبيق علي ثغره أمنيه معروفه</string>
+    <string name="menu_app_authors">مؤلف التطبيق</string>
+    <string name="stars">النجوم</string>
+    <string name="title_home">الرئيسية</string>
+    <string name="similar_apps">تطبيقات مماثلة</string>
+    <string name="text_editor">محرر النصوص</string>
+    <string name="category_Sports_Health" tools:ignore="UnusedResources">الرياضة والصحة</string>
+    <string name="no_comments_available">لا توجد تعليقات متاحه لهذا التطبيق</string>
+    <string name="action_settings">الإعدادات</string>
+    <string name="title_myapps">تطبيقاتي</string>
+    <string name="app_size">الحجم</string>
+    <string name="nav_header_desc">راس التنقل</string>
+    <string name="camera">الكاميرا</string>
+    <string name="title_search">البحث</string>
+    <string name="download_pending">الانتظار لبدء التحميل…</string>
+    <string name="anti_tracking">هذا التطبيق يراقب ويوثق النشاطات الخاصة بك</string>
+    <string name="no_permissions">لا يتم استخدام إيه أذونات.</string>
+    <string name="menu_top_authors">كبار الكتاب</string>
+    <string name="versions">الاصدارات</string>
+    <string name="pref_title_use_root">استخدام امتياز الروت</string>
+    <string name="anti_nonfreeadd">هذا التطبيق يحمل إضافات غير حرة</string>
+    <string name="perms_new_perm_prefix">الجديد:</string>
+    <string name="app_name">g-درويد</string>
+    <string name="pref_header_data_sync">البيانات والمزامنة</string>
+    <string name="added_on">تمت إضافته في</string>
+    <string name="confirmation">تاكيد</string>
+    <string name="launcher">الواجهة</string>
+    <string name="title_notifications">التنبيهات</string>
+    <string name="calendar">التقويم</string>
+    <string name="category_Phone_SMS" tools:ignore="UnusedResources">الهاتف والرسائل القصيرة</string>
+    <string name="fetching_comments">جلب التعليقات…</string>
+    <string name="pref_title_ratings_headline">تعيين أهميتك لكل مقياس</string>
+    <string name="action_unhide">إظهار</string>
+    <string name="comments">التعليقات</string>
+    <string name="anti_nonfreenet">هذا التطبيق يحمل خدمات شبكة غير حرة</string>
+    <string name="pref_description_send_crash_reports">جمع البيانات حول الأعطال وطلب إرسالها إلى المطور</string>
+    <string name="could_not_download_gdroid_metadata">لا يمكن تحميل بيانات g-droid الوصفية</string>
+    <string name="similar_to_my_apps">مشابهه لتطبيقاتي</string>
+</resources>

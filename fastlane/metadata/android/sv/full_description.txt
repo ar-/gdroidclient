@@ -1,0 +1,58 @@
+# Vad är den här appen
+
+G-Droid kan bläddra i F-Droid-app-lagret. Det är ett alternativ till den officiella klienten.
+
+# Ytterligare funktioner jämfört med F-Droid
+
+* Visar recensioner och kommentarer för appar
+* Stjärnklassificering av appar (upp till 5 stjärnor) - maskingenererade mätvärden
+* Visar stjärnstjärnorna uppströms uppströms (GitHub, GitLab, SourceForge)
+* Fler statistik, baserad på libre-data (som genomsnittlig utgivningscykeltid) för att generera stjärnbetyg
+* Användare väljer vilka mätvärden som är viktiga för dem, så det finns ingen "bästa app" i repo - det finns bara en "bästa app" ur den aktuella användarens synvinkel
+* Visar "liknande appar" och "appar i samma kategori" när du tittar på en app
+* Visar "appar av samma författare" när du tittar på en app
+* Visar en lista över alla författare med sina appar och genomsnittligt stjärnbetyg
+* Visar appens webbplats - även om den bara är en README-fil på GitHub
+* Visar de senaste apparna och nyligen uppdaterade appar separerade
+* Visar kort i samma storlek för bättre översikt
+* Ger en listvy som alternativ för korten (som i äldre F-Droid-versioner) för personer som inte gillar kort
+* Fler möjligheter att beställa och sortera appar
+* Möjlighet att "stjärna" appar för att markera dem
+* Möjlighet att dölja appar för att ta bort dem från alla vyer
+* Visar kategorier i korrekt översättning (om det finns) efter att ha ändrat enhetsspråk
+* Visar skärmdumpar i korrekt översättning
+* Använder större skärmar: Fler appar visas på surfplattor
+* Taggar för att enkelt hitta appar för standarduppgifter (e-postklienter, filbläsare, textredigerare), eftersom F-Droid-kategorierna är för breda
+* Visa för "slumpmässiga appar" för att upptäcka appar du vanligtvis inte hittar
+* Visar appar som användaren kanske gillar (utan att stjäla användardata för analys)
+* Syftar till att ge många olika vyer till appförvaret för att hjälpa användaren att hitta lämpliga appar och uppmuntra användning av fler appar från förvaret
+* 'Dela' appar så att det fortfarande kan öppnas med en annan butik (F-Droid, Yalp, Aurora, ...) för att få mer information om appen.
+* Olika sökalgoritmer, kan "söka hårdare" för att fortsätta en sökning om resultaten är otillräckliga
+* Visar logotypen för appar hela tiden (om nätverksanslutningen är okej)
+* Visar fler skärmdumpar
+* Visar skärmdumpar, helt, uppdaterade och på rätt språk
+* Visar skärmdumpar, även när de inte finns i fastlane-strukturen
+* Nya och moderna lätt underhållna kodbaser
+* Underhålls aktivt
+* Många fler som kommer
+
+# Saker G-Droid INTE kan göra (ännu) jämfört med F-Droid
+
+* Visa eller installera en äldre version av en app
+* Skapa en lokal repo, dela appar med människor i närheten eller dela appar via Bluetooth
+* Lägg till andra förvar än F-Droid-repo
+* Använd det privilegierade tillägget (gjort, men tillägget är inte justerat ännu), G-Droid kan dock använda root-behörigheter på rotade enheter för att tillhandahålla obevakade installationer
+* Automatiska uppdateringar
+* HTTP-proxyinställningar
+* G-Droid hjälper dig på olika sätt att hitta bättre appar, men i vissa fall kan du fortfarande behöva knappen "dela" för att öppna appen i F-Droid för att installera den. G-Droid just nu är inte en komplett ersättning för F-Droid-appen.
+
+# Delade aspekter av G-Droid och F-Droid
+
+* Visar samma appar - G-Droid lägger inte till några appar eller ändrar builds, signaturer eller nedladdningsadresser
+* Alla ytterligare metadata tillhandahålls också av F-Droid (t.ex. länken till GitHub)
+* GPLv3 + -licens
+
+# Förklaring av behörigheter
+
+* INTERNET: Ladda ner app-metadata och appar
+* WRITE_EXTERNAL_STORAGE: För att lagra de nedladdade apparna tillfälligt (tillåtelse endast tillämpas på äldre Android-versioner)

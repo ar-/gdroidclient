@@ -26,4 +26,3 @@
   * show apps the user might also like
   * made search results responsive
   * updated weblate translations (thanks mates)
-

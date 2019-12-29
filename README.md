@@ -158,3 +158,20 @@ The app icons and all other images (like screenshots) are being cached. There ha
 If you have this error, please check if you have an 'optimizer' app running in the background that deletes the cache of some apps all the time. If so: disable this behaviour.
 Apart from that, the Android OS will use free space on your device to cache the app icons in G-Droid. This happens automatically with the Glide library.
 
+# Donate
+
+Cash donations are not accepted. You can buy the author of this app a coffee if you have some useless cryptocurrencies to spare.
+
+* BTC/BCH/BTG/etc: 1J2bbhJYksSjeynGGhuSPN9aTEaxiGm4nR
+* ETH: 0xbc5afcb1f9d9cbdd385c844fea6a603e2c265621
+* XMR: 4AffoFbFhfGZdBeMaQYSCMTURacM3qZYxKHQeLx8xkiLUjzk2GPzjCrNU5uquXEsEL6wcN8b5ULg5JdDaQfuQRkUJs6xx3f
+
+How much to donate? 🙂
+
+1. Go to your nearest coffee shop (or bar [or cafe in the Netherlands]).
+2. Get the price for a regular coffee (or beer). No surgar.
+3. Optionally multiply by 2. Thanks.
+4. Convert the price into a crypto currency mentioned above. 
+5. Donate the resulting value.
+
+✌️

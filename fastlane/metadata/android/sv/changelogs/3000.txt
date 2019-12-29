@@ -1,0 +1,9 @@
+0.3.0
+  * lagt till taggar för appar som används för standarduppgifter
+  * bytte logotyp till något lila
+
+0.2.3
+  * bugfix: fast krasch vid uppdatering av arkiverade appar
+
+0.2.2
+  * läggs till statistik och stjärnaindikatorer
