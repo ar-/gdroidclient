@@ -140,4 +140,7 @@
     <string name="data_is_up_to_date">τα δεδομένα είναι επικαιροποιημένα</string>
     <string name="versions">Εκδόσεις</string>
     <string name="app_installed">Εγκατεστημένο</string>
+    <string name="menu_top_authors">Κορυφαίοι προγραμματιστές</string>
+    <string name="top_author">Κορυφαίος προγραμματιστής</string>
+    <string name="app_can_be_updated">Αυτή η εφαρμογή μπορεί να ενημερωθεί από %s σε %s</string>
 </resources>

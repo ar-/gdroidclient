@@ -1,0 +1,9 @@
+0.3.0
+  * dodano tagi dla aplikacji, które są używane do standardowych zadań
+  * zmieniono logo na coś purpurowego
+
+0.2.3
+  * poprawka: naprawiono błąd podczas aktualizowania zarchiwizowanych aplikacji
+
+0.2.2
+  * dodano metryki i wskaźniki gwiazd

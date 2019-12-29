@@ -1,0 +1,4 @@
+0.2.0
+  * fast layout på mycket små och mycket stora skärmar
+  * fast uppdateringsknapp för installerade appar
+  * läggs fastlane

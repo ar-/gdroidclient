@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Liitettävyys</string>
-
     <string name="category_Development">Kehittäminen</string>
     <string name="category_Games">Pelit</string>
     <string name="category_Graphics">Grafiikka</string>
@@ -62,4 +61,8 @@
     <string name="pref_description_send_crash_reports">Kerää tietoja kaatumisista ja pyydä lähettämään ne kehittäjälle</string>
     <string name="versions">Versiot</string>
     <string name="app_installed">Asennettu</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">Avaa navigointipaneeli</string>
+    <string name="navigation_drawer_close">Sulje navigointilaatikko</string>
+    <string name="nav_header_subtitle">asiakas F-Droid-arkistolle</string>
 </resources>

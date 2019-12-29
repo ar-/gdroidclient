@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Tuqqniwt</string>
-
     <string name="category_Development">Taneflit</string>
     <string name="category_Games">Uraren</string>
     <string name="category_Internet">Internet</string>
@@ -40,4 +39,6 @@
     <string name="crash_dialog_title">G-Droid yeγli</string>
     <string name="versions">Ileqman</string>
     <string name="app_installed">Yettusbedd</string>
+    <string name="text_editor">Amazrag n uḍris</string>
+    <string name="web_browser">Iminig Web</string>
 </resources>

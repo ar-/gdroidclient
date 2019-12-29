@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Anslutbarhet</string>
-
     <string name="category_Development">Utveckling</string>
     <string name="category_Games">Spel</string>
     <string name="category_Graphics">Grafik</string>
@@ -50,7 +49,7 @@
     <string name="sort_search">Sortera sökning</string>
     <string name="action_uninstall">Avinstallera</string>
     <string name="license">Licens</string>
-    <string name="app_size">Storlek: </string>
+    <string name="app_size">Storlek</string>
     <string name="ok">OK</string>
     <string name="download_error">Hämtning misslyckades!</string>
     <string name="saving_app_details">Sparar app-detaljer</string>
@@ -62,4 +61,86 @@
     <string name="pref_description_send_crash_reports">Samla data om krascher och be att få skicka den till utvecklaren</string>
     <string name="versions">Versioner</string>
     <string name="app_installed">Installerad</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">Öppna navigationslåda</string>
+    <string name="navigation_drawer_close">Stäng navigationslåda</string>
+    <string name="nav_header_subtitle">Klient åt arkivet på F-Droid</string>
+    <string name="nav_header_desc">Navigationsrubrik</string>
+    <string name="action_settings">Inställningar</string>
+    <string name="action_add_favourite">Lägg till i favoriter</string>
+    <string name="title_activity_settings">Inställningar</string>
+    <string name="pref_header_general">Allmänt</string>
+    <string name="pref_header_data_sync">Data &amp; synk</string>
+    <string name="pref_title_sync_frequency">Synkroniseringsfrekvens</string>
+    <string name="pref_header_notifications">Aviseringar</string>
+    <string name="pref_title_new_message_notifications">Nya meddelandeaviseringar</string>
+    <string name="title_home">Hem</string>
+    <string name="title_dashboard">Kontrollpanel</string>
+    <string name="title_notifications">Aviseringar</string>
+    <string name="title_categories">kategorier</string>
+    <string name="title_tags">taggar</string>
+    <string name="title_starred">stjärnmärkta</string>
+    <string name="title_myapps">mina appar</string>
+    <string name="title_search">sök</string>
+    <string name="app_store">App Store</string>
+    <string name="calendar">Kalender</string>
+    <string name="camera">Kamera</string>
+    <string name="contacts">Kontakter</string>
+    <string name="email_client">E-postklient</string>
+    <string name="file_browser">Filhanterare</string>
+    <string name="gallery">Galleri</string>
+    <string name="launcher">Lanserare</string>
+    <string name="music_player">Musikspelare</string>
+    <string name="shopping_list">Inköpslista</string>
+    <string name="text_editor">Textredigerare</string>
+    <string name="todo_list">Att göra lista</string>
+    <string name="torrent_downloader">Torrentnedladdare</string>
+    <string name="web_browser">Webbläsare</string>
+    <string name="youtube_player">YouTube-spelare</string>
+    <string name="action_hide">Dölj</string>
+    <string name="action_unhide">Ta fram</string>
+    <string name="pref_header_ratings">Stjärnklassificeringar</string>
+    <string name="pref_title_upstream_ratings">Betyg från GitHub, GitLab och SourceForge</string>
+    <string name="pref_title_ratings_headline">Ange din betydelse för varje mått</string>
+    <string name="pref_title_ratings_summary">Tilldela ett tal från 0 till 10 till varje mått. Högre tal innebär större betydelse.</string>
+    <string name="pref_title_updated_in_2_years">senast uppdaterad inom 2 år</string>
+    <string name="pref_title_release_cycle_time">Utgåva cykeltid</string>
+    <string name="search_harder">sök hårdare</string>
+    <string name="search_even_harder">sök ännu hårdare</string>
+    <string name="menu_my_apps">Mina appar</string>
+    <string name="menu_hidden_apps">Dolda appar</string>
+    <string name="similar_apps">Liknande appar</string>
+    <string name="by_same_author">Av samma författare</string>
+    <string name="menu_app_authors">Appförfattare</string>
+    <string name="installing" formatted="false">Installerar %s</string>
+    <string name="installing_details" formatted="false">Installerar %d / %d</string>
+    <string name="installation_finished">Installationen är klar</string>
+    <string name="installed_details">Installerade %d appar</string>
+    <string name="confirmation">Bekräftelse</string>
+    <string name="use_root">Vill du installera appar utan användarinteraktion med hjälp av root-behörigheter som är tillgängliga på den här enheten\?</string>
+    <string name="pref_description_use_root">installera och avinstallera appar automatiskt om enheten är rotad</string>
+    <string name="pref_title_use_root">Använd root-privilegium</string>
+    <string name="in_same_category">Samma kategori</string>
+    <string name="pref_title_use_list_view">Aktivera listvy</string>
+    <string name="pref_description_use_list_view">visa appar i en lista om möjligt</string>
+    <string name="newest_apps">Nyaste apparna</string>
+    <string name="recently_updated">Nyligen uppdaterade</string>
+    <string name="highly_rated">Högt betygsatt</string>
+    <string name="similar_to_my_apps">Liknar mina appar</string>
+    <string name="you_might_also_like">Du kanske också gillar</string>
+    <string name="random_apps">Slumpmässiga appar</string>
+    <string name="stars">Stjärnor</string>
+    <string name="ascending">stigande</string>
+    <string name="descending">fallande</string>
+    <string name="developer">Utvecklare</string>
+    <string name="comments">Kommentarer</string>
+    <string name="write_comment">skriv kommentar</string>
+    <string name="no_comments_available">inga kommentarer tillgängliga för den här appen</string>
+    <string name="fetching_comments">hämtar kommentarer …</string>
+    <string name="how_to_rate">Dela detta med en Mastodon-app, lägg till din kommentar men ändra inte hashtaggen.</string>
+    <string name="could_not_download_gdroid_metadata">kunde inte ladda ner G-Droid-metadata</string>
+    <string name="data_is_up_to_date">data är uppdaterade</string>
+    <string name="menu_top_authors">Toppförfattare</string>
+    <string name="top_author">Toppförfattare</string>
+    <string name="app_can_be_updated">Detta program kan uppdateras från %s till %s</string>
 </resources>

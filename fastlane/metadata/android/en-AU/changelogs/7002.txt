@@ -32,4 +32,3 @@
 0.6.1
   * fixed screenshot click bug on Adnroid 5 for good
   * added more Portuguese, French and Russian translations
-

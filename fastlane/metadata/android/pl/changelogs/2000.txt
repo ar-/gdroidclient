@@ -1,0 +1,4 @@
+0.2.0
+  * naprawiono układ na bardzo małych i bardzo dużych ekranach
+  * naprawiono przycisk aktualizacji dla zainstalowanych aplikacji
+  * dodano fastlane

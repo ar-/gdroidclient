@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Łączność</string>
-
     <string name="category_Development">Tworzenie</string>
     <string name="category_Games">Gry</string>
     <string name="category_Graphics">Grafika</string>
@@ -78,7 +76,7 @@
     <string name="email_client">Klient poczty e-mail</string>
     <string name="action_uninstall">Odinstaluj</string>
     <string name="license">Licencja</string>
-    <string name="app_size">Rozmiar: </string>
+    <string name="app_size">Rozmiar</string>
     <string name="ok">OK</string>
     <string name="download_error">Pobieranie nie powiodło się!</string>
     <string name="saving_app_details">Zapisywanie danych aplikacji</string>
@@ -90,4 +88,59 @@
     <string name="pref_description_send_crash_reports">Zbieraj dane o awariach i proponuj wysyłanie ich do programistów</string>
     <string name="versions">Wersje</string>
     <string name="app_installed">Zainstalowane</string>
+    <string name="file_browser">Przeglądarka plików</string>
+    <string name="launcher">Launcher</string>
+    <string name="music_player">Odtwarzacz muzyki</string>
+    <string name="shopping_list">Lista zakupów</string>
+    <string name="youtube_player">Odtwarzacz YouTube</string>
+    <string name="action_hide">Ukryj</string>
+    <string name="pref_title_upstream_ratings">Oceny z GitHub, GitLab i SourceForge</string>
+    <string name="pref_title_ratings_headline">Ustaw ważność dla każdego parametru</string>
+    <string name="pref_title_ratings_summary">Przypisz wartość od 0 do 10 dla każdego parametru. Wyższy numer oznacza wyższą ważność.</string>
+    <string name="pref_title_release_cycle_time">Cykl wydań</string>
+    <string name="menu_my_apps">Moje aplikacje</string>
+    <string name="menu_hidden_apps">Ukryte aplikacje</string>
+    <string name="similar_apps">Podobne aplikacje</string>
+    <string name="by_same_author">Tego samego autora</string>
+    <string name="menu_app_authors">Autorzy aplikacji</string>
+    <string name="installing" formatted="false">Instalowanie %s</string>
+    <string name="installing_details" formatted="false">Instalowanie %d / %d</string>
+    <string name="installation_finished">Instalacja ukończona</string>
+    <string name="installed_details">Zainstalowano %d aplikacji</string>
+    <string name="pref_title_use_root">Używaj uprawnień root</string>
+    <string name="in_same_category">Ta sama kategoria</string>
+    <string name="pref_title_use_list_view">Włącz widok listy</string>
+    <string name="newest_apps">Najnowsze aplikacje</string>
+    <string name="recently_updated">Ostatnio zaktualizowane</string>
+    <string name="highly_rated">Wysoko oceniane</string>
+    <string name="similar_to_my_apps">Podobne do moich aplikacji</string>
+    <string name="random_apps">Losowe aplikacje</string>
+    <string name="stars">Gwiazdki</string>
+    <string name="ascending">rosnąco</string>
+    <string name="descending">malejąco</string>
+    <string name="comments">Komentarze</string>
+    <string name="write_comment">napisz komentarz</string>
+    <string name="no_comments_available">brak komentarzy dla tej aplikacji</string>
+    <string name="data_is_up_to_date">dane są aktualne</string>
+    <string name="menu_top_authors">Najlepsi autorzy</string>
+    <string name="top_author">najlepszy autor</string>
+    <string name="navigation_drawer_open">Otwórz panel nawigacji</string>
+    <string name="navigation_drawer_close">Zamknij panel nawigacji</string>
+    <string name="todo_list">Do zrobienia</string>
+    <string name="torrent_downloader">Pobieranie Torrent</string>
+    <string name="action_unhide">Pokaż</string>
+    <string name="pref_header_ratings">Ocena</string>
+    <string name="pref_title_updated_in_2_years">ostatnia aktualizacja w ciągu ostatnich 2 lat</string>
+    <string name="search_harder">szukaj dokładniej</string>
+    <string name="search_even_harder">szukaj jeszcze dokładniej</string>
+    <string name="confirmation">Potwierdzenie</string>
+    <string name="use_root">Czy chcesz zainstalować aplikacje bez udziału użytkownika, używając uprawnień root na tym urządzeniu\?</string>
+    <string name="pref_description_use_root">automatyczne instalowanie i odinstalowywanie aplikacji, jeśli urządzenie posiada root</string>
+    <string name="pref_description_use_list_view">pokazuj aplikacje na liście jeżeli to możliwe</string>
+    <string name="you_might_also_like">Możesz też polubić</string>
+    <string name="developer">Programista</string>
+    <string name="fetching_comments">pobieranie komentarzy …</string>
+    <string name="how_to_rate">Udostępnij tą aplikację przez Mastodon, dodaj komentarz, ale nie zmieniaj tagów.</string>
+    <string name="could_not_download_gdroid_metadata">nie można pobrać metadanych G-Droid</string>
+    <string name="app_can_be_updated">Aplikację można zaktualizować z %s do %s</string>
 </resources>

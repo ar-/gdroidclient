@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">접속성</string>
-
     <string name="category_Development">개발</string>
     <string name="category_Games">게임</string>
     <string name="category_Graphics">그래픽</string>
@@ -62,4 +61,5 @@
     <string name="pref_description_send_crash_reports">충돌에 대한 데이터를 수집하여 개발자에게 그것들을 보내도록 요청합니다</string>
     <string name="versions">버전</string>
     <string name="app_installed">설치됨</string>
+    <string name="app_name">G-Droid</string>
 </resources>

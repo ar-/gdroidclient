@@ -1,0 +1,9 @@
+0.2.3
+  * poprawka: naprawiono błąd podczas aktualizowania zarchiwizowanych aplikacji
+
+0.2.2
+  * dodano metryki i wskaźniki gwiazd
+
+0.2.1
+  * dodano wczytywanie animacji do wczytywania obrazów
+  * naprawiono ponadwymiarowe obrazy na niektórych urządzeniach

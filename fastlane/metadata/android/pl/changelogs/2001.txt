@@ -1,0 +1,8 @@
+0.2.1
+  * dodano wczytywanie animacji do wczytywania obrazów
+  * naprawiono ponadwymiarowe obrazy na niektórych urządzeniach
+
+0.2.0
+  * stały układ na bardzo małych i bardzo dużych ekranach
+  * poprawiono przycisk aktualizacji dla zainstalowanych aplikacji
+  * dodano fastlane

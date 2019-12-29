@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">פתיחת מגירת הניווט</string>
+    <string name="navigation_drawer_close">סגירת מגירות הניווט</string>
+    <string name="nav_header_subtitle">לקוח למאגר F-Droid</string>
+    <string name="nav_header_desc">כותרת ניווט</string>
+    <string name="action_settings">הגדרות</string>
+    <string name="action_add_favourite">הוספה למועדפים</string>
+    <string name="title_activity_settings">הגדרות</string>
+    <string name="pref_header_general">כללי</string>
+    <string name="pref_header_data_sync">נתונים וסנכרון</string>
+    <string name="pref_title_sync_frequency">תדירות סנכרון</string>
+    <string name="pref_header_notifications">התראות</string>
+    <string name="pref_title_new_message_notifications">התראות על הודעות חדשות</string>
+    <string name="title_home">בית</string>
+    <string name="title_dashboard">לוח בקרה</string>
+    <string name="title_notifications">התראות</string>
+    <string name="title_categories">קטגוריות</string>
+    <string name="title_tags">תגיות</string>
+    <string name="title_starred">עם סימון כוכב</string>
+    <string name="title_myapps">היישומונים שלי</string>
+    <string name="title_search">חיפוש</string>
+    <string name="app_store">חנות יישומונים</string>
+    <string name="calendar">לוח שנה</string>
+    <string name="camera">מצלמה</string>
+    <string name="contacts">אנשי קשר</string>
+    <string name="email_client">לקוח דוא״ל</string>
+    <string name="file_browser">סייר קבצים</string>
+    <string name="gallery">גלריה</string>
+    <string name="launcher">משגר</string>
+    <string name="music_player">נגן מוזיקה</string>
+    <string name="shopping_list">רשימת קניות</string>
+    <string name="text_editor">עורך טקסט</string>
+    <string name="todo_list">רשימת מטלות</string>
+    <string name="torrent_downloader">מוריד טורנטים</string>
+    <string name="web_browser">דפדפן</string>
+    <string name="youtube_player">נגן YouTube</string>
+    <string name="category_Connectivity" tools:ignore="UnusedResources">קישוריות</string>
+    <string name="category_Development" tools:ignore="UnusedResources">פיתוח</string>
+    <string name="category_Games" tools:ignore="UnusedResources">משחקים</string>
+    <string name="category_Graphics" tools:ignore="UnusedResources">גרפיקה</string>
+    <string name="category_Internet" tools:ignore="UnusedResources">אינטרנט</string>
+    <string name="category_Money" tools:ignore="UnusedResources">כסף</string>
+    <string name="category_Multimedia" tools:ignore="UnusedResources">מולטימדיה</string>
+    <string name="category_Navigation" tools:ignore="UnusedResources">ניווט</string>
+    <string name="category_Phone_SMS" tools:ignore="UnusedResources">טלפון ומסרונים</string>
+    <string name="category_Reading" tools:ignore="UnusedResources">קריאה</string>
+    <string name="category_Science_Education" tools:ignore="UnusedResources">מדע וחינוך</string>
+    <string name="category_Security" tools:ignore="UnusedResources">אבטחה</string>
+    <string name="category_Sports_Health" tools:ignore="UnusedResources">ספורט ובריאות</string>
+    <string name="category_System" tools:ignore="UnusedResources">מערכת</string>
+    <string name="category_Theming" tools:ignore="UnusedResources">עיצוב חוויה</string>
+    <string name="category_Time" tools:ignore="UnusedResources">זמן</string>
+    <string name="category_Writing" tools:ignore="UnusedResources">כתיבה</string>
+    <string name="antifeatures">תכונות שליליות</string>
+    <string name="anti_ads">יישומון זה מכיל פרסומות</string>
+    <string name="anti_tracking">יישומון זה עוקב ומדווח על הפעילות שלך</string>
+    <string name="anti_nonfreeadd">יישומון זה מקדם תוספים שאינם חופשיים</string>
+    <string name="anti_nonfreenet">יישומון זה מקדם שירותי רשת שאינם חופשיים</string>
+    <string name="anti_nonfreedep">יישומון זה תלוי ביישומון אחרים שאינם חופשיים</string>
+    <string name="anti_upstreamnonfree">קוד המקור בגרסה המקורית אינו חופשי לחלוטין</string>
+    <string name="anti_nonfreeassets">יישומון זה מכיל משאבים שאינם חופשיים</string>
+    <string name="anti_disabledalgorithm">ליישומון זה יש חתימת אבטחה חלשה</string>
+    <string name="anti_knownvuln">יישומון זה מכיל פרצת אבטחה מוכרת</string>
+    <string name="anti_nosourcesince">קוד המקור אינו זמין עוד, לא יתאפשרו עדכונים.</string>
+    <string name="no_permissions">לא נעשה שימוש בהרשאות.</string>
+    <string name="perm_costs_money">עשוי לעלות כסף</string>
+    <string name="perms_description_app">מסופק על ידי %1$s.</string>
+    <string name="perms_new_perm_prefix">חדש:</string>
+    <string name="permissions">הרשאות</string>
+    <string name="links">קישורים</string>
+    <string name="action_install">התקנה</string>
+    <string name="action_upgrade">שדרוג</string>
+    <string name="action_launch">הפעלה</string>
+    <string name="action_hide">הסתרה</string>
+    <string name="action_unhide">הצגה</string>
+    <string name="pref_header_ratings">דירוג בכוכבים</string>
+    <string name="pref_title_upstream_ratings">דירוגים מ־GitHub,‏ GitLab ו־SourceForge</string>
+    <string name="pref_title_ratings_headline">הגדרת החשיבות שלך לכל אחד מהמדדים</string>
+    <string name="pref_title_ratings_summary">באפשרותך להקצות מספר מ־0 עד 10 לכל אחד מהמדדים. מספר גבוה יותר מייצג חשיבות גדולה יותר.</string>
+    <string name="pref_title_updated_in_2_years">עדכון אחרון בטווח השנתיים האחרונות</string>
+    <string name="pref_title_release_cycle_time">תזמון מחזור הוצאה לאור</string>
+    <string name="search_harder">חיפוש עמוק יותר</string>
+    <string name="search_even_harder">חיפוש אפילו יותר עמוק</string>
+    <string name="menu_my_apps">היישומונים שלי</string>
+    <string name="menu_hidden_apps">יישומונים מוסתרים</string>
+    <string name="similar_apps">יישומונים דומים</string>
+    <string name="by_same_author">מאותו בית היוצר</string>
+    <string name="menu_app_authors">מפתחי יישומונים</string>
+    <string name="menu_top_authors">יוצרים מובילים</string>
+    <string name="top_author">יוצר מוביל</string>
+    <string name="installing" formatted="false">%s בהליכי התקנה</string>
+    <string name="installing_details" formatted="false">מותקנים %d / %d</string>
+    <string name="installation_finished">ההתקנה הסתיימה</string>
+    <string name="installed_details">הותקנו %d יישומונים</string>
+    <string name="confirmation">אישור</string>
+    <string name="use_root">להתקין את היישומים ללא התערבות המשתמש באמצעות הרשאות root שזמינות במכשיר\?</string>
+    <string name="yes">כן</string>
+    <string name="no">לא</string>
+    <string name="download_all_updates">הורדת כל העדכונים</string>
+    <string name="downloading">בהורדה…</string>
+    <string name="download_pending">בהמתנה להתחלת ההורדה…</string>
+    <string name="pref_description_use_root">ניתן להתקין ולהסיר יישומונים אוטומטית אם במכשיר יש הרשאות ל־root</string>
+    <string name="pref_title_use_root">שימוש בהרשאות root</string>
+    <string name="in_same_category">אותה הקטגוריה</string>
+    <string name="pref_title_use_list_view">הפעלת תצוגת רשימה</string>
+    <string name="pref_description_use_list_view">הצגת יישומונים ברשימה אם ניתן</string>
+    <string name="more">עוד</string>
+    <string name="newest_apps">היישומונים החדשים ביותר</string>
+    <string name="recently_updated">עודכנו לאחרונה</string>
+    <string name="highly_rated">מדורגים גבוה</string>
+    <string name="similar_to_my_apps">דומים ליישומונים שלי</string>
+    <string name="you_might_also_like">יכול להיות שיעניין אותך</string>
+    <string name="random_apps">יישומונים אקראיים</string>
+    <string name="last_update">עדכון אחרון</string>
+    <string name="added_on">נוסף ב־%s</string>
+    <string name="stars">כוכבים</string>
+    <string name="name">שם</string>
+    <string name="sort_search">סדר החיפוש</string>
+    <string name="ascending">עולה</string>
+    <string name="descending">יורד</string>
+    <string name="action_uninstall">הסרה</string>
+    <string name="license">רישיון</string>
+    <string name="app_size">גודל</string>
+    <string name="developer">מפתח</string>
+    <string name="comments">הערות</string>
+    <string name="write_comment">כתיבת הערה</string>
+    <string name="no_comments_available">אין הערות זמינות ליישומון זה</string>
+    <string name="fetching_comments">ההערות מתקבלות…</string>
+    <string name="ok">אישור</string>
+    <string name="download_error">ההורדה נכשלה!</string>
+    <string name="saving_app_details">פרטי היישומון נשמרים</string>
+    <string name="could_not_download_gdroid_metadata">לא ניתן להוריד את נתוני העל של G-Droid</string>
+    <string name="cancel">ביטול</string>
+    <string name="crash_dialog_title">G-Droid קרס</string>
+    <string name="data_is_up_to_date">הנתונים עדכניים</string>
+    <string name="app_can_be_updated">ניתן לעדכן את היישומון הזה מגרסה %s לגרסה %s</string>
+    <string name="versions">גרסאות</string>
+    <string name="app_installed">מותקן</string>
+    <string name="how_to_rate">נא לשתף זאת עם היישומון Mastodon, להוסיף את התגובה שלך אבל לא לשנות את התגית.</string>
+    <string name="crash_dialog_text">אירעה שגיאה בלתי צפויה בעת הניסיון לעצור את היישומון. לשלוח את הפרטים בדוא״ל כדי לסייע בתיקון התקלה\?</string>
+    <string name="crash_dialog_comment_prompt">ניתן להוסיף פרטים ותגובות להלן:</string>
+    <string name="pref_title_send_crash_reports">הצגת בקשה לשליחת דוחות קריסה</string>
+    <string name="pref_description_send_crash_reports">לאסוף נתונים על קריסות ולבקש לשלוח אותן למפתח</string>
+</resources>

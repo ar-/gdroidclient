@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Connectivité</string>
     <string name="category_Development">Développement</string>
     <string name="category_Games">Jeux</string>
@@ -29,7 +28,6 @@
     <string name="anti_disabledalgorithm">La signature de sécurité de cette application est faible</string>
     <string name="anti_knownvuln">Cette application contient une vulnérabilité de sécurité connue</string>
     <string name="anti_nosourcesince">Le code source n\'est désormais plus en accès libre, les mises à jour ne sont plus possibles.</string>
-
     <string name="no_permissions">Aucune autorisation n\'est utilisée.</string>
     <string name="perm_costs_money">Peut vous coûter de l\'argent</string>
     <string name="perms_description_app">Fourni par .</string>
@@ -128,10 +126,21 @@
     <string name="saving_app_details">Enregistrement des détails de l\'appli</string>
     <string name="cancel">Annuler</string>
     <string name="crash_dialog_title">G-Droid s\'est arrêté de manière inattendue</string>
-    <string name="crash_dialog_text">Une erreur inattendue s’est produite</string>
+    <string name="crash_dialog_text">Une erreur inattendue s’est produite forçant l\'arrêt de l\'application. Voulez-vous envoyer par e-mail les détails pour aider à corriger ce problème \?</string>
     <string name="crash_dialog_comment_prompt">Vous pouvez ajouter des informations supplémentaires :</string>
     <string name="pref_title_send_crash_reports">Demander avant d\'envoyer les rapports de plantage</string>
     <string name="pref_description_send_crash_reports">Recueillir des informations de débogage et proposer de les envoyer à l\'équipe de développement</string>
     <string name="versions">Versions</string>
     <string name="app_installed">Installée</string>
+    <string name="menu_top_authors">Top des auteurs</string>
+    <string name="top_author">Auteur populaire</string>
+    <string name="developer">Développeur</string>
+    <string name="comments">Commentaires</string>
+    <string name="write_comment">écrire un commentaire</string>
+    <string name="no_comments_available">Aucun commentaire disponible pour cette application</string>
+    <string name="fetching_comments">récupération des commentaires…</string>
+    <string name="how_to_rate">Merci de partager cela avec un client Mastodon, ajouter votre commentaire, mais sans le mot-dièse (hashtag).</string>
+    <string name="could_not_download_gdroid_metadata">impossible de télécharger les méta-données de G-Droid</string>
+    <string name="data_is_up_to_date">la date est à jour</string>
+    <string name="app_can_be_updated">Cette application peut-être mise à jour de la version %s à la version %s</string>
 </resources>

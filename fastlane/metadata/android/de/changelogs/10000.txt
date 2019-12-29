@@ -1,0 +1,5 @@
+* Alle verfügbaren alten Versionen anzeigen.
+* Bugfix: Text für Versionen von aktualisierbaren Anwendungen korrigiert.
+* Ein zusätzlicher Hashtag wurde zu den App-Kommentaren hinzugefügt, so dass Mastodon-Benutzer nach allen App-Kommentaren suchen können (funktioniert nur für Kommentare, die mit dieser Version oder höher gemacht werden).
+* Aktualisierungen der Übersetzung.
+* Urdu-Sprache hinzugefügt.
