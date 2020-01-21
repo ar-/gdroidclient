@@ -6,7 +6,7 @@ G-Droid kan bläddra i F-Droid-app-lagret. Det är ett alternativ till den offic
 
 * Visar recensioner och kommentarer för appar
 * Stjärnklassificering av appar (upp till 5 stjärnor) - maskingenererade mätvärden
-* Visar stjärnstjärnorna uppströms uppströms (GitHub, GitLab, SourceForge)
+* Visar stjärnstjärnorna uppströms (GitHub, GitLab, SourceForge)
 * Fler statistik, baserad på libre-data (som genomsnittlig utgivningscykeltid) för att generera stjärnbetyg
 * Användare väljer vilka mätvärden som är viktiga för dem, så det finns ingen "bästa app" i repo - det finns bara en "bästa app" ur den aktuella användarens synvinkel
 * Visar "liknande appar" och "appar i samma kategori" när du tittar på en app
@@ -22,7 +22,7 @@ G-Droid kan bläddra i F-Droid-app-lagret. Det är ett alternativ till den offic
 * Visar kategorier i korrekt översättning (om det finns) efter att ha ändrat enhetsspråk
 * Visar skärmdumpar i korrekt översättning
 * Använder större skärmar: Fler appar visas på surfplattor
-* Taggar för att enkelt hitta appar för standarduppgifter (e-postklienter, filbläsare, textredigerare), eftersom F-Droid-kategorierna är för breda
+* Taggar för att enkelt hitta appar för standarduppgifter (e-postklienter, filläsare, textredigerare), eftersom F-Droid-kategorierna är för breda
 * Visa för "slumpmässiga appar" för att upptäcka appar du vanligtvis inte hittar
 * Visar appar som användaren kanske gillar (utan att stjäla användardata för analys)
 * Syftar till att ge många olika vyer till appförvaret för att hjälpa användaren att hitta lämpliga appar och uppmuntra användning av fler appar från förvaret
