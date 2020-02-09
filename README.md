@@ -163,6 +163,7 @@ Apart from that, the Android OS will use free space on your device to cache the 
 Cash donations are not accepted. You can buy the author of this app a coffee if you have some useless cryptocurrencies to spare.
 
 * BTC/BCH/BTG/etc: 1J2bbhJYksSjeynGGhuSPN9aTEaxiGm4nR
+* DASH: XbLRt5imEHc72KmhvC7V9v8f9NmYrmvweS
 * ETH: 0xbc5afcb1f9d9cbdd385c844fea6a603e2c265621
 * XMR: 4AffoFbFhfGZdBeMaQYSCMTURacM3qZYxKHQeLx8xkiLUjzk2GPzjCrNU5uquXEsEL6wcN8b5ULg5JdDaQfuQRkUJs6xx3f
 
