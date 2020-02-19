@@ -133,4 +133,14 @@
     <string name="menu_top_authors">Vinsælustu höfundar</string>
     <string name="top_author">Vinsælasti höfundur</string>
     <string name="app_can_be_updated">Þetta forrit er hægt að uppfæra úr %s í %s</string>
+    <string name="nav_header_desc">Leiðsagnarhaus</string>
+    <string name="pref_title_ratings_headline">Stilltu þitt eigið vægi fyrir hvert atriði</string>
+    <string name="pref_title_ratings_summary">Úthlutaðu númeri frá 0 til 10 á hvert atriði. Hærri tala þýðir meira vægi.</string>
+    <string name="pref_title_updated_in_2_years">síðasta uppfærsla undanfarin 2 ár</string>
+    <string name="pref_title_release_cycle_time">Tímalengd útgáfuferlis</string>
+    <string name="use_root">Viltu setja upp forrit án afskipta notandans, með því að nota rótarréttindi sem eru tiltæk á þessu tæki\?</string>
+    <string name="pref_description_use_root">setja upp og fjarlægja forrit sjálfkrafa ef tækið er með rótaraðgang</string>
+    <string name="pref_description_use_list_view">birta forrit í lista ef mögulegt er</string>
+    <string name="how_to_rate">Endilega deildu þessu með Mastodon-forritinu, bættu við athugasemdinni þinni en ekki breyta myllumerkinu.</string>
+    <string name="data_is_up_to_date">gögnin eru af nýjustu útgáfu</string>
 </resources>
