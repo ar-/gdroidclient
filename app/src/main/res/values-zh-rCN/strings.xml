@@ -93,7 +93,7 @@
     <string name="shopping_list">购物清单</string>
     <string name="text_editor">文本编辑器</string>
     <string name="todo_list">待办事项清单</string>
-    <string name="torrent_downloader">Torrent下载程序</string>
+    <string name="torrent_downloader">Torrent下载器</string>
     <string name="web_browser">网页浏览器</string>
     <string name="youtube_player">YouTube播放器</string>
     <string name="action_hide">隐藏</string>
@@ -128,4 +128,19 @@
     <string name="menu_top_authors">热门作者</string>
     <string name="top_author">热门作者</string>
     <string name="app_can_be_updated">此应用程序可以从 %s 更新到 %s</string>
+    <string name="app_name">G-Droid</string>
+    <string name="gallery">画廊</string>
+    <string name="pref_title_ratings_headline">为每个指标设置你的重要性</string>
+    <string name="pref_title_ratings_summary">每一个指标分派一个0到10之内的整数。数字越大意味着重要性越高。</string>
+    <string name="pref_title_release_cycle_time">发布周期</string>
+    <string name="search_harder">更努力地搜索</string>
+    <string name="search_even_harder">再加把力</string>
+    <string name="use_root">您是否想要使用此设备上提供的root特权在没有用户交互的情况下安装应用程序？</string>
+    <string name="pref_description_use_root">如果已获取设备的根权限，则自动安装和卸载应用程序</string>
+    <string name="highly_rated">高评分</string>
+    <string name="stars">标星</string>
+    <string name="ascending">升序排列</string>
+    <string name="descending">降序排列</string>
+    <string name="no_comments_available">该应用没有用户评论</string>
+    <string name="how_to_rate">请用一款Mastodon应用分享此信息，添加您的评论，但不要更改标签。</string>
 </resources>
