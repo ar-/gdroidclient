@@ -91,12 +91,12 @@
     <string name="menu_app_authors">Авторы приложения</string>
     <string name="installing" formatted="false">Установка %s</string>
     <string name="installing_details" formatted="false">Установка %d / %d</string>
-    <string name="installation_finished">Установка закончена</string>
-    <string name="installed_details">Установленно %d приложений</string>
+    <string name="installation_finished">Установка завершена</string>
+    <string name="installed_details">Установлено %d приложений</string>
     <string name="confirmation">Подтверждение</string>
-    <string name="use_root">Вы хотите устанавливать приложения без подтверждения, используя привилегии суперпользователя, доступные на этом устройстве\?</string>
-    <string name="pref_description_use_root">автоматически устанавливать и удалять приложения, если есть права суперпользователя</string>
-    <string name="pref_title_use_root">Использовать привилегии суперпользователя</string>
+    <string name="use_root">Устанавливать приложения без подтверждения, используя привилегии суперпользователя\?</string>
+    <string name="pref_description_use_root">Устанавливать и удалять приложения автоматически если есть суперпользователь</string>
+    <string name="pref_title_use_root">Используя привилегии суперпользователя.</string>
     <string name="in_same_category">Та же категория</string>
     <string name="pref_title_use_list_view">Включить просмотр списка</string>
     <string name="pref_description_use_list_view">показывать приложения в списке, если это возможно</string>
@@ -122,4 +122,5 @@
     <string name="pref_description_send_crash_reports">Сбор информации о сбоях и запрос на отправку ее разработчику</string>
     <string name="versions">Версии</string>
     <string name="app_installed">Установлено</string>
+    <string name="nav_header_desc">Строка навигации</string>
 </resources>
