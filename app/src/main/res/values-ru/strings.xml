@@ -83,7 +83,7 @@
     <string name="pref_title_upstream_ratings">Рейтинг GitHub, GitLab и SourceForge</string>
     <string name="pref_title_ratings_headline">Установите степень важности для каждой метрики</string>
     <string name="pref_title_ratings_summary">Назначьте число от 0 до 10 для каждой метрики. Более высокое число означает более высокую важность.</string>
-    <string name="pref_title_updated_in_2_years">Не обновлялось более 2-х лет.</string>
+    <string name="pref_title_updated_in_2_years">Не обновлялось более 2-х лет</string>
     <string name="menu_my_apps">Мои приложения</string>
     <string name="menu_hidden_apps">Скрытые приложения</string>
     <string name="similar_apps">Похожие приложения</string>
@@ -124,4 +124,5 @@
     <string name="app_installed">Установлено</string>
     <string name="nav_header_desc">Строка навигации</string>
     <string name="title_dashboard">Панель инструментов</string>
+    <string name="menu_top_authors">Главные авторы</string>
 </resources>
