@@ -123,4 +123,5 @@
     <string name="versions">Версии</string>
     <string name="app_installed">Установлено</string>
     <string name="nav_header_desc">Строка навигации</string>
+    <string name="title_dashboard">Панель инструментов</string>
 </resources>
