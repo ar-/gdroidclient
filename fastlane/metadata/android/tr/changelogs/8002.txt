@@ -1,0 +1,12 @@
+0.8.2
+  * hata düzeltme: yanlış mimari seçtiği için G-Droid yanlış güncellemeler gösteriyordu ve bazı uygulamaları yükleyemiyordu
+  * hata düzeltme: bazı uygulamaların ayrıntıları yüklendikten sonra ekranın aşağı kayması
+
+0.8.1
+  * çoğunlukla yeni özellikler için weblate çevirileri eklendi
+
+0.8.0
+  * her uygulama için bir hashtag ile Mastodon tootları kullanarak öz izleme ve yorum ekleme yeteneği eklendi
+
+0.7.3
+  - çeviri güncellemeleri (tüm weblate katılımcılarına teşekkürler)

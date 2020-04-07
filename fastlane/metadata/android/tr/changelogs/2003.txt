@@ -1,0 +1,9 @@
+0.2.3
+  * hata düzeltme: arşivlenmiş uygulamaları güncellerken çökme sorunu giderildi
+
+0.2.2
+  * metrikler ve yıldız göstergeleri eklendi
+
+0.2.1
+  * yüklenen görüntüler için yükleme animasyonu eklendi
+  * bazı cihazlarda aşırı büyük boyutlu görüntüler düzeltildi

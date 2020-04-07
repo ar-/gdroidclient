@@ -1,0 +1,11 @@
+0.2.2
+  * metrikler ve yıldız göstergeleri eklendi
+
+0.2.1
+  * yüklenen görüntüler için yükleme animasyonu eklendi
+  * bazı cihazlarda aşırı büyük boyutlu görüntüler düzeltildi
+
+0.2.0
+  * çok küçük ve çok büyük ekranlarda yerleşim düzeltildi
+  * yüklü uygulamalar için güncelleme butonu düzeltildi
+  * fastlane eklendi

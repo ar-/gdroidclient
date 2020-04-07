@@ -1,0 +1,9 @@
+0.9.1
+  * hata düzeltme: çok fazla uygulama kurulu olduğunda G-Droid çökmesi
+  * hata düzeltme: bazı cihazlarda tüm uygulamalar güncellenirken uygulama kapatıldığında G-Droid çökmesi
+  * hata düzeltme: düşük bellekli cihazlarda G-Droid çökmesi
+  * hata düzeltme: bozuk APK yüklenmesinde G-Droid çökmesi
+
+0.9.0
+  * uzak dosya değişmediğinde G-Droid artık tüm depo verilerini indirmez
+  * G-Droid geliştiricilerine çökmeleri göndermek isteyen kullanıcılar için çökme raporlama eklendi

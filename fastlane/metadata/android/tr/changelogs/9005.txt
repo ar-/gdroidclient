@@ -1,0 +1,8 @@
+0.9.5
+  * bir uygulamanın hangi sürümden/sürüme güncelleneceğini gösteren küçük bir etiket göster
+  * hata düzeltme: isimlerdeki kesme işaretlerini doğru olarak göster
+
+0.9.4
+  * uygulama görüntülerini daha hızlı yüklemek için performans iyileştirme ve önbellek güncellemesi
+  * hata düzeltme: aynı yazarın uygulamalarını gösterirken yazarlar için büyük/küçük harf durumunu yoksay
+  * hata düzeltme: depo güncellemelerinin bazen yanlışlıkla başarılı olarak işaretlenmesi

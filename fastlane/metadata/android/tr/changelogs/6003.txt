@@ -1,0 +1,11 @@
+0.6.3
+  * liste görünümü eklendi (tercihlerden etkinleştirilebilir)
+  * benzer uygulamaları benzerliklerine göre sıralanmış olarak göster
+
+0.6.2
+  * uygulama detay görünümünde benzer uygulamalar doğru olarak eklendi, Frieder Ferlemann'a özel teşekkürler
+  * weblate çevirileri eklendi, tüm çevirmenlere teşekkürler
+
+0.6.1
+  * Android 5'teki ekran görüntüsü tıklama hatası tam olarak düzeltildi
+  * daha fazla Portekizce, Fransızca ve Rusça çeviri eklendi

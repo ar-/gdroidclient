@@ -1,0 +1,12 @@
+0.6.2
+  * uygulama detay görünümünde benzer uygulamalar doğru olarak eklendi, Frieder Ferlemann'a özel teşekkürler
+  * weblate çevirileri eklendi, tüm çevirmenlere teşekkürler
+
+0.6.1
+  * Android 5'teki ekran görüntüsü tıklama hatası tam olarak düzeltildi
+  * daha fazla Portekizce, Fransızca ve Rusça çeviri eklendi
+
+0.6.0
+  * otomatik olarak yüklemek için root kullanma ayarı eklendi
+  * mevcut tüm güncellemeleri indirme ve yükleme düğmesi eklendi
+  * ağ zaman aşımlarını artır

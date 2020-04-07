@@ -1,0 +1,7 @@
+0.4.0
+  * izinlerin doğru bir şekilde çevrilmiş, açıklanmış, tıklanabilir ve biçimlendirilmiş olarak gösterilmesi eklendi
+  * bazı GUI elemanları için çeviriler eklendi
+  * kurulu uygulamalar için bir çalıştır düğmesi eklendi
+  * yıldızlı uygulamalar uygulama kartında da bir yıldız gösterir
+  * uygulama ayrıntı görünümünde etiketler ve kategoriler artık tıklanabilir
+  * ekran görüntüleri artık tam, güncel, doğru dilde ve tıklanabilir

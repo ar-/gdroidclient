@@ -1,0 +1,10 @@
+0.4.2
+  * yıldız puanlarının önemini otomatik olarak ayarlamak için bir ayar eklendi
+
+0.4.1
+  * Glide ile yüklendiğinde uygulamayı çöktüren Lollipop öncesi cihazlardaki vektör görüntüleri için hata düzeltmesi
+
+0.4.0
+  * izinlerin doğru bir şekilde çevrilmiş, açıklanmış, tıklanabilir ve biçimlendirilmiş olarak gösterilmesi eklendi
+  * bazı GUI elemanları için çeviriler eklendi
+  * kurulu uygulamalar için bir çalıştır düğmesi eklendi
