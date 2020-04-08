@@ -5,5 +5,5 @@
   * hata düzeltme: yıldızlı uygulamaları yıldızlamayı teklif etme
   * fetch2 2.3.6'ya güncellendi
   * hata düzeltme: uygulama yeni sürümüne güncellenirken kullanıcı veri tabanını temizleme
-  * xml dosyasından gereksiz dizgeler kaldırıldı
+  * xml dosyasından gereksiz dizgiler kaldırıldı
   * hata düzeltme: appl liste görünümü çok küçük
