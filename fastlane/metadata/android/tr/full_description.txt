@@ -38,13 +38,13 @@ G-Droid, özgür F-Droid deposuna göz atabilir. Resmi istemciye bir alternatift
 
 # F-Droid'e göre G-Droid'in (henüz) YAPAMADIĞI şeyler
 
-* Uygulamanın eski bir sürümünü göstermek veya yüklemek
+* Uygulamanın eski bir sürümünü göstermek veya kurmak
 * Yerel bir depo oluşturmak, 'yakındaki' kişilerle veya Bluetooth üzerinden uygulama paylaşmak
 * F-Droid dışında depo eklemek
-* Ayrıcalıklı uzantıyı kullanmak (yapıldı, ama uzantı henüz ayarlanmadı), bununla birlikte, root yapılmış cihazlarda etkileşimsiz yüklemeler sağlamak için G-Droid root yetkilerini kullanabilir
+* Ayrıcalıklı uzantıyı kullanmak (yapıldı, ama uzantı henüz ayarlanmadı), bununla birlikte, root yapılmış cihazlarda etkileşimsiz kurulumlar sağlamak için G-Droid root yetkilerini kullanabilir
 * Otomatik güncellemeler
 * HTTP vekil ayarları
-* G-Droid size daha iyi uygulamalar bulmanız için farklı şekillerde yardımcı olur, ancak bazı durumlarda uygulamayı yüklemek için F-Droid'de açmak üzere yine de 'paylaş' düğmesine ihtiyacınız olabilir. G-Droid şu anda F-Droid uygulaması için tam bir alternatif değildir
+* G-Droid size daha iyi uygulamalar bulmanız için farklı şekillerde yardımcı olur, ancak bazı durumlarda uygulamayı kurmak için F-Droid'de açmak üzere yine de 'paylaş' düğmesine ihtiyacınız olabilir. G-Droid şu anda F-Droid uygulaması için tam bir alternatif değildir
 
 # G-Droid ve F-Droid'in ortak yönleri
 
