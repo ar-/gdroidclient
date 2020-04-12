@@ -49,10 +49,10 @@ G-Droid, özgür F-Droid deposuna göz atabilir. Resmi istemciye bir alternatift
 # G-Droid ve F-Droid'in ortak yönleri
 
 * Aynı uygulamaları gösterir - G-Droid herhangi bir uygulama eklemez veya derlemeleri, imzaları veya indirme URL'lerini değiştirmez
-* Tüm ek meta veriler (örn. GitHub bağlantısı) F-Droid tarafından sağlanmaktadır
+* Tüm ek üst veriler (örn. GitHub bağlantısı) F-Droid tarafından sağlanmaktadır
 * GPLv3+ lisansı
 
 # İzinlerin açıklaması
 
-* INTERNET: Uygulamaları ve meta verilerini indirmek için
+* INTERNET: Uygulamaları ve üst verilerini indirmek için
 * WRITE_EXTERNAL_STORAGE: İndirilen uygulamaları geçici olarak depolamak için (izin sadece eski Android sürümlerinde uygulanmaktadır)

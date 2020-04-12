@@ -7,5 +7,5 @@
 
 0.2.0
   * çok küçük ve çok büyük ekranlarda yerleşim düzeltildi
-  * yüklü uygulamalar için güncelleme butonu düzeltildi
+  * yüklü uygulamalar için güncelleme düğmesi düzeltildi
   * fastlane eklendi
