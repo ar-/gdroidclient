@@ -1,9 +1,9 @@
 0.3.1
   * daha çok i18n desteği eklendi
-  * karşıt özellikleri (mevcutsa) doğru dilde göster (kırmızı renkte yükle düğmesinin altında)
+  * karşıt özellikleri (kırmızı renkte yükle düğmesinin altında) doğru dilde (kullanılabilirse) göster
   * sistem dilini değiştirmek kategorileri doğru çevrilmiş olarak gösterecek
   * Yıldızlı uygulamaları ve uygulamalarımı alfabetik olarak sırala
-  * Etiketler için eksik çeviri dizgileri eklendi
+  * Etiketler için eksik çeviri dizgeleri eklendi
 
 0.3.0
   * Standart görevler için kulanılan uygulamalar için etiketler eklendi

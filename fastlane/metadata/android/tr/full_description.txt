@@ -19,7 +19,7 @@ G-Droid, özgür F-Droid deposuna göz atabilir. Resmi istemciye bir alternatift
 * Uygulamaları sıralamak için daha fazla seçenek
 * Uygulamaları işaretlemek için yıldızlama imkanı
 * Tüm görünümlerden kaldırmak için uygulamaları gizleme imkanı
-* Cihaz dilini değiştirdikten sonra kategorileri (mevcutsa) doğru dilde gösterir
+* Cihaz dilini değiştirdikten sonra kategorileri doğru dilde (kullanılabilirse) gösterir
 * Ekran görüntülerini doğru dilde gösterir
 * Daha geniş ekranlardan faydalanır. Tabletlerde daha fazla uygulama gösterilir
 * F-Droid kategorileri çok geniş olduğu için, standart görevler (e-mail istemcisi, dosya gezgini, metin düzenleyici) için uygulamaları daha kolay bulmak amacıyla etiketler

@@ -4,7 +4,7 @@
 
 0.6.0
   * otomatik olarak yüklemek için root kullanma ayarı eklendi
-  * mevcut tüm güncellemeleri indirme ve yükleme düğmesi eklendi
+  * kullanılabilir tüm güncellemeleri indirme ve yükleme düğmesi eklendi
   * daha fazla görüntü yüklemek için ağ zaman aşımlarını artır
 
 0.5.3
