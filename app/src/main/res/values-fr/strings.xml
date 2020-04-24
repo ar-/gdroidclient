@@ -141,6 +141,6 @@
     <string name="fetching_comments">récupération des commentaires…</string>
     <string name="how_to_rate">Merci de partager ceci avec un client Mastodon, ajouter votre commentaire, mais sans le mot-dièse (hashtag).</string>
     <string name="could_not_download_gdroid_metadata">impossible de télécharger les méta-données de G-Droid</string>
-    <string name="data_is_up_to_date">la date est à jour</string>
+    <string name="data_is_up_to_date">Données à jours</string>
     <string name="app_can_be_updated">Cette application peut-être mise à jour de la version %s à la version %s</string>
 </resources>
