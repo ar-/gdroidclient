@@ -1,2 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="title_search">অনুসন্ধান</string>
+    <string name="title_myapps">আমার অ্যাপস</string>
+    <string name="title_starred">পছন্দ</string>
+    <string name="title_tags">ট্যাগ</string>
+    <string name="title_categories">বিভাগ</string>
+    <string name="title_notifications">নোটিফিকেশন</string>
+    <string name="title_dashboard">ড্যাশবোর্ড</string>
+    <string name="title_home">নীড়</string>
+    <string name="pref_title_new_message_notifications">নতুন বার্তার নোটিফিকেশন</string>
+    <string name="pref_header_notifications">নোটিফিকেশন</string>
+    <string name="pref_title_sync_frequency">সিঙ্ক ফ্রিকোয়েন্সি</string>
+    <string name="pref_header_data_sync">ডাটা ও সিঙ্ক</string>
+    <string name="pref_header_general">সাধারণ</string>
+    <string name="title_activity_settings">সেটিংস</string>
+    <string name="action_add_favourite">পছন্দতে যোগ করুন</string>
+    <string name="action_settings">সেটিংস</string>
+    <string name="nav_header_desc">ন্যাভিগেশন হেডার</string>
+    <string name="nav_header_subtitle">এফ-ড্রয়েড রিপোজিটরির জন্য ক্লায়েন্ট</string>
+    <string name="navigation_drawer_close">ন্যাভিগেশন ড্রয়ার বন্ধ করুন</string>
+    <string name="navigation_drawer_open">ন্যাভিগেশন ড্রয়ার খুলুন</string>
+    <string name="app_name">জি-ড্রয়েড</string>
+</resources>
