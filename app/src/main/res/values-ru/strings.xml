@@ -131,4 +131,5 @@
     <string name="top_author">Лучший автор</string>
     <string name="search_harder">панель поиска</string>
     <string name="title_starred">избранное</string>
+    <string name="todo_list">Список задач</string>
 </resources>
