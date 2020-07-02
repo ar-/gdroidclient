@@ -65,7 +65,7 @@
     <string name="title_tags">теги</string>
     <string name="title_myapps">мои приложения</string>
     <string name="title_search">поиск</string>
-    <string name="app_store">Источник приложений</string>
+    <string name="app_store">Магазин приложений</string>
     <string name="calendar">Календарь</string>
     <string name="camera">Камера</string>
     <string name="contacts">Контакты</string>
@@ -125,4 +125,10 @@
     <string name="nav_header_desc">Строка навигации</string>
     <string name="title_dashboard">Панель инструментов</string>
     <string name="menu_top_authors">Главные авторы</string>
+    <string name="write_comment">написать комментарий</string>
+    <string name="comments">Комментарии</string>
+    <string name="developer">Разработчик</string>
+    <string name="top_author">Лучший автор</string>
+    <string name="search_harder">панель поиска</string>
+    <string name="title_starred">избранное</string>
 </resources>
