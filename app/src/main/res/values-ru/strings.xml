@@ -45,7 +45,7 @@
     <string name="action_add_favourite">Добавить в Избранное</string>
     <string name="title_activity_settings">Настройки</string>
     <string name="pref_header_general">Основные</string>
-    <string name="pref_header_data_sync">данные &amp; синхронизация</string>
+    <string name="pref_header_data_sync">данные и синхронизация</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
     <string name="download_all_updates">Скачать все обновления</string>
