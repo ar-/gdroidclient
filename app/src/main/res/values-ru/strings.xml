@@ -21,7 +21,7 @@
     <string name="anti_ads">Это приложение содержит рекламу</string>
     <string name="anti_tracking">Это приложение будет отслеживать ваши действия и сообщать о вашей деятельности</string>
     <string name="anti_nonfreeadd">Это приложение поддерживает дополнения с закрытым исходным кодом</string>
-    <string name="anti_nonfreenet">Это приложение продвигает платные сетевые сервисы</string>
+    <string name="anti_nonfreenet">Это приложение продвигает несвободные сетевые сервисы</string>
     <string name="anti_nonfreedep">Это приложение зависит от других приложений с закрытым исходным кодом</string>
     <string name="anti_upstreamnonfree">Оригинальный исходный код не является полностью свободным</string>
     <string name="anti_nonfreeassets">Это приложение включает в себя ресурсы с закрытым исходным кодом</string>
@@ -58,7 +58,7 @@
     <string name="sort_search">Сортировка поиска</string>
     <string name="pref_title_sync_frequency">Частота синхронизации</string>
     <string name="pref_header_notifications">Уведомления</string>
-    <string name="pref_title_new_message_notifications">"Новые сообщения уведомлений "</string>
+    <string name="pref_title_new_message_notifications">Уведомление о новых сообщениях</string>
     <string name="title_home">Начало</string>
     <string name="title_notifications">Уведомления</string>
     <string name="title_categories">категории</string>
@@ -110,13 +110,13 @@
     <string name="descending">по убыванию</string>
     <string name="action_uninstall">Удалить</string>
     <string name="license">Лицензия</string>
-    <string name="app_size">Размер: </string>
+    <string name="app_size">Размер</string>
     <string name="ok">ОК</string>
     <string name="download_error">Загрузка не удалась!</string>
     <string name="saving_app_details">Сохранение информации о приложениях</string>
     <string name="cancel">Отмена</string>
     <string name="crash_dialog_title">Произошел сбой G-Droid</string>
-    <string name="crash_dialog_text">Непредвиденная ошибка привела к остановке приложения. Хотите отправить письмо с</string>
+    <string name="crash_dialog_text">Произошла непредвиденная ошибка, заставившая приложение остановиться. Хотите отправить подробности по электронной почте, чтобы решить проблему\?</string>
     <string name="crash_dialog_comment_prompt">Можете добавить дополнительную информацию и комментарии:</string>
     <string name="pref_title_send_crash_reports">Запрос на отправку отчетов о сбоях</string>
     <string name="pref_description_send_crash_reports">Сбор информации о сбоях и запрос на отправку ее разработчику</string>
@@ -132,4 +132,13 @@
     <string name="search_harder">панель поиска</string>
     <string name="title_starred">избранное</string>
     <string name="todo_list">Список задач</string>
+    <string name="app_can_be_updated">Это приложение может быть обновлено с %s на %s</string>
+    <string name="data_is_up_to_date">данные актуальны</string>
+    <string name="could_not_download_gdroid_metadata">не удалось загрузить метаданные G-Droid</string>
+    <string name="how_to_rate">Пожалуйста, поделитесь этим с приложением Mastodon, добавьте свой комментарий, но не меняйте хэштег.</string>
+    <string name="fetching_comments">получение комментариев …</string>
+    <string name="no_comments_available">для этого приложения нет комментариев</string>
+    <string name="similar_to_my_apps">Похоже на мои приложения</string>
+    <string name="search_even_harder">искать еще глубже</string>
+    <string name="pref_title_release_cycle_time">Время цикла выпуска</string>
 </resources>
