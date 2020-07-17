@@ -96,7 +96,7 @@
     <string name="confirmation">Подтверждение</string>
     <string name="use_root">Устанавливать приложения без подтверждения, используя привилегии суперпользователя\?</string>
     <string name="pref_description_use_root">Устанавливать и удалять приложения автоматически если есть суперпользователь</string>
-    <string name="pref_title_use_root">Используя привилегии суперпользователя.</string>
+    <string name="pref_title_use_root">Используя привилегии суперпользователя</string>
     <string name="in_same_category">Та же категория</string>
     <string name="pref_title_use_list_view">Включить просмотр списка</string>
     <string name="pref_description_use_list_view">показывать приложения в списке, если это возможно</string>
@@ -141,4 +141,5 @@
     <string name="similar_to_my_apps">Похоже на мои приложения</string>
     <string name="search_even_harder">искать еще глубже</string>
     <string name="pref_title_release_cycle_time">Время цикла выпуска</string>
+    <string name="launcher">Лаунчер</string>
 </resources>
