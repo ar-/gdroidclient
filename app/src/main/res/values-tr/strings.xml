@@ -56,7 +56,7 @@
     <string name="title_categories">kategoriler</string>
     <string name="title_tags">etiketler</string>
     <string name="title_starred">yıldızlı</string>
-    <string name="title_myapps">"uygulamalarım "</string>
+    <string name="title_myapps">uygulamalarım</string>
     <string name="title_search">ara</string>
     <string name="app_store">Uygulama mağazası</string>
     <string name="calendar">Takvim</string>
@@ -88,7 +88,7 @@
     <string name="pref_title_release_cycle_time">Yayın döngüsü süresi</string>
     <string name="search_harder">daha sıkı ara</string>
     <string name="search_even_harder">daha da sıkı ara</string>
-    <string name="menu_my_apps">"Uygulamalarım "</string>
+    <string name="menu_my_apps">Uygulamalarım</string>
     <string name="menu_hidden_apps">Gizli uygulamalar</string>
     <string name="similar_apps">Benzer uygulamalar</string>
     <string name="by_same_author">Aynı yazara ait</string>
@@ -103,7 +103,7 @@
     <string name="pref_title_use_root">Kök ayrıcalığını kullan</string>
     <string name="more">Dahası</string>
     <string name="in_same_category">Aynı kategori</string>
-    <string name="pref_title_use_list_view">"Liste görünümü etkinleştir "</string>
+    <string name="pref_title_use_list_view">Liste görünümü etkinleştir</string>
     <string name="pref_description_use_list_view">mümkünse uygulamaları bir listede göster</string>
     <string name="newest_apps">En yeni uygulamalar</string>
     <string name="recently_updated">Son güncellenen</string>
