@@ -56,7 +56,7 @@
     <string name="cancel">Скасувати</string>
     <string name="crash_dialog_title">Збій G-Droid</string>
     <string name="crash_dialog_text">Сталася неочікувана помилка, яка зупинила застосунок. Хочете надіслати листа з подробицями, які допоможуть нам усунути цю ваду\?</string>
-    <string name="crash_dialog_comment_prompt">Можете додати сюди інформацію та коментарі:</string>
+    <string name="crash_dialog_comment_prompt">Можете додати сюди відомості та коментарі:</string>
     <string name="pref_title_send_crash_reports">Запит надсилання звітів про збої</string>
     <string name="pref_description_send_crash_reports">Збір інформації про збої та запит їхнє надсилання розробнику</string>
     <string name="versions">Версії</string>
@@ -80,7 +80,7 @@
     <string name="recently_updated">Нещодавно оновлені</string>
     <string name="newest_apps">Найновіші застосунки</string>
     <string name="pref_description_use_list_view">показувати застосунки списком, якщо можливо</string>
-    <string name="pref_title_use_list_view">Увімкнути перегляд списком</string>
+    <string name="pref_title_use_list_view">Увімкнути подання списком</string>
     <string name="in_same_category">Та ж категорія</string>
     <string name="pref_title_use_root">Використовувати привілеї Root</string>
     <string name="pref_description_use_root">встановлення і видалення застосунків автоматично, якщо отримано root права до пристрою</string>
