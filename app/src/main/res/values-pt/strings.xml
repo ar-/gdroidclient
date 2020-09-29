@@ -9,7 +9,7 @@
     <string name="pref_description_send_crash_reports">Recolher dados sobre os erros e perguntar-me se quero enviar o relatório ao programador</string>
     <string name="pref_title_send_crash_reports">Pedir para enviar relatórios de erros</string>
     <string name="crash_dialog_comment_prompt">Pode adicionar algumas informações e comentários aqui:</string>
-    <string name="crash_dialog_text">Ocorreu um erro inesperado e a aplicação foi encerrada. Gostaria de nos enviar um e-mail com os detalhes do erro\?</string>
+    <string name="crash_dialog_text">Ocorreu um erro inesperado e a app foi encerrada. Gostaria de nos enviar um e-mail com os detalhes do erro\?</string>
     <string name="crash_dialog_title">O G-Droid terminou abruptamente</string>
     <string name="cancel">Cancelar</string>
     <string name="could_not_download_gdroid_metadata">Não foi possível descarregar os meta-dados G-Droid</string>
@@ -80,15 +80,15 @@
     <string name="perm_costs_money">Pode implicar gastos</string>
     <string name="no_permissions">Não utiliza permissões.</string>
     <string name="anti_nosourcesince">O código-fonte já não está disponível e já não é possível atualizar.</string>
-    <string name="anti_knownvuln">Esta aplicação contém uma vulnerabilidade de segurança conhecida</string>
-    <string name="anti_disabledalgorithm">Esta aplicação tem uma assinatura de segurança fraca</string>
-    <string name="anti_nonfreeassets">Esta aplicação contém recursos não livres</string>
+    <string name="anti_knownvuln">Esta app contém uma vulnerabilidade de segurança conhecida</string>
+    <string name="anti_disabledalgorithm">Esta app tem uma assinatura de segurança fraca</string>
+    <string name="anti_nonfreeassets">Esta app contém recursos não livres</string>
     <string name="anti_upstreamnonfree">O código-fonte não é integralmente livre</string>
-    <string name="anti_nonfreedep">Esta aplicação depende de aplicações não livres</string>
-    <string name="anti_nonfreenet">Esta aplicação promove serviços de rede não livres</string>
-    <string name="anti_nonfreeadd">Esta aplicação promove complementos não livres</string>
-    <string name="anti_tracking">Esta aplicação monitoriza e reporta a sua atividade</string>
-    <string name="anti_ads">Esta aplicação contém publicidade</string>
+    <string name="anti_nonfreedep">Esta app depende de aplicações não livres</string>
+    <string name="anti_nonfreenet">Esta app promove serviços de rede não livres</string>
+    <string name="anti_nonfreeadd">Esta app promove complementos não livres</string>
+    <string name="anti_tracking">Esta app monitoriza e reporta a sua atividade</string>
+    <string name="anti_ads">Esta app contém publicidade</string>
     <string name="antifeatures">Anti-funcionalidades</string>
     <string name="category_Writing" tools:ignore="UnusedResources">Escrita</string>
     <string name="category_Time" tools:ignore="UnusedResources">Data/hora</string>
