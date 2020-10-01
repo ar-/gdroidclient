@@ -13,7 +13,7 @@
     <string name="crash_dialog_title">O G-Droid terminou abruptamente</string>
     <string name="cancel">Cancelar</string>
     <string name="could_not_download_gdroid_metadata">Não foi possível descarregar os meta-dados G-Droid</string>
-    <string name="saving_app_details">A guardar detalhes das aplicações</string>
+    <string name="saving_app_details">A guardar detalhes das apps</string>
     <string name="download_error">Falha ao descarregar!</string>
     <string name="how_to_rate">Por favor partilhe isto com uma aplicação Mastodon, adicione o seu comentário mas não altere a hashtag.</string>
     <string name="ok">OK</string>
@@ -55,7 +55,7 @@
     <string name="installation_finished">Instalação terminada</string>
     <string name="installing_details" formatted="false">A instalar %d de %d</string>
     <string name="installing" formatted="false">A instalar %s</string>
-    <string name="menu_app_authors">Autores</string>
+    <string name="menu_app_authors">Autores de apps</string>
     <string name="by_same_author">Do mesmo autor</string>
     <string name="similar_apps">Aplicações semelhantes</string>
     <string name="menu_hidden_apps">Aplicações ocultas</string>
@@ -121,7 +121,7 @@
     <string name="contacts">Contactos</string>
     <string name="camera">Câmara</string>
     <string name="calendar">Calendário</string>
-    <string name="app_store">Loja de aplicações</string>
+    <string name="app_store">Loja de apps</string>
     <string name="title_search">Procurar</string>
     <string name="title_myapps">Minhas</string>
     <string name="title_starred">Estrela</string>
