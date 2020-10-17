@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="contacts">Assaɣen</string>
+    <string name="title_search">Rzu</string>
+    <string name="title_myapps">Tisensiwin-inu</string>
+    <string name="title_notifications">Tineɣmisin</string>
+    <string name="title_home">Asenubeg</string>
+    <string name="pref_header_notifications">Tineɣmisin</string>
+    <string name="pref_header_general">Amatay</string>
+    <string name="title_activity_settings">Tisɣal</string>
+    <string name="action_settings">Tisɣal</string>
+    <string name="app_name">G-Droid</string>
+</resources>
