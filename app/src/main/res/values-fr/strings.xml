@@ -132,7 +132,7 @@
     <string name="pref_description_send_crash_reports">Recueillir des informations de débogage et proposer de les envoyer à l\'équipe de développement</string>
     <string name="versions">Versions</string>
     <string name="app_installed">Installée</string>
-    <string name="menu_top_authors">Top des auteurs</string>
+    <string name="menu_top_authors">Meilleurs auteurs</string>
     <string name="top_author">Meilleur auteur</string>
     <string name="developer">Développeur</string>
     <string name="comments">Commentaires</string>
