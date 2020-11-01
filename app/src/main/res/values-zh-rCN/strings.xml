@@ -106,7 +106,7 @@
     <string name="similar_apps">类似的应用</string>
     <string name="by_same_author">同一作者作品</string>
     <string name="menu_app_authors">应用作者</string>
-    <string name="installing" formatted="false">安装％s</string>
+    <string name="installing" formatted="false">正在安装 %s</string>
     <string name="installing_details" formatted="false">正在安装%d/%d</string>
     <string name="installation_finished">安装完毕</string>
     <string name="installed_details">已安装 %d 应用</string>
