@@ -29,7 +29,7 @@
     <string name="anti_knownvuln">Diese Anwendung enthält eine bekannte Sicherheitslücke</string>
     <string name="anti_nosourcesince">Der Quelltext ist nicht mehr verfügbar, keine Aktualisierungen möglich.</string>
     <string name="no_permissions">Es werden keine Berechtigungen verwendet.</string>
-    <string name="perm_costs_money">Kann Kosten verursachen</string>
+    <string name="perm_costs_money">Kann zu Kosten führen</string>
     <string name="perms_description_app">Bereitgestellt von .</string>
     <string name="perms_new_perm_prefix">Neu:</string>
     <string name="permissions">Berechtigungen</string>
