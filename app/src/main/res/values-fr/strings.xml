@@ -23,8 +23,8 @@
     <string name="anti_nonfreeadd">Cette appli promeut des extensions qui ne sont pas libres/open source</string>
     <string name="anti_nonfreenet">Cette appli promeut des services réseaux qui ne sont pas libres/open source</string>
     <string name="anti_nonfreedep">Cette appli dépend d\'autres applis qui ne sont pas libres/open source</string>
-    <string name="anti_upstreamnonfree">Le code source amont n\'est pas entièrement libre/open source</string>
-    <string name="anti_nonfreeassets">Cette appli comprend des parties qui ne sont pas libres/open-source</string>
+    <string name="anti_upstreamnonfree">Le code source amont n\'est pas entièrement libre</string>
+    <string name="anti_nonfreeassets">Cette appli comprend des parties qui ne sont pas libres</string>
     <string name="anti_disabledalgorithm">La signature de sécurité de cette application est faible</string>
     <string name="anti_knownvuln">Cette application contient une vulnérabilité de sécurité connue</string>
     <string name="anti_nosourcesince">Le code source n\'est désormais plus en accès libre, les mises à jour ne sont plus possibles.</string>
