@@ -47,7 +47,7 @@
     <string name="title_activity_settings">Einstellungen</string>
     <string name="pref_header_general">Allgemeines</string>
     <string name="pref_header_data_sync">Daten und Synchronisation</string>
-    <string name="pref_title_sync_frequency">Synchronisationsfrequenz</string>
+    <string name="pref_title_sync_frequency">Synchronisationshäufigkeit</string>
     <string name="pref_header_notifications">Benachrichtigungen</string>
     <string name="pref_title_new_message_notifications">Benachrichtigungen über neue Nachrichten</string>
     <string name="title_home">Startseite</string>
@@ -63,10 +63,10 @@
     <string name="camera">Kamera</string>
     <string name="contacts">Kontakte</string>
     <string name="email_client">E-Mail-Programm</string>
-    <string name="file_browser">Datei-Browser</string>
+    <string name="file_browser">Dateibrowser</string>
     <string name="gallery">Galerie</string>
     <string name="launcher">Starter</string>
-    <string name="music_player">Musik-Player</string>
+    <string name="music_player">Musikplayer</string>
     <string name="shopping_list">Einkaufsliste</string>
     <string name="text_editor">Texteditor</string>
     <string name="todo_list">Todo-Liste</string>
