@@ -61,7 +61,7 @@
     <string name="pref_description_send_crash_reports">Збір інформації про збої та запит їхнє надсилання розробнику</string>
     <string name="versions">Версії</string>
     <string name="app_installed">Встановлено</string>
-    <string name="app_can_be_updated">Цей застосунок може бути оновлено з %S до %S</string>
+    <string name="app_can_be_updated">Цей застосунок може бути оновлено з %s до %s</string>
     <string name="data_is_up_to_date">дані актуальні</string>
     <string name="could_not_download_gdroid_metadata">не вдалося завантажити метадані G-Droid</string>
     <string name="how_to_rate">Будь ласка, поділіться цим у застосунку Mastodon, додайте свій відгук, але не змінюйте гештеґ.</string>
