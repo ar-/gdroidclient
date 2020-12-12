@@ -93,7 +93,7 @@
     <string name="similar_apps">Lignende programmer</string>
     <string name="by_same_author">Av samme utvikler</string>
     <string name="menu_app_authors">Programutviklere</string>
-    <string name="installing" formatted="false">Installerer </string>
+    <string name="installing" formatted="false">Installerer %s</string>
     <string name="installing_details" formatted="false">Installerer %d / %d</string>
     <string name="installation_finished">Installasjon fullført</string>
     <string name="installed_details">Installerte %d programmer</string>
