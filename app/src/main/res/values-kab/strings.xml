@@ -140,4 +140,7 @@
     <string name="navigation_drawer_close">Mdel afeggag n tunigin</string>
     <string name="navigation_drawer_open">Ldi afeggag n tunigin</string>
     <string name="app_name">G-Droid</string>
+    <string name="pref_title_release_cycle_time">Akud n uzzi n tuffɣa</string>
+    <string name="anti_knownvuln">Asnas-a igber iguren n teɣlist irussinen</string>
+    <string name="anti_upstreamnonfree">Tangalt taɣbalut ur telli ara akk d tilellit</string>
 </resources>
