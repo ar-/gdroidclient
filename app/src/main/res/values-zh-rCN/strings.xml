@@ -49,7 +49,7 @@
     <string name="sort_search">搜索排序</string>
     <string name="action_uninstall">卸载</string>
     <string name="license">许可协议</string>
-    <string name="app_size">大小：</string>
+    <string name="app_size">大小</string>
     <string name="ok">确定</string>
     <string name="download_error">下载失败！</string>
     <string name="saving_app_details">正在保存应用详细信息</string>
