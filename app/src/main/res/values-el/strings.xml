@@ -83,8 +83,8 @@
     <string name="torrent_downloader">Πρόγραμμα για torrent</string>
     <string name="web_browser">Περιηγητής διαδικτύου</string>
     <string name="youtube_player">Πρόγραμμα αναπαραγωγής Youtube</string>
-    <string name="action_hide">Κρύψε</string>
-    <string name="action_unhide">Εμφάνισε</string>
+    <string name="action_hide">Απόκρυψη</string>
+    <string name="action_unhide">Επανεμφάνιση</string>
     <string name="pref_header_ratings">Βαθμολογία</string>
     <string name="pref_title_upstream_ratings">Βαθμολογίες από GitHub, GitLab και SourgeForge</string>
     <string name="pref_title_ratings_headline">Ορίστε τη βαρύτητα για κάθε ιδιότητα</string>
@@ -124,7 +124,7 @@
     <string name="ok">Εντάξει</string>
     <string name="download_error">Ανεπιτυχής λήψη!</string>
     <string name="saving_app_details">Αποθήκευση λεπτομερειών εφαρμογής</string>
-    <string name="cancel">Ακύρωση</string>
+    <string name="cancel">Άκυρο</string>
     <string name="crash_dialog_title">Το G-Droid σταμάτησε να λειτουργεί</string>
     <string name="crash_dialog_text">Μη αναμενόμενο σφάλμα ανάγκασε την εφαρμογή να σταματήσει. Θα θέλατε να στείλετε ιμέιλ με τις λεπτομέρειες για να βοηθήσετε να διορθωθεί το πρόβλημα;</string>
     <string name="crash_dialog_comment_prompt">Μπορείτε να προσθέσετε περισσότερες πληροφορίες και σχόλια εδώ:</string>
