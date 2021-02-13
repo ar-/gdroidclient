@@ -116,11 +116,11 @@
     <string name="you_might_also_like">Μπορεί να σας ενδιαφέρουν επίσης</string>
     <string name="random_apps">Τυχαίες εφαρμογές</string>
     <string name="stars">Αστέρια</string>
-    <string name="ascending">Αυξουσα σειρά</string>
-    <string name="descending">Φθήνουσα σειρά</string>
+    <string name="ascending">αύξουσα</string>
+    <string name="descending">φθίνουσα</string>
     <string name="action_uninstall">Απεγκατάσταση</string>
     <string name="license">Άδεια</string>
-    <string name="app_size">Μέγεθος: </string>
+    <string name="app_size">Μέγεθος</string>
     <string name="ok">Εντάξει</string>
     <string name="download_error">Ανεπιτυχής λήψη!</string>
     <string name="saving_app_details">Αποθήκευση λεπτομερειών εφαρμογής</string>
