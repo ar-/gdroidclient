@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pref_header_data_sync">දත්ත සහ සමමුහුර්තකරණය</string>
+    <string name="pref_header_general">පොදු</string>
+    <string name="title_activity_settings">සැකසුම්</string>
+    <string name="action_add_favourite">ප්‍රියතමයන්ට එකතු කරන්න</string>
+    <string name="action_settings">සැකසුම්</string>
+    <string name="app_name">ජී-ඩ්‍රොයිඩ්</string>
+</resources>
