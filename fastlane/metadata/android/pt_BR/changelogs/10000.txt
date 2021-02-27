@@ -1,0 +1,5 @@
+* Mostrar todas as versões antigas disponíveis.
+* Bugfix: Texto corrigido para versões de aplicativos atualizáveis.
+* Adicionado um hashtag adicional aos aplicativos, para que os usuários do Mastodon possam pesquisar todos os aplicativos (funciona apenas para comentários que estão sendo feitos com esta versão ou superior).
+* Atualizações de tradução.
+* Acrescentada a linguagem Urdu.
