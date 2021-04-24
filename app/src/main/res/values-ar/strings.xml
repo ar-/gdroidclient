@@ -8,7 +8,7 @@
     <string name="title_dashboard">لوح المراقبة</string>
     <string name="anti_nosourcesince">لم يعد الكود المصدري متاحا ، ولا توجد تحديثات ممكنة.</string>
     <string name="pref_title_sync_frequency">فترة المزامنة</string>
-    <string name="installing_details" formatted="false">تثبيت% d/% d</string>
+    <string name="installing_details" formatted="false">تثبيت %d / %d</string>
     <string name="file_browser">متصفح الملفات</string>
     <string name="torrent_downloader">مُنزّل التورنت</string>
     <string name="pref_title_ratings_summary">تعيين رقم من 0 إلى 10 لكل مقياس. العدد الأعلى يعني اهميه اعلى.</string>
@@ -67,7 +67,7 @@
     <string name="pref_header_ratings">تصنيفات النجوم</string>
     <string name="anti_disabledalgorithm">هذا التطبيق لديه توقيع امني ضعيف</string>
     <string name="music_player">مشغل الموسيقى</string>
-    <string name="app_can_be_updated">يمكن تحديث هذا التطبيق من% s إلى% s</string>
+    <string name="app_can_be_updated">يمكن تحديث هذا التطبيق من %s إلى %s</string>
     <string name="installation_finished">انتهى التثبيت</string>
     <string name="installed_details">التطبيقات %d المثبتة</string>
     <string name="app_store">متجر التطبيقات</string>
