@@ -64,9 +64,9 @@
     <string name="app_can_be_updated">Eblas ĝisdatigi tiun ĉi aplikaĵon: %s → %s</string>
     <string name="data_is_up_to_date">datumoj estas ĝisdataj</string>
     <string name="could_not_download_gdroid_metadata">ne povis elŝuti G-Droid-metadatumojn</string>
-    <string name="how_to_rate">Bonvolu kunhavigi tion ĉi per Mastodon-kliento, skribu vian komenton, sed ne tuŝu la etikedojn.</string>
+    <string name="how_to_rate">Bonvolu kunhavigi tion ĉi per Mastodon-kliento, skribu vian komenton, sed ne tuŝu la ŝlosilvortojn.</string>
     <string name="fetching_comments">elŝutado de komentoj…</string>
-    <string name="no_comments_available">neniuj komentoj pri tiu ĉi aplikaĵo</string>
+    <string name="no_comments_available">neniu komento pri tiu ĉi aplikaĵo</string>
     <string name="write_comment">Skribi</string>
     <string name="comments">Komentoj</string>
     <string name="developer">Programisto</string>
