@@ -1,0 +1,12 @@
+0.7.3
+  - çeviri güncellemeleri (tüm weblate katılımcılarına teşekkürler)
+
+0.7.2
+  * uygulama ayrıntıları görünümüne ve soldaki ana menüye en iyi yazarlar eklendi
+  * uygulama ayrıntıları görünümüne APK boyutu eklendi
+
+0.7.1
+  * ölçümlerin ağırlığını ayarlamak için ayarlara sayı seçici eklendi
+  * kaldırma düğmesi ve işlevselliği eklendi (root ve root değil)
+  * hata düzeltme: kurulu uygulamaları yüklemeyi teklif etme
+  * hata düzeltme: yıldızlı uygulamaları yıldızlamayı teklif etme

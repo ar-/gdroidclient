@@ -1,0 +1,9 @@
+0.9.2
+  * hata düzeltme: uygulama detay görünümünde benzer bir uygulamanın 3 noktasını tıklandığında G-Droid çökmesi
+  * hata düzeltme: açık veri tabanı bağlantılarını daha hızlı kapatma
+
+0.9.1
+  * hata düzeltme: çok fazla uygulama kurulu olduğunda G-Droid çökmesi
+  * hata düzeltme: bazı cihazlarda tüm uygulamalar güncellenirken uygulama kapatıldığında G-Droid çökmesi
+  * hata düzeltme: düşük bellekli cihazlarda G-Droid çökmesi
+  * hata düzeltme: bozuk APK kurulurken G-Droid çökmesi

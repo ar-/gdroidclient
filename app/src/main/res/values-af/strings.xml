@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Konnektiwiteit</string>
-
     <string name="category_Development">Ontwikkeling</string>
     <string name="category_Games">Speletjies</string>
     <string name="category_Graphics">Grafika</string>
@@ -55,4 +54,7 @@
     <string name="crash_dialog_comment_prompt">Jy kan ekstra inligting en kommentaar hier laat:</string>
     <string name="versions">Weergawes</string>
     <string name="app_installed">Geinstalleer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

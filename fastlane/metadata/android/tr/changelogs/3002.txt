@@ -1,0 +1,9 @@
+0.3.2
+  * güncellenebilen uygulamaları doğrudan kart üzerinde bir logo ile işaretle
+  * uygulamalarım sekmesinde güncellenebilecek uygulamaların bir listesini göster
+  * eski Android sistemlerinde glide'deki vektör grafiklerinin neden olduğu Jolla C/ICS kaydırma hatasını düzelt
+
+0.3.1
+  * daha çok i18n desteği eklendi
+  * karşıt özellikleri (kırmızı renkte yükle düğmesinin altında) doğru dilde (kullanılabilirse) göster
+  * sistem dilini değiştirmek kategorileri doğru çevrilmiş gösterecek

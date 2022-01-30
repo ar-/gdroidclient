@@ -1,0 +1,6 @@
+0.9.0
+  * uzak dosya değişmediğinde G-Droid artık tüm depo verilerini indirmez
+  * G-Droid geliştiricilerine çökmeleri göndermek isteyen kullanıcılar için çökme raporlama eklendi
+  * uygulama veya depo indirme başarısız olduğunda hata mesajı eklendi
+  * Yerel veri tabanı hala boşken G-Droid otomatik olarak güncellenir (örn. ilk başlatmada)
+  * hata düzeltme: bir uygulamanın yayın döngüsü artık negatif olamaz

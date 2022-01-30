@@ -1,0 +1,8 @@
+0.2.1
+  * yüklenen görüntüler için yükleme animasyonu eklendi
+  * bazı cihazlarda aşırı büyük boyutlu görüntüler düzeltildi
+
+0.2.0
+  * çok küçük ve çok büyük ekranlarda yerleşim düzeltildi
+  * yüklü uygulamalar için güncelleme düğmesi düzeltildi
+  * fastlane eklendi

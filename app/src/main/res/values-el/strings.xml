@@ -8,11 +8,11 @@
     <string name="category_Money">Οικονομικά</string>
     <string name="category_Multimedia">Πολυμέσα</string>
     <string name="category_Navigation">Πλοήγηση</string>
-    <string name="category_Phone_SMS">Τηλέφωνο &amp; μηνύματα</string>
+    <string name="category_Phone_SMS">Τηλέφωνο και μηνύματα</string>
     <string name="category_Reading">Ανάγνωση</string>
-    <string name="category_Science_Education">Επιστήμη &amp; Εκπαίδευση</string>
+    <string name="category_Science_Education">Επιστήμη και εκπαίδευση</string>
     <string name="category_Security">Ασφάλεια</string>
-    <string name="category_Sports_Health">Αθλητισμός &amp; Υγεία</string>
+    <string name="category_Sports_Health">Αθλητισμός και υγεία</string>
     <string name="category_System">Σύστημα</string>
     <string name="category_Theming">Προσωποποίηση</string>
     <string name="category_Time">Χρόνος</string>
@@ -72,7 +72,7 @@
     <string name="calendar">Ημερολόγιο</string>
     <string name="camera">Κάμερα</string>
     <string name="contacts">Επαφές</string>
-    <string name="email_client">Πρόγραμμα ανάγνωσης email</string>
+    <string name="email_client">Πρόγραμμα ανάγνωσης ιμέιλ</string>
     <string name="file_browser">Πρόγραμμα περιήγησης αρχείων</string>
     <string name="gallery">Συλλογή</string>
     <string name="launcher">Εκκινητής εφαρμογών</string>
@@ -83,8 +83,8 @@
     <string name="torrent_downloader">Πρόγραμμα για torrent</string>
     <string name="web_browser">Περιηγητής διαδικτύου</string>
     <string name="youtube_player">Πρόγραμμα αναπαραγωγής Youtube</string>
-    <string name="action_hide">Κρύψε</string>
-    <string name="action_unhide">Εμφάνισε</string>
+    <string name="action_hide">Απόκρυψη</string>
+    <string name="action_unhide">Επανεμφάνιση</string>
     <string name="pref_header_ratings">Βαθμολογία</string>
     <string name="pref_title_upstream_ratings">Βαθμολογίες από GitHub, GitLab και SourgeForge</string>
     <string name="pref_title_ratings_headline">Ορίστε τη βαρύτητα για κάθε ιδιότητα</string>
@@ -99,12 +99,12 @@
     <string name="by_same_author">Από τον ίδιο προγραμματιστή</string>
     <string name="menu_app_authors">Προγραμματιστές εφαρμογών</string>
     <string name="installing" formatted="false">Εγκατάσταση %s</string>
-    <string name="installing_details" formatted="false">"Εγκατάσταση  %d / %d"</string>
+    <string name="installing_details" formatted="false">Εγκατάσταση %d / %d</string>
     <string name="installation_finished">Η εγκατάσταση τελείωσε</string>
     <string name="installed_details">Εγκαταστάθηκαν %d εφαρμογές</string>
     <string name="confirmation">Επιβεβαίωση</string>
     <string name="use_root">Θέλετε να γίνεται η εγκατάσταση των εφαρμογών χωρίς την αλληλεπίδραση σας, χρησιμοποιώντας τα δικαιώματα root που έχετε στη συσκευή σας;</string>
-    <string name="pref_description_use_root">"Εγκατάσταση και απεγκατάσταση εφαρμογών αυτόματα αν στη συσκευή έχετε δικαιώματα root "</string>
+    <string name="pref_description_use_root">Εγκατάσταση και απεγκατάσταση εφαρμογών αυτόματα αν στη συσκευή έχετε δικαιώματα root</string>
     <string name="pref_title_use_root">Χρήση δικαιωμάτων root</string>
     <string name="in_same_category">Ίδια κατηγορία</string>
     <string name="pref_title_use_list_view">Προβολή λίστας</string>
@@ -116,17 +116,17 @@
     <string name="you_might_also_like">Μπορεί να σας ενδιαφέρουν επίσης</string>
     <string name="random_apps">Τυχαίες εφαρμογές</string>
     <string name="stars">Αστέρια</string>
-    <string name="ascending">Αυξουσα σειρά</string>
-    <string name="descending">Φθήνουσα σειρά</string>
+    <string name="ascending">αύξουσα</string>
+    <string name="descending">φθίνουσα</string>
     <string name="action_uninstall">Απεγκατάσταση</string>
     <string name="license">Άδεια</string>
-    <string name="app_size">Μέγεθος: </string>
+    <string name="app_size">Μέγεθος</string>
     <string name="ok">Εντάξει</string>
     <string name="download_error">Ανεπιτυχής λήψη!</string>
     <string name="saving_app_details">Αποθήκευση λεπτομερειών εφαρμογής</string>
-    <string name="cancel">Ακύρωση</string>
+    <string name="cancel">Άκυρο</string>
     <string name="crash_dialog_title">Το G-Droid σταμάτησε να λειτουργεί</string>
-    <string name="crash_dialog_text">Μη αναμενόμενο σφάλμα ανάγκασε την εφαρμογή να σταματήσει. Θα θέλατε να στείλετε e-mail με τις λεπτομέρειες για να βοηθήσετε να διορθωθεί το πρόβλημα;</string>
+    <string name="crash_dialog_text">Μη αναμενόμενο σφάλμα ανάγκασε την εφαρμογή να σταματήσει. Θα θέλατε να στείλετε ιμέιλ με τις λεπτομέρειες για να βοηθήσετε να διορθωθεί το πρόβλημα;</string>
     <string name="crash_dialog_comment_prompt">Μπορείτε να προσθέσετε περισσότερες πληροφορίες και σχόλια εδώ:</string>
     <string name="pref_title_send_crash_reports">Ερώτηση πριν την αποστολή αναφοράς σφαλμάτων</string>
     <string name="pref_description_send_crash_reports">Να γίνεται συλλογή δεδομένων για κρασαρίσματα και να μου γίνεται ερώτηση για αποστολή αυτών στους προγραμματιστές</string>

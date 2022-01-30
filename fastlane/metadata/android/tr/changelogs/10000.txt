@@ -1,0 +1,5 @@
+* Kullanılabilir tüm eski sürümleri göster.
+* Hata düzeltme: Yükseltilebilir uygulamaların sürümleri için düzeltilmiş metin.
+* Uygulama yorumlarına ek bir etiket eklendi, böylece Mastodon kullanıcıları tüm uygulama yorumlarını arayabilir (yalnızca bu sürüm veya daha yeni sürümlerle yapılmış yorumlar için çalışır).
+* Çeviri güncellemeleri.
+* Urduca dili eklendi.

@@ -1,0 +1,58 @@
+# Hva er dette programmet
+
+G-Droid kan utforske den frie F-Droid-pakkebrønnen. Det er et alternativ til den offisielle klienten.
+
+# Ytterligere funksjoner jamført med F-Droid
+
+* Viser anmeldelser og kommentarer for programmer
+* Stjerneklassifisering (opptil 5 stjerner) - maskingenerert poengsum
+* Viser stjerner gitt oppstrøms (GitHub, GitLab, SourceForge)
+* Mer statistikk, basert på libre-data (som gjennomsnittlig utviklingssyklus) for generering av stjernevurdering
+* Brukeren velger hvilke mål som er viktige for dem, så det finnes ikke noe "beste program" i pakkebrønnen - det finnes kun "beste program" fra brukerens synsvinkel
+* Viser "lignende programmer" og "programmer i samme kategori" når du ser på at program
+* Viser "Programmer fra samme utvikler" når du ser på et program
+* Viser en liste over alle utviklere med respektive programmer og gjennomsnittlig stjernevurdering
+* Viser programmets nettsted - selv om det kun er en README-fil på GitHub
+* Viser seneste programmer, og nylig oppdaterte programmer hver for seg
+* Viser ikoner i samme størrelse for bedre oversikt
+* Listevisning for alternativ for ikonder (som i eldre F-Droid-versjoner) for persjoner som ikke liker ikoner
+* Flere muligheter for kjøp og sortering av programmer
+* Mulighet for "stjernemerking" av programmer for å markere dem
+* Mulighet for skjuling av programmer for å fjerne dem fra alle visninger
+* Viser kategorier i korrekt oversettelse (om den forefinnes) etter å ha endret enhetsspråk
+* Viser skjermavbildninger i korrekt oversettelse
+* Gjør bruk av større skjermer. Flere programmer vises på nettbrett
+* Etiketter for å gjøre det enkelt å finne programmer for vanlige funksjoner (e-postklienter, filbehandlere, tekstbehandlere), ettersom F-Droid-kategoriene er for brede
+* Visning av "tilfeldige programmer" for oppdagelse av programmer du vanligvis ikke ser
+* Viser programmer brukeren kanskje liker (uten å stjele brukerdata for analyse)
+* Til hensikt å gi så mange visninger av programbiblioteket som mulig for å hjelpe brukeren å finne passende programmer og oppmuntre til bruk av flere programmer
+* 'Del' programmer slik at de fremdeles kan åpnes med en annen butikk (F-Droid, Yalp, Aurora, ...) for å få mer info om programmet.
+* Ulike søkealgoritmer, kan "søke hardere" for å fortsette søk som ikke er tilstrekkelige
+* Viser logoer fra programmer hele tiden (om nettverkstilgangen er god)
+* Viser flere skjermavbildninger
+* Viser fulle skjermavbildninger, oppdatert, og på rett språk
+* Viser skjermavbildninger selv når de ikke finnes i fastlane
+* Ny og moderne kodebase som er lett å vedlikeholde
+* Aktiv utvikling
+* Flere ting kommer i fremtiden
+
+# Ting G-Droid IKKE kan gjøre (enda) jamført med F-Droid
+
+* Visning eller installasjon av en eldre versjon av et program
+* Opprettelse av lokal pakkebrønn, deling av programmer med folk i nærheten eller deling av programmer via Blåtann
+* Tillegg av andre pakkebrønner enn F-Droid-pakkebrønnen
+* Anvendelse av priviligert tillegg (fikset, men tillegget er ikke justert enda), G-Droid kan dog bruke root-rettigheter på enheter med tilgangen, for bakgrunnsinstallasjoner
+* Automatiske oppgraderinger
+* HTTP-mellomtjenerinnstillinger
+* G-Droid hjelper deg på ulike måter å finne bedre programmer, men i noen tilfeller kan du fremdeles trenge "del"-knappen for å åpne programmet i F-Droid for installasjon. G-Droid er ikke en fullstendig erstatning for F-Droid-programmet enda.
+
+# Delte aspekter ved G-Droid og F-Droid
+
+* Viser samme programmer - G-Droid legger ikke til noen programmer, og endrer ikke noen bygg, signaturer eller nedlastingsadresser
+* All ytterligere metadata tilbys av F-Droid også, (for eksempel lenken til kodelager)
+* GPLv3 + -licens
+
+# Forklaring av tilganger
+
+* INTERNETT: Nedlasting av programmer og metadata
+* SKRIV_TIL_EKSTERN_LAGRING: For lagring av nedlastede programmer midlertidig (tillatelse påtvingt kun på eldre Android-versjoner)

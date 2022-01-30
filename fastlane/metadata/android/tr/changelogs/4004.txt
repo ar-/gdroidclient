@@ -1,0 +1,10 @@
+0.4.4
+  * yükseltme logosu güncellendi
+  * uygulama açıklaması boş olduğunda çökme düzeltildi
+
+0.4.3
+  * 2 tane daha arama algoritması eklendi, aramaya özet ve uygulama açıklamasını dahil eden "daha sert arama" ve "daha da sert arama"
+  * hata düzeltme: güncelleme simgesi bazı cihazlarda kullanıcı arayüzünde ayarlanmadı
+
+0.4.2
+  * yıldız puanlarının önemini otomatik olarak ayarlamak için bir ayar eklendi

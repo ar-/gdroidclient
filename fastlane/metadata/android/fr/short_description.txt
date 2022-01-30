@@ -1,0 +1,1 @@
+Une application client alternative pour parcourir le dépôt F-Droid

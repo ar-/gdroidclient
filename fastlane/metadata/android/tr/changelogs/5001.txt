@@ -1,0 +1,14 @@
+0.5.1
+  * uygulama ayrıntı görünümünde aynı yazarın uygulamalarını göster
+
+0.5.0
+  * Android'in indirme yöneticisi fetch2 ile değiştirildi, birçok indirme hatası düzeltildi
+  * kartların optik boyutu azaltıldı
+  * uygulamaları gizleme imkanı eklendi
+
+0.4.4
+  * yükseltme logosu güncellendi
+  * uygulama açıklaması boş olduğunda çökme düzeltildi
+
+0.4.3
+  * 2 tane daha arama algoritması eklendi, aramaya özet ve uygulama açıklamasını dahil eden "daha sert arama" ve "daha da sert arama"

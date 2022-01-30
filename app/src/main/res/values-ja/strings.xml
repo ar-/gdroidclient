@@ -82,4 +82,8 @@
     <string name="pref_description_send_crash_reports">クラッシュに関するデータを収集して開発者に送信します</string>
     <string name="versions">バージョン</string>
     <string name="app_installed">インストール済み</string>
+    <string name="developer">開発者</string>
+    <string name="similar_to_my_apps">私のアプリに類似</string>
+    <string name="recently_updated">最近のアップデート</string>
+    <string name="newest_apps">最新のアプリ</string>
 </resources>
