@@ -160,12 +160,15 @@ Apart from that, the Android OS will use free space on your device to cache the 
 
 # Donate
 
-Cash donations are not accepted. You can buy the author of this app a coffee if you have some useless cryptocurrencies to spare.
+Cash donations are not accepted. You can buy the author of this app a coffee if you have some spare cryptocurrencies.
 
 * BTC/BCH/BTG/etc: 1J2bbhJYksSjeynGGhuSPN9aTEaxiGm4nR
+* BTC Bech32: bc1qgshj3mtju02sg9ymse9cksfjdjh5gp0204w3zj
 * DASH: XbLRt5imEHc72KmhvC7V9v8f9NmYrmvweS
-* ETH: 0xbc5afcb1f9d9cbdd385c844fea6a603e2c265621
+* ETH: 0a6604dc5000c57e80f824601535db216e77482f
 * XMR: 4AffoFbFhfGZdBeMaQYSCMTURacM3qZYxKHQeLx8xkiLUjzk2GPzjCrNU5uquXEsEL6wcN8b5ULg5JdDaQfuQRkUJs6xx3f
+
+Note: These addresses are taken from the original autors website (http://super-sm.art/). They are cryptographicaly signed, with the same key, that signed the git commits of this software project. Feel free to verify the GPG signatures so you can be sure, that you donation goes to the person, who actually commited the code of this software.
 
 How much to donate? 🙂
 
@@ -176,3 +179,5 @@ How much to donate? 🙂
 5. Donate the resulting value.
 
 ✌️
+
+See also: [DONATE](DONATE.md) file
