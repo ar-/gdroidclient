@@ -1,0 +1,58 @@
+# Bu uygulama nedir
+
+G-Droid, özgür F-Droid deposuna göz atabilir. Resmi istemciye bir alternatiftir.
+
+#F-Droid'e göre ilave özellikler
+
+* Uygulamalar için ön izlemeleri ve yorumları gösterir
+* Uygulamaların yıldız puanları (5 yıldıza kadar) - otomatik oluşturulmuş ölçümler
+* Ana projenin yıldız puanlarını gösterir (GitHub, GitLab, SourceForge)
+* Yıldız puanları oluşturmak için özgür veriye (ortalama sürüm yayınlama zamanı gibi) dayalı daha birçok ölçüm
+* Kullanıcılar hangi ölçümün kendileri için önemli olduğunu seçer, yani depoda 'en iyi uygulama' yoktur - sadece kullanıcının bakış açısına göre 'en iyi uygulama' vardır
+* Bir uygulama izlenirken 'benzer uygulamalar' ve 'aynı kategoriden uygulamalar' gösterilir
+* Bir uygulama izlenirken 'aynı yazarın uygulamaları' gösterilir
+* Uygulamaları ve ortalama yıldız puanları ile birlikte yazarların bir listesini gösterir
+* 'Sadece GitHub'da bir BENİOKU dosyası' olsa bile uygulamanın web sitesini gösterir
+* En yeni uygulamalar ile son güncellenen uygulamaları ayrı olarak gösterir
+* Daha iyi bir genel bakış için kartları aynı boyutta gösterir
+* Kartları sevmeyenler için alternatif olarak bir liste görünümü sağlar (eski F-Droid sürümlerindeki gibi)
+* Uygulamaları sıralamak için daha fazla seçenek
+* Uygulamaları işaretlemek için yıldızlama imkanı
+* Tüm görünümlerden kaldırmak için uygulamaları gizleme imkanı
+* Cihaz dilini değiştirdikten sonra kategorileri doğru dilde (kullanılabilirse) gösterir
+* Ekran görüntülerini doğru dilde gösterir
+* Daha geniş ekranlardan faydalanır. Tabletlerde daha fazla uygulama gösterilir
+* F-Droid kategorileri çok geniş olduğu için, standart görevler (e-mail istemcisi, dosya gezgini, metin düzenleyici) için uygulamaları daha kolay bulmak amacıyla etiketler
+* Normalde bulamayacağınız uygulamaları keşfetmek için 'rastgele uygulamalar' seçeneği
+* Kullanıcının sevebileceği uygulamaları gösterir (analiz için kullanıcı verilerini çalmadan)
+* Kullanıcının uygun uygulamaları bulmasına yardımcı olmak ve depodan daha fazla uygulamanın kullanımını teşvik etmek için uygulama deposuna birçok farklı görünüm sağlamayı amaçlar
+* Uygulama hakkında daha fazla bilgi almak için uygulamaları başka bir mağazada (F-Droid, Yalp, Aurora, …) açılabilecek şekilde 'paylaş'
+* Farklı arama algoritması, sonuçlar yetersizse aramaya devam etmek için 'daha sert arama' yapılabilir
+* Uygulamaların logolarını her zaman gösterir (ağ bağlantısı varsa)
+* Daha fazla ekran görüntüsü gösterir
+* Ekran görüntülerini tamamen güncel ve doğru dilde gösterir
+* Fastlane yapısında olmadığında da ekran görüntülerini gösterir
+* Kolaylıkla sürdürülebilir yeni ve modern kod tabanı
+* Aktif olarak geliştirilir
+* Daha fazlası gelecek
+
+# F-Droid'e göre G-Droid'in (henüz) YAPAMADIĞI şeyler
+
+* Uygulamanın eski bir sürümünü göstermek veya kurmak
+* Yerel bir depo oluşturmak, 'yakındaki' kişilerle veya Bluetooth üzerinden uygulama paylaşmak
+* F-Droid dışında depo eklemek
+* Ayrıcalıklı uzantıyı kullanmak (yapıldı, ama uzantı henüz ayarlanmadı), bununla birlikte, root yapılmış cihazlarda etkileşimsiz kurulumlar sağlamak için G-Droid root yetkilerini kullanabilir
+* Otomatik güncellemeler
+* HTTP vekil ayarları
+* G-Droid size daha iyi uygulamalar bulmanız için farklı şekillerde yardımcı olur, ancak bazı durumlarda uygulamayı kurmak için F-Droid'de açmak üzere yine de 'paylaş' düğmesine ihtiyacınız olabilir. G-Droid şu anda F-Droid uygulaması için tam bir alternatif değildir
+
+# G-Droid ve F-Droid'in ortak yönleri
+
+* Aynı uygulamaları gösterir - G-Droid herhangi bir uygulama eklemez veya derlemeleri, imzaları veya indirme URL'lerini değiştirmez
+* Tüm ek üst veriler (örn. GitHub bağlantısı) F-Droid tarafından sağlanmaktadır
+* GPLv3+ lisansı
+
+# İzinlerin açıklaması
+
+* INTERNET: Uygulamaları ve üst verilerini indirmek için
+* WRITE_EXTERNAL_STORAGE: İndirilen uygulamaları geçici olarak depolamak için (izin sadece eski Android sürümlerinde uygulanmaktadır)

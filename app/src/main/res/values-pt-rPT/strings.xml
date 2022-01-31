@@ -67,7 +67,7 @@
     <string name="calendar">Calendário</string>
     <string name="camera">Câmara</string>
     <string name="contacts">Contactos</string>
-    <string name="email_client">E-mail</string>
+    <string name="email_client">Cliente de e-mail</string>
     <string name="file_browser">Explorador de ficheiros</string>
     <string name="gallery">Galeria</string>
     <string name="launcher">Lançador</string>
@@ -98,8 +98,8 @@
     <string name="installation_finished">Instalação terminada</string>
     <string name="installed_details">%d aplicações instaladas</string>
     <string name="confirmation">Confirmação</string>
-    <string name="use_root">Quer instalar as aplicações sem qualquer ação do utilizador, utilizando os privilégios root do dispositivo\?</string>
-    <string name="pref_description_use_root">Instalar e desinstalar aplicações automaticamente se o dispositivo tiver acesso root</string>
+    <string name="use_root">Quer instalar as aplicações sem qualquer ação do utilizador, a utilizar os privilégios root do aparelho\?</string>
+    <string name="pref_description_use_root">Instalar e desinstalar aplicações automaticamente se o aparelho tiver acesso root</string>
     <string name="pref_title_use_root">Utilizar privilégio root</string>
     <string name="more">Mais</string>
     <string name="last_update">Última atualização</string>

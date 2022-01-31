@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Povezljivost</string>
-
     <string name="category_Development">Razvijanje</string>
     <string name="category_Games">Igre</string>
     <string name="category_Graphics">Grafika</string>
@@ -58,4 +57,28 @@
     <string name="crash_dialog_comment_prompt">Dodatne informacije in komentarje lahko dodate tukaj:</string>
     <string name="versions">Različice</string>
     <string name="app_installed">Nameščeno</string>
+    <string name="youtube_player">Youtube predvajalec</string>
+    <string name="web_browser">Brskalnik</string>
+    <string name="todo_list">Za-narediti seznam</string>
+    <string name="text_editor">Urejevalnik besedila</string>
+    <string name="shopping_list">Seznam za nakupovanje</string>
+    <string name="file_browser">Brskalnik datotek</string>
+    <string name="contacts">Kontakti</string>
+    <string name="camera">Kamera</string>
+    <string name="calendar">Koledar</string>
+    <string name="app_store">Trgovina z aplikacijami</string>
+    <string name="title_search">Iskanje</string>
+    <string name="title_myapps">Moje aplikacije</string>
+    <string name="title_categories">Kategorije</string>
+    <string name="gallery">Gakerija</string>
+    <string name="pref_header_notifications">Obvestila</string>
+    <string name="pref_title_new_message_notifications">Obvestilo ob novem sporočilu</string>
+    <string name="pref_title_sync_frequency">Pogostost sinhronizacije</string>
+    <string name="pref_header_data_sync">Podatki in sinhronizacija</string>
+    <string name="title_activity_settings">Nastavitve aktivnosti</string>
+    <string name="action_add_favourite">Dodaj k priljubljenim</string>
+    <string name="action_settings">Nastavitve</string>
+    <string name="navigation_drawer_close">Zapri navigacijski predal</string>
+    <string name="navigation_drawer_open">Opri navigacijski predal</string>
+    <string name="app_name">G-Droid</string>
 </resources>

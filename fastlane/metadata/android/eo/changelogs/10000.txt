@@ -1,0 +1,5 @@
+• montri ĉiujn disponeblajn malnovajn versiojn
+• erar-riparo: korektita teksto por versioj de ĝisdatigeblaj apoj
+• aldonis ŝlosilvorton por komentoj, do Mastodon-uzantoj povas serĉi ĉiujn komentojn pri aplikaĵoj (funkcias nur komentoj skribitaj per tiu ĉi aŭ pli nova versio de G-Droid)
+• plibonigoj al tradukoj
+• aldonis la urduan lingvon (ur)

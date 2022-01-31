@@ -1,0 +1,14 @@
+0.5.3
+  * daha çok weblate çevirileri eklendi
+  * hata düzeltme: ekran görüntülerine dokunmak uygulamayı Android 6'da çöktürdü
+
+0.5.2
+  * tüm yazarları ve uygulama miktarlarını listelemek için bir görünüm eklendi
+
+0.5.1
+  * uygulama ayrıntı görünümünde aynı yazarın uygulamalarını göster
+
+0.5.0
+  * Android'in indirme yöneticisi fetch2 ile değiştirildi, birçok indirme hatası düzeltildi
+  * kartların optik boyutu azaltıldı
+  * uygulamaları gizleme imkanı eklendi

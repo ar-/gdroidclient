@@ -1,0 +1,4 @@
+0.2.0
+  * Behoben: Layout auf sehr kleinen und sehr großen Bildschirmen
+  * Behoben: Update-Schaltfläche für installierte Apps
+  * Hinzugefügt: Fastlane

@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Pripojiteľnosť</string>
-
     <string name="category_Development">Vývoj</string>
     <string name="category_Games">Hry</string>
     <string name="category_Graphics">Grafika</string>
@@ -55,4 +54,25 @@
     <string name="crash_dialog_comment_prompt">Sem môžete poskytnúť extra informácie a pripomienky:</string>
     <string name="versions">Verzie</string>
     <string name="app_installed">Nainštalované</string>
+    <string name="todo_list">Zoznam úloh</string>
+    <string name="text_editor">Textový editor</string>
+    <string name="shopping_list">Nákupný zoznam</string>
+    <string name="music_player">Hudobný prehrávač</string>
+    <string name="launcher">Spúšťač</string>
+    <string name="gallery">Galéria</string>
+    <string name="file_browser">Prehliadač súborov</string>
+    <string name="email_client">Emailový klient</string>
+    <string name="contacts">Kontakty</string>
+    <string name="camera">Kamera</string>
+    <string name="calendar">Kalendár</string>
+    <string name="app_store">Obchod s aplikáciami</string>
+    <string name="title_search">vyhľadávanie</string>
+    <string name="title_myapps">moje aplikácie</string>
+    <string name="title_starred">s hviezdičkami</string>
+    <string name="title_tags">značky</string>
+    <string name="title_categories">kategórie</string>
+    <string name="title_dashboard">Úvodný panel</string>
+    <string name="title_home">Domov</string>
+    <string name="navigation_drawer_open">Otvoriť navigačnú lištu</string>
+    <string name="app_name">G-Droid</string>
 </resources>

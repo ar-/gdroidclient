@@ -1,0 +1,5 @@
+* Vis alle tilgjengelige gamle versjoner.
+* Feilretting: Korrigert tekst for versjoner av oppgraderbare programmer.
+* Emneknagg lagt til for programkommentarer, slik at Mastodon-brukere kan søke etter alle programkommentarer (fungerer kun for kommentarer laget med denne versjonen eller høyere).
+* Oversettelsesoppdateringer.
+* Urdu-språk lagt til.

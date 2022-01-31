@@ -1,0 +1,11 @@
+0.7.0
+  * güncellemek için aşağı kaydırma eklendi
+  * uygulama listeleri için farklı sıralamalar ekledi
+  * kurulu uygulamalara benzer uygulamaları göster
+  * kullanıcının sevebileceği uygulamaları göster
+  * arama sonuçlarını duyarlı hale getirildi
+  * weblate çevirileri güncellendi (teşekkürler arkadaşlar)
+
+0.6.3
+  * liste görünümü eklendi (tercihlerden etkinleştirilebilir)
+  * benzer uygulamaları benzerliklerine göre sıralanmış olarak göster

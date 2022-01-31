@@ -1,0 +1,11 @@
+0.6.0
+  * otomatik olarak yüklemek için root kullanma ayarı eklendi
+  * kullanılabilir tüm güncellemeleri indirme ve yükleme düğmesi eklendi
+  * daha fazla görüntü yüklemek için ağ zaman aşımlarını artır
+
+0.5.3
+  * daha çok weblate çevirileri eklendi
+  * hata düzeltme: ekran görüntülerine dokunmak uygulamayı Android 6'da çöktürdü
+
+0.5.2
+  * tüm yazarları ve uygulama miktarlarını listelemek için bir görünüm eklendi

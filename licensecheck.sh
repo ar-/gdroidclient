@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-# Copyright (C) 2015-2019 Andreas Redmer <ar-gdroid@abga.be>
+# Copyright (C) 2015-2022 Andreas Redmer <ar-gdroid@abga.be>
 # 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,31 +16,31 @@
 #-------------------------------------------------------------------------------
 EXCLUDE="./app/build/generated/*"
 # check source
-RET=`licensecheck \`find . \( -name "*.java" -or -name "*.properties" -or -name "*.xml"  -or -name "*.sh" \) -not -path "./tmp/*" -not -path "$EXCLUDE"\` | grep -v "GPL (v3 or later)" | grep -v "Apache (v2.0)" | grep -v "GENERATED FILE" | wc -l`
+RET=`licensecheck \`find . \( -name "*.java" -or -name "*.properties" -or -name "*.xml"  -or -name "*.sh" \) -not -path "./tmp/*" -not -path "$EXCLUDE"\` | grep -v "GNU General Public License v3.0 or later" | grep -v "GPL (v3 or later)" | grep -v "Apache License 2.0" | grep -v "Apache (v2.0)" | grep -v "GENERATED FILE" | wc -l`
 if [ $RET -eq 0 ]; then
 	echo all licences in directory okay
 else
-	licensecheck `find . \( -name "*.java" -or -name "*.properties" -or -name "*.xml"  -or -name "*.sh" \) -not -path "./tmp/*" -not -path "$EXCLUDE"` | grep -v "GPL (v3 or later)" | grep -v "Apache (v2.0)" | grep -v "GENERATED FILE"
+	licensecheck `find . \( -name "*.java" -or -name "*.properties" -or -name "*.xml"  -or -name "*.sh" \) -not -path "./tmp/*" -not -path "$EXCLUDE"` | grep -v "GNU General Public License v3.0 or later" | grep -v "GPL (v3 or later)" | grep -v "Apache License 2.0" | grep -v "Apache (v2.0)" | grep -v "GENERATED FILE"
 	echo ERROR : there are $RET files with wrong licence - listed above
 	exit 1
 fi
 
 # check source again with all files in git history
-RET=`licensecheck \`git whatchanged --since '01/01/2012' --oneline --name-only --pretty=format: | sort | uniq\` |grep -v "GPL (v3 or later)" | grep -v "Apache (v2.0)" | grep -v "GENERATED FILE" | grep -v ".md:" | grep -v COPYING | grep -v ".p:" | wc -l`
+RET=`licensecheck \`git whatchanged --since '01/01/2012' --oneline --name-only --pretty=format: | sort | uniq\` | grep -v "GNU General Public License v3.0 or later" |grep -v "GPL (v3 or later)" | grep -v "Apache License 2.0" | grep -v "Apache (v2.0)" | grep -v "GENERATED FILE" | grep -v ".md:" | grep -v COPYING | grep -v ".p:" | wc -l`
 if [ $RET -eq 0 ]; then
 	echo all licences in git managed files okay
 else
-	licensecheck `git whatchanged --since '01/01/2012' --oneline --name-only --pretty=format: | sort | uniq` |grep -v "GPL (v3 or later)" | grep -v "Apache (v2.0)" | grep -v "GENERATED FILE" | grep -v ".md:" | grep -v COPYING | grep -v ".p:"
+	licensecheck `git whatchanged --since '01/01/2012' --oneline --name-only --pretty=format: | sort | uniq` | grep -v "GNU General Public License v3.0 or later" |grep -v "GPL (v3 or later)" | grep -v "Apache License 2.0" | grep -v "Apache (v2.0)" | grep -v "GENERATED FILE" | grep -v ".md:" | grep -v COPYING | grep -v ".p:"
 	echo ERROR : there are $RET files with wrong licence - listed above
 	exit 1
 fi
 
 # check years in copyrights, if they were changed this year, they must have this year in the copyright
-RET=`licensecheck --copyright \`git whatchanged --since '01/01/2019' --oneline --name-only --pretty=format: | sort | uniq\` | grep -v 2019 | grep -C1 Copyright | wc -l`
+RET=`licensecheck --copyright \`git whatchanged --since '01/01/2022' --oneline --name-only --pretty=format: | sort | uniq\` | grep -v 2022 | grep -C1 Copyright | wc -l`
 if [ $RET -eq 0 ]; then
 	echo all years in copyright declarations in git managed files for this year okay
 else
-	licensecheck --copyright `git whatchanged --since '01/01/2019' --oneline --name-only --pretty=format: | sort | uniq` | grep -v 2019 | grep -C1 Copyright
+	licensecheck --copyright `git whatchanged --since '01/01/2022' --oneline --name-only --pretty=format: | sort | uniq` | grep -v 2022 | grep -C1 Copyright
 	echo ERROR : the files above have the wrong year in the copyright declaration, they have been touched this year, so they must contain this year
 	exit 1
 fi

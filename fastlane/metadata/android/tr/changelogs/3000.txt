@@ -1,0 +1,9 @@
+0.3.0
+  * standart görevler için kullanılan uygulamalar için etiketler eklendi
+  * logo mor bir şeyle değiştirildi
+
+0.2.3
+  * hata düzeltme: arşivlenmiş uygulamaları güncellerken çökme sorunu giderildi
+
+0.2.2
+  * metrikler ve yıldız göstergeleri eklendi

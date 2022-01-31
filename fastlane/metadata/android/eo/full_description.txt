@@ -1,0 +1,48 @@
+G-Droid ebligas foliumi la deponejon de liberaj aplikaĵoj “f-droid.org”. Ĝi estas alternativo al la oficiala kliento.
+ 
+# Pliaj ebloj kompare al F‑Droid:
+ • montri recenzojn kaj komentojn pri aplikaĵoj
+ • aŭtomate generataj taksoj (☆) de aplikaĵoj
+ • montri steletojn el fontkodaj deponejoj (GitHub, GitLab, SourceForge)
+ • pliaj atributoj surbaze de liberaj datumoj (ekz. ofteco de ĝisdatigoj) por generi taksojn
+ • la uzanto mem agordas gravecon de atributoj por generi taksojn (☆), do ne estas unu “la plej bona aplikaĵo” en la deponejo, sed nur “la plej bona apo laŭ la nuna uzanto”
+ • montri aplikaĵojn similajn kaj de la sama kategorio ĉe priskribo de la montrata aplikaĵo
+ • montri aplikaĵojn de la sama programisto ĉe priskribo de la montrata aplikaĵo
+ • montri liston de ĉiuj programistoj kun iliaj aplikaĵoj kaj mezuma takso
+ • montri retpaĝon de la aplikaĵo – eĉ se ĝi estas apenaŭ dosiero README ĉe GitHub
+ • montri aparte aplikaĵojn novajn kaj antaŭe-ĝisdatigitajn
+ • vidigi kartojn en la egala grando
+ • (malnepra) lista vido de aplikaĵoj aldone al karta vido (kiel en malnovaj versioj de F‑Droid)
+ • pliaj ebloj por ordigi aplikaĵojn
+ • eblo “ŝati” aplikaĵojn por marki ilin
+ • eblo kaŝi aplikaĵojn de ĉiuj vidoj
+ • montri titolojn de kategorioj en ĝusta lingvo
+ • montri pliajn ekrankopiojn kaj en ĝusta lingvo
+ • taŭga por grandaj ekranoj: pli da aplikaĵoj videblaj ĉe tabulkompuitiloj
+ • etikedoj por pli facile trovi kutimajn aplikaĵojn (retpoŝtilon, dosier‑administrilon, tekst‑redaktilon, ktp) – ĉar la originalaj F‑Droid-kategorioj estas tro ĝeneralaj
+ • montri hazardajn aplikaĵojn – por trovi eble interesajn apojn, kiujn vi ne serĉas
+ • montri aplikaĵojn, kiuj povas plaĉi al la uzanto (sen ŝteli privatajn datumojn por analizi)
+ • liveri diversajn vidojn de la deponejo, por helpi al uzanto trovi necesajn aplikaĵojn kaj instigi uzi pli da aplikaĵoj
+ • butono “kunhavigi” por malfermi paĝon de alia vendejo (F-Droid, Yalp, Aurora…) por akiri pliajn informojn
+ • alia serĉ‑algoritmo por trovi pli da aplikaĵoj
+ • ĉiam montri emblemojn de aplikaĵoj (se retkonekto funkcias)
+ • montri ekrankopiojn eĉ kiam ili malestas en dosierujo “fastlane”
+ • nova, moderna kaj facile administrebla kodbazo
+ 
+# Ebloj de F-Droid, kiuj (ankoraŭ) NE estas en G-Droid:
+ • montri kaj instali malnovajn versiojn de aplikaĵoj
+ • krei lokan deponejon, la eblo “Proksime” por kunhvavigi apojn per Bludento/vifio kun proksimaj homoj
+ • aldoni aliajn deponejojn ol f-droid.org
+ • uzi la privilegian aldonaĵon por fone instali ĝisdatigojn, tamen G‑Droid povas fari tion uzante la ĉefuzantan permeson «root» 
+ • aŭtomataj ĝisdatigoj
+ • agordoj pri retperanto «proxy»
+ • G-Droid diversmaniere helpas al vi trovi deziratajn aplikaĵojn, sed iam vi plue bezonos uzi la butonon “kunhavigi” por malfermi tiun aplikaĵon en F‑Droid kaj instali ĝin, G‑Droid ankoraŭ ne povas plene anstataŭigi F‑Droid
+ 
+# Komunaj trajtoj de F‑Droid kaj G‑Droid:
+ • montras la samajn aplikaĵojn – G‑Droid ne aldonas aplikaĵojn aŭ modifas kompilaĵojn, subskribojn kaj elŝut‑ligilojn
+ • ĉiuj metadatumoj estas liverataj de F‑Droid (ekz. ligiloj a GitHub)
+ • permesilo GPLv3+
+ 
+# Postulataj permesoj:
+ • INTERNET: por elŝuti metadatumojn kaj aplikaĵojn
+ • WRITE_EXTERNAL_STORAGE: por provizore konservi APK-dosierojn (permeso nur necesa ĉe malnovaj Android-versioj)

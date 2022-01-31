@@ -115,4 +115,14 @@
     <string name="fetching_comments">recuperant comentaris …</string>
     <string name="versions">Versions</string>
     <string name="app_installed">Instal·lat</string>
+    <string name="pref_header_ratings">Valoracions</string>
+    <string name="youtube_player">Reproductor de Youtube</string>
+    <string name="todo_list">Llista de tasques</string>
+    <string name="title_categories">categories</string>
+    <string name="pref_title_new_message_notifications">Notificacions de missatges nous</string>
+    <string name="pref_header_data_sync">Dades i sincronització</string>
+    <string name="pref_header_general">General</string>
+    <string name="nav_header_desc">Capçelera de navegacio</string>
+    <string name="navigation_drawer_close">Tanca la caixa de navegació</string>
+    <string name="navigation_drawer_open">Obre la caixa de navegació</string>
 </resources>

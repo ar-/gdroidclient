@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Konektifitas</string>
-
     <string name="category_Development">Pengembangan</string>
     <string name="category_Games">Permainan</string>
     <string name="category_Graphics">Grafis</string>
@@ -50,7 +49,7 @@
     <string name="sort_search">Atur pencarian</string>
     <string name="action_uninstall">Copot</string>
     <string name="license">Lisensi</string>
-    <string name="app_size">Ukuran: </string>
+    <string name="app_size">Ukuran</string>
     <string name="ok">OK</string>
     <string name="download_error">Unduhan gagal!</string>
     <string name="saving_app_details">Menyimpan detail apl</string>
@@ -62,4 +61,86 @@
     <string name="pref_description_send_crash_reports">Kumpulkan data tentang mogok dan minta untuk mengirimnya ke pengembang</string>
     <string name="versions">Versi</string>
     <string name="app_installed">Terpasang</string>
+    <string name="app_can_be_updated">Aplikasi ini dapat diperbarui dari %s ke %s</string>
+    <string name="data_is_up_to_date">data sudah diperbarui</string>
+    <string name="could_not_download_gdroid_metadata">tidak dapat mengunduh metadata G-Droid</string>
+    <string name="how_to_rate">Silakan bagikan ini dengan aplikasi Mastodon, tambahkan komentar Anda tetapi jangan ubah tagar.</string>
+    <string name="fetching_comments">memuat komentar…</string>
+    <string name="no_comments_available">tidak ada komentar untuk aplikasi ini</string>
+    <string name="write_comment">tulis komentar</string>
+    <string name="comments">Komentar</string>
+    <string name="developer">Pengembang</string>
+    <string name="descending">turun</string>
+    <string name="ascending">Naik</string>
+    <string name="stars">Bintang</string>
+    <string name="random_apps">Aplikasi acak</string>
+    <string name="you_might_also_like">Anda mungkin suka</string>
+    <string name="similar_to_my_apps">Mirip dengan aplikasi saya</string>
+    <string name="highly_rated">Berperingkat tinggi</string>
+    <string name="recently_updated">Baru saja diperbarui</string>
+    <string name="newest_apps">Aplikasi terbaru</string>
+    <string name="pref_description_use_list_view">tampilkan aplikasi dalam daftar jika memungkinkan</string>
+    <string name="pref_title_use_list_view">Aktifkan tampilan daftar</string>
+    <string name="in_same_category">Kategori yang sama</string>
+    <string name="pref_title_use_root">Gunakan Hak Akses Root</string>
+    <string name="pref_description_use_root">menginstal dan menghapus aplikasi secara otomatis jika perangkat di-root</string>
+    <string name="use_root">Apakah Anda ingin memasang aplikasi tanpa interaksi pengguna, menggunakan hak akses root yang tersedia di perangkat ini\?</string>
+    <string name="confirmation">Konfirmasi</string>
+    <string name="installed_details">Aplikasi %d yang terpasang</string>
+    <string name="installation_finished">Instalasi Selesai</string>
+    <string name="installing_details" formatted="false">Memasang %d / %d</string>
+    <string name="installing" formatted="false">Memasang %s</string>
+    <string name="top_author">Pembuat Teratas</string>
+    <string name="menu_top_authors">Pembuat Teratas</string>
+    <string name="menu_app_authors">Pembuat Aplikasi</string>
+    <string name="by_same_author">Oleh Pembuat yang sama</string>
+    <string name="similar_apps">Aplikasi serupa</string>
+    <string name="menu_hidden_apps">Aplikasi tersembunyi</string>
+    <string name="menu_my_apps">Aplikasi saya</string>
+    <string name="search_even_harder">cari lebih keras lagi</string>
+    <string name="search_harder">cari lebih keras</string>
+    <string name="pref_title_release_cycle_time">Siklus rilis</string>
+    <string name="pref_title_updated_in_2_years">pembaruan terakhir dalam 2 tahun terakhir</string>
+    <string name="pref_title_ratings_summary">Tetapkan angka dari 0 hingga 10 ke setiap metrik. Jumlah yang lebih tinggi berarti kepentingan yang lebih tinggi.</string>
+    <string name="pref_title_ratings_headline">Atur prioritas Anda untuk setiap metrik</string>
+    <string name="pref_title_upstream_ratings">Peringkat dari GitHub, GitLab dan SourceForge</string>
+    <string name="pref_header_ratings">Peringkat Bintang</string>
+    <string name="action_unhide">Tampilkan</string>
+    <string name="action_hide">Sembunyikan</string>
+    <string name="youtube_player">Pemutar YouTube</string>
+    <string name="web_browser">Peramban Web</string>
+    <string name="torrent_downloader">Pengunduh Torrent</string>
+    <string name="todo_list">Daftar Kegiatan</string>
+    <string name="text_editor">Editor Teks</string>
+    <string name="shopping_list">Daftar Belanjaan</string>
+    <string name="music_player">Pemutar Musik</string>
+    <string name="launcher">Peluncur</string>
+    <string name="gallery">Galeri</string>
+    <string name="file_browser">Penjelajah Berkas</string>
+    <string name="email_client">Klien email</string>
+    <string name="contacts">Kontak</string>
+    <string name="camera">Kamera</string>
+    <string name="calendar">Kalender</string>
+    <string name="app_store">Toko aplikasi</string>
+    <string name="title_search">cari</string>
+    <string name="title_myapps">aplikasi saya</string>
+    <string name="title_starred">dibintangi</string>
+    <string name="title_tags">tag</string>
+    <string name="title_categories">kategori</string>
+    <string name="title_notifications">Notifikasi</string>
+    <string name="title_dashboard">Dasbor</string>
+    <string name="title_home">Beranda</string>
+    <string name="pref_title_new_message_notifications">Pesan baru notifikasi</string>
+    <string name="pref_header_notifications">Notifikasi</string>
+    <string name="pref_title_sync_frequency">Frekuensi sinrkonisasi</string>
+    <string name="pref_header_data_sync">Data &amp; Sinkronisasi</string>
+    <string name="pref_header_general">Umum</string>
+    <string name="title_activity_settings">Pengaturan</string>
+    <string name="action_add_favourite">Tambah ke favorit</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="nav_header_desc">Header navigasi</string>
+    <string name="nav_header_subtitle">klien untuk repositori F-Droid</string>
+    <string name="navigation_drawer_close">Tutup panel navigasi</string>
+    <string name="navigation_drawer_open">Buka panel navigasi</string>
+    <string name="app_name">G-Droid</string>
 </resources>
