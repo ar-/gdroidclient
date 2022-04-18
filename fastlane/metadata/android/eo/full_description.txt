@@ -40,7 +40,7 @@ G-Droid ebligas foliumi la deponejon de liberaj aplikaĵoj “f-droid.org”. Ĝ
  
 # Komunaj trajtoj de F‑Droid kaj G‑Droid:
  • montras la samajn aplikaĵojn – G‑Droid ne aldonas aplikaĵojn aŭ modifas kompilaĵojn, subskribojn kaj elŝut‑ligilojn
- • ĉiuj metadatumoj estas liverataj de F‑Droid (ekz. ligiloj a GitHub)
+ • ĉiuj metadatumoj estas liverataj de F‑Droid (ekz. ligiloj al GitHub)
  • permesilo GPLv3+
  
 # Postulataj permesoj:
