@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Kapcsolódás</string>
-
     <string name="category_Development">Fejlesztés</string>
     <string name="category_Games">Játékok</string>
     <string name="category_Graphics">Grafika</string>
@@ -62,4 +61,31 @@
     <string name="pref_description_send_crash_reports">Adatok begyűjtése az összeomlásokról, és annak megkérdezése, hogy elküldje azokat a fejlesztőnek</string>
     <string name="versions">Verziók</string>
     <string name="app_installed">Telepítve</string>
+    <string name="stars">Csillagok</string>
+    <string name="text_editor">Szöveg szerkesztő</string>
+    <string name="action_hide">Elrejtés</string>
+    <string name="web_browser">Böngésző</string>
+    <string name="write_comment">írj hozzászólást</string>
+    <string name="calendar">Naptár</string>
+    <string name="camera">Kamera</string>
+    <string name="comments">Hozzászólások</string>
+    <string name="newest_apps">Legújabb alkalmazások</string>
+    <string name="pref_header_general">Általános</string>
+    <string name="ascending">Növekvő</string>
+    <string name="pref_header_notifications">Értesítések</string>
+    <string name="pref_title_new_message_notifications">Új üzenet értesítés</string>
+    <string name="no_comments_available">nincs elérhető hozzászólás</string>
+    <string name="descending">Csökkenő</string>
+    <string name="action_settings">Beállítások</string>
+    <string name="pref_title_sync_frequency">Frekvencia szinkronizálás</string>
+    <string name="action_unhide">Megjelenít</string>
+    <string name="confirmation">Megerősítés</string>
+    <string name="title_activity_settings">Beállítások</string>
+    <string name="title_notifications">Értesítések</string>
+    <string name="action_add_favourite">Hozzáadás a kedvencekhez</string>
+    <string name="title_categories">Kategóriák</string>
+    <string name="title_tags">kulcsszavak</string>
+    <string name="title_search">keresés</string>
+    <string name="title_myapps">saját alkamazások</string>
+    <string name="random_apps">Véletlenszerű alkalmazások</string>
 </resources>
