@@ -1,0 +1,5 @@
+* Mostra tutte le versioni precedenti disponibili.
+* Bugfix: corretto il testo delle versioni delle app aggiornabili.
+* Aggiunto un hashtag ai commenti dell'app, in modo che gli utenti di Mastodon possano cercare tutti i commenti dell'app (funziona solo per i commenti che fatti con questa versione o successiva).
+* Aggiornate le traduzioni.
+* Aggiunta la lingua urdu.

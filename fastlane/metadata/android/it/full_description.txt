@@ -1,0 +1,58 @@
+# Cos'è questa app
+
+G-Droid può sfogliare il repository di app di F-Droid. È un'alternativa al client ufficiale.
+
+# Caratteristiche aggiuntive rispetto a F-Droid
+
+* Mostra recensioni e commenti per le app
+* Valutazioni in stelle delle app (fino a 5 stelle)
+* Mostra le valutazioni in stelle del repository originale (GitHub, GitLab, SourceForge)
+* Altre metriche, basate su dati liberi (come il tempo medio del ciclo di rilascio), per generare valutazioni in stelle
+* Gli utenti scelgono quali metriche sono importanti per loro, quindi non esiste la "app migliore" nel repository, ma solo la "app migliore" dal punto di vista dell'utente corrente
+* Mostra le "app simili" e le "app della stessa categoria" quando si guarda un'app
+* Mostra le "app dello stesso autore" quando si guarda un'app
+* Mostra un elenco di tutti gli autori, con le loro app e la valutazione media in stelle
+* Mostra il sito web dell'app, anche se è "solo un file README su GitHub"
+* Mostra le app più recenti e le app aggiornate di recente separate
+* Mostra le schede nella stessa dimensione per una migliore visione d'insieme
+* Fornisce una visualizzazione ad elenco come alternativa alle schede (come nelle vecchie versioni di F-Droid)
+* Più possibilità di ordinare e classificare le app
+* Possibilità di "stellinare" le app per contrassegnarle
+* Possibilità di nascondere le app per rimuoverle da tutte le visualizzazioni
+* Mostra le categorie nella traduzione corretta (se disponibile), dopo aver cambiato la lingua del dispositivo
+* Mostra gli screenshot nella traduzione corretta
+* Sfrutta gli schermi più grandi: più app mostrate sui tablet
+* Tag per trovare facilmente app per attività standard (client di posta, gestore di file, editor di testo), poiché le categorie di F-Droid sono troppo ampie
+* Visualizzazione di "app casuali" per scoprire app che di solito non si trovano
+* Mostra le app che potrebbero piacere all'utente (senza rubare i dati dell'utente per l'analisi)
+* L'obiettivo è fornire numerose visualizzazioni diverse del repository per aiutare l'utente a trovare le app più adatte e incoraggiare l'adozione di un maggior numero di app dal repository
+* Condivisione delle app, in modo da poterle aprire con un altro store (F-Droid, Yalp, Aurora, ...), per ottenere maggiori informazioni sull'app
+* Algoritmo di ricerca diverso, con la possibilità di continuare la ricerca se i risultati sono insufficienti
+* Mostra sempre i loghi delle app (se la connessione di rete è buona)
+* Mostra più schermate
+* Mostra le schermate in modo completo, aggiornato e nella lingua corretta
+* Mostra le schermate, anche quando non sono nella struttura fastlane
+* Codice nuovo e moderno di facile manutenzione
+* Manutenzione attiva
+* Molte altre novità in arrivo
+
+# Cose che G-Droid NON può fare (ancora) rispetto a F-Droid
+
+* Mostrare o installare una versione precedente di un'app
+* Creare una repo locale, condividere le app con le persone "vicine" o condividere le app via Bluetooth
+* Aggiungere altri repository oltre a quello di F-Droid
+* Usare l'estensione privilegiata (è pronto, ma l'estensione non è ancora stata adattata), G-Droid può comunque usare i permessi di root su dispositivi rooted per effettuare autonomamente installazioni
+* Aggiornamenti automatici
+* Impostazioni del proxy HTTP
+* G-Droid tii aiuta in diversi modi a trovare app migliori, ma in alcuni casi potresti aver bisogno del pulsante "condividi" per aprire l'app in F-Droid e installarla. Al momento G-Droid non è ancora un sostituto completo dell'app F-Droid
+
+# Aspetti condivisi di G-Droid e F-Droid
+
+* Mostra le stesse app - G-Droid non aggiunge app né modifica le build, le firme o gli URL di download
+* Tutti i metadati aggiuntivi sono forniti anche da F-Droid (ad esempio il link a GitHub)
+* Licenza GPLv3+
+
+# Spiegazione dei permessi
+
+* INTERNET: Per scaricare i metadati dell'app e le app
+* WRITE_EXTERNAL_STORAGE: Per memorizzare temporaneamente le app scaricate (permesso applicato solo alle vecchie versioni di Android)
