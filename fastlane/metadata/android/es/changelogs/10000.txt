@@ -1,0 +1,5 @@
+* Mostrar todas las versiones antiguas disponibles.
+* Corrección de errores: Se ha corregido el texto de las versiones de las aplicaciones actualizables.
+* Añadido un hashtag adicional a los comentarios de las aplicaciones, para que los usuarios de Mastodon puedan buscar todos los comentarios de las aplicaciones (sólo funciona para los comentarios que se hacen con esta versión o superior).
+* Actualizaciones de las traducciones.
+* Se ha añadido el idioma urdu.

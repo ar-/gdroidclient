@@ -1,0 +1,58 @@
+# ¿Qué es esta aplicación?
+
+G-Droid puede navegar por el repositorio libre de F-Droid. Es una alternativa al cliente oficial.
+
+# Características adicionales en comparación con F-Droid
+
+* Muestra las reseñas y los comentarios de las aplicaciones
+* Calificaciones de estrellas de las aplicaciones (hasta 5 estrellas)
+* Muestra las calificaciones en estrellas de los creadores en: GitHub, GitLab, SourceForge
+* Más métricas, basadas en datos libres (como el tiempo medio del ciclo de lanzamiento) para generar clasificaciones por estrellas
+* Los usuarios eligen qué métricas son importantes para ellos, por lo que no hay una "mejor aplicación" en el repositorio - sólo hay una "mejor aplicación" desde el punto de vista del usuario actual
+* Muestra "aplicaciones similares" y "aplicaciones de la misma categoría" al ver una aplicación
+* Muestra "aplicaciones del mismo autor" cuando se observa una aplicación
+* Muestra una lista de todos los autores, con sus aplicaciones y la calificación media de estrellas
+* Muestra el sitio web de la aplicación - incluso si es "sólo un archivo README en GitHub".
+* Muestra las aplicaciones más nuevas y las recientemente actualizadas separadas
+* Muestra las tarjetas en el mismo tamaño para una mejor visión general
+* Ofrece una vista de lista como alternativa a las tarjetas (como en las versiones anteriores de F-Droid) para las personas a las que no les gustan las tarjetas
+* Más posibilidades de ordenar y clasificar las aplicaciones
+* Posibilidad de marcar las aplicaciones con "estrellas".
+* Posibilidad de ocultar las aplicaciones para eliminarlas de todas las vistas
+* Muestra las categorías en la traducción correcta (si está disponible), después de cambiar el idioma del dispositivo
+* Muestra las capturas de pantalla en la traducción correcta
+* Aprovecha las pantallas más grandes: Se muestran más aplicaciones en las tabletas
+* Etiquetas para encontrar fácilmente aplicaciones para tareas estándar (clientes de correo electrónico, navegadores de archivos, editores de texto), ya que las categorías de F-Droid son demasiado amplias
+* Vista de "aplicaciones aleatorias" para descubrir aplicaciones que normalmente no encontrarías
+* Muestra las aplicaciones que podrían gustar al usuario (sin robarle datos para su análisis)
+* El objetivo es proporcionar muchas vistas diferentes al repositorio de aplicaciones para ayudar al usuario a encontrar aplicaciones adecuadas y fomentar el uso de más aplicaciones del repositorio.
+* 'Compartir' aplicaciones para que se pueda seguir abriendo en otras tiendas (F-Droid, Yalp, Aurora, ...), para obtener más información sobre la aplicación.
+* Algoritmo de búsqueda diferente, puede 'buscar más' para continuar una búsqueda si los resultados son insuficientes
+* Muestra los logos de las aplicaciones todo el tiempo (si la conexión de red está bien)
+* Muestra más capturas de pantalla
+* Muestra las capturas de pantalla, completamente, actualizadas y en el idioma correcto
+* Muestra las capturas de pantalla, también cuando no están
+* Nuevo y moderno código base de fácil mantenimiento
+* Mantenimiento activo
+* Muchos más por venir
+
+# Cosas que G-Droid NO puede hacer (todavía) en comparación con F-Droid
+
+* Mostrar o instalar una versión anterior de una aplicación
+* Crear un repositorio local, compartir aplicaciones con personas "cercanas" o compartir aplicaciones a través de Bluetooth
+* Añadir otros repositorios que el de F-Droid
+* Usar la extensión privilegiada (hecho, pero la extensión no está ajustada todavía), G-Droid puede sin embargo usar los permisos de root en dispositivos rooteados para proporcionar instalaciones desatendidas
+* Actualizaciones automáticas
+* Configuración del proxy HTTP
+* G-Droid te ayuda de diferentes maneras a encontrar mejores aplicaciones, pero en algunos casos puede que aún necesites el botón "compartir", para abrir esa aplicación en F-Droid para instalarla. G-Droid ahora mismo no es un reemplazo completo de la aplicación F-Droid.
+
+# Aspectos compartidos de G-Droid y F-Droid
+
+* Muestra las mismas apps - G-Droid no añade ninguna app ni modifica las builds, firmas o URLs de descarga
+* Todos los metadatos adicionales son proporcionados por F-Droid también (por ejemplo, el enlace a GitHub)
+* Licencia GPLv3+ 
+
+# Explicación de los permisos
+
+* INTERNET: Para descargar los metadatos de la aplicación y las aplicaciones
+* WRITE_EXTERNAL_STORAGE: Para almacenar las aplicaciones descargadas temporalmente (permiso sólo aplicado en versiones antiguas de Android)

@@ -1,0 +1,9 @@
+0.3.0
+  * etiquetas añadidas para aplicaciones que se utilizan para tareas estándar
+  * cambió el logo a algo morado
+
+0.2.3
+  * correción de error: solucionado un fallo al actualizar aplicaciones archivadas
+
+0.2.2
+  * métricas e indicadores de estrellas añadidos

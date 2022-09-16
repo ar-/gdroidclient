@@ -1,0 +1,8 @@
+0.2.1
+  * Se ha añadido una animación de carga para las imágenes.
+  * se han corregido las imágenes de gran tamaño en algunos dispositivos
+
+0.2.0
+  * Se ha corregido el diseño en pantallas muy pequeñas y muy grandes.
+  * Se ha corregido el botón de actualización de las aplicaciones instaladas.
+  * se ha añadido la vía rápida

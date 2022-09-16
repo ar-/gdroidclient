@@ -1,0 +1,13 @@
+0.3.1
+  * Añadido más soporte para I18N
+  * Mostrar características (debajo del botón de instalación en rojo) en el idioma correcto (si está disponible)
+  * Cambiar el idioma del sistema mostrará las categorías correctamente traducidas (a diferencia de F-Droid)
+  * Ordenar las aplicaciones con estrellas y mis aplicaciones alfabéticamente
+  * Añadidas cadenas de traducción faltantes para etiquetas
+
+0.3.0
+  * Se han añadido etiquetas para aplicaciones que se utilizan para tareas estándar
+  * Cambio de logotipo a algo morado
+
+0.2.3
+  * Corrección de error: Solucionado un error al actualizar aplicaciones archivadas

@@ -1,0 +1,15 @@
+0.3.2
+  * marcar aplicaciones que se pueden actualizar con un logotipo directamente en la tarjeta
+  * mostrar una lista de aplicaciones que se pueden actualizar en la pestaña my-apps
+  * arreglar el error de desplazamiento Jolla C / ICS, causado por gráficos vectoriales en planeo en versiones anteriores de Android
+
+0.3.1
+  * añadido más soporte para I18N
+  * mostrar características (debajo del botón de instalación en rojo) en el idioma correcto (si está disponible)
+  * cambiar el lenguaje del sistema mostrará las categorías correctamente traducidas (a diferencia de F-Droid)
+  * ordenar las aplicaciones con estrellas y mis aplicaciones alfabéticamente
+  * se agregaron cadenas de traducción de etiquetas
+
+0.3.0
+  * etiquetas añadidas para aplicaciones que se utilizan para tareas estándar
+  * cambió el logo a algo morado

@@ -1,0 +1,21 @@
+0.9.5
+  * mostrar una pequeña etiqueta desde/hasta qué versión se puede actualizar una aplicación
+  * corrección de errores: mostrar correctamente los apóstrofes en los nombres
+
+0.9.4
+  * Mejora del rendimiento y actualización de la caché para cargar las imágenes de la aplicación más rápidamente
+  * corrección de errores: ignorar las mayúsculas/minúsculas de los autores cuando se muestran aplicaciones del mismo autor
+  * Corrección de errores: las actualizaciones de los repositorios a veces se registraban de forma incorrecta
+
+0.9.3
+  * corrección de errores: G-Droid se bloqueaba al actualizar en Android 6.0 y versiones inferiores en algunos dispositivos
+
+0.9.2
+  * corrección de errores: G-Droid se bloqueaba al hacer clic en los 3 puntos de una aplicación similar en la vista de detalles de la aplicación
+  * Corrección de errores: el cierre de las conexiones de bases de datos abiertas es más rápido
+
+0.9.1
+  * Corrección de errores: G-Droid se bloqueaba cuando se instalaban demasiadas aplicaciones
+  * Corrección de errores: G-Droid se bloqueaba cuando la aplicación se cerraba mientras se actualizaban todas las aplicaciones en algunos dispositivos.
+  * corrección de errores: G-Droid se bloquea en dispositivos con poca memoria
+  * Corrección de errores: G-Droid se bloqueaba al intentar instalar un APK roto

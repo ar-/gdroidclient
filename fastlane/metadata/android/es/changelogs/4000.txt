@@ -1,0 +1,17 @@
+0.4.0
+  * ha añadido los permisos que se mostrarán correctamente traducidos, descritos, seleccionables y formateados
+  * traducciones añadidas para algunos elementos más de la GUI
+  * añadido un botón de ejecución para aplicaciones instaladas
+  * aplicaciones con estrella muestran una estrella en la tarjeta de la aplicación, así
+  * ahora se puede hacer clic en las etiquetas y categorías de la vista detallada de la aplicación
+  * las capturas de pantalla ya están completas (a diferencia de F-Droid), actualizadas (a diferencia de F-Droid) y en el lenguaje correcto (a diferencia de F-Droid)
+  * también se mostrarán capturas de pantalla, si no están en una estructura conocida (como fastlane)
+  * Ahora se puede hacer clic en las capturas de pantalla
+
+0.3.2
+  * marcar aplicaciones que se pueden actualizar con un logotipo directamente en la tarjeta
+  * mostrar una lista de aplicaciones que se pueden actualizar en la pestaña my-apps
+  * arreglar el error de desplazamiento Jolla C / ICS, causado por gráficos vectoriales en planeo en versiones anteriores de Android
+
+0.3.1
+  * añadido

@@ -1,0 +1,4 @@
+0.2.0
+  * Arreglo del diseño en pantallas muy pequeñas y muy grandes
+  * botón de actualización fijo para las aplicaciones instaladas
+  * añadido fastlane
