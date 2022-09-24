@@ -1,9 +1,10 @@
 0.2.3
-  * correción de error: solucionado un fallo al actualizar aplicaciones archivadas
-
+  * correción de error: solucionado un fallo al actualizar aplicaciones archivadas 
+ 
 0.2.2
-  * métricas e indicadores de estrellas añadidos
-
+  * métricas e indicadores de estrellas añadidos 
+ 
+ 
 0.2.1
   * añadida animación de carga para cargar imágenes
   * imágenes de gran tamaño fijas en algunos dispositivos
