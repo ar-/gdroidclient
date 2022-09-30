@@ -119,7 +119,7 @@
     <string name="in_same_category">De la misma categoría</string>
     <string name="newest_apps">Aplicaciones nuevas</string>
     <string name="highly_rated">Bien valoradas</string>
-    <string name="random_apps">aplicaciónes casuales</string>
+    <string name="random_apps">Aplicaciones aleatorias</string>
     <string name="stars">estrellas</string>
     <string name="ascending">ascendente</string>
     <string name="descending">descendente</string>
@@ -139,8 +139,8 @@
     <string name="pref_title_use_list_view">Mostrar como lista</string>
     <string name="you_might_also_like">También te podrían gustar</string>
     <string name="no_comments_available">no hay comentarios disponibles para esta aplicación</string>
-    <string name="pref_title_release_cycle_time">Ciclo de publicación</string>
-    <string name="similar_to_my_apps">Similar a mis aplicaciones</string>
-    <string name="menu_top_authors">Mejores autores</string>
-    <string name="top_author">Mejor autor</string>
+    <string name="pref_title_release_cycle_time">Ciclo de lanzamiento</string>
+    <string name="similar_to_my_apps">Mis aplicaciones similares</string>
+    <string name="menu_top_authors">Autores principales</string>
+    <string name="top_author">Autor principal</string>
 </resources>
