@@ -139,8 +139,8 @@
     <string name="pref_title_use_list_view">Mostrar como lista</string>
     <string name="you_might_also_like">También te podrían gustar</string>
     <string name="no_comments_available">no hay comentarios disponibles para esta aplicación</string>
-    <string name="pref_title_release_cycle_time">Ciclo de lanzamiento</string>
-    <string name="similar_to_my_apps">Mis aplicaciones similares</string>
-    <string name="menu_top_authors">Autores principales</string>
+    <string name="pref_title_release_cycle_time">Tiempo del ciclo de lanzamiento</string>
+    <string name="similar_to_my_apps">Similar a mis aplicaciones</string>
+    <string name="menu_top_authors">Principales autores</string>
     <string name="top_author">Autor principal</string>
 </resources>
