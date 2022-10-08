@@ -1,0 +1,20 @@
+0.4.2
+  * Se ha añadido una opción para ajustar automáticamente la importancia de las calificaciones con estrellas.
+
+0.4.1
+  * Corrección de errores en las imágenes vectoriales de los dispositivos anteriores a Lollipop, que se bloqueaban cuando se cargaban con Glide.
+  
+0.4.0
+  * se han añadido los permisos para que se muestren correctamente traducidos, descritos, clicables y formateados
+  * añadido traducciones para algunos elementos más GUI
+  * se ha añadido un botón de ejecución para las aplicaciones instaladas
+  * Las aplicaciones marcadas muestran una estrella en la tarjeta de la aplicación.
+  * Las etiquetas y las categorías en la vista de detalles de la aplicación son ahora clicables.
+  * Las capturas de pantalla están ahora completas (a diferencia de F-Droid), actualizadas (a diferencia de F-Droid) y en el idioma correcto (a diferencia de F-Droid).
+  * las capturas de pantalla también se mostrarán si no están en una estructura conocida (como fastlane)
+  * las capturas de pantalla ahora son clicables
+
+0.3.2
+  * marcar las aplicaciones que se pueden actualizar con un logotipo directamente en la tarjeta
+  * mostrar una lista de aplicaciones que se pueden actualizar en la pestaña de mis aplicaciones
+  * arreglar el error de desplazamiento de Jolla C / ICS, causado por los gráficos vectoriales en el deslizamiento en las versiones más antiguas de Android

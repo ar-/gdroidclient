@@ -1,0 +1,18 @@
+0.5.0
+  * reemplazado el gestor de descargas de Android con fetch2, la fijación de muchos errores de descarga
+  * se ha reducido el tamaño óptico de las tarjetas
+  * se ha añadido la posibilidad de ocultar aplicaciones
+
+0.4.4
+  * Actualización del logo de actualización
+  * se ha corregido el fallo cuando la descripción de la aplicación está vacía
+
+0.4.3
+  * Se han añadido dos algoritmos de búsqueda: "buscar más" y "buscar aún más", y se han añadido el resumen y la descripción de la aplicación a la búsqueda.
+  * Corrección de errores: el icono de la actualización no se ajustaba al hilo de la interfaz de usuario en algunos dispositivos.
+
+0.4.2
+  * Se ha añadido una opción para ajustar la importancia de las valoraciones con estrellas de forma automática.
+
+0.4.1
+  * Corrección de errores en las imágenes vectoriales en los dispositivos anteriores a Lollipop, que hacían que la aplicación se colapsara cuando se cargaba con Glide
