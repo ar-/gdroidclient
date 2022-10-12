@@ -1,0 +1,18 @@
+0.5.2
+  * Se ha añadido una vista para enumerar todos los autores y su cantidad de aplicaciones
+
+0.5.1
+  * Mostrar las aplicaciones del mismo autor en la vista de detalles de la aplicación
+
+0.5.0
+  * sustituyó el gestor de descargas de Android por fetch2, corrigiendo muchos errores de descarga
+  * se ha reducido el tamaño óptico de las tarjetas
+  * Se ha añadido la posibilidad de ocultar aplicaciones.
+
+0.4.4
+  * Actualización del logo de actualización
+  * se ha corregido el fallo cuando la descripción de la aplicación está vacía
+
+0.4.3
+  * Se han añadido dos algoritmos de búsqueda: "buscar más" y "buscar aún más", y se han añadido el resumen y la descripción de la aplicación a la búsqueda.
+  * Corrección de errores: el icono de la actualización no se ajustaba al hilo de la interfaz de usuario en algunos dispositivos.
