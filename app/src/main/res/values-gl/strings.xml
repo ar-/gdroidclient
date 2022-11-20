@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Conectividade</string>
-
     <string name="category_Development">Desenvolvemento</string>
     <string name="category_Games">Xogos</string>
     <string name="category_Graphics">Gráficos</string>
@@ -58,4 +57,5 @@
     <string name="crash_dialog_comment_prompt">Pode engadir información adicional e comentarios aquí:</string>
     <string name="versions">Versións</string>
     <string name="app_installed">Instalada</string>
+    <string name="app_name">G-Droid</string>
 </resources>
