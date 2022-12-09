@@ -1,0 +1,22 @@
+0.5.3
+  * agregó más traducciones de weblate
+  * corrección de errores: tocar capturas de pantalla bloqueaba la aplicación en Android 6
+
+0.5.2
+  * agregó una vista para enumerar todos los autores y su cantidad de aplicaciones
+
+0.5.1
+  * mostrar aplicaciones del mismo autor en la vista de detalles de la aplicación
+
+0.5.0
+  * reemplazó el administrador de descargas de Android con fetch2, corrigiendo muchos errores de descarga
+  * tamaño óptico reducido de las tarjetas
+  * capacidad adicional para ocultar aplicaciones
+
+0.4.4
+  * logotipo de actualización actualizado
+  * bloqueo fijo cuando la descripción de la aplicación está vacía
+
+0.4.3
+  * Se agregaron 2 algoritmos de búsqueda más "buscar más duro" y "buscar aún más duro", agregando el resumen y la descripción de la aplicación a la búsqueda
+  * corrección de errores: el ícono de actualización no está configurado en el hilo de la interfaz de usuario en algunos dispositivos
