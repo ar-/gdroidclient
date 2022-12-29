@@ -1,0 +1,23 @@
+0.6.1
+  * error de clic de captura de pantalla fijo en Adnroid 5 para siempre
+  * Se agregaron más traducciones al portugués, francés y ruso.
+
+0.6.0
+  * configuración agregada para usar root, para instalar automáticamente
+  * botón agregado para descargar e instalar todas las actualizaciones disponibles
+  * aumentar los tiempos de espera de la red para cargar más imágenes
+
+0.5.3
+  * agregó más traducciones de weblate
+  * corrección de errores: tocar capturas de pantalla bloqueaba la aplicación en Android 6
+
+0.5.2
+  * agregó una vista para enumerar todos los autores y su cantidad de aplicaciones
+
+0.5.1
+  * mostrar aplicaciones del mismo autor en la vista de detalles de la aplicación
+
+0.5.0
+  * reemplazó el administrador de descargas de Android con fetch2, corrigiendo muchos errores de descarga
+  * tamaño óptico reducido de las tarjetas
+  * capacidad adicional para ocultar aplicaciones
