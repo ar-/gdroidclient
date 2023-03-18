@@ -109,7 +109,7 @@
     <string name="category_Connectivity" tools:ignore="UnusedResources">Conectividade</string>
     <string name="youtube_player">Reprodutor YouTube</string>
     <string name="web_browser">Navegador web</string>
-    <string name="torrent_downloader">Torrents</string>
+    <string name="torrent_downloader">Descarregador de torrents</string>
     <string name="todo_list">Lista de tarefas</string>
     <string name="text_editor">Editor de texto</string>
     <string name="shopping_list">Lista de compras</string>
