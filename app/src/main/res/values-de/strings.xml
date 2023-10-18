@@ -41,7 +41,7 @@
     <string name="navigation_drawer_open">Navigationsordner öffnen</string>
     <string name="navigation_drawer_close">Navigationsordner schließen</string>
     <string name="nav_header_subtitle">Client für das F-Droid-Repository</string>
-    <string name="nav_header_desc">Navigationskopf</string>
+    <string name="nav_header_desc">Navigationskopfzeile</string>
     <string name="action_settings">Einstellungen</string>
     <string name="action_add_favourite">Zu den Favoriten hinzufügen</string>
     <string name="title_activity_settings">Einstellungen</string>
