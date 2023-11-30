@@ -126,4 +126,5 @@
     <string name="fetching_comments">načítání komentářů…</string>
     <string name="comments">Komentáře</string>
     <string name="similar_to_my_apps">Podobné k mým aplikacím</string>
+    <string name="nav_header_subtitle">Klient pro repozitář F-Droid</string>
 </resources>
