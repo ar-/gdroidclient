@@ -1,0 +1,4 @@
+0.2.0
+  * opraven layout na velmi malých and velmi velkých obrazovkách
+  * opraveno update tlačítko pro nainstalované aplikace
+  * přidán fastlane

@@ -1,0 +1,9 @@
+0.2.3
+  * bugfix: opraven pád aplikace při aktualizaci archivovaných aplikací
+
+0.2.2
+  * přidány metrics a star indicators
+
+0.2.1
+  * přidána animace načítání pro načítání obrázků
+  * opravena oversized obrázky na některých zařízeních
