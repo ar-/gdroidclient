@@ -1,0 +1,20 @@
+0.6.3
+  * añadida vista de lista (activable en preferencias)
+  * Mostrar aplicaciones similares ordenadas por similitud
+
+0.6.2
+  * Añadidas aplicaciones similares en la vista detallada de aplicaciones, gracias a Frieder Ferlemann.
+  * Añadidas traducciones de weblate, gracias a todos los traductores.
+
+0.6.1
+  * Corregido el error de clic en la captura de pantalla en Adnroid 5.
+  * Añadidas más traducciones al portugués, francés y ruso
+
+0.6.0
+  * Añadido ajuste para usar root, para instalar automáticamente
+  * Añadido un botón para descargar e instalar todas las actualizaciones disponibles.
+  * aumentar los tiempos de espera de red para cargar más imágenes
+
+0.5.3
+  * Añadidas más traducciones de weblate
+  * Corrección de errores: al tocar las capturas de pantalla, la aplicación se bloqueaba en Android 6.
