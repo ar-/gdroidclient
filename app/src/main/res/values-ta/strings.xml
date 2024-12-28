@@ -1,6 +1,5 @@
-<resources>
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="category_Internet">இணையம்</string>
     <string name="category_Money">பணம்</string>
     <string name="anti_ads">இச்செயலியில் விளம்பரங்கள் உள்ளன</string>
@@ -8,7 +7,7 @@
     <string name="links">இணைப்புகள்</string>
     <string name="action_install">நிறுவு</string>
     <string name="action_upgrade">மேம்படுத்து</string>
-<string name="action_launch">இயக்க</string>
+    <string name="action_launch">இயக்க</string>
     <string name="yes">ஆம்</string>
     <string name="no">இல்லை</string>
     <string name="more">மேலும்</string>
@@ -18,4 +17,130 @@
     <string name="ok">சரி</string>
     <string name="cancel">ரத்து செய்</string>
     <string name="app_installed">நிறுவப்பட்டது</string>
+    <string name="stars">நட்சத்திரங்கள்</string>
+    <string name="title_categories">வகைகள்</string>
+    <string name="similar_apps">ஒத்த பயன்பாடுகள்</string>
+    <string name="downloading">பதிவிறக்கம்…</string>
+    <string name="launcher">துவக்கி</string>
+    <string name="perms_new_perm_prefix">புதியது:</string>
+    <string name="app_store">ஆப் கடை</string>
+    <string name="camera">கேமரா</string>
+    <string name="data_is_up_to_date">தரவு புதுப்பித்த நிலையில் உள்ளது</string>
+    <string name="comments">கருத்துகள்</string>
+    <string name="last_update">கடைசி புதுப்பிப்பு</string>
+    <string name="similar_to_my_apps">எனது பயன்பாடுகளைப் போன்றது</string>
+    <string name="installing" formatted="false">%s நிறுவுதல்</string>
+    <string name="menu_my_apps">எனது பயன்பாடுகள்</string>
+    <string name="pref_title_release_cycle_time">சுழற்சி நேரத்தை விடுவிக்கவும்</string>
+    <string name="antifeatures">விரோத எதிர்ப்பு</string>
+    <string name="category_System" tools:ignore="UnusedResources">மண்டலம்</string>
+    <string name="youtube_player">யூடியூப் பிளேயர்</string>
+    <string name="torrent_downloader">டொரண்ட் டவுன்லோடர்</string>
+    <string name="shopping_list">சாப்பிங் பட்டியல்</string>
+    <string name="gallery">கேலரி</string>
+    <string name="calendar">நாட்காட்டி</string>
+    <string name="title_myapps">எனது பயன்பாடுகள்</string>
+    <string name="title_dashboard">முகப்புப்பெட்டி</string>
+    <string name="pref_header_general">பொது</string>
+    <string name="nav_header_subtitle">எஃப்-டிராய்டு களஞ்சியத்திற்கான வாடிக்கையாளர்</string>
+    <string name="app_name">சி-டிராய்டு</string>
+    <string name="navigation_drawer_open">திறந்த வழிசெலுத்தல் அலமாரியை</string>
+    <string name="navigation_drawer_close">வழிசெலுத்தல் அலமாரியை மூடு</string>
+    <string name="nav_header_desc">வழிசெலுத்தல் தலைப்பு</string>
+    <string name="action_settings">அமைப்புகள்</string>
+    <string name="action_add_favourite">பிடித்தவைகளில் சேர்க்கவும்</string>
+    <string name="title_activity_settings">அமைப்புகள்</string>
+    <string name="pref_header_data_sync">தரவு &amp; ஒத்திசைவு</string>
+    <string name="pref_header_notifications">அறிவிப்புகள்</string>
+    <string name="pref_title_new_message_notifications">புதிய செய்தி அறிவிப்புகள்</string>
+    <string name="title_home">வீடு</string>
+    <string name="title_notifications">அறிவிப்புகள்</string>
+    <string name="title_tags">குறிச்சொற்கள்</string>
+    <string name="title_starred">நடித்தார்</string>
+    <string name="pref_title_sync_frequency">ஒத்திசைவு அதிர்வெண்</string>
+    <string name="title_search">தேடல்</string>
+    <string name="contacts">தொடர்புகள்</string>
+    <string name="email_client">மின்னஞ்சல் கிளையன்ட்</string>
+    <string name="file_browser">கோப்பு உலாவி</string>
+    <string name="music_player">மியூசிக் பிளேயர்</string>
+    <string name="text_editor">உரை ஆசிரியர்</string>
+    <string name="todo_list">அனைத்து பட்டியல்களும்</string>
+    <string name="web_browser">வலை உலாவி</string>
+    <string name="category_Connectivity" tools:ignore="UnusedResources">இணைப்பு</string>
+    <string name="category_Development" tools:ignore="UnusedResources">வளர்ச்சி</string>
+    <string name="category_Games" tools:ignore="UnusedResources">விளையாட்டுகள்</string>
+    <string name="category_Graphics" tools:ignore="UnusedResources">கிராபிக்ச்</string>
+    <string name="category_Multimedia" tools:ignore="UnusedResources">பன்னூடகம்</string>
+    <string name="category_Navigation" tools:ignore="UnusedResources">வானோடல்</string>
+    <string name="category_Phone_SMS" tools:ignore="UnusedResources">தொலைபேசி &amp; எச்எம்எச்</string>
+    <string name="category_Reading" tools:ignore="UnusedResources">படித்தல்</string>
+    <string name="category_Science_Education" tools:ignore="UnusedResources">அறிவியல் மற்றும் கல்வி</string>
+    <string name="category_Security" tools:ignore="UnusedResources">பாதுகாப்பு</string>
+    <string name="category_Sports_Health" tools:ignore="UnusedResources">விளையாட்டு மற்றும் உடல்நலம்</string>
+    <string name="category_Theming" tools:ignore="UnusedResources">தீமிங்</string>
+    <string name="category_Time" tools:ignore="UnusedResources">நேரம்</string>
+    <string name="category_Writing" tools:ignore="UnusedResources">எழுதுதல்</string>
+    <string name="anti_nonfreeadd">இந்த பயன்பாடு இலவச அல்லாத துணை நிரல்களை ஊக்குவிக்கிறது</string>
+    <string name="anti_nonfreedep">இந்த பயன்பாடு இல்லாத பிற பயன்பாடுகளைப் பொறுத்தது</string>
+    <string name="anti_upstreamnonfree">மேலோடை மூலக் குறியீடு முற்றிலும் இலவசம் அல்ல</string>
+    <string name="anti_nonfreeassets">இந்த பயன்பாட்டில் இலவசமற்ற சொத்துக்கள் உள்ளன</string>
+    <string name="anti_disabledalgorithm">இந்த பயன்பாட்டில் பலவீனமான பாதுகாப்பு கையொப்பம் உள்ளது</string>
+    <string name="anti_knownvuln">இந்த பயன்பாட்டில் அறியப்பட்ட பாதுகாப்பு பாதிப்பு உள்ளது</string>
+    <string name="anti_nonfreenet">இந்த பயன்பாடு இலவச பிணையம் சேவைகளை ஊக்குவிக்கிறது</string>
+    <string name="anti_nosourcesince">மூலக் குறியீடு இனி கிடைக்காது, புதுப்பிப்புகள் எதுவும் சாத்தியமில்லை.</string>
+    <string name="no_permissions">அனுமதிகள் எதுவும் பயன்படுத்தப்படவில்லை.</string>
+    <string name="perm_costs_money">இது உங்களுக்கு பணம் செலவாகும்</string>
+    <string name="perms_description_app">வழங்கியவர்.</string>
+    <string name="permissions">அனுமதிகள்</string>
+    <string name="action_hide">மறை</string>
+    <string name="action_unhide">இரக்கமற்றது</string>
+    <string name="pref_header_ratings">நட்சத்திர மதிப்பீடுகள்</string>
+    <string name="pref_title_upstream_ratings">அறிவிலிமையம், அறிவிலிஆய்வு மற்றும் சோர்ச்ஃபோர்ச் ஆகியவற்றின் மதிப்பீடுகள்</string>
+    <string name="pref_title_ratings_headline">ஒவ்வொரு மெட்ரிக்குக்கும் உங்கள் முக்கியத்துவத்தை அமைக்கவும்</string>
+    <string name="pref_title_ratings_summary">ஒவ்வொரு மெட்ரிக்குக்கும் 0 முதல் 10 வரை எண்ணை ஒதுக்குங்கள். அதிக எண் என்பது அதிக முக்கியத்துவம் வாய்ந்தது.</string>
+    <string name="pref_title_updated_in_2_years">அண்மைக் கால 2 ஆண்டுகளில் கடைசி புதுப்பிப்பு</string>
+    <string name="search_harder">கடினமாக தேடுங்கள்</string>
+    <string name="search_even_harder">இன்னும் கடினமாக தேடுங்கள்</string>
+    <string name="menu_hidden_apps">மறைக்கப்பட்ட பயன்பாடுகள்</string>
+    <string name="by_same_author">அதே எழுத்தாளரால்</string>
+    <string name="menu_app_authors">பயன்பாட்டு ஆசிரியர்கள்</string>
+    <string name="menu_top_authors">சிறந்த ஆசிரியர்கள்</string>
+    <string name="top_author">சிறந்த ஆசிரியர்</string>
+    <string name="installing_details" formatted="false">%d / %d ஐ நிறுவுகிறது</string>
+    <string name="installation_finished">நிறுவல் முடிந்தது</string>
+    <string name="installed_details">நிறுவப்பட்ட %d பயன்பாடுகள்</string>
+    <string name="confirmation">உறுதிப்படுத்தல்</string>
+    <string name="use_root">இந்த சாதனத்தில் கிடைக்கும் ரூட் சலுகைகளைப் பயன்படுத்தி, பயனர் தொடர்பு இல்லாமல் பயன்பாடுகளை நிறுவ விரும்புகிறீர்களா?</string>
+    <string name="download_all_updates">எல்லா புதுப்பிப்புகளையும் பதிவிறக்கவும்</string>
+    <string name="pref_description_use_root">சாதனம் வேரூன்றினால் பயன்பாடுகளை தானாக நிறுவி நிறுவல் நீக்குகிறது</string>
+    <string name="pref_title_use_root">ரூட் சலுகையைப் பயன்படுத்துங்கள்</string>
+    <string name="in_same_category">அதே வகை</string>
+    <string name="download_pending">பதிவிறக்கம் தொடங்க காத்திருக்கிறது…</string>
+    <string name="pref_title_use_list_view">பட்டியல் பார்வையை இயக்கவும்</string>
+    <string name="pref_description_use_list_view">முடிந்தால் பட்டியலில் பயன்பாடுகளைக் காட்டு</string>
+    <string name="newest_apps">புதிய பயன்பாடுகள்</string>
+    <string name="recently_updated">அண்மைக் காலத்தில் புதுப்பிக்கப்பட்டது</string>
+    <string name="highly_rated">மிகவும் மதிப்பிடப்பட்டது</string>
+    <string name="you_might_also_like">நீங்கள் விரும்பலாம்</string>
+    <string name="random_apps">சீரற்ற பயன்பாடுகள்</string>
+    <string name="name">பெயர்</string>
+    <string name="sort_search">தேடலை வரிசைப்படுத்துங்கள்</string>
+    <string name="ascending">ஏறுதல்</string>
+    <string name="descending">இறங்கு</string>
+    <string name="app_size">அளவு</string>
+    <string name="developer">உருவாக்குநர்</string>
+    <string name="download_error">பதிவிறக்கம் தோல்வியடைந்தது!</string>
+    <string name="write_comment">கருத்து எழுதுங்கள்</string>
+    <string name="no_comments_available">இந்த பயன்பாட்டிற்கு எந்தக் கருத்தும் கிடைக்கவில்லை</string>
+    <string name="fetching_comments">கருத்துகளைப் பெறுதல்…</string>
+    <string name="how_to_rate">தயவுசெய்து இதை ஒரு மாச்டோடன் பயன்பாட்டுடன் பகிர்ந்து கொள்ளுங்கள், உங்கள் கருத்தைச் சேர்க்கவும், ஆனால் ஏச்டேக்கை மாற்ற வேண்டாம்.</string>
+    <string name="saving_app_details">பயன்பாட்டு விவரங்களைச் சேமிக்கிறது</string>
+    <string name="could_not_download_gdroid_metadata">சி-டிராய்டு மெட்டாடேட்டாவை பதிவிறக்கம் செய்ய முடியவில்லை</string>
+    <string name="crash_dialog_title">சி-டிராய்டு செயலிழந்தது</string>
+    <string name="crash_dialog_text">எதிர்பாராத பிழை ஏற்பட்டது. சிக்கலை சரிசெய்ய உதவும் விவரங்களுக்கு மின்னஞ்சல் அனுப்ப விரும்புகிறீர்களா?</string>
+    <string name="crash_dialog_comment_prompt">கூடுதல் தகவல்களையும் கருத்துகளையும் இங்கே சேர்க்கலாம்:</string>
+    <string name="pref_title_send_crash_reports">செயலிழப்பு அறிக்கைகளை அனுப்ப தூண்டுதல்</string>
+    <string name="pref_description_send_crash_reports">செயலிழப்புகள் பற்றிய தரவுகளைச் சேகரித்து அவற்றை டெவலப்பருக்கு அனுப்பச் சொல்லுங்கள்</string>
+    <string name="app_can_be_updated">இந்த பயன்பாட்டை %s முதல் %s வரை புதுப்பிக்க முடியும்</string>
+    <string name="versions">பதிப்புகள்</string>
 </resources>
