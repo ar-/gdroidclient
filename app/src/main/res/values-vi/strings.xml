@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">Kết nối</string>
-
     <string name="category_Development">Lập trình</string>
     <string name="category_Games">Trò chơi</string>
     <string name="category_Graphics">Đồ hoạ</string>
@@ -58,4 +57,67 @@
     <string name="crash_dialog_comment_prompt">Bạn có thể đưa thêm thông tin và bình luận ở đây:</string>
     <string name="versions">Các phiên bản</string>
     <string name="app_installed">Đã cài đặt</string>
+    <string name="app_name">G-Droid</string>
+    <string name="navigation_drawer_open">Mở thanh điều hướng</string>
+    <string name="navigation_drawer_close">Đóng thanh điều hướng</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="action_add_favourite">Thêm vào mục Yêu Thích</string>
+    <string name="title_activity_settings">Cài đặt</string>
+    <string name="pref_header_data_sync">Dữ liệu &amp; đồng bộ hóa</string>
+    <string name="pref_header_notifications">Thông báo</string>
+    <string name="pref_title_new_message_notifications">Thông báo mới</string>
+    <string name="title_home">Nhà</string>
+    <string name="title_notifications">Thông báo</string>
+    <string name="title_categories">Danh mục</string>
+    <string name="title_tags">thẻ</string>
+    <string name="title_myapps">ứng dụng của tôi</string>
+    <string name="title_search">tìm kiếm</string>
+    <string name="calendar">Lịch</string>
+    <string name="camera">Camera</string>
+    <string name="pref_description_use_root">Tự động cài đặt và gỡ cài đặt ứng dụng nếu thiết bị đã root</string>
+    <string name="in_same_category">Cùng danh mục</string>
+    <string name="pref_title_use_list_view">Bật chế độ xem dạng danh sách</string>
+    <string name="pref_description_use_list_view">Hiện ứng dụng ở trong danh sách nếu có thể</string>
+    <string name="newest_apps">Ứng dụng mới nhất</string>
+    <string name="highly_rated">Được đánh giá cao</string>
+    <string name="you_might_also_like">Bạn có thể thích</string>
+    <string name="random_apps">Ứng dụng ngẫu nhiên</string>
+    <string name="stars">Sao</string>
+    <string name="app_size">Kích thước</string>
+    <string name="developer">Nhà phát triển</string>
+    <string name="comments">Bình luận</string>
+    <string name="write_comment">Viết bình luận</string>
+    <string name="no_comments_available">Không có bình luận khả dụng cho ứng dụng này</string>
+    <string name="fetching_comments">Đang tải bình luận…</string>
+    <string name="how_to_rate">Vui lòng chia sẻ với ứng dụng Mastodon, thêm bình luận nhưng không thay đổi hashtag.</string>
+    <string name="could_not_download_gdroid_metadata">Không thể tải metadata của G-Droid</string>
+    <string name="pref_description_send_crash_reports">Thu thập dữ liệu về các sự cố và yêu cầu gửi chúng cho nhà phát triển</string>
+    <string name="data_is_up_to_date">Dữ liệu được cập nhật</string>
+    <string name="app_can_be_updated">Ứng dụng này có thể được cập nhật từ %s lên %s</string>
+    <string name="torrent_downloader">Trình tải Torrent</string>
+    <string name="web_browser">Trình duyệt</string>
+    <string name="youtube_player">Trình phát YouTube</string>
+    <string name="action_hide">Ẩn</string>
+    <string name="action_unhide">Hiện</string>
+    <string name="pref_header_ratings">Đánh giá</string>
+    <string name="pref_title_upstream_ratings">Đánh giá từ GitHub, GitLab và SourceForge</string>
+    <string name="pref_title_updated_in_2_years">Lần cập nhật cuối cùng trong vòng 2 năm gần đây</string>
+    <string name="search_harder">tìm kiếm kỹ hơn</string>
+    <string name="search_even_harder">tìm kiếm kỹ hơn nữa</string>
+    <string name="menu_my_apps">Ứng dụng của tôi</string>
+    <string name="menu_hidden_apps">Ẩn ứng dụng</string>
+    <string name="by_same_author">Cùng tác giả</string>
+    <string name="menu_app_authors">Tác giả ứng dụng</string>
+    <string name="menu_top_authors">Các tác giả hàng đầu</string>
+    <string name="top_author">Tác giả hàng đầu</string>
+    <string name="installing" formatted="false">Đang tải %s</string>
+    <string name="installing_details" formatted="false">Đang tải %d/%d</string>
+    <string name="installation_finished">Đã tải xong</string>
+    <string name="installed_details">Đã tải %d ứng dụng</string>
+    <string name="confirmation">Xác nhận</string>
+    <string name="use_root">Bạn có muốn cài đặt ứng dụng mà không cần sự can thiệp của người dùng, sử dụng quyền root có sẵn trên thiết bị này không?</string>
+    <string name="pref_title_use_root">Sử dụng quyền Root</string>
+    <string name="recently_updated">Mới được cập nhật gần đây</string>
+    <string name="similar_to_my_apps">Tương tự các ứng dụng của tôi</string>
+    <string name="pref_title_send_crash_reports">Yêu cầu gửi báo cáo sự cố</string>
 </resources>
