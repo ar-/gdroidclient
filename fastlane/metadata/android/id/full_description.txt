@@ -1,0 +1,55 @@
+# Tentang Aplikasi Ini
+
+G-Droid dapat menjelajahi repositori aplikasi libre F-Droid. Ini merupakan alternatif dari klien resmi F-Droid.
+
+# Fitur Tambahan Dibandingkan F-Droid
+
+* Menampilkan ulasan dan komentar untuk setiap aplikasi
+* Rating bintang aplikasi (hingga 5 bintang) - metrik yang dihasilkan secara otomatis oleh mesin
+* Menampilkan rating bintang upstream dari platform seperti GitHub, GitLab, dan SourceForge
+* Lebih banyak metrik berbasis data libre (seperti rata-rata waktu siklus rilis) untuk menghasilkan rating bintang
+* Pengguna memilih metrik mana yang penting bagi mereka, sehingga tidak ada 'aplikasi terbaik' secara mutlak di repositori — hanya ada 'aplikasi terbaik' dari sudut pandang pengguna saat ini
+* Menampilkan 'aplikasi serupa' dan 'aplikasi dari kategori yang sama' saat melihat detail suatu aplikasi
+* Menampilkan 'aplikasi dari penulis yang sama' saat melihat detail suatu aplikasi
+* Menampilkan daftar semua penulis beserta aplikasi mereka dan rata-rata rating bintang
+* Menampilkan situs web aplikasi — bahkan jika hanya berupa file README di GitHub
+* Memisahkan tampilan aplikasi terbaru dan aplikasi yang baru saja diperbarui
+* Menampilkan kartu dalam ukuran yang seragam untuk tampilan yang lebih rapi dan teratur
+* Menyediakan tampilan daftar sebagai alternatif tampilan kartu (seperti versi F-Droid lama) bagi yang tidak menyukai tampilan kartu
+* Lebih banyak pilihan untuk mengurutkan dan menyortir aplikasi
+* Kemampuan untuk 'membintangi' aplikasi sebagai penanda favorit
+* Kemampuan untuk menyembunyikan aplikasi agar tidak muncul di semua tampilan
+* Menampilkan kategori dalam terjemahan yang benar (jika tersedia) setelah mengubah bahasa perangkat
+* Menampilkan tangkapan layar dalam bahasa yang sesuai dengan perangkat
+* Memanfaatkan layar yang lebih besar: lebih banyak aplikasi ditampilkan sekaligus di tablet
+* Tag untuk menemukan aplikasi sesuai tugas umum dengan mudah (klien e-mail, pengelola file, editor teks), karena kategori F-Droid dinilai terlalu luas
+* Tampilan 'aplikasi acak' untuk menemukan aplikasi yang biasanya tidak akan Anda temukan
+* Menampilkan rekomendasi aplikasi yang mungkin disukai pengguna tanpa mencuri data pengguna untuk analisis
+* Bertujuan menyediakan berbagai sudut pandang terhadap repositori aplikasi guna membantu pengguna menemukan aplikasi yang sesuai
+* Fitur 'Bagikan' aplikasi agar bisa dibuka dengan toko lain (F-Droid, Yalp, Aurora, …) untuk info lebih lanjut
+* Algoritma pencarian berbeda yang dapat 'mencari lebih keras' jika hasil awal tidak mencukupi
+* Selalu menampilkan logo aplikasi selama koneksi jaringan tersedia
+* Menampilkan lebih banyak tangkapan layar secara lengkap, terkini, dan dalam bahasa yang benar
+* Menampilkan tangkapan layar meskipun tidak menggunakan struktur fastlane
+* Basis kode baru dan modern yang mudah dipelihara serta aktif dikembangkan
+* Masih banyak fitur baru yang akan hadir ke depannya
+
+# Yang Belum Bisa Dilakukan G-Droid
+
+* Menampilkan atau menginstal versi lama suatu aplikasi
+* Membuat repositori lokal, berbagi aplikasi dengan orang di sekitar, atau berbagi via Bluetooth
+* Menambahkan repositori selain repositori F-Droid
+* Menggunakan ekstensi privileged (belum disesuaikan), meski bisa pakai root untuk instalasi otomatis
+* Pembaruan otomatis dan pengaturan proksi HTTP
+* G-Droid belum sepenuhnya menggantikan aplikasi F-Droid; dalam beberapa kasus Anda mungkin masih perlu tombol 'Bagikan' untuk membuka aplikasi di F-Droid guna menginstalnya
+
+# Kesamaan G-Droid dan F-Droid
+
+* Menampilkan aplikasi yang sama — G-Droid tidak menambahkan aplikasi apa pun atau mengubah build, tanda tangan, maupun URL unduhan
+* Semua metadata tambahan juga disediakan oleh F-Droid (misalnya tautan ke GitHub)
+* Lisensi GPLv3+
+
+# Penjelasan Izin
+
+* INTERNET: Untuk mengunduh metadata aplikasi dan aplikasi itu sendiri
+* WRITE_EXTERNAL_STORAGE: Menyimpan aplikasi sementara (hanya di Android versi lama)

@@ -1,0 +1,5 @@
+* Tampilkan semua versi lama yang tersedia.
+* Perbaikan bug: Perbaiki teks untuk versi aplikasi yang dapat diperbarui.
+* Menambahkan tagar tambahan pada komentar aplikasi, sehingga pengguna Mastodon dapat mencari semua komentar aplikasi (hanya berlaku untuk komentar yang dibuat dengan versi ini atau lebih baru).
+* Pembaruan terjemahan.
+* Menambahkan bahasa Urdu.

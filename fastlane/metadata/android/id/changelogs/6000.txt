@@ -1,0 +1,19 @@
+0.6.0
+  * Tambah pengaturan root untuk instalasi otomatis
+  * Tambah tombol unduh & instal semua pembaruan
+  * Tingkatkan batas waktu jaringan
+
+0.5.3
+  * Tambah terjemahan weblate
+  * Perbaikan bug: tangkapan layar crash di Android 6
+
+0.5.2
+  * Tambah daftar semua penulis & jumlah aplikasi mereka
+
+0.5.1
+  * Tampilkan aplikasi dari penulis yang sama
+
+0.5.0
+  * Ganti pengelola unduhan dengan fetch2
+  * Kurangi ukuran visual kartu
+  * Tambah fitur sembunyikan aplikasi
