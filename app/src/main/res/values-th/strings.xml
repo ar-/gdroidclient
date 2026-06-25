@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="category_Connectivity">การสื่อสาร</string>
-
     <string name="category_Development">การพัฒนาซอฟต์แวร์</string>
     <string name="category_Games">เกม</string>
     <string name="category_Graphics">กราฟิก</string>
@@ -52,4 +51,36 @@
     <string name="crash_dialog_text">มีข้อผิดพลาดที่ทำให้โปรแกรมหยุดทำงานกะทันหัน,</string>
     <string name="crash_dialog_comment_prompt">ระบุรายละเอียดและหมายเหตุเพิ่มเติมที่นี่:</string>
     <string name="app_installed">ติดตั้งอยู่</string>
+    <string name="navigation_drawer_open">เปิดเมนูนำทาง</string>
+    <string name="navigation_drawer_close">ปิดเมนูนำทาง</string>
+    <string name="nav_header_desc">หัวข้อนำทาง</string>
+    <string name="nav_header_subtitle">แอปพลิเคชันสำหรับคลัง F-Droid</string>
+    <string name="action_settings">การตั้งค่า</string>
+    <string name="action_add_favourite">เพิ่มไปยังรายการโปรด</string>
+    <string name="title_activity_settings">การตั้งค่า</string>
+    <string name="pref_header_general">ทั่วไป</string>
+    <string name="pref_header_data_sync">ข้อมูล &amp; การซิงค์</string>
+    <string name="pref_title_sync_frequency">ความถี่การซิงค์</string>
+    <string name="pref_header_notifications">การแจ้งเตือน</string>
+    <string name="pref_title_new_message_notifications">การแจ้งเตือนข้อความใหม่</string>
+    <string name="title_home">หน้าหลัก</string>
+    <string name="title_dashboard">แผงควบคุม</string>
+    <string name="title_notifications">แจ้งเตือน</string>
+    <string name="title_categories">หมวดหมู่</string>
+    <string name="title_tags">แท็ก</string>
+    <string name="title_starred">ให้ดาวแล้ว</string>
+    <string name="title_myapps">แอพของฉัน</string>
+    <string name="title_search">ค้นหา</string>
+    <string name="app_store">แอพสโตร</string>
+    <string name="calendar">ปฎิทิน</string>
+    <string name="camera">กล้อง</string>
+    <string name="contacts">รายชื่อผู้ติดต่อ</string>
+    <string name="email_client">แอพอีเมล</string>
+    <string name="file_browser">สำรวจไฟล์</string>
+    <string name="gallery">คลังภาพ</string>
+    <string name="launcher">ตัวเปิดโปรแกรม</string>
+    <string name="music_player">แอพเล่นดนตรี</string>
+    <string name="shopping_list">รายการซื้อของ</string>
+    <string name="text_editor">แอพเขียน</string>
+    <string name="todo_list">รายการงาน</string>
 </resources>
