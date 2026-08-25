@@ -1,0 +1,19 @@
+0.9.1
+  * perbaikan bug: G-Droid crash saat terlalu banyak aplikasi yang terinstal
+  * perbaikan bug: G-Droid crash saat aplikasi ditutup saat memperbarui semua aplikasi di beberapa perangkat
+  * perbaikan bug: G-Droid crash pada perangkat dengan memori rendah
+  * perbaikan bug: G-Droid crash saat mencoba menginstal APK yang rusak
+
+0.9.0
+  * G-Droid tidak lagi mengunduh semua data repositori ketika file remote belum berubah
+  * tambahkan pelaporan crash untuk pengguna yang ingin mengirim crash ke pengembang G-Droid
+  * tambahkan pesan kesalahan saat unduhan aplikasi atau unduhan repo gagal
+  * G-Droid memperbarui secara otomatis ketika DB lokal masih kosong (mis. saat pertama kali dimulai)
+  * perbaikan bug: siklus rilis aplikasi tidak dapat lagi negatif
+
+0.8.2
+  * perbaikan bug: G-Droid menampilkan pembaruan yang salah dan tidak dapat menginstal beberapa aplikasi, karena memilih arsitektur yang salah
+  * perbaikan bug: layar bergulir ke bawah setelah memuat detail beberapa aplikasi
+
+0.8.1
+  * tambahkan terjemahan Weblate sebagian besar untuk fitur baru

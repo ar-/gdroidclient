@@ -1,0 +1,11 @@
+0.2.2
+  * menambahkan metrik dan indikator bintang
+
+0.2.1
+  * menambahkan animasi memuat untuk gambar yang dimuat
+  * memperbaiki gambar berukuran berlebih pada beberapa perangkat
+
+0.2.0
+  * memperbaiki tata letak pada layar sangat kecil dan sangat besar
+  * memperbaiki tombol pembaruan untuk aplikasi yang terinstal
+  * menambahkan fastlane

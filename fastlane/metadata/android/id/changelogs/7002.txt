@@ -1,0 +1,34 @@
+0.7.2
+  * tambahkan penulis teratas ke tampilan detail aplikasi dan ke menu utama di sebelah kiri
+  * tambahkan ukuran APK ke tampilan detail aplikasi
+
+0.7.1
+  * tambahkan pemilih angka di pengaturan untuk mengatur bobot metrik
+  * tambahkan tombol dan fungsionalitas uninstall (root dan non-root)
+  * perbaikan bug: jangan tawarkan untuk menginstal aplikasi yang sudah terinstal
+  * perbaikan bug: jangan tawarkan untuk membintangi aplikasi yang sudah berbintang
+  * perbarui fetch2 ke 2.3.6
+  * perbaikan bug: jangan hapus basis data pengguna saat memperbarui aplikasi ke versi baru
+  * hapus string berlebihan dari file xml
+  * perbaikan bug: ukuran teks pada tampilan daftar aplikasi terlalu kecil
+  * tambahkan lebih banyak terjemahan dari Weblate (terima kasih kawan-kawan!)
+
+0.7.0
+  * tambahkan gulir ke bawah untuk memperbarui
+  * tambahkan berbagai pengurutan untuk daftar aplikasi
+  * tampilkan aplikasi yang mirip dengan aplikasi yang terinstal
+  * tampilkan aplikasi yang mungkin juga disukai pengguna
+  * buat hasil pencarian responsif
+  * perbarui terjemahan Weblate (terima kasih kawan-kawan)
+
+0.6.3
+  * tambahkan tampilan daftar (dapat diaktifkan di preferensi)
+  * tampilkan aplikasi serupa yang diurutkan berdasarkan kemiripan
+
+0.6.2
+  * tambahkan aplikasi serupa di tampilan detail aplikasi yang diimplementasikan dengan benar, terima kasih khusus kepada Frieder Ferlemann
+  * tambahkan terjemahan Weblate, terima kasih kepada semua penerjemah
+
+0.6.1
+  * perbaiki bug klik tangkapan layar di Android 5 untuk selamanya
+  * tambahkan lebih banyak terjemahan Portugis, Prancis, dan Rusia

@@ -1,0 +1,13 @@
+0.3.1
+  * Menambahkan lebih banyak dukungan I18N
+  * Menampilkan fitur-anti (di bawah tombol instal dalam warna merah) dalam bahasa yang benar (jika tersedia)
+  * Mengubah bahasa sistem akan menampilkan kategori yang diterjemahkan dengan benar (berbeda dengan F-Droid)
+  * Mengurutkan aplikasi berbintang dan aplikasi saya secara alfabetis
+  * Menambahkan string terjemahan yang hilang untuk tag
+
+0.3.0
+  * Menambahkan tag untuk aplikasi yang digunakan untuk tugas standar
+  * Mengubah logo menjadi sesuatu yang berwarna ungu
+
+0.2.3
+  * Perbaikan bug: Memperbaiki crash saat memperbarui aplikasi yang diarsipkan

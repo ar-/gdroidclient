@@ -1,0 +1,24 @@
+0.9.4
+  * peningkatan kinerja dan pembaruan caching untuk memuat gambar aplikasi lebih cepat
+  * perbaikan bug: abaikan huruf besar/kecil untuk penulis saat menampilkan aplikasi dari penulis yang sama
+  * perbaikan bug: pembaruan repositori terkadang ditandai salah sebagai berhasil
+
+0.9.3
+  * perbaikan bug: G-Droid crash saat memperbarui di Android 6.0 dan lebih rendah pada beberapa perangkat
+
+0.9.2
+  * perbaikan bug: G-Droid crash saat mengklik 3 titik pada aplikasi serupa di tampilan detail aplikasi
+  * perbaikan bug: menutup koneksi basis data yang terbuka lebih cepat
+
+0.9.1
+  * perbaikan bug: G-Droid crash saat terlalu banyak aplikasi yang terinstal
+  * perbaikan bug: G-Droid crash saat aplikasi ditutup saat memperbarui semua aplikasi di beberapa perangkat
+  * perbaikan bug: G-Droid crash pada perangkat dengan memori rendah
+  * perbaikan bug: G-Droid crash saat mencoba menginstal APK yang rusak
+
+0.9.0
+  * G-Droid tidak lagi mengunduh semua data repositori ketika file remote belum berubah
+  * tambahkan pelaporan crash untuk pengguna yang ingin mengirim crash ke pengembang G-Droid
+  * tambahkan pesan kesalahan saat unduhan aplikasi atau unduhan repo gagal
+  * G-Droid memperbarui secara otomatis ketika DB lokal masih kosong (mis. saat pertama kali dimulai)
+  * perbaikan bug: siklus rilis aplikasi tidak dapat lagi negatif

@@ -1,0 +1,16 @@
+0.8.2
+  * perbaikan bug: G-Droid menampilkan pembaruan yang salah dan tidak dapat menginstal beberapa aplikasi, karena memilih arsitektur yang salah
+  * perbaikan bug: layar bergulir ke bawah setelah memuat detail beberapa aplikasi
+
+0.8.1
+  * tambahkan terjemahan Weblate sebagian besar untuk fitur baru
+
+0.8.0
+  * tambahkan kemampuan untuk menambahkan ulasan dan komentar ke aplikasi menggunakan toot Mastodon dengan tagar untuk setiap aplikasi
+
+0.7.3
+  * pembaruan terjemahan (terima kasih kepada semua kontributor Weblate)
+
+0.7.2
+  * tambahkan penulis teratas ke tampilan detail aplikasi dan ke menu utama di sebelah kiri
+  * tambahkan ukuran APK ke tampilan detail aplikasi

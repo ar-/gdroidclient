@@ -1,0 +1,20 @@
+0.4.2
+  * menambahkan pengaturan untuk menyesuaikan pentingnya peringkat bintang secara otomatis
+
+0.4.1
+  * perbaikan bug untuk gambar vektor pada perangkat pra-Lollipop yang menyebabkan aplikasi crash saat dimuat dengan Glide
+  
+0.4.0
+  * tambahkan izin untuk ditampilkan dengan benar diterjemahkan, dijelaskan, dapat diklik, dan diformat
+  * tambahkan terjemahan untuk beberapa elemen GUI lainnya
+ * tambahkan tombol jalankan untuk aplikasi yang terinstal
+  * aplikasi berbintang menampilkan bintang pada kartu aplikasi juga
+  * tag dan kategori di tampilan detail aplikasi sekarang dapat diklik
+  * tangkapan layar sekarang lengkap (berbeda dengan F-Droid), terkini (berbeda dengan F-Droid), dan dalam bahasa yang benar (berbeda dengan F-Droid)
+  * tangkapan layar juga akan ditampilkan jika tidak dalam struktur yang dikenal (seperti fastlane)
+  * tangkapan layar sekarang dapat diklik
+
+0.3.2
+  * tandai aplikasi yang dapat diperbarui dengan logo langsung pada kartu
+  * tampilkan daftar aplikasi yang dapat diperbarui di tab aplikasi saya
+  * perbaiki bug gulir Jolla C / ICS, disebabkan oleh grafik vektor di glide pada versi Android yang lebih lama

@@ -1,0 +1,18 @@
+0.5.2
+  * tambahkan tampilan untuk mencantumkan semua penulis dan jumlah aplikasi mereka
+
+0.5.1
+  * tampilkan aplikasi dari penulis yang sama di tampilan detail aplikasi
+
+0.5.0
+  * ganti manajer unduhan Android dengan fetch2, memperbaiki banyak kesalahan unduhan
+  * kurangi ukuran optik kartu
+  * tambahkan kemampuan untuk menyembunyikan aplikasi
+
+0.4.4
+  * perbarui logo peningkatan
+  * perbaiki crash saat deskripsi aplikasi kosong
+
+0.4.3
+  * tambahkan 2 algoritma pencarian lainnya "cari lebih keras" dan "cari lebih keras lagi", menambahkan ringkasan dan deskripsi aplikasi ke pencarian
+  * perbaikan bug: ikon pembaruan tidak diatur pada utas UI di beberapa perangkat

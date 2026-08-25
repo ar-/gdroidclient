@@ -1,0 +1,15 @@
+0.3.2
+  * tandai aplikasi yang dapat diperbarui dengan logo langsung pada kartu
+  * tampilkan daftar aplikasi yang dapat diperbarui di tab aplikasi saya
+  * perbaiki bug gulir Jolla C / ICS, disebabkan oleh grafik vektor di glide pada versi Android yang lebih lama
+
+0.3.1
+  * menambahkan lebih banyak dukungan I18N
+  * tampilkan fitur-anti (di bawah tombol instal dalam warna merah) dalam bahasa yang benar (jika tersedia)
+  * mengubah bahasa sistem akan menampilkan kategori yang diterjemahkan dengan benar (berbeda dengan F-Droid)
+  * urutkan aplikasi berbintang dan aplikasi saya secara alfabetis
+  * tambahkan string terjemahan yang hilang untuk tag
+
+0.3.0
+  * tambahkan tag untuk aplikasi yang digunakan untuk tugas standar
+  * ubah logo menjadi sesuatu yang berwarna ungu

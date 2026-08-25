@@ -1,0 +1,20 @@
+0.6.3
+  * tambahkan tampilan daftar (dapat diaktifkan di preferensi)
+  * tampilkan aplikasi serupa yang diurutkan berdasarkan kemiripan
+
+0.6.2
+  * tambahkan aplikasi serupa di tampilan detail aplikasi yang diimplementasikan dengan benar, terima kasih khusus kepada Frieder Ferlemann
+  * tambahkan terjemahan Weblate, terima kasih kepada semua penerjemah
+
+0.6.1
+  * perbaiki bug klik tangkapan layar di Android 5 untuk selamanya
+  * tambahkan lebih banyak terjemahan Portugis, Prancis, dan Rusia
+
+0.6.0
+  * tambahkan pengaturan untuk menggunakan root, untuk menginstal secara otomatis
+  * tambahkan tombol untuk mengunduh dan menginstal semua pembaruan yang tersedia
+  * tingkatkan batas waktu jaringan untuk memuat lebih banyak gambar
+
+0.5.3
+  * tambahkan lebih banyak terjemahan Weblate
+  * perbaikan bug: menyentuh tangkapan layar menyebabkan aplikasi crash di Android 6

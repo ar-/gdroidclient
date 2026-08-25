@@ -1,0 +1,23 @@
+0.6.1
+  * memperbaiki bug klik tangkapan layar di Android 5 untuk selamanya
+  * menambahkan lebih banyak terjemahan Portugis, Prancis, dan Rusia
+
+0.6.0
+  * menambahkan pengaturan untuk menggunakan root, untuk menginstal secara otomatis
+  * menambahkan tombol untuk mengunduh dan menginstal semua pembaruan yang tersedia
+  * tingkatkan batas waktu jaringan untuk memuat lebih banyak gambar
+
+0.5.3
+  * tambahkan lebih banyak terjemahan Weblate
+  * perbaikan bug: menyentuh tangkapan layar menyebabkan aplikasi crash di Android 6
+
+0.5.2
+  * tambahkan tampilan untuk mencantumkan semua penulis dan jumlah aplikasi mereka
+
+0.5.1
+  * tampilkan aplikasi dari penulis yang sama di tampilan detail aplikasi
+
+0.5.0
+  * ganti manajer unduhan Android dengan fetch2, memperbaiki banyak kesalahan unduhan
+  * kurangi ukuran optik kartu
+  * tambahkan kemampuan untuk menyembunyikan aplikasi
